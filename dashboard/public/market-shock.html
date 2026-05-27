@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUCIX Market Shock Radar</title>
+  <style>
+    :root {
+      --bg: #070a12;
+      --panel: rgba(14, 21, 34, 0.86);
+      --panel-2: rgba(18, 29, 47, 0.82);
+      --text: #eef4ff;
+      --muted: #9fb0c8;
+      --line: rgba(151, 173, 210, 0.18);
+      --blue: #6ea8fe;
+      --gold: #ffd166;
+      --red: #ff5d5d;
+      --green: #8ee6a8;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(61, 116, 204, 0.35) 0, rgba(7, 10, 18, 0) 420px),
+        radial-gradient(circle at 92% 12%, rgba(255, 93, 93, 0.18) 0, rgba(7, 10, 18, 0) 360px),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .headline {
+      padding: 32px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 16px 0 16px;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.92;
+      letter-spacing: -0.07em;
+    }
+
+    .sub {
+      max-width: 670px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 11px;
+      background: rgba(255, 255, 255, 0.045);
+      color: #c8d5ea;
+      font-size: 13px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .score-card {
+      padding: 28px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .score-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .regime {
+      border: 1px solid rgba(255, 93, 93, 0.35);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 93, 93, 0.13);
+      color: #ffdada;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .score {
+      margin: 18px 0 0;
+      font-size: clamp(72px, 10vw, 104px);
+      font-weight: 950;
+      line-height: 0.88;
+      letter-spacing: -0.09em;
+    }
+
+    .score span {
+      color: var(--muted);
+      font-size: 30px;
+      letter-spacing: -0.03em;
+    }
+
+    .bar {
+      height: 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      background: #192334;
+      margin: 14px 0 18px;
+    }
+
+    .fill {
+      width: 0%;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
+      transition: width 700ms ease;
+    }
+
+    .interpretation {
+      color: #d6e0f2;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 0.9fr 2.1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .side,
+    .signals,
+    .footer {
+      padding: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      color: #c6d6ef;
+      font-size: 14px;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .count-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      color: #d9e5f7;
+    }
+
+    .count-row b {
+      color: var(--gold);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      min-height: 92px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .stat small {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      line-height: 1.25;
+    }
+
+    .signal {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 14px;
+      padding: 17px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .rank {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #192334;
+      color: var(--blue);
+      font-weight: 950;
+    }
+
+    .signal h3 {
+      margin: 0 0 9px;
+      font-size: 18px;
+      line-height: 1.28;
+      letter-spacing: -0.015em;
+    }
+
+    .signal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      border: 1px solid rgba(110, 168, 254, 0.26);
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: rgba(110, 168, 254, 0.12);
+      color: #d8e7ff;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .tag.hot {
+      border-color: rgba(255, 93, 93, 0.31);
+      background: rgba(255, 93, 93, 0.12);
+      color: #ffdada;
+    }
+
+    .tag.gold {
+      border-color: rgba(255, 209, 102, 0.31);
+      background: rgba(255, 209, 102, 0.11);
+      color: #ffe7a9;
+    }
+
+    .tag.green {
+      border-color: rgba(142, 230, 168, 0.28);
+      background: rgba(142, 230, 168, 0.1);
+      color: #d7ffe2;
+    }
+
+    .explain {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: #aebdd4;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .error {
+      border: 1px solid rgba(255, 93, 93, 0.45);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255, 93, 93, 0.08);
+      color: #ffd7d7;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 880px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .headline,
+      .score-card {
+        min-height: auto;
+      }
+
+      .signal {
+        grid-template-columns: 1fr;
+      }
+
+      .rank {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="card headline">
+        <div>
+          <div class="kicker">OSINT → Capital Markets</div>
+          <h1>World Events → Market Risk</h1>
+          <p class="sub">
+            A Crucix-powered radar that converts live intelligence signals into possible capital-market transmission channels.
+          </p>
+        </div>
+
+        <div class="meta">
+          <div class="pill" id="generated">Loading data…</div>
+          <div class="pill">Source: /api/data</div>
+          <div class="pill">Prototype, not investment advice</div>
+        </div>
+      </div>
+
+      <div class="card score-card">
+        <div class="score-top">
+          <div>
+            <div class="label">Market Shock Score</div>
+            <div class="score" id="score">--<span>/20</span></div>
+          </div>
+          <div class="regime" id="regime">Loading</div>
+        </div>
+
+        <div>
+          <div class="bar">
+            <div class="fill" id="fill"></div>
+          </div>
+          <div class="interpretation" id="interpretation">Reading market-shock.json…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <aside class="card side">
+        <h2 class="section-title">Shock Mix</h2>
+        <div id="counts"></div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <strong id="topCategory">--</strong>
+            <small>top shock category</small>
+          </div>
+          <div class="stat">
+            <strong id="itemCount">--</strong>
+            <small>ranked signals</small>
+          </div>
+          <div class="stat">
+            <strong id="candidateCount">--</strong>
+            <small>candidates scanned</small>
+          </div>
+          <div class="stat">
+            <strong id="breadth">--</strong>
+            <small>category breadth</small>
+          </div>
+          <div class="stat">
+            <strong id="penalty">--</strong>
+            <small>concentration penalty</small>
+          </div>
+          <div class="stat">
+            <strong id="maxScore">--</strong>
+            <small>max score</small>
+          </div>
+        </div>
+      </aside>
+
+      <main class="card signals">
+        <h2 class="section-title">Ranked Transmission Signals</h2>
+        <div id="signals"></div>
+      </main>
+    </section>
+
+    <footer class="card footer" id="disclaimer">
+      Experimental market-intelligence prototype. Not investment advice.
+    </footer>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function setText(id, value) {
+      $(id).textContent = value;
+    }
+
+    function shortDate(isoString) {
+      if (!isoString) return "Generated: unknown";
+      const date = new Date(isoString);
+      if (Number.isNaN(date.getTime())) return "Generated: unknown";
+      return "Generated: " + date.toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function makeTag(text, className) {
+      const el = document.createElement("span");
+      el.className = className ? "tag " + className : "tag";
+      el.textContent = text;
+      return el;
+    }
+
+    function renderCounts(counts) {
+      const container = $("counts");
+      container.innerHTML = "";
+
+      const entries = Object.entries(counts || {}).sort((a, b) => b[1] - a[1]);
+
+      if (!entries.length) {
+        const empty = document.createElement("div");
+        empty.className = "error";
+        empty.textContent = "No shock categories found in the current JSON output.";
+        container.appendChild(empty);
+        return;
+      }
+
+      for (const [category, count] of entries) {
+        const row = document.createElement("div");
+        row.className = "count-row";
+
+        const left = document.createElement("span");
+        left.textContent = category;
+
+        const right = document.createElement("b");
+        right.textContent = count;
+
+        row.append(left, right);
+        container.appendChild(row);
+      }
+    }
+
+    function renderSignals(items) {
+      const container = $("signals");
+      container.innerHTML = "";
+
+      if (!items || !items.length) {
+        const empty = document.createElement("div");
+        empty.className = "error";
+        empty.textContent = "No ranked signals found. Re-run the radar script to regenerate market-shock.json.";
+        container.appendChild(empty);
+        return;
+      }
+
+      items.forEach((item, index) => {
+        const article = document.createElement("article");
+        article.className = "signal";
+
+        const rank = document.createElement("div");
+        rank.className = "rank";
+        rank.textContent = String(index + 1).padStart(2, "0");
+
+        const body = document.createElement("div");
+
+        const title = document.createElement("h3");
+        title.textContent = item.text || "Untitled signal";
+
+        const meta = document.createElement("div");
+        meta.className = "signal-meta";
+        meta.appendChild(makeTag(item.category || "Unclassified", "hot"));
+        meta.appendChild(makeTag((item.confidence || "Unknown") + " confidence", "gold"));
+        meta.appendChild(makeTag("Score " + (item.score ?? "--"), "green"));
+        if (item.sourcePriority) meta.appendChild(makeTag("Source " + item.sourcePriority));
+
+        const channels = document.createElement("div");
+        channels.className = "signal-meta";
+        (item.channels || []).slice(0, 10).forEach((channel) => {
+          channels.appendChild(makeTag(channel));
+        });
+
+        const keywords = document.createElement("div");
+        keywords.className = "signal-meta";
+        (item.matchedKeywords || []).forEach((keyword) => {
+          keywords.appendChild(makeTag("#" + keyword, "gold"));
+        });
+
+        const explain = document.createElement("div");
+        explain.className = "explain";
+        explain.textContent = item.explanation || item.path || "";
+
+        body.append(title, meta, channels, keywords, explain);
+        article.append(rank, body);
+        container.appendChild(article);
+      });
+    }
+
+    function render(data) {
+      const shockScore = data.shockScore || {};
+      const score = Number(shockScore.score || 0);
+      const maxScore = Number(shockScore.maxScore || 20);
+      const percent = Math.max(0, Math.min(100, (score / maxScore) * 100));
+
+      setText("score", score + "/" + maxScore);
+      setText("regime", shockScore.regime || "Unknown");
+      setText("interpretation", shockScore.interpretation || "No interpretation available.");
+      setText("generated", shortDate(data.generatedAt));
+      setText("itemCount", data.itemCount ?? (data.items || []).length ?? "--");
+      setText("candidateCount", data.candidateCount ?? "--");
+      setText("breadth", shockScore.categoryBreadth ?? "--");
+      setText("penalty", shockScore.concentrationPenalty ?? "0");
+      setText("maxScore", maxScore);
+      setText("disclaimer", data.disclaimer || "Experimental market-intelligence prototype. Not investment advice.");
+
+      $("fill").style.width = percent + "%";
+
+      const countEntries = Object.entries(data.shockCounts || {}).sort((a, b) => b[1] - a[1]);
+      setText("topCategory", countEntries[0] ? countEntries[0][0] : "--");
+
+      renderCounts(data.shockCounts);
+      renderSignals(data.items);
+    }
+
+    async function main() {
+      try {
+        const response = await fetch("/market-shock.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const data = await response.json();
+        render(data);
+      } catch (error) {
+        setText("regime", "JSON missing");
+        setText("interpretation", "Could not load /market-shock.json. Start Crucix, run the radar script, then refresh this page.");
+
+        const signals = $("signals");
+        signals.innerHTML = "";
+        const box = document.createElement("div");
+        box.className = "error";
+        box.textContent = "Dashboard load error: " + error.message;
+        signals.appendChild(box);
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>
