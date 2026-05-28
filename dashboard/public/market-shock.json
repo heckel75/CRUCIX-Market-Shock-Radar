@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-05-26T12:25:20.541Z",
+  "generatedAt": "2026-05-28T13:38:54.445Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-severity signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,44 +13,15 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 128,
+  "candidateCount": 125,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[36]",
+      "path": "root.news[16]",
       "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "troops",
-        "israel"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Israeli strike on village in eastern Lebanon kills 12 as Israel calls up more troops | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, troops, israel. Signal: Israeli strike on village in eastern Lebanon kills 12 as Israel calls up more troops | Euronews"
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -62,17 +33,17 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "troops",
+        "war",
+        "escalation",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇷⚡️- “U.S. forces conducted self-defense strikes in southern Iran today to protect our troops from threats posed by Iranian forces. Targets included missile launch sites and Iranian boats attem",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, troops, iran. Signal: 🇺🇸🇮🇷⚡️- “U.S. forces conducted self-defense strikes in southern Iran today to protect our troops from threats posed by Iranian forces. Targets included missile launch sites ..."
+      "text": "Why has Trump threatened to bomb Oman, amid Iran war escalation? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Why has Trump threatened to bomb Oman, amid Iran war escalation? | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -89,36 +60,14 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "military",
-        "drone",
-        "logistics"
+        "strike",
+        "israel"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Russian military blogger Rybar reported that Russian logistics in the occupied parts of the Kherson and Zaporizhzhia regions have been completely disrupted by Ukrainian drone strikes.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: Russian military blogger Rybar reported that Russian logistics in the occupied parts of the Kherson and Zaporizhzhia regions have been completely disrupted by Ukrainian drone st..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "🇱🇧🇮🇱 Hezbollah released footage dated 19-05-2026 showing an Ababil fiber-optic FPV drone targeting an IDF pickup truck in the settlement of Misgav Am in northern Israel. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, israel. Signal: 🇱🇧🇮🇱 Hezbollah released footage dated 19-05-2026 showing an Ababil fiber-optic FPV drone targeting an IDF pickup truck in the settlement of Misgav Am in northern Israel. @In..."
+      "text": "Israel hits Lebanese capital in 'targeted strike'",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Israel hits Lebanese capital in 'targeted strike'"
     },
     {
       "path": "root.news[8]",
@@ -135,35 +84,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "iran"
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Iran War Live Updates: Tensions Rise as Iran Threatens to Retaliate Against U.S. Strikes",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Live Updates: Tensions Rise as Iran Threatens to Retaliate Against U.S. Strikes"
+      "text": "How Ukraine’s Street Style Is Shaped by the War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: How Ukraine’s Street Style Is Shaped by the War"
     },
     {
-      "path": "root.news[21]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "china"
-      ],
-      "otherCategories": [],
-      "text": "Viral posts distort Kaja Kallas’ remarks on China and Russia | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, china. Signal: Viral posts distort Kaja Kallas’ remarks on China and Russia | Euronews"
-    },
-    {
-      "path": "root.news[31]",
+      "path": "root.news[14]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -180,11 +108,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Anticipation in Iran as talks with US continue amid attacks, war of words | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Anticipation in Iran as talks with US continue amid attacks, war of words | Al Jazeera"
+      "text": "Iran War Live Updates: U.S. and Iran Trade Strikes, Further Threatening Negotiations",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Live Updates: U.S. and Iran Trade Strikes, Further Threatening Negotiations"
     },
     {
-      "path": "root.news[33]",
+      "path": "root.news[15]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -197,15 +125,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "troops",
+        "escalation",
         "israel"
       ],
       "otherCategories": [],
-      "text": "Israel strikes Lebanese village and calls up more troops in the region | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, israel. Signal: Israel strikes Lebanese village and calls up more troops in the region | France 24"
+      "text": "Israel strikes southern Beirut amid increasing escalation in southern Lebanon | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, israel. Signal: Israel strikes southern Beirut amid increasing escalation in southern Lebanon | Euronews"
     },
     {
-      "path": "root.news[37]",
+      "path": "root.news[48]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -218,12 +146,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "iran"
+        "israel",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "US launches new strikes on Iran, targeting missile sites and boats",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: US launches new strikes on Iran, targeting missile sites and boats"
+      "text": "Israel kills children in strikes on Gaza as fear taints Eid joy | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel kills children in strikes on Gaza as fear taints Eid joy | Al Jazeera"
+    },
+    {
+      "path": "root.news[49]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Ireland football coach urges players to ‘win this war’ against Israel | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, israel. Signal: Ireland football coach urges players to ‘win this war’ against Israel | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -254,8 +203,8 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -272,14 +221,13 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "ukraine",
-        "shortage"
+        "strike"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇦🇷🇺Ukraine is experiencing a serious shortage of missiles for air defense systems, — the head of the Air Force Communications Department of the Armed Forces of Ukraine.",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦🇷🇺Ukraine is experiencing a serious shortage of missiles for air defense systems, — the head of the Air Force Communications Department of the Armed Forces of Ukraine."
+      "text": "How a looming Samsung AI workers’ strike in Korea led to €350,000 bonuses | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: How a looming Samsung AI workers’ strike in Korea led to €350,000 bonuses | Euronews"
     },
     {
       "path": "root.chokepoints[0]",
@@ -303,6 +251,27 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
+      "path": "root.news[40]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "gas",
+        "energy"
+      ],
+      "otherCategories": [],
+      "text": "Australian energy firm signs landmark gas deal with Zimbabwe | Africa News | Australia",
+      "explanation": "Energy Shock match based on keywords: gas, energy. Signal: Australian energy firm signs landmark gas deal with Zimbabwe | Africa News | Australia"
+    },
+    {
       "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
@@ -316,11 +285,31 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran"
+        "military"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇷❗️Iran Update Special Report, May 24, 2026 - ISW Report Key Takeaways :- 1. Conflicting US, Iranian, and regional reporting indicates that the contours of a possible US-Iran memorandum of u",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇮🇷❗️Iran Update Special Report, May 24, 2026 - ISW Report Key Takeaways :- 1. Conflicting US, Iranian, and regional reporting indicates that the contours of a possible US-..."
+      "text": "🇺🇸🌐❗️Washington intends to significantly reduce its contribution to NATO, writes Der Spiegel. This includes reducing the supply of military equipment to the alliance, including aircraft, ships, an",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇺🇸🌐❗️Washington intends to significantly reduce its contribution to NATO, writes Der Spiegel. This includes reducing the supply of military equipment to the alliance, includi..."
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇱🇧🇮🇱A fully loaded infantry armored vehicle, the HMMWV, fell victim to a Hezbollah FPV drone. A couple of IDF soldiers managed to jump out of the vehicle before being hit, but the rest were less",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇱🇧🇮🇱A fully loaded infantry armored vehicle, the HMMWV, fell victim to a Hezbollah FPV drone. A couple of IDF soldiers managed to jump out of the vehicle before being hit, b..."
     },
     {
       "path": "root.tg.urgent[5]",
@@ -336,14 +325,14 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇷❗️BREAKING: CENTCOM: We carried out self-defense attacks in southern Iran on Monday. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇮🇷❗️BREAKING: CENTCOM: We carried out self-defense attacks in southern Iran on Monday. @IntelSlava"
+      "text": "🇪🇺🇷🇺EU countries have started to develop the 21st package of sanctions against Russia, which is aimed at reducing the standard of living of the population, said von der Leyen.",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇪🇺🇷🇺EU countries have started to develop the 21st package of sanctions against Russia, which is aimed at reducing the standard of living of the population, said von der Leyen."
     },
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -356,11 +345,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war"
+        "military"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇺🇸🇮🇱Tehran municipality says 97 percent of capital’s war-damaged buildings repaired A spokesperson for the Tehran municipality says 97 percent of buildings that needed “minor repairs” after b",
-      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: 🇮🇷🇺🇸🇮🇱Tehran municipality says 97 percent of capital’s war-damaged buildings repaired A spokesperson for the Tehran municipality says 97 percent of buildings that needed “..."
+      "text": "🇺🇸🌐🇪🇺The US plans to reduce its military contribution to NATO and shift a significant portion of Europe's defense to European allies, according to Spiegel. According to the publication, the US p",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇺🇸🌐🇪🇺The US plans to reduce its military contribution to NATO and shift a significant portion of Europe's defense to European allies, according to Spiegel. According to the..."
     }
   ]
 }
