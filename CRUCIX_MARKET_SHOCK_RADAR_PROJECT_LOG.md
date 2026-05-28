@@ -94,16 +94,16 @@ Rules:
 
 ## 3. Current State
 
-**Current session cursor:** Session 5  
-**Overall status:** Session 4 complete  
+**Current session cursor:** Session 6  
+**Overall status:** Session 5 complete 
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes  
-**README created:** No  
-**LinkedIn materials ready:** No
+**README created:** Yes  
+**LinkedIn materials ready:** Partially
 
 ### Current file structure target
 
@@ -453,13 +453,13 @@ Session 5 is complete when:
 
 ## Session 5 Log
 
-**Status:** Not started  
-**Date completed:**  
-**What worked:**  
-**What failed:**  
-**Packaging notes:**  
-**Files changed:**  
-**Next adjustment:**
+**Status:** Complete  
+**Date completed:** 2026-05-28  
+**What worked:** Added the `shock` npm script to `package.json` and verified it points to `node scripts/market-shock-radar.mjs`. After confirming Crucix was running, `npm run shock` worked successfully and refreshed `dashboard/public/market-shock.json`. Created `README-market-shock-radar.md` with the project pitch, what it does, why it matters, run instructions, example output, shock categories, transmission matrix, current flow, project files, npm script notes, limitations, disclaimer, suggested LinkedIn framing, and final CTA. Added `session1-api-data.json` to `.gitignore` so the local inspection snapshot is not accidentally committed. Committed the Session 5 packaging changes with commit `3ed0adc Package market shock radar`.  
+**What failed:** The first `npm run shock` test failed with `fetch failed` because Crucix was not reachable at `http://localhost:3117`. Re-running after confirming the dev server was active fixed it.  
+**Packaging notes:** Latest verified run extracted 125 candidates, matched 15 signals, produced a `15/20` Market Shock Score, and kept the regime at `Shock mode`. The score interpretation notes that the score is moderated because many signals are concentrated in one category. Current shock counts were `Geopolitical Escalation: 13` and `Energy Shock: 2`.  
+**Files changed:** `.gitignore`, `package.json`, `dashboard/public/market-shock.json`, `README-market-shock-radar.md`.  
+**Next adjustment:** Session 6 should test the full flow end-to-end, open the dashboard after refreshing JSON, capture a screenshot, plan or record a 20–30 second demo, and log known limitations.
 
 ---
 
