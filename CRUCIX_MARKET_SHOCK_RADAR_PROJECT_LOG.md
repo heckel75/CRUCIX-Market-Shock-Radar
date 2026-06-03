@@ -94,8 +94,8 @@ Rules:
 
 ## 3. Current State
 
-**Current session cursor:** Session 6  
-**Overall status:** Session 5 complete 
+**Current session cursor:** Session 7  
+**Overall status:** Session 6 complete 
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
@@ -504,15 +504,15 @@ Session 6 is complete when:
 
 ## Session 6 Log
 
-**Status:** Not started  
-**Date completed:**  
-**What worked:**  
-**What failed:**  
-**Screenshot saved:**  
-**Demo video saved:**  
-**Known limitations:**  
-**Files changed:**  
-**Next adjustment:**
+**Status:** Complete 
+**Date completed:** 2026-06-03
+**What worked:** Started Crucix locally with npm run dev. The server loaded existing data immediately, completed a fresh initial sweep in about 30 seconds, and returned 28/29 sources. The sweep produced 50 news items, 50 feed items, and 18 delta changes, including 15 critical changes. Ran npm run shock successfully against the fresh /api/data feed. The script extracted 131 candidates, matched 15 signals, generated dashboard/public/market-shock.json, and produced a Market Shock Score of 16/20 with regime Shock mode. Verified http://localhost:3117/market-shock.html returned HTTP/1.1 200 OK. Verified the generated JSON timestamp was 2026-06-03T11:36:47.805Z, with 15 dashboard items and top item root.tg.urgent[4]. Opened the dashboard and confirmed it visually reflected the latest JSON: 16/20, Shock mode, latest timestamp, and the refreshed top signal. Captured a screenshot and saved it under media/screenshots/market-shock-dashboard-session6.png. Tested the missing-JSON error state by temporarily renaming market-shock.json; /market-shock.json returned 404 Not Found, and the dashboard showed its error message instead of blank content. Restored the JSON and confirmed the dashboard returned to normal. Created a 20–30 second demo plan and suggested voiceover at media/demo/session6-demo-plan.md. 
+**What failed:** No blocking failures. The server was initially not running, which was expected and fixed by starting npm run dev. During the fresh sweep, 1 of 29 sources did not return data, but this is accepted for the MVP because the dashboard still had enough live source material.  
+**Screenshot saved:** media/screenshots/market-shock-dashboard-session6.png
+**Demo video saved:** Not recorded in Session 6. A demo plan was saved instead at media/demo/session6-demo-plan.md. 
+**Known limitations:** The Market Shock Score is still rule-based and keyword-driven, not predictive. It can be dominated by one geopolitical cluster, although the concentration penalty moderates the score. Telegram and breaking-news items can contain unverified or fast-moving claims, so the dashboard must remain framed as OSINT risk scanning rather than factual confirmation or trading advice. The dashboard depends on a fresh npm run shock run after Crucix refreshes /api/data; otherwise the static JSON can become stale. Some Crucix sources may intermittently fail without blocking the MVP. 
+**Files changed:** dashboard/public/market-shock.json, media/screenshots/market-shock-dashboard-session6.png, media/demo/session6-demo-plan.md, and CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md. 
+**Next adjustment:** Session 7 should finalize the LinkedIn launch package, choose whether to record the demo video from the saved plan, confirm attribution/disclaimer language, and decide whether the GitHub repo is ready to publish/share.
 
 ---
 
@@ -681,13 +681,13 @@ Session 7 is complete when:
 
 ### Packaging
 
-- [ ] `npm run shock` added
-- [ ] README created
-- [ ] Transmission matrix added
-- [ ] Demo flow documented
-- [ ] Screenshot captured
+- [x] `npm run shock` added
+- [x] README created
+- [x] Transmission matrix added
+- [x] Demo flow documented
+- [x] Screenshot captured
 - [ ] Demo video captured
-- [ ] LinkedIn post drafted
+- [x] LinkedIn post drafted
 
 ---
 
@@ -760,8 +760,8 @@ Use this section to change the plan based on what happened.
 | 2 | Extend the script to generate `dashboard/public/market-shock.json` and tune score calibration | Session 2 has terminal scoring working; Session 3 should produce dashboard-ready JSON |
 | 3 | Build the dashboard from `dashboard/public/market-shock.json` and keep scoring details visible enough to explain the regime | JSON output now works and Session 4 can focus on UI rather than data generation |
 | 4 | Package the project and make the run flow clean with `npm run shock`, README, and commit-ready file review | The dashboard now works; next value is making the project understandable and shareable |
-| 5 | TBD | TBD |
-| 6 | TBD | TBD |
+| 5 | Test the full flow end-to-end, refresh JSON, capture screenshot, and prepare demo assets | Packaging is complete and the project is ready for validation/media capture |
+| 6 | Finalize the LinkedIn launch package, decide whether to record the demo video, and confirm attribution/disclaimer language | Full flow works and the screenshot/demo plan are ready |
 
 ---
 
@@ -1062,5 +1062,5 @@ Would you use something like this as a daily pre-market risk scan?
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 5. Read the project log first, continue from the current state, and help me complete this session. Work strictly step by step: give me one command or action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default. At the end, give me the full updated project log file if many sections changed.
+Ready for session 7. Read the project log first, continue from the current state, and help me complete this session. Work strictly step by step: give me one command or action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default. Session 7 goal: finalize the LinkedIn launch package, decide whether to record the demo video, confirm attribution to Crucix, confirm disclaimer language, and prepare the final public project summary.
 ```
