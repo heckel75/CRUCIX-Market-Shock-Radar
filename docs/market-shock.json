@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-06-03T11:36:47.805Z",
+  "generatedAt": "2026-06-05T11:25:11.058Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-severity signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,160 +13,14 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 131,
+  "candidateCount": 127,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "military",
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "—❗️🇮🇷 🇮🇷 IRGC Statement: ‘Late last night, the invading U.S. military targeted an Iranian oil tanker near the Strait of Hormuz with a hellfire missile, causing damage to the engine room. In resp",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, military. Signal: —❗️🇮🇷 🇮🇷 IRGC Statement: ‘Late last night, the invading U.S. military targeted an Iranian oil tanker near the Strait of Hormuz with a hellfire missile, causing damage to the..."
-    },
-    {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 16,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Rates",
-        "Treasuries",
-        "FX",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "recession",
-        "growth"
-      ],
-      "otherCategories": [
-        "Macro / Inflation Shock"
-      ],
-      "text": "OECD cuts 2026 global growth forecast and warns of recession risk if Iran war persists | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: OECD cuts 2026 global growth forecast and warns of recession risk if Iran war persists | Euronews"
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "⚡🇮🇷🇰🇼🇺🇸 Iran’s missile attack on Kuwait targeted both Camp Arifjan and Ali Al-Salem Airbase. Footage shows air defenses active over Kuwait during the attack, which reportedly involved at least",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, iran. Signal: ⚡🇮🇷🇰🇼🇺🇸 Iran’s missile attack on Kuwait targeted both Camp Arifjan and Ali Al-Salem Airbase. Footage shows air defenses active over Kuwait during the attack, which reporte..."
-    },
-    {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "\"Russia is planning strikes on Ukrainian companies that demonstrate progress in the development of all types of missile technologies. Russia identifies this as a strategic threat to itself - Ukraine's",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: \"Russia is planning strikes on Ukrainian companies that demonstrate progress in the development of all types of missile technologies. Russia identifies this as a strategic threa..."
-    },
-    {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "attack",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran War Live Updates: Kuwait Says Iranian Attack Has Damaged Its Main Airport",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran War Live Updates: Kuwait Says Iranian Attack Has Damaged Its Main Airport"
-    },
-    {
-      "path": "root.news[14]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Seven killed after drone hits bus in Russia-controlled part of Ukraine",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia, ukraine. Signal: Seven killed after drone hits bus in Russia-controlled part of Ukraine"
-    },
-    {
-      "path": "root.news[42]",
+      "path": "root.news[46]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -177,24 +31,25 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "attack",
         "drone",
-        "oil"
+        "naval",
+        "port"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Moment explosion erupts at Russian oil terminal in St. Petersburg after Ukrainian drone attack | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Moment explosion erupts at Russian oil terminal in St. Petersburg after Ukrainian drone attack | Euronews"
+      "text": "Naval drone explodes in the Romanian port of Constanta | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, naval. Signal: Naval drone explodes in the Romanian port of Constanta | Euronews"
     },
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -207,36 +62,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "russia"
+        "troops",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "It is also reported that the missile ship \"Boykiy\" is on fire near Saint Petersburg. In 2025, it repeatedly escorted ships of Russia's shadow fleet in the English Channel. Well. Not anymore. This is t",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: It is also reported that the missile ship \"Boykiy\" is on fire near Saint Petersburg. In 2025, it repeatedly escorted ships of Russia's shadow fleet in the English Channel. Well...."
+      "text": "🇱🇧🇮🇱⚡️ Hezbollah released footage dated 1 June 2026 showing the targeting of IDF troops on the southern outskirts of the town of Yahmar al-Shaqif in southern Lebanon using an Ababil FPV drone equi",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, drone. Signal: 🇱🇧🇮🇱⚡️ Hezbollah released footage dated 1 June 2026 showing the targeting of IDF troops on the southern outskirts of the town of Yahmar al-Shaqif in southern Lebanon using a..."
     },
     {
-      "path": "root.news[24]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "invasion",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "Israel’s invasion of southern Lebanon devastates centuries of history | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: invasion, israel. Signal: Israel’s invasion of southern Lebanon devastates centuries of history | Al Jazeera"
-    },
-    {
-      "path": "root.news[43]",
+      "path": "root.news[30]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -253,11 +87,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Zara owner Inditex defies Iran war concerns with strong sales as shares surge | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Zara owner Inditex defies Iran war concerns with strong sales as shares surge | Euronews"
+      "text": "US visa rejections, war on Iran keep fans away from World Cup | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US visa rejections, war on Iran keep fans away from World Cup | Al Jazeera"
     },
     {
-      "path": "root.news[44]",
+      "path": "root.news[41]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -270,12 +104,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "troops"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Hezbollah video shows attack on Israeli troops at Lebanon’s Beaufort Castle | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: Hezbollah video shows attack on Israeli troops at Lebanon’s Beaufort Castle | Al Jazeera"
+      "text": "War in Ukraine: Zelensky proposes face-to-face meeting with Putin to end years-long war | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: War in Ukraine: Zelensky proposes face-to-face meeting with Putin to end years-long war | France 24"
     },
     {
       "path": "root.chokepoints[5]",
@@ -306,6 +140,89 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇷🇺🇲🇱 Footage shows an Africa Corps drone operator targeting fuel tanks belonging to Jama’at Nusrat al-Islam wal-Muslimin (JNIM) near Niafunké in the Tombouctou Region. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇷🇺🇲🇱 Footage shows an Africa Corps drone operator targeting fuel tanks belonging to Jama’at Nusrat al-Islam wal-Muslimin (JNIM) near Niafunké in the Tombouctou Region. @Inte..."
+    },
+    {
+      "path": "root.news[15]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Moment sea drone explodes in Romania's Constanta port | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Moment sea drone explodes in Romania's Constanta port | Euronews"
+    },
+    {
+      "path": "root.news[42]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Russia Floods Armenia With Disinformation Ahead of Election",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Russia Floods Armenia With Disinformation Ahead of Election"
+    },
+    {
       "path": "root.chokepoints[0]",
       "sourcePriority": "High",
       "category": "Energy Shock",
@@ -327,6 +244,27 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
+      "path": "root.news[22]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "fuel"
+      ],
+      "otherCategories": [],
+      "text": "Japan steps up efforts on cooking oil in race for sustainable aviation fuel | France 24",
+      "explanation": "Energy Shock match based on keywords: oil, fuel. Signal: Japan steps up efforts on cooking oil in race for sustainable aviation fuel | France 24"
+    },
+    {
       "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
@@ -340,14 +278,14 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Ukrainian media claim that Russia has over 200 \"Zircon\" missiles. The flight time to Kyiv from Kursk is only 3 to 6 minutes - its hypersonic speed leaves no chance for air defense interception or find",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Ukrainian media claim that Russia has over 200 \"Zircon\" missiles. The flight time to Kyiv from Kursk is only 3 to 6 minutes - its hypersonic speed leaves no chance for air defen..."
+      "text": "🇮🇷🇺🇸🇰🇼⚡️ — NEW: Iran's IRGC says the extensive damage to Kuwait International Airport's Terminal 1 was caused by a failed U.S. Patriot interceptor and not by any Iranian weapons.",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸🇰🇼⚡️ — NEW: Iran's IRGC says the extensive damage to Kuwait International Airport's Terminal 1 was caused by a failed U.S. Patriot interceptor and not by any Iranian w..."
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -365,6 +303,66 @@
       "otherCategories": [],
       "text": "🇮🇷🇰🇼🇺🇸❗️— BREAKING: Kuwait’s Civil Aviation Authority says the latest Iranian attack on the airport caused injuries and serious damage to a number of its facilities.​​​​​​​​​​​​​​​ @IntelSlava",
       "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇮🇷🇰🇼🇺🇸❗️— BREAKING: Kuwait’s Civil Aviation Authority says the latest Iranian attack on the airport caused injuries and serious damage to a number of its facilities.​​​​​​..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷🇺🇸❗️Iran's Navy released footage of anti-ship missiles launched at a U.S. destroyer in the Gulf of Oman today. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸❗️Iran's Navy released footage of anti-ship missiles launched at a U.S. destroyer in the Gulf of Oman today. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷🇰🇼❗️— Photos from the damage at Kuwait International Airport following the Iranian attack overnight. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇮🇷🇰🇼❗️— Photos from the damage at Kuwait International Airport following the Iranian attack overnight. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇦🇷🇺The Ukrainian kamikaze drone FP-1/2 is flying just a few meters above the water surface of the Gulf of Finland. It's extremely difficult to detect and shoot down such a target without the pre",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇺🇦🇷🇺The Ukrainian kamikaze drone FP-1/2 is flying just a few meters above the water surface of the Gulf of Finland. It's extremely difficult to detect and shoot down such a ..."
     }
   ]
 }
