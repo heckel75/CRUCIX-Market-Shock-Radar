@@ -95,7 +95,7 @@ Rules:
 ## 3. Current State
 
 **Current session cursor:** Session 7  
-**Overall status:** Session 6 complete 
+**Overall status:** Session 7 complete 
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
@@ -103,7 +103,7 @@ Rules:
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes  
 **README created:** Yes  
-**LinkedIn materials ready:** Partially
+**LinkedIn materials ready:** Ready
 
 ### Current file structure target
 
@@ -726,7 +726,7 @@ Use this section to log unresolved items.
 | Should the dashboard show all 15 signals, or highlight top 10 with the rest collapsed? | 4 | Answered for MVP | Show all 15. This is simpler and works for the screenshot/demo layout. |
 | Should low-confidence high-priority Telegram items be visually de-emphasized? | 4 | Partially answered | Confidence is shown as a visible chip. More advanced filtering can wait until after MVP. |
 | Should we include live market prices in the first version? | 6–7 | Open | Optional upgrade only |
-| Should the final code be published as a fork, gist, or local demo only? | 7 | Open | Decide before LinkedIn launch |
+| Should the final code be published as a fork, gist, or local demo only? | 7 | Answered | Share the GitHub repository publicly and include the repo link in the LinkedIn post. |
 | Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Open | Decide in Session 5 before commit/package cleanup. |
 
 ---
@@ -1042,14 +1042,14 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 
 Before posting on LinkedIn:
 
-- [ ] Dashboard screenshot looks clear
+- [x] Dashboard screenshot looks clear
 - [ ] Demo video is short and understandable
 - [ ] Post says `not investment advice`
-- [ ] Post does not claim prediction or guaranteed alpha
-- [ ] Crucix is attributed
-- [ ] Project name is clear
-- [ ] One-line pitch is included
-- [ ] Call-to-action question is included
+- [x] Post does not claim prediction or guaranteed alpha
+- [x] Crucix is attributed
+- [x] Project name is clear
+- [x] One-line pitch is included
+- [x] Call-to-action question is included
 
 ### Best final CTA
 
@@ -1064,3 +1064,4 @@ Would you use something like this as a daily pre-market risk scan?
 ```txt
 Ready for session 7. Read the project log first, continue from the current state, and help me complete this session. Work strictly step by step: give me one command or action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default. Session 7 goal: finalize the LinkedIn launch package, decide whether to record the demo video, confirm attribution to Crucix, confirm disclaimer language, and prepare the final public project summary.
 ```
+
