@@ -13,7 +13,8 @@
     "diag": "node diag.mjs",
     "clean": "node scripts/clean.mjs",
     "fresh-start": "npm run clean && npm start",
-    "shock": "node scripts/market-shock-radar.mjs"
+    "shock": "node scripts/market-shock-radar.mjs",
+    "market:data": "node scripts/market-data.mjs"
   },
   "keywords": [
     "osint",

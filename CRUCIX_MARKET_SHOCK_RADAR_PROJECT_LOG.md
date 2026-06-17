@@ -16,27 +16,27 @@
 ## 1. Project Summary
 
 **Project name:** CRUCIX Market Shock Radar  
-**Core idea:** Convert Crucix OSINT signals into possible capital-market transmission channels.  
-**Final dashboard URL:** `http://localhost:3117/market-shock.html`  
-**Primary input:** `http://localhost:3117/api/data`  
-**Primary output:** `dashboard/public/market-shock.json` and `dashboard/public/market-shock.html`
+**Core idea:** Convert Crucix OSINT signals into possible capital-market transmission channels, then put each channel's signal reading **next to what the market is actually pricing**, and log the divergence daily.  
+**Local dashboard URL:** `http://localhost:3117/market-shock.html`  
+**Primary input:** `http://localhost:3117/api/data` plus free market data (FRED API, Stooq CSV)  
+**Primary output:** `dashboard/public/market-shock.json`, `dashboard/public/market-readings.json`, `dashboard/public/divergence.json`, `dashboard/public/market-shock.html`, dated daily snapshots under `log/`  
+**Public deployment:** currently `https://heckel75.github.io/CRUCIX-Market-Shock-Radar/`; target canonical home is `crucix.divergencelog.com` (subdomain of the owned `divergencelog.com`, where the World Cup project lives at `worldcup.divergencelog.com`)
 
 ### One-line pitch
 
-> World events move markets before charts explain them. This project maps Crucix intelligence signals into possible market-risk channels.
+> Most dashboards show what moved. This one logs, daily, where real-world signals and market pricing disagree.
 
-### Expected final output
+### Framing rule (important)
 
-A local dashboard showing:
+This is a **daily log, not a live radar**. Market data is end-of-day. Every view must say plainly: `readings as of market close, {date}`. Never imply real-time.
 
-- Market Shock Score, from `0/20` to `20/20`
-- Current risk regime, for example `Calm`, `Watchlist`, `Risk-off building`, or `Shock mode`
-- Ranked signals from Crucix data
-- Shock category for each signal
-- Possible asset channels: oil, gold, VIX, FX, rates, equities, credit, commodities
-- Confidence level
-- Matched keywords
-- Explanation of why each signal matters
+### Expected final output (Phase 2 target)
+
+- **Divergence board (the hero element):** one row per channel showing the OSINT signal reading next to the market reading, classified into one of four states (see Phase 2 Design Spec)
+- **Shock Mix decomposition** (category breadth, concentration penalty, ranked signals) — prominent
+- **Market Shock Score `0/20`** — kept, but visually demoted; it is deliberately the least important element on the page
+- Ranked signals from Crucix data with category, confidence, matched keywords, explanation
+- **History page:** dated daily snapshots rendered backwards, so the log accumulates a verifiable track record (including misses)
 
 ### Important disclaimer
 
@@ -94,56 +94,173 @@ Rules:
 
 ## 3. Current State
 
-**Current session cursor:** Session 7  
-**Overall status:** Session 7 complete 
+**Current session cursor:** Session 7 (redefined — Phase 2 begins)  
+**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
-**Dashboard created:** Yes  
-**README created:** Yes  
-**LinkedIn materials ready:** Ready
+**Dashboard created:** Yes (Phase 1 version — score-as-hero layout, to be reworked in Session 9)  
+**Public GitHub Pages deployment:** Yes, at `https://heckel75.github.io/CRUCIX-Market-Shock-Radar/`. Verified in Session 7: root `/` serves the dashboard and fetches committed static `market-shock.json`; `/market-shock.html` returns 404 on Pages. Pages cannot reach `localhost:3117`, so deployment depends on committed static JSON files, refreshed on publish and daily once Session 10 lands.
+**Market data fetcher:** Created and verified in Session 7. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, and writes `dashboard/public/market-readings.json`.
+**Divergence engine:** Not started (Session 8)  
+**Daily log / history:** Not started (Session 10)  
+**README created:** Yes (Phase 1 — update in Session 11)  
+**LinkedIn materials:** Superseded; see Section 12
 
-### Current file structure target
+### Current file structure target (Phase 2)
 
 ```txt
 Crucix/
 ├── scripts/
-│   └── market-shock-radar.mjs
+│   ├── market-shock-radar.mjs
+│   ├── market-data.mjs            (Session 7 — FRED + Tiingo fetch + z-scores)
+│   └── divergence.mjs             (Session 8 — join signals × market, classify states)
 ├── dashboard/
 │   └── public/
-│       ├── market-shock.html
-│       └── market-shock.json
+│       ├── market-shock.html      (rework in Session 9: divergence board as hero)
+│       ├── market-shock.json
+│       ├── market-readings.json   (Session 7 output)
+│       ├── divergence.json        (Session 8 output)
+│       └── history.html           (Session 10)
+├── log/
+│   └── YYYY-MM-DD.json            (Session 10 — one dated snapshot per day, committed)
 ├── README-market-shock-radar.md
 ├── package.json
 └── CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md
 ```
 
-### Latest local git status after Session 4
+### Last recorded local git status
+
+Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `package.json`, README, JSON refreshes, media). Treat as stale.
 
 ```txt
 ?? dashboard/public/market-shock.html
 ?? session1-api-data.json
 ```
 
-**Note:** `dashboard/public/market-shock.html` is the Session 4 deliverable. `session1-api-data.json` is a local inspection snapshot from Session 1 and should not be committed unless intentionally needed.
+**Note:** `dashboard/public/market-shock.html` is the Session 4 deliverable. `session1-api-data.json` is a local inspection snapshot from Session 1 and is in `.gitignore` since Session 5.
+
+**Fresh Session 7 git checks:** Started clean: `git status --short` returned empty. End state before project-log update: `M package.json`, `?? scripts/market-data.mjs`, `?? dashboard/public/market-readings.json`.
 
 ---
 
-## 4. Seven-Session Build Plan
+## 4. Build Plan
 
-The project is designed to fit into **7 short sessions**, with a total target of **5 hours max**.
+### Phase 1 — MVP (complete)
+
+| Session | Target time | Main goal | Status |
+|---:|---:|---|---|
+| 1 | 30 min | Clone Crucix, install dependencies, run first sweep, inspect `/api/data` | Done |
+| 2 | 45 min | Create the market-shock scoring script | Done |
+| 3 | 45 min | Generate and validate `market-shock.json` | Done |
+| 4 | 75 min | Build the visual dashboard page | Done |
+| 5 | 30 min | Add npm script, README, disclaimer, and transmission matrix | Done |
+| 6 | 45 min | Test, troubleshoot, screenshot, and record demo | Done |
+| 7 (old) | 30 min | ~~Final polish and LinkedIn launch package~~ | **Superseded 2026-06-11** |
+
+### Phase 2 — Divergence upgrade (current)
+
+Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no gap to read and nothing for reality to grade. Phase 2 puts the market on the page, classifies the disagreement, demotes the score, and turns the snapshot into a dated log.
 
 | Session | Target time | Main goal |
 |---:|---:|---|
-| 1 | 30 min | Clone Crucix, install dependencies, run first sweep, inspect `/api/data` |
-| 2 | 45 min | Create the market-shock scoring script |
-| 3 | 45 min | Generate and validate `market-shock.json` |
-| 4 | 75 min | Build the visual dashboard page |
-| 5 | 30 min | Add npm script, README, disclaimer, and transmission matrix |
-| 6 | 45 min | Test, troubleshoot, screenshot, and record demo |
-| 7 | 30 min | Final polish and LinkedIn launch package |
+| 7 | 60 min | Market data fetcher: FRED + Tiingo, uniform z-score transform, `market-readings.json` | Done |
+| 8 | 60 min | Divergence engine: join signal channels × market readings, classify the four states with frozen thresholds, `divergence.json` |
+| 9 | 75 min | Dashboard v2: divergence board as hero, Shock Mix prominent, score demoted, dated "as of close" framing, descriptive-labels pass |
+| 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation (GitHub Action preferred, local-run protocol as fallback), deploy under `crucix.divergencelog.com` |
+| 11 | 30 min | Hardening, README v2, board screenshot with real rows. (The LinkedIn post itself is drafted outside these sessions — Section 12) |
+
+---
+
+## 4b. Phase 2 Design Spec — Divergence Upgrade
+
+This spec is frozen as of 2026-06-11. ChatGPT sessions implement it; they do not redesign it. If implementation forces a change, log it under Decisions Made with a reason.
+
+### 1. The market column — one uniform transform
+
+The market reading must use **one uniform rule across all channels**, never a per-channel tuned formula. A per-channel formula would rebuild the discretionary-aggregate problem on the other side of the page.
+
+- **Price instruments** (oil, gold, equities, FX, EM): z-score of the 5-day return against the trailing 1-year distribution of 5-day returns.
+- **Level instruments** (VIX, HY spreads, breakevens, yields): z-score of the 5-day **change in level**, same trailing 1-year window.
+- A channel's market reading is the **max |z| among its instruments, with the driving instrument named**. Never an average, never a composite.
+- Cell rendering example: `Credit stress — market: 2.1σ (HY OAS)`.
+
+### 2. Per-channel instrument map
+
+Data sources: FRED (free API key, official, stable) and Stooq free CSV endpoint for ETF proxies. Do **not** build on unofficial Yahoo endpoints as the primary source.
+**Session 7 implementation note:** Stooq was tested from Node and `curl` and returned browser-verification HTML, then `Access denied`, so it is not usable for automated local/CI fetches. The ETF proxy source is changed to Tiingo EOD using `adjClose`. This preserves the instrument proxies, avoids unofficial Yahoo endpoints as primary, and supports CI via a normal API key. A tested FRED gold replacement (`GOLDAMGBD228NLBM`) returned `series does not exist`, so gold remains `GLD` via Tiingo.
+
+| Channel | Instruments | Series / proxy | Type |
+|---|---|---|---|
+| Conflict escalation | Brent, gold, VIX, defense equities | FRED `DCOILBRENTEU`; `GLD` (Stooq); FRED `VIXCLS`; `ITA` (Stooq) | price, price, level, price |
+| Sanctions / policy | Broad USD, EM equities, broad commodities | FRED `DTWEXBGS`; `EEM` (Stooq); `DBC` or `CPER` (Stooq) | price |
+| Energy disruption | Brent, WTI, inflation expectations | FRED `DCOILBRENTEU`, `DCOILWTICO`, `T10YIE` | price, price, level |
+| Credit stress | HY spreads, banks, 10y Treasury | FRED `BAMLH0A0HYM2`; `KBE` (Stooq); FRED `DGS10` | level, price, level |
+| Supply chain | Semiconductors, industrials | `SOXX` or `SMH`, `XLI` (Stooq) | price |
+
+Notes:
+- **"Margins" is dropped** from the supply-chain channel. Margins are quarterly accounting outputs, not daily observables; proxying them silently would misrepresent. Semis plus industrials carry the row.
+- Brent appears in two channels. That is intentional and informative — show it, do not deduplicate. When one instrument drives two channels, that fact is itself readable.
+
+### 3. Mapping the 8 Phase-1 shock categories to market channels
+
+| Phase-1 category | Market channel |
+|---|---|
+| Geopolitical Escalation | Conflict escalation |
+| Sanctions / Policy Shock | Sanctions / policy |
+| Energy Shock | Energy disruption |
+| Credit Stress | Credit stress |
+| Supply Chain Disruption | Supply chain |
+| Macro / Inflation Shock | Optional: same rule with `T10YIE`, `DGS10`. Decide in Session 8; signal-only display is acceptable for v2. |
+| Weather / Climate Shock | Optional: NatGas FRED `DHHNGSP`. Decide in Session 8; signal-only display is acceptable. |
+| Market Volatility Signal | **Retire as a signal channel.** VIX lives on the market side of the board; keeping it as an OSINT channel is circular (the market would be diverging from itself). |
+
+### 4. The divergence cell — four states, frozen thresholds
+
+Thresholds (frozen at launch): signal elevated = channel signal at or above **60% of channel max**; market moving = **|z| ≥ 1.5**. Never retune thresholds after launch to make the board more interesting. A dated log with frozen rules is the credibility.
+
+| Signal | Market | State | Meaning |
+|---|---|---|---|
+| Elevated | Quiet | `radar-claim` | The only state where the radar says something the market is not pricing. The interesting row. |
+| Elevated | Moving | `priced` | The radar confirms, adds nothing. |
+| Quiet | Moving | `radar-miss` | Either the radar missed it or the move has another driver. Show it — this is the radar's humility made visible. |
+| Quiet | Quiet | `calm` | Empty row. Showing empty rows is part of the honesty. |
+
+### 5. Daily snapshot schema
+
+One committed JSON per day under `log/YYYY-MM-DD.json`:
+
+```json
+{
+  "date": "2026-06-11",
+  "rows": [
+    {
+      "channel": "credit-stress",
+      "signal_score": 0.0,
+      "market_z": 0.0,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "state": "calm"
+    }
+  ]
+}
+```
+
+The history page renders these rows backwards. After 30–40 days, the log's real payoff becomes computable: how often `radar-claim` was followed by a market move within N days, and how often it was not. That statistic is not needed at launch; the accumulating rows are.
+
+### 6. UI rules (Session 9)
+
+- The divergence board is the hero element. The Shock Mix decomposition is prominent. The **Market Shock Score is kept but visually demoted** — small. The page layout should itself express the position: aggregate small, channels large.
+- Every view carries `readings as of market close, {date}`. No "live" language anywhere.
+- **Labels stay flatly descriptive.** The intelligence feed will name specific conflicts and sanction regimes; that is fine — facts are facts — but the board's own labels and copy must carry no editorial severity language ("alarming", "terrifying"), no implied side, no position on any named conflict. Categories editorial-neutral, explanations mechanical (signal → channel → instruments).
+- Keep the existing disclaimer: experimental prototype, not investment advice, not a trading bot.
+
+### 7. Automation and deployment (Session 10)
+
+- Preferred: daily GitHub Action — fetch market data (FRED/Stooq), run the Crucix sweep in CI if feasible (Session 1 sweep took ~30s with 27/29 sources; verify which sources need API keys / secrets), run the radar and divergence scripts, commit the day's snapshot, publish.
+- Fallback if Crucix cannot run in CI: market side runs in the Action; signal side runs locally with a documented one-command daily protocol that commits the snapshot. A log with a manual step is still a log; an undated dashboard is not.
+- Target home: `crucix.divergencelog.com`. The apex `divergencelog.com` stays a plain index of the logs; the project lives on its subdomain. Pull the exact GitHub Pages custom-domain/DNS records from GitHub's own docs at setup time.
 
 ---
 
@@ -512,15 +629,168 @@ Session 6 is complete when:
 **Demo video saved:** Not recorded in Session 6. A demo plan was saved instead at media/demo/session6-demo-plan.md. 
 **Known limitations:** The Market Shock Score is still rule-based and keyword-driven, not predictive. It can be dominated by one geopolitical cluster, although the concentration penalty moderates the score. Telegram and breaking-news items can contain unverified or fast-moving claims, so the dashboard must remain framed as OSINT risk scanning rather than factual confirmation or trading advice. The dashboard depends on a fresh npm run shock run after Crucix refreshes /api/data; otherwise the static JSON can become stale. Some Crucix sources may intermittently fail without blocking the MVP. 
 **Files changed:** dashboard/public/market-shock.json, media/screenshots/market-shock-dashboard-session6.png, media/demo/session6-demo-plan.md, and CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md. 
-**Next adjustment:** Session 7 should finalize the LinkedIn launch package, choose whether to record the demo video from the saved plan, confirm attribution/disclaimer language, and decide whether the GitHub repo is ready to publish/share.
+**Next adjustment:** Superseded on 2026-06-11. Session 7 now begins Phase 2 with the market data fetcher: FRED + Stooq, uniform z-score transform, and `dashboard/public/market-readings.json`.
 
 ---
 
-# Session 7 — LinkedIn Launch Package
+# Session 7 — Market Data Fetcher
+
+> The old Session 7 (LinkedIn Launch Package, including the post draft, carousel outline, hashtags, and CTA) was **superseded on 2026-06-11**. The post is deferred and will be drafted outside these sessions against a separate strategy file; see Section 12. Do not resurrect the old draft — it conflicts with the post strategy now governing distribution.
 
 ## Goal
 
-Prepare the final public-facing message and optional GitHub publish notes.
+Create `scripts/market-data.mjs`: fetch the instruments in the Phase 2 Design Spec from FRED and Stooq, compute the uniform z-score transform, and write `dashboard/public/market-readings.json`.
+
+## Estimated duration
+
+60 minutes
+
+## Tasks
+
+- [ ] Obtain a free FRED API key and store it in `.env` (never commit it)
+- [ ] Fetch FRED series: `DCOILBRENTEU`, `DCOILWTICO`, `VIXCLS`, `T10YIE`, `BAMLH0A0HYM2`, `DGS10`, `DTWEXBGS` (1 year of daily history plus a buffer for holidays/gaps)
+- [ ] Fetch Stooq CSV history for: `GLD`, `ITA`, `EEM`, `DBC` (or `CPER`), `KBE`, `SOXX` (or `SMH`), `XLI`
+- [ ] Implement the uniform transform: 5-day return z-score for price instruments, 5-day level-change z-score for level instruments, trailing 1-year window
+- [ ] Per channel: compute max |z| and name the driving instrument
+- [ ] Write `dashboard/public/market-readings.json` with `asOfClose` date, per-channel reading, per-instrument detail
+- [ ] Handle gaps defensively: stale series (FRED spread/breakeven data lags a day), missing days, weekend alignment between FRED and Stooq calendars
+
+## Definition of done
+
+- `node scripts/market-data.mjs` produces valid `market-readings.json`
+- Every channel in the spec has a reading with a named driver instrument
+- The `asOfClose` date is correct and the script fails loudly (not silently) when a source is unreachable
+
+## Session 7 Log
+
+**Status:** Complete  
+**Date completed:** 2026-06-17  
+**What worked:** Started with a clean working tree. Verified GitHub Pages behavior: the deployed root URL serves the dashboard and reads committed static `market-shock.json`; `/market-shock.html` returns 404 on Pages. Confirmed `.env` was not tracked. Added local FRED and Tiingo keys to `.env` without exposing them in chat. Confirmed FRED fetch works with `DCOILBRENTEU`. Created `scripts/market-data.mjs`. Added `npm run market:data`. The script fetches FRED series `DCOILBRENTEU`, `DCOILWTICO`, `VIXCLS`, `T10YIE`, `BAMLH0A0HYM2`, `DGS10`, and `DTWEXBGS`, plus Tiingo EOD `adjClose` for `GLD`, `ITA`, `EEM`, `DBC`/`CPER`, `KBE`, `SOXX`/`SMH`, and `XLI`. It aligns all instruments on common dates, computes the uniform transform, selects each channel's max absolute z-score with driver instrument named, and writes `dashboard/public/market-readings.json`.  
+**Final verified run:** `npm run market:data` succeeded. Output used `asOfClose: 2026-06-08`, `common usable dates: 596`, gold proxy `GLD`, broad commodities proxy `DBC`, and semiconductor proxy `SOXX`. Channel readings were: Conflict escalation `-1.127σ` driven by `GLD`; Sanctions / policy `-2.618σ` driven by `EEM`; Energy disruption `-1.332σ` driven by `T10YIE`; Credit stress `1.074σ` driven by `DGS10`; Supply chain `-0.476σ` driven by `SOXX`.  
+**What failed:** Initial FRED fetch failed because `FRED_API_KEY` existed but was blank. Stooq CSV failed from both Node and `curl`, returning browser-verification HTML and later `Access denied`, so it could not support automated fetching. Alpha Vantage compact CSV worked for `GLD`, but `outputsize=full` was premium-gated and compact output lacked enough history for a trailing 252-observation window. The suggested FRED gold series `GOLDAMGBD228NLBM` returned `series does not exist`, so gold could not be moved to FRED. Several temporary test files were created during source validation and then deleted.  
+**Files changed:** `scripts/market-data.mjs`, `dashboard/public/market-readings.json`, `package.json`.  
+**Next adjustment:** Session 8 should create `scripts/divergence.mjs`, read `market-shock.json` and `market-readings.json`, map signal categories to market channels, apply the frozen thresholds, classify rows into `radar-claim`, `priced`, `radar-miss`, and `calm`, and write `dashboard/public/divergence.json`.
+
+---
+
+# Session 8 — Divergence Engine
+
+## Goal
+
+Create `scripts/divergence.mjs`: join the Phase-1 signal output with `market-readings.json` using the category→channel mapping, classify each channel into one of the four states with the frozen thresholds, and write `dashboard/public/divergence.json`.
+
+## Estimated duration
+
+60 minutes
+
+## Tasks
+
+- [ ] Implement the category→channel mapping from the Design Spec (Section 4b.3)
+- [ ] Retire `Market Volatility Signal` as a signal channel (circularity — see spec)
+- [ ] Decide and log: market columns for Macro/Inflation and Weather/Climate, or signal-only display for v2
+- [ ] Normalize each channel's signal score to its channel max so the 60% threshold is well-defined
+- [ ] Apply frozen thresholds: signal ≥ 60% of channel max; |z| ≥ 1.5
+- [ ] Classify each channel: `radar-claim`, `priced`, `radar-miss`, `calm`
+- [ ] Write `divergence.json` matching the daily snapshot schema (date, rows)
+- [ ] Add `npm run divergence` (or fold into `npm run shock` as a pipeline)
+
+## Definition of done
+
+- `divergence.json` validates against the snapshot schema
+- All four states are reachable in tests (force them with synthetic inputs if live data does not cover all four)
+- Thresholds are constants in one place, with a comment stating they are frozen as of launch
+
+## Session 8 Log
+
+**Status:** Not started  
+**Date completed:**  
+**What worked:**  
+**What failed:**  
+**Files changed:**  
+**Next adjustment:**
+
+---
+
+# Session 9 — Dashboard v2: Divergence Board as Hero
+
+## Goal
+
+Rework `market-shock.html` so the page layout expresses the project's position: divergence board large, decomposition prominent, aggregate score small.
+
+## Estimated duration
+
+75 minutes
+
+## Tasks
+
+- [ ] Divergence board as the top element: one row per channel — signal reading | market reading (with σ and driver instrument) | state
+- [ ] Distinct but sober visual treatment for `radar-claim` rows; `calm` rows visible, not hidden
+- [ ] Shock Mix decomposition (breadth, concentration penalty, ranked signals) kept prominent below the board
+- [ ] Market Shock Score demoted to a small element; keep regime and interpretation but not as the headline
+- [ ] Add `readings as of market close, {date}` prominently; remove any "live" implication from copy
+- [ ] Descriptive-labels pass over all UI copy and signal explanations (Design Spec 4b.6)
+- [ ] Keep disclaimer footer
+- [ ] Responsive check (the board must degrade to stacked cards cleanly)
+
+## Definition of done
+
+- The first thing a viewer reads is the divergence board, not the score
+- The page states its date and contains no editorial severity language
+- A screenshot of the board is legible at LinkedIn feed size
+
+## Session 9 Log
+
+**Status:** Not started  
+**Date completed:**  
+**What worked:**  
+**What failed:**  
+**Files changed:**  
+**Next adjustment:**
+
+---
+
+# Session 10 — Daily Log, History Page, Automation, Domain
+
+## Goal
+
+Turn the snapshot into a log: dated daily JSON committed under `log/`, a history page rendering them backwards, automation, and deployment under `crucix.divergencelog.com`.
+
+## Estimated duration
+
+60 minutes
+
+## Tasks
+
+- [ ] Write each day's `divergence.json` to `log/YYYY-MM-DD.json` and commit it
+- [ ] Build `history.html`: rows rendered newest-first, filterable by state
+- [ ] Attempt the GitHub Action path: scheduled daily run — market fetch, Crucix sweep in CI if feasible, scripts, commit, publish. Identify which Crucix sources need secrets.
+- [ ] If CI cannot run Crucix: document the local one-command daily protocol and split the Action so the market side still runs automatically
+- [ ] Configure `crucix.divergencelog.com` (CNAME + GitHub Pages custom domain, records from GitHub's own docs)
+- [ ] Verify the Pages deployment reads the committed JSON, not `localhost`
+- [ ] Update the apex `divergencelog.com` index with the second entry (one line: what diverges from what)
+
+## Definition of done
+
+- At least three consecutive dated snapshots exist in `log/`
+- `crucix.divergencelog.com` serves the v2 dashboard with current data
+- The history page renders the accumulated rows
+
+## Session 10 Log
+
+**Status:** Not started  
+**Date completed:**  
+**What worked:**  
+**What failed:**  
+**Files changed:**  
+**Next adjustment:**
+
+---
+
+# Session 11 — Hardening and Launch Support Assets
+
+## Goal
+
+Final reliability pass and the assets the eventual post will need. The post itself is **not** written in this session (Section 12).
 
 ## Estimated duration
 
@@ -528,119 +798,24 @@ Prepare the final public-facing message and optional GitHub publish notes.
 
 ## Tasks
 
-- [ ] Finalize LinkedIn post
-- [ ] Finalize LinkedIn carousel outline
-- [ ] Add hashtags
-- [ ] Add disclaimer
-- [ ] Decide whether to publish code
-- [ ] Confirm attribution to Crucix
-- [ ] Confirm no unsupported investment claims
-- [ ] Write final short project summary
-
-## LinkedIn post draft
-
-```txt
-I built a small experiment on top of Crucix:
-
-CRUCIX Market Shock Radar — an OSINT-to-capital-markets dashboard.
-
-Most market dashboards show what moved.
-
-I wanted to prototype something that asks:
-
-What real-world signals could move markets next?
-
-The project reads Crucix intelligence data and maps signals into possible market transmission channels:
-
-• conflict escalation → oil, gold, VIX, defense equities
-• sanctions → FX, commodities, emerging markets
-• energy disruption → Brent, WTI, inflation expectations
-• credit stress → high-yield spreads, banks, Treasuries
-• supply-chain disruption → industrials, semiconductors, margins
-
-The output is a simple Market Shock Score and a ranked board of risk channels.
-
-Not investment advice.
-Not a trading bot.
-Just a 5-hour prototype exploring how OSINT can become a capital-markets intelligence layer.
-
-The bigger idea:
-
-Markets don’t move only because of charts.
-They move because the real world changes first.
-
-Curious: would you use something like this as a daily pre-market risk scan?
-
-#OSINT #CapitalMarkets #FinTech #OpenSource #AI
-```
-
-## Carousel structure
-
-### Slide 1
-
-```txt
-World Events → Market Risk
-I built an OSINT-to-capital-markets radar on top of Crucix.
-```
-
-### Slide 2
-
-```txt
-Problem:
-Markets show price moves.
-But investors also need to understand the real-world signals behind those moves.
-```
-
-### Slide 3
-
-```txt
-The mapping:
-Conflict → oil, gold, VIX
-Sanctions → FX, commodities
-Energy shocks → inflation expectations
-Credit stress → HY spreads, banks
-Supply chain → industrials, semis
-```
-
-### Slide 4
-
-```txt
-Output:
-Market Shock Score
-Risk regime
-Ranked transmission signals
-Asset channels
-Confidence level
-```
-
-### Slide 5
-
-```txt
-Built in 5 hours.
-Open-source experiment.
-Not investment advice.
-
-Question:
-Should OSINT become a standard pre-market workflow?
-```
+- [ ] Failure-mode pass: stale FRED data, Stooq outage, Crucix sweep failure — the board should degrade with a dated warning, never silently show old data as fresh
+- [ ] README v2: divergence rules, frozen thresholds, four states, instrument map, data sources, what the log is and is not
+- [ ] Confirm attribution to Crucix and disclaimer language
+- [ ] Screenshot of the board with real rows (note which state dominates that week)
+- [ ] Confirm `.env` / API keys are not committed; repo is publishable
 
 ## Definition of done
 
-Session 7 is complete when:
+- The project survives a missing data source without lying about freshness
+- A reader landing cold on the README understands the rules the board follows
+- A current, dated board screenshot exists
 
-- LinkedIn post is ready
-- Screenshot/demo is ready
-- Project summary is ready
-- Any publishing concerns are logged
-
-## Session 7 Log
+## Session 11 Log
 
 **Status:** Not started  
 **Date completed:**  
 **What worked:**  
 **What failed:**  
-**Final assets:**  
-**Publishing notes:**  
 **Files changed:**  
 **Next adjustment:**
 
@@ -687,7 +862,23 @@ Session 7 is complete when:
 - [x] Demo flow documented
 - [x] Screenshot captured
 - [ ] Demo video captured
-- [x] LinkedIn post drafted
+- [x] Old LinkedIn launch package superseded (2026-06-11)
+- [ ] Publication post drafted outside build sessions (after Phase 2 launch conditions in Section 12 are met)
+
+### Market data fetcher
+
+- [x] `scripts/market-data.mjs` created
+- [x] FRED API key stored locally in `.env`
+- [x] Tiingo API key stored locally in `.env`
+- [x] FRED fetch verified
+- [x] Tiingo EOD `adjClose` fetch verified
+- [x] Stooq tested and rejected for automation due to browser verification / access denial
+- [x] Alpha Vantage tested and rejected for this use because full daily history was premium-gated
+- [x] Uniform price/level transform implemented
+- [x] Common-date alignment implemented
+- [x] Channel max absolute z-score driver selected
+- [x] `dashboard/public/market-readings.json` generated
+- [x] `npm run market:data` added and verified
 
 ---
 
@@ -709,6 +900,23 @@ Use this section to record project decisions.
 | 2026-05-26 | Filter pure market labels and weak location-only rows from dashboard items | Keeps the ranked board focused on event-style market shock signals rather than ticker/data labels |
 | 2026-05-27 | Build Session 4 as a dependency-free static HTML dashboard | Keeps the MVP simple, fast, and served directly by the existing Crucix Express static server |
 | 2026-05-27 | Use VS Code for large HTML edits instead of long Command Prompt inline commands | Windows Command Prompt is fragile for multiline HTML/JS/CSS creation |
+| 2026-06-11 | Phase 2 pivot: add a market column per channel and a divergence classification | Phase 1 puts an estimate next to nothing; the gap between signal and market pricing is the actual content, and it makes the project falsifiable |
+| 2026-06-11 | One uniform z-score transform across all channels (5-day return or 5-day level change vs trailing 1-year), channel reading = max abs z with driver named | A per-channel formula or composite would rebuild the discretionary-aggregate problem on the market side of the page |
+| 2026-06-11 | Data sources: FRED API + Stooq CSV; no unofficial Yahoo endpoints as primary | Free, official/stable, automatable in CI |
+| 2026-06-11 | Freeze divergence thresholds at launch (signal ≥ 60% of channel max; abs z ≥ 1.5) | Retuning thresholds after the fact to make the board interesting destroys the log's credibility |
+| 2026-06-11 | Drop "margins" from the supply-chain channel | Quarterly accounting output, not a daily observable; silently proxying it would misrepresent |
+| 2026-06-11 | Retire "Market Volatility Signal" as a signal channel | VIX lives on the market side of the board; keeping it as an OSINT channel makes the market diverge from itself |
+| 2026-06-11 | Keep the Market Shock Score but demote it visually; decomposition and divergence board lead | The score is the least interesting output; the page layout should say so |
+| 2026-06-11 | Frame the project as a daily end-of-day log, not a live radar; every view dated "as of market close" | EOD data presented as live would fail the snapshot-honesty check |
+| 2026-06-11 | Dashboard labels stay flatly descriptive; no editorial severity language or implied side on named conflicts/sanctions | The post stays at transmission-mechanism level; the linked artifact must not undermine that |
+| 2026-06-11 | Target home: `crucix.divergencelog.com`, second entry under the owned `divergencelog.com` roof; apex stays a plain index | One project under "log" is a landing page wearing the word; two makes the name honest |
+| 2026-06-11 | Old Session 7 LinkedIn package (draft, carousel, hashtags, CTA) superseded; post drafted outside ChatGPT sessions against the post strategy file | The old draft conflicts with the governing post strategy (format, hashtags, register, timing) |
+| 2026-06-17 | Replace Stooq with Tiingo EOD `adjClose` for ETF proxies in Session 7 | Stooq returned browser-verification HTML and then `Access denied` from Node/`curl`, so it is not reliable for automated local or CI fetches. Tiingo provides keyed EOD ETF data and keeps the project off unofficial Yahoo endpoints as primary. |
+| 2026-06-17 | Use Tiingo `adjClose` for ETF price instruments | ETF distributions can create artificial price drops in raw close; adjusted close avoids dividend/split distortions in 5-day return z-scores. |
+| 2026-06-17 | Keep gold as `GLD` via Tiingo instead of moving to FRED | The suggested FRED gold series `GOLDAMGBD228NLBM` returned `series does not exist` during API testing. |
+| 2026-06-17 | Reject Alpha Vantage for Session 7 ETF history | Compact CSV worked, but full daily history was premium-gated, so it cannot support the required trailing 252-observation window on the free key. |
+| 2026-06-17 | Align market transforms on common dates across all instruments | FRED and ETF data have different calendars and some FRED series lag; common-date alignment avoids silently comparing mismatched dates. |
+| 2026-06-17 | Add `npm run market:data` | Gives Session 7 a repeatable command for regenerating `dashboard/public/market-readings.json`. |
 
 ---
 
@@ -725,9 +933,14 @@ Use this section to log unresolved items.
 | Should Session 4 show the concentration warning visually near the score? | 4 | Answered for MVP | Yes. The dashboard shows the score interpretation and also exposes concentration penalty/category breadth in the shock mix stats. |
 | Should the dashboard show all 15 signals, or highlight top 10 with the rest collapsed? | 4 | Answered for MVP | Show all 15. This is simpler and works for the screenshot/demo layout. |
 | Should low-confidence high-priority Telegram items be visually de-emphasized? | 4 | Partially answered | Confidence is shown as a visible chip. More advanced filtering can wait until after MVP. |
-| Should we include live market prices in the first version? | 6–7 | Open | Optional upgrade only |
-| Should the final code be published as a fork, gist, or local demo only? | 7 | Answered | Share the GitHub repository publicly and include the repo link in the LinkedIn post. |
-| Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Open | Decide in Session 5 before commit/package cleanup. |
+| Should we include live market prices in the first version? | 6–7 | **Answered 2026-06-11** | Yes — promoted from optional upgrade to the core of Phase 2. EOD data, uniform z-score transform, divergence states. See Design Spec 4b. |
+| Should the final code be published as a fork, gist, or local demo only? | 7 | Partially answered | A public GitHub Pages deployment already exists. Confirm repo publishability (no keys committed) in Session 11; canonical home moves to `crucix.divergencelog.com` in Session 10. |
+| Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Answered | Added to `.gitignore` in Session 5. |
+| Can the Crucix sweep run inside a GitHub Action, and which sources need API keys/secrets? | 10 | Open | Determines whether the daily log is fully automated or market-side-only automated with a local signal step. |
+| Market columns for Macro/Inflation and Weather/Climate, or signal-only display for v2? | 8 | Open | Spec allows either; decide in Session 8 and log it. Candidates: `T10YIE`+`DGS10`; NatGas `DHHNGSP`. |
+| `DBC` or `CPER` for broad commodities; `SOXX` or `SMH` for semis? | 7 | Answered | `DBC` and `SOXX` fetched cleanly through Tiingo and were selected. `CPER` and `SMH` remain code fallbacks. |
+| How should the board handle FRED series that lag a day (spreads, breakevens)? | 7 | Partially answered | Session 7 uses latest common usable market date as `asOfClose` and includes each instrument's `sourceLatestDate`, `asOf`, and lag metadata. Session 9 should decide how much of this detail to expose in the UI. |
+| What does the GitHub Pages copy currently read, given it cannot reach `localhost:3117`? | 7 | Answered | Pages root `/` serves the dashboard and fetches committed static `market-shock.json`. `/market-shock.html` returns 404 on Pages. Future deploys must commit refreshed static JSON files. |
 
 ---
 
@@ -747,6 +960,11 @@ Use this section to track problems.
 | Long `node -e` command failed when trying to create multiline HTML from Command Prompt | 4 | Low | Fixed | Switched to editing `dashboard/public/market-shock.html` in VS Code and saved the file directly. |
 | Command Prompt displayed the arrow character as `ΓåÆ` in `findstr` output | 4 | Low | Accepted | Browser rendering looked correct; this is a Windows console encoding display issue, not a dashboard blocker. |
 | Crucix server was not running during first dashboard HTTP check | 4 | Low | Fixed | Started the dev server with `npm run dev` in a second Command Prompt. |
+| `FRED_API_KEY` existed but was blank | 7 | Medium | Fixed | Requested a FRED API key and stored it locally in `.env`; confirmed `DCOILBRENTEU` fetch returned data. |
+| Stooq CSV returned browser-verification HTML / `Access denied` | 7 | High | Replaced | Switched ETF proxy source to Tiingo EOD `adjClose`; log this as an implementation-forced source change. |
+| Alpha Vantage compact CSV worked but full history was premium-gated | 7 | Medium | Rejected | Not enough free history for 252-observation trailing z-score window; do not use for Session 7. |
+| Suggested FRED gold series `GOLDAMGBD228NLBM` returned `series does not exist` | 7 | Medium | Rejected | Keep `GLD` as gold proxy via Tiingo `adjClose`. |
+| Broken inline Command Prompt command created stray file `{console.error(e.message)` | 7 | Low | Fixed | Deleted the stray file and confirmed only intended Session 7 files remain. |
 
 ---
 
@@ -761,26 +979,25 @@ Use this section to change the plan based on what happened.
 | 3 | Build the dashboard from `dashboard/public/market-shock.json` and keep scoring details visible enough to explain the regime | JSON output now works and Session 4 can focus on UI rather than data generation |
 | 4 | Package the project and make the run flow clean with `npm run shock`, README, and commit-ready file review | The dashboard now works; next value is making the project understandable and shareable |
 | 5 | Test the full flow end-to-end, refresh JSON, capture screenshot, and prepare demo assets | Packaging is complete and the project is ready for validation/media capture |
-| 6 | Finalize the LinkedIn launch package, decide whether to record the demo video, and confirm attribution/disclaimer language | Full flow works and the screenshot/demo plan are ready |
-
+| 6 | ~~Finalize the LinkedIn launch package~~ → Superseded. Begin Phase 2 at Session 7 (market data fetcher) per the Design Spec | 2026-06-11 pivot: the project needs the market column, divergence states, and daily log before it is worth posting |
+| 7 | Build `scripts/divergence.mjs` from `market-shock.json` + `market-readings.json`; use frozen thresholds and write `dashboard/public/divergence.json` | Session 7 now provides market readings per channel with aligned dates, z-scores, and driver instruments. Session 8 can join this with signal-side scores. |
 ---
 
 ## 10. Backlog / Optional Upgrades
 
-Only do these after the MVP works.
+Only do these after Phase 2 works.
 
-- [ ] Add live price snapshots beside asset channels
-- [ ] Add chart links for WTI, VIX, gold, SPY, QQQ
+- [x] ~~Add live price snapshots beside asset channels~~ → promoted into Phase 2 core (Sessions 7–8), as EOD readings, not "live"
+- [x] ~~Add historical score archive~~ → promoted into Phase 2 core (Session 10), as the dated divergence log
+- [ ] Add chart links for the driver instruments
 - [ ] Add a daily generated summary
 - [ ] Add export to Markdown
-- [ ] Add export to LinkedIn carousel text
 - [ ] Add source-level filtering
-- [ ] Add severity tags such as `localized`, `regional`, `global`
-- [ ] Add LLM-generated explanation as an optional layer
+- [ ] Add severity tags such as `localized`, `regional`, `global` (must respect the descriptive-labels rule — Design Spec 4b.6)
+- [ ] Add LLM-generated explanation as an optional layer (same discipline as the World Cup project: the language model narrates, it never produces the readings or the states)
 - [ ] Add a small `Why now?` section
-- [ ] Add historical score archive
-- [ ] Add category-concentration controls so one repeated geopolitical theme does not dominate the score too aggressively
 - [ ] Add source weighting so direct OSINT, chokepoints, and market data can be weighted differently from generic headlines
+- [ ] After 30–40 days of log rows: compute and display the track record — how often `radar-claim` preceded a market move within N days, and how often it did not
 
 ---
 
@@ -983,6 +1200,71 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 
 ## Update — Session 4 — 2026-05-27
 
+## Update — Session 7 — 2026-06-17
+
+### Completed
+
+- Confirmed working tree was clean at session start
+- Verified GitHub Pages root serves the dashboard and reads committed static `market-shock.json`
+- Confirmed `/market-shock.html` returns 404 on GitHub Pages
+- Added FRED API key locally in `.env`
+- Confirmed one FRED fetch works with `DCOILBRENTEU`
+- Tested Stooq and rejected it for automation because it returned browser verification / `Access denied`
+- Tested Alpha Vantage and rejected it because full daily history was premium-gated
+- Added Tiingo API key locally in `.env`
+- Confirmed Tiingo EOD fetch works with `GLD` and returns full history plus `adjClose`
+- Created `scripts/market-data.mjs`
+- Added `npm run market:data`
+- Generated `dashboard/public/market-readings.json`
+- Deleted temporary test scripts and stray broken-command file
+- Confirmed `.env` is not tracked and no actual API keys appear in tracked files
+
+### Changed files
+
+- `scripts/market-data.mjs`
+- `dashboard/public/market-readings.json`
+- `package.json`
+
+### Results
+
+- `npm run market:data` succeeded
+- `asOfClose`: `2026-06-08`
+- Common usable dates: `596`
+- Selected proxies: `GLD`, `DBC`, `SOXX`
+- Channel readings:
+  - Conflict escalation: `-1.127σ`, driver `GLD`
+  - Sanctions / policy: `-2.618σ`, driver `EEM`
+  - Energy disruption: `-1.332σ`, driver `T10YIE`
+  - Credit stress: `1.074σ`, driver `DGS10`
+  - Supply chain: `-0.476σ`, driver `SOXX`
+
+### Issues
+
+- Stooq was not usable from Node or `curl`
+- Alpha Vantage full history was premium-gated
+- Suggested FRED gold series did not exist
+- Windows Command Prompt inline quoting remained fragile for complex Node commands
+
+### Decisions
+
+- Use FRED for official macro/market series
+- Use Tiingo EOD `adjClose` for ETF proxies
+- Keep gold as `GLD` via Tiingo
+- Use common-date alignment across all instruments
+- Add `npm run market:data`
+
+### Open questions
+
+- Session 8 still needs to decide Macro/Inflation and Weather/Climate signal-only vs. optional market columns
+- Session 9 should decide how much per-instrument `asOf` / lag detail to expose in the UI
+
+### Next session focus
+
+- Create `scripts/divergence.mjs`
+- Join signal-side categories from `market-shock.json` to market channels from `market-readings.json`
+- Apply frozen thresholds: signal elevated at `>= 60%` of channel max and market moving at `abs(z) >= 1.5`
+- Write `dashboard/public/divergence.json`
+
 ### Completed
 
 - Created `dashboard/public/market-shock.html`
@@ -1038,30 +1320,44 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 
 ---
 
-## 12. Final Launch Checklist
+## 12. Publication Boundary and Launch Conditions
 
-Before posting on LinkedIn:
+> Replaces the old "Final Launch Checklist" (2026-06-11). The old checklist (hashtags, carousel, CTA question) is retired.
 
-- [x] Dashboard screenshot looks clear
-- [ ] Demo video is short and understandable
-- [ ] Post says `not investment advice`
-- [x] Post does not claim prediction or guaranteed alpha
-- [x] Crucix is attributed
-- [x] Project name is clear
-- [x] One-line pitch is included
-- [x] Call-to-action question is included
+**Boundary:** ChatGPT sessions cover the **build only**. The LinkedIn/Substack post is drafted in a separate workflow against the author's post strategy file, which governs voice, format, timing, and distribution. Do not draft, revise, or propose post copy in these sessions. The build's job is to make the artifact worth posting.
 
-### Best final CTA
+**What the build must deliver before the post can happen:**
 
-```txt
-Would you use something like this as a daily pre-market risk scan?
-```
+- [ ] Divergence board live with the four states and frozen thresholds (Sessions 8–9)
+- [ ] Score visually demoted; decomposition and board lead (Session 9)
+- [ ] Every view dated `as of market close, {date}`; no "live" language (Session 9)
+- [ ] Descriptive-labels pass complete — no editorial severity language, no implied side on named conflicts or sanction regimes (Session 9)
+- [ ] At least ~2 weeks of dated rows accumulated in `log/` so the log has content when readers click (Session 10 onward)
+- [ ] Served from `crucix.divergencelog.com`; apex index updated with the second entry (Session 10)
+- [ ] Crucix attributed; disclaimer present; no keys committed (Session 11)
+- [ ] Board screenshot with real rows, noting which state dominates that week (Session 11)
+
+**Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
 ---
 
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 7. Read the project log first, continue from the current state, and help me complete this session. Work strictly step by step: give me one command or action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default. Session 7 goal: finalize the LinkedIn launch package, decide whether to record the demo video, confirm attribution to Crucix, confirm disclaimer language, and prepare the final public project summary.
-```
+Ready for session 8. Read the project log first, especially Section 4b Phase 2 Design Spec, the Session 7 log, and the Session 8 spec. Continue from the current state. This is not a new project.
 
+Work strictly step by step: give me one command or one action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default because the project is in D:\WinProjects\CRUCIX. Use VS Code for multiline file creation or large edits.
+
+Session 8 goal: create scripts/divergence.mjs. It must read dashboard/public/market-shock.json and dashboard/public/market-readings.json, map Phase-1 signal categories to Phase-2 market channels, normalize channel signal scores so the 60% elevated threshold is meaningful, apply the frozen thresholds from the spec, classify each channel into radar-claim, priced, radar-miss, or calm, and write dashboard/public/divergence.json.
+
+Important context from Session 7: market-readings.json now comes from FRED + Tiingo EOD adjClose, not Stooq. Stooq was blocked by browser verification / Access denied. Tiingo is the ETF proxy source. Do not use unofficial Yahoo endpoints as primary. Keep the frozen thresholds unchanged.
+
+First actions:
+1. Run git status --short and confirm the working tree.
+2. Inspect market-shock.json category scores and market-readings.json channel readings.
+3. Decide and log the Session 8 choice for Macro/Inflation and Weather/Climate: optional market columns or signal-only for v2.
+4. Then create scripts/divergence.mjs.
+5. Run it and validate divergence.json.
+
+Do not draft LinkedIn, Substack, launch, hashtag, or post copy. At the end, give me the exact updates to apply to CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md.
+```
