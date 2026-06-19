@@ -1,0 +1,233 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-06-19T12:49:00.910Z",
+  "date": "2026-06-08",
+  "asOfClose": "2026-06-08",
+  "framing": "readings as of market close, 2026-06-08",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "radar-claim": 3,
+    "radar-miss": 1,
+    "calm": 1
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "drone",
+          "ukraine"
+        ],
+        "text": "Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibility and can function at",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibili..."
+      },
+      "market_z": -1.127,
+      "abs_market_z": 1.127,
+      "market_moving": false,
+      "driver_instrument": "GLD",
+      "driver_instrument_id": "gold",
+      "driver_instrument_label": "Gold ETF",
+      "driver_as_of": "2026-06-08",
+      "state": "radar-claim"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": -2.618,
+      "abs_market_z": 2.618,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-06-08",
+      "state": "radar-miss"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 3,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[6]",
+        "category": "Energy Shock",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "oil",
+          "hormuz",
+          "naval",
+          "blockade"
+        ],
+        "text": "🇮🇷🇺🇸⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz for the first time in two months, according to tracking site TankerTrackers. ➡️ Supertankers",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: 🇮🇷🇺🇸⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz for the first time in two months, according to tracking site TankerTrac..."
+      },
+      "market_z": -1.332,
+      "abs_market_z": 1.332,
+      "market_moving": false,
+      "driver_instrument": "T10YIE",
+      "driver_instrument_id": "inflation-expectations",
+      "driver_instrument_label": "10-year breakeven inflation rate",
+      "driver_as_of": "2026-06-08",
+      "state": "radar-claim"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 1.074,
+      "abs_market_z": 1.074,
+      "market_moving": false,
+      "driver_instrument": "DGS10",
+      "driver_instrument_id": "ten-year-treasury",
+      "driver_instrument_label": "10-year Treasury yield",
+      "driver_as_of": "2026-06-08",
+      "state": "calm"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 6,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 6,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "drone",
+          "ukraine"
+        ],
+        "text": "Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibility and can function at",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibili..."
+      },
+      "market_z": -0.476,
+      "abs_market_z": 0.476,
+      "market_moving": false,
+      "driver_instrument": "SOXX",
+      "driver_instrument_id": "semiconductors",
+      "driver_instrument_label": "Semiconductor equities ETF",
+      "driver_as_of": "2026-06-08",
+      "state": "radar-claim"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
