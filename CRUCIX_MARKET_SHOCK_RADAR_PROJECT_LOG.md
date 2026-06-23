@@ -53,11 +53,24 @@ This project is:
 
 ### Starting a new session
 
-Use this prompt:
+At the start of each session, the user should be able to say only:
 
 ```txt
-Ready for session X. Read the project log first, continue from the current state, and help me complete this session. At the end, give me the exact updates to apply to this file.
+Ready for session X
 ```
+
+ChatGPT must then:
+
+- read this project log first
+- explain the session goal briefly
+- state the key decisions needed before work starts
+- recommend defaults when decisions are minor
+- ask the user to confirm or correct those decisions
+- then provide a clear work order to Claude
+- work strictly step by step after Claude returns output
+- give one command or one action at a time
+- wait for user output before continuing
+- at the end, provide a Claude work order to update this project log
 
 ### Ending a session
 
@@ -88,21 +101,21 @@ Rules:
 - Do not provide long multi-step blocks during setup, debugging, or testing.
 - When something fails, explain the likely cause in plain language, then give one recovery command.
 - At the end of each session, if many sections changed, provide the full updated project log file instead of many separate patches.
-- Keep the session focused on the current session goal. Put side ideas into `Open Questions`, `Issues / Bugs`, or `Backlog / Optional Upgrades`.
+- Keep the session focused on the current session goal. Put side ideas into `Open Questions`, `Issues / Bugs`, or `Next Session Adjustments`.
 
 ---
 
 ## 3. Current State
 
-**Current session cursor:** Session 8 complete — next session is Session 9  
+**Current session cursor:** Session 9 complete — next session is Session 10
 **Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
-**Dashboard created:** Yes (Phase 1 version — score-as-hero layout, to be reworked in Session 9)  
-**Public GitHub Pages deployment:** Yes, at `https://heckel75.github.io/CRUCIX-Market-Shock-Radar/`. Verified in Session 7: root `/` serves the dashboard and fetches committed static `market-shock.json`; `/market-shock.html` returns 404 on Pages. Pages cannot reach `localhost:3117`, so deployment depends on committed static JSON files, refreshed on publish and daily once Session 10 lands.
+**Dashboard created:** Yes. Dashboard v2 is now live. `dashboard/public/market-shock.html` has been reworked so the divergence board is the hero element, reads `divergence.json`, keeps Shock Mix prominent, and demotes the Market Shock Score.
+**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. The deployed page was browser-verified. Session 9 discovered that GitHub Pages does not serve directly from `dashboard/public/`; it serves from `docs/`. Any future publish must copy or generate the static dashboard files into `docs/`.
 **Market data fetcher:** Created and verified in Session 7. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, and writes `dashboard/public/market-readings.json`.
 **Divergence engine:** Created and verified in Session 8. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, and writes `dashboard/public/divergence.json`.  
 **Daily log / history:** Not started (Session 10)  
@@ -169,7 +182,7 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 |---:|---:|---|---|
 | 7 | 60 min | Market data fetcher: FRED + Tiingo, uniform z-score transform, `market-readings.json` | Done |
 | 8 | 60 min | Divergence engine: join signal channels × market readings, classify the four states with frozen thresholds, `divergence.json` | Done |
-| 9 | 75 min | Dashboard v2: divergence board as hero, Shock Mix prominent, score demoted, dated "as of close" framing, descriptive-labels pass | Not started |
+| 9 | 75 min | Dashboard v2: divergence board as hero, Shock Mix prominent, score demoted, dated "as of close" framing, descriptive-labels pass | Done |
 | 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation (GitHub Action preferred, local-run protocol as fallback), deploy under `crucix.divergencelog.com` | Not started |
 | 11 | 30 min | Hardening, README v2, board screenshot with real rows. (The LinkedIn post itself is drafted outside these sessions — Section 12) | Not started |
 
@@ -743,12 +756,16 @@ Rework `market-shock.html` so the page layout expresses the project's position: 
 
 ## Session 9 Log
 
-**Status:** Not started  
-**Date completed:**  
-**What worked:**  
-**What failed:**  
-**Files changed:**  
-**Next adjustment:**
+**Status:** Complete
+**Date completed:** 2026-06-23
+**What worked:** Reworked `dashboard/public/market-shock.html` into Dashboard v2. The divergence board is now the hero element and reads `divergence.json`. The board renders one row per market channel with signal reading, market reading, driver instrument, and state. Calm rows remain visible. `radar-claim` rows are distinct but sober. The `radar-miss` row is shown as the humility check. Shock Mix and ranked transmission signals remain prominent below the board. The Market Shock Score is still present but visually demoted. The page displays `readings as of market close, {date}` and uses descriptive, non-live, non-editorial labels. User feedback restored the darker CRUCIX visual style and reintroduced neutral observed source excerpts in ranked signal cards.
+**Data refresh:** Refreshed `market-shock.json` with `npm run shock`, refreshed `market-readings.json` with `npm run market:data`, and regenerated `divergence.json` with `npm run divergence`. Final public divergence date was `2026-06-15`. State counts were `priced: 3`, `radar-miss: 1`, `calm: 1`. Rows: Conflict escalation `priced`, Sanctions / policy `radar-miss`, Energy disruption `priced`, Credit stress `calm`, Supply chain `priced`.
+**Deployment:** First commit `b90be39 Rework dashboard around divergence board` updated Dashboard v2 and refreshed static files. A second deployment fix commit `3c26afc Publish dashboard v2 to Pages` copied the v2 dashboard and refreshed JSON files into `docs/`, because GitHub Pages serves from `docs/`. The browser view of GitHub Pages was verified.
+**What failed:** Initial Pages verification still showed the old dashboard because Pages was serving `docs/index.html`, not `dashboard/public/market-shock.html`. The first JSON check failed because `docs/divergence.json` did not exist yet and Pages returned HTML. Fixed by publishing `docs/divergence.json`, `docs/market-readings.json`, `docs/market-shock.json`, and updating `docs/index.html`. A forbidden-wording scan found `Live Updates` in a raw source headline. Fixed by sanitizing dashboard output text so source-feed labels are neutralized in public JSON/display output.
+**Files changed:** `dashboard/public/market-shock.html`, `dashboard/public/market-shock.json`, `dashboard/public/market-readings.json`, `dashboard/public/divergence.json`, `scripts/market-shock-radar.mjs`, `docs/index.html`, `docs/market-shock.json`, `docs/divergence.json`, `docs/market-readings.json`.
+**Commits:** `b90be39 Rework dashboard around divergence board`; `3c26afc Publish dashboard v2 to Pages`.
+**Validation:** Local Crucix served the dashboard and JSON files with HTTP 200. Wording scans passed for forbidden terms: `high-severity`, `real-time`, `breaking`, `alarming`, `terrifying`, and live-language variants. `node --check scripts/market-shock-radar.mjs` passed. `git diff --check` passed. Secret scan found no obvious committed secrets in checked files. GitHub raw file check confirmed `docs/divergence.json` contained `date: 2026-06-15` and state counts `priced: 3`, `radar-miss: 1`, `calm: 1`. GitHub Pages browser view was verified.
+**Next adjustment:** Session 10 should build the daily log/history flow and include a Pages publish step that keeps `docs/` synchronized with generated dashboard outputs.
 
 ---
 
@@ -856,6 +873,15 @@ Final reliability pass and the assets the eventual post will need. The post itse
 - [x] Asset channels displayed
 - [x] Disclaimer displayed
 - [x] UI looks shareable
+- [x] Dashboard v2 divergence board implemented as hero
+- [x] Dashboard reads `divergence.json`
+- [x] Dashboard keeps calm rows visible
+- [x] Radar-miss row shown as humility check
+- [x] Shock Mix kept prominent below the board
+- [x] Market Shock Score visually demoted
+- [x] `readings as of market close, {date}` framing added
+- [x] Descriptive-labels pass completed
+- [x] Dashboard v2 published to GitHub Pages via `docs/`
 
 ### Packaging
 
@@ -938,6 +964,13 @@ Use this section to record project decisions.
 | 2026-06-19 | Normalize channel signal scores against the Phase-1 20-point item score ceiling | The Phase-1 item scorer already uses a 20-point max, and the frozen threshold says elevated means 60% of channel max. This makes `>= 12/20` the channel-elevated cutoff and keeps the threshold meaningful without retuning. |
 | 2026-06-19 | Include `otherCategories` when aggregating channel signals | Supply Chain Disruption appeared only as a secondary category in the current signal data. Ignoring secondary categories would incorrectly mark that channel quiet. |
 | 2026-06-19 | Add `npm run divergence` as a separate script | Keeps the Phase 2 pipeline explicit: `npm run shock`, `npm run market:data`, then `npm run divergence`. |
+| 2026-06-23 | Session-start protocol changed: user can start by saying only “Ready for session X”; ChatGPT explains the session, asks for decisions, then gives a Claude work order | Reduces copy/paste and makes the collaboration pattern explicit |
+| 2026-06-23 | Use Claude/VS Code for large dashboard edits, with ChatGPT guiding validation one command at a time | Large HTML/CSS/JS edits are easier and safer outside Command Prompt |
+| 2026-06-23 | Dashboard v2 keeps signal-only Macro / Inflation and Weather / Climate outside the hero divergence board | The hero board should stay focused on channels with both signal and market readings |
+| 2026-06-23 | Dashboard uses relative JSON fetches (`divergence.json`, `market-shock.json`) | Required for GitHub Pages project-path deployment and still works locally |
+| 2026-06-23 | GitHub Pages publish target is `docs/`, not `dashboard/public/` | The deployed root served `docs/index.html`; Session 9 v2 files had to be copied into `docs/` |
+| 2026-06-23 | Sanitize dashboard output labels such as “Live Updates” to neutral “Updates” in public JSON/display output | The project is an end-of-day log, so live-language feed labels should not appear in public dashboard copy |
+| 2026-06-23 | Keep refreshed 2026-06-15 market readings for publication despite source lag | The page honestly states the close date; Brent and WTI FRED series held the common close date back |
 
 ---
 
@@ -959,10 +992,11 @@ Use this section to log unresolved items.
 | Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Answered | Added to `.gitignore` in Session 5. |
 | Can the Crucix sweep run inside a GitHub Action, and which sources need API keys/secrets? | 10 | Open | Determines whether the daily log is fully automated or market-side-only automated with a local signal step. |
 | Market columns for Macro/Inflation and Weather/Climate, or signal-only display for v2? | 8 | Answered | Signal-only for v2. Optional market columns can be revisited after the five-channel divergence board and daily log are working. |
-| Should Session 9 show the signal-only Macro/Inflation and Weather/Climate rows on the main board or in a smaller side section? | 9 | Open | `divergence.json` includes them under `signalOnly`; the hero divergence board should stay focused on channels with both signal and market readings unless UI testing suggests otherwise. |
+| Signal-only Macro / Inflation and Weather / Climate display | 9 | Answered | They are shown separately below the main divergence board, not in the hero board. |
 | `DBC` or `CPER` for broad commodities; `SOXX` or `SMH` for semis? | 7 | Answered | `DBC` and `SOXX` fetched cleanly through Tiingo and were selected. `CPER` and `SMH` remain code fallbacks. |
-| How should the board handle FRED series that lag a day (spreads, breakevens)? | 7 | Partially answered | Session 7 uses latest common usable market date as `asOfClose` and includes each instrument's `sourceLatestDate`, `asOf`, and lag metadata. Session 9 should decide how much of this detail to expose in the UI. |
+| How should the board handle FRED series that lag a day (spreads, breakevens)? | 7 | Partially answered | Session 9 exposes the main `readings as of market close` date. Detailed per-instrument lag remains a Session 10/11 hardening item. |
 | What does the GitHub Pages copy currently read, given it cannot reach `localhost:3117`? | 7 | Answered | Pages root `/` serves the dashboard and fetches committed static `market-shock.json`. `/market-shock.html` returns 404 on Pages. Future deploys must commit refreshed static JSON files. |
+| Should Session 10 automate copying dashboard/public outputs into docs/ after each refresh? | 9 | Open | Pages serves from docs/, so daily snapshot/publish flow must keep docs/ in sync. |
 
 ---
 
@@ -988,6 +1022,10 @@ Use this section to track problems.
 | Suggested FRED gold series `GOLDAMGBD228NLBM` returned `series does not exist` | 7 | Medium | Rejected | Keep `GLD` as gold proxy via Tiingo `adjClose`. |
 | Broken inline Command Prompt command created stray file `{console.error(e.message)` | 7 | Low | Fixed | Deleted the stray file and confirmed only intended Session 7 files remain. |
 | No `priced` row appeared in the live Session 8 data | 8 | Low | Accepted | Classifier self-test confirms all four states are reachable. Live data produced `radar-claim`, `radar-miss`, and `calm`; future snapshots may naturally produce `priced`. |
+| GitHub Pages root still served old dashboard after Session 9 first push | 9 | Medium | Fixed | Pages serves from `docs/`, while Dashboard v2 was first edited only in `dashboard/public/`. Fixed by copying v2 HTML and refreshed JSON files into `docs/`. |
+| Absolute fetch paths broke on GitHub Pages project URL | 9 | Medium | Fixed | Replaced absolute `/divergence.json` and `/market-shock.json` fetches with relative `divergence.json` and `market-shock.json`. |
+| Public JSON contained source-feed wording “Live Updates” | 9 | Low | Fixed | Added dashboard-output sanitization so feed-format labels are neutralized before public JSON/display output. |
+| FRED Brent and WTI held the common market close date at 2026-06-15 | 9 | Medium | Accepted / log for hardening | Market script correctly aligned all instruments on common dates. Dashboard honestly displays `readings as of market close, 2026-06-15`. Revisit stale-data handling in Session 10/11. |
 
 ---
 
@@ -1005,6 +1043,8 @@ Use this section to change the plan based on what happened.
 | 6 | ~~Finalize the LinkedIn launch package~~ → Superseded. Begin Phase 2 at Session 7 (market data fetcher) per the Design Spec | 2026-06-11 pivot: the project needs the market column, divergence states, and daily log before it is worth posting |
 | 7 | Build `scripts/divergence.mjs` from `market-shock.json` + `market-readings.json`; use frozen thresholds and write `dashboard/public/divergence.json` | Session 7 now provides market readings per channel with aligned dates, z-scores, and driver instruments. Session 8 can join this with signal-side scores. |
 | 8 | Rework `market-shock.html` around `divergence.json`: divergence board first, Shock Mix prominent, score demoted, dated EOD framing visible | Session 8 now produces validated divergence rows with frozen thresholds and state labels. Session 9 can focus on UI and framing rather than classification logic. |
+| 9 | Session 10 must include `docs/` publishing in the daily-log flow and decide whether to automate copying generated files from `dashboard/public/` to `docs/` | GitHub Pages serves from `docs/`; refreshed JSON in `dashboard/public/` alone does not update the public site. |
+| 9 | Session 10 should treat source lag as a visible history/log issue, not a dashboard bug | FRED Brent/WTI lag made the common close date 2026-06-15; the page was honest, but history automation should track this cleanly. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1430,13 +1470,5 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 9. Read the project log first, especially Section 4b Phase 2 Design Spec, the Session 8 log, and the Session 9 spec. Continue from the current state. This is not a new project.
-
-Work strictly step by step: give me one command or one action at a time, wait for my output, then continue. Use Windows Command Prompt commands by default because the project is in D:\WinProjects\CRUCIX. Use VS Code for multiline file creation or large edits.
-
-Session 9 goal: rework dashboard/public/market-shock.html into Dashboard v2. The divergence board must be the hero element and read dashboard/public/divergence.json. The page must show one row per divergence channel with signal reading, market reading, driver instrument, and state. Keep calm rows visible. Treat radar-claim rows distinctly but soberly. Show the radar-miss row clearly as the radar’s humility check. Keep Shock Mix decomposition prominent below the board. Visually demote the Market Shock Score. Add visible framing: readings as of market close, {date}. Do a descriptive-labels pass: no live language, no editorial severity language, no implied side on named conflicts or sanction regimes.
-
-Important context from Session 8: divergence.json is generated and validated. Current state counts are radar-claim: 3, radar-miss: 1, calm: 1. Macro / Inflation Shock and Weather / Climate Shock are signal-only for v2. Market Volatility Signal is retired as a signal channel. Frozen thresholds remain unchanged: signal elevated >= 60%; market moving abs(z) >= 1.5.
-
-Do not draft LinkedIn, Substack, launch, hashtag, or post copy. At the end, give me the exact updates to apply to CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md.
+Ready for session 10.
 ```
