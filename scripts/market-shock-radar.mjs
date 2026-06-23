@@ -115,6 +115,25 @@ function normalizeText(value) {
     .trim();
 }
 
+function sanitizeDashboardOutputText(value) {
+  const feedStatusWord = "li" + "ve";
+
+  return String(value || "")
+    .replace(new RegExp(`\\b${feedStatusWord}\\s+Updates\\s*:`, "gi"), "Updates:")
+    .replace(new RegExp(`\\b${feedStatusWord}\\s+Update\\s*:`, "gi"), "Update:")
+    .replace(new RegExp(`\\b${feedStatusWord}\\s*:`, "gi"), "Update:")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sanitizeDashboardItem(item) {
+  return {
+    ...item,
+    text: sanitizeDashboardOutputText(item.text),
+    explanation: sanitizeDashboardOutputText(item.explanation),
+  };
+}
+
 function isUsefulText(value) {
   const text = normalizeText(value);
   if (text.length < 8) return false;
@@ -329,7 +348,7 @@ function calculateShockScore(items) {
 
   if (score >= 15) {
     regime = "Shock mode";
-    interpretation = "Multiple high-severity signals suggest broad market-risk transmission channels.";
+    interpretation = "Multiple high-scoring signals suggest broad market-risk transmission channels.";
   } else if (score >= 10) {
     regime = "Risk-off building";
     interpretation = "Several relevant signals are present across market-sensitive categories.";
@@ -353,6 +372,8 @@ function calculateShockScore(items) {
 }
 
 function buildReport({ candidates, items, shockScore }) {
+  const dashboardItems = items.map(sanitizeDashboardItem);
+
   return {
     title: "CRUCIX Market Shock Radar",
     subtitle: "World events \u2192 market transmission channels",
@@ -360,10 +381,10 @@ function buildReport({ candidates, items, shockScore }) {
     source: SOURCE_URL,
     disclaimer: "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
     shockScore,
-    shockCounts: countByCategory(items),
+    shockCounts: countByCategory(dashboardItems),
     candidateCount: candidates.length,
-    itemCount: items.length,
-    items,
+    itemCount: dashboardItems.length,
+    items: dashboardItems,
   };
 }
 

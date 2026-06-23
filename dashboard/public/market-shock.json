@@ -1,26 +1,91 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-06-17T13:25:40.511Z",
+  "generatedAt": "2026-06-23T14:08:30.930Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
-    "interpretation": "Multiple high-severity signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 3
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 154,
+  "candidateCount": 150,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 27,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "military",
+        "troops",
+        "oil",
+        "energy",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refineries, fuel and energy",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, military, troops. Signal: 🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refine..."
+    },
+    {
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 22,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "israel",
+        "port",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Energy Shock"
+      ],
+      "text": "🇱🇧🇱🇧❌🇮🇱 — NEW: OSINT imagery surfacing today reportedly shows a destroyed underground IDF fuel storage facility at Israel’s Ashdod port, the target of a Hezbollah strike claimed in April, OSINT",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: 🇱🇧🇱🇧❌🇮🇱 — NEW: OSINT imagery surfacing today reportedly shows a destroyed underground IDF fuel storage facility at Israel’s Ashdod port, the target of a Hezbollah strike c..."
+    },
+    {
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
@@ -40,164 +105,101 @@
       "matchedKeywords": [
         "strike",
         "drone",
-        "ukraine"
+        "russia"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibility and can function at",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Ukraine has unveiled the Sea Trident, a heavy underwater drone capable of carrying up to 1,000 kg of explosives to strike strategic targets. The drone operates with low visibili..."
+      "text": "According to Drone Bomber, yesterday about 250 strike UAVs headed towards Russia and the occupied territories.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia. Signal: According to Drone Bomber, yesterday about 250 strike UAVs headed towards Russia and the occupied territories."
     },
     {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 17,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz",
-        "naval",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷🇺🇸⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz for the first time in two months, according to tracking site TankerTrackers. ➡️ Supertankers",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: 🇮🇷🇺🇸⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz for the first time in two months, according to tracking site TankerTrac..."
-    },
-    {
-      "path": "root.newsFeed[47]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 17,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz",
-        "naval",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz fo | INTELSLAVA",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: ⚡️ — Iranian oil tankers have begun passing through the US naval blockade in the Strait of Hormuz fo | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "ukraine"
+        "conflict",
+        "military",
+        "iran"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦❌🇷🇺🇧🇾 — As a result of a strike by the Armed Forces of Ukraine on a bus with a children's football team from Belarus, a woman accompanying them was killed, and four teenagers were injured, rep",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: 🇺🇦❌🇷🇺🇧🇾 — As a result of a strike by the Armed Forces of Ukraine on a bus with a children's football team from Belarus, a woman accompanying them was killed, and four teen..."
-    },
-    {
-      "path": "root.newsFeed[26]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "❌ — As a result of a strike by the Armed Forces of Ukraine on a bus with a children's football team | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: ❌ — As a result of a strike by the Armed Forces of Ukraine on a bus with a children's football team | INTELSLAVA"
+      "otherCategories": [],
+      "text": "🇮🇷⚔️🇺🇸 Iran's Parliament Speaker, Mohammed Bagher Ghalibaf: Some friends believe that the field of diplomacy is in conflict with the military field; fundamentally, this perception is wrong. In t",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict, military, iran. Signal: 🇮🇷⚔️🇺🇸 Iran's Parliament Speaker, Mohammed Bagher Ghalibaf: Some friends believe that the field of diplomacy is in conflict with the military field; fundamentally, this perc..."
     },
     {
       "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "drone",
+        "strike",
         "russia"
       ],
-      "otherCategories": [],
-      "text": "Russia terrorizes the civilian population of Kherson every single day. Today, a Russian drone struck directly at a minibus carrying passengers. A man was killed on the spot. At least three others were",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Russia terrorizes the civilian population of Kherson every single day. Today, a Russian drone struck directly at a minibus carrying passengers. A man was killed on the spot. At ..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺❌🇺🇦 — Russia launches strikes on Kyiv & Dnipropetrovsk regions ➡️ A strike was reported on Kyiv region. ➡️ Minutes later, a second strike hit the settlement of Samar in Dnipropetrovsk region.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: 🇷🇺❌🇺🇦 — Russia launches strikes on Kyiv & Dnipropetrovsk regions ➡️ A strike was reported on Kyiv region. ➡️ Minutes later, a second strike hit the settlement of Samar in Dn..."
     },
     {
-      "path": "root.news[17]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 12,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "factory",
+        "storm"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Weather / Climate Shock"
+      ],
+      "text": "Footage has been published showing yesterday's Storm Shadow missile strikes on a factory in Voronezh.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: Footage has been published showing yesterday's Storm Shadow missile strikes on a factory in Voronezh."
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -209,15 +211,36 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇱⚔️🐣 Israel targeted Gaza children resulting in genocide, UN inquiry says Israeli authorities and security forces deliberately targeted Palestinian children, resulting ​in genocide, crimes agains",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: 🇮🇱⚔️🐣 Israel targeted Gaza children resulting in genocide, UN inquiry says Israeli authorities and security forces deliberately targeted Palestinian children, resulting ​in g..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "France looks to exchange its 'support to Iran deal with increased US support to Ukraine' | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, ukraine. Signal: France looks to exchange its 'support to Iran deal with increased US support to Ukraine' | France 24"
+      "text": "Ukraine's military intelligence has released footage of the destruction of a Russian Pantsir air defense system in the Zaporizhzhia direction. Russian forces attempted to hide their Pantsir-S2 gun-mis",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine's military intelligence has released footage of the destruction of a Russian Pantsir air defense system in the Zaporizhzhia direction. Russian forces attempted to hide t..."
     },
     {
-      "path": "root.news[19]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -234,11 +257,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran pledges no nuclear weapons as US commits $300bn, leaked deal draft shows | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Iran pledges no nuclear weapons as US commits $300bn, leaked deal draft shows | Euronews"
+      "text": "Mideast Updates: U.S. and Iran Offer Conflicting Accounts of Nuclear Discussions",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Mideast Updates: U.S. and Iran Offer Conflicting Accounts of Nuclear Discussions"
     },
     {
-      "path": "root.news[22]",
+      "path": "root.news[25]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -252,14 +275,14 @@
       ],
       "matchedKeywords": [
         "iran",
-        "china"
+        "israel"
       ],
       "otherCategories": [],
-      "text": "China pledges new humanitarian aid packages for Lebanon and Iran | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, china. Signal: China pledges new humanitarian aid packages for Lebanon and Iran | Al Jazeera"
+      "text": "Former PM says Israel smuggled Starlink internet systems into Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Former PM says Israel smuggled Starlink internet systems into Iran | Al Jazeera"
     },
     {
-      "path": "root.news[27]",
+      "path": "root.news[30]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -272,15 +295,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "china",
-        "taiwan"
+        "nuclear",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Taiwan accuses Kenya of deporting conference delegates on China’s behalf | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: Taiwan accuses Kenya of deporting conference delegates on China’s behalf | Al Jazeera"
+      "text": "Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back"
     },
     {
-      "path": "root.news[49]",
+      "path": "root.news[35]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -294,11 +317,53 @@
       ],
       "matchedKeywords": [
         "war",
-        "russia"
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Polish civilians take army training course amid spectre of war with Russia | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Polish civilians take army training course amid spectre of war with Russia | France 24"
+      "text": "Palestinian children targeted in genocide, war crimes in Gaza: UN inquiry | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: Palestinian children targeted in genocide, war crimes in Gaza: UN inquiry | Al Jazeera"
+    },
+    {
+      "path": "root.news[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "UN commission of inquiry says Israel committing genocide in Gaza by deliberately targeting children",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: UN commission of inquiry says Israel committing genocide in Gaza by deliberately targeting children"
+    },
+    {
+      "path": "root.newsFeed[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "⚔️🐣 Israel targeted Gaza children resulting in genocide, UN inquiry says Israeli authorities and s | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: ⚔️🐣 Israel targeted Gaza children resulting in genocide, UN inquiry says Israeli authorities and s | CIG_TELEGRAM"
     },
     {
       "path": "root.chokepoints[5]",
@@ -327,74 +392,6 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "FRANCE 24 Exclusive: what Strait of Hormuz locals think of the Iran-US deal | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: FRANCE 24 Exclusive: what Strait of Hormuz locals think of the Iran-US deal | France 24"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🕊🇮🇷 Bloomberg claims to have gotten a copy of the MoU that will be signed on Friday by the U.S. and Iran in Switzerland 1. The Islamic Republic of Iran and the United States, together with the",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🕊🇮🇷 Bloomberg claims to have gotten a copy of the MoU that will be signed on Friday by the U.S. and Iran in Switzerland 1. The Islamic Republic of Iran and the United Sta..."
     }
   ]
 }

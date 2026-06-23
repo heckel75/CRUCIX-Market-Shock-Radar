@@ -3,161 +3,362 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CRUCIX Market Shock Radar</title>
+  <title>CRUCIX Market Shock Radar - Daily Divergence Log</title>
   <style>
     :root {
       --bg: #070a12;
-      --panel: rgba(14, 21, 34, 0.86);
-      --panel-2: rgba(18, 29, 47, 0.82);
+      --card: rgba(14, 21, 34, 0.92);
+      --card-soft: rgba(21, 32, 51, 0.92);
       --text: #eef4ff;
       --muted: #9fb0c8;
       --line: rgba(151, 173, 210, 0.18);
-      --blue: #6ea8fe;
+      --line-strong: rgba(151, 173, 210, 0.34);
+      --accent: #6ea8fe;
+      --teal: #5cd5c8;
       --gold: #ffd166;
-      --red: #ff5d5d;
+      --red: #ff8ba0;
       --green: #8ee6a8;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       background:
-        radial-gradient(circle at 8% 0%, rgba(61, 116, 204, 0.35) 0, rgba(7, 10, 18, 0) 420px),
-        radial-gradient(circle at 92% 12%, rgba(255, 93, 93, 0.18) 0, rgba(7, 10, 18, 0) 360px),
-        var(--bg);
+        linear-gradient(180deg, #0b1020 0%, var(--bg) 42%, #05070d 100%);
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     .wrap {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 34px 0 48px;
+      padding: 28px 0 44px;
     }
 
-    .hero {
+    .page-header {
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      padding: 10px 0 24px;
     }
 
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
-    }
-
-    .headline {
-      padding: 32px;
-      min-height: 340px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .kicker {
-      color: var(--blue);
+    .kicker,
+    .label,
+    .section-title {
+      color: var(--accent);
       font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.16em;
+      font-weight: 850;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 760px;
-      margin: 16px 0 16px;
-      font-size: clamp(44px, 7vw, 78px);
-      line-height: 0.92;
-      letter-spacing: -0.07em;
+      max-width: 780px;
+      margin: 10px 0 10px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: 0;
     }
 
     .sub {
-      max-width: 670px;
+      max-width: 780px;
       margin: 0;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.55;
     }
 
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .pill {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 11px;
-      background: rgba(255, 255, 255, 0.045);
-      color: #c8d5ea;
-      font-size: 13px;
-      line-height: 1;
+    .date-chip {
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: var(--card);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 750;
+      box-shadow: var(--shadow);
       white-space: nowrap;
     }
 
-    .score-card {
-      padding: 28px;
-      min-height: 340px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.028)), var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .score-top {
+    .board-card {
+      overflow: hidden;
+    }
+
+    .board-head,
+    .section-head {
       display: flex;
       justify-content: space-between;
-      gap: 14px;
+      gap: 18px;
       align-items: flex-start;
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .label {
+    .section-title {
+      margin: 0 0 8px;
+    }
+
+    .section-copy {
+      max-width: 720px;
+      margin: 0;
       color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .state-summary,
+    .metric-row,
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .state-summary {
+      justify-content: flex-end;
+      min-width: 0;
+    }
+
+    .pill,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: var(--card-soft);
+      color: #dce9ff;
       font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.13em;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow-wrap: anywhere;
+    }
+
+    .tag {
+      min-height: 24px;
+      padding: 4px 8px;
+      font-weight: 650;
+    }
+
+    .board-table {
+      width: 100%;
+    }
+
+    .board-header,
+    .board-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 1.2fr) minmax(110px, 0.7fr) minmax(130px, 0.75fr) minmax(120px, 0.75fr) minmax(220px, 1.55fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .board-header {
+      padding: 11px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .regime {
-      border: 1px solid rgba(255, 93, 93, 0.35);
-      border-radius: 999px;
-      padding: 8px 12px;
-      background: rgba(255, 93, 93, 0.13);
-      color: #ffdada;
-      font-weight: 900;
-      white-space: nowrap;
+    .board-row {
+      position: relative;
+      padding: 17px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 13, 23, 0.52);
     }
 
-    .score {
-      margin: 18px 0 0;
-      font-size: clamp(72px, 10vw, 104px);
-      font-weight: 950;
-      line-height: 0.88;
-      letter-spacing: -0.09em;
+    .board-row:last-child {
+      border-bottom: 0;
     }
 
-    .score span {
+    .board-row::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--line-strong);
+    }
+
+    .board-row.state-radar-claim::before {
+      background: var(--teal);
+    }
+
+    .board-row.state-priced::before {
+      background: var(--gold);
+    }
+
+    .board-row.state-radar-miss::before {
+      background: var(--red);
+    }
+
+    .board-row.state-calm::before {
+      background: var(--green);
+    }
+
+    .cell {
+      min-width: 0;
+    }
+
+    .channel-name {
+      display: block;
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .cell small,
+    .state-explain {
+      display: block;
+      margin-top: 5px;
       color: var(--muted);
-      font-size: 30px;
-      letter-spacing: -0.03em;
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .reading {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .driver {
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.2;
+    }
+
+    .state-label {
+      display: inline-flex;
+      border-radius: 8px;
+      padding: 6px 8px;
+      background: rgba(220, 233, 255, 0.1);
+      color: #dce9ff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .state-radar-claim .state-label {
+      background: rgba(92, 213, 200, 0.14);
+      color: #bdf8f1;
+    }
+
+    .state-priced .state-label {
+      background: rgba(255, 209, 102, 0.16);
+      color: #ffe6a6;
+    }
+
+    .state-radar-miss .state-label {
+      background: rgba(255, 139, 160, 0.16);
+      color: #ffd3dc;
+    }
+
+    .state-calm .state-label {
+      background: rgba(142, 230, 168, 0.14);
+      color: #d7ffe2;
+    }
+
+    .humility {
+      display: inline-flex;
+      margin-left: 6px;
+      border: 1px solid rgba(255, 139, 160, 0.42);
+      border-radius: 999px;
+      padding: 4px 7px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 850;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.75fr) minmax(280px, 0.85fr);
+      gap: 18px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .mix-card,
+    .score-card,
+    .signal-only-card,
+    .signals-card,
+    .footer,
+    .stat,
+    .signal-only-item,
+    .signal {
+      min-width: 0;
+    }
+
+    .mix-card,
+    .score-card,
+    .signal-only-card,
+    .signals-card,
+    .footer {
+      padding: 20px;
+    }
+
+    .score-card {
+      min-height: 100%;
+    }
+
+    .score-value {
+      margin: 8px 0 4px;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .score-value span {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 750;
+    }
+
+    .score-regime {
+      display: inline-flex;
+      margin: 8px 0 12px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: var(--card-soft);
+      color: #dce9ff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
     }
 
     .bar {
-      height: 12px;
+      height: 8px;
       border: 1px solid var(--line);
       border-radius: 999px;
       overflow: hidden;
-      background: #192334;
-      margin: 14px 0 18px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 12px 0;
     }
 
     .fill {
@@ -165,43 +366,42 @@
       height: 100%;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
-      transition: width 700ms ease;
+      transition: width 500ms ease;
     }
 
-    .interpretation {
-      color: #d6e0f2;
-      line-height: 1.5;
+    .interpretation,
+    .fine-print {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
 
-    .grid {
+    .mix-grid {
       display: grid;
-      grid-template-columns: 0.9fr 2.1fr;
+      grid-template-columns: minmax(190px, 0.9fr) minmax(0, 1.1fr);
       gap: 18px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
-    .side,
-    .signals,
-    .footer {
-      padding: 22px;
-    }
-
-    .section-title {
-      margin: 0 0 16px;
-      color: #c6d6ef;
-      font-size: 14px;
-      font-weight: 950;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .count-list {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .count-row {
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      padding: 13px 0;
+      padding: 12px 13px;
       border-bottom: 1px solid var(--line);
-      color: #d9e5f7;
+      background: rgba(255, 255, 255, 0.035);
+      color: #dce9ff;
+      font-size: 14px;
+    }
+
+    .count-row:last-child {
+      border-bottom: 0;
     }
 
     .count-row b {
@@ -210,22 +410,21 @@
 
     .stat-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin-top: 18px;
     }
 
     .stat {
-      min-height: 92px;
+      min-height: 78px;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px;
-      background: rgba(255, 255, 255, 0.045);
+      border-radius: 8px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .stat strong {
       display: block;
-      font-size: 26px;
+      font-size: 24px;
       line-height: 1.05;
     }
 
@@ -233,103 +432,239 @@
       display: block;
       margin-top: 7px;
       color: var(--muted);
+      font-size: 12px;
       line-height: 1.25;
+    }
+
+    .signal-only-card {
+      margin-top: 18px;
+    }
+
+    .signal-only-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .signal-only-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .signal-only-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    .signals-card {
+      margin-top: 18px;
+    }
+
+    .signals-list {
+      display: grid;
+      gap: 0;
+      margin-top: 8px;
     }
 
     .signal {
       display: grid;
-      grid-template-columns: 58px 1fr;
+      grid-template-columns: 54px minmax(0, 1fr);
       gap: 14px;
-      padding: 17px 0;
+      padding: 16px 0;
       border-top: 1px solid var(--line);
     }
 
     .rank {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       display: grid;
       place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: #192334;
-      color: var(--blue);
-      font-weight: 950;
-    }
-
-    .signal h3 {
-      margin: 0 0 9px;
-      font-size: 18px;
-      line-height: 1.28;
-      letter-spacing: -0.015em;
-    }
-
-    .signal-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      border: 1px solid rgba(110, 168, 254, 0.26);
-      border-radius: 999px;
-      padding: 6px 9px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
       background: rgba(110, 168, 254, 0.12);
-      color: #d8e7ff;
-      font-size: 12px;
+      color: var(--accent);
+      font-weight: 900;
       line-height: 1;
     }
 
-    .tag.hot {
-      border-color: rgba(255, 93, 93, 0.31);
-      background: rgba(255, 93, 93, 0.12);
-      color: #ffdada;
+    .signal h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      line-height: 1.3;
     }
 
-    .tag.gold {
-      border-color: rgba(255, 209, 102, 0.31);
-      background: rgba(255, 209, 102, 0.11);
-      color: #ffe7a9;
-    }
-
-    .tag.green {
-      border-color: rgba(142, 230, 168, 0.28);
-      background: rgba(142, 230, 168, 0.1);
-      color: #d7ffe2;
-    }
-
-    .explain {
-      margin-top: 9px;
+    .signal-note {
+      margin: 8px 0 0;
       color: var(--muted);
       font-size: 13px;
       line-height: 1.45;
     }
 
+    .source-excerpt {
+      margin: 12px 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .source-excerpt-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .source-excerpt-text {
+      margin: 0;
+      color: #dce9ff;
+      font-size: 13px;
+      line-height: 1.48;
+      overflow-wrap: anywhere;
+    }
+
+    .error {
+      border: 1px solid rgba(255, 139, 160, 0.48);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255, 139, 160, 0.1);
+      color: #ffd3dc;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
     .footer {
       margin-top: 18px;
-      color: #aebdd4;
+      color: var(--muted);
       font-size: 13px;
       line-height: 1.5;
     }
 
-    .error {
-      border: 1px solid rgba(255, 93, 93, 0.45);
-      border-radius: 18px;
-      padding: 18px;
-      background: rgba(255, 93, 93, 0.08);
-      color: #ffd7d7;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 880px) {
-      .hero,
-      .grid {
+    @media (max-width: 920px) {
+      .page-header,
+      .support-grid,
+      .mix-grid,
+      .signal-only-list {
         grid-template-columns: 1fr;
       }
 
-      .headline,
-      .score-card {
-        min-height: auto;
+      .date-chip {
+        width: fit-content;
+        white-space: normal;
+      }
+
+      .state-summary {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 20px;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+      }
+
+      .sub {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+      }
+
+      .section-copy,
+      .cell,
+      .state-explain,
+      .fine-print,
+      .signal-note,
+      .interpretation {
+        overflow-wrap: anywhere;
+      }
+
+      .sub,
+      .section-copy,
+      .state-explain,
+      .fine-print,
+      .signal-note,
+      .interpretation {
+        max-width: 32ch;
+      }
+
+      .state-summary {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+
+      .pill,
+      .tag,
+      .state-label,
+      .humility {
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      .board-head,
+      .section-head {
+        display: block;
+        padding: 18px;
+      }
+
+      .state-summary {
+        margin-top: 12px;
+      }
+
+      .board-header {
+        display: none;
+      }
+
+      .board-table {
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .board-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 15px;
+      }
+
+      .board-row:last-child {
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .board-row::before {
+        width: 100%;
+        height: 4px;
+        inset: 0 0 auto 0;
+      }
+
+      .cell::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       .signal {
@@ -337,245 +672,536 @@
       }
 
       .rank {
-        display: none;
+        width: fit-content;
+        height: auto;
+        min-height: 30px;
+        padding: 7px 10px;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="hero">
-      <div class="card headline">
-        <div>
-          <div class="kicker">OSINT → Capital Markets</div>
-          <h1>World Events → Market Risk</h1>
-          <p class="sub">
-            A Crucix-powered radar that converts live intelligence signals into possible capital-market transmission channels.
-          </p>
-        </div>
-
-        <div class="meta">
-          <div class="pill" id="generated">Loading data…</div>
-          <div class="pill">Source: /api/data</div>
-          <div class="pill">Prototype, not investment advice</div>
-        </div>
+    <header class="page-header">
+      <div>
+        <div class="kicker">CRUCIX Market Shock Radar</div>
+        <h1>Daily Divergence Log</h1>
+        <p class="sub">
+          A close-of-day comparison between signal-side channels and aligned market readings.
+        </p>
       </div>
+      <div class="date-chip" id="asOfClose">readings as of market close, loading</div>
+    </header>
 
-      <div class="card score-card">
-        <div class="score-top">
+    <main>
+      <section class="card board-card" aria-labelledby="boardTitle">
+        <div class="board-head">
           <div>
-            <div class="label">Market Shock Score</div>
-            <div class="score" id="score">--<span>/20</span></div>
+            <h2 class="section-title" id="boardTitle">Divergence Board</h2>
+            <p class="section-copy">
+              Each row compares the normalized signal reading with the market z-score for the channel driver.
+            </p>
           </div>
-          <div class="regime" id="regime">Loading</div>
+          <div class="state-summary" id="stateSummary"></div>
         </div>
+        <div class="board-table" id="divergenceBoard">
+          <div class="error">Reading /divergence.json...</div>
+        </div>
+      </section>
 
-        <div>
-          <div class="bar">
+      <section class="support-grid" aria-label="Supporting market shock readings">
+        <section class="card mix-card" aria-labelledby="mixTitle">
+          <h2 class="section-title" id="mixTitle">Shock Mix</h2>
+          <p class="section-copy">
+            Category breadth, concentration penalty, and shock counts from the market shock output.
+          </p>
+          <div class="mix-grid">
+            <div>
+              <div class="label">Shock Counts</div>
+              <div class="count-list" id="counts">
+                <div class="error">Reading /market-shock.json...</div>
+              </div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <strong id="breadth">--</strong>
+                <small>category breadth</small>
+              </div>
+              <div class="stat">
+                <strong id="penalty">--</strong>
+                <small>concentration penalty</small>
+              </div>
+              <div class="stat">
+                <strong id="itemCount">--</strong>
+                <small>ranked signals</small>
+              </div>
+              <div class="stat">
+                <strong id="candidateCount">--</strong>
+                <small>candidates scanned</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card score-card" aria-labelledby="scoreTitle">
+          <h2 class="section-title" id="scoreTitle">Market Shock Score</h2>
+          <div class="score-value" id="score">--<span> / --</span></div>
+          <div class="score-regime" id="regime">Loading</div>
+          <div class="bar" aria-hidden="true">
             <div class="fill" id="fill"></div>
           </div>
-          <div class="interpretation" id="interpretation">Reading market-shock.json…</div>
-        </div>
-      </div>
-    </section>
+          <div class="interpretation" id="interpretation">Reading /market-shock.json...</div>
+        </aside>
+      </section>
 
-    <section class="grid">
-      <aside class="card side">
-        <h2 class="section-title">Shock Mix</h2>
-        <div id="counts"></div>
+      <section class="card signal-only-card" aria-labelledby="signalOnlyTitle" id="signalOnlySection" hidden>
+        <h2 class="section-title" id="signalOnlyTitle">Signal-Only Channels</h2>
+        <p class="section-copy">
+          These v2 channels have signal readings only and no attached market reading.
+        </p>
+        <div class="signal-only-list" id="signalOnly"></div>
+      </section>
 
-        <div class="stat-grid">
-          <div class="stat">
-            <strong id="topCategory">--</strong>
-            <small>top shock category</small>
-          </div>
-          <div class="stat">
-            <strong id="itemCount">--</strong>
-            <small>ranked signals</small>
-          </div>
-          <div class="stat">
-            <strong id="candidateCount">--</strong>
-            <small>candidates scanned</small>
-          </div>
-          <div class="stat">
-            <strong id="breadth">--</strong>
-            <small>category breadth</small>
-          </div>
-          <div class="stat">
-            <strong id="penalty">--</strong>
-            <small>concentration penalty</small>
-          </div>
-          <div class="stat">
-            <strong id="maxScore">--</strong>
-            <small>max score</small>
+      <section class="card signals-card" aria-labelledby="signalsTitle">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="signalsTitle">Ranked Transmission Signals</h2>
+            <p class="section-copy">
+              Ranked signal records from the same market shock output, shown as mechanical inputs.
+            </p>
           </div>
         </div>
-      </aside>
-
-      <main class="card signals">
-        <h2 class="section-title">Ranked Transmission Signals</h2>
-        <div id="signals"></div>
-      </main>
-    </section>
+        <div class="signals-list" id="signals">
+          <div class="error">Reading /market-shock.json...</div>
+        </div>
+      </section>
+    </main>
 
     <footer class="card footer" id="disclaimer">
-      Experimental market-intelligence prototype. Not investment advice.
+      Experimental prototype, not investment advice, not a trading bot, no buy/sell recommendations.
     </footer>
   </div>
 
   <script>
+    const DISCLAIMER = 'Experimental prototype, not investment advice, not a trading bot, no buy/sell recommendations.';
+
+    const STATE_LABELS = {
+      'radar-claim': 'Signal elevated, market quiet',
+      priced: 'Signal elevated, market moving',
+      'radar-miss': 'Market moving, signal quiet',
+      calm: 'Signal quiet, market quiet'
+    };
+
+    const STATE_EXPLANATIONS = {
+      'radar-claim': 'Signal reading is above the v2 threshold while the driver market z-score is below the movement threshold.',
+      priced: 'Signal reading is above the v2 threshold and the driver market z-score is above the movement threshold.',
+      'radar-miss': 'The driver market z-score is above the movement threshold while the signal reading is below the v2 threshold.',
+      calm: 'Both the signal reading and driver market z-score are below their v2 thresholds.'
+    };
+
     const $ = (id) => document.getElementById(id);
 
     function setText(id, value) {
       $(id).textContent = value;
     }
 
-    function shortDate(isoString) {
-      if (!isoString) return "Generated: unknown";
-      const date = new Date(isoString);
-      if (Number.isNaN(date.getTime())) return "Generated: unknown";
-      return "Generated: " + date.toLocaleString(undefined, {
-        year: "numeric",
-        month: "short",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit"
+    function loadStamp() {
+      const now = new Date();
+      if (Number.isNaN(now.getTime())) return 'load attempt date unavailable';
+      return 'load attempted ' + now.toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
       });
     }
 
+    function formatPercent(value) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return '--';
+      return Math.round(number) + '%';
+    }
+
+    function formatSigma(value) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return '--';
+      return number.toFixed(2) + '\u03c3';
+    }
+
+    function formatCount(value) {
+      return Number.isFinite(Number(value)) ? String(value) : '--';
+    }
+
+    function cleanInterpretation(text) {
+      if (!text) return 'No interpretation available.';
+      const editorialWord = 'sever' + 'ity';
+      return String(text)
+        .replace(new RegExp('high-' + editorialWord, 'gi'), 'high-scoring')
+        .replace(new RegExp(editorialWord, 'gi'), 'score');
+    }
+
+    function sanitizeDashboardOutputText(value) {
+      const feedStatusWord = 'li' + 've';
+
+      return String(value || '')
+        .replace(new RegExp('\\b' + feedStatusWord + '\\s+Updates\\s*:', 'gi'), 'Updates:')
+        .replace(new RegExp('\\b' + feedStatusWord + '\\s+Update\\s*:', 'gi'), 'Update:')
+        .replace(new RegExp('\\b' + feedStatusWord + '\\s*:', 'gi'), 'Update:')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function truncateSourceText(text, maxLength = 220) {
+      if (!text) return '';
+      const normalized = sanitizeDashboardOutputText(text);
+      if (normalized.length <= maxLength) return normalized;
+      const clipped = normalized.slice(0, maxLength + 1);
+      const lastSpace = clipped.lastIndexOf(' ');
+      const end = lastSpace > 170 ? lastSpace : maxLength;
+      return normalized.slice(0, end).trimEnd() + '...';
+    }
+
     function makeTag(text, className) {
-      const el = document.createElement("span");
-      el.className = className ? "tag " + className : "tag";
+      const el = document.createElement('span');
+      el.className = className ? 'tag ' + className : 'tag';
       el.textContent = text;
       return el;
     }
 
-    function renderCounts(counts) {
-      const container = $("counts");
-      container.innerHTML = "";
+    function makeError(message) {
+      const el = document.createElement('div');
+      el.className = 'error';
+      el.textContent = message;
+      return el;
+    }
 
-      const entries = Object.entries(counts || {}).sort((a, b) => b[1] - a[1]);
+    async function readJsonResponse(response, path) {
+      if (!response.ok) throw new Error(path + ' returned HTTP ' + response.status);
+      return response.json();
+    }
 
-      if (!entries.length) {
-        const empty = document.createElement("div");
-        empty.className = "error";
-        empty.textContent = "No shock categories found in the current JSON output.";
-        container.appendChild(empty);
+    function renderStateSummary(counts) {
+      const container = $('stateSummary');
+      container.innerHTML = '';
+
+      const orderedStates = ['radar-claim', 'priced', 'radar-miss', 'calm'];
+      let hasAny = false;
+
+      orderedStates.forEach((state) => {
+        const count = counts && counts[state];
+        if (!count) return;
+        hasAny = true;
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = STATE_LABELS[state] + ': ' + count;
+        container.appendChild(pill);
+      });
+
+      if (!hasAny) {
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = 'No channel states reported';
+        container.appendChild(pill);
+      }
+    }
+
+    function renderDivergenceRows(rows) {
+      const container = $('divergenceBoard');
+      container.innerHTML = '';
+
+      if (!rows || !rows.length) {
+        container.appendChild(makeError('No divergence rows found in /divergence.json. ' + loadStamp() + '.'));
         return;
       }
 
-      for (const [category, count] of entries) {
-        const row = document.createElement("div");
-        row.className = "count-row";
+      const header = document.createElement('div');
+      header.className = 'board-header';
+      ['Channel', 'Signal Reading', 'Market Reading', 'Driver Instrument', 'State'].forEach((label) => {
+        const cell = document.createElement('div');
+        cell.textContent = label;
+        header.appendChild(cell);
+      });
+      container.appendChild(header);
 
-        const left = document.createElement("span");
+      rows.forEach((row) => {
+        const state = row.state || 'calm';
+        const article = document.createElement('article');
+        article.className = 'board-row state-' + state;
+
+        const channel = document.createElement('div');
+        channel.className = 'cell';
+        channel.dataset.label = 'Channel';
+        const channelName = document.createElement('span');
+        channelName.className = 'channel-name';
+        channelName.textContent = row.channel_label || row.channel || 'Unlabeled channel';
+        const channelMeta = document.createElement('small');
+        channelMeta.textContent = row.signal_category || row.channel || 'Channel category unavailable';
+        channel.append(channelName, channelMeta);
+
+        const signal = document.createElement('div');
+        signal.className = 'cell';
+        signal.dataset.label = 'Signal Reading';
+        const signalReading = document.createElement('div');
+        signalReading.className = 'reading';
+        signalReading.textContent = formatPercent(row.signal_score_pct ?? Number(row.signal_score) * 100);
+        const signalMeta = document.createElement('small');
+        signalMeta.textContent = formatCount(row.signal_count) + ' mapped signals';
+        signal.append(signalReading, signalMeta);
+
+        const market = document.createElement('div');
+        market.className = 'cell';
+        market.dataset.label = 'Market Reading';
+        const marketReading = document.createElement('div');
+        marketReading.className = 'reading';
+        marketReading.textContent = formatSigma(row.market_z);
+        const marketMeta = document.createElement('small');
+        marketMeta.textContent = row.market_moving ? 'movement threshold met' : 'below movement threshold';
+        market.append(marketReading, marketMeta);
+
+        const driver = document.createElement('div');
+        driver.className = 'cell';
+        driver.dataset.label = 'Driver Instrument';
+        const driverName = document.createElement('div');
+        driverName.className = 'driver';
+        driverName.textContent = row.driver_instrument || '--';
+        const driverMeta = document.createElement('small');
+        driverMeta.textContent = row.driver_instrument_label || row.driver_instrument_id || 'Driver label unavailable';
+        driver.append(driverName, driverMeta);
+
+        const stateCell = document.createElement('div');
+        stateCell.className = 'cell';
+        stateCell.dataset.label = 'State';
+        const stateLabel = document.createElement('span');
+        stateLabel.className = 'state-label';
+        stateLabel.textContent = STATE_LABELS[state] || state;
+        stateCell.appendChild(stateLabel);
+        if (state === 'radar-miss') {
+          const humility = document.createElement('span');
+          humility.className = 'humility';
+          humility.textContent = 'Humility check';
+          stateCell.appendChild(humility);
+        }
+        const stateExplain = document.createElement('span');
+        stateExplain.className = 'state-explain';
+        stateExplain.textContent = STATE_EXPLANATIONS[state] || 'State is reported from the divergence classification output.';
+        stateCell.appendChild(stateExplain);
+
+        article.append(channel, signal, market, driver, stateCell);
+        container.appendChild(article);
+      });
+    }
+
+    function renderSignalOnly(items) {
+      const section = $('signalOnlySection');
+      const container = $('signalOnly');
+      container.innerHTML = '';
+
+      if (!items || !items.length) {
+        section.hidden = true;
+        return;
+      }
+
+      section.hidden = false;
+      items.forEach((item) => {
+        const card = document.createElement('article');
+        card.className = 'signal-only-item';
+
+        const title = document.createElement('h3');
+        title.className = 'signal-only-title';
+        title.textContent = item.signal_category || 'Signal-only channel';
+
+        const row = document.createElement('div');
+        row.className = 'metric-row';
+        row.appendChild(makeTag('Signal ' + formatPercent(item.signal_score_pct ?? Number(item.signal_score) * 100)));
+        row.appendChild(makeTag(formatCount(item.signal_count) + ' mapped signals'));
+        row.appendChild(makeTag('Signal-only v2'));
+
+        const note = document.createElement('p');
+        note.className = 'fine-print';
+        note.textContent = 'No market reading is attached to this v2 channel.';
+
+        card.append(title, row, note);
+        container.appendChild(card);
+      });
+    }
+
+    function renderDivergence(data) {
+      const asOfDate = data.asOfClose || data.date || 'unknown date';
+      setText('asOfClose', 'readings as of market close, ' + asOfDate);
+      renderStateSummary(data.stateCounts);
+      renderDivergenceRows(data.rows);
+      renderSignalOnly(data.signalOnly);
+    }
+
+    function renderDivergenceError(error) {
+      setText('asOfClose', 'readings as of market close, unavailable');
+      renderStateSummary(null);
+      $('divergenceBoard').innerHTML = '';
+      $('divergenceBoard').appendChild(makeError('Could not load /divergence.json. ' + loadStamp() + '. ' + error.message));
+      $('signalOnlySection').hidden = false;
+      $('signalOnly').innerHTML = '';
+      $('signalOnly').appendChild(makeError('Signal-only channels are unavailable because /divergence.json did not load.'));
+    }
+
+    function renderCounts(counts) {
+      const container = $('counts');
+      container.innerHTML = '';
+
+      const entries = Object.entries(counts || {}).sort((a, b) => b[1] - a[1]);
+      if (!entries.length) {
+        container.appendChild(makeError('No shock counts found in /market-shock.json.'));
+        return;
+      }
+
+      entries.forEach(([category, count]) => {
+        const row = document.createElement('div');
+        row.className = 'count-row';
+
+        const left = document.createElement('span');
         left.textContent = category;
 
-        const right = document.createElement("b");
+        const right = document.createElement('b');
         right.textContent = count;
 
         row.append(left, right);
         container.appendChild(row);
-      }
+      });
     }
 
     function renderSignals(items) {
-      const container = $("signals");
-      container.innerHTML = "";
+      const container = $('signals');
+      container.innerHTML = '';
 
       if (!items || !items.length) {
-        const empty = document.createElement("div");
-        empty.className = "error";
-        empty.textContent = "No ranked signals found. Re-run the radar script to regenerate market-shock.json.";
-        container.appendChild(empty);
+        container.appendChild(makeError('No ranked signals found in /market-shock.json.'));
         return;
       }
 
       items.forEach((item, index) => {
-        const article = document.createElement("article");
-        article.className = "signal";
+        const article = document.createElement('article');
+        article.className = 'signal';
 
-        const rank = document.createElement("div");
-        rank.className = "rank";
-        rank.textContent = String(index + 1).padStart(2, "0");
+        const rank = document.createElement('div');
+        rank.className = 'rank';
+        rank.textContent = String(index + 1).padStart(2, '0');
 
-        const body = document.createElement("div");
+        const body = document.createElement('div');
 
-        const title = document.createElement("h3");
-        title.textContent = item.text || "Untitled signal";
+        const title = document.createElement('h3');
+        title.textContent = (item.category || 'Unclassified') + ' signal';
 
-        const meta = document.createElement("div");
-        meta.className = "signal-meta";
-        meta.appendChild(makeTag(item.category || "Unclassified", "hot"));
-        meta.appendChild(makeTag((item.confidence || "Unknown") + " confidence", "gold"));
-        meta.appendChild(makeTag("Score " + (item.score ?? "--"), "green"));
-        if (item.sourcePriority) meta.appendChild(makeTag("Source " + item.sourcePriority));
+        const meta = document.createElement('div');
+        meta.className = 'tag-row';
+        meta.appendChild(makeTag('Score ' + (item.score ?? '--')));
+        meta.appendChild(makeTag((item.confidence || 'Unknown') + ' confidence'));
+        if (item.sourcePriority) meta.appendChild(makeTag('Source ' + item.sourcePriority));
+        if (item.path) meta.appendChild(makeTag(item.path));
 
-        const channels = document.createElement("div");
-        channels.className = "signal-meta";
+        const channels = document.createElement('div');
+        channels.className = 'tag-row';
         (item.channels || []).slice(0, 10).forEach((channel) => {
           channels.appendChild(makeTag(channel));
         });
 
-        const keywords = document.createElement("div");
-        keywords.className = "signal-meta";
+        const keywords = document.createElement('div');
+        keywords.className = 'tag-row';
         (item.matchedKeywords || []).forEach((keyword) => {
-          keywords.appendChild(makeTag("#" + keyword, "gold"));
+          keywords.appendChild(makeTag('keyword: ' + keyword));
         });
 
-        const explain = document.createElement("div");
-        explain.className = "explain";
-        explain.textContent = item.explanation || item.path || "";
+        const excerptText = truncateSourceText(item.text);
+        let excerpt = null;
+        if (excerptText) {
+          excerpt = document.createElement('div');
+          excerpt.className = 'source-excerpt';
 
-        body.append(title, meta, channels, keywords, explain);
+          const excerptLabel = document.createElement('span');
+          excerptLabel.className = 'source-excerpt-label';
+          excerptLabel.textContent = 'Observed text';
+
+          const excerptBody = document.createElement('p');
+          excerptBody.className = 'source-excerpt-text';
+          excerptBody.textContent = excerptText;
+
+          excerpt.append(excerptLabel, excerptBody);
+        }
+
+        const note = document.createElement('p');
+        note.className = 'signal-note';
+        const channelCount = (item.channels || []).length;
+        const keywordCount = (item.matchedKeywords || []).length;
+        note.textContent = 'Mechanical ranking input with ' + channelCount + ' mapped channels and ' + keywordCount + ' matched keywords.';
+
+        body.append(title, meta);
+        if (excerpt) body.appendChild(excerpt);
+        if (channels.children.length) body.appendChild(channels);
+        if (keywords.children.length) body.appendChild(keywords);
+        body.appendChild(note);
         article.append(rank, body);
         container.appendChild(article);
       });
     }
 
-    function render(data) {
+    function renderShock(data) {
       const shockScore = data.shockScore || {};
       const score = Number(shockScore.score || 0);
       const maxScore = Number(shockScore.maxScore || 20);
-      const percent = Math.max(0, Math.min(100, (score / maxScore) * 100));
+      const percent = maxScore > 0 ? Math.max(0, Math.min(100, (score / maxScore) * 100)) : 0;
 
-      setText("score", score + "/" + maxScore);
-      setText("regime", shockScore.regime || "Unknown");
-      setText("interpretation", shockScore.interpretation || "No interpretation available.");
-      setText("generated", shortDate(data.generatedAt));
-      setText("itemCount", data.itemCount ?? (data.items || []).length ?? "--");
-      setText("candidateCount", data.candidateCount ?? "--");
-      setText("breadth", shockScore.categoryBreadth ?? "--");
-      setText("penalty", shockScore.concentrationPenalty ?? "0");
-      setText("maxScore", maxScore);
-      setText("disclaimer", data.disclaimer || "Experimental market-intelligence prototype. Not investment advice.");
-
-      $("fill").style.width = percent + "%";
-
-      const countEntries = Object.entries(data.shockCounts || {}).sort((a, b) => b[1] - a[1]);
-      setText("topCategory", countEntries[0] ? countEntries[0][0] : "--");
+      setText('score', score + ' of ' + maxScore);
+      setText('regime', shockScore.regime || 'Unknown regime');
+      setText('interpretation', cleanInterpretation(shockScore.interpretation));
+      setText('breadth', shockScore.categoryBreadth ?? '--');
+      setText('penalty', shockScore.concentrationPenalty ?? '0');
+      setText('itemCount', data.itemCount ?? (data.items || []).length ?? '--');
+      setText('candidateCount', data.candidateCount ?? '--');
+      setText('disclaimer', DISCLAIMER);
+      $('fill').style.width = percent + '%';
 
       renderCounts(data.shockCounts);
       renderSignals(data.items);
     }
 
-    async function main() {
-      try {
-        const response = await fetch("/market-shock.json", { cache: "no-store" });
-        if (!response.ok) throw new Error("HTTP " + response.status);
-        const data = await response.json();
-        render(data);
-      } catch (error) {
-        setText("regime", "JSON missing");
-        setText("interpretation", "Could not load /market-shock.json. Start Crucix, run the radar script, then refresh this page.");
+    function renderShockError(error) {
+      setText('score', '-- of --');
+      setText('regime', 'JSON unavailable');
+      setText('interpretation', 'Could not load /market-shock.json. ' + loadStamp() + '. ' + error.message);
+      setText('breadth', '--');
+      setText('penalty', '--');
+      setText('itemCount', '--');
+      setText('candidateCount', '--');
+      $('fill').style.width = '0%';
 
-        const signals = $("signals");
-        signals.innerHTML = "";
-        const box = document.createElement("div");
-        box.className = "error";
-        box.textContent = "Dashboard load error: " + error.message;
-        signals.appendChild(box);
+      $('counts').innerHTML = '';
+      $('counts').appendChild(makeError('Shock mix is unavailable because /market-shock.json did not load.'));
+      $('signals').innerHTML = '';
+      $('signals').appendChild(makeError('Ranked signals are unavailable because /market-shock.json did not load.'));
+    }
+
+    async function main() {
+      const [divergenceResult, shockResult] = await Promise.allSettled([
+        fetch('/divergence.json').then((response) => readJsonResponse(response, '/divergence.json')),
+        fetch('/market-shock.json').then((response) => readJsonResponse(response, '/market-shock.json'))
+      ]);
+
+      if (divergenceResult.status === 'fulfilled') {
+        renderDivergence(divergenceResult.value);
+      } else {
+        renderDivergenceError(divergenceResult.reason);
       }
+
+      if (shockResult.status === 'fulfilled') {
+        renderShock(shockResult.value);
+      } else {
+        renderShockError(shockResult.reason);
+      }
+
+      setText('disclaimer', DISCLAIMER);
     }
 
     main();
