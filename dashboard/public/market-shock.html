@@ -709,7 +709,7 @@
           <div class="state-summary" id="stateSummary"></div>
         </div>
         <div class="board-table" id="divergenceBoard">
-          <div class="error">Reading /divergence.json...</div>
+          <div class="error">Reading divergence.json...</div>
         </div>
       </section>
 
@@ -723,7 +723,7 @@
             <div>
               <div class="label">Shock Counts</div>
               <div class="count-list" id="counts">
-                <div class="error">Reading /market-shock.json...</div>
+                <div class="error">Reading market-shock.json...</div>
               </div>
             </div>
             <div class="stat-grid">
@@ -754,7 +754,7 @@
           <div class="bar" aria-hidden="true">
             <div class="fill" id="fill"></div>
           </div>
-          <div class="interpretation" id="interpretation">Reading /market-shock.json...</div>
+          <div class="interpretation" id="interpretation">Reading market-shock.json...</div>
         </aside>
       </section>
 
@@ -776,7 +776,7 @@
           </div>
         </div>
         <div class="signals-list" id="signals">
-          <div class="error">Reading /market-shock.json...</div>
+          <div class="error">Reading market-shock.json...</div>
         </div>
       </section>
     </main>
@@ -915,7 +915,7 @@
       container.innerHTML = '';
 
       if (!rows || !rows.length) {
-        container.appendChild(makeError('No divergence rows found in /divergence.json. ' + loadStamp() + '.'));
+        container.appendChild(makeError('No divergence rows found in divergence.json. ' + loadStamp() + '.'));
         return;
       }
 
@@ -1042,10 +1042,10 @@
       setText('asOfClose', 'readings as of market close, unavailable');
       renderStateSummary(null);
       $('divergenceBoard').innerHTML = '';
-      $('divergenceBoard').appendChild(makeError('Could not load /divergence.json. ' + loadStamp() + '. ' + error.message));
+      $('divergenceBoard').appendChild(makeError('Could not load divergence.json. ' + loadStamp() + '. ' + error.message));
       $('signalOnlySection').hidden = false;
       $('signalOnly').innerHTML = '';
-      $('signalOnly').appendChild(makeError('Signal-only channels are unavailable because /divergence.json did not load.'));
+      $('signalOnly').appendChild(makeError('Signal-only channels are unavailable because divergence.json did not load.'));
     }
 
     function renderCounts(counts) {
@@ -1054,7 +1054,7 @@
 
       const entries = Object.entries(counts || {}).sort((a, b) => b[1] - a[1]);
       if (!entries.length) {
-        container.appendChild(makeError('No shock counts found in /market-shock.json.'));
+        container.appendChild(makeError('No shock counts found in market-shock.json.'));
         return;
       }
 
@@ -1078,7 +1078,7 @@
       container.innerHTML = '';
 
       if (!items || !items.length) {
-        container.appendChild(makeError('No ranked signals found in /market-shock.json.'));
+        container.appendChild(makeError('No ranked signals found in market-shock.json.'));
         return;
       }
 
@@ -1170,7 +1170,7 @@
     function renderShockError(error) {
       setText('score', '-- of --');
       setText('regime', 'JSON unavailable');
-      setText('interpretation', 'Could not load /market-shock.json. ' + loadStamp() + '. ' + error.message);
+      setText('interpretation', 'Could not load market-shock.json. ' + loadStamp() + '. ' + error.message);
       setText('breadth', '--');
       setText('penalty', '--');
       setText('itemCount', '--');
@@ -1178,15 +1178,15 @@
       $('fill').style.width = '0%';
 
       $('counts').innerHTML = '';
-      $('counts').appendChild(makeError('Shock mix is unavailable because /market-shock.json did not load.'));
+      $('counts').appendChild(makeError('Shock mix is unavailable because market-shock.json did not load.'));
       $('signals').innerHTML = '';
-      $('signals').appendChild(makeError('Ranked signals are unavailable because /market-shock.json did not load.'));
+      $('signals').appendChild(makeError('Ranked signals are unavailable because market-shock.json did not load.'));
     }
 
     async function main() {
       const [divergenceResult, shockResult] = await Promise.allSettled([
-        fetch('/divergence.json').then((response) => readJsonResponse(response, '/divergence.json')),
-        fetch('/market-shock.json').then((response) => readJsonResponse(response, '/market-shock.json'))
+        fetch('divergence.json').then((response) => readJsonResponse(response, 'divergence.json')),
+        fetch('market-shock.json').then((response) => readJsonResponse(response, 'market-shock.json'))
       ]);
 
       if (divergenceResult.status === 'fulfilled') {
