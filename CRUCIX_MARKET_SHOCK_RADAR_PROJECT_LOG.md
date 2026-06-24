@@ -128,7 +128,7 @@ Commit/push shortcut:
 **Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
 **Market data fetcher:** Created and verified in Session 7. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, and writes `dashboard/public/market-readings.json`.
 **Divergence engine:** Created and verified in Session 8. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, and writes `dashboard/public/divergence.json`.  
-**Daily log / history:** Implemented in Session 10. First real committed snapshot is `log/2026-06-15.json`; static manifest is `log/index.json`; Pages copies are `docs/log/2026-06-15.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`. GitHub Action exists at `.github/workflows/daily-snapshot.yml`, but CI full run is not yet proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
+**Daily log / history:** Implemented in Session 10. First real committed snapshot is `log/2026-06-15.json`; static manifest is `log/index.json`; Pages copies are `docs/log/2026-06-15.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`. GitHub Action exists at `.github/workflows/daily-snapshot.yml`, but CI full run is not yet proven. Session 11 must add GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, then manually run the Daily snapshot Action once before CI automation can be considered proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
 **README created:** Yes (Phase 1 — update in Session 11)  
 **LinkedIn materials:** Superseded; see Section 12
 
@@ -825,9 +825,9 @@ Turn the snapshot into a log: dated daily JSON committed under `log/`, a history
 **Status:** Complete for daily log/history/automation pieces
 **Date completed:** 2026-06-24
 **What worked:** Added `npm run snapshot` and `npm run daily`. Added `scripts/daily-snapshot.mjs` and `scripts/daily-run.mjs`. Snapshot validation, no-overwrite protection, `--force` support, manifest generation, and `docs/` sync now work. Created the first real snapshot at `log/2026-06-15.json`, created `log/index.json`, and created `docs/log/` copies. Built a dark CRUCIX-style history page with relative `log/index.json` loading and state filters. Added `/log` static serving locally through `server.mjs`. Added GitHub Action `.github/workflows/daily-snapshot.yml`. Added local fallback protocol `docs/daily-run-protocol.md`. Committed and pushed `94f2942 Add daily log history workflow`.
-**What failed:** `npm run daily` reached `npm run shock` but failed locally because `http://localhost:3117/api/data` was not available. CI full run is not yet proven. Only one real snapshot exists so far, so multi-day launch conditions remain pending.
+**What failed:** `npm run daily` reached `npm run shock` but failed locally because `http://localhost:3117/api/data` was not available. CI full run is not yet proven. Adding GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, then manually running the Daily snapshot Action once, was not completed in Session 10 and is required before CI automation can be considered proven. Only one real snapshot exists so far, so multi-day launch conditions remain pending.
 **Files changed:** `package.json`, `scripts/daily-snapshot.mjs`, `scripts/daily-run.mjs`, `scripts/market-data.mjs`, `server.mjs`, `dashboard/public/history.html`, `.github/workflows/daily-snapshot.yml`, `docs/daily-run-protocol.md`, `docs/history.html`, `log/2026-06-15.json`, `log/index.json`, `docs/log/2026-06-15.json`, `docs/log/index.json`.
-**Next adjustment:** Session 11 should harden stale-data/failure handling, update README v2, confirm CI/Action behavior, and keep domain setup as a later dedicated session.
+**Next adjustment:** Session 11 should first add GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, then manually run the Daily snapshot GitHub Action once to verify whether the full CI daily run works. After that, harden stale-data/failure handling, update README v2, and keep domain setup as a later dedicated session.
 
 ---
 
@@ -843,6 +843,7 @@ Final reliability pass and the assets the eventual post will need. The post itse
 
 ## Tasks
 
+- [ ] Add GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, then manually run the Daily snapshot GitHub Action once to verify whether the full CI daily run works
 - [ ] Failure-mode pass: stale FRED data, Stooq outage, Crucix sweep failure — the board should degrade with a dated warning, never silently show old data as fresh
 - [ ] README v2: divergence rules, frozen thresholds, four states, instrument map, data sources, what the log is and is not
 - [ ] Confirm attribution to Crucix and disclaimer language
@@ -852,6 +853,7 @@ Final reliability pass and the assets the eventual post will need. The post itse
 ## Definition of done
 
 - The project survives a missing data source without lying about freshness
+- CI automation is considered proven only after the repository secrets are added and the manual Daily snapshot Action run succeeds
 - A reader landing cold on the README understands the rules the board follows
 - A current, dated board screenshot exists
 
@@ -958,7 +960,7 @@ Final reliability pass and the assets the eventual post will need. The post itse
 - [x] State filter added
 - [x] Local fallback protocol documented
 - [x] GitHub Action added
-- [ ] CI full run proven
+- [ ] CI full run proven after GitHub secrets are added and the Daily snapshot Action succeeds manually
 - [ ] Multiple daily snapshots accumulated
 - [ ] Custom domain configured
 
@@ -1033,7 +1035,7 @@ Use this section to log unresolved items.
 | Should we include live market prices in the first version? | 6–7 | **Answered 2026-06-11** | Yes — promoted from optional upgrade to the core of Phase 2. EOD data, uniform z-score transform, divergence states. See Design Spec 4b. |
 | Should the final code be published as a fork, gist, or local demo only? | 7 | Partially answered | A public GitHub Pages deployment already exists. Confirm repo publishability (no keys committed) in Session 11. Custom domain setup is deferred. |
 | Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Answered | Added to `.gitignore` in Session 5. |
-| Can the GitHub Action complete the full Crucix sweep and daily run in CI? | 10 | Open / unproven | The Action was added in Session 10, but the full CI run still needs verification. |
+| Can the GitHub Action complete the full Crucix sweep and daily run in CI? | 10 | Open / unproven | The Action was added in Session 10, but the full CI run still needs verification. Session 11 first action: add GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, then manually run the Daily snapshot Action once. |
 | Market columns for Macro/Inflation and Weather/Climate, or signal-only display for v2? | 8 | Answered | Signal-only for v2. Optional market columns can be revisited after the five-channel divergence board and daily log are working. |
 | Signal-only Macro / Inflation and Weather / Climate display | 9 | Answered | They are shown separately below the main divergence board, not in the hero board. |
 | `DBC` or `CPER` for broad commodities; `SOXX` or `SMH` for semis? | 7 | Answered | `DBC` and `SOXX` fetched cleanly through Tiingo and were selected. `CPER` and `SMH` remain code fallbacks. |
@@ -1090,7 +1092,7 @@ Use this section to change the plan based on what happened.
 | 8 | Rework `market-shock.html` around `divergence.json`: divergence board first, Shock Mix prominent, score demoted, dated EOD framing visible | Session 8 now produces validated divergence rows with frozen thresholds and state labels. Session 9 can focus on UI and framing rather than classification logic. |
 | 9 | Session 10 must include `docs/` publishing in the daily-log flow and decide whether to automate copying generated files from `dashboard/public/` to `docs/` | GitHub Pages serves from `docs/`; refreshed JSON in `dashboard/public/` alone does not update the public site. |
 | 9 | Session 10 should treat source lag as a visible history/log issue, not a dashboard bug | FRED Brent/WTI lag made the common close date 2026-06-15; the page was honest, but history automation should track this cleanly. |
-| 10 | Session 11 should verify the Action, harden stale-data behavior, update README v2, and keep custom domain setup as a separate future session | Session 10 shipped the log machinery but CI/domain are not fully proven. |
+| 10 | Session 11 should first add GitHub repository secrets `FRED_API_KEY` and `TIINGO_API_KEY`, manually run the Daily snapshot Action once, then harden stale-data behavior, update README v2, and keep custom domain setup as a separate future session | Session 10 shipped the log machinery, but the secrets/manual Action verification was not completed and CI automation is not proven until that run succeeds. |
 ---
 
 ## 10. Backlog / Optional Upgrades
