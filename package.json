@@ -15,7 +15,9 @@
     "fresh-start": "npm run clean && npm start",
     "shock": "node scripts/market-shock-radar.mjs",
     "market:data": "node scripts/market-data.mjs",
-    "divergence": "node scripts/divergence.mjs"
+    "divergence": "node scripts/divergence.mjs",
+    "snapshot": "node scripts/daily-snapshot.mjs",
+    "daily": "node scripts/daily-run.mjs"
   },
   "keywords": [
     "osint",

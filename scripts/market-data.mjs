@@ -36,8 +36,20 @@ function parseEnv(text) {
 }
 
 async function loadEnv() {
-  const text = await fs.readFile(".env", "utf8");
-  return parseEnv(text);
+  let fileEnv = {};
+
+  try {
+    const text = await fs.readFile(".env", "utf8");
+    fileEnv = parseEnv(text);
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+
+  return {
+    ...fileEnv,
+    FRED_API_KEY: process.env.FRED_API_KEY || fileEnv.FRED_API_KEY,
+    TIINGO_API_KEY: process.env.TIINGO_API_KEY || fileEnv.TIINGO_API_KEY
+  };
 }
 
 function isoDateNDaysAgo(days) {

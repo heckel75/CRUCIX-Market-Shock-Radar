@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUCIX Market Shock Radar - History</title>
+  <style>
+    :root {
+      --bg: #070a12;
+      --card: rgba(14, 21, 34, 0.92);
+      --card-soft: rgba(21, 32, 51, 0.92);
+      --text: #eef4ff;
+      --muted: #9fb0c8;
+      --line: rgba(151, 173, 210, 0.18);
+      --line-strong: rgba(151, 173, 210, 0.34);
+      --accent: #6ea8fe;
+      --teal: #5cd5c8;
+      --gold: #ffd166;
+      --red: #ff8ba0;
+      --green: #8ee6a8;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, #0b1020 0%, var(--bg) 42%, #05070d 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    .page-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      padding: 10px 0 24px;
+    }
+
+    .kicker,
+    .section-title,
+    .cell::before {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 10px 0 10px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .top-actions {
+      display: grid;
+      gap: 10px;
+      justify-items: end;
+    }
+
+    .date-chip,
+    .back-link {
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: var(--card);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 750;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+    }
+
+    .back-link {
+      display: inline-flex;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .filter-button:hover {
+      border-color: rgba(110, 168, 254, 0.72);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.028)), var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .filter-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      background: var(--card-soft);
+      color: #dce9ff;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter-button[aria-pressed="true"] {
+      border-color: rgba(92, 213, 200, 0.7);
+      background: rgba(92, 213, 200, 0.14);
+      color: #bdf8f1;
+    }
+
+    .snapshot-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .snapshot {
+      overflow: hidden;
+    }
+
+    .snapshot-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .snapshot-title {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .snapshot-date {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .state-summary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: var(--card-soft);
+      color: #dce9ff;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .snapshot-table {
+      width: 100%;
+    }
+
+    .table-header,
+    .history-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 1.15fr) minmax(110px, 0.7fr) minmax(130px, 0.75fr) minmax(120px, 0.75fr) minmax(220px, 1.4fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .table-header {
+      padding: 11px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .history-row {
+      position: relative;
+      padding: 17px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 13, 23, 0.52);
+    }
+
+    .history-row:last-child {
+      border-bottom: 0;
+    }
+
+    .history-row::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--line-strong);
+    }
+
+    .state-radar-claim::before {
+      background: var(--teal);
+    }
+
+    .state-priced::before {
+      background: var(--gold);
+    }
+
+    .state-radar-miss::before {
+      background: var(--red);
+    }
+
+    .state-calm::before {
+      background: var(--green);
+    }
+
+    .cell {
+      min-width: 0;
+    }
+
+    .channel-name {
+      display: block;
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .cell small,
+    .state-note,
+    .fine-print {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .reading {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .driver {
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .state-label {
+      display: inline-flex;
+      border-radius: 8px;
+      padding: 6px 8px;
+      background: rgba(220, 233, 255, 0.1);
+      color: #dce9ff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .state-radar-claim .state-label {
+      background: rgba(92, 213, 200, 0.14);
+      color: #bdf8f1;
+    }
+
+    .state-priced .state-label {
+      background: rgba(255, 209, 102, 0.16);
+      color: #ffe6a6;
+    }
+
+    .state-radar-miss .state-label {
+      background: rgba(255, 139, 160, 0.16);
+      color: #ffd3dc;
+    }
+
+    .state-calm .state-label {
+      background: rgba(142, 230, 168, 0.14);
+      color: #d7ffe2;
+    }
+
+    .error,
+    .empty {
+      border: 1px solid rgba(255, 139, 160, 0.48);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255, 139, 160, 0.1);
+      color: #ffd3dc;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .empty {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 920px) {
+      .page-header,
+      .filter-card {
+        grid-template-columns: 1fr;
+      }
+
+      .page-header,
+      .filter-card,
+      .snapshot-head {
+        display: block;
+      }
+
+      .top-actions {
+        justify-items: start;
+        margin-top: 14px;
+      }
+
+      .date-chip,
+      .back-link {
+        width: fit-content;
+        white-space: normal;
+      }
+
+      .filter-row,
+      .state-summary {
+        justify-content: flex-start;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: 100%;
+        padding: 20px 12px 44px;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+      }
+
+      .sub,
+      .snapshot-date,
+      .fine-print,
+      .state-note {
+        max-width: 32ch;
+        overflow-wrap: anywhere;
+      }
+
+      .table-header {
+        display: none;
+      }
+
+      .snapshot-table {
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .history-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 15px;
+      }
+
+      .history-row:last-child {
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .history-row::before {
+        width: 100%;
+        height: 4px;
+        inset: 0 0 auto 0;
+      }
+
+      .cell::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+      }
+
+      .pill,
+      .state-label,
+      .filter-button {
+        max-width: 100%;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="page-header">
+      <div>
+        <div class="kicker">CRUCIX Market Shock Radar</div>
+        <h1>History</h1>
+        <p class="sub">
+          Dated close-of-day divergence snapshots, newest first.
+        </p>
+      </div>
+      <div class="top-actions">
+        <a class="back-link" href="index.html">Back to dashboard</a>
+        <div class="date-chip" id="latestDate">readings as of market close, loading</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card filter-card" aria-label="State filter">
+        <div>
+          <h2 class="section-title">State Filter</h2>
+          <p class="fine-print" id="snapshotCount">Reading snapshot manifest.</p>
+        </div>
+        <div class="filter-row" id="filters"></div>
+      </section>
+
+      <section class="snapshot-list" id="snapshots" aria-label="Divergence snapshots">
+        <div class="error">Reading log/index.json...</div>
+      </section>
+    </main>
+
+    <footer class="card footer" id="disclaimer">
+      Experimental prototype, not investment advice, not a trading bot, no buy/sell recommendations.
+    </footer>
+  </div>
+
+  <script>
+    const DISCLAIMER = 'Experimental prototype, not investment advice, not a trading bot, no buy/sell recommendations.';
+
+    const STATE_LABELS = {
+      all: 'All',
+      'radar-claim': 'Signal elevated, market quiet',
+      priced: 'Signal elevated, market moving',
+      'radar-miss': 'Market moving, signal quiet',
+      calm: 'Signal quiet, market quiet'
+    };
+
+    const STATE_NOTES = {
+      'radar-claim': 'Signal reading is above the v2 threshold while the driver market z-score is below the movement threshold.',
+      priced: 'Signal reading is above the v2 threshold and the driver market z-score is above the movement threshold.',
+      'radar-miss': 'The driver market z-score is above the movement threshold while the signal reading is below the v2 threshold.',
+      calm: 'Both the signal reading and driver market z-score are below their v2 thresholds.'
+    };
+
+    const FILTERS = ['all', 'radar-claim', 'priced', 'radar-miss', 'calm'];
+    const $ = (id) => document.getElementById(id);
+
+    let activeFilter = 'all';
+    let loadedSnapshots = [];
+
+    function setText(id, value) {
+      $(id).textContent = value;
+    }
+
+    function loadStamp() {
+      const now = new Date();
+      if (Number.isNaN(now.getTime())) return 'load attempt date unavailable';
+      return 'load attempted ' + now.toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+
+    function formatPercent(value) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return '--';
+      return Math.round(number) + '%';
+    }
+
+    function formatSigma(value) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return '--';
+      return number.toFixed(2) + '\u03c3';
+    }
+
+    function formatCount(value) {
+      return Number.isFinite(Number(value)) ? String(value) : '0';
+    }
+
+    function getSignalReading(row) {
+      if (row.signal_score_pct != null) return row.signal_score_pct;
+      if (row.signalScorePct != null) return row.signalScorePct;
+      const raw = row.signal_score ?? row.signalScore;
+      return Number(raw) * 100;
+    }
+
+    function getMarketReading(row) {
+      return row.market_z ?? row.marketZ;
+    }
+
+    function getDriver(row) {
+      return row.driver_instrument ?? row.driverInstrument ?? '--';
+    }
+
+    function getDriverLabel(row) {
+      return row.driver_instrument_label ?? row.driverInstrumentLabel ?? row.driver_instrument_id ?? row.driverInstrumentId ?? 'Driver label unavailable';
+    }
+
+    function makeError(message) {
+      const el = document.createElement('div');
+      el.className = 'error';
+      el.textContent = message;
+      return el;
+    }
+
+    function makeEmpty(message) {
+      const el = document.createElement('div');
+      el.className = 'empty';
+      el.textContent = message;
+      return el;
+    }
+
+    async function readJsonResponse(response, path) {
+      if (!response.ok) throw new Error(path + ' returned HTTP ' + response.status);
+      return response.json();
+    }
+
+    function resolveSnapshotPath(entry) {
+      if (entry.path) return entry.path;
+      if (entry.file) return 'log/' + entry.file;
+      return 'log/' + entry.date + '.json';
+    }
+
+    function renderFilters() {
+      const container = $('filters');
+      container.innerHTML = '';
+
+      for (const state of FILTERS) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'filter-button';
+        button.setAttribute('aria-pressed', state === activeFilter ? 'true' : 'false');
+        button.textContent = STATE_LABELS[state];
+        button.addEventListener('click', () => {
+          activeFilter = state;
+          renderFilters();
+          renderSnapshots();
+        });
+        container.appendChild(button);
+      }
+    }
+
+    function renderStateSummary(counts) {
+      const container = document.createElement('div');
+      container.className = 'state-summary';
+
+      for (const state of FILTERS.slice(1)) {
+        const count = counts && counts[state];
+        if (!count) continue;
+
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = STATE_LABELS[state] + ': ' + count;
+        container.appendChild(pill);
+      }
+
+      if (!container.children.length) {
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = 'No channel states reported';
+        container.appendChild(pill);
+      }
+
+      return container;
+    }
+
+    function countStates(rows) {
+      return (rows || []).reduce((counts, row) => {
+        const state = row.state || 'unknown';
+        counts[state] = (counts[state] || 0) + 1;
+        return counts;
+      }, {});
+    }
+
+    function makeRow(row) {
+      const state = row.state || 'calm';
+      const article = document.createElement('article');
+      article.className = 'history-row state-' + state;
+
+      const channel = document.createElement('div');
+      channel.className = 'cell';
+      channel.dataset.label = 'Channel';
+      const channelName = document.createElement('span');
+      channelName.className = 'channel-name';
+      channelName.textContent = row.channel_label || row.channelLabel || row.channel || 'Unlabeled channel';
+      const channelMeta = document.createElement('small');
+      channelMeta.textContent = row.signal_category || row.signalCategory || row.channel || 'Channel category unavailable';
+      channel.append(channelName, channelMeta);
+
+      const signal = document.createElement('div');
+      signal.className = 'cell';
+      signal.dataset.label = 'Signal Reading';
+      const signalReading = document.createElement('div');
+      signalReading.className = 'reading';
+      signalReading.textContent = formatPercent(getSignalReading(row));
+      const signalMeta = document.createElement('small');
+      signalMeta.textContent = formatCount(row.signal_count ?? row.signalCount) + ' mapped signals';
+      signal.append(signalReading, signalMeta);
+
+      const market = document.createElement('div');
+      market.className = 'cell';
+      market.dataset.label = 'Market Reading';
+      const marketReading = document.createElement('div');
+      marketReading.className = 'reading';
+      marketReading.textContent = formatSigma(getMarketReading(row));
+      const marketMeta = document.createElement('small');
+      marketMeta.textContent = row.market_moving || row.marketMoving ? 'movement threshold met' : 'below movement threshold';
+      market.append(marketReading, marketMeta);
+
+      const driver = document.createElement('div');
+      driver.className = 'cell';
+      driver.dataset.label = 'Driver Instrument';
+      const driverName = document.createElement('div');
+      driverName.className = 'driver';
+      driverName.textContent = getDriver(row);
+      const driverMeta = document.createElement('small');
+      driverMeta.textContent = getDriverLabel(row);
+      driver.append(driverName, driverMeta);
+
+      const stateCell = document.createElement('div');
+      stateCell.className = 'cell';
+      stateCell.dataset.label = 'State';
+      const stateLabel = document.createElement('span');
+      stateLabel.className = 'state-label';
+      stateLabel.textContent = STATE_LABELS[state] || state;
+      const note = document.createElement('span');
+      note.className = 'state-note';
+      note.textContent = STATE_NOTES[state] || 'State is reported from the divergence classification output.';
+      stateCell.append(stateLabel, note);
+
+      article.append(channel, signal, market, driver, stateCell);
+      return article;
+    }
+
+    function makeTable(rows) {
+      const table = document.createElement('div');
+      table.className = 'snapshot-table';
+
+      const header = document.createElement('div');
+      header.className = 'table-header';
+      ['Channel', 'Signal Reading', 'Market Reading', 'Driver Instrument', 'State'].forEach((label) => {
+        const cell = document.createElement('div');
+        cell.textContent = label;
+        header.appendChild(cell);
+      });
+      table.appendChild(header);
+
+      rows.forEach((row) => table.appendChild(makeRow(row)));
+      return table;
+    }
+
+    function makeSnapshot(snapshot) {
+      const data = snapshot.data;
+      const rows = data.rows || [];
+      const visibleRows = activeFilter === 'all'
+        ? rows
+        : rows.filter((row) => row.state === activeFilter);
+
+      const section = document.createElement('article');
+      section.className = 'card snapshot';
+
+      const head = document.createElement('div');
+      head.className = 'snapshot-head';
+
+      const titleGroup = document.createElement('div');
+      const title = document.createElement('h2');
+      title.className = 'snapshot-title';
+      title.textContent = data.date || snapshot.entry.date || 'Undated snapshot';
+
+      const date = data.date || snapshot.entry.date || 'unknown date';
+      const dateLine = document.createElement('p');
+      dateLine.className = 'snapshot-date';
+      dateLine.textContent = 'readings as of market close, ' + date;
+      titleGroup.append(title, dateLine);
+
+      head.append(titleGroup, renderStateSummary(data.stateCounts || countStates(rows)));
+      section.appendChild(head);
+
+      if (!visibleRows.length) {
+        section.appendChild(makeEmpty('No rows match the selected state for this snapshot.'));
+      } else {
+        section.appendChild(makeTable(visibleRows));
+      }
+
+      return section;
+    }
+
+    function renderSnapshots() {
+      const container = $('snapshots');
+      container.innerHTML = '';
+
+      if (!loadedSnapshots.length) {
+        container.appendChild(makeEmpty('No snapshots found in log/index.json.'));
+        setText('snapshotCount', '0 snapshots found.');
+        return;
+      }
+
+      const latest = loadedSnapshots[0].data.date || loadedSnapshots[0].entry.date;
+      setText('latestDate', 'readings as of market close, ' + latest);
+      setText('snapshotCount', loadedSnapshots.length + ' snapshots loaded, newest first.');
+
+      loadedSnapshots.forEach((snapshot) => {
+        container.appendChild(makeSnapshot(snapshot));
+      });
+    }
+
+    async function loadSnapshots() {
+      const manifest = await fetch('log/index.json').then((response) => readJsonResponse(response, 'log/index.json'));
+      const entries = Array.isArray(manifest.snapshots) ? manifest.snapshots : [];
+
+      const results = await Promise.allSettled(entries.map(async (entry) => {
+        const snapshotPath = resolveSnapshotPath(entry);
+        const data = await fetch(snapshotPath).then((response) => readJsonResponse(response, snapshotPath));
+        return { entry, data };
+      }));
+
+      const fulfilled = results
+        .filter((result) => result.status === 'fulfilled')
+        .map((result) => result.value)
+        .sort((a, b) => String(b.data.date || b.entry.date).localeCompare(String(a.data.date || a.entry.date)));
+
+      const failures = results.filter((result) => result.status === 'rejected');
+      if (failures.length) {
+        console.warn('Some snapshots could not be read:', failures.map((result) => result.reason.message));
+      }
+
+      return fulfilled;
+    }
+
+    async function main() {
+      renderFilters();
+      setText('disclaimer', DISCLAIMER);
+
+      try {
+        loadedSnapshots = await loadSnapshots();
+        renderSnapshots();
+      } catch (error) {
+        setText('latestDate', 'readings as of market close, unavailable');
+        setText('snapshotCount', 'Snapshot manifest unavailable.');
+        $('snapshots').innerHTML = '';
+        $('snapshots').appendChild(makeError('Could not load snapshot history. ' + loadStamp() + '. ' + error.message));
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "title": "CRUCIX Market Shock Snapshot Manifest",
+  "generatedAt": "2026-06-24T14:07:17.767Z",
+  "count": 1,
+  "snapshots": [
+    {
+      "date": "2026-06-15",
+      "file": "2026-06-15.json",
+      "path": "log/2026-06-15.json",
+      "framing": "readings as of market close, 2026-06-15",
+      "generatedAt": "2026-06-23T14:09:38.011Z",
+      "rowCount": 5,
+      "stateCounts": {
+        "priced": 3,
+        "radar-miss": 1,
+        "calm": 1
+      }
+    }
+  ]
+}

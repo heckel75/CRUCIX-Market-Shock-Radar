@@ -1,0 +1,78 @@
+name: CRUCIX Daily Snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crucix-daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  daily-snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # CI attempts the full daily run by starting the local Crucix server for /api/data,
+      # then running the same pipeline documented for local use. If source access or
+      # external data providers block the run, use docs/daily-run-protocol.md locally.
+      - name: Start Crucix server
+        run: |
+          npm run dev > crucix-server.log 2>&1 &
+          echo $! > crucix-server.pid
+
+      - name: Wait for Crucix data
+        run: |
+          for attempt in {1..60}; do
+            if curl -fsS http://localhost:3117/api/data > /dev/null; then
+              echo "Crucix data endpoint is ready."
+              exit 0
+            fi
+            sleep 5
+          done
+          cat crucix-server.log
+          exit 1
+
+      - name: Run daily snapshot pipeline
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+        run: npm run daily
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard/public/*.json
+          git add docs/*.json docs/index.html docs/history.html
+          git add log/*.json log/index.json
+          git add docs/log/*.json docs/log/index.json
+          if git diff --cached --quiet; then
+            echo "No generated snapshot changes to commit."
+          else
+            git commit -m "Update CRUCIX daily snapshot"
+            git push
+          fi
+
+      - name: Stop Crucix server
+        if: always()
+        run: |
+          if [ -f crucix-server.pid ]; then
+            kill "$(cat crucix-server.pid)" || true
+          fi

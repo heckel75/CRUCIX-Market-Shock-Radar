@@ -1,0 +1,254 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-06-23T14:09:38.011Z",
+  "date": "2026-06-15",
+  "asOfClose": "2026-06-15",
+  "framing": "readings as of market close, 2026-06-15",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "priced": 3,
+    "radar-miss": 1,
+    "calm": 1
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 27,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 15,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[3]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 27,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "missile",
+          "military",
+          "troops",
+          "oil",
+          "energy",
+          "fuel"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refineries, fuel and energy",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, military, troops. Signal: 🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refine..."
+      },
+      "market_z": -1.953,
+      "abs_market_z": 1.953,
+      "market_moving": true,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-06-15",
+      "state": "priced"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 2.048,
+      "abs_market_z": 2.048,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-06-15",
+      "state": "radar-miss"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 27,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[3]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 27,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "missile",
+          "military",
+          "troops",
+          "oil",
+          "energy",
+          "fuel"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refineries, fuel and energy",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, military, troops. Signal: 🇷🇺🇺🇦⚡️ — Russian Defence Ministry daily briefing, Top News Today. Russian aviation, drones, missile troops, and artillery struck military airfield infrastructure, oil refine..."
+      },
+      "market_z": -1.953,
+      "abs_market_z": 1.953,
+      "market_moving": true,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-06-15",
+      "state": "priced"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": -1.101,
+      "abs_market_z": 1.101,
+      "market_moving": false,
+      "driver_instrument": "DGS10",
+      "driver_instrument_id": "ten-year-treasury",
+      "driver_instrument_label": "10-year Treasury yield",
+      "driver_as_of": "2026-06-15",
+      "state": "calm"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 5,
+      "top_signal": {
+        "path": "root.tg.urgent[0]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 22,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "israel",
+          "port",
+          "fuel"
+        ],
+        "text": "🇱🇧🇱🇧❌🇮🇱 — NEW: OSINT imagery surfacing today reportedly shows a destroyed underground IDF fuel storage facility at Israel’s Ashdod port, the target of a Hezbollah strike claimed in April, OSINT",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: 🇱🇧🇱🇧❌🇮🇱 — NEW: OSINT imagery surfacing today reportedly shows a destroyed underground IDF fuel storage facility at Israel’s Ashdod port, the target of a Hezbollah strike c..."
+      },
+      "market_z": 1.569,
+      "abs_market_z": 1.569,
+      "market_moving": true,
+      "driver_instrument": "SOXX",
+      "driver_instrument_id": "semiconductors",
+      "driver_instrument_label": "Semiconductor equities ETF",
+      "driver_as_of": "2026-06-15",
+      "state": "priced"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[11]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "missile",
+          "factory",
+          "storm"
+        ],
+        "text": "Footage has been published showing yesterday's Storm Shadow missile strikes on a factory in Voronezh.",
+        "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: Footage has been published showing yesterday's Storm Shadow missile strikes on a factory in Voronezh."
+      }
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
