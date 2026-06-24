@@ -90,7 +90,7 @@ Each session should focus mainly on its session objective. If something unexpect
 
 ### Collaboration protocol
 
-For this project, ChatGPT should work in strict step-by-step mode.
+For this project, ChatGPT should work in strict step-by-step mode during implementation, setup, debugging, testing, and validation.
 
 Rules:
 
@@ -103,11 +103,21 @@ Rules:
 - At the end of each session, if many sections changed, provide the full updated project log file instead of many separate patches.
 - Keep the session focused on the current session goal. Put side ideas into `Open Questions`, `Issues / Bugs`, or `Next Session Adjustments`.
 
+Commit/push shortcut:
+
+- After implementation is complete, expected files are known, and validation has passed, use a compressed final commit/push flow.
+- ChatGPT should provide the exact commit message, say when to commit, and say when to push.
+- Do not require repeated separate `git status`, `git diff --stat`, or `git log` checks during routine finalization unless there is a risk or unexpected output.
+- The user can run the final commit/push flow without pasting every intermediate output.
+- Ask the user to paste output only if `git status` shows unexpected files, validation failed, commit failed, push failed, there is a merge/conflict/auth problem, or secrets/generated files may have been accidentally included.
+- Recommended default after a successful implementation summary from Claude: provide one compact final command block or clear commit message plus push instruction, instead of many micro-steps.
+- Keep one-command-at-a-time for risky or diagnostic work, not routine finalization.
+
 ---
 
 ## 3. Current State
 
-**Current session cursor:** Session 9 complete — next session is Session 10
+**Current session cursor:** Session 10 complete — next session is Session 11
 **Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
@@ -115,10 +125,10 @@ Rules:
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes. Dashboard v2 is now live. `dashboard/public/market-shock.html` has been reworked so the divergence board is the hero element, reads `divergence.json`, keeps Shock Mix prominent, and demotes the Market Shock Score.
-**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. The deployed page was browser-verified. Session 9 discovered that GitHub Pages does not serve directly from `dashboard/public/`; it serves from `docs/`. Any future publish must copy or generate the static dashboard files into `docs/`.
+**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
 **Market data fetcher:** Created and verified in Session 7. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, and writes `dashboard/public/market-readings.json`.
 **Divergence engine:** Created and verified in Session 8. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, and writes `dashboard/public/divergence.json`.  
-**Daily log / history:** Not started (Session 10)  
+**Daily log / history:** Implemented in Session 10. First real committed snapshot is `log/2026-06-15.json`; static manifest is `log/index.json`; Pages copies are `docs/log/2026-06-15.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`. GitHub Action exists at `.github/workflows/daily-snapshot.yml`, but CI full run is not yet proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
 **README created:** Yes (Phase 1 — update in Session 11)  
 **LinkedIn materials:** Superseded; see Section 12
 
@@ -129,16 +139,24 @@ Crucix/
 ├── scripts/
 │   ├── market-shock-radar.mjs
 │   ├── market-data.mjs            (Session 7 — FRED + Tiingo fetch + z-scores)
-│   └── divergence.mjs             (Session 8 — done: join signals × market, classify states)
+│   ├── divergence.mjs             (Session 8 — done: join signals × market, classify states)
+│   ├── daily-snapshot.mjs         (Session 10 — validate/copy dated snapshots and sync docs/)
+│   └── daily-run.mjs              (Session 10 — local pipeline runner)
 ├── dashboard/
 │   └── public/
 │       ├── market-shock.html      (rework in Session 9: divergence board as hero)
 │       ├── market-shock.json
 │       ├── market-readings.json   (Session 7 output)
 │       ├── divergence.json        (Session 8 output — generated and validated)
-│       └── history.html           (Session 10)
+│       └── history.html           (Session 10 — done)
 ├── log/
-│   └── YYYY-MM-DD.json            (Session 10 — one dated snapshot per day, committed)
+│   ├── 2026-06-15.json            (Session 10 — first real committed snapshot)
+│   └── index.json                 (Session 10 — static manifest)
+├── docs/
+│   ├── history.html               (Session 10 — Pages copy)
+│   └── log/
+│       ├── 2026-06-15.json
+│       └── index.json
 ├── README-market-shock-radar.md
 ├── package.json
 └── CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md
@@ -183,7 +201,7 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 | 7 | 60 min | Market data fetcher: FRED + Tiingo, uniform z-score transform, `market-readings.json` | Done |
 | 8 | 60 min | Divergence engine: join signal channels × market readings, classify the four states with frozen thresholds, `divergence.json` | Done |
 | 9 | 75 min | Dashboard v2: divergence board as hero, Shock Mix prominent, score demoted, dated "as of close" framing, descriptive-labels pass | Done |
-| 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation (GitHub Action preferred, local-run protocol as fallback), deploy under `crucix.divergencelog.com` | Not started |
+| 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation attempt, local fallback protocol | Done, with CI/domain follow-ups |
 | 11 | 30 min | Hardening, README v2, board screenshot with real rows. (The LinkedIn post itself is drafted outside these sessions — Section 12) | Not started |
 
 ---
@@ -272,9 +290,11 @@ The history page renders these rows backwards. After 30–40 days, the log's rea
 
 ### 7. Automation and deployment (Session 10)
 
-- Preferred: daily GitHub Action — fetch market data (FRED/Stooq), run the Crucix sweep in CI if feasible (Session 1 sweep took ~30s with 27/29 sources; verify which sources need API keys / secrets), run the radar and divergence scripts, commit the day's snapshot, publish.
-- Fallback if Crucix cannot run in CI: market side runs in the Action; signal side runs locally with a documented one-command daily protocol that commits the snapshot. A log with a manual step is still a log; an undated dashboard is not.
-- Target home: `crucix.divergencelog.com`. The apex `divergencelog.com` stays a plain index of the logs; the project lives on its subdomain. Pull the exact GitHub Pages custom-domain/DNS records from GitHub's own docs at setup time.
+- Preferred: daily GitHub Action — fetch market data, run the Crucix sweep in CI if feasible, run the radar and divergence scripts, commit the day's snapshot, and publish the generated `docs/` files.
+- Current implementation attempts the full CI run through `.github/workflows/daily-snapshot.yml`, using `FRED_API_KEY` and `TIINGO_API_KEY` from GitHub secrets.
+- CI feasibility is not yet proven. The Action exists, but it still needs verification that the full Crucix sweep and daily run complete reliably in GitHub Actions.
+- Fallback if Crucix cannot run in CI: use the documented local one-command daily protocol in `docs/daily-run-protocol.md`. A log with a manual step is still a log; an undated dashboard is not.
+- Domain setup is deferred to a future session. Do not create `docs/CNAME`, change GitHub Pages custom-domain settings, or update the apex `divergencelog.com` index until that dedicated session.
 
 ---
 
@@ -769,11 +789,11 @@ Rework `market-shock.html` so the page layout expresses the project's position: 
 
 ---
 
-# Session 10 — Daily Log, History Page, Automation, Domain
+# Session 10 — Daily Log, History Page, Automation
 
 ## Goal
 
-Turn the snapshot into a log: dated daily JSON committed under `log/`, a history page rendering them backwards, automation, and deployment under `crucix.divergencelog.com`.
+Turn the snapshot into a log: dated daily JSON committed under `log/`, a history page rendering them backwards, and automation/fallback protocol. Domain work deferred.
 
 ## Estimated duration
 
@@ -781,28 +801,33 @@ Turn the snapshot into a log: dated daily JSON committed under `log/`, a history
 
 ## Tasks
 
-- [ ] Write each day's `divergence.json` to `log/YYYY-MM-DD.json` and commit it
-- [ ] Build `history.html`: rows rendered newest-first, filterable by state
-- [ ] Attempt the GitHub Action path: scheduled daily run — market fetch, Crucix sweep in CI if feasible, scripts, commit, publish. Identify which Crucix sources need secrets.
-- [ ] If CI cannot run Crucix: document the local one-command daily protocol and split the Action so the market side still runs automatically
-- [ ] Configure `crucix.divergencelog.com` (CNAME + GitHub Pages custom domain, records from GitHub's own docs)
-- [ ] Verify the Pages deployment reads the committed JSON, not `localhost`
-- [ ] Update the apex `divergencelog.com` index with the second entry (one line: what diverges from what)
+- [x] Write each day's `divergence.json` to `log/YYYY-MM-DD.json` and commit it
+- [x] Build `history.html`: rows rendered newest-first, filterable by state
+- [x] Attempt the GitHub Action path: scheduled daily run — market fetch, Crucix sweep in CI if feasible, scripts, commit, publish
+- [x] Document the local one-command daily fallback protocol
+- [x] Verify the Pages deployment uses committed JSON/docs copies
+- [ ] Configure `crucix.divergencelog.com` — deferred
+- [ ] Update the apex `divergencelog.com` index — deferred
 
 ## Definition of done
 
-- At least three consecutive dated snapshots exist in `log/`
-- `crucix.divergencelog.com` serves the v2 dashboard with current data
-- The history page renders the accumulated rows
+- Daily snapshot script exists and creates/validates `log/` snapshots
+- `log/index.json` exists
+- `docs/log/index.json` exists
+- History page renders committed snapshots
+- First real snapshot committed
+- Automation attempt added
+- Local fallback documented
+- Domain setup deferred
 
 ## Session 10 Log
 
-**Status:** Not started  
-**Date completed:**  
-**What worked:**  
-**What failed:**  
-**Files changed:**  
-**Next adjustment:**
+**Status:** Complete for daily log/history/automation pieces
+**Date completed:** 2026-06-24
+**What worked:** Added `npm run snapshot` and `npm run daily`. Added `scripts/daily-snapshot.mjs` and `scripts/daily-run.mjs`. Snapshot validation, no-overwrite protection, `--force` support, manifest generation, and `docs/` sync now work. Created the first real snapshot at `log/2026-06-15.json`, created `log/index.json`, and created `docs/log/` copies. Built a dark CRUCIX-style history page with relative `log/index.json` loading and state filters. Added `/log` static serving locally through `server.mjs`. Added GitHub Action `.github/workflows/daily-snapshot.yml`. Added local fallback protocol `docs/daily-run-protocol.md`. Committed and pushed `94f2942 Add daily log history workflow`.
+**What failed:** `npm run daily` reached `npm run shock` but failed locally because `http://localhost:3117/api/data` was not available. CI full run is not yet proven. Only one real snapshot exists so far, so multi-day launch conditions remain pending.
+**Files changed:** `package.json`, `scripts/daily-snapshot.mjs`, `scripts/daily-run.mjs`, `scripts/market-data.mjs`, `server.mjs`, `dashboard/public/history.html`, `.github/workflows/daily-snapshot.yml`, `docs/daily-run-protocol.md`, `docs/history.html`, `log/2026-06-15.json`, `log/index.json`, `docs/log/2026-06-15.json`, `docs/log/index.json`.
+**Next adjustment:** Session 11 should harden stale-data/failure handling, update README v2, confirm CI/Action behavior, and keep domain setup as a later dedicated session.
 
 ---
 
@@ -923,6 +948,20 @@ Final reliability pass and the assets the eventual post will need. The post itse
 - [x] `dashboard/public/divergence.json` generated and validated
 - [x] `npm run divergence` added and verified
 
+### Daily log / history
+
+- [x] Daily snapshot script created
+- [x] First dated snapshot committed
+- [x] Log manifest created
+- [x] `docs/log` synced
+- [x] History page created
+- [x] State filter added
+- [x] Local fallback protocol documented
+- [x] GitHub Action added
+- [ ] CI full run proven
+- [ ] Multiple daily snapshots accumulated
+- [ ] Custom domain configured
+
 ---
 
 ## 6. Decisions Made
@@ -971,6 +1010,10 @@ Use this section to record project decisions.
 | 2026-06-23 | GitHub Pages publish target is `docs/`, not `dashboard/public/` | The deployed root served `docs/index.html`; Session 9 v2 files had to be copied into `docs/` |
 | 2026-06-23 | Sanitize dashboard output labels such as “Live Updates” to neutral “Updates” in public JSON/display output | The project is an end-of-day log, so live-language feed labels should not appear in public dashboard copy |
 | 2026-06-23 | Keep refreshed 2026-06-15 market readings for publication despite source lag | The page honestly states the close date; Brent and WTI FRED series held the common close date back |
+| 2026-06-24 | Defer `crucix.divergencelog.com`/domain setup from Session 10 | Keeps Session 10 focused on the log/history machinery and avoids mixing DNS work with automation |
+| 2026-06-24 | Do not fabricate historical snapshots | Credibility of the log depends on real dated rows only |
+| 2026-06-24 | Keep `docs/` synchronized from the snapshot script | GitHub Pages serves from `docs/`, so generated dashboard outputs must be copied there |
+| 2026-06-24 | Compress the final commit/push workflow | Step-by-step is useful for debugging, but routine commit/push finalization should only need the commit message and push instruction once validation is clear |
 
 ---
 
@@ -988,15 +1031,16 @@ Use this section to log unresolved items.
 | Should the dashboard show all 15 signals, or highlight top 10 with the rest collapsed? | 4 | Answered for MVP | Show all 15. This is simpler and works for the screenshot/demo layout. |
 | Should low-confidence high-priority Telegram items be visually de-emphasized? | 4 | Partially answered | Confidence is shown as a visible chip. More advanced filtering can wait until after MVP. |
 | Should we include live market prices in the first version? | 6–7 | **Answered 2026-06-11** | Yes — promoted from optional upgrade to the core of Phase 2. EOD data, uniform z-score transform, divergence states. See Design Spec 4b. |
-| Should the final code be published as a fork, gist, or local demo only? | 7 | Partially answered | A public GitHub Pages deployment already exists. Confirm repo publishability (no keys committed) in Session 11; canonical home moves to `crucix.divergencelog.com` in Session 10. |
+| Should the final code be published as a fork, gist, or local demo only? | 7 | Partially answered | A public GitHub Pages deployment already exists. Confirm repo publishability (no keys committed) in Session 11. Custom domain setup is deferred. |
 | Should `session1-api-data.json` be ignored, deleted, or committed as a sample data snapshot? | 5 | Answered | Added to `.gitignore` in Session 5. |
-| Can the Crucix sweep run inside a GitHub Action, and which sources need API keys/secrets? | 10 | Open | Determines whether the daily log is fully automated or market-side-only automated with a local signal step. |
+| Can the GitHub Action complete the full Crucix sweep and daily run in CI? | 10 | Open / unproven | The Action was added in Session 10, but the full CI run still needs verification. |
 | Market columns for Macro/Inflation and Weather/Climate, or signal-only display for v2? | 8 | Answered | Signal-only for v2. Optional market columns can be revisited after the five-channel divergence board and daily log are working. |
 | Signal-only Macro / Inflation and Weather / Climate display | 9 | Answered | They are shown separately below the main divergence board, not in the hero board. |
 | `DBC` or `CPER` for broad commodities; `SOXX` or `SMH` for semis? | 7 | Answered | `DBC` and `SOXX` fetched cleanly through Tiingo and were selected. `CPER` and `SMH` remain code fallbacks. |
 | How should the board handle FRED series that lag a day (spreads, breakevens)? | 7 | Partially answered | Session 9 exposes the main `readings as of market close` date. Detailed per-instrument lag remains a Session 10/11 hardening item. |
 | What does the GitHub Pages copy currently read, given it cannot reach `localhost:3117`? | 7 | Answered | Pages root `/` serves the dashboard and fetches committed static `market-shock.json`. `/market-shock.html` returns 404 on Pages. Future deploys must commit refreshed static JSON files. |
-| Should Session 10 automate copying dashboard/public outputs into docs/ after each refresh? | 9 | Open | Pages serves from docs/, so daily snapshot/publish flow must keep docs/ in sync. |
+| Should Session 10 automate copying dashboard/public outputs into docs/ after each refresh? | 9 | Answered | Yes. `scripts/daily-snapshot.mjs` syncs generated dashboard outputs and log files into `docs/`. |
+| When should the custom domain session happen? | 10 | Deferred | Domain/subdomain setup, `docs/CNAME`, GitHub Pages custom-domain settings, and apex index updates are reserved for a later dedicated session. |
 
 ---
 
@@ -1026,6 +1070,7 @@ Use this section to track problems.
 | Absolute fetch paths broke on GitHub Pages project URL | 9 | Medium | Fixed | Replaced absolute `/divergence.json` and `/market-shock.json` fetches with relative `divergence.json` and `market-shock.json`. |
 | Public JSON contained source-feed wording “Live Updates” | 9 | Low | Fixed | Added dashboard-output sanitization so feed-format labels are neutralized before public JSON/display output. |
 | FRED Brent and WTI held the common market close date at 2026-06-15 | 9 | Medium | Accepted / log for hardening | Market script correctly aligned all instruments on common dates. Dashboard honestly displays `readings as of market close, 2026-06-15`. Revisit stale-data handling in Session 10/11. |
+| `npm run daily` failed locally when Crucix was not running / `/api/data` was unavailable | 10 | Low / expected | Documented | Start Crucix locally before local daily run, or use the fallback protocol in `docs/daily-run-protocol.md`. |
 
 ---
 
@@ -1045,6 +1090,7 @@ Use this section to change the plan based on what happened.
 | 8 | Rework `market-shock.html` around `divergence.json`: divergence board first, Shock Mix prominent, score demoted, dated EOD framing visible | Session 8 now produces validated divergence rows with frozen thresholds and state labels. Session 9 can focus on UI and framing rather than classification logic. |
 | 9 | Session 10 must include `docs/` publishing in the daily-log flow and decide whether to automate copying generated files from `dashboard/public/` to `docs/` | GitHub Pages serves from `docs/`; refreshed JSON in `dashboard/public/` alone does not update the public site. |
 | 9 | Session 10 should treat source lag as a visible history/log issue, not a dashboard bug | FRED Brent/WTI lag made the common close date 2026-06-15; the page was honest, but history automation should track this cleanly. |
+| 10 | Session 11 should verify the Action, harden stale-data behavior, update README v2, and keep custom domain setup as a separate future session | Session 10 shipped the log machinery but CI/domain are not fully proven. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1459,7 +1505,7 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 - [ ] Every view dated `as of market close, {date}`; no "live" language (Session 9)
 - [ ] Descriptive-labels pass complete — no editorial severity language, no implied side on named conflicts or sanction regimes (Session 9)
 - [ ] At least ~2 weeks of dated rows accumulated in `log/` so the log has content when readers click (Session 10 onward)
-- [ ] Served from `crucix.divergencelog.com`; apex index updated with the second entry (Session 10)
+- [ ] Served from `crucix.divergencelog.com`; apex index updated with the second entry (future dedicated domain session)
 - [ ] Crucix attributed; disclaimer present; no keys committed (Session 11)
 - [ ] Board screenshot with real rows, noting which state dominates that week (Session 11)
 
