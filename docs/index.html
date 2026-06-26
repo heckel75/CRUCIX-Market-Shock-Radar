@@ -90,6 +90,24 @@
       white-space: nowrap;
     }
 
+    .freshness-warning {
+      margin: -6px 0 18px;
+      border: 1px solid rgba(255, 209, 102, 0.42);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: rgba(255, 209, 102, 0.1);
+      color: #ffe6a6;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .freshness-warning.stale {
+      border-color: rgba(255, 139, 160, 0.48);
+      background: rgba(255, 139, 160, 0.1);
+      color: #ffd3dc;
+    }
+
     .card {
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -560,6 +578,10 @@
         white-space: normal;
       }
 
+      .freshness-warning {
+        margin-top: 0;
+      }
+
       .state-summary {
         justify-content: flex-start;
       }
@@ -589,7 +611,8 @@
       .state-explain,
       .fine-print,
       .signal-note,
-      .interpretation {
+      .interpretation,
+      .freshness-warning {
         overflow-wrap: anywhere;
       }
 
@@ -598,7 +621,8 @@
       .state-explain,
       .fine-print,
       .signal-note,
-      .interpretation {
+      .interpretation,
+      .freshness-warning {
         max-width: 32ch;
       }
 
@@ -696,6 +720,8 @@
       </div>
       <div class="date-chip" id="asOfClose">readings as of market close, loading</div>
     </header>
+
+    <div class="freshness-warning" id="freshnessWarning" hidden></div>
 
     <main>
       <section class="card board-card" aria-labelledby="boardTitle">
@@ -996,6 +1022,47 @@
       });
     }
 
+    function getMarketWarning(data) {
+      const warnings = Array.isArray(data.warnings) ? data.warnings : [];
+      const explicitWarning = warnings.find((warning) => {
+        const code = String(warning && warning.code || '');
+        const message = String(warning && warning.message || warning || '');
+        return code.startsWith('market-readings-') || message.startsWith('Market readings are ');
+      });
+
+      if (explicitWarning) {
+        return typeof explicitWarning === 'string' ? explicitWarning : explicitWarning.message;
+      }
+
+      const freshness = data.marketFreshness || data.freshness || data.marketReadings || {};
+      if (freshness.warning) return freshness.warning;
+
+      const status = freshness.status || freshness.freshnessStatus || data.freshnessStatus;
+      if (!status || status === 'current') return '';
+
+      const generatedDate = freshness.generatedDate || data.generatedDate || 'unknown generated date';
+      const asOfClose = freshness.asOfClose || data.asOfClose || data.date || 'unknown close date';
+      const lag = freshness.calendarLagDays ?? data.calendarLagDays;
+      const lagText = Number.isFinite(Number(lag)) ? ' (' + lag + ' calendar days old)' : '';
+      return 'Market readings are ' + status + ': generated ' + generatedDate + ', readings as of market close, ' + asOfClose + lagText + '.';
+    }
+
+    function renderFreshnessWarning(data) {
+      const warning = getMarketWarning(data);
+      const el = $('freshnessWarning');
+
+      if (!warning) {
+        el.hidden = true;
+        el.textContent = '';
+        return;
+      }
+
+      const freshness = data.marketFreshness || data.freshness || data.marketReadings || {};
+      el.className = 'freshness-warning' + (freshness.status === 'stale' ? ' stale' : '');
+      el.textContent = warning;
+      el.hidden = false;
+    }
+
     function renderSignalOnly(items) {
       const section = $('signalOnlySection');
       const container = $('signalOnly');
@@ -1033,6 +1100,7 @@
     function renderDivergence(data) {
       const asOfDate = data.asOfClose || data.date || 'unknown date';
       setText('asOfClose', 'readings as of market close, ' + asOfDate);
+      renderFreshnessWarning(data);
       renderStateSummary(data.stateCounts);
       renderDivergenceRows(data.rows);
       renderSignalOnly(data.signalOnly);
@@ -1040,6 +1108,8 @@
 
     function renderDivergenceError(error) {
       setText('asOfClose', 'readings as of market close, unavailable');
+      $('freshnessWarning').hidden = true;
+      $('freshnessWarning').textContent = '';
       renderStateSummary(null);
       $('divergenceBoard').innerHTML = '';
       $('divergenceBoard').appendChild(makeError('Could not load divergence.json. ' + loadStamp() + '. ' + error.message));

@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-06-26T14:08:08.587Z",
+  "generatedAt": "2026-06-26T14:16:52.545Z",
   "date": "2026-06-18",
   "asOfClose": "2026-06-18",
   "framing": "readings as of market close, 2026-06-18",
@@ -8,6 +8,35 @@
     "signal": "dashboard/public/market-shock.json",
     "market": "dashboard/public/market-readings.json"
   },
+  "marketReadings": {
+    "generatedAt": "2026-06-26T14:08:08.444Z",
+    "generatedDate": "2026-06-26",
+    "asOfClose": "2026-06-18",
+    "calendarLagDays": 8,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-06-26T14:08:08.444Z",
+    "generatedDate": "2026-06-26",
+    "runDate": "2026-06-26",
+    "asOfClose": "2026-06-18",
+    "calendarLagDays": 8,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-06-26, readings as of market close, 2026-06-18 (8 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-06-18",
+      "generatedDate": "2026-06-26",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-06-26, readings as of market close, 2026-06-18 (8 calendar days old)."
+    }
+  ],
   "thresholds": {
     "frozenAsOf": "2026-06-11",
     "signalScoreMax": 20,
@@ -66,6 +95,9 @@
       "driver_instrument_id": "brent",
       "driver_instrument_label": "Brent crude oil",
       "driver_as_of": "2026-06-18",
+      "market_as_of": "2026-06-18",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -88,6 +120,9 @@
       "driver_instrument_id": "broad-commodities",
       "driver_instrument_label": "Broad commodities ETF",
       "driver_as_of": "2026-06-18",
+      "market_as_of": "2026-06-18",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
@@ -125,6 +160,9 @@
       "driver_instrument_id": "brent",
       "driver_instrument_label": "Brent crude oil",
       "driver_as_of": "2026-06-18",
+      "market_as_of": "2026-06-18",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -147,6 +185,9 @@
       "driver_instrument_id": "high-yield-spreads",
       "driver_instrument_label": "High-yield option-adjusted spread",
       "driver_as_of": "2026-06-18",
+      "market_as_of": "2026-06-18",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -184,6 +225,9 @@
       "driver_instrument_id": "industrials",
       "driver_instrument_label": "Industrials equities ETF",
       "driver_as_of": "2026-06-18",
+      "market_as_of": "2026-06-18",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],

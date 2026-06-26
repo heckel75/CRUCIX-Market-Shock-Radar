@@ -3,6 +3,8 @@ import {
   mkdir,
   readdir,
   readFile,
+  rename,
+  rm,
   stat,
   writeFile
 } from "node:fs/promises";
@@ -93,6 +95,24 @@ async function readJson(filePath) {
   return JSON.parse(await readFile(filePath, "utf8"));
 }
 
+async function writeJsonAtomically(filePath, value) {
+  const directory = path.dirname(filePath);
+  const tempPath = path.join(
+    directory,
+    `.${path.basename(filePath)}.${process.pid}.${Date.now()}.tmp`
+  );
+
+  await mkdir(directory, { recursive: true });
+
+  try {
+    await writeFile(tempPath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+    await rename(tempPath, filePath);
+  } catch (error) {
+    await rm(tempPath, { force: true }).catch(() => {});
+    throw error;
+  }
+}
+
 async function pathExists(filePath) {
   try {
     await stat(filePath);
@@ -126,7 +146,7 @@ async function writeSnapshot(snapshot) {
     }
   }
 
-  await writeFile(snapshotPath, nextContents, "utf8");
+  await writeJsonAtomically(snapshotPath, snapshot);
 
   return {
     path: snapshotPath,
@@ -140,6 +160,22 @@ function countStates(rows) {
     counts[state] = (counts[state] || 0) + 1;
     return counts;
   }, {});
+}
+
+function snapshotWarnings(snapshot) {
+  return Array.isArray(snapshot.warnings)
+    ? snapshot.warnings.map((warning) => {
+        if (typeof warning === "string") {
+          return {
+            code: "snapshot-warning",
+            severity: "warning",
+            message: warning
+          };
+        }
+
+        return warning;
+      })
+    : [];
 }
 
 async function listSnapshotDates() {
@@ -167,6 +203,8 @@ async function buildManifest() {
       path: `log/${date}.json`,
       framing: snapshot.framing || `readings as of market close, ${date}`,
       generatedAt: snapshot.generatedAt || null,
+      marketFreshness: snapshot.marketFreshness || snapshot.marketReadings || null,
+      warnings: snapshotWarnings(snapshot),
       rowCount: snapshot.rows.length,
       stateCounts: snapshot.stateCounts || countStates(snapshot.rows)
     });
@@ -184,7 +222,7 @@ async function writeManifest() {
   const manifest = await buildManifest();
   const manifestPath = path.join(LOG_DIR, "index.json");
 
-  await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
+  await writeJsonAtomically(manifestPath, manifest);
 
   return {
     manifest,

@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const PROJECT_ROOT = process.cwd();
@@ -13,6 +13,8 @@ const SIGNAL_SCORE_MAX = 20;
 const SIGNAL_ELEVATED_THRESHOLD = 0.6;
 const MARKET_MOVING_ABS_Z_THRESHOLD = 1.5;
 const THRESHOLDS_FROZEN_AS_OF = '2026-06-11';
+const CURRENT_MAX_CALENDAR_LAG_DAYS = 3;
+const MAX_STALE_CALENDAR_DAYS = 14;
 
 const DIVERGENCE_CHANNELS = [
   {
@@ -68,6 +70,126 @@ function normalizeKey(value) {
 
 function unique(values) {
   return [...new Set(values.filter(Boolean))];
+}
+
+function todayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function assertIsoDate(label, value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) {
+    throw new Error(`${label} must be an ISO date, got ${JSON.stringify(value)}.`);
+  }
+}
+
+function daysBetween(startIso, endIso) {
+  assertIsoDate('start date', startIso);
+  assertIsoDate('end date', endIso);
+
+  const start = new Date(`${startIso}T00:00:00Z`);
+  const end = new Date(`${endIso}T00:00:00Z`);
+  return Math.round((end - start) / 86400000);
+}
+
+function getFreshnessStatus(calendarLagDays) {
+  if (calendarLagDays <= CURRENT_MAX_CALENDAR_LAG_DAYS) return 'current';
+  if (calendarLagDays <= MAX_STALE_CALENDAR_DAYS) return 'lagging';
+  return 'stale';
+}
+
+function makeFreshnessWarning(freshness) {
+  if (freshness.status === 'current') return null;
+
+  return `Market readings are ${freshness.status}: generated ${freshness.generatedDate}, readings as of market close, ${freshness.asOfClose} (${freshness.calendarLagDays} calendar days old).`;
+}
+
+function deriveFreshness(marketReadings) {
+  const existing = marketReadings.freshness;
+
+  if (existing && typeof existing === 'object' && existing.status) {
+    const asOfClose = existing.asOfClose ?? marketReadings.asOfClose ?? marketReadings.date;
+    const generatedDate =
+      existing.generatedDate ??
+      String(existing.generatedAt ?? marketReadings.generatedAt ?? todayIso()).slice(0, 10);
+    const calendarLagDays = Number.isInteger(existing.calendarLagDays)
+      ? existing.calendarLagDays
+      : daysBetween(asOfClose, generatedDate);
+    const status = existing.status ?? getFreshnessStatus(calendarLagDays);
+
+    const freshness = {
+      status,
+      generatedAt: existing.generatedAt ?? marketReadings.generatedAt ?? null,
+      generatedDate,
+      runDate: existing.runDate ?? generatedDate,
+      asOfClose,
+      calendarLagDays,
+      currentMaxCalendarLagDays:
+        existing.currentMaxCalendarLagDays ?? CURRENT_MAX_CALENDAR_LAG_DAYS,
+      staleAfterCalendarDays:
+        existing.staleAfterCalendarDays ?? MAX_STALE_CALENDAR_DAYS,
+      warning: existing.warning ?? null,
+    };
+
+    freshness.warning = freshness.warning ?? makeFreshnessWarning(freshness);
+    return freshness;
+  }
+
+  const asOfClose = marketReadings.asOfClose ?? marketReadings.date ?? todayIso();
+  const generatedAt = marketReadings.generatedAt ?? new Date().toISOString();
+  const generatedDate = String(generatedAt).slice(0, 10);
+  const calendarLagDays = daysBetween(asOfClose, generatedDate);
+  const status = getFreshnessStatus(calendarLagDays);
+  const freshness = {
+    status,
+    generatedAt,
+    generatedDate,
+    runDate: generatedDate,
+    asOfClose,
+    calendarLagDays,
+    currentMaxCalendarLagDays: CURRENT_MAX_CALENDAR_LAG_DAYS,
+    staleAfterCalendarDays: MAX_STALE_CALENDAR_DAYS,
+    warning: null,
+  };
+
+  freshness.warning = makeFreshnessWarning(freshness);
+  return freshness;
+}
+
+function normalizeWarnings(marketReadings, freshness) {
+  const warnings = [];
+
+  for (const warning of Array.isArray(marketReadings.warnings) ? marketReadings.warnings : []) {
+    if (typeof warning === 'string') {
+      warnings.push({
+        code: 'market-readings-warning',
+        severity: 'warning',
+        message: warning,
+      });
+      continue;
+    }
+
+    if (warning && typeof warning === 'object') {
+      warnings.push(warning);
+    }
+  }
+
+  if (freshness.warning) {
+    const alreadyPresent = warnings.some((warning) => warning.message === freshness.warning);
+
+    if (!alreadyPresent) {
+      warnings.push({
+        code: `market-readings-${freshness.status}`,
+        severity: freshness.status === 'stale' ? 'error' : 'warning',
+        status: freshness.status,
+        asOfClose: freshness.asOfClose,
+        generatedDate: freshness.generatedDate,
+        calendarLagDays: freshness.calendarLagDays,
+        message: freshness.warning,
+      });
+    }
+  }
+
+  return warnings;
 }
 
 async function readJson(filePath) {
@@ -207,7 +329,7 @@ function findMarketChannel(marketChannels, spec) {
   return marketChannels.find((channel) => normalizeKey(channel.label) === expectedLabel);
 }
 
-function buildRows({ signalReport, marketReadings }) {
+function buildRows({ signalReport, marketReadings, marketFreshness }) {
   const aggregates = aggregateSignals(signalReport);
   const marketChannels = getMarketChannels(marketReadings);
 
@@ -255,6 +377,9 @@ function buildRows({ signalReport, marketReadings }) {
       driver_instrument_id: marketChannel.driverInstrumentId ?? null,
       driver_instrument_label: marketChannel.driverInstrumentLabel ?? null,
       driver_as_of: marketChannel.driverAsOf ?? marketReadings.asOfClose ?? null,
+      market_as_of: marketFreshness.asOfClose,
+      market_freshness_status: marketFreshness.status,
+      market_calendar_lag_days: marketFreshness.calendarLagDays,
 
       state,
     };
@@ -315,7 +440,9 @@ function countStates(rows) {
 }
 
 function buildDivergenceReport({ signalReport, marketReadings }) {
-  const rows = buildRows({ signalReport, marketReadings });
+  const marketFreshness = deriveFreshness(marketReadings);
+  const warnings = normalizeWarnings(marketReadings, marketFreshness);
+  const rows = buildRows({ signalReport, marketReadings, marketFreshness });
   const date =
     marketReadings.asOfClose ??
     marketReadings.date ??
@@ -331,6 +458,15 @@ function buildDivergenceReport({ signalReport, marketReadings }) {
       signal: 'dashboard/public/market-shock.json',
       market: 'dashboard/public/market-readings.json',
     },
+    marketReadings: {
+      generatedAt: marketReadings.generatedAt ?? null,
+      generatedDate: marketFreshness.generatedDate,
+      asOfClose: marketFreshness.asOfClose,
+      calendarLagDays: marketFreshness.calendarLagDays,
+      freshnessStatus: marketFreshness.status,
+    },
+    marketFreshness,
+    warnings,
     thresholds: {
       frozenAsOf: THRESHOLDS_FROZEN_AS_OF,
       signalScoreMax: SIGNAL_SCORE_MAX,
@@ -356,6 +492,63 @@ function buildDivergenceReport({ signalReport, marketReadings }) {
     signalOnly: buildSignalOnlyRows(signalReport),
     retiredSignals: buildRetiredSignalRows(signalReport),
   };
+}
+
+function validateDivergenceReport(report) {
+  if (!report || typeof report !== 'object' || Array.isArray(report)) {
+    throw new Error('divergence output must be a JSON object.');
+  }
+
+  assertIsoDate('divergence date', report.date);
+  assertIsoDate('divergence asOfClose', report.asOfClose);
+
+  if (!report.marketFreshness || typeof report.marketFreshness !== 'object') {
+    throw new Error('divergence output must include marketFreshness.');
+  }
+
+  if (!['current', 'lagging', 'stale'].includes(report.marketFreshness.status)) {
+    throw new Error(`unknown market freshness status ${report.marketFreshness.status}.`);
+  }
+
+  if (!Array.isArray(report.warnings)) {
+    throw new Error('divergence output must include a warnings array.');
+  }
+
+  if (!Array.isArray(report.rows) || report.rows.length === 0) {
+    throw new Error('divergence output must include non-empty rows.');
+  }
+
+  for (const [index, row] of report.rows.entries()) {
+    if (!row.channel || !row.state) {
+      throw new Error(`divergence row ${index} must include channel and state.`);
+    }
+
+    if (!Number.isFinite(Number(row.signal_score))) {
+      throw new Error(`divergence row ${index} must include numeric signal_score.`);
+    }
+
+    if (!Number.isFinite(Number(row.market_z))) {
+      throw new Error(`divergence row ${index} must include numeric market_z.`);
+    }
+  }
+}
+
+async function writeJsonAtomically(filePath, value) {
+  const directory = path.dirname(filePath);
+  const tempPath = path.join(
+    directory,
+    `.${path.basename(filePath)}.${process.pid}.${Date.now()}.tmp`
+  );
+
+  await mkdir(directory, { recursive: true });
+
+  try {
+    await writeFile(tempPath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
+    await rename(tempPath, filePath);
+  } catch (error) {
+    await rm(tempPath, { force: true }).catch(() => {});
+    throw error;
+  }
 }
 
 function runSelfTest() {
@@ -389,13 +582,18 @@ async function main() {
 
   const divergenceReport = buildDivergenceReport({ signalReport, marketReadings });
 
-  await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, `${JSON.stringify(divergenceReport, null, 2)}\n`);
+  validateDivergenceReport(divergenceReport);
+  await writeJsonAtomically(OUTPUT_PATH, divergenceReport);
 
   console.log('CRUCIX Market Shock Divergence');
   console.log(`Date: ${divergenceReport.date}`);
+  console.log(`Market freshness: ${divergenceReport.marketFreshness.status}`);
+  console.log(`Market calendar lag: ${divergenceReport.marketFreshness.calendarLagDays} days`);
   console.log(`Wrote: ${path.relative(PROJECT_ROOT, OUTPUT_PATH)}`);
   console.log('State counts:', divergenceReport.stateCounts);
+  for (const warning of divergenceReport.warnings) {
+    console.warn(`Warning: ${warning.message}`);
+  }
 
   for (const row of divergenceReport.rows) {
     console.log(

@@ -6,6 +6,7 @@ const OUTPUT_PATH = path.join("dashboard", "public", "market-readings.json");
 const LOOKBACK_OBSERVATIONS = 5;
 const WINDOW_OBSERVATIONS = 252;
 const FETCH_START_CALENDAR_DAYS = 900;
+const CURRENT_MAX_CALENDAR_LAG_DAYS = 3;
 const MAX_STALE_CALENDAR_DAYS = 14;
 
 const FRED_SOURCE = "FRED";
@@ -35,6 +36,14 @@ function parseEnv(text) {
   return env;
 }
 
+function envOverride(key, fallback) {
+  if (Object.prototype.hasOwnProperty.call(process.env, key)) {
+    return process.env[key];
+  }
+
+  return fallback;
+}
+
 async function loadEnv() {
   let fileEnv = {};
 
@@ -47,9 +56,17 @@ async function loadEnv() {
 
   return {
     ...fileEnv,
-    FRED_API_KEY: process.env.FRED_API_KEY || fileEnv.FRED_API_KEY,
-    TIINGO_API_KEY: process.env.TIINGO_API_KEY || fileEnv.TIINGO_API_KEY
+    FRED_API_KEY: envOverride("FRED_API_KEY", fileEnv.FRED_API_KEY),
+    TIINGO_API_KEY: envOverride("TIINGO_API_KEY", fileEnv.TIINGO_API_KEY)
   };
+}
+
+function requireApiKey(value, name) {
+  if (typeof value !== "string" || !value.trim()) {
+    throw new Error(`${name} missing or blank in environment or .env`);
+  }
+
+  return value.trim();
 }
 
 function isoDateNDaysAgo(days) {
@@ -62,14 +79,78 @@ function todayIso() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function assertIsoDate(label, value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) {
+    throw new Error(`${label} must be an ISO date, got ${JSON.stringify(value)}.`);
+  }
+}
+
 function daysBetween(startIso, endIso) {
+  assertIsoDate("start date", startIso);
+  assertIsoDate("end date", endIso);
+
   const start = new Date(`${startIso}T00:00:00Z`);
   const end = new Date(`${endIso}T00:00:00Z`);
   return Math.round((end - start) / 86400000);
 }
 
-function assertFreshEnough(label, latestDate) {
-  const staleDays = daysBetween(latestDate, todayIso());
+function freshnessStatus(calendarLagDays) {
+  if (calendarLagDays <= CURRENT_MAX_CALENDAR_LAG_DAYS) return "current";
+  if (calendarLagDays <= MAX_STALE_CALENDAR_DAYS) return "lagging";
+  return "stale";
+}
+
+function buildFreshness(asOfClose, generatedAt) {
+  assertIsoDate("asOfClose", asOfClose);
+
+  const generatedDate = String(generatedAt || "").slice(0, 10);
+  assertIsoDate("generated date", generatedDate);
+
+  const calendarLagDays = daysBetween(asOfClose, generatedDate);
+
+  if (calendarLagDays < 0) {
+    throw new Error(
+      `Market close date ${asOfClose} is after generated date ${generatedDate}.`
+    );
+  }
+
+  const status = freshnessStatus(calendarLagDays);
+  const warning =
+    status === "current"
+      ? null
+      : `Market readings are ${status}: generated ${generatedDate}, readings as of market close, ${asOfClose} (${calendarLagDays} calendar days old).`;
+
+  return {
+    status,
+    generatedAt,
+    generatedDate,
+    runDate: generatedDate,
+    asOfClose,
+    calendarLagDays,
+    currentMaxCalendarLagDays: CURRENT_MAX_CALENDAR_LAG_DAYS,
+    staleAfterCalendarDays: MAX_STALE_CALENDAR_DAYS,
+    warning
+  };
+}
+
+function freshnessWarnings(freshness) {
+  if (!freshness.warning) return [];
+
+  return [
+    {
+      code: `market-readings-${freshness.status}`,
+      severity: freshness.status === "stale" ? "error" : "warning",
+      status: freshness.status,
+      asOfClose: freshness.asOfClose,
+      generatedDate: freshness.generatedDate,
+      calendarLagDays: freshness.calendarLagDays,
+      message: freshness.warning
+    }
+  ];
+}
+
+function assertFreshEnough(label, latestDate, referenceDate = todayIso()) {
+  const staleDays = daysBetween(latestDate, referenceDate);
 
   if (staleDays > MAX_STALE_CALENDAR_DAYS) {
     throw new Error(
@@ -78,6 +159,12 @@ function assertFreshEnough(label, latestDate) {
   }
 
   return staleDays;
+}
+
+function assertNotStale(label, freshness) {
+  if (freshness.status === "stale") {
+    throw new Error(`${label} is stale. ${freshness.warning}`);
+  }
 }
 
 async function fetchWithTimeout(url, label, options = {}) {
@@ -98,21 +185,31 @@ async function fetchWithTimeout(url, label, options = {}) {
   }
 }
 
-async function fetchFredSeries(instrument, apiKey) {
-  if (!apiKey) {
-    throw new Error("FRED_API_KEY missing or blank in .env");
+async function readJsonResponse(response, label) {
+  const text = await response.text();
+
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    throw new Error(
+      `${label} returned non-JSON response (HTTP ${response.status}): ${text.slice(0, 220)}`
+    );
   }
+}
+
+async function fetchFredSeries(instrument, apiKey) {
+  const fredApiKey = requireApiKey(apiKey, "FRED_API_KEY");
 
   const url = new URL("https://api.stlouisfed.org/fred/series/observations");
   url.searchParams.set("series_id", instrument.seriesId);
-  url.searchParams.set("api_key", apiKey);
+  url.searchParams.set("api_key", fredApiKey);
   url.searchParams.set("file_type", "json");
   url.searchParams.set("observation_start", isoDateNDaysAgo(FETCH_START_CALENDAR_DAYS));
 
   console.log(`Fetching FRED: ${instrument.seriesId}`);
 
   const response = await fetchWithTimeout(url, `FRED ${instrument.seriesId}`);
-  const data = await response.json();
+  const data = await readJsonResponse(response, `FRED ${instrument.seriesId}`);
 
   if (!response.ok || data.error_code) {
     throw new Error(
@@ -138,9 +235,7 @@ async function fetchFredSeries(instrument, apiKey) {
 }
 
 async function fetchTiingoDaily(instrument, apiKey) {
-  if (!apiKey) {
-    throw new Error("TIINGO_API_KEY missing or blank in .env");
-  }
+  const tiingoApiKey = requireApiKey(apiKey, "TIINGO_API_KEY");
 
   const url = new URL(`https://api.tiingo.com/tiingo/daily/${instrument.symbol}/prices`);
   url.searchParams.set("startDate", isoDateNDaysAgo(FETCH_START_CALENDAR_DAYS));
@@ -150,12 +245,12 @@ async function fetchTiingoDaily(instrument, apiKey) {
 
   const response = await fetchWithTimeout(url, `Tiingo ${instrument.symbol}`, {
     headers: {
-      Authorization: `Token ${apiKey}`,
+      Authorization: `Token ${tiingoApiKey}`,
       Accept: "application/json"
     }
   });
 
-  const data = await response.json();
+  const data = await readJsonResponse(response, `Tiingo ${instrument.symbol}`);
 
   if (!response.ok) {
     throw new Error(
@@ -281,7 +376,7 @@ function transformBetween(currentValue, priorValue, type, instrumentId) {
   throw new Error(`Unknown instrument type for ${instrumentId}: ${type}`);
 }
 
-function computeZReading(instrument, commonDates, globalAsOfClose) {
+function computeZReading(instrument, commonDates, globalAsOfClose, generatedDate) {
   const effectiveIndex = commonDates.lastIndexOf(globalAsOfClose);
 
   if (effectiveIndex === -1) {
@@ -336,7 +431,11 @@ function computeZReading(instrument, commonDates, globalAsOfClose) {
   }
 
   const zScore = (latestTransform - mean) / stdDev;
-  const sourceStaleDays = assertFreshEnough(instrument.id, instrument.sourceLatestDate);
+  const sourceStaleDays = assertFreshEnough(
+    instrument.id,
+    instrument.sourceLatestDate,
+    generatedDate
+  );
 
   return {
     id: instrument.id,
@@ -368,6 +467,73 @@ function computeZReading(instrument, commonDates, globalAsOfClose) {
     trailingWindowMean: round(mean, 6),
     trailingWindowStdDev: round(stdDev, 6)
   };
+}
+
+function validateMarketReadings(report) {
+  if (!report || typeof report !== "object" || Array.isArray(report)) {
+    throw new Error("market readings output must be a JSON object.");
+  }
+
+  assertIsoDate("market readings asOfClose", report.asOfClose);
+  assertIsoDate("market readings generatedDate", report.generatedDate);
+
+  if (!report.freshness || typeof report.freshness !== "object") {
+    throw new Error("market readings output must include freshness metadata.");
+  }
+
+  if (!["current", "lagging"].includes(report.freshness.status)) {
+    throw new Error(
+      `market readings freshness status must be current or lagging before write, got ${report.freshness.status}.`
+    );
+  }
+
+  if (!Number.isInteger(report.calendarLagDays) || report.calendarLagDays < 0) {
+    throw new Error("market readings output must include non-negative calendarLagDays.");
+  }
+
+  if (!Array.isArray(report.warnings)) {
+    throw new Error("market readings output must include a warnings array.");
+  }
+
+  if (!Array.isArray(report.channels) || report.channels.length === 0) {
+    throw new Error("market readings output must include non-empty channels.");
+  }
+
+  for (const channel of report.channels) {
+    if (!channel.id || !channel.label) {
+      throw new Error("each market channel must include id and label.");
+    }
+
+    if (!Number.isFinite(Number(channel.marketZ))) {
+      throw new Error(`market channel ${channel.id} must include numeric marketZ.`);
+    }
+
+    if (!Number.isFinite(Number(channel.absMarketZ))) {
+      throw new Error(`market channel ${channel.id} must include numeric absMarketZ.`);
+    }
+
+    if (!channel.driverInstrument || !channel.driverAsOf) {
+      throw new Error(`market channel ${channel.id} must include driver metadata.`);
+    }
+  }
+}
+
+async function writeJsonAtomically(filePath, value) {
+  const directory = path.dirname(filePath);
+  const tempPath = path.join(
+    directory,
+    `.${path.basename(filePath)}.${process.pid}.${Date.now()}.tmp`
+  );
+
+  await fs.mkdir(directory, { recursive: true });
+
+  try {
+    await fs.writeFile(tempPath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+    await fs.rename(tempPath, filePath);
+  } catch (error) {
+    await fs.rm(tempPath, { force: true }).catch(() => {});
+    throw error;
+  }
 }
 
 const INSTRUMENTS = {
@@ -551,6 +717,8 @@ function buildChannelReading(channel, instrumentReadings) {
 
 async function main() {
   const env = await loadEnv();
+  const generatedAt = new Date().toISOString();
+  const generatedDate = generatedAt.slice(0, 10);
 
   const resolvedSeries = {};
 
@@ -568,21 +736,33 @@ async function main() {
   }
 
   const globalAsOfClose = commonDates[commonDates.length - 1];
-  const globalStaleDays = assertFreshEnough("global asOfClose", globalAsOfClose);
+  const freshness = buildFreshness(globalAsOfClose, generatedAt);
+  assertNotStale("global asOfClose", freshness);
+  const warnings = freshnessWarnings(freshness);
 
   const instrumentReadings = {};
 
   for (const [key, instrument] of Object.entries(resolvedSeries)) {
-    instrumentReadings[key] = computeZReading(instrument, commonDates, globalAsOfClose);
+    instrumentReadings[key] = computeZReading(
+      instrument,
+      commonDates,
+      globalAsOfClose,
+      generatedDate
+    );
   }
 
   const channels = CHANNELS.map((channel) => buildChannelReading(channel, instrumentReadings));
 
   const marketReadings = {
     title: "CRUCIX Market Readings",
-    generatedAt: new Date().toISOString(),
+    generatedAt,
+    generatedDate,
+    runDate: generatedDate,
     asOfClose: globalAsOfClose,
-    globalStaleDays,
+    globalStaleDays: freshness.calendarLagDays,
+    calendarLagDays: freshness.calendarLagDays,
+    freshnessStatus: freshness.status,
+    freshness,
     framing: `Readings as of market close, ${globalAsOfClose}.`,
     methodology: {
       uniformTransform:
@@ -620,15 +800,17 @@ async function main() {
     instruments: Object.fromEntries(
       Object.entries(instrumentReadings).map(([key, reading]) => [key, reading])
     ),
-    warnings: []
+    warnings
   };
 
-  await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
-  await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(marketReadings, null, 2)}\n`, "utf8");
+  validateMarketReadings(marketReadings);
+  await writeJsonAtomically(OUTPUT_PATH, marketReadings);
 
   console.log("");
   console.log("CRUCIX Market Readings");
   console.log(`asOfClose: ${marketReadings.asOfClose}`);
+  console.log(`freshness: ${marketReadings.freshnessStatus}`);
+  console.log(`calendar lag: ${marketReadings.calendarLagDays} days`);
   console.log(`common usable dates: ${marketReadings.methodology.commonDateCount}`);
   console.log(`Gold proxy: ${marketReadings.selectedProxies.gold}`);
   console.log(`Broad commodities proxy: ${marketReadings.selectedProxies.broadCommodities}`);
@@ -638,6 +820,9 @@ async function main() {
     console.log(
       `${channel.label}: ${channel.marketZ}σ driven by ${channel.driverInstrument} (${channel.driverAsOf})`
     );
+  }
+  for (const warning of warnings) {
+    console.warn(`Warning: ${warning.message}`);
   }
   console.log("");
   console.log(`Wrote ${OUTPUT_PATH}`);
