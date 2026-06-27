@@ -12,6 +12,7 @@ import path from "node:path";
 
 const PROJECT_ROOT = process.cwd();
 const FORCE = process.argv.includes("--force");
+const STRICT_EXISTING_DIFF = process.argv.includes("--strict-existing-diff");
 
 const DIVERGENCE_PATH = path.join(PROJECT_ROOT, "dashboard", "public", "divergence.json");
 const PUBLIC_DASHBOARD_DIR = path.join(PROJECT_ROOT, "dashboard", "public");
@@ -47,6 +48,18 @@ function validateDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) {
     throw new Error("divergence.json must include a top-level ISO date field.");
   }
+}
+
+function relativeProjectPath(filePath) {
+  return path.relative(PROJECT_ROOT, filePath).split(path.sep).join("/");
+}
+
+function existingSnapshotDiffWarning(snapshot, snapshotPath) {
+  return [
+    `Snapshot for ${snapshot.date} already exists with different contents.`,
+    "Market readings have not advanced beyond this close date.",
+    `Keeping existing ${relativeProjectPath(snapshotPath)}. Use --force only for an intentional correction.`
+  ].join("\n");
 }
 
 function validateRow(row, index) {
@@ -140,8 +153,16 @@ async function writeSnapshot(snapshot) {
     }
 
     if (!FORCE) {
+      if (!STRICT_EXISTING_DIFF) {
+        return {
+          path: snapshotPath,
+          status: "kept",
+          warning: existingSnapshotDiffWarning(snapshot, snapshotPath)
+        };
+      }
+
       throw new Error(
-        `${path.relative(PROJECT_ROOT, snapshotPath)} already exists with different contents. Re-run with --force to overwrite.`
+        `${relativeProjectPath(snapshotPath)} already exists with different contents. Re-run with --force to overwrite.`
       );
     }
   }
@@ -285,13 +306,24 @@ async function main() {
   validateSnapshot(snapshot);
 
   const snapshotResult = await writeSnapshot(snapshot);
+
+  if (snapshotResult.warning) {
+    console.warn(snapshotResult.warning);
+    console.log("");
+    console.log("CRUCIX daily snapshot");
+    console.log(`Date: ${snapshot.date}`);
+    console.log(`${snapshotResult.status}: ${relativeProjectPath(snapshotResult.path)}`);
+    console.log("skipped: manifest and docs sync");
+    return;
+  }
+
   const manifestResult = await writeManifest();
   const copyResults = await syncDocs();
 
   console.log("CRUCIX daily snapshot");
   console.log(`Date: ${snapshot.date}`);
-  console.log(`${snapshotResult.status}: ${path.relative(PROJECT_ROOT, snapshotResult.path)}`);
-  console.log(`wrote: ${path.relative(PROJECT_ROOT, manifestResult.path)}`);
+  console.log(`${snapshotResult.status}: ${relativeProjectPath(snapshotResult.path)}`);
+  console.log(`wrote: ${relativeProjectPath(manifestResult.path)}`);
   console.log(`Manifest entries: ${manifestResult.manifest.count}`);
   console.log("");
   console.log("Synced public files:");
