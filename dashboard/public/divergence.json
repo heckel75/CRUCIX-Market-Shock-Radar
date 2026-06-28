@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-06-26T14:16:52.545Z",
+  "generatedAt": "2026-06-28T01:36:58.578Z",
   "date": "2026-06-18",
   "asOfClose": "2026-06-18",
   "framing": "readings as of market close, 2026-06-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-06-26T14:08:08.444Z",
-    "generatedDate": "2026-06-26",
+    "generatedAt": "2026-06-28T01:36:56.177Z",
+    "generatedDate": "2026-06-28",
     "asOfClose": "2026-06-18",
-    "calendarLagDays": 8,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-06-26T14:08:08.444Z",
-    "generatedDate": "2026-06-26",
-    "runDate": "2026-06-26",
+    "generatedAt": "2026-06-28T01:36:56.177Z",
+    "generatedDate": "2026-06-28",
+    "runDate": "2026-06-28",
     "asOfClose": "2026-06-18",
-    "calendarLagDays": 8,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-06-26, readings as of market close, 2026-06-18 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-06-28, readings as of market close, 2026-06-18 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-18",
-      "generatedDate": "2026-06-26",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-06-26, readings as of market close, 2026-06-18 (8 calendar days old)."
+      "generatedDate": "2026-06-28",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-06-28, readings as of market close, 2026-06-18 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,29 +64,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 12,
-      "signal_primary_count": 12,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[12]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
+        "rawScore": 15,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "missile",
-          "nuclear",
-          "port"
+          "drone",
+          "iran"
         ],
-        "text": "🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The vessel is currently und",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, nuclear. Signal: 🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The v..."
+        "text": "—❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violating the Cease Fire Agr",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, iran. Signal: —❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violat..."
       },
       "market_z": -2.017,
       "abs_market_z": 2.017,
@@ -97,7 +97,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     },
     {
@@ -122,36 +122,35 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 10,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 3,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.tg.urgent[11]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 13,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "attack",
-          "hormuz"
+          "strike",
+          "fuel"
         ],
-        "text": "🇦🇪⚠️🚨 Missile alerts sounded in the UAE briefly as the all-clear was given almost instantly The cause was likely another IRGC attack on a ship transiting the Strait of Hormuz through the Omani sid",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇦🇪⚠️🚨 Missile alerts sounded in the UAE briefly as the all-clear was given almost instantly The cause was likely another IRGC attack on a ship transiting the Strait of Hormuz..."
+        "text": "Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points across Crimea in the past we",
+        "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points acros..."
       },
       "market_z": -2.017,
       "abs_market_z": 2.017,
@@ -162,7 +161,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     },
     {
@@ -187,7 +186,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
@@ -199,24 +198,23 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
+      "signal_count": 3,
+      "signal_primary_count": 0,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.news[38]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "missile",
-          "nuclear",
-          "port"
+          "strike",
+          "gaza"
         ],
-        "text": "🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The vessel is currently und",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, nuclear. Signal: 🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The v..."
+        "text": "Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera"
       },
       "market_z": 1.465,
       "abs_market_z": 1.465,
@@ -227,7 +225,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     }
   ],

@@ -1,28 +1,70 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-06-26T14:08:05.307Z",
+  "generatedAt": "2026-06-28T01:36:56.036Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 2,
-    "Supply Chain Disruption": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 129,
+  "candidateCount": 137,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "drone",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "—❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violating the Cease Fire Agr",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, iran. Signal: —❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violat..."
+    },
+    {
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Why is Crimea critical to the Russia–Ukraine war? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Why is Crimea critical to the Russia–Ukraine war? | Al Jazeera"
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -39,21 +81,20 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "nuclear",
-        "port"
+        "strike",
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The vessel is currently und",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, nuclear. Signal: 🇷🇺⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian Navy, has returned to its home port of Severomorsk after 29 years. The v..."
+      "text": "Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 13,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -64,21 +105,26 @@
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX"
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack",
-        "hormuz"
+        "strike",
+        "fuel"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "🇦🇪⚠️🚨 Missile alerts sounded in the UAE briefly as the all-clear was given almost instantly The cause was likely another IRGC attack on a ship transiting the Strait of Hormuz through the Omani sid",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇦🇪⚠️🚨 Missile alerts sounded in the UAE briefly as the all-clear was given almost instantly The cause was likely another IRGC attack on a ship transiting the Strait of Hormuz..."
+      "text": "Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points across Crimea in the past we",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points acros..."
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -91,15 +137,78 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "naval",
+        "missile",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷❌🇺🇸 — IRGC announces joint missile-drone operation against US positions in Kuwait and Bahrain overnight Sunday, in response to recent US ceasefire violations, IRIB News reports citing IRGC Publi",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇮🇷❌🇺🇸 — IRGC announces joint missile-drone operation against US positions in Kuwait and Bahrain overnight Sunday, in response to recent US ceasefire violations, IRIB News re..."
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
+        "naval"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸❌🇮🇷 — Local Iranian media reports preliminarily indicate a US airstrike on Sirik naval base — unconfirmed by official sources.​​​​​​​​​​​​​​​​ @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, naval. Signal: 🇺🇸❌🇮🇷 — Local Iranian media reports preliminarily indicate a US airstrike on Sirik naval base — unconfirmed by official sources.​​​​​​​​​​​​​​​​ @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Slovakia's PM Fico is sending his delegation to the NATO Ankara summit without authority to approve new aid for Ukraine. \"Slovakia will not pay for Ukraine's military expenses,\" he said, adding a stra",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Slovakia's PM Fico is sending his delegation to the NATO Ankara summit without authority to approve new aid for Ukraine. \"Slovakia will not pay for Ukraine's military expenses,\"..."
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷⚔️🇺🇸🇧🇭 How Iran Devastated an American Naval Base—and Caused a U.S. Recalculation Satellite imagery reveals for the first time the extent of what Iran destroyed at Naval Support Activity Bahr",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇮🇷⚔️🇺🇸🇧🇭 How Iran Devastated an American Naval Base—and Caused a U.S. Recalculation Satellite imagery reveals for the first time the extent of what Iran destroyed at Naval..."
+      "text": "🇺🇸❌🇮🇷 — A US official told Axios the US is currently conducting airstrike on Iran.",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇺🇸❌🇮🇷 — A US official told Axios the US is currently conducting airstrike on Iran."
     },
     {
-      "path": "root.news[22]",
+      "path": "root.news[10]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -116,11 +225,53 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran’s Long World Cup Journey Defined by War and Political Tension",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran’s Long World Cup Journey Defined by War and Political Tension"
+      "text": "Iran war Update: Air raid sirens in Bahrain, Kuwait as US bombs Sirik, Qeshm | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Air raid sirens in Bahrain, Kuwait as US bombs Sirik, Qeshm | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[24]",
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "US launches second night of strikes on Iran after ship hit by drone | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: US launches second night of strikes on Iran after ship hit by drone | Al Jazeera"
+    },
+    {
+      "path": "root.news[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "troops",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel orders troops to prepare for ‘extended stay’ in Lebanon | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, israel. Signal: Israel orders troops to prepare for ‘extended stay’ in Lebanon | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[10]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -134,11 +285,53 @@
       ],
       "matchedKeywords": [
         "missile",
-        "nuclear"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, nuclear. Signal: ⚡️ — The heavy nuclear-powered missile cruiser Admiral Nakhimov (080), Project 11442M of the Russian | INTELSLAVA"
+      "text": "❌ — IRGC announces joint missile-drone operation against US positions in Kuwait and Bahrain overnigh | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: ❌ — IRGC announces joint missile-drone operation against US positions in Kuwait and Bahrain overnigh | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.newsFeed[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — A US official told Axios the US is currently conducting airstrike on Iran. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: ❌ — A US official told Axios the US is currently conducting airstrike on Iran. | INTELSLAVA"
+    },
+    {
+      "path": "root.newsFeed[26]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
+        "naval"
+      ],
+      "otherCategories": [],
+      "text": "❌ — Local Iranian media reports preliminarily indicate a US airstrike on Sirik naval base — unconfir | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, naval. Signal: ❌ — Local Iranian media reports preliminarily indicate a US airstrike on Sirik naval base — unconfir | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -167,209 +360,6 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "ukraine",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Russian milblogger Alexander Kharchenko believes Ukraine is preparing a major counteroffensive, possibly in the second half of July. He argues that recent strikes on Russian oil infrastructure are int",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Russian milblogger Alexander Kharchenko believes Ukraine is preparing a major counteroffensive, possibly in the second half of July. He argues that recent strikes on Russian oil..."
-    },
-    {
-      "path": "root.news[36]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "ukraine",
-        "logistics"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Ukraine decimates Russian logistics, bringing chaos to Crimea | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Ukraine decimates Russian logistics, bringing chaos to Crimea | Al Jazeera"
-    },
-    {
-      "path": "root.news[41]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Oil, cod, Kirill: friction points emerge in new EU sanctions against Russia | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Oil, cod, Kirill: friction points emerge in new EU sanctions against Russia | Euronews"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "airstrike"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇱❌🇱🇧 — BREAKING: ISRAELI AIRSTRIKE ON LEBANON!",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike. Signal: 🇮🇱❌🇱🇧 — BREAKING: ISRAELI AIRSTRIKE ON LEBANON!"
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🌐🇷🇺⚡️ — Russia will remain a threat to NATO in the long term, said NATO Secretary General Mark Rutte. Rutte stressed that the Russian army is currently actively gaining combat experience. At the s",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🌐🇷🇺⚡️ — Russia will remain a threat to NATO in the long term, said NATO Secretary General Mark Rutte. Rutte stressed that the Russian army is currently actively gaining comba..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇷🇮🇱⚡️ — WATCH: Hezbollah has released footage dated June 14, 2026, showing the launch of an Ababil (Arman) short-range ballistic missile (SRBM), Nasr-2 surface-to-surface missiles, and a Paveh cr",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷🇮🇱⚡️ — WATCH: Hezbollah has released footage dated June 14, 2026, showing the launch of an Ababil (Arman) short-range ballistic missile (SRBM), Nasr-2 surface-to-surface m..."
-    },
-    {
-      "path": "root.chokepoints[1]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "canal"
-      ],
-      "otherCategories": [],
-      "text": "Suez Canal | 12% of world trade",
-      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Suez Canal | 12% of world trade"
-    },
-    {
-      "path": "root.chokepoints[4]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "red sea"
-      ],
-      "otherCategories": [],
-      "text": "Bab el-Mandeb | Red Sea gateway",
-      "explanation": "Energy Shock match based on keywords: red sea. Signal: Bab el-Mandeb | Red Sea gateway"
     }
   ]
 }
