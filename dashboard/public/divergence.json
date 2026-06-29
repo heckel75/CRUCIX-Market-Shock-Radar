@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-06-28T01:36:58.578Z",
+  "generatedAt": "2026-06-29T01:39:12.904Z",
   "date": "2026-06-18",
   "asOfClose": "2026-06-18",
   "framing": "readings as of market close, 2026-06-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-06-28T01:36:56.177Z",
-    "generatedDate": "2026-06-28",
+    "generatedAt": "2026-06-29T01:39:09.868Z",
+    "generatedDate": "2026-06-29",
     "asOfClose": "2026-06-18",
-    "calendarLagDays": 10,
+    "calendarLagDays": 11,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-06-28T01:36:56.177Z",
-    "generatedDate": "2026-06-28",
-    "runDate": "2026-06-28",
+    "generatedAt": "2026-06-29T01:39:09.868Z",
+    "generatedDate": "2026-06-29",
+    "runDate": "2026-06-29",
     "asOfClose": "2026-06-18",
-    "calendarLagDays": 10,
+    "calendarLagDays": 11,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-06-28, readings as of market close, 2026-06-18 (10 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-06-29, readings as of market close, 2026-06-18 (11 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-18",
-      "generatedDate": "2026-06-28",
-      "calendarLagDays": 10,
-      "message": "Market readings are lagging: generated 2026-06-28, readings as of market close, 2026-06-18 (10 calendar days old)."
+      "generatedDate": "2026-06-29",
+      "calendarLagDays": 11,
+      "message": "Market readings are lagging: generated 2026-06-29, readings as of market close, 2026-06-18 (11 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,29 +64,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 13,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.tg.urgent[14]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
-        "confidence": "Medium",
+        "rawScore": 22,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "drone",
-          "iran"
+          "strike",
+          "russia",
+          "oil",
+          "refinery"
         ],
-        "text": "—❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violating the Cease Fire Agr",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, iran. Signal: —❗️🇺🇸/🇮🇷 President Trump threatens Iran on Truth Social: ‘United States aircraft just struck Iranian missile and drone storage locations, and coastal radar sites, for violat..."
+        "text": "Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports."
       },
       "market_z": -2.017,
       "abs_market_z": 2.017,
@@ -97,7 +98,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
+      "market_calendar_lag_days": 11,
       "state": "priced"
     },
     {
@@ -122,35 +123,37 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
+      "market_calendar_lag_days": 11,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 1,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 1,
+      "signal_count": 5,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[11]",
+        "path": "root.tg.urgent[14]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
+        "rawScore": 22,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "fuel"
+          "russia",
+          "oil",
+          "refinery"
         ],
-        "text": "Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points across Crimea in the past we",
-        "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Crimea has been under emergency for several days with fuel sales almost stopped, only available by special permits or QR codes, DroneBomber reports. About 50 strike points acros..."
+        "text": "Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports."
       },
       "market_z": -2.017,
       "abs_market_z": 2.017,
@@ -161,7 +164,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
+      "market_calendar_lag_days": 11,
       "state": "priced"
     },
     {
@@ -186,35 +189,37 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
+      "market_calendar_lag_days": 11,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 0,
+      "signal_count": 4,
+      "signal_primary_count": 1,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.news[38]",
+        "path": "root.tg.urgent[14]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 22,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "gaza"
+          "russia",
+          "oil",
+          "refinery"
         ],
-        "text": "Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Two killed, dozens injured in Israeli strike on displacement tents in Gaza | Al Jazeera"
+        "text": "Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports."
       },
       "market_z": 1.465,
       "abs_market_z": 1.465,
@@ -225,7 +230,7 @@
       "driver_as_of": "2026-06-18",
       "market_as_of": "2026-06-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
+      "market_calendar_lag_days": 11,
       "state": "radar-claim"
     }
   ],
