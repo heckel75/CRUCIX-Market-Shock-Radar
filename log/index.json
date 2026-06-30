@@ -1,14 +1,51 @@
 {
   "title": "CRUCIX Market Shock Snapshot Manifest",
-  "generatedAt": "2026-06-26T14:08:08.733Z",
-  "count": 2,
+  "generatedAt": "2026-06-30T01:33:45.786Z",
+  "count": 3,
   "snapshots": [
+    {
+      "date": "2026-06-22",
+      "file": "2026-06-22.json",
+      "path": "log/2026-06-22.json",
+      "framing": "readings as of market close, 2026-06-22",
+      "generatedAt": "2026-06-30T01:33:45.633Z",
+      "marketFreshness": {
+        "status": "lagging",
+        "generatedAt": "2026-06-30T01:33:41.954Z",
+        "generatedDate": "2026-06-30",
+        "runDate": "2026-06-30",
+        "asOfClose": "2026-06-22",
+        "calendarLagDays": 8,
+        "currentMaxCalendarLagDays": 3,
+        "staleAfterCalendarDays": 14,
+        "warning": "Market readings are lagging: generated 2026-06-30, readings as of market close, 2026-06-22 (8 calendar days old)."
+      },
+      "warnings": [
+        {
+          "code": "market-readings-lagging",
+          "severity": "warning",
+          "status": "lagging",
+          "asOfClose": "2026-06-22",
+          "generatedDate": "2026-06-30",
+          "calendarLagDays": 8,
+          "message": "Market readings are lagging: generated 2026-06-30, readings as of market close, 2026-06-22 (8 calendar days old)."
+        }
+      ],
+      "rowCount": 5,
+      "stateCounts": {
+        "priced": 2,
+        "radar-miss": 2,
+        "calm": 1
+      }
+    },
     {
       "date": "2026-06-18",
       "file": "2026-06-18.json",
       "path": "log/2026-06-18.json",
       "framing": "readings as of market close, 2026-06-18",
       "generatedAt": "2026-06-26T14:08:08.587Z",
+      "marketFreshness": null,
+      "warnings": [],
       "rowCount": 5,
       "stateCounts": {
         "priced": 2,
@@ -23,6 +60,8 @@
       "path": "log/2026-06-15.json",
       "framing": "readings as of market close, 2026-06-15",
       "generatedAt": "2026-06-23T14:09:38.011Z",
+      "marketFreshness": null,
+      "warnings": [],
       "rowCount": 5,
       "stateCounts": {
         "priced": 3,

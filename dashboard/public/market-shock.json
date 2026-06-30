@@ -1,30 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-06-29T01:39:09.721Z",
+  "generatedAt": "2026-06-30T01:33:41.794Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 2,
-    "Supply Chain Disruption": 1
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 130,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[14]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 22,
+      "score": 24,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -32,10 +31,36 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "war",
+        "strike",
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, part of the \"Ukraine tu",
+      "explanation": "Geopolitical Escalation match based on keywords: war, strike, drone, ukraine. Signal: 🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, ..."
+    },
+    {
+      "path": "root.newsFeed[39]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -44,31 +69,25 @@
       ],
       "matchedKeywords": [
         "strike",
-        "russia",
-        "oil",
-        "refinery"
+        "drone",
+        "ukraine"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Omsk refinery became Russia's only strategic oil refinery operating at full capacity after the Slavyansky refinery strike, Russian media reports."
+      "text": "⚔️ Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians agains | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: ⚔️ Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians agains | CIG_TELEGRAM"
     },
     {
-      "path": "root.news[49]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 17,
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Gold",
         "VIX",
+        "Oil",
         "Defense Equities",
         "Safe-haven FX",
         "Industrials",
@@ -78,19 +97,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "refinery",
-        "strike"
+        "strike",
+        "drone"
       ],
       "otherCategories": [
-        "Geopolitical Escalation",
         "Supply Chain Disruption"
       ],
-      "text": "Ukrainian strike ignites Russian oil refinery, as Putin acknowledges 'difficult period' | France 24",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Ukrainian strike ignites Russian oil refinery, as Putin acknowledges 'difficult period' | France 24"
+      "text": "🇺🇦🇷🇺⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump out of the cabin at the last moment. After the arrival, the driver of another truck, parked",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇺🇦🇷🇺⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump out of the cabin at the last moment. After the arrival, the driver of..."
     },
     {
-      "path": "root.news[16]",
+      "path": "root.news[15]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -101,25 +118,53 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
+        "strike",
+        "gaza"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Iran war Update: Tehran insists on control of Hormuz amid reports of US talks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran insists on control of Hormuz amid reports of US talks | Al Jazeera"
+      "text": "Israeli strike kills two, setting tents ablaze in Gaza humanitarian zone | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike kills two, setting tents ablaze in Gaza humanitarian zone | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
+      "path": "root.newsFeed[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump | INTELSLAVA"
+    },
+    {
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -132,35 +177,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "missile"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸⚡️ — The US is preparing for a war of attrition, trying to build a system of mass missile production in the style of \"McDonald's\", writes the Financial Times, analyzing various American weapons st",
-      "explanation": "Geopolitical Escalation match based on keywords: war, missile. Signal: 🇺🇸⚡️ — The US is preparing for a war of attrition, trying to build a system of mass missile production in the style of \"McDonald's\", writes the Financial Times, analyzing vari..."
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇺🇸🇮🇱⚡️ — Destroyed launcher of Iran’s newest Talaiyeh anti-ship cruise missile system. The projectile appears to have struck the truck cabin, possibly indicating the use of a small precision-g",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷🇺🇸🇮🇱⚡️ — Destroyed launcher of Iran’s newest Talaiyeh anti-ship cruise missile system. The projectile appears to have struck the truck cabin, possibly indicating the use..."
+      "text": "Iran war Update: Tehran denies Trump’s claim of meeting in Doha | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran denies Trump’s claim of meeting in Doha | Al Jazeera"
     },
     {
-      "path": "root.news[32]",
+      "path": "root.news[30]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -177,8 +201,29 @@
         "gaza"
       ],
       "otherCategories": [],
-      "text": "Israel kills four Palestinians in Gaza as attacks on tents continue | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel kills four Palestinians in Gaza as attacks on tents continue | Al Jazeera"
+      "text": "Israel’s Smotrich calls for settlements, ‘conquest’ of Gaza Strip | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel’s Smotrich calls for settlements, ‘conquest’ of Gaza Strip | Al Jazeera"
+    },
+    {
+      "path": "root.news[42]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Whatever You Do in Russia, Don’t Talk About the War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Whatever You Do in Russia, Don’t Talk About the War"
     },
     {
       "path": "root.chokepoints[5]",
@@ -209,8 +254,8 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[40]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -220,20 +265,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "iran",
-        "hormuz"
+        "strike"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Iran threatens total halt to talks amid intensive US air activity near Hormuz | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran threatens total halt to talks amid intensive US air activity near Hormuz | Euronews"
+      "text": "🇷🇺❌🇺🇦 — A strike has been carried out on an enemy enterprise in Kharkiv; the city is in smoke. ➡️ Large-scale smoke in Kharkiv after the arrival of airstrikes on an industrial facility. @IntelSl",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — A strike has been carried out on an enemy enterprise in Kharkiv; the city is in smoke. ➡️ Large-scale smoke in Kharkiv after the arrival of airstrikes on an industri..."
     },
     {
       "path": "root.chokepoints[0]",
@@ -257,7 +302,7 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -270,51 +315,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile"
+        "attack"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇷🇺⚡️ — Wreckage of a failed or intercepted 9M723 ballistic missile from the Iskander-M system, recovered following overnight strikes on targets in Kyiv. The surviving warhead and tail section o",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇺🇦🇷🇺⚡️ — Wreckage of a failed or intercepted 9M723 ballistic missile from the Iskander-M system, recovered following overnight strikes on targets in Kyiv. The surviving warh..."
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile"
-      ],
-      "otherCategories": [],
-      "text": "🇨🇳🇷🇸⚡️ — President Aleksandar Vučić announced that Serbia is officially moving forward with the procurement of the Chinese HQ-9 long-range surface-to-air missile (SAM) system, alongside new fighte",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇨🇳🇷🇸⚡️ — President Aleksandar Vučić announced that Serbia is officially moving forward with the procurement of the Chinese HQ-9 long-range surface-to-air missile (SAM) syste..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺❌🇺🇦 — WATCH: Drone teams of the Yuzhnaya Group destroy a UAV command post and eliminate enemy manpower inside a multi-floor building in Konstantinovka. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇷🇺❌🇺🇦 — WATCH: Drone teams of the Yuzhnaya Group destroy a UAV command post and eliminate enemy manpower inside a multi-floor building in Konstantinovka. @IntelSlava"
+      "text": "🇲🇨⚡️- BREAKING: Monegasque authorities have confirmed they are treating the explosion as a terror attack.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇲🇨⚡️- BREAKING: Monegasque authorities have confirmed they are treating the explosion as a terror attack."
     },
     {
       "path": "root.tg.urgent[7]",
@@ -330,14 +335,34 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran"
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇷🇶🇦⚡️ — BREAKING: The U.S. and Iran have agreed to halt attacks against each other and plan to meet in Doha on Tuesday for technical talks aimed at resolving their dispute over the Strait of",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇮🇷🇶🇦⚡️ — BREAKING: The U.S. and Iran have agreed to halt attacks against each other and plan to meet in Doha on Tuesday for technical talks aimed at resolving their disp..."
+      "text": "🌐🇺🇦🇷🇺⚡️ — NATO, together with Ukraine, is preparing to create weapons to destroy Russian air bases, including those deep in the country - Russian Foreign Ministry @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🌐🇺🇦🇷🇺⚡️ — NATO, together with Ukraine, is preparing to create weapons to destroy Russian air bases, including those deep in the country - Russian Foreign Ministry @Intelslava"
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇦🇫🇷🇷🇺⚡️ — Ukraine is discussing with France the acquisition of a license to produce SCALP cruise missiles - Ukrainian Defense Minister. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦🇫🇷🇷🇺⚡️ — Ukraine is discussing with France the acquisition of a license to produce SCALP cruise missiles - Ukrainian Defense Minister. @Intelslava"
+    },
+    {
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -355,26 +380,6 @@
       "otherCategories": [],
       "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
       "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
-    },
-    {
-      "path": "root.chokepoints[1]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "canal"
-      ],
-      "otherCategories": [],
-      "text": "Suez Canal | 12% of world trade",
-      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Suez Canal | 12% of world trade"
     }
   ]
 }
