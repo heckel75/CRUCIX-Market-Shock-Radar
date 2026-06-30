@@ -117,7 +117,7 @@ Commit/push shortcut:
 
 ## 3. Current State
 
-**Current session cursor:** Session 11 complete — next session is Session 12
+**Current session cursor:** Session 12 complete — next session is Session 13
 **Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
@@ -125,10 +125,10 @@ Commit/push shortcut:
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes. Dashboard v2 is published. `dashboard/public/market-shock.html` has been reworked so the divergence board is the hero element, reads `divergence.json`, keeps Shock Mix prominent, demotes the Market Shock Score, and now shows dated lagging/stale market-reading warnings when `divergence.json` carries them.
-**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. Session 11 synced warning-display updates into `docs/index.html`, `docs/history.html`, and `docs/divergence.json`. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
+**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. Session 11 synced warning-display updates into `docs/index.html`, `docs/history.html`, and `docs/divergence.json`. Session 12 verified that public GitHub Pages is serving the latest committed `docs/` files from `origin/master`, that public dashboard/history fetches are relative, and that no local-only `localhost` fetch is used in public files. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
 **Market data fetcher:** Created and verified in Session 7; hardened in Session 11. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, writes `dashboard/public/market-readings.json`, includes freshness metadata and lagging/stale warnings, fails loudly on missing keys/source failures/non-JSON responses, and writes JSON atomically.
 **Divergence engine:** Created and verified in Session 8; hardened in Session 11. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, preserves market freshness warnings, and writes `dashboard/public/divergence.json` atomically.
-**Daily log / history:** Implemented in Session 10 and CI-proven in Session 11. Real snapshots now include `log/2026-06-15.json` and `log/2026-06-18.json`; Pages copies include `docs/log/2026-06-15.json` and `docs/log/2026-06-18.json`; static manifests are `log/index.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`, with Session 11 support for snapshot warnings. The first manual GitHub Action run failed because repository secret names were wrong; secrets were recreated with exact names `FRED_API_KEY` and `TIINGO_API_KEY`; the manual GitHub Action "Daily snapshot" then succeeded. Local `git pull` fast-forwarded to commit `0e3a2b7` ("Update CRUCIX daily snapshot"). CI automation is now considered proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
+**Daily log / history:** Implemented in Session 10 and CI-proven in Session 11. Real snapshots now include `log/2026-06-15.json`, `log/2026-06-18.json`, and `log/2026-06-22.json`; Pages copies include matching files under `docs/log/`; static manifests are `log/index.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`, with Session 11 support for snapshot warnings. Session 12 verified the public snapshot count is `3`, the latest real snapshot date is `2026-06-22`, and latest public state counts are `priced: 2`, `radar-miss: 2`, `calm: 1`. The latest lag warning is expected source lag: FRED Brent `DCOILBRENTEU` and WTI `DCOILWTICO` currently hold the global common-date alignment at `2026-06-22`. CI automation remains proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
 **README created:** Yes. README v2 completed in Session 11 with divergence board rules, four states, frozen thresholds, uniform market transform, data sources, dated log/history, Crucix attribution, and disclaimer.
 **Board screenshot:** Deferred intentionally by the user in Session 11; do not mark complete until captured in a later session.
 **LinkedIn materials:** Superseded; see Section 12
@@ -153,6 +153,7 @@ Crucix/
 ├── log/
 │   ├── 2026-06-15.json            (Session 10 — first real committed snapshot)
 │   ├── 2026-06-18.json            (Session 11 — real CI-created snapshot)
+│   ├── 2026-06-22.json            (Session 12 — latest real CI-created snapshot)
 │   └── index.json                 (Session 10+ — static manifest)
 ├── docs/
 │   ├── index.html                 (Pages copy)
@@ -161,6 +162,7 @@ Crucix/
 │   └── log/
 │       ├── 2026-06-15.json
 │       ├── 2026-06-18.json
+│       ├── 2026-06-22.json
 │       └── index.json
 ├── README-market-shock-radar.md
 ├── package.json
@@ -181,6 +183,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 7 git checks:** Started clean: `git status --short` returned empty. End state before project-log update: `M package.json`, `?? scripts/market-data.mjs`, `?? dashboard/public/market-readings.json`.
 **Fresh Session 8 git checks:** Started clean: `git status --short` returned empty. End state before project-log update: `M package.json`, `?? scripts/divergence.mjs`, `?? dashboard/public/divergence.json`.
 **Fresh Session 11 git checks:** CI proof and hardening completed. Validation passed; `.env` is local and not tracked; secret scan found no literal API secrets. End state before project-log update included modified script/dashboard/docs/README files from the Session 11 reliability pass, with no commit or push.
+**Fresh Session 12 git checks:** After `git pull --ff-only`, local `master` fast-forwarded from `f5fbde2` to `9fc3bad` and now matches `origin/master`. `git status --short` produced no changed files, with only a warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Latest five commits: `9fc3bad Update CRUCIX daily snapshot`; `002e2ec Update CRUCIX daily snapshot`; `9305a0e Update CRUCIX daily snapshot`; `f5fbde2 Make daily snapshot idempotent on stale market dates`; `3582d9e Harden daily snapshot workflow`.
 
 ---
 
@@ -209,6 +212,7 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 | 9 | 75 min | Dashboard v2: divergence board as hero, Shock Mix prominent, score demoted, dated "as of close" framing, descriptive-labels pass | Done |
 | 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation attempt, local fallback protocol | Done, with CI/domain follow-ups |
 | 11 | 30 min | CI proof, hardening, README v2, publishability checks. Screenshot intentionally deferred by user. (The LinkedIn post itself is drafted outside these sessions — Section 12) | Done, screenshot deferred |
+| 12 | 45 min | Log accumulation and public verification: verify Pages/docs sync, public log freshness, lag diagnosis, no domain work | Done |
 
 ---
 
@@ -876,6 +880,48 @@ Final reliability pass and the assets the eventual post will need. The post itse
 
 ---
 
+# Session 12 — Log Accumulation and Public Verification
+
+## Goal
+
+Verify that the public daily-log flow is healthy, that GitHub Pages is serving the latest committed dashboard/log files, and diagnose why the latest snapshot remains dated `2026-06-22` with an 8-calendar-day lag warning on `2026-06-30`. Domain work is explicitly out of scope.
+
+## Estimated duration
+
+45 minutes
+
+## Tasks
+
+- [x] Inspect repo state, current manifests, dashboard JSON, workflow, and daily-run scripts
+- [x] Verify local `log/index.json` and `docs/log/index.json` match after fast-forward
+- [x] Verify local `dashboard/public/divergence.json` and `docs/divergence.json` match after fast-forward
+- [x] Verify latest public snapshot count/date/state counts/warnings across manifest, snapshot, dashboard JSON, and docs copies
+- [x] Diagnose the lag and identify the source holding `asOfClose` at `2026-06-22`
+- [x] Verify GitHub Pages serves from `docs/`, dashboard/history use relative JSON fetches, and public files do not fetch from `localhost`
+- [x] Avoid domain work, methodology changes, fabricated snapshots, commits, and pushes
+
+## Definition of done
+
+- Public Pages is confirmed to serve latest committed `docs/` files
+- Latest snapshot count/date/state counts are recorded
+- Source/docs copies are confirmed consistent
+- Lag is classified as expected source lag or a pipeline bug
+- Recommended next action is recorded
+
+## Session 12 Log
+
+**Status:** Complete.
+**Date completed:** 2026-06-30
+**Focus:** Option B — log accumulation and public verification.
+**What worked:** Public flow is healthy. GitHub Pages is serving the latest committed `docs/` files from `origin/master`. Local checkout was initially behind by three Action-created commits, then was fast-forwarded successfully from `f5fbde2` to `9fc3bad`; local repo now matches `origin/master`. `git status --short` produced no changed files after the pull, and `git log --oneline -5` shows `9fc3bad Update CRUCIX daily snapshot`, `002e2ec Update CRUCIX daily snapshot`, `9305a0e Update CRUCIX daily snapshot`, `f5fbde2 Make daily snapshot idempotent on stale market dates`, and `3582d9e Harden daily snapshot workflow`. Public snapshot count is `3`. Latest real snapshot date is `2026-06-22`. Latest public state counts are `priced: 2`, `radar-miss: 2`, `calm: 1`. Public `index.html`, `history.html`, `divergence.json`, `market-readings.json`, `log/index.json`, and `log/2026-06-22.json` match the latest committed `origin/master:docs/...` files after line-ending normalization. Local source files and `docs/` copies also match after the fast-forward: `log/index.json` matches `docs/log/index.json`; `dashboard/public/divergence.json` matches `docs/divergence.json`; `dashboard/public/market-readings.json` matches `docs/market-readings.json`; `dashboard/public/market-shock.html` matches `docs/index.html`; `dashboard/public/history.html` matches `docs/history.html`.
+**Lag diagnosis:** The lag warning is expected source lag, not a pipeline bug. The global `asOfClose` is held at `2026-06-22` by FRED crude series. Official FRED rows checked during verification: `DCOILBRENTEU` latest row `2026-06-22,76.49`; `DCOILWTICO` latest row `2026-06-22,78.94`. Other sources are newer, including Tiingo ETF data through `2026-06-29` and some FRED series through `2026-06-26`/`2026-06-29`. Because `scripts/market-data.mjs` uses one global common-date alignment across all instruments, Brent/WTI correctly hold the whole board back. The `market-readings-lagging` warning is doing what Session 11 intended.
+**What failed:** No blocking failures. Local checkout was initially stale by three commits and was fixed with `git pull --ff-only`. Git warned it could not read `C:\Users\heyke/.config/git/ignore`; this did not block the session.
+**Validation passed:** `git diff --no-index --exit-code log/index.json docs/log/index.json`; `git diff --no-index --exit-code dashboard/public/divergence.json docs/divergence.json`; `git diff --no-index --exit-code dashboard/public/market-readings.json docs/market-readings.json`; `git diff --no-index --exit-code dashboard/public/market-shock.html docs/index.html`; `git diff --no-index --exit-code dashboard/public/history.html docs/history.html`; `node --check scripts/market-data.mjs`; `node --check scripts/daily-snapshot.mjs`; `node --check scripts/daily-run.mjs`; `node --check scripts/divergence.mjs`; public Pages normalized compare against `origin/master:docs/...` for all checked files.
+**Files changed:** No code or dashboard files changed. Only this project log was updated after verification.
+**Next adjustment:** Continue monitoring whether FRED crude lag resolves naturally. Keep accumulating real CI-created snapshots until the log has roughly two weeks of dated rows. Domain setup remains deferred to a later dedicated session. Board screenshot with real rows remains needed before publication. Next likely session is Session 13: continued log accumulation/public verification, or domain staging only if enough real snapshots exist.
+
+---
+
 ## 5. Done Checklist
 
 ### Setup
@@ -976,6 +1022,7 @@ Final reliability pass and the assets the eventual post will need. The post itse
 - [x] Daily snapshot script created
 - [x] First dated snapshot committed
 - [x] Second real snapshot created by CI (`2026-06-18`)
+- [x] Third real snapshot created by CI (`2026-06-22`)
 - [x] Log manifest created
 - [x] `docs/log` synced
 - [x] History page created
@@ -985,6 +1032,8 @@ Final reliability pass and the assets the eventual post will need. The post itse
 - [x] Exact GitHub secret names verified: `FRED_API_KEY`, `TIINGO_API_KEY`
 - [x] CI full run proven after GitHub secrets were added and the Daily snapshot Action succeeded manually
 - [x] Multiple real daily snapshots accumulated
+- [x] Public Pages/docs latest committed file verification passed
+- [x] Latest lag warning diagnosed as expected FRED crude source lag
 - [ ] Custom domain configured
 
 ### Publishability / safety
@@ -1054,6 +1103,9 @@ Use this section to record project decisions.
 | 2026-06-26 | README v2 is descriptive documentation for the divergence board, not launch copy | The project README should explain rules, states, thresholds, data sources, dated logs, Crucix attribution, and disclaimers without promotional language. |
 | 2026-06-26 | Session 11 screenshot is deferred, not complete | The user intentionally skipped/deferred screenshot capture; do not mark it complete until a later session. |
 | 2026-06-26 | Domain work remains deferred | Do not create `docs/CNAME`, change GitHub Pages domain settings, or update the `divergencelog.com` apex outside a dedicated domain session. |
+| 2026-06-30 | Keep the global common-date market alignment unchanged for now | The lag is honest and methodologically consistent; changing it would be a methodology change, not a bug fix. |
+| 2026-06-30 | Do not start domain setup in Session 12 | The log needs more real dated rows before launch staging. |
+| 2026-06-30 | Continue accumulating real CI-created snapshots; no fabricated backfill | The project's credibility depends on real dated rows only. |
 
 ---
 
@@ -1080,9 +1132,10 @@ Use this section to log unresolved items.
 | How should the board handle FRED series that lag a day (spreads, breakevens)? | 7 | Partially answered | Session 9 exposes the main `readings as of market close` date. Detailed per-instrument lag remains a Session 10/11 hardening item. |
 | What does the GitHub Pages copy currently read, given it cannot reach `localhost:3117`? | 7 | Answered | Pages root `/` serves the dashboard and fetches committed static `market-shock.json`. `/market-shock.html` returns 404 on Pages. Future deploys must commit refreshed static JSON files. |
 | Should Session 10 automate copying dashboard/public outputs into docs/ after each refresh? | 9 | Answered | Yes. `scripts/daily-snapshot.mjs` syncs generated dashboard outputs and log files into `docs/`. |
-| When should the custom domain session happen? | 10 | Deferred | Domain/subdomain setup, `docs/CNAME`, GitHub Pages custom-domain settings, and apex index updates are reserved for a later dedicated session. Session 12 can be domain/launch staging if desired. |
-| Should Session 12 configure `crucix.divergencelog.com` or wait for more real snapshots first? | 11 | Open | Recommended choices: "Session 12 — Domain and launch staging" if the subdomain should be configured now, or "Session 12 — Log accumulation and public verification" if the project should gather more real snapshots before domain work. |
+| When should the custom domain session happen? | 10 | Deferred | Domain/subdomain setup, `docs/CNAME`, GitHub Pages custom-domain settings, and apex index updates are reserved for a later dedicated session. Session 12 chose log accumulation/public verification instead of domain work. |
+| Should Session 12 configure `crucix.divergencelog.com` or wait for more real snapshots first? | 11 | Answered 2026-06-30 | Session 12 chose Option B — log accumulation and public verification. Domain setup remains deferred. |
 | When should the deferred Session 11 board screenshot be captured? | 11 | Open | Screenshot was intentionally skipped/deferred by the user. Capture later when the board state and log depth are ready. |
+| Will FRED crude lag resolve naturally? | 12 | Open | Monitor Brent `DCOILBRENTEU` and WTI `DCOILWTICO`. As of Session 12, official FRED rows held the global common date at `2026-06-22`. |
 
 ---
 
@@ -1114,9 +1167,11 @@ Use this section to track problems.
 | FRED Brent and WTI held the common market close date at 2026-06-15 | 9 | Medium | Accepted / log for hardening | Market script correctly aligned all instruments on common dates. Dashboard honestly displays `readings as of market close, 2026-06-15`. Revisit stale-data handling in Session 10/11. |
 | `npm run daily` failed locally when Crucix was not running / `/api/data` was unavailable | 10 | Low / expected | Documented | Start Crucix locally before local daily run, or use the fallback protocol in `docs/daily-run-protocol.md`. |
 | First manual GitHub Action "Daily snapshot" run failed | 11 | Medium | Fixed | Repository secret names were wrong. Recreated secrets with exact names `FRED_API_KEY` and `TIINGO_API_KEY`; the next manual Action run succeeded. |
-| Market readings can be lagging because common-date alignment is held back by lagging sources | 11 | Medium | Mitigated | Session 11 added freshness metadata and visible warnings. Current generated warning: generated `2026-06-26`, readings as of market close `2026-06-18`, `8` calendar days old. |
+| Market readings can be lagging because common-date alignment is held back by lagging sources | 11–12 | Medium | Mitigated / expected | Session 11 added freshness metadata and visible warnings. Session 12 confirmed the latest public warning is expected source lag: generated `2026-06-30`, readings as of market close `2026-06-22`, `8` calendar days old. Official FRED crude rows checked: `DCOILBRENTEU` latest `2026-06-22,76.49`; `DCOILWTICO` latest `2026-06-22,78.94`. |
 | Missing market-data keys or failed source fetches could previously be unclear or risk partial output | 11 | Medium | Fixed | Missing/blank keys and non-JSON/source failures now fail loudly; JSON writes are validated and atomic. |
 | Session 11 screenshot not captured | 11 | Low | Deferred | User intentionally skipped/deferred screenshot capture. Do not mark complete until a later session. |
+| Local checkout was behind public `origin/master` by three Action-created commits | 12 | Low | Fixed | `git pull --ff-only` fast-forwarded local `master` from `f5fbde2` to `9fc3bad`; local repo now matches `origin/master`. |
+| Git warning: unable to access `C:\Users\heyke/.config/git/ignore` | 12 | Low | Accepted | Warning appeared during `git status --short` but did not block verification or indicate project-file changes. |
 
 ---
 
@@ -1140,6 +1195,9 @@ Use this section to change the plan based on what happened.
 | 11 | Session 12 can be either "Domain and launch staging" or "Log accumulation and public verification" | CI is proven and reliability/docs are hardened. The next choice is whether to configure `crucix.divergencelog.com` now or wait for more real snapshots before domain work. |
 | 11 | Keep screenshot capture as a later launch-support task | Screenshot was intentionally skipped/deferred by the user in Session 11. |
 | 11 | Do not fabricate extra snapshots | The log now has two real snapshots; credibility depends on continuing to accumulate only real dated outputs. |
+| 12 | Session 13 should continue log accumulation/public verification unless there are enough real snapshots to justify domain staging | Public flow is healthy, but the launch condition still wants roughly two weeks of dated rows. |
+| 12 | Monitor whether FRED crude data catches up before changing methodology | Brent/WTI are holding the global common-date alignment at `2026-06-22`; this is expected source lag, not a pipeline bug. |
+| 12 | Keep the board screenshot as a pre-publication task | Screenshot remains deferred and should be captured when the board/log depth are launch-ready. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1559,7 +1617,7 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 - [ ] Served from `crucix.divergencelog.com`; apex index updated with the second entry (future dedicated domain session)
 - [ ] Board screenshot with real rows, noting which state dominates that week (deferred by user in Session 11)
 
-**Section 12 launch-condition adjustment after Session 11:** CI proof, hardening, README v2, and publishability checks are complete. Screenshot remains open. Domain remains deferred. Next session should choose either domain/launch staging or more log accumulation/public verification before domain work.
+**Section 12 launch-condition adjustment after Session 12:** CI proof, hardening, README v2, publishability checks, and public log verification are complete. The public snapshot count is `3`, with latest real snapshot `2026-06-22`. The roughly two-week log-depth launch condition remains open. Screenshot remains open. Domain remains deferred.
 
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
@@ -1568,11 +1626,5 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 12.
-
-Recommended focus:
-- Option A: Session 12 — Domain and launch staging, if we want to configure crucix.divergencelog.com.
-- Option B: Session 12 — Log accumulation and public verification, if we want to wait for more real snapshots before domain work.
-
-Do not fabricate extra snapshots. Do not do domain work unless this session is explicitly chosen as the domain session.
+Ready for session 13.
 ```
