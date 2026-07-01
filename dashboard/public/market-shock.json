@@ -1,14 +1,14 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-06-30T01:33:41.794Z",
+  "generatedAt": "2026-07-01T01:54:23.634Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
     "categoryBreadth": 2
   },
@@ -16,68 +16,9 @@
     "Geopolitical Escalation": 14,
     "Energy Shock": 1
   },
-  "candidateCount": 134,
+  "candidateCount": 128,
   "itemCount": 15,
   "items": [
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 24,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "strike",
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, part of the \"Ukraine tu",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike, drone, ukraine. Signal: 🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, ..."
-    },
-    {
-      "path": "root.newsFeed[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚔️ Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians agains | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: ⚔️ Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians agains | CIG_TELEGRAM"
-    },
     {
       "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
@@ -98,72 +39,37 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone"
+        "missile"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇦🇷🇺⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump out of the cabin at the last moment. After the arrival, the driver of another truck, parked",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇺🇦🇷🇺⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump out of the cabin at the last moment. After the arrival, the driver of..."
+      "text": "🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During the maneuvers, the air",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During ..."
     },
     {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "gaza"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Israeli strike kills two, setting tents ablaze in Gaza humanitarian zone | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike kills two, setting tents ablaze in Gaza humanitarian zone | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[34]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
+        "attack",
         "drone"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — The strike of the kamikaze drone Hornet on a truck, the driver of which barely manages to jump | INTELSLAVA"
+      "otherCategories": [],
+      "text": "🇺🇦🇷🇺⚡️ — The moment of the attack of a Ukrainian drone on a residential building in the Moscow region, where a six-month-old baby was killed. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇺🇦🇷🇺⚡️ — The moment of the attack of a Ukrainian drone on a residential building in the Moscow region, where a six-month-old baby was killed. @Intelslava"
     },
     {
-      "path": "root.news[10]",
+      "path": "root.news[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -180,50 +86,8 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Tehran denies Trump’s claim of meeting in Doha | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran denies Trump’s claim of meeting in Doha | Al Jazeera"
-    },
-    {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israel’s Smotrich calls for settlements, ‘conquest’ of Gaza Strip | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel’s Smotrich calls for settlements, ‘conquest’ of Gaza Strip | Al Jazeera"
-    },
-    {
-      "path": "root.news[42]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Whatever You Do in Russia, Don’t Talk About the War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Whatever You Do in Russia, Don’t Talk About the War"
+      "text": "Iran war Update: Qatar’s PM meets US envoys; Tehran holds firm on conditions | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Qatar’s PM meets US envoys; Tehran holds firm on conditions | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -254,8 +118,8 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -265,20 +129,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "strike"
+        "iran",
+        "hormuz"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇷🇺❌🇺🇦 — A strike has been carried out on an enemy enterprise in Kharkiv; the city is in smoke. ➡️ Large-scale smoke in Kharkiv after the arrival of airstrikes on an industrial facility. @IntelSl",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — A strike has been carried out on an enemy enterprise in Kharkiv; the city is in smoke. ➡️ Large-scale smoke in Kharkiv after the arrival of airstrikes on an industri..."
+      "text": "Safe Hormuz key, PM Modi tells Masoud Pezeshkian; extended invite to BRICS summit in India: Iran | Indian Express",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Safe Hormuz key, PM Modi tells Masoud Pezeshkian; extended invite to BRICS summit in India: Iran | Indian Express"
     },
     {
       "path": "root.chokepoints[0]",
@@ -302,6 +166,113 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
+      "path": "root.news[32]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Rates",
+        "Treasuries",
+        "FX",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "china",
+        "jobs"
+      ],
+      "otherCategories": [
+        "Macro / Inflation Shock"
+      ],
+      "text": "China’s Plan to Save Jobs From A.I.",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China’s Plan to Save Jobs From A.I."
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Despite the periodic strikes by the Armed Forces of Ukraine on the Donetsk airport, the enemy reports that work is continuing on its territory to deploy new launchers for jet kamikaze dro",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇷🇺🇺🇦⚡️ — Despite the periodic strikes by the Armed Forces of Ukraine on the Donetsk airport, the enemy reports that work is continuing on its territory to deploy new launche..."
+    },
+    {
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇦🇷🇺⚡️ — A six-month-old baby died and three people were injured as a result of a Ukrainian drone crashing into a house in the Moscow region, according to the governor. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇺🇦🇷🇺⚡️ — A six-month-old baby died and three people were injured as a result of a Ukrainian drone crashing into a house in the Moscow region, according to the governor. @Int..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇦⚡️ — A terrorist attack occurred in Monaco. An unknown man left an explosive package at the entrance to one of the buildings around 9 PM and then disappeared. AFP, citing the Principality's gover",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇺🇦⚡️ — A terrorist attack occurred in Monaco. An unknown man left an explosive package at the entrance to one of the buildings around 9 PM and then disappeared. AFP, citing th..."
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — The Commander-in-Chief of the Armed Forces of Ukraine, stated that the General Staff of the Russian Armed Forces has received an order to prepare an offensive on Kiev with the aim of capt",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇷🇺🇺🇦⚡️ — The Commander-in-Chief of the Armed Forces of Ukraine, stated that the General Staff of the Russian Armed Forces has received an order to prepare an offensive on Ki..."
+    },
+    {
       "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
@@ -318,28 +289,8 @@
         "attack"
       ],
       "otherCategories": [],
-      "text": "🇲🇨⚡️- BREAKING: Monegasque authorities have confirmed they are treating the explosion as a terror attack.",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇲🇨⚡️- BREAKING: Monegasque authorities have confirmed they are treating the explosion as a terror attack."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🌐🇺🇦🇷🇺⚡️ — NATO, together with Ukraine, is preparing to create weapons to destroy Russian air bases, including those deep in the country - Russian Foreign Ministry @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🌐🇺🇦🇷🇺⚡️ — NATO, together with Ukraine, is preparing to create weapons to destroy Russian air bases, including those deep in the country - Russian Foreign Ministry @Intelslava"
+      "text": "Russians launched three KAB guided bomb strikes on Zaporizhzhia today. One person is reported dead, and at least nine others are injured. The attack destroyed private homes and damaged a kindergarten.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Russians launched three KAB guided bomb strikes on Zaporizhzhia today. One person is reported dead, and at least nine others are injured. The attack destroyed private homes and ..."
     },
     {
       "path": "root.tg.urgent[8]",
@@ -355,14 +306,34 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "ukraine"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇫🇷🇷🇺⚡️ — Ukraine is discussing with France the acquisition of a license to produce SCALP cruise missiles - Ukrainian Defense Minister. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦🇫🇷🇷🇺⚡️ — Ukraine is discussing with France the acquisition of a license to produce SCALP cruise missiles - Ukrainian Defense Minister. @Intelslava"
+      "text": "🇮🇶🇺🇸⚡️ — A drone was spotted flying over the U.S. Embassy in Baghdad's Green Zone. Soldiers attempted to shoot it down using small arms. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇮🇶🇺🇸⚡️ — A drone was spotted flying over the U.S. Embassy in Baghdad's Green Zone. Soldiers attempted to shoot it down using small arms. @IntelSlava"
     },
     {
       "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack"
+      ],
+      "otherCategories": [],
+      "text": "📢 🇺🇸 🚷 Andy Ogles on X: Today’s United States Supreme Court decision is not only a betrayal of American sovereignty, but a direct attack on our national security. Because of birthright citizens",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 📢 🇺🇸 🚷 Andy Ogles on X: Today’s United States Supreme Court decision is not only a betrayal of American sovereignty, but a direct attack on our national security. Because of..."
+    },
+    {
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,

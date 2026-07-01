@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-06-30T01:33:45.633Z",
+  "generatedAt": "2026-07-01T01:54:26.196Z",
   "date": "2026-06-22",
   "asOfClose": "2026-06-22",
   "framing": "readings as of market close, 2026-06-22",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-06-30T01:33:41.954Z",
-    "generatedDate": "2026-06-30",
+    "generatedAt": "2026-07-01T01:54:23.772Z",
+    "generatedDate": "2026-07-01",
     "asOfClose": "2026-06-22",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-06-30T01:33:41.954Z",
-    "generatedDate": "2026-06-30",
-    "runDate": "2026-06-30",
+    "generatedAt": "2026-07-01T01:54:23.772Z",
+    "generatedDate": "2026-07-01",
+    "runDate": "2026-07-01",
     "asOfClose": "2026-06-22",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-06-30, readings as of market close, 2026-06-22 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-01, readings as of market close, 2026-06-22 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-22",
-      "generatedDate": "2026-06-30",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-06-30, readings as of market close, 2026-06-22 (8 calendar days old)."
+      "generatedDate": "2026-07-01",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-01, readings as of market close, 2026-06-22 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,30 +63,28 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
           "strike",
-          "drone",
-          "ukraine"
+          "missile"
         ],
-        "text": "🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, part of the \"Ukraine tu",
-        "explanation": "Geopolitical Escalation match based on keywords: war, strike, drone, ukraine. Signal: 🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, ..."
+        "text": "🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During the maneuvers, the air",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During ..."
       },
       "market_z": -1.887,
       "abs_market_z": 1.887,
@@ -97,7 +95,7 @@
       "driver_as_of": "2026-06-22",
       "market_as_of": "2026-06-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -122,35 +120,35 @@
       "driver_as_of": "2026-06-22",
       "market_as_of": "2026-06-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.chokepoints[0]",
+        "path": "root.news[20]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "oil",
+          "iran",
           "hormuz"
         ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+        "text": "Safe Hormuz key, PM Modi tells Masoud Pezeshkian; extended invite to BRICS summit in India: Iran | Indian Express",
+        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Safe Hormuz key, PM Modi tells Masoud Pezeshkian; extended invite to BRICS summit in India: Iran | Indian Express"
       },
       "market_z": -2.016,
       "abs_market_z": 2.016,
@@ -161,7 +159,7 @@
       "driver_as_of": "2026-06-22",
       "market_as_of": "2026-06-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
@@ -186,37 +184,35 @@
       "driver_as_of": "2026-06-22",
       "market_as_of": "2026-06-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 7,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[2]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 24,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
           "strike",
-          "drone",
-          "ukraine"
+          "missile"
         ],
-        "text": "🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, part of the \"Ukraine tu",
-        "explanation": "Geopolitical Escalation match based on keywords: war, strike, drone, ukraine. Signal: 🇺🇦⚔️🇷🇺 Ukraine's spectacular deep strike drone attacks aren't seriously expected to turn Russians against the war. They're morale-boosters for Ukraine and its NATO backers, ..."
+        "text": "🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During the maneuvers, the air",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇺🇸⚡️ — The US tested a long-range LRASM missile, launched from a B-2 bomber during exercises in the Pacific Ocean, according to the US Air Force Global Strike Command. During ..."
       },
       "market_z": 1.531,
       "abs_market_z": 1.531,
@@ -227,7 +223,7 @@
       "driver_as_of": "2026-06-22",
       "market_as_of": "2026-06-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
@@ -235,15 +231,29 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[32]",
+        "category": "Macro / Inflation Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 8,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "china",
+          "jobs"
+        ],
+        "text": "China’s Plan to Save Jobs From A.I.",
+        "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China’s Plan to Save Jobs From A.I."
+      }
     },
     {
       "signal_category": "Weather / Climate Shock",
