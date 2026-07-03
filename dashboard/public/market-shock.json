@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-02T01:35:07.146Z",
+  "generatedAt": "2026-07-03T01:13:04.096Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -15,46 +15,9 @@
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 133,
+  "candidateCount": 113,
   "itemCount": 15,
   "items": [
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 32,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "missile",
-        "drone",
-        "russia",
-        "oil",
-        "refinery"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "It is also reported that there has been a fire in the vicinity of the oil refinery in Tula, Russia, but that it was not caused by a drone or missile strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone, russia. Signal: It is also reported that there has been a fire in the vicinity of the oil refinery in Tula, Russia, but that it was not caused by a drone or missile strike."
-    },
     {
       "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
@@ -69,39 +32,46 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "troops",
+        "missile",
+        "drone",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇺🇦 🇷🇺 Troop Casualties in Ukraine War Top 2 Million, Study Finds More than 2 million Russian and Ukrainian troops have been killed or wounded in the four years that Russia has been waging war aga",
-      "explanation": "Geopolitical Escalation match based on keywords: war, troops, russia, ukraine. Signal: 🇺🇦 🇷🇺 Troop Casualties in Ukraine War Top 2 Million, Study Finds More than 2 million Russian and Ukrainian troops have been killed or wounded in the four years that Russia h..."
+      "text": "🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and multiple regions simultan",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: 🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and mul..."
     },
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 19,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
+        "strike",
         "military",
-        "russia",
-        "china"
+        "russia"
       ],
-      "otherCategories": [],
-      "text": "According to an exclusive Reuters investigation, Russia and China conducted secret military training at the end of 2025. Declassified documents obtained by journalists reveal that the program was pers",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia, china. Signal: According to an exclusive Reuters investigation, Russia and China conducted secret military training at the end of 2025. Declassified documents obtained by journalists reveal th..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Russian military-industri",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, military, russia. Signal: The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Ru..."
     },
     {
-      "path": "root.news[20]",
+      "path": "root.news[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -114,95 +84,61 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
+        "war",
+        "iran",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "As Ukraine War Escalates, Witkoff and Kushner Are Focused on Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, ukraine. Signal: As Ukraine War Escalates, Witkoff and Kushner Are Focused on Iran"
+    },
+    {
+      "path": "root.news[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Putin Retaliates With New Strikes After Ukraine Takes the War to Russia",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Putin Retaliates With New Strikes After Ukraine Takes the War to Russia"
+    },
+    {
+      "path": "root.news[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
         "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Russian missile, drone strikes on Kyiv injure at least 11 after Zelensky warns of 'massive attack' | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: Russian missile, drone strikes on Kyiv injure at least 11 after Zelensky warns of 'massive attack' | France 24"
-    },
-    {
-      "path": "root.newsFeed[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
         "military",
-        "russia",
-        "china"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "According to an exclusive Reuters investigation, Russia and China conducted secret military training | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia, china. Signal: According to an exclusive Reuters investigation, Russia and China conducted secret military training | WARTRANSLATED"
+      "text": "Russia massive attack: 'West simply doesn't have enough interceptors', military expert says | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, military, russia. Signal: Russia massive attack: 'West simply doesn't have enough interceptors', military expert says | France 24"
     },
     {
       "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "russia"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Tonight, Ukrainian strike and jet drones took off for Russia once again. Monitoring channels report that there are approximately 350 drones in the air. If our translations help you stay informed, con",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Tonight, Ukrainian strike and jet drones took off for Russia once again. Monitoring channels report that there are approximately 350 drones in the air. If our translations help ..."
-    },
-    {
-      "path": "root.newsFeed[29]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "russia"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Tonight, Ukrainian strike and jet drones took off for Russia once again. Monitoring channels report | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Tonight, Ukrainian strike and jet drones took off for Russia once again. Monitoring channels report | WARTRANSLATED"
-    },
-    {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -214,15 +150,36 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "attack",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Russia Strikes Ukraine as Explosions Rock Capital of Kyiv",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia Strikes Ukraine as Explosions Rock Capital of Kyiv"
+      "text": "Russia launched a massive attack on Kyiv overnight, using virtually every weapon in its arsenal: Shahed and Geran drones, Zircon and Iskander missiles, everything except its much-hyped Oreshnik missil",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack on Kyiv overnight, using virtually every weapon in its arsenal: Shahed and Geran drones, Zircon and Iskander missiles, everything except its muc..."
     },
     {
-      "path": "root.news[11]",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺❌🇺🇦— The pace of Russia’s offensive in June increased sixfold compared to May, according to data published by Ukrainian military sources. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: 🇷🇺❌🇺🇦— The pace of Russia’s offensive in June increased sixfold compared to May, according to data published by Ukrainian military sources. @IntelSlava"
+    },
+    {
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -239,11 +196,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: ‘Positive progress’ as US, Tehran wrap up indirect talks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: ‘Positive progress’ as US, Tehran wrap up indirect talks | Al Jazeera"
+      "text": "Iran war Update: Tehran slams US before huge funeral for Ali Khamenei | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran slams US before huge funeral for Ali Khamenei | Al Jazeera"
     },
     {
-      "path": "root.news[33]",
+      "path": "root.news[20]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -256,36 +213,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "gaza"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Committee tasked with post-war Gaza governance says Cyprus talks 'highly productive' | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: Committee tasked with post-war Gaza governance says Cyprus talks 'highly productive' | Euronews"
+      "text": "Russia Hammers Ukraine’s Capital in Deadly Attacks",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia Hammers Ukraine’s Capital in Deadly Attacks"
     },
     {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israel kills three Palestinians in Gaza despite ‘ceasefire’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel kills three Palestinians in Gaza despite ‘ceasefire’ | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[44]",
+      "path": "root.news[25]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -302,8 +238,8 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Troop Casualties in Ukraine War Top 2 Million, Study Finds More than 2 million Russian and Ukrainia | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Troop Casualties in Ukraine War Top 2 Million, Study Finds More than 2 million Russian and Ukrainia | CIG_TELEGRAM"
+      "text": "With Attacks on Crimea, Ukraine Hopes to Pressure Putin to End the War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: With Attacks on Crimea, Ukraine Hopes to Pressure Putin to End the War"
     },
     {
       "path": "root.chokepoints[5]",
@@ -334,6 +270,60 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The Russian Defense Ministry reports that military-industrial complex enterprises and energy facilities in Kiev and the Kiev region, as well as the infrastructure of military airfields in",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺🇺🇦⚡️ — The Russian Defense Ministry reports that military-industrial complex enterprises and energy facilities in Kiev and the Kiev region, as well as the infrastructure o..."
+    },
+    {
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — 28 ballistic missiles were launched at night in Kiev - this is a record for a single strike on the capital, said a representative of the Ukrainian Air Force. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — 28 ballistic missiles were launched at night in Kiev - this is a record for a single strike on the capital, said a representative of the Ukrainian Air Force. @Intel..."
+    },
+    {
       "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
@@ -357,12 +347,12 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺❌🇺🇦 — Videos from Kyiv show the moment Russian missiles strike the Ukrainian capital.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Videos from Kyiv show the moment Russian missiles strike the Ukrainian capital."
+      "text": "🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Poltava region.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Poltava region."
     },
     {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -372,20 +362,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "strike"
+        "nuclear",
+        "hormuz"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Snihurivka, Mykolaiv region.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Snihurivka, Mykolaiv region."
+      "text": "'Iranians succeeded in making Strait of Hormuz primary issue rather than their nuclear programme' | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: 'Iranians succeeded in making Strait of Hormuz primary issue rather than their nuclear programme' | France 24"
     }
   ]
 }
