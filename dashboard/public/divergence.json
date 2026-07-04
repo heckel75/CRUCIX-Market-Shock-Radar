@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-03T01:13:06.928Z",
+  "generatedAt": "2026-07-04T01:11:18.581Z",
   "date": "2026-06-26",
   "asOfClose": "2026-06-26",
   "framing": "readings as of market close, 2026-06-26",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-03T01:13:04.240Z",
-    "generatedDate": "2026-07-03",
+    "generatedAt": "2026-07-04T01:11:16.387Z",
+    "generatedDate": "2026-07-04",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-03T01:13:04.240Z",
-    "generatedDate": "2026-07-03",
-    "runDate": "2026-07-03",
+    "generatedAt": "2026-07-04T01:11:16.387Z",
+    "generatedDate": "2026-07-04",
+    "runDate": "2026-07-04",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-03, readings as of market close, 2026-06-26 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-04, readings as of market close, 2026-06-26 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-26",
-      "generatedDate": "2026-07-03",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-07-03, readings as of market close, 2026-06-26 (7 calendar days old)."
+      "generatedDate": "2026-07-04",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-07-04, readings as of market close, 2026-06-26 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
-    "radar-miss": 2,
+    "priced": 3,
+    "radar-miss": 1,
     "calm": 1
   },
   "rows": [
@@ -63,30 +63,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 20,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 13,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[1]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 20,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
+          "strike",
           "missile",
-          "drone",
-          "russia",
-          "ukraine"
+          "drone"
         ],
-        "text": "🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and multiple regions simultan",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: 🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and mul..."
+        "text": "🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava"
       },
       "market_z": -1.558,
       "abs_market_z": 1.558,
@@ -97,22 +96,37 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[7]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "nuclear",
+          "russia",
+          "ban"
+        ],
+        "text": "🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one minor thing: their coun",
+        "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: 🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one m..."
+      },
       "market_z": -2.025,
       "abs_market_z": 2.025,
       "market_moving": true,
@@ -122,8 +136,8 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     },
     {
       "channel": "energy-disruption",
@@ -134,11 +148,11 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 2,
-      "signal_primary_count": 0,
+      "signal_count": 3,
+      "signal_primary_count": 1,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[2]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -161,22 +175,36 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null,
+      "top_signal": {
+        "path": "root.news[5]",
+        "category": "Credit Stress",
+        "primaryCategory": "Credit Stress",
+        "isPrimary": true,
+        "rawScore": 8,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "spread",
+          "panic"
+        ],
+        "text": "'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia",
+        "explanation": "Credit Stress match based on keywords: spread. Signal: 'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia"
+      },
       "market_z": 1.48,
       "abs_market_z": 1.48,
       "market_moving": false,
@@ -186,7 +214,7 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -198,11 +226,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[1]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -211,11 +239,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "military",
-          "russia"
+          "missile",
+          "drone"
         ],
-        "text": "The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Russian military-industri",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, military, russia. Signal: The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Ru..."
+        "text": "🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava"
       },
       "market_z": -1.937,
       "abs_market_z": 1.937,
@@ -226,7 +254,7 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
@@ -263,14 +291,28 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[5]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Credit Stress",
+        "isPrimary": false,
+        "rawScore": 8,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "spread",
+          "panic"
+        ],
+        "text": "'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia",
+        "explanation": "Credit Stress match based on keywords: spread. Signal: 'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia"
+      }
     }
   ]
 }

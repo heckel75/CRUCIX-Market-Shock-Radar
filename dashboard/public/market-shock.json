@@ -1,48 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-03T01:13:04.096Z",
+  "generatedAt": "2026-07-04T01:11:16.244Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 18,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 4
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 12,
+    "Sanctions / Policy Shock": 1,
+    "Energy Shock": 1,
+    "Credit Stress": 1
   },
-  "candidateCount": 113,
+  "candidateCount": 129,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "drone",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and multiple regions simultan",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: 🇷🇺❌🇺🇦 — INTEL SLAVA — SITUATION BRIEF, 6:00 AM ➡️ Russia launched one of the largest combined missile and drone attacks on Ukraine in weeks overnight, targeting Kyiv and mul..."
-    },
-    {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
@@ -61,88 +41,84 @@
       ],
       "matchedKeywords": [
         "strike",
-        "military",
-        "russia"
+        "missile",
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Russian military-industri",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, military, russia. Signal: The EU is proposing NEW sanctions against Russia following the overnight strike on the Ukrainian capital. \"Sanctions against an even greater number of entities supporting the Ru..."
+      "text": "🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava"
     },
     {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "ukraine"
+        "strike",
+        "iran"
       ],
-      "otherCategories": [],
-      "text": "As Ukraine War Escalates, Witkoff and Kushner Are Focused on Iran",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, ukraine. Signal: As Ukraine War Escalates, Witkoff and Kushner Are Focused on Iran"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Footage shows U.S. Army forces launching ATACMS and/or Precision Strike Missiles (PrSM) from M142 HIMARS launchers toward Iran from Kuwait. The footage was recorded on 28 February 2026.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: Footage shows U.S. Army forces launching ATACMS and/or Precision Strike Missiles (PrSM) from M142 HIMARS launchers toward Iran from Kuwait. The footage was recorded on 28 Februa..."
     },
     {
-      "path": "root.news[35]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
       ],
       "matchedKeywords": [
-        "war",
+        "nuclear",
         "russia",
-        "ukraine"
+        "ban"
       ],
-      "otherCategories": [],
-      "text": "Putin Retaliates With New Strikes After Ukraine Takes the War to Russia",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Putin Retaliates With New Strikes After Ukraine Takes the War to Russia"
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one minor thing: their coun",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: 🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one m..."
     },
     {
-      "path": "root.news[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "military",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Russia massive attack: 'West simply doesn't have enough interceptors', military expert says | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, military, russia. Signal: Russia massive attack: 'West simply doesn't have enough interceptors', military expert says | France 24"
-    },
-    {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "category": "Sanctions / Policy Shock",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities",
         "Gold",
         "VIX",
         "Oil",
@@ -150,36 +126,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "russia"
+        "policy",
+        "election",
+        "iran"
       ],
-      "otherCategories": [],
-      "text": "Russia launched a massive attack on Kyiv overnight, using virtually every weapon in its arsenal: Shahed and Geran drones, Zircon and Iskander missiles, everything except its much-hyped Oreshnik missil",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack on Kyiv overnight, using virtually every weapon in its arsenal: Shahed and Geran drones, Zircon and Iskander missiles, everything except its muc..."
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇮🇷🏆🇺🇸 Iran Is a Bigger Defeat Than Vietnam | Foreign Policy At his second inaugural, U.S. President Donald Trump pronounced his hope “that our recent presidential election will be remembered as",
+      "explanation": "Sanctions / Policy Shock match based on keywords: policy, election. Signal: 🇮🇷🏆🇺🇸 Iran Is a Bigger Defeat Than Vietnam | Foreign Policy At his second inaugural, U.S. President Donald Trump pronounced his hope “that our recent presidential election ..."
     },
     {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺❌🇺🇦— The pace of Russia’s offensive in June increased sixfold compared to May, according to data published by Ukrainian military sources. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: 🇷🇺❌🇺🇦— The pace of Russia’s offensive in June increased sixfold compared to May, according to data published by Ukrainian military sources. @IntelSlava"
-    },
-    {
-      "path": "root.news[12]",
+      "path": "root.news[11]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -196,32 +154,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Tehran slams US before huge funeral for Ali Khamenei | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran slams US before huge funeral for Ali Khamenei | Al Jazeera"
+      "text": "Iran war Update: Millions expected in Tehran for funeral of Ali Khamenei | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Millions expected in Tehran for funeral of Ali Khamenei | Al Jazeera"
     },
     {
-      "path": "root.news[20]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Russia Hammers Ukraine’s Capital in Deadly Attacks",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia Hammers Ukraine’s Capital in Deadly Attacks"
-    },
-    {
-      "path": "root.news[25]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -235,11 +172,32 @@
       ],
       "matchedKeywords": [
         "war",
-        "ukraine"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "With Attacks on Crimea, Ukraine Hopes to Pressure Putin to End the War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: With Attacks on Crimea, Ukraine Hopes to Pressure Putin to End the War"
+      "text": "Iran plans dayslong funeral for Supreme Leader Khamenei after war death",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran plans dayslong funeral for Supreme Leader Khamenei after war death"
+    },
+    {
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Lebanon-Israel deal betrays ‘victims of war crimes’, rights groups say | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, israel. Signal: Lebanon-Israel deal betrays ‘victims of war crimes’, rights groups say | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -270,7 +228,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -297,7 +255,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺🇺🇦⚡️ — The Russian Defense Ministry reports that military-industrial complex enterprises and energy facilities in Kiev and the Kiev region, as well as the infrastructure o..."
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -324,7 +282,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — 28 ballistic missiles were launched at night in Kiev - this is a record for a single strike on the capital, said a representative of the Ukrainian Air Force. @Intel..."
     },
     {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -342,16 +300,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike"
+        "ukraine",
+        "canal"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Poltava region.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Russian Geran drones strike targets in Poltava region."
+      "text": "Ukraine's forces hit a railway bridge over Krasnogvardeisky canal in occupied Crimea, a radio electronic warfare station near Artemivka and an electronic reconnaissance unit in Sevastopol overnight, t",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Ukraine's forces hit a railway bridge over Krasnogvardeisky canal in occupied Crimea, a radio electronic warfare station near Artemivka and an electronic reconnaissance unit in ..."
     },
     {
-      "path": "root.news[16]",
+      "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -368,14 +327,90 @@
         "FX"
       ],
       "matchedKeywords": [
-        "nuclear",
+        "iran",
         "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "'Iranians succeeded in making Strait of Hormuz primary issue rather than their nuclear programme' | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: 'Iranians succeeded in making Strait of Hormuz primary issue rather than their nuclear programme' | France 24"
+      "text": "Iran&apos;s control of the Strait of Hormuz remains a powerful bargaining chip",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran&apos;s control of the Strait of Hormuz remains a powerful bargaining chip"
+    },
+    {
+      "path": "root.newsFeed[18]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "policy"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "🏆 Iran Is a Bigger Defeat Than Vietnam | Foreign Policy At his second inaugural, U.S. President Do | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🏆 Iran Is a Bigger Defeat Than Vietnam | Foreign Policy At his second inaugural, U.S. President Do | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.news[5]",
+      "sourcePriority": "Medium",
+      "category": "Credit Stress",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities",
+        "VIX",
+        "Credit",
+        "FX",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "spread",
+        "panic"
+      ],
+      "otherCategories": [
+        "Market Volatility Signal"
+      ],
+      "text": "'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia",
+      "explanation": "Credit Stress match based on keywords: spread. Signal: 'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia"
     }
   ]
 }
