@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-04T01:11:18.581Z",
+  "generatedAt": "2026-07-05T01:19:42.638Z",
   "date": "2026-06-26",
   "asOfClose": "2026-06-26",
   "framing": "readings as of market close, 2026-06-26",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-04T01:11:16.387Z",
-    "generatedDate": "2026-07-04",
+    "generatedAt": "2026-07-05T01:19:40.395Z",
+    "generatedDate": "2026-07-05",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-04T01:11:16.387Z",
-    "generatedDate": "2026-07-04",
-    "runDate": "2026-07-04",
+    "generatedAt": "2026-07-05T01:19:40.395Z",
+    "generatedDate": "2026-07-05",
+    "runDate": "2026-07-05",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-04, readings as of market close, 2026-06-26 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-05, readings as of market close, 2026-06-26 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-26",
-      "generatedDate": "2026-07-04",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-07-04, readings as of market close, 2026-06-26 (8 calendar days old)."
+      "generatedDate": "2026-07-05",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-05, readings as of market close, 2026-06-26 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,29 +63,31 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 27,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 12,
-      "signal_secondary_count": 1,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 27,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
           "missile",
-          "drone"
+          "ukraine",
+          "port",
+          "oil"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava"
+        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
       },
       "market_z": -1.558,
       "abs_market_z": 1.558,
@@ -96,37 +98,22 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.tg.urgent[7]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "nuclear",
-          "russia",
-          "ban"
-        ],
-        "text": "🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one minor thing: their coun",
-        "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: 🇷🇺🇫🇮⚡️ — Deputy Chairman of Russia’s Security Council Dmitry Medvedev: Finland has lifted its ban on hosting nuclear weapons. What does that change for the Finns? Just one m..."
-      },
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -2.025,
       "abs_market_z": 2.025,
       "market_moving": true,
@@ -136,35 +123,38 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "priced"
+      "market_calendar_lag_days": 9,
+      "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 27,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 3,
+      "signal_elevated": true,
+      "signal_count": 4,
       "signal_primary_count": 1,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[0]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
+        "rawScore": 27,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "military",
-          "energy"
+          "strike",
+          "missile",
+          "ukraine",
+          "port",
+          "oil"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The Russian Defense Ministry reports that military-industrial complex enterprises and energy facilities in Kiev and the Kiev region, as well as the infrastructure of military airfields in",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺🇺🇦⚡️ — The Russian Defense Ministry reports that military-industrial complex enterprises and energy facilities in Kiev and the Kiev region, as well as the infrastructure o..."
+        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
       },
       "market_z": -1.785,
       "abs_market_z": 1.785,
@@ -175,36 +165,22 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 9,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
+      "signal_count": 0,
+      "signal_primary_count": 0,
       "signal_secondary_count": 0,
-      "top_signal": {
-        "path": "root.news[5]",
-        "category": "Credit Stress",
-        "primaryCategory": "Credit Stress",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "spread",
-          "panic"
-        ],
-        "text": "'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia",
-        "explanation": "Credit Stress match based on keywords: spread. Signal: 'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia"
-      },
+      "top_signal": null,
       "market_z": 1.48,
       "abs_market_z": 1.48,
       "market_moving": false,
@@ -214,36 +190,38 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 27,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 5,
       "signal_primary_count": 0,
       "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 27,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
           "missile",
-          "drone"
+          "ukraine",
+          "port",
+          "oil"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇷🇺🇺🇦⚡️ — Impressive footage showing yesterday's missile-and-drone strike on targets in Kyiv. @IntelSlava"
+        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
       },
       "market_z": -1.937,
       "abs_market_z": 1.937,
@@ -254,7 +232,7 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
@@ -291,28 +269,14 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[5]",
-        "category": "Market Volatility Signal",
-        "primaryCategory": "Credit Stress",
-        "isPrimary": false,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "spread",
-          "panic"
-        ],
-        "text": "'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia",
-        "explanation": "Credit Stress match based on keywords: spread. Signal: 'Don't panic': vigilance urged as bird flu spread grows | SBS Australia | Australia"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ]
 }
