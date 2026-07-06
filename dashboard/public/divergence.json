@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-05T01:19:42.638Z",
+  "generatedAt": "2026-07-06T01:19:04.168Z",
   "date": "2026-06-26",
   "asOfClose": "2026-06-26",
   "framing": "readings as of market close, 2026-06-26",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-05T01:19:40.395Z",
-    "generatedDate": "2026-07-05",
+    "generatedAt": "2026-07-06T01:18:59.893Z",
+    "generatedDate": "2026-07-06",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-05T01:19:40.395Z",
-    "generatedDate": "2026-07-05",
-    "runDate": "2026-07-05",
+    "generatedAt": "2026-07-06T01:18:59.893Z",
+    "generatedDate": "2026-07-06",
+    "runDate": "2026-07-06",
     "asOfClose": "2026-06-26",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-05, readings as of market close, 2026-06-26 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-06, readings as of market close, 2026-06-26 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-06-26",
-      "generatedDate": "2026-07-05",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-07-05, readings as of market close, 2026-06-26 (9 calendar days old)."
+      "generatedDate": "2026-07-06",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-07-06, readings as of market close, 2026-06-26 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
-    "radar-miss": 1,
+    "priced": 2,
+    "radar-miss": 2,
     "calm": 1
   },
   "rows": [
@@ -63,31 +63,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 27,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[9]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 27,
-        "confidence": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
           "missile",
-          "ukraine",
-          "port",
-          "oil"
+          "drone",
+          "ukraine"
         ],
-        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
+        "text": "🇷🇺❌🇺🇦 — Current scenes from Kyiv, Ukraine, following Russian missile and drone attacks.",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, ukraine. Signal: 🇷🇺❌🇺🇦 — Current scenes from Kyiv, Ukraine, following Russian missile and drone attacks."
       },
       "market_z": -1.558,
       "abs_market_z": 1.558,
@@ -98,7 +96,7 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     },
     {
@@ -123,38 +121,35 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 27,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 4,
+      "signal_elevated": false,
+      "signal_count": 2,
       "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[6]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 27,
-        "confidence": "High",
+        "rawScore": 9,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile",
           "ukraine",
-          "port",
           "oil"
         ],
-        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
+        "text": "Ukraine has struck Russian oil refineries at least 194 times since January 2026, 11 times more than the same period last year, FT reports citing Rochan Consulting. May alone set a monthly record with",
+        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Ukraine has struck Russian oil refineries at least 194 times since January 2026, 11 times more than the same period last year, FT reports citing Rochan Consulting. May alone set..."
       },
       "market_z": -1.785,
       "abs_market_z": 1.785,
@@ -165,22 +160,36 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "priced"
+      "market_calendar_lag_days": 10,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[19]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Palestinian baby dies in West Bank after Israel blocks urgent medical care | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Palestinian baby dies in West Bank after Israel blocks urgent medical care | Al Jazeera"
+      },
       "market_z": 1.48,
       "abs_market_z": 1.48,
       "market_moving": false,
@@ -190,38 +199,35 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 27,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_count": 3,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 2,
       "top_signal": {
         "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 27,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "ukraine",
-          "port",
-          "oil"
+          "drone"
         ],
-        "text": "🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kamikaze drones. Judging",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, ukraine. Signal: 🇺🇦🇷🇺⚡️ — In addition to the attempt of a missile strike on Chuvashia, the Armed Forces of Ukraine also attacked the St. Petersburg oil terminal and the Vysotsk port with kam..."
+        "text": "The head of Graivoron district was allegedly wounded in a Ukrainian drone strike, the Belgorod region operational headquarters reports.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The head of Graivoron district was allegedly wounded in a Ukrainian drone strike, the Belgorod region operational headquarters reports."
       },
       "market_z": -1.937,
       "abs_market_z": 1.937,
@@ -232,7 +238,7 @@
       "driver_as_of": "2026-06-26",
       "market_as_of": "2026-06-26",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     }
   ],
