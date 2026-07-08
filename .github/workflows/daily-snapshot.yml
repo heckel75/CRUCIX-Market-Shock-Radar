@@ -62,7 +62,9 @@ jobs:
           git add dashboard/public/*.json
           git add docs/*.json docs/index.html docs/history.html
           git add log/*.json log/index.json
+          git add log/runs/*.json log/runs/index.json
           git add docs/log/*.json docs/log/index.json
+          git add docs/log/runs/*.json docs/log/runs/index.json
           if git diff --cached --quiet; then
             echo "No generated snapshot changes to commit."
           else

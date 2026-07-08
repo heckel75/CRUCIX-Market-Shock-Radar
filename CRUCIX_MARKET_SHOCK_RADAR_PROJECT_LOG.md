@@ -117,7 +117,7 @@ Commit/push shortcut:
 
 ## 3. Current State
 
-**Current session cursor:** Session 12 complete — next session is Session 13
+**Current session cursor:** Session 13 complete — next session is Session 14
 **Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
@@ -125,10 +125,10 @@ Commit/push shortcut:
 **Market shock script created:** Yes  
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes. Dashboard v2 is published. `dashboard/public/market-shock.html` has been reworked so the divergence board is the hero element, reads `divergence.json`, keeps Shock Mix prominent, demotes the Market Shock Score, and now shows dated lagging/stale market-reading warnings when `divergence.json` carries them.
-**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. Session 11 synced warning-display updates into `docs/index.html`, `docs/history.html`, and `docs/divergence.json`. Session 12 verified that public GitHub Pages is serving the latest committed `docs/` files from `origin/master`, that public dashboard/history fetches are relative, and that no local-only `localhost` fetch is used in public files. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
+**Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. Session 11 synced warning-display updates into `docs/index.html`, `docs/history.html`, and `docs/divergence.json`. Session 12 verified that public GitHub Pages is serving the latest committed `docs/` files from `origin/master`, that public dashboard/history fetches are relative, and that no local-only `localhost` fetch is used in public files. Session 13 fixed same-close-date docs sync so `docs/*.json` is always refreshed from `dashboard/public/*.json`, even when the close-date snapshot is kept. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
 **Market data fetcher:** Created and verified in Session 7; hardened in Session 11. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, writes `dashboard/public/market-readings.json`, includes freshness metadata and lagging/stale warnings, fails loudly on missing keys/source failures/non-JSON responses, and writes JSON atomically.
 **Divergence engine:** Created and verified in Session 8; hardened in Session 11. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, preserves market freshness warnings, and writes `dashboard/public/divergence.json` atomically.
-**Daily log / history:** Implemented in Session 10 and CI-proven in Session 11. Real snapshots now include `log/2026-06-15.json`, `log/2026-06-18.json`, and `log/2026-06-22.json`; Pages copies include matching files under `docs/log/`; static manifests are `log/index.json` and `docs/log/index.json`. History page exists at `dashboard/public/history.html` and `docs/history.html`, with Session 11 support for snapshot warnings. Session 12 verified the public snapshot count is `3`, the latest real snapshot date is `2026-06-22`, and latest public state counts are `priced: 2`, `radar-miss: 2`, `calm: 1`. The latest lag warning is expected source lag: FRED Brent `DCOILBRENTEU` and WTI `DCOILWTICO` currently hold the global common-date alignment at `2026-06-22`. CI automation remains proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
+**Daily log / history:** Implemented in Session 10, CI-proven in Session 11, and clarified in Session 13. Close-date snapshots are intentionally keyed by market close date / `asOfClose`, not by run date, so sparse `log/YYYY-MM-DD.json` snapshots are expected and must not be fabricated. Real close-date snapshots now include `log/2026-06-15.json`, `log/2026-06-18.json`, `log/2026-06-22.json`, `log/2026-06-26.json`, and `log/2026-06-29.json`; Pages copies include matching files under `docs/log/`; static close-date manifests are `log/index.json` and `docs/log/index.json`. Session 13 added run-level logging under `log/runs/` plus public copies under `docs/log/runs/`, so every daily run can be visible even when the market close date has not advanced. The first run record is `log/runs/2026-07-08T01-05-28-175Z.json`; `log/runs/index.json` and `docs/log/runs/index.json` both have count `1` and match. History page exists at `dashboard/public/history.html` and `docs/history.html`, with Session 11 support for snapshot warnings. The latest lag warning remains expected source lag: FRED Brent `DCOILBRENTEU` and WTI `DCOILWTICO` currently hold the global common-date alignment at `2026-06-29`. CI automation remains proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
 **README created:** Yes. README v2 completed in Session 11 with divergence board rules, four states, frozen thresholds, uniform market transform, data sources, dated log/history, Crucix attribution, and disclaimer.
 **Board screenshot:** Deferred intentionally by the user in Session 11; do not mark complete until captured in a later session.
 **LinkedIn materials:** Superseded; see Section 12
@@ -141,7 +141,7 @@ Crucix/
 │   ├── market-shock-radar.mjs
 │   ├── market-data.mjs            (Session 7 — FRED + Tiingo fetch + z-scores)
 │   ├── divergence.mjs             (Session 8 — done: join signals × market, classify states)
-│   ├── daily-snapshot.mjs         (Session 10 — validate/copy dated snapshots and sync docs/)
+│   ├── daily-snapshot.mjs         (Session 10 — validate/copy dated snapshots and sync docs/; Session 13 — run log and same-date docs sync fix)
 │   └── daily-run.mjs              (Session 10 — local pipeline runner)
 ├── dashboard/
 │   └── public/
@@ -153,8 +153,13 @@ Crucix/
 ├── log/
 │   ├── 2026-06-15.json            (Session 10 — first real committed snapshot)
 │   ├── 2026-06-18.json            (Session 11 — real CI-created snapshot)
-│   ├── 2026-06-22.json            (Session 12 — latest real CI-created snapshot)
-│   └── index.json                 (Session 10+ — static manifest)
+│   ├── 2026-06-22.json
+│   ├── 2026-06-26.json
+│   ├── 2026-06-29.json            (latest close-date snapshot as of Session 13)
+│   ├── index.json                 (Session 10+ — close-date manifest)
+│   └── runs/
+│       ├── 2026-07-08T01-05-28-175Z.json
+│       └── index.json             (Session 13 — run manifest)
 ├── docs/
 │   ├── index.html                 (Pages copy)
 │   ├── divergence.json            (Pages copy)
@@ -163,7 +168,12 @@ Crucix/
 │       ├── 2026-06-15.json
 │       ├── 2026-06-18.json
 │       ├── 2026-06-22.json
-│       └── index.json
+│       ├── 2026-06-26.json
+│       ├── 2026-06-29.json
+│       ├── index.json
+│       └── runs/
+│           ├── 2026-07-08T01-05-28-175Z.json
+│           └── index.json
 ├── README-market-shock-radar.md
 ├── package.json
 └── CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md
@@ -184,6 +194,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 8 git checks:** Started clean: `git status --short` returned empty. End state before project-log update: `M package.json`, `?? scripts/divergence.mjs`, `?? dashboard/public/divergence.json`.
 **Fresh Session 11 git checks:** CI proof and hardening completed. Validation passed; `.env` is local and not tracked; secret scan found no literal API secrets. End state before project-log update included modified script/dashboard/docs/README files from the Session 11 reliability pass, with no commit or push.
 **Fresh Session 12 git checks:** After `git pull --ff-only`, local `master` fast-forwarded from `f5fbde2` to `9fc3bad` and now matches `origin/master`. `git status --short` produced no changed files, with only a warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Latest five commits: `9fc3bad Update CRUCIX daily snapshot`; `002e2ec Update CRUCIX daily snapshot`; `9305a0e Update CRUCIX daily snapshot`; `f5fbde2 Make daily snapshot idempotent on stale market dates`; `3582d9e Harden daily snapshot workflow`.
+**Fresh Session 13 git checks:** Investigation confirmed the Action ran daily, close-date snapshots were sparse by design, and same-close-date runs could succeed while only committing `dashboard/public/*.json`. Implementation changed `scripts/daily-snapshot.mjs`, `.github/workflows/daily-snapshot.yml`, and `.gitignore`, then `npm run snapshot` generated/updated `docs/*.json`, `log/runs/*.json`, and `docs/log/runs/*.json`. Validation passed; no commit or push yet.
 
 ---
 
@@ -213,6 +224,7 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 | 10 | 60 min | Daily log: dated snapshots under `log/`, history page, automation attempt, local fallback protocol | Done, with CI/domain follow-ups |
 | 11 | 30 min | CI proof, hardening, README v2, publishability checks. Screenshot intentionally deferred by user. (The LinkedIn post itself is drafted outside these sessions — Section 12) | Done, screenshot deferred |
 | 12 | 45 min | Log accumulation and public verification: verify Pages/docs sync, public log freshness, lag diagnosis, no domain work | Done |
+| 13 | 60 min | Daily-run visibility: diagnose sparse close-date snapshots, add run manifest, fix same-close-date docs sync | Done |
 
 ---
 
@@ -922,6 +934,54 @@ Verify that the public daily-log flow is healthy, that GitHub Pages is serving t
 
 ---
 
+# Session 13 — Daily-Run Visibility and Same-Date Docs Sync
+
+## Goal
+
+Investigate why the project does not produce one `log/YYYY-MM-DD.json` snapshot per calendar day, decide whether that is expected behavior or a bug, and fix the real public-sync problem without changing the market methodology or fabricating snapshots.
+
+## Estimated duration
+
+60 minutes
+
+## Tasks
+
+- [x] Inspect `.github/workflows/daily-snapshot.yml`, `scripts/daily-run.mjs`, `scripts/daily-snapshot.mjs`, `scripts/market-data.mjs`, dashboard JSON, docs JSON, and log manifests
+- [x] Confirm whether the GitHub Action actually runs daily
+- [x] Distinguish failed days from successful same-close-date runs
+- [x] Confirm close-date snapshots are keyed by market close date / `asOfClose`, not by run date
+- [x] Confirm FRED crude data is still holding the global common-date alignment back
+- [x] Identify whether `dashboard/public/*.json` and `docs/*.json` stay synchronized after a same-close-date keep
+- [x] Implement run-level logging under `log/runs/` without changing close-date snapshot behavior
+- [x] Keep existing close-date snapshots unchanged on same-date differences
+- [x] Always sync current `dashboard/public/*.json` into `docs/*.json`
+- [x] Update GitHub Action git-add paths for run logs
+- [x] Add narrow `.gitignore` exceptions for `log/runs/` and `docs/log/runs/`
+- [x] Avoid threshold changes, methodology changes, common-date alignment changes, fabricated snapshots, commits, and pushes
+
+## Definition of done
+
+- Sparse close-date snapshots are documented as expected behavior
+- Same-close-date docs staleness is fixed
+- Run manifest files are generated under `log/runs/` and copied to `docs/log/runs/`
+- Validation passes locally
+- Next GitHub Action verification steps are recorded
+
+## Session 13 Log
+
+**Status:** Complete.
+**Date completed:** 2026-07-08
+**Focus:** Daily-run visibility and same-close-date docs sync.
+**Diagnosis:** The daily Action is running daily, but the project intentionally logs close-date snapshots by market close date / `asOfClose`, not by calendar run date. Therefore the sparse close-date snapshots are expected and should remain sparse. The real bug was separate: same-close-date runs could update `dashboard/public/*.json` while leaving `docs/*.json` stale because `scripts/daily-snapshot.mjs` returned early when an existing close-date snapshot was kept.
+**What changed:** `scripts/daily-snapshot.mjs` now keeps existing close-date snapshots on same-date differences, writes a separate run record under `log/runs/<generatedAt-safe-filename>.json`, maintains `log/runs/index.json`, copies run logs to `docs/log/runs/`, and always syncs current `dashboard/public/*.json` into `docs/*.json` even when the close-date snapshot is kept. `.github/workflows/daily-snapshot.yml` now adds `log/runs/*.json`, `log/runs/index.json`, `docs/log/runs/*.json`, and `docs/log/runs/index.json`. `.gitignore` now has narrow exceptions because the existing `runs/` ignore rule hid `log/runs` and `docs/log/runs`.
+**Validation passed:** `node --check scripts/daily-snapshot.mjs` passed. `npm run snapshot` passed. Existing close-date snapshot kept: `log/2026-06-29.json`. Run record written: `log/runs/2026-07-08T01-05-28-175Z.json`. Run manifest written: `log/runs/index.json`. Public copies were written under `docs/log/runs/`. `docs/divergence.json` now matches `dashboard/public/divergence.json` after a same-close-date keep. `docs/market-readings.json` and `docs/market-shock.json` also match their `dashboard/public` sources. `log/runs/index.json` and `docs/log/runs/index.json` both have count `1` and match. No unexpected files appeared.
+**Methodology preserved:** No divergence thresholds changed. No market methodology changed. No global common-date alignment changed. No calendar-day snapshots were fabricated.
+**Files changed:** `.github/workflows/daily-snapshot.yml`; `.gitignore`; `scripts/daily-snapshot.mjs`; `docs/divergence.json`; `docs/market-readings.json`; `docs/market-shock.json`; `log/runs/2026-07-08T01-05-28-175Z.json`; `log/runs/index.json`; `docs/log/runs/2026-07-08T01-05-28-175Z.json`; `docs/log/runs/index.json`; this project log.
+**What failed:** No blocking failures. A `git add --dry-run` check could not create `.git/index.lock` in the local sandbox, but `git status --short --untracked-files=all` confirmed the run-log files are visible and not hidden after the `.gitignore` exceptions.
+**Next adjustment:** Commit and push the Session 13 implementation when ready, then verify the next GitHub Action writes a new run record and syncs public docs. Domain remains deferred. Board screenshot remains needed.
+
+---
+
 ## 5. Done Checklist
 
 ### Setup
@@ -1034,6 +1094,11 @@ Verify that the public daily-log flow is healthy, that GitHub Pages is serving t
 - [x] Multiple real daily snapshots accumulated
 - [x] Public Pages/docs latest committed file verification passed
 - [x] Latest lag warning diagnosed as expected FRED crude source lag
+- [x] Close-date snapshots confirmed intentionally sparse and keyed by `asOfClose`
+- [x] Same-close-date docs sync bug fixed
+- [x] Run-level manifest added under `log/runs/`
+- [x] Run logs copied to `docs/log/runs/`
+- [x] GitHub Action git-add paths updated for run logs
 - [ ] Custom domain configured
 
 ### Publishability / safety
@@ -1106,6 +1171,9 @@ Use this section to record project decisions.
 | 2026-06-30 | Keep the global common-date market alignment unchanged for now | The lag is honest and methodologically consistent; changing it would be a methodology change, not a bug fix. |
 | 2026-06-30 | Do not start domain setup in Session 12 | The log needs more real dated rows before launch staging. |
 | 2026-06-30 | Continue accumulating real CI-created snapshots; no fabricated backfill | The project's credibility depends on real dated rows only. |
+| 2026-07-08 | Keep close-date snapshots sparse and keyed by market close date / `asOfClose` | Sparse `log/YYYY-MM-DD.json` files are expected when source alignment has not advanced; fabricating run-date snapshots would misrepresent the market-close data. |
+| 2026-07-08 | Add a run manifest for every daily run under `log/runs/` | A separate run log makes each Action run visible without changing the close-date snapshot methodology. |
+| 2026-07-08 | Always sync `docs/*.json` from `dashboard/public/*.json` even when a same-close-date snapshot is kept | GitHub Pages serves from `docs/`; same-close-date runs should not leave public JSON stale. |
 
 ---
 
@@ -1136,6 +1204,7 @@ Use this section to log unresolved items.
 | Should Session 12 configure `crucix.divergencelog.com` or wait for more real snapshots first? | 11 | Answered 2026-06-30 | Session 12 chose Option B — log accumulation and public verification. Domain setup remains deferred. |
 | When should the deferred Session 11 board screenshot be captured? | 11 | Open | Screenshot was intentionally skipped/deferred by the user. Capture later when the board state and log depth are ready. |
 | Will FRED crude lag resolve naturally? | 12 | Open | Monitor Brent `DCOILBRENTEU` and WTI `DCOILWTICO`. As of Session 12, official FRED rows held the global common date at `2026-06-22`. |
+| Should the run manifest be exposed in the public history UI? | 13 | Open | Session 13 creates `log/runs/index.json` and `docs/log/runs/index.json`, but the UI still focuses on close-date snapshots. Decide later whether history should show run-level attempts, source lag, and same-close-date keeps. |
 
 ---
 
@@ -1172,6 +1241,7 @@ Use this section to track problems.
 | Session 11 screenshot not captured | 11 | Low | Deferred | User intentionally skipped/deferred screenshot capture. Do not mark complete until a later session. |
 | Local checkout was behind public `origin/master` by three Action-created commits | 12 | Low | Fixed | `git pull --ff-only` fast-forwarded local `master` from `f5fbde2` to `9fc3bad`; local repo now matches `origin/master`. |
 | Git warning: unable to access `C:\Users\heyke/.config/git/ignore` | 12 | Low | Accepted | Warning appeared during `git status --short` but did not block verification or indicate project-file changes. |
+| Same-close-date runs could leave public `docs/*.json` stale | 13 | Medium | Fixed | `scripts/daily-snapshot.mjs` no longer returns early before docs sync when an existing close-date snapshot is kept. Session 13 added run-level logging and verified `docs/divergence.json`, `docs/market-readings.json`, and `docs/market-shock.json` match their `dashboard/public` sources after a same-close-date keep. |
 
 ---
 
@@ -1198,6 +1268,9 @@ Use this section to change the plan based on what happened.
 | 12 | Session 13 should continue log accumulation/public verification unless there are enough real snapshots to justify domain staging | Public flow is healthy, but the launch condition still wants roughly two weeks of dated rows. |
 | 12 | Monitor whether FRED crude data catches up before changing methodology | Brent/WTI are holding the global common-date alignment at `2026-06-22`; this is expected source lag, not a pipeline bug. |
 | 12 | Keep the board screenshot as a pre-publication task | Screenshot remains deferred and should be captured when the board/log depth are launch-ready. |
+| 13 | After commit/push, verify the next GitHub Action writes a run record and syncs public docs | The Session 13 fix passed locally; the next scheduled Action should prove it in CI and on GitHub Pages. |
+| 13 | Keep domain setup deferred | `crucix.divergencelog.com` remains a dedicated later session; do not mix DNS/Pages custom-domain work into the run-log verification. |
+| 13 | Keep the board screenshot as a required launch-support task | Screenshot remains needed and should be captured when the board/log depth are publication-ready. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1617,7 +1690,7 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 - [ ] Served from `crucix.divergencelog.com`; apex index updated with the second entry (future dedicated domain session)
 - [ ] Board screenshot with real rows, noting which state dominates that week (deferred by user in Session 11)
 
-**Section 12 launch-condition adjustment after Session 12:** CI proof, hardening, README v2, publishability checks, and public log verification are complete. The public snapshot count is `3`, with latest real snapshot `2026-06-22`. The roughly two-week log-depth launch condition remains open. Screenshot remains open. Domain remains deferred.
+**Section 12 launch-condition adjustment after Session 13:** CI proof, hardening, README v2, publishability checks, public log verification, run-level visibility, and same-close-date docs sync are complete locally. Close-date snapshots remain sparse by design, and run-level records now live under `log/runs/`. The roughly two-week close-date log-depth launch condition remains open. Screenshot remains open. Domain remains deferred.
 
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
@@ -1626,5 +1699,5 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 13.
+Ready for session 14.
 ```

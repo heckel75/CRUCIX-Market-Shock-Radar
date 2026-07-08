@@ -19,6 +19,8 @@ const PUBLIC_DASHBOARD_DIR = path.join(PROJECT_ROOT, "dashboard", "public");
 const LOG_DIR = path.join(PROJECT_ROOT, "log");
 const DOCS_DIR = path.join(PROJECT_ROOT, "docs");
 const DOCS_LOG_DIR = path.join(DOCS_DIR, "log");
+const RUN_LOG_DIR = path.join(LOG_DIR, "runs");
+const DOCS_RUN_LOG_DIR = path.join(DOCS_LOG_DIR, "runs");
 
 const PUBLIC_FILE_COPIES = [
   ["market-shock.html", "index.html"],
@@ -48,6 +50,33 @@ function validateDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) {
     throw new Error("divergence.json must include a top-level ISO date field.");
   }
+}
+
+function validateIsoDateField(label, value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) {
+    throw new Error(`${label} must be an ISO date, got ${JSON.stringify(value)}.`);
+  }
+}
+
+function runDateFromSnapshot(snapshot) {
+  const runDate =
+    snapshot.marketFreshness?.runDate ||
+    snapshot.marketReadings?.generatedDate ||
+    String(snapshot.generatedAt || new Date().toISOString()).slice(0, 10);
+
+  validateIsoDateField("runDate", runDate);
+  return runDate;
+}
+
+function runFileNameFromSnapshot(snapshot) {
+  const generatedAt = String(snapshot.generatedAt || new Date().toISOString());
+  const safeGeneratedAt = generatedAt
+    .replace(/[:.]/g, "-")
+    .replace(/[^0-9A-Za-z-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+
+  return `${safeGeneratedAt || Date.now()}.json`;
 }
 
 function relativeProjectPath(filePath) {
@@ -251,6 +280,95 @@ async function writeManifest() {
   };
 }
 
+async function listRunFiles() {
+  try {
+    const entries = await readdir(RUN_LOG_DIR, { withFileTypes: true });
+
+    return entries
+      .filter((entry) => entry.isFile())
+      .map((entry) => entry.name)
+      .filter((name) => name !== "index.json" && /\.json$/.test(name))
+      .sort();
+  } catch (error) {
+    if (error.code === "ENOENT") return [];
+    throw error;
+  }
+}
+
+function buildRunRecord(snapshot, snapshotResult) {
+  return {
+    generatedAt: snapshot.generatedAt || null,
+    recordedAt: new Date().toISOString(),
+    runDate: runDateFromSnapshot(snapshot),
+    snapshotDate: snapshot.date,
+    asOfClose: snapshot.asOfClose || snapshot.date,
+    snapshotStatus: snapshotResult.status,
+    snapshotWarning: snapshotResult.warning || null,
+    marketFreshness: snapshot.marketFreshness || snapshot.marketReadings || null,
+    warnings: snapshotWarnings(snapshot),
+    rowCount: snapshot.rows.length,
+    stateCounts: snapshot.stateCounts || countStates(snapshot.rows)
+  };
+}
+
+async function buildRunManifest() {
+  const runs = [];
+
+  for (const fileName of await listRunFiles()) {
+    const run = await readJson(path.join(RUN_LOG_DIR, fileName));
+
+    runs.push({
+      file: fileName,
+      path: `log/runs/${fileName}`,
+      generatedAt: run.generatedAt || null,
+      recordedAt: run.recordedAt || null,
+      runDate: run.runDate || null,
+      snapshotDate: run.snapshotDate || null,
+      asOfClose: run.asOfClose || null,
+      snapshotStatus: run.snapshotStatus || null,
+      snapshotWarning: run.snapshotWarning || null,
+      marketFreshness: run.marketFreshness || null,
+      warnings: Array.isArray(run.warnings) ? run.warnings : [],
+      rowCount: run.rowCount || 0,
+      stateCounts: run.stateCounts || {}
+    });
+  }
+
+  runs.sort((a, b) => {
+    const generatedCompare = String(b.generatedAt || "").localeCompare(
+      String(a.generatedAt || "")
+    );
+    if (generatedCompare !== 0) return generatedCompare;
+
+    return String(b.recordedAt || "").localeCompare(String(a.recordedAt || ""));
+  });
+
+  return {
+    title: "CRUCIX Daily Run Manifest",
+    generatedAt: new Date().toISOString(),
+    count: runs.length,
+    runs
+  };
+}
+
+async function writeRunLog(snapshot, snapshotResult) {
+  await mkdir(RUN_LOG_DIR, { recursive: true });
+
+  const runRecord = buildRunRecord(snapshot, snapshotResult);
+  const runPath = path.join(RUN_LOG_DIR, runFileNameFromSnapshot(snapshot));
+  await writeJsonAtomically(runPath, runRecord);
+
+  const manifest = await buildRunManifest();
+  const manifestPath = path.join(RUN_LOG_DIR, "index.json");
+  await writeJsonAtomically(manifestPath, manifest);
+
+  return {
+    manifest,
+    manifestPath,
+    runPath
+  };
+}
+
 async function copyIfExists(fromPath, toPath) {
   if (!(await pathExists(fromPath))) return "missing";
 
@@ -264,6 +382,7 @@ async function syncDocs() {
 
   await mkdir(DOCS_DIR, { recursive: true });
   await mkdir(DOCS_LOG_DIR, { recursive: true });
+  await mkdir(DOCS_RUN_LOG_DIR, { recursive: true });
 
   for (const [sourceName, targetName] of PUBLIC_FILE_COPIES) {
     const sourcePath = path.join(PUBLIC_DASHBOARD_DIR, sourceName);
@@ -293,6 +412,21 @@ async function syncDocs() {
     });
   }
 
+  const runFiles = ["index.json", ...(await listRunFiles())];
+
+  for (const fileName of runFiles) {
+    const sourcePath = path.join(RUN_LOG_DIR, fileName);
+    if (!(await pathExists(sourcePath))) continue;
+
+    const targetPath = path.join(DOCS_RUN_LOG_DIR, fileName);
+    await copyFile(sourcePath, targetPath);
+    copied.push({
+      from: sourcePath,
+      to: targetPath,
+      status: "copied"
+    });
+  }
+
   return copied;
 }
 
@@ -306,25 +440,31 @@ async function main() {
   validateSnapshot(snapshot);
 
   const snapshotResult = await writeSnapshot(snapshot);
+  const runLogResult = await writeRunLog(snapshot, snapshotResult);
+  let manifestResult = null;
 
   if (snapshotResult.warning) {
     console.warn(snapshotResult.warning);
-    console.log("");
-    console.log("CRUCIX daily snapshot");
-    console.log(`Date: ${snapshot.date}`);
-    console.log(`${snapshotResult.status}: ${relativeProjectPath(snapshotResult.path)}`);
-    console.log("skipped: manifest and docs sync");
-    return;
+  } else {
+    manifestResult = await writeManifest();
   }
 
-  const manifestResult = await writeManifest();
   const copyResults = await syncDocs();
 
   console.log("CRUCIX daily snapshot");
   console.log(`Date: ${snapshot.date}`);
   console.log(`${snapshotResult.status}: ${relativeProjectPath(snapshotResult.path)}`);
-  console.log(`wrote: ${relativeProjectPath(manifestResult.path)}`);
-  console.log(`Manifest entries: ${manifestResult.manifest.count}`);
+  console.log(`wrote: ${relativeProjectPath(runLogResult.runPath)}`);
+  console.log(`wrote: ${relativeProjectPath(runLogResult.manifestPath)}`);
+
+  if (manifestResult) {
+    console.log(`wrote: ${relativeProjectPath(manifestResult.path)}`);
+    console.log(`Snapshot manifest entries: ${manifestResult.manifest.count}`);
+  } else {
+    console.log("kept: close-date manifest unchanged");
+  }
+
+  console.log(`Run manifest entries: ${runLogResult.manifest.count}`);
   console.log("");
   console.log("Synced public files:");
 
