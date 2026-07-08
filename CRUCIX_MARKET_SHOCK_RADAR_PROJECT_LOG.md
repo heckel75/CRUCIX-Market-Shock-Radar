@@ -232,6 +232,24 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 
 This spec is frozen as of 2026-06-11. ChatGPT sessions implement it; they do not redesign it. If implementation forces a change, log it under Decisions Made with a reason.
 
+### 0. Methodology versioning and rollout guardrails
+
+Methodology versioning is separate from data snapshot IDs. The close-date snapshot (`log/YYYY-MM-DD.json`) says what data was observed; the methodology version says how the board was computed and rendered. These are orthogonal axes.
+
+Increment the methodology version for any of the following:
+
+- Any source change for a channel
+- Any change to window length or z-score definition
+- Recalibration of `expectedLagBD` or freshness/staleness thresholds
+- Calendar changes, including alignment calendar or trading-day assumptions
+- Promotion of a proxy from supplemental read to primary channel input
+
+Same methodology version plus the same input snapshots should reproduce a bit-identical board. Treat that as a free regression test. Stamp the methodology version on every published dashboard and keep a one-line methodology changelog.
+
+Proxy-role rule: pick one role and keep it visible. Either the EIA/FRED spot series remains the primary channel input while BNO/USO appear only as a supplemental "timely read (futures proxy)", or the proxy becomes the timely primary channel and spot becomes lagged confirmation. Both are defensible. The bad outcome is ambiguity where readers cannot tell which number drives the channel. Promoting a proxy to primary is a methodology version bump plus a channel relabel, not a quiet swap.
+
+Rollout sequence: snapshots and per-channel dating are additive and can ship immediately. Freshness badges that depend on `expectedLagBD` need a few weeks of fetch history per source before delayed/stale thresholds are meaningful; until then, run them in shadow or use conservative thresholds. Proxies come after that, as newly labeled channels.
+
 ### 1. The market column — one uniform transform
 
 The market reading must use **one uniform rule across all channels**, never a per-channel tuned formula. A per-channel formula would rebuild the discretionary-aggregate problem on the other side of the page.
@@ -1174,6 +1192,10 @@ Use this section to record project decisions.
 | 2026-07-08 | Keep close-date snapshots sparse and keyed by market close date / `asOfClose` | Sparse `log/YYYY-MM-DD.json` files are expected when source alignment has not advanced; fabricating run-date snapshots would misrepresent the market-close data. |
 | 2026-07-08 | Add a run manifest for every daily run under `log/runs/` | A separate run log makes each Action run visible without changing the close-date snapshot methodology. |
 | 2026-07-08 | Always sync `docs/*.json` from `dashboard/public/*.json` even when a same-close-date snapshot is kept | GitHub Pages serves from `docs/`; same-close-date runs should not leave public JSON stale. |
+| 2026-07-08 | Keep methodology version separate from data snapshot IDs | Data snapshots say what data was observed; methodology version says how the board was computed. Same version plus same snapshots should reproduce a bit-identical board. |
+| 2026-07-08 | Increment methodology version for source changes, transform/window changes, freshness-threshold recalibration, calendar changes, or proxy promotion | These changes alter interpretation and must be visible to readers and regression checks. |
+| 2026-07-08 | Do not blur primary spot data and timely futures proxies | EIA/FRED spot data can remain primary with BNO/USO as supplemental timely reads, or proxies can become primary with spot as lagged confirmation. Quiet swaps are not allowed. |
+| 2026-07-08 | Sequence rollout as additive logging first, calibrated freshness next, proxies last | Snapshots and per-channel dating can ship immediately. Freshness badges need fetch-history calibration for `expectedLagBD`; proxies should arrive later as labeled channels. |
 
 ---
 
@@ -1205,6 +1227,8 @@ Use this section to log unresolved items.
 | When should the deferred Session 11 board screenshot be captured? | 11 | Open | Screenshot was intentionally skipped/deferred by the user. Capture later when the board state and log depth are ready. |
 | Will FRED crude lag resolve naturally? | 12 | Open | Monitor Brent `DCOILBRENTEU` and WTI `DCOILWTICO`. As of Session 12, official FRED rows held the global common date at `2026-06-22`. |
 | Should the run manifest be exposed in the public history UI? | 13 | Open | Session 13 creates `log/runs/index.json` and `docs/log/runs/index.json`, but the UI still focuses on close-date snapshots. Decide later whether history should show run-level attempts, source lag, and same-close-date keeps. |
+| Should crude proxies be supplemental timely reads or primary channel inputs? | 13 | Open | If BNO/USO are added, pick one role explicitly. Supplemental proxy reads do not drive the channel. Promoting a proxy to primary requires a methodology version bump and channel relabel. |
+| When is there enough fetch history to calibrate `expectedLagBD` per source? | 13 | Open | Freshness badges based on expected business-day lag should run in shadow or with conservative thresholds until there are a few weeks of fetch history per source. |
 
 ---
 
@@ -1269,6 +1293,10 @@ Use this section to change the plan based on what happened.
 | 12 | Monitor whether FRED crude data catches up before changing methodology | Brent/WTI are holding the global common-date alignment at `2026-06-22`; this is expected source lag, not a pipeline bug. |
 | 12 | Keep the board screenshot as a pre-publication task | Screenshot remains deferred and should be captured when the board/log depth are launch-ready. |
 | 13 | After commit/push, verify the next GitHub Action writes a run record and syncs public docs | The Session 13 fix passed locally; the next scheduled Action should prove it in CI and on GitHub Pages. |
+| 13 | Before adding freshness badges, define methodology version stamping and a one-line changelog | Versioning must be visible on every published dashboard and separate from data snapshot IDs. |
+| 13 | Ship per-channel dating and run/snapshot visibility before calibrated freshness badges | These are additive and do not require `expectedLagBD` calibration. |
+| 13 | Run freshness thresholds in shadow or conservatively until source lag history is calibrated | Delayed/stale badges need a few weeks of fetch history per source before `expectedLagBD` has meaning. |
+| 13 | Add crude proxies only after freshness calibration, and only as explicitly labeled channels or supplemental reads | Avoid ambiguity about which number drives the channel. Proxy promotion is a methodology version bump and relabel. |
 | 13 | Keep domain setup deferred | `crucix.divergencelog.com` remains a dedicated later session; do not mix DNS/Pages custom-domain work into the run-log verification. |
 | 13 | Keep the board screenshot as a required launch-support task | Screenshot remains needed and should be captured when the board/log depth are publication-ready. |
 ---
