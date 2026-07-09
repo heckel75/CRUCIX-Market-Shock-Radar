@@ -1,29 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-08T01:05:24.328Z",
+  "generatedAt": "2026-07-09T01:12:38.935Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 3
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 128,
+  "candidateCount": 130,
   "itemCount": 15,
   "items": [
     {
       "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 37,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,101 +30,44 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
         "Commodities",
         "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems Forces. The strike tar",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems..."
+    },
+    {
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
         "war",
-        "strike",
-        "border",
-        "drone",
-        "russia",
-        "oil",
-        "refinery"
+        "military",
+        "iran"
       ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦 ❌️ 🇷🇺 Ukrainian forces conducted their deepest drone strike against Russia thus far in the war, striking the largest oil refinery in Russia over 2,500 kilometers from the Ukrainian border. Rus",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike, border, drone, russia. Signal: 🇺🇦 ❌️ 🇷🇺 Ukrainian forces conducted their deepest drone strike against Russia thus far in the war, striking the largest oil refinery in Russia over 2,500 kilometers from the..."
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 26,
-      "confidence": "High",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "crude",
-        "refinery",
-        "strike",
-        "attack"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Supply Chain Disruption"
-      ],
-      "text": "Reuters reports that the Omsk Oil Refinery has suspended operations following a UAV attack. As a result of the strike, the CDU-10 primary crude distillation unit, which accounts for approximately 38%",
-      "explanation": "Energy Shock match based on keywords: oil, crude, refinery. Signal: Reuters reports that the Omsk Oil Refinery has suspended operations following a UAV attack. As a result of the strike, the CDU-10 primary crude distillation unit, which accounts..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 17,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "gas",
-        "pipeline",
-        "strike"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Supply Chain Disruption"
-      ],
-      "text": "Overnight, the Belgorod Main Gas Pipeline Distribution Centre, Belgorod Airport and a local thermal power station were hit by a HIMARS rocket strike. It is reported that there are reports of power and",
-      "explanation": "Energy Shock match based on keywords: gas, pipeline. Signal: Overnight, the Belgorod Main Gas Pipeline Distribution Centre, Belgorod Airport and a local thermal power station were hit by a HIMARS rocket strike. It is reported that there a..."
+      "otherCategories": [],
+      "text": "Iran War Updates: U.S. Launches New Strikes on Iran, Military Says",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: Iran War Updates: U.S. Launches New Strikes on Iran, Military Says"
     },
     {
       "path": "root.tg.urgent[1]",
@@ -146,46 +88,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "drone",
-        "port"
+        "strike",
+        "missile"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇸❌🇮🇷 — NEW: The U.S. strikes targeted Iranian air defense systems, coastal surveillance systems, surface-to-air missiles, anti-ship cruise missile sites, drone launch sites, and port facilities,",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇺🇸❌🇮🇷 — NEW: The U.S. strikes targeted Iranian air defense systems, coastal surveillance systems, surface-to-air missiles, anti-ship cruise missile sites, drone launch sites..."
+      "text": "Today, four people were killed in Odesa due to a Russian missile strike. Another seven were injured.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Today, four people were killed in Odesa due to a Russian missile strike. Another seven were injured."
     },
     {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: US bombs Sirik, Qeshm, Bandar Abbas over Hormuz attacks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Sirik, Qeshm, Bandar Abbas over Hormuz attacks | Al Jazeera"
-    },
-    {
-      "path": "root.news[23]",
+      "path": "root.newsFeed[39]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -204,72 +117,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "missile"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Russian missiles strike Ukraine’s capital, Kyiv, for third time in a week | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Russian missiles strike Ukraine’s capital, Kyiv, for third time in a week | Al Jazeera"
+      "text": "Today, four people were killed in Odesa due to a Russian missile strike. Another seven were injured. | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Today, four people were killed in Odesa due to a Russian missile strike. Another seven were injured. | WARTRANSLATED"
     },
     {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Strait of Hormuz tanker attack raises tensions as Iran mourns Khamenei | Africa News",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: Strait of Hormuz tanker attack raises tensions as Iran mourns Khamenei | Africa News"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz",
-        "iran"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "Iran’s Strikes on Ships in Strait of Hormuz Threaten Oil Flow",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Iran’s Strikes on Ships in Strait of Hormuz Threaten Oil Flow"
-    },
-    {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -282,16 +139,37 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "missile",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — US airstrikes on Iran will continue \"for some time\" and will focus on a series of military targets, the New York Times reports, citing a US military official.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸❌🇮🇷 — US airstrikes on Iran will continue \"for some time\" and will focus on a series of military targets, the New York Times reports, citing a US military official."
+      "text": "🇮🇷❌🇺🇸 — BREAKING: Missile launch reported from the Imam Ali missile site in Khorramabad, Iran.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷❌🇺🇸 — BREAKING: Missile launch reported from the Imam Ali missile site in Khorramabad, Iran."
     },
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷❌🇺🇸 — Images show a ballistic missile launch from Bushehr, Iran, with at least 5 missiles fired.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷❌🇺🇸 — Images show a ballistic missile launch from Bushehr, Iran, with at least 5 missiles fired."
+    },
+    {
+      "path": "root.news[17]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -304,35 +182,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "israel"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇱⚡- Secretary of War Pete Hegseth, who's currently attending the NATO summit in Ankara, will travel to Israel tomorrow.",
-      "explanation": "Geopolitical Escalation match based on keywords: war, israel. Signal: 🇺🇸🇮🇱⚡- Secretary of War Pete Hegseth, who's currently attending the NATO summit in Ankara, will travel to Israel tomorrow."
+      "text": "Iran war Update: Sirens in Bahrain, Kuwait after US’s deadly attacks on Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Sirens in Bahrain, Kuwait after US’s deadly attacks on Iran | Al Jazeera"
     },
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Estonia and Ukraine sign drone pact to deepen defence industry ties | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Estonia and Ukraine sign drone pact to deepen defence industry ties | Euronews"
-    },
-    {
-      "path": "root.newsFeed[9]",
+      "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -349,8 +206,92 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "❌ — US airstrikes on Iran will continue \"for some time\" and will focus on a series of military targe | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: ❌ — US airstrikes on Iran will continue \"for some time\" and will focus on a series of military targe | INTELSLAVA"
+      "text": "US expands military strikes on Iran after Trump says he’ll ‘hit them hard’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: US expands military strikes on Iran after Trump says he’ll ‘hit them hard’ | Al Jazeera"
+    },
+    {
+      "path": "root.news[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🔴Update: US military carrying out fresh strikes against Iran after Trump says peace deal is ‘over’ | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🔴Update: US military carrying out fresh strikes against Iran after Trump says peace deal is ‘over’ | France 24"
+    },
+    {
+      "path": "root.news[47]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "License to Make Patriot Missiles Could Help Ukraine Defend Against Russia",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: License to Make Patriot Missiles Could Help Ukraine Defend Against Russia"
+    },
+    {
+      "path": "root.newsFeed[13]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — BREAKING: Missile launch reported from the Imam Ali missile site in Khorramabad, Iran. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — BREAKING: Missile launch reported from the Imam Ali missile site in Khorramabad, Iran. | INTELSLAVA"
+    },
+    {
+      "path": "root.newsFeed[15]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — Images show a ballistic missile launch from Bushehr, Iran, with at least 5 missiles fired. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — Images show a ballistic missile launch from Bushehr, Iran, with at least 5 missiles fired. | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -381,7 +322,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -392,24 +333,23 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "shipping"
+        "drone",
+        "refinery"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇺🇸🇮🇷⚡- \"U.S. Central Command forces have begun launching a series of powerful strikes against Iran to impose heavy costs for targeting and attacking commercial shipping crewed by innocent civilian",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇮🇷⚡- \"U.S. Central Command forces have begun launching a series of powerful strikes against Iran to impose heavy costs for targeting and attacking commercial shipping crew..."
+      "text": "Refinery workers in Nizhnekamsk gathered to watch, cheering and whistling, as a Ukrainian FP-1 drone struck their plant this morning.",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Refinery workers in Nizhnekamsk gathered to watch, cheering and whistling, as a Ukrainian FP-1 drone struck their plant this morning."
     },
     {
-      "path": "root.news[11]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -432,8 +372,8 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "US launches strikes on Iran after tankers hit in Strait of Hormuz",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US launches strikes on Iran after tankers hit in Strait of Hormuz"
+      "text": "US says it's carrying out more strikes after Iran’s attacks in Strait of Hormuz | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US says it's carrying out more strikes after Iran’s attacks in Strait of Hormuz | France 24"
     }
   ]
 }

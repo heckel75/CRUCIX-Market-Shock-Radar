@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-07-09T01:12:41.827Z",
+  "recordedAt": "2026-07-09T01:12:41.971Z",
+  "runDate": "2026-07-09",
+  "snapshotDate": "2026-07-02",
+  "asOfClose": "2026-07-02",
+  "snapshotStatus": "wrote",
+  "snapshotWarning": null,
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-07-09T01:12:39.088Z",
+    "generatedDate": "2026-07-09",
+    "runDate": "2026-07-09",
+    "asOfClose": "2026-07-02",
+    "calendarLagDays": 7,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-07-09, readings as of market close, 2026-07-02 (7 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-07-02",
+      "generatedDate": "2026-07-09",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-07-09, readings as of market close, 2026-07-02 (7 calendar days old)."
+    }
+  ],
+  "rowCount": 5,
+  "stateCounts": {
+    "radar-claim": 1,
+    "calm": 3,
+    "priced": 1
+  }
+}
