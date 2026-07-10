@@ -119,8 +119,8 @@ Commit/push shortcut:
 
 **Current session cursor:** Session 13 complete — next session is Session 14
 **Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. Phase 2 added the market side so each channel shows signal vs. market movement, classified into divergence states and logged daily. Phase 2 is now the operational **legacy baseline**, not the final methodology. Methodology 2.0 is being audited and designed beginning in Session 14. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).
-**Methodology review status:** Session 14 is a methodology-review gate for both the OSINT signal layer and the market-data layer. Launch staging, custom-domain work, and the deferred board screenshot are paused until the audit is resolved. Existing daily automation should continue unchanged during the audit unless it is broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
-**Signal layer status:** The current signal layer is still a rule-based keyword classifier with exact/canonical text deduplication. It does not perform semantic event clustering. `Geopolitical Escalation` is currently too broad to serve as a final actionable leaf category; observed concentration may reflect real conditions, source mix, repeated coverage of the same underlying event, or all three.
+**Methodology review status:** The first Methodology 2.0 planning amendment was committed and pushed (`e4ba8fd Update project log for methodology audit`). That direction remains valid, but this 2026-07-10 architecture-review amendment supersedes it on sequencing and architecture detail. Session 14 is still next, but it is now a Methodology 2.0 architecture and audit-protocol gate, not an attempt to complete the full signal audit and market audit in one 90-minute block. Launch staging, custom-domain work, and the deferred board screenshot remain paused until the Methodology 2.0 gates are resolved. Existing daily automation should continue unchanged during the audit unless it is broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
+**Signal layer status:** The current signal layer is still a stateless rule-based keyword classifier with exact/canonical text deduplication. It does not perform semantic event clustering and does not persist raw candidate snapshots, a cross-run event registry, or immutable candidate-to-cluster assignment history. Methodology 2.0 signal processing will be stateful across runs, unlike the present fetch -> compute -> write pipeline. `Geopolitical Escalation` is currently too broad to serve as a final actionable leaf category; observed concentration may reflect real conditions, source mix, repeated coverage of the same underlying event, or all three.
 **Market layer status:** The current market layer uses FRED plus Tiingo EOD `adjClose`, a uniform 5-common-observation transform, a trailing 252-common-date transformed window, global all-instrument common-date alignment, and per-channel `max |z|` driver selection. The global date alignment allows lagging Brent/WTI observations to hold back unrelated channels. Current state names use absolute market movement and therefore do not prove direction, causality, or that an OSINT event was literally "priced."
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
@@ -198,7 +198,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 11 git checks:** CI proof and hardening completed. Validation passed; `.env` is local and not tracked; secret scan found no literal API secrets. End state before project-log update included modified script/dashboard/docs/README files from the Session 11 reliability pass, with no commit or push.
 **Fresh Session 12 git checks:** After `git pull --ff-only`, local `master` fast-forwarded from `f5fbde2` to `9fc3bad` and now matches `origin/master`. `git status --short` produced no changed files, with only a warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Latest five commits: `9fc3bad Update CRUCIX daily snapshot`; `002e2ec Update CRUCIX daily snapshot`; `9305a0e Update CRUCIX daily snapshot`; `f5fbde2 Make daily snapshot idempotent on stale market dates`; `3582d9e Harden daily snapshot workflow`.
 **Fresh Session 13 git checks:** Investigation confirmed the Action ran daily, close-date snapshots were sparse by design, and same-close-date runs could succeed while only committing `dashboard/public/*.json`. Implementation changed `scripts/daily-snapshot.mjs`, `.github/workflows/daily-snapshot.yml`, and `.gitignore`, then `npm run snapshot` generated/updated `docs/*.json`, `log/runs/*.json`, and `docs/log/runs/*.json`. Validation passed; no commit or push yet.
-**Fresh Session 14 preflight git checks:** On 2026-07-10 before this log-only edit, `git status --short` returned no changed files, with the recurring warning that Git could not read `C:\Users\heyke/.config/git/ignore`. `git status -sb` reported local `master` behind `origin/master` by two commits and no local ahead commits. Therefore the old Session 13 "no commit or push yet" note is stale: there are no uncommitted or locally unpushed Session 13 changes in this checkout, but the local branch should be fast-forwarded before future implementation work if the latest Action-created snapshots are needed locally.
+**Fresh Session 14 architecture-amendment preflight:** On 2026-07-10 before this log-only architecture amendment, `git pull --ff-only` reported `Already up to date`, `git rev-parse --short HEAD` returned `e4ba8fd`, and `git status --short` returned no changed files, with only the recurring warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Repository inspection found no implemented raw-candidate archive, semantic cluster assignments, persistent event registry, `methodology/` directory, explicit v2 output paths, `methodologyVersion` field, or empirical channel-percentile thresholds.
 
 ---
 
@@ -234,12 +234,15 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 
 | Session | Target time | Main goal | Status |
 |---:|---:|---|---|
-| 14 | 90 min | Signal architecture and market-data audit; quantify present failure modes; freeze a Methodology 2.0 proposal; no production-methodology change | Planned |
-| 15 | 90 min | Implement event clustering, leaf taxonomy, evidence/action-stage schema, and regression fixtures in parallel with legacy output | Provisional — depends on Session 14 |
-| 16 | 90 min | Implement market-data v2 dating/transform metadata and direction-neutral divergence semantics in parallel | Provisional — depends on Session 14 |
-| 17 | 75 min | Parallel-run validation, dashboard/history migration, methodology stamping, and cutover decision | Provisional — depends on Sessions 15–16 |
+| 14 | 90 min | Architecture and audit protocol: inventory available data; define registry, reproducibility, core schema, parameter artifacts, sampling, timing, and comparison contracts; no production change | Planned |
+| 15 | 120 min | Signal audit: persist/extract a representative raw sample where available; normalize reporting origins; manually cluster and label events; measure concentration and duplication | Provisional — depends on Session 14 |
+| 16 | 90 min | Market audit: own-series/calendar comparison, empirical channel trigger rates, driver breadth, timing, and percentile-rule evaluation | Provisional — depends on Session 14 |
+| 17 | 90 min | Freeze the Methodology 2.0 core specification, lifecycle rules, schemas, mappings, parameters, migration contract, and acceptance tests | Provisional — depends on Sessions 15–16 |
+| 18 | 120 min | Implement signal v2 persistence, clustering assignments, minimal taxonomy, evidence gates, and parallel output without touching legacy output | Provisional — depends on Session 17 |
+| 19 | 120 min | Implement market/divergence v2 dating, eligibility, breadth, threshold semantics, timing rules, and parallel output | Provisional — depends on Session 17 |
+| 20 | 90 min | Parallel-run review, dashboard/history migration decision, explicit methodology stamping, and production cutover or rejection | Provisional — depends on Sessions 18–19 |
 
-Sessions 15–17 are provisional. They must be revised from Session 14 evidence rather than treated as frozen implementation instructions.
+Target times are planning estimates. A session may produce a follow-up work order rather than compressing unfinished architecture into an unsafe implementation. Sessions 15-20 are provisional and must be revised from Session 14 evidence rather than treated as frozen implementation instructions. The earlier four-session Phase 3 sketch is superseded: one 90-minute Session 15 cannot safely implement semantic clustering, the complete taxonomy, all evidence fields, and regression fixtures, and Session 17 is not an immediate cutover after only two implementation sessions.
 
 ---
 
@@ -357,46 +360,237 @@ The history page renders these rows backwards. After 30–40 days, the log's rea
 
 ## 4c. Methodology 2.0 Audit Principles
 
-These are **audit targets**, not completed implementation. Session 14 must test and refine them against actual CRUCIX runs, generated artifacts, and current code behavior before Sessions 15-17 are treated as implementation plans.
+These are **audit targets**, not completed implementation. Session 14 must turn them into an implementable architecture and audit protocol before Sessions 15-20 are treated as implementation plans. The current repository does not yet contain a raw-candidate archive, semantic cluster assignments, persistent event registry, Methodology 2.0 schema artifacts, explicit v2 output paths, methodology stamping, or empirical channel-percentile thresholds.
 
 ### Signal architecture
 
 - The scored unit becomes an **underlying event cluster**, not a headline or feed item.
 - Repeated reports increase corroboration/confidence; they do not multiply severity or count as independent shocks.
 - `Geopolitical` becomes a parent facet, not the final scored event type.
-- Candidate leaf event types should include, at minimum:
-  - kinetic action;
-  - force posture or mobilization;
-  - strategic/nuclear signaling;
-  - sanctions or asset restrictions;
-  - tariffs/trade restrictions;
-  - export/technology controls;
-  - maritime/chokepoint disruption;
-  - energy infrastructure or production disruption;
-  - industrial/logistics outage;
-  - sovereign/political instability;
-  - banking/funding/credit stress;
-  - central-bank surprise;
-  - fiscal-policy surprise;
-  - major macro-data surprise;
-  - cyber/critical-infrastructure disruption;
-  - extreme weather/natural disaster/health emergency.
 - Separate three layers explicitly: **event -> transmission mechanism -> market observation**.
 - Require explicit transmission-mechanism mapping before an event elevates a market channel.
-- Proposed event fields:
-  - `eventClusterId`
-  - `eventType`
-  - `parentDomain`
-  - `actionStage` (`rhetoric`, `threatened`, `announced`, `implemented`, `impact-observed`)
-  - `directness` (`direct`, `contextual`, `none`)
-  - `corroboration`
-  - `independentSourceCount`
-  - `sourceQuality`
-  - `novelty` (`new`, `escalating`, `continuing`, `de-escalating`)
-  - `scope`
-  - `firstSeen`
-  - `lastSeen`
-  - affected assets, locations, infrastructure, and mechanisms when known.
+- Mechanism directness is part of the Methodology 2.0 core because a market channel must not elevate without explicit evidence for that transmission path.
+
+#### Methodology 2.0 minimum operational core
+
+The proposed minimum operational core must be resolved before a production cutover:
+
+- stable `eventClusterId`;
+- a broader `parentSeriesId` or equivalent parent-crisis/campaign identifier;
+- a deliberately small initial `eventType` leaf set that maps cleanly to the current market channels;
+- `actionStage`;
+- explicit transmission `mechanisms`;
+- basic mechanism `directness` (`direct`, `contextual`, `none`);
+- source-origin identifiers rather than only outlet/domain names;
+- `independentSourceCount` and corroboration status;
+- `firstSeen`;
+- `lastObservedAt`;
+- `lastMaterialChangeAt`;
+- lifecycle/novelty status, including `new`, `escalating`, `continuing`, and `de-escalating`;
+- assignment/provenance version;
+- explicit `methodologyVersion` on v2 artifacts.
+
+#### Methodology 2.1 candidates
+
+The following are candidates for a later expansion unless the Session 14-17 evidence proves they are essential to the 2.0 core:
+
+- the complete 16-leaf taxonomy;
+- full geographic scope resolution;
+- complete extraction of affected assets, locations, actors, and infrastructure;
+- richer source-quality scoring;
+- detailed expected-direction models;
+- additional market channels for all signal leaves.
+
+The candidate long-term leaf ontology remains useful reference material, but every leaf is not mandatory Methodology 2.0 scope:
+
+- kinetic action;
+- force posture or mobilization;
+- strategic/nuclear signaling;
+- sanctions or asset restrictions;
+- tariffs/trade restrictions;
+- export/technology controls;
+- maritime/chokepoint disruption;
+- energy infrastructure or production disruption;
+- industrial/logistics outage;
+- sovereign/political instability;
+- banking/funding/credit stress;
+- central-bank surprise;
+- fiscal-policy surprise;
+- major macro-data surprise;
+- cyber/critical-infrastructure disruption;
+- extreme weather/natural disaster/health emergency.
+
+#### Explicit assessment status
+
+Fields not yet populated must not simply disappear. The schema design target must distinguish:
+
+- `unassessed`: the pipeline did not attempt the assessment;
+- `unknown`: it attempted the assessment but evidence was insufficient;
+- `not-applicable`: the field does not apply;
+- `assessed`: a typed value is present.
+
+Do not insert strings such as `"unassessed"` into fields that will later be numeric, arrays, or objects. Use a typed wrapper pattern such as:
+
+```json
+{
+  "scope": {
+    "status": "unassessed",
+    "value": null
+  }
+}
+```
+
+This pattern is a design target, not an implemented schema.
+
+#### Persistent event registry and immutable assignment history
+
+Stable cluster identity, `firstSeen`, novelty, decay, escalation, and de-escalation require state across runs. Session 14 must decide and document:
+
+- registry location and format;
+- atomic read/update/write behavior;
+- raw-candidate snapshot location;
+- immutable candidate-to-cluster assignment history;
+- public versus private artifacts;
+- retention policy;
+- recovery from a corrupt or interrupted registry update;
+- human-correction provenance;
+- merge, split, alias, and supersession behavior.
+
+Provisional path examples, not completed or irrevocably frozen paths:
+
+```txt
+inputs/candidates/<run-id>.jsonl
+state/events/registry.json
+log/event-assignments/<run-id>.jsonl
+methodology/2.0.0/schema.json
+methodology/2.0.0/parameters.json
+methodology/2.0.0/leaf-channel-map.json
+methodology/2.0.0/source-origin-rules.json
+```
+
+Lifecycle rules that Session 14 must accept, amend, or reject explicitly:
+
+- cluster IDs are never reused;
+- historical run assignments are immutable;
+- a merge creates aliases or a canonical successor and does not rewrite old run records;
+- a split creates new IDs with explicit lineage such as `derivedFrom` or `supersedes`;
+- human corrections append provenance and do not silently erase history;
+- `lastObservedAt` updates when another report appears;
+- `lastMaterialChangeAt` updates only when stage, consequence, severity, escalation, or de-escalation materially changes;
+- decay must key off material change, not merely repeated coverage;
+- a parent-series/event-episode hierarchy is needed to avoid both one immortal "war" cluster and excessive fragmentation into unrelated one-line events.
+
+#### Reproducibility of semantic clustering
+
+- Deterministic keyword/rule clustering with frozen parameters is reproducible but may be semantically limited.
+- Embeddings or an LLM may assist clustering, but live model output cannot be an unrecorded production dependency.
+- When a model proposes cluster membership, that assignment must become a persisted, versioned input before deterministic scoring and board generation.
+- Production reproduction must consume recorded assignments rather than call a drifting external model again.
+- The reproducibility target applies to the canonical normalized board payload, with stable ordering and rounding, not necessarily to volatile metadata such as `generatedAt`.
+
+Persist, where relevant:
+
+- clustering method;
+- model/embedding identifier and version;
+- prompt or ruleset version/hash;
+- configuration and similarity threshold;
+- time/location/actor matching windows;
+- deterministic tie-break rule;
+- input content hashes;
+- assignment version;
+- human override and reviewer provenance.
+
+Intended reproducibility equation:
+
+```txt
+normalized raw candidates
++ persisted source-origin assignments
++ persisted event-cluster assignments
++ frozen methodology configuration
+= reproducible canonical Methodology 2.0 board payload
+```
+
+Keep the existing project discipline that a language model may narrate or propose structure but must not silently produce unreproducible final readings or states.
+
+#### Frozen signal parameters and source independence
+
+All consequential parameters must live in versioned methodology artifacts rather than unexplained constants in code. The freeze list must include at least:
+
+- event similarity threshold;
+- actor/location/time matching windows;
+- deterministic tie-break rules;
+- source-origin and syndication grouping rules;
+- operational definition of an independent source;
+- source-quality categories or weights, if used;
+- action-stage mapping and weights, if used;
+- corroboration-to-confidence mapping;
+- decay function and clock;
+- lifecycle transition rules;
+- event-to-mechanism-to-channel mapping;
+- directness gate;
+- channel-elevation rule;
+- maximum contribution per cluster/channel, if any;
+- stale-event and de-escalation rules;
+- signal-versus-market timing cutoff;
+- market percentile `alpha`, history window, and minimum sample if adopted.
+
+Define "independent source" by reporting origin, not simple domain count:
+
+- thirty syndicated copies of one wire report count as one reporting origin;
+- outlets repeating the same official statement do not automatically become independent confirmations;
+- an official statement and a genuinely independent direct observation may count as separate origins;
+- unknown provenance is treated conservatively;
+- disagreement between origins must not mechanically increase confidence.
+
+Require a versioned leaf/event-to-mechanism-to-channel mapping before the rule "explicit transmission mechanism required for elevation" can be enforced. The mapping must allow:
+
+- one event to map to zero market channels and remain signal-only;
+- one event to map to multiple channels only when each mechanism has separate evidence;
+- chokepoint or energy events to affect more than one channel without automatically multiplying severity.
+
+Keep severity and confidence separate:
+
+- action, implementation, and observed consequence determine severity;
+- independent evidence determines confidence;
+- repeated publication does not determine severity.
+
+#### Methodology 2.0 signal-elevation plan
+
+The legacy signal threshold of **60% of the Phase 1 keyword-score ceiling** remains frozen only for legacy/pre-2.0 output. It must not be inherited automatically by a cluster-based signal system because the score distribution and semantics change.
+
+Sessions 15 and 17 must evaluate whether Methodology 2.0 should use a scalar score at all. Candidate structural gate, not a frozen final rule:
+
+```txt
+explicit transmission mechanism
+AND sufficient evidence/corroboration
+AND qualifying action stage or observed consequence
+AND new event, material escalation, or material de-escalation
+```
+
+Aggregation principles:
+
+- score one underlying event cluster once;
+- do not sum repeated articles;
+- expose a leading qualifying event;
+- expose the number of qualifying independent clusters and signal breadth;
+- do not use category quotas to force visual balance;
+- avoid replacing one opaque headline aggregate with an opaque event-score aggregate.
+
+Proposed event fields from the earlier plan remain candidates and must be split between 2.0 core and 2.1 expansion:
+
+- `eventClusterId`
+- `eventType`
+- `parentDomain`
+- `actionStage` (`rhetoric`, `threatened`, `announced`, `implemented`, `impact-observed`)
+- `directness` (`direct`, `contextual`, `none`)
+- `corroboration`
+- `independentSourceCount`
+- `sourceQuality`
+- `novelty` (`new`, `escalating`, `continuing`, `de-escalating`)
+- `scope`
+- `firstSeen`
+- `lastSeen`
+- affected assets, locations, infrastructure, and mechanisms when known.
 - A single unverified source cannot independently elevate a channel unless a documented exception is approved.
 - Continuing events decay unless a new escalation or observed consequence occurs.
 - De-escalation must be represented explicitly.
@@ -421,7 +615,11 @@ Audit and likely amend these parts for Methodology 2.0:
 3. **Trailing window:** use the latest 252 valid transformed observations per instrument, subject to the Session 14 audit and an explicit frozen definition.
 4. **Dating:** persist `asOf`, observation age, business-day age, and freshness per instrument; derive a visible per-channel `marketAsOf` and freshness state. One lagging crude series must not silently date unrelated channels.
 5. **Channel evidence:** retain the driver, but also expose the second-largest absolute z-score, number of eligible instruments, number above threshold, and a market-breadth indicator.
-6. **Multiple-instrument threshold audit:** quantify the empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. As a simple independence sanity check, four standard-normal instruments would produce at least one `|z| >= 1.5` on roughly 44% of observations; actual correlated data must be measured.
+6. **Multiple-instrument threshold audit:** quantify the empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. Independence sanity checks:
+   - `P(max |Z| >= 1.5) ≈ 24.94%` for 2 independent instruments
+   - `P(max |Z| >= 1.5) ≈ 34.97%` for 3 independent instruments
+   - `P(max |Z| >= 1.5) ≈ 43.66%` for 4 independent instruments
+   Actual channel values are correlated and therefore must be measured empirically, but the calculation demonstrates structural asymmetry: a four-instrument channel has more chances to cross a raw threshold than a two-instrument channel.
 7. **State semantics:** the current absolute-z test detects unusual movement, not causal pricing. For Methodology 2.0, provisionally replace:
    - `radar-claim` -> `signal-leading`
    - `priced` -> `co-movement`
@@ -432,6 +630,104 @@ Audit and likely amend these parts for Methodology 2.0:
 9. **Threshold discipline:** keep current thresholds unchanged for legacy output. Freeze any Methodology 2.0 threshold only after the audit; do not optimize thresholds to make the board more interesting.
 10. **Proxy discipline:** do not add BNO/USO or promote any proxy during Session 14. A future supplemental proxy must be clearly labeled; promotion to a primary input requires a visible methodology-version change.
 11. **Reproducibility:** audit whether raw market inputs or input hashes must be persisted so the same methodology plus the same inputs can reproduce a bit-identical board.
+
+#### Market-threshold audit candidate
+
+Keep the current raw z-score and named driver as diagnostics. The leading candidate uniform rule for audit, not a frozen decision:
+
+```txt
+M(c,t) = max absolute z-score among eligible instruments in channel c at time t
+
+market moving when M(c,t) exceeds the point-in-time
+(1 - alpha) empirical quantile of channel c's prior M distribution
+```
+
+This can remain a uniform methodology because:
+
+- one `alpha` is used across channels;
+- numeric cutoffs vary mechanically with instrument count and correlation;
+- cutoffs are estimated point-in-time, without look-ahead;
+- raw z-score, driver, and breadth remain visible.
+
+Session 16 must compare at least three options:
+
+1. retain legacy `max |z| >= 1.5` only for the legacy baseline;
+2. Methodology 2.0 channel-specific empirical percentile with one common `alpha`;
+3. retain a raw threshold but publish measured channel base rates and breadth without changing the binary rule.
+
+For any percentile proposal, freeze decisions on:
+
+- rolling versus expanding history;
+- minimum sample size;
+- no-look-ahead calculation;
+- instrument-set versioning;
+- stale/ineligible instrument handling;
+- changes in eligible instrument count;
+- correlation and regime sensitivity;
+- fallback behavior before sufficient history exists.
+
+Do not freeze a final market threshold before the audit evidence exists.
+
+#### Market dating, eligibility, and threshold calibration
+
+The market-threshold decision cannot be separated from the date/eligibility decision.
+
+Methodology 2.0 must retain per instrument:
+
+- own-series transform;
+- actual five-observation `windowStart` and `windowEnd`;
+- `asOf` date/time;
+- observation age and business-day age;
+- freshness/eligibility status;
+- z-score;
+- history count.
+
+A documented channel rule must define:
+
+- `marketAsOf`;
+- maximum permitted lag between instruments;
+- stale-instrument exclusion;
+- minimum eligible-instrument count;
+- how breadth is calculated when eligibility changes;
+- whether the channel statistic may combine instruments ending on different dates.
+
+Methodology 2.0 should avoid both extremes:
+
+- one global all-instrument intersection that lets crude date unrelated channels;
+- an unexplained mixture of arbitrarily different dates inside one channel statistic.
+
+The audit must compare own-series calculations with a clearly defined per-channel dating/eligibility rule.
+
+#### Signal-versus-market timing
+
+- A signal first observed after the relevant market close has not yet had an opportunity to be reflected in that close.
+- It must be marked pending the next eligible market observation rather than immediately classified as co-movement or market-only against the prior close.
+- Event `firstSeen` and `lastMaterialChangeAt` should be compared with market-close timestamps, not dates alone.
+- The audit must inspect cases where the market move preceded the signal.
+- Do not claim causal attribution even when timing aligns.
+
+#### Parallel-run comparison
+
+Legacy and Methodology 2.0 are deliberately different systems. Parallel validation must not demand row-level agreement.
+
+The comparison must report:
+
+- raw-headline-to-event-cluster compression ratio;
+- source-origin concentration;
+- parent-domain and leaf-event distribution;
+- direct versus contextual mechanism share;
+- single-origin versus corroborated event share;
+- new/escalating/continuing/de-escalating distribution;
+- channel-elevation frequency;
+- market-moving frequency by channel;
+- full state-distribution matrix;
+- legacy/v2 disagreement cases;
+- cases where legacy elevation came from duplicate or contextual reports;
+- single-instrument versus broad market moves;
+- market-before-signal and after-close/pending cases;
+- stability of cluster identity and lifecycle across runs.
+
+Disagreement is expected during recalibration. Success is determined by auditability, reproducibility, stable lifecycle behavior, sensible base rates, and documented error cases, not by matching legacy rows. The comparison-period criterion must be frozen in Session 17 and defined in distinct eligible market closes, not merely calendar days.
 
 ### Versioning and migration
 
@@ -1104,84 +1400,77 @@ Investigate why the project does not produce one `log/YYYY-MM-DD.json` snapshot 
 
 ---
 
-# Session 14 — Signal Architecture and Market-Data Audit
+# Session 14 — Methodology 2.0 Architecture and Audit Protocol
 
 ## Goal
 
-Determine whether the apparent geopolitical dominance survives semantic event clustering and source normalization, and determine whether the current market transform/dating/state semantics are statistically and operationally fit for Methodology 2.0.
+Turn the conceptual Methodology 2.0 direction into an implementable architecture and a reproducible signal/market audit protocol. Session 14 does not attempt to finish the complete manual signal audit, historical market backtest, or production implementation.
 
 ## Estimated duration
 
-90 minutes. The audit may produce follow-up work, but it must produce concrete evidence in the current session.
+90 minutes for architecture decisions and protocol design. Follow-up Sessions 15-16 perform the evidence collection and measurement.
 
-## Gate 0
+## Tasks
 
-- Confirm the Session 13 implementation is committed/pushed and that the next Action writes a run record and synchronizes public docs, if this has not already happened.
-- Keep this as baseline housekeeping; do not mix methodology code changes into that commit.
-- 2026-07-10 preflight note: local `git status --short` was clean before this log edit, there were no local ahead/unpushed commits, and local `master` was behind `origin/master` by two Action-created snapshot commits. Fast-forward before future implementation work if the latest remote snapshots are needed locally.
+- Verify repository HEAD and confirm the predecessor log amendment is present.
+- Verify legacy automation remains healthy and unchanged.
+- Inventory what raw candidate history is actually available.
+- Identify whether historical reconstruction is possible without fabrication.
+- Decide the raw-candidate persistence contract for future runs.
+- Decide the persistent event-registry architecture and provisional storage paths.
+- Freeze or explicitly defer merge, split, alias, correction, and parent-series rules.
+- Define Methodology 2.0 core fields versus 2.1 expansion fields.
+- Define `assessed`, `unassessed`, `unknown`, and `not-applicable` semantics.
+- Decide the reproducibility contract for deterministic or model-assisted clustering.
+- Define the methodology-parameter artifact list.
+- Define reporting-origin and independent-source rules.
+- Draft the minimal event-to-mechanism-to-channel map required for the five current market channels.
+- Define signal sampling and manual-label protocol for Session 15.
+- Define market backtest, date/eligibility, and empirical-percentile protocol for Session 16.
+- Define signal-versus-market cutoff timing.
+- Define parallel-run comparison metrics and acceptance principles.
+- Amend Sessions 15-20 from the architecture decisions.
+- Make no production-methodology change.
 
-## Signal-audit tasks
+## Planned Session 14 outputs
 
-- Inspect several successful Crucix runs, not only the displayed top 15.
-- Build a representative sample of roughly 100-150 candidate records or event clusters across multiple runs where available.
-- If historical raw candidate records were not persisted, record that limitation and define raw-candidate persistence as a Methodology 2.0 requirement; do not fabricate samples.
-- Cluster related reports into unique underlying events.
-- Manually label event type, parent domain, action stage, directness, corroboration, novelty, scope, and transmission mechanisms.
-- Compare:
-  - share by raw headline;
-  - share by unique event cluster;
-  - share by source;
-  - share by leaf event type;
-  - direct versus contextual transmission;
-  - single-source versus corroborated events;
-  - new/escalating versus continuing events;
-  - how often one current item elevates multiple channels through primary plus `otherCategories`.
-- Answer explicitly: after event clustering and mechanism requirements, does geopolitics still dominate?
+Intended outputs for the actual Session 14, not files created by this log-only architecture amendment:
 
-## Market-audit tasks
+```txt
+audit/session14-architecture-decision.md
+audit/session14-signal-audit-protocol.md
+audit/session14-market-audit-protocol.md
+audit/session14-parallel-comparison-protocol.md
+audit/methodology-2-core-schema-draft.md
+audit/methodology-2-parameter-register.md
+```
 
-- Verify the exact current formulas from `scripts/market-data.mjs`; document them rather than relying only on the old design text.
-- For each instrument, report source, type, latest raw observation date, transformed observation date, actual span of the five-observation window, usable-history count, missingness, z-score, age, and freshness.
-- Compare the current global-common-date result with an own-series/per-instrument calculation for the latest date and a meaningful recent sample.
-- Quantify how often the global alignment holds unrelated channels back and how much the z-scores differ.
-- Estimate historical exceedance rates for `|z| >= 1.5` per instrument and `max |z| >= 1.5` per channel.
-- Measure driver stability, second-driver magnitude, count of instruments above threshold, and whether channel moves are single-instrument or broad.
-- Audit the semantic validity of `priced`: inspect sign, event timing, mechanism, and whether the market move preceded the signal.
-- Decide whether Methodology 2.0 should use per-instrument latest dates, a per-channel common date, or another clearly documented rule.
-
-## Suggested audit outputs
-
-Plan for, but do not create during this log-only work order:
-
-- `audit/session14-signal-sample.jsonl`
-- `audit/session14-signal-audit.md`
-- `audit/session14-market-audit.json`
-- `audit/session14-market-audit.md`
-- `audit/methodology-2-proposal.md`
-- regression fixtures covering positive, negative, ambiguous, duplicate, escalation, continuation, and de-escalation cases.
+Paths remain provisional until Session 14 confirms them.
 
 ## Guardrails
 
 - No production classifier rewrite in Session 14.
-- No changes to existing thresholds.
-- No changes to market sources or proxies.
-- No global-alignment change in production.
+- No live LLM/embedding dependency in production scoring.
+- No market source/proxy change.
+- No threshold change in legacy output.
 - No dashboard redesign.
-- No domain work.
-- No fabricated or recomputed historical snapshots.
-- No rewriting of legacy state names in existing files.
+- No historical rewrite or fabricated candidates.
+- No domain or publication work.
+- No claim that Methodology 2.0 is frozen before Sessions 15-17 produce evidence.
 
 ## Definition of done
 
-- The audit reports whether geopolitical concentration is real after clustering.
-- A proposed leaf taxonomy is documented with examples and exclusions.
-- Current signal multi-counting and source-bias effects are quantified.
-- Current market formulas and dating behavior are verified from code.
-- Trigger frequencies and the `max |z|` instrument-count effect are quantified.
-- A per-instrument/per-channel dating rule is recommended.
-- Direction-neutral state semantics are accepted or rejected with reasons.
-- A Methodology 2.0 proposal, migration path, regression plan, and provisional Sessions 15-17 are recorded.
-- Production outputs remain unchanged.
+Session 14 is complete when:
+
+- registry and assignment-history architecture is accepted or explicitly deferred with a reason;
+- the reproducibility contract is written;
+- the 2.0 core and 2.1 expansion boundary is written;
+- source independence is operationally defined;
+- the parameter register is enumerated;
+- signal and market audit protocols are detailed enough for Codex to execute without methodological invention;
+- parallel-run success metrics are defined without requiring legacy agreement;
+- Sessions 15-20 are updated from those decisions;
+- production outputs remain unchanged.
 
 ---
 
@@ -1306,24 +1595,48 @@ Plan for, but do not create during this log-only work order:
 
 ### Methodology 2.0 audit/rebuild
 
-- [ ] Signal concentration audit completed
-- [ ] Semantic event clustering design frozen
-- [ ] Source-share and source-bias audit completed
-- [ ] Leaf taxonomy frozen
-- [ ] Action-stage/directness/corroboration schema frozen
-- [ ] Raw-candidate persistence decision made
-- [ ] Current market formula verified from code
-- [ ] Own-series versus global-alignment comparison completed
-- [ ] Per-instrument/per-channel dating rule frozen
-- [ ] Historical market-trigger frequency measured
-- [ ] `max |z|` instrument-count effect assessed
-- [ ] Market breadth fields designed
-- [ ] Direction-neutral state semantics frozen
-- [ ] Direction diagnostic decision made
-- [ ] Explicit methodology version stamping implemented
-- [ ] Parallel-run namespace implemented
-- [ ] Regression fixtures passed
-- [ ] Cutover decision completed
+#### Architecture/protocol
+
+- [ ] Methodology 2.0 core versus 2.1 field boundary frozen
+- [ ] Explicit assessment-status semantics frozen
+- [ ] Persistent registry location/format frozen
+- [ ] Immutable assignment-history contract frozen
+- [ ] Parent-series/event-episode hierarchy frozen
+- [ ] Merge/split/alias/correction rules frozen
+- [ ] Raw-candidate persistence contract frozen
+- [ ] Clustering reproducibility contract frozen
+- [ ] Methodology parameter register frozen
+- [ ] Reporting-origin and independent-source rules frozen
+- [ ] Minimal leaf/event-to-mechanism-to-channel map frozen
+- [ ] Signal-versus-market timing rule frozen
+- [ ] Parallel-run comparison protocol frozen
+
+#### Signal audit and implementation
+
+- [ ] Representative raw-candidate sample assembled without fabrication
+- [ ] Source-origin normalization audited
+- [ ] Event clustering manually audited
+- [ ] Legacy headline-to-cluster compression measured
+- [ ] Legacy 60% signal threshold rejected, retained, or replaced for v2 with evidence
+- [ ] Decay and corroboration mappings frozen
+- [ ] Signal v2 parallel output implemented
+
+#### Market audit and implementation
+
+- [ ] Own-series/per-channel date and eligibility rule frozen
+- [ ] Empirical channel trigger rates measured
+- [ ] 2/3/4-instrument threshold asymmetry assessed
+- [ ] Empirical percentile rule accepted or rejected with evidence
+- [ ] Market breadth and second-driver schema frozen
+- [ ] Market/divergence v2 parallel output implemented
+
+#### Validation/cutover
+
+- [ ] Canonical reproducibility test passes
+- [ ] Comparison period completed in distinct eligible market closes
+- [ ] Disagreement cases reviewed
+- [ ] Explicit Methodology 2.0 version stamping implemented
+- [ ] Cutover accepted or rejected with documented reasons
 
 ### Publishability / safety
 
@@ -1415,6 +1728,20 @@ Use this section to record project decisions.
 | 2026-07-10 | `priced` is considered too causal for an absolute-z classifier; `co-movement` is the provisional v2 replacement unless direction/timing validation justifies stronger wording | Current states use absolute market movement and do not establish direction, attribution, timing, or causality. |
 | 2026-07-10 | No crude ETF proxies are added before the core market audit | Proxy promotion would be a methodology change and must not happen before the dating/transform audit. |
 | 2026-07-10 | New thresholds will be frozen only after audit and not tuned for visual interest | Threshold discipline protects the track record from hindsight optimization. |
+| 2026-07-10 architecture-review amendment | The first Methodology 2.0 planning work order was executed, committed, and pushed; this amendment builds on it rather than reopening it | Commit `e4ba8fd` established the first v2 plan, and the architecture review refines scope and sequencing. |
+| 2026-07-10 architecture-review amendment | Phase 3 expands from Sessions 14-17 to Sessions 14-20 | Stateful signal architecture is materially larger than the deterministic market-data refactor. |
+| 2026-07-10 architecture-review amendment | Session 14 is an architecture/audit-protocol gate, while Sessions 15-16 collect evidence | The full manual signal audit and historical market backtest should not be compressed into one planning session. |
+| 2026-07-10 architecture-review amendment | Methodology 2.0 will freeze a minimal operational signal core; the full ontology and enrichment fields may move to 2.1 | The first production v2 needs stable identity, mechanisms, lifecycle, source-origin handling, and versioning before broad enrichment. |
+| 2026-07-10 architecture-review amendment | Explicit mechanism directness remains in the 2.0 core | A market channel must not elevate without evidence for the transmission path. |
+| 2026-07-10 architecture-review amendment | Stable event identity requires persistent state and immutable assignment history | `firstSeen`, novelty, decay, escalation, de-escalation, and cluster continuity cannot be derived from a stateless one-run pipeline. |
+| 2026-07-10 architecture-review amendment | Repeated observations update `lastObservedAt`, while decay keys off `lastMaterialChangeAt` | Repeated coverage alone should not defeat decay unless it carries a material change. |
+| 2026-07-10 architecture-review amendment | Model-assisted cluster assignments must be persisted before deterministic scoring | Live model output cannot be an unrecorded production dependency if canonical boards must be reproducible. |
+| 2026-07-10 architecture-review amendment | Decay, corroboration, source independence, and event-to-channel mappings are methodology parameters | Consequential settings must live in versioned artifacts, not hidden tunables. |
+| 2026-07-10 architecture-review amendment | The legacy 60% signal threshold is not inherited automatically by v2 | Cluster-based signal semantics and score distributions differ from the Phase 1 keyword-score scale. |
+| 2026-07-10 architecture-review amendment | A point-in-time channel percentile with one common `alpha` is the leading market-threshold candidate, not yet a frozen decision | It may handle instrument-count asymmetry while preserving a uniform methodology, but it needs evidence and no-look-ahead rules. |
+| 2026-07-10 architecture-review amendment | Legacy/v2 comparison will evaluate distributions, reproducibility, and disagreement cases rather than demand row-level agreement | Methodology 2.0 is intended to recalibrate the system, not copy legacy rows. |
+| 2026-07-10 architecture-review amendment | After-close signals remain pending the next eligible market observation | A signal first seen after close has not had an opportunity to be reflected in that close. |
+| 2026-07-10 architecture-review amendment | Legacy automation and immutable snapshots continue unchanged during development | Real close-date and run-level history remains useful, but it does not by itself validate Methodology 2.0. |
 
 ---
 
@@ -1458,6 +1785,22 @@ Use this section to log unresolved items.
 | Should directional consistency be descriptive only or later affect classification? | 14 | Open / audit required | Direction diagnostics should be keyed to explicit transmission mechanisms and validated before gating states. |
 | Should Macro/Inflation and Weather/Climate receive market columns in Methodology 2.0? | 14 | Open / audit required | They are signal-only in the legacy baseline. |
 | What parallel-run namespace should be used before cutover? | 14 | Open / audit required | v2 validation output must not overwrite legacy daily snapshots. |
+| What exact minimal leaf set is sufficient for Methodology 2.0 and the five current market channels? | 14 architecture amendment | Open / architecture gate | Avoid forcing the full 16-leaf ontology into the first v2 cutover. |
+| What registry format and path best balance atomic updates, reviewability, and repository growth? | 14 architecture amendment | Open / architecture gate | Candidate paths include `state/events/registry.json`, but no registry is implemented yet. |
+| What raw-candidate retention period is feasible? | 14 architecture amendment | Open / architecture gate | Retention must support auditability without uncontrolled repository growth. |
+| How are parent crises/campaigns separated from specific event episodes? | 14 architecture amendment | Open / architecture gate | A parent-series/event-episode hierarchy should prevent both immortal mega-clusters and excessive fragmentation. |
+| What deterministic merge/split/alias rules are acceptable? | 14 architecture amendment | Open / architecture gate | The rules must preserve immutable historical assignments. |
+| Is deterministic clustering adequate, or is model assistance required? | 14 architecture amendment | Open / architecture gate | Deterministic clustering is reproducible but may be semantically limited. |
+| If model assistance is used, what review and assignment-freeze process applies? | 14 architecture amendment | Open / architecture gate | Model-proposed assignments must be persisted before deterministic scoring. |
+| What exact decay clock and function should be frozen? | 14 architecture amendment | Open / architecture gate | The architecture target distinguishes `lastObservedAt` from `lastMaterialChangeAt`. |
+| What corroboration-to-confidence mapping should be frozen? | 14 architecture amendment | Open / architecture gate | Corroboration should measure reporting-origin independence, not repeated publication. |
+| What constitutes an independent reporting origin in ambiguous syndication cases? | 14 architecture amendment | Open / architecture gate | Domain/outlet counts can overstate independence. |
+| Should Methodology 2.0 use a scalar signal score or a structural elevation gate? | 14 architecture amendment | Open / architecture gate | The legacy 60% keyword-score threshold is not portable by default. |
+| What common `alpha`, lookback, and minimum sample should be tested for channel percentiles? | 14 architecture amendment | Open / market audit | The percentile rule is a candidate, not a frozen threshold. |
+| How should percentile history be conditioned when the eligible instrument set changes? | 14 architecture amendment | Open / market audit | Instrument-set versioning and stale/ineligible handling affect base rates. |
+| What maximum date gap is allowed within one channel? | 14 architecture amendment | Open / market audit | The v2 dating rule should avoid both global-board lag and unexplained mixed-date statistics. |
+| How many distinct eligible market closes are required for parallel validation? | 14 architecture amendment | Open / validation gate | The comparison period should not be defined only in calendar days. |
+| Which canonical fields are excluded from bit-identical reproduction because they are volatile metadata? | 14 architecture amendment | Open / reproducibility gate | `generatedAt` may be volatile even when the normalized board payload is reproducible. |
 
 ---
 
@@ -1504,6 +1847,20 @@ Use this section to track problems.
 | A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14 | Medium | Open / audit required | Current formulas use `commonDates[index - LOOKBACK_OBSERVATIONS]`, not each instrument's own valid observation calendar. |
 | Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14 | Medium | Open / audit required | The current channel driver is the largest absolute z-score among eligible instruments, with no adjustment for instrument count. |
 | Raw market inputs may not currently be persisted strongly enough for bit-identical historical reproduction | 14 | Medium | Open / audit required | Generated artifacts store transformed readings and metadata, but the audit must decide whether raw inputs or input hashes are required. |
+| Methodology 2.0 planning previously under-budgeted the stateful signal rebuild | 14 architecture amendment | Medium | Open / audit required | The first plan compressed architecture, audit, signal implementation, market implementation, and cutover into too few sessions. |
+| No persistent cross-run event registry is documented as implemented | 14 architecture amendment | High | Open / audit required | Repository inspection found no `state/events/registry.json` or equivalent persistent event-state artifact. |
+| Without `lastObservedAt` versus `lastMaterialChangeAt`, repeated coverage could defeat decay | 14 architecture amendment | Medium | Open / audit required | Decay should key off material changes, not merely another article appearing. |
+| Merge/split behavior can silently rewrite history unless assignments remain immutable | 14 architecture amendment | Medium | Open / audit required | Candidate-to-cluster assignments need append-only provenance and lineage rules. |
+| Live model-assisted clustering would break reproduction if assignments are not persisted | 14 architecture amendment | High | Open / audit required | Production scoring must consume recorded assignments rather than a drifting model response. |
+| Absent optional fields are ambiguous without explicit assessment status | 14 architecture amendment | Medium | Open / audit required | Missing data must distinguish unassessed, unknown, not-applicable, and assessed values. |
+| The full proposed taxonomy may create implementation scope before the minimum channel mapping is validated | 14 architecture amendment | Medium | Open / audit required | Methodology 2.0 should freeze a small operational core before expanding to Methodology 2.1 ontology enrichment. |
+| Decay and corroboration mappings are hidden tunables until versioned | 14 architecture amendment | Medium | Open / audit required | Consequential signal parameters need a methodology parameter register. |
+| Simple outlet/domain counts overstate independent corroboration under syndication | 14 architecture amendment | Medium | Open / audit required | Source independence must be based on reporting origin, not repeated publication copies. |
+| The legacy 60% signal threshold is tied to the Phase 1 keyword-score scale and is not portable to event clusters | 14 architecture amendment | Medium | Open / audit required | V2 may need a structural elevation gate or newly calibrated score. |
+| Raw max absolute z-score threshold produces structurally different trigger opportunities for channels with 2, 3, and 4 instruments | 14 architecture amendment | Medium | Open / audit required | Independence sanity checks show crossing probability rises with instrument count before correlation is measured. |
+| A percentile threshold can introduce look-ahead or regime drift unless its history and fallback rules are frozen | 14 architecture amendment | Medium | Open / audit required | Rolling/expanding history, minimum sample, instrument eligibility, and fallback rules must be specified before adoption. |
+| Signals observed after close can be misclassified against a market observation that preceded them | 14 architecture amendment | Medium | Open / audit required | After-close signals should remain pending until the next eligible market observation. |
+| Expecting row-level agreement in the parallel run would misdiagnose intended recalibration as a bug | 14 architecture amendment | Low | Open / audit required | V2 success should be based on auditability, reproducibility, sensible base rates, lifecycle stability, and documented disagreements. |
 
 ---
 
@@ -1542,6 +1899,14 @@ Use this section to change the plan based on what happened.
 | 13 | Production v1 continues daily during the audit | The legacy baseline remains useful as long as it is clearly labeled and unchanged. |
 | 13 | No proxies, source swaps, threshold changes, dashboard redesign, or history rewrite occur before the audit report | These would be methodology or publication changes and must wait for evidence. |
 | 13 | Sessions 15-17 are provisional and must be amended from the evidence | The Session 14 audit can change the rebuild sequence. |
+| 13 architecture review | Use Session 14 to freeze architecture and audit protocols before asking Codex to build audit datasets or production code | The persistent signal system has state, provenance, and reproducibility questions that must be settled first. |
+| 13 architecture review | Do not attempt the complete signal and market audit in Session 14 | Session 14 is limited to architecture decisions and executable protocols. |
+| 13 architecture review | Sessions 15 and 16 are evidence sessions | Session 15 handles signal sampling/clustering measurement; Session 16 handles market dating, eligibility, and threshold measurement. |
+| 13 architecture review | Session 17 is the methodology-freeze gate | Core schema, lifecycle rules, mappings, parameters, migration contracts, and tests should freeze only after evidence. |
+| 13 architecture review | Only Sessions 18-19 implement parallel v2 outputs | Implementation should follow the frozen specification rather than inventing architecture during coding. |
+| 13 architecture review | Session 20 decides migration/cutover | Cutover depends on parallel-run review, lifecycle behavior, reproducibility, and documented disagreement cases. |
+| 13 architecture review | Keep legacy automation running so real close-date and run-level history continues accumulating | The legacy baseline remains useful during the pause, even though it does not validate Methodology 2.0. |
+| 13 architecture review | Do not add proxies, retune legacy thresholds, change public state names, or alter old snapshots during this phase | Legacy output and historical records must remain stable while v2 is designed and tested. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1565,6 +1930,17 @@ Only do these after Phase 2 works.
 - [ ] Add input hashing/raw-input archival for reproducibility
 - [ ] Add a parallel methodology comparison page
 - [ ] Add post-cutover track-record evaluation by methodology version
+- [ ] Add parent-series/event-episode browser
+- [ ] Add cluster merge/split review tooling
+- [ ] Add human correction audit trail
+- [ ] Add source-origin/syndication resolver
+- [ ] Add canonical raw-candidate archive and content hashes
+- [ ] Add model-assisted clustering review queue
+- [ ] Add channel empirical-base-rate display
+- [ ] Add percentile-history diagnostics
+- [ ] Add pending-after-close state display
+- [ ] Add methodology-version comparison page
+- [ ] Add Methodology 2.1 ontology/enrichment expansion
 - [ ] After 30–40 days of log rows: compute and display the track record — how often `radar-claim` preceded a market move within N days, and how often it did not
 
 ---
@@ -1970,14 +2346,19 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 
 **Section 12 launch-condition adjustment after Session 13:** CI proof, hardening, README v2, publishability checks, public log verification, run-level visibility, and same-close-date docs sync are complete locally. Close-date snapshots remain sparse by design, and run-level records now live under `log/runs/`. The roughly two-week close-date log-depth launch condition remains open. Screenshot remains open. Domain remains deferred.
 
-**Section 12 launch-condition adjustment dated 2026-07-10:** Publication/domain/screenshot progression is paused pending the Methodology 2.0 audit. Existing Phase 2 launch-condition checkmarks remain historical facts and should not be removed. The current public dashboard remains an experimental legacy baseline and must not be presented as a validated predictive system.
+**Section 12 launch-condition adjustment dated 2026-07-10:** Publication/domain/screenshot progression is paused pending the Methodology 2.0 audit and architecture gates. Existing Phase 2 launch-condition checkmarks remain historical facts and should not be removed. The current public dashboard remains an experimental legacy baseline and must not be presented as a validated predictive system. Continued legacy log accumulation is useful during this pause, but it does not itself validate Methodology 2.0.
 
 New open launch conditions before publication/domain progression resumes:
 
-- [ ] Session 14 methodology audit completed
-- [ ] Methodology 2.0 proposal frozen
-- [ ] Parallel validation completed without overwriting legacy snapshots
-- [ ] Explicit methodology versioning implemented in new artifacts
+- [ ] Session 14 architecture/protocol gate complete
+- [ ] Signal and market audits complete
+- [ ] Methodology 2.0 core schema and parameter register frozen
+- [ ] Persistent registry and reproducibility contract implemented
+- [ ] Signal and market v2 parallel outputs implemented
+- [ ] Comparison period completed in distinct eligible market closes
+- [ ] Disagreement and lifecycle cases reviewed
+- [ ] Explicit methodology version visible in production artifacts
+- [ ] Cutover accepted with documented reasons
 
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
@@ -1989,4 +2370,4 @@ New open launch conditions before publication/domain progression resumes:
 Ready for session 14.
 ```
 
-Session 14 is the combined signal-architecture and market-data audit.
+Session 14 is the Methodology 2.0 architecture and audit-protocol gate.
