@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-09T01:12:41.827Z",
+  "generatedAt": "2026-07-10T01:12:35.880Z",
   "date": "2026-07-02",
   "asOfClose": "2026-07-02",
   "framing": "readings as of market close, 2026-07-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-09T01:12:39.088Z",
-    "generatedDate": "2026-07-09",
+    "generatedAt": "2026-07-10T01:12:32.235Z",
+    "generatedDate": "2026-07-10",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-09T01:12:39.088Z",
-    "generatedDate": "2026-07-09",
-    "runDate": "2026-07-09",
+    "generatedAt": "2026-07-10T01:12:32.235Z",
+    "generatedDate": "2026-07-10",
+    "runDate": "2026-07-10",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-09, readings as of market close, 2026-07-02 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-10, readings as of market close, 2026-07-02 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-02",
-      "generatedDate": "2026-07-09",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-07-09, readings as of market close, 2026-07-02 (7 calendar days old)."
+      "generatedDate": "2026-07-10",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-07-10, readings as of market close, 2026-07-02 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 1,
-    "calm": 3,
+    "radar-claim": 2,
+    "calm": 2,
     "priced": 1
   },
   "rows": [
@@ -63,29 +63,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 14,
+      "signal_primary_count": 13,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[4]",
         "category": "Geopolitical Escalation",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": true,
-        "rawScore": 19,
-        "confidence": "High",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "russia",
-          "ukraine"
+          "oil",
+          "crude",
+          "iran",
+          "blockade"
         ],
-        "text": "On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems Forces. The strike tar",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems..."
+        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
+        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
       },
       "market_z": 1.38,
       "abs_market_z": 1.38,
@@ -96,7 +97,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -121,35 +122,37 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 9,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 17,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "drone",
-          "refinery"
+          "oil",
+          "crude",
+          "iran",
+          "blockade"
         ],
-        "text": "Refinery workers in Nizhnekamsk gathered to watch, cheering and whistling, as a Ukrainian FP-1 drone struck their plant this morning.",
-        "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Refinery workers in Nizhnekamsk gathered to watch, cheering and whistling, as a Ukrainian FP-1 drone struck their plant this morning."
+        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
+        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
       },
       "market_z": -0.946,
       "abs_market_z": 0.946,
@@ -160,8 +163,8 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
@@ -185,36 +188,37 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[4]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Geopolitical Escalation",
+        "primaryCategory": "Energy Shock",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 17,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "russia",
-          "ukraine"
+          "oil",
+          "crude",
+          "iran",
+          "blockade"
         ],
-        "text": "On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems Forces. The strike tar",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: On July 8, Ukrainian drones hit a key electricity supply hub running from Russia to occupied Crimea, reported Robert \"Madyar\" Brovdi, Commander of the Ukraine's Unmanned Systems..."
+        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
+        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
       },
       "market_z": -2.221,
       "abs_market_z": 2.221,
@@ -225,7 +229,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
