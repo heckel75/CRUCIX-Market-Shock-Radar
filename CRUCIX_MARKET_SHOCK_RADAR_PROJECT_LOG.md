@@ -18,7 +18,7 @@
 **Project name:** CRUCIX Market Shock Radar  
 **Core idea:** Convert Crucix OSINT signals into possible capital-market transmission channels, then put each channel's signal reading **next to what the market is actually pricing**, and log the divergence daily.  
 **Local dashboard URL:** `http://localhost:3117/market-shock.html`  
-**Primary input:** `http://localhost:3117/api/data` plus free market data (FRED API, Stooq CSV)  
+**Primary input:** `http://localhost:3117/api/data` plus free market data (FRED API + Tiingo EOD `adjClose` for ETF price instruments)
 **Primary output:** `dashboard/public/market-shock.json`, `dashboard/public/market-readings.json`, `dashboard/public/divergence.json`, `dashboard/public/market-shock.html`, dated daily snapshots under `log/`  
 **Public deployment:** currently `https://heckel75.github.io/CRUCIX-Market-Shock-Radar/`; target canonical home is `crucix.divergencelog.com` (subdomain of the owned `divergencelog.com`, where the World Cup project lives at `worldcup.divergencelog.com`)
 
@@ -118,7 +118,10 @@ Commit/push shortcut:
 ## 3. Current State
 
 **Current session cursor:** Session 13 complete — next session is Session 14
-**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. The radar currently produces an estimate and puts it next to nothing; Phase 2 adds the market side so each channel shows signal vs. market pricing, classified into divergence states, logged daily. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).  
+**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. Phase 2 added the market side so each channel shows signal vs. market movement, classified into divergence states and logged daily. Phase 2 is now the operational **legacy baseline**, not the final methodology. Methodology 2.0 is being audited and designed beginning in Session 14. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).
+**Methodology review status:** Session 14 is a methodology-review gate for both the OSINT signal layer and the market-data layer. Launch staging, custom-domain work, and the deferred board screenshot are paused until the audit is resolved. Existing daily automation should continue unchanged during the audit unless it is broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
+**Signal layer status:** The current signal layer is still a rule-based keyword classifier with exact/canonical text deduplication. It does not perform semantic event clustering. `Geopolitical Escalation` is currently too broad to serve as a final actionable leaf category; observed concentration may reflect real conditions, source mix, repeated coverage of the same underlying event, or all three.
+**Market layer status:** The current market layer uses FRED plus Tiingo EOD `adjClose`, a uniform 5-common-observation transform, a trailing 252-common-date transformed window, global all-instrument common-date alignment, and per-channel `max |z|` driver selection. The global date alignment allows lagging Brent/WTI observations to hold back unrelated channels. Current state names use absolute market movement and therefore do not prove direction, causality, or that an OSINT event was literally "priced."
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
@@ -126,8 +129,8 @@ Commit/push shortcut:
 **Market shock JSON generated:** Yes  
 **Dashboard created:** Yes. Dashboard v2 is published. `dashboard/public/market-shock.html` has been reworked so the divergence board is the hero element, reads `divergence.json`, keeps Shock Mix prominent, demotes the Market Shock Score, and now shows dated lagging/stale market-reading warnings when `divergence.json` carries them.
 **Public GitHub Pages deployment:** Yes. GitHub Pages serves from `docs/`. Session 9 published Dashboard v2 to `docs/index.html` and copied refreshed static JSON files to `docs/`: `market-shock.json`, `market-readings.json`, and `divergence.json`. Session 10 added `docs/history.html` and `docs/log/` copies for the daily log. Session 11 synced warning-display updates into `docs/index.html`, `docs/history.html`, and `docs/divergence.json`. Session 12 verified that public GitHub Pages is serving the latest committed `docs/` files from `origin/master`, that public dashboard/history fetches are relative, and that no local-only `localhost` fetch is used in public files. Session 13 fixed same-close-date docs sync so `docs/*.json` is always refreshed from `dashboard/public/*.json`, even when the close-date snapshot is kept. GitHub Pages continues to use the existing project URL for now. Domain/subdomain setup is deferred.
-**Market data fetcher:** Created and verified in Session 7; hardened in Session 11. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, computes aligned 5-observation z-scores against a trailing 252-common-date window, writes `dashboard/public/market-readings.json`, includes freshness metadata and lagging/stale warnings, fails loudly on missing keys/source failures/non-JSON responses, and writes JSON atomically.
-**Divergence engine:** Created and verified in Session 8; hardened in Session 11. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm`, preserves market freshness warnings, and writes `dashboard/public/divergence.json` atomically.
+**Market data fetcher:** Created and verified in Session 7; hardened in Session 11. `scripts/market-data.mjs` fetches FRED + Tiingo EOD data, aligns all instruments to one global common date, computes 5-common-observation price returns or level changes against a trailing 252-common-date transformed window, writes `dashboard/public/market-readings.json`, includes freshness metadata and lagging/stale warnings, fails loudly on missing keys/source failures/non-JSON responses, and writes JSON atomically.
+**Divergence engine:** Created and verified in Session 8; hardened in Session 11. `scripts/divergence.mjs` reads `market-shock.json` and `market-readings.json`, maps Phase-1 categories to Phase-2 channels, aggregates both primary categories and `otherCategories`, normalizes signal scores against the Phase-1 20-point item ceiling, applies the frozen thresholds, classifies rows into `radar-claim`, `priced`, `radar-miss`, or `calm` using absolute market z-score movement, preserves market freshness warnings, and writes `dashboard/public/divergence.json` atomically.
 **Daily log / history:** Implemented in Session 10, CI-proven in Session 11, and clarified in Session 13. Close-date snapshots are intentionally keyed by market close date / `asOfClose`, not by run date, so sparse `log/YYYY-MM-DD.json` snapshots are expected and must not be fabricated. Real close-date snapshots now include `log/2026-06-15.json`, `log/2026-06-18.json`, `log/2026-06-22.json`, `log/2026-06-26.json`, and `log/2026-06-29.json`; Pages copies include matching files under `docs/log/`; static close-date manifests are `log/index.json` and `docs/log/index.json`. Session 13 added run-level logging under `log/runs/` plus public copies under `docs/log/runs/`, so every daily run can be visible even when the market close date has not advanced. The first run record is `log/runs/2026-07-08T01-05-28-175Z.json`; `log/runs/index.json` and `docs/log/runs/index.json` both have count `1` and match. History page exists at `dashboard/public/history.html` and `docs/history.html`, with Session 11 support for snapshot warnings. The latest lag warning remains expected source lag: FRED Brent `DCOILBRENTEU` and WTI `DCOILWTICO` currently hold the global common-date alignment at `2026-06-29`. CI automation remains proven. Local fallback protocol exists at `docs/daily-run-protocol.md`.
 **README created:** Yes. README v2 completed in Session 11 with divergence board rules, four states, frozen thresholds, uniform market transform, data sources, dated log/history, Crucix attribution, and disclaimer.
 **Board screenshot:** Deferred intentionally by the user in Session 11; do not mark complete until captured in a later session.
@@ -195,6 +198,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 11 git checks:** CI proof and hardening completed. Validation passed; `.env` is local and not tracked; secret scan found no literal API secrets. End state before project-log update included modified script/dashboard/docs/README files from the Session 11 reliability pass, with no commit or push.
 **Fresh Session 12 git checks:** After `git pull --ff-only`, local `master` fast-forwarded from `f5fbde2` to `9fc3bad` and now matches `origin/master`. `git status --short` produced no changed files, with only a warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Latest five commits: `9fc3bad Update CRUCIX daily snapshot`; `002e2ec Update CRUCIX daily snapshot`; `9305a0e Update CRUCIX daily snapshot`; `f5fbde2 Make daily snapshot idempotent on stale market dates`; `3582d9e Harden daily snapshot workflow`.
 **Fresh Session 13 git checks:** Investigation confirmed the Action ran daily, close-date snapshots were sparse by design, and same-close-date runs could succeed while only committing `dashboard/public/*.json`. Implementation changed `scripts/daily-snapshot.mjs`, `.github/workflows/daily-snapshot.yml`, and `.gitignore`, then `npm run snapshot` generated/updated `docs/*.json`, `log/runs/*.json`, and `docs/log/runs/*.json`. Validation passed; no commit or push yet.
+**Fresh Session 14 preflight git checks:** On 2026-07-10 before this log-only edit, `git status --short` returned no changed files, with the recurring warning that Git could not read `C:\Users\heyke/.config/git/ignore`. `git status -sb` reported local `master` behind `origin/master` by two commits and no local ahead commits. Therefore the old Session 13 "no commit or push yet" note is stale: there are no uncommitted or locally unpushed Session 13 changes in this checkout, but the local branch should be fast-forwarded before future implementation work if the latest Action-created snapshots are needed locally.
 
 ---
 
@@ -212,9 +216,9 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 | 6 | 45 min | Test, troubleshoot, screenshot, and record demo | Done |
 | 7 (old) | 30 min | ~~Final polish and LinkedIn launch package~~ | **Superseded 2026-06-11** |
 
-### Phase 2 — Divergence upgrade (current)
+### Phase 2 — Divergence upgrade / legacy baseline (complete)
 
-Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no gap to read and nothing for reality to grade. Phase 2 puts the market on the page, classifies the disagreement, demotes the score, and turns the snapshot into a dated log.
+Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no gap to read and nothing for reality to grade. Phase 2 puts the market on the page, classifies the disagreement, demotes the score, and turns the snapshot into a dated log. As of 2026-07-10, this is the operational legacy/pre-2.0 baseline while Methodology 2.0 is audited.
 
 | Session | Target time | Main goal | Status |
 |---:|---:|---|---|
@@ -226,11 +230,24 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 | 12 | 45 min | Log accumulation and public verification: verify Pages/docs sync, public log freshness, lag diagnosis, no domain work | Done |
 | 13 | 60 min | Daily-run visibility: diagnose sparse close-date snapshots, add run manifest, fix same-close-date docs sync | Done |
 
+### Phase 3 — Methodology 2.0 audit and rebuild
+
+| Session | Target time | Main goal | Status |
+|---:|---:|---|---|
+| 14 | 90 min | Signal architecture and market-data audit; quantify present failure modes; freeze a Methodology 2.0 proposal; no production-methodology change | Planned |
+| 15 | 90 min | Implement event clustering, leaf taxonomy, evidence/action-stage schema, and regression fixtures in parallel with legacy output | Provisional — depends on Session 14 |
+| 16 | 90 min | Implement market-data v2 dating/transform metadata and direction-neutral divergence semantics in parallel | Provisional — depends on Session 14 |
+| 17 | 75 min | Parallel-run validation, dashboard/history migration, methodology stamping, and cutover decision | Provisional — depends on Sessions 15–16 |
+
+Sessions 15–17 are provisional. They must be revised from Session 14 evidence rather than treated as frozen implementation instructions.
+
 ---
 
-## 4b. Phase 2 Design Spec — Divergence Upgrade
+## 4b. Legacy Phase 2 / pre-2.0 Baseline — Divergence Upgrade
 
-This spec is frozen as of 2026-06-11. ChatGPT sessions implement it; they do not redesign it. If implementation forces a change, log it under Decisions Made with a reason.
+This spec is frozen as of 2026-06-11 for all existing historical snapshots. It remains the legacy/pre-2.0 baseline and must not be silently changed in place. A validated Methodology 2.0 must be introduced as a visible versioned change, and old snapshots must not be recomputed. If implementation forces a change, log it under Decisions Made with a reason.
+
+**2026-07-10 audit note:** The current generated artifacts do not carry an explicit `methodologyVersion` field. Treat existing snapshots and run records as legacy/pre-2.0 outputs until Methodology 2.0 version stamping is implemented.
 
 ### 0. Methodology versioning and rollout guardrails
 
@@ -335,6 +352,93 @@ The history page renders these rows backwards. After 30–40 days, the log's rea
 - CI feasibility was proven in Session 11 after exact repository secrets were configured and the manual "Daily snapshot" Action created the real `2026-06-18` snapshot.
 - Fallback if Crucix cannot run in CI: use the documented local one-command daily protocol in `docs/daily-run-protocol.md`. A log with a manual step is still a log; an undated dashboard is not.
 - Domain setup is deferred to a future session. Do not create `docs/CNAME`, change GitHub Pages custom-domain settings, or update the apex `divergencelog.com` index until that dedicated session.
+
+---
+
+## 4c. Methodology 2.0 Audit Principles
+
+These are **audit targets**, not completed implementation. Session 14 must test and refine them against actual CRUCIX runs, generated artifacts, and current code behavior before Sessions 15-17 are treated as implementation plans.
+
+### Signal architecture
+
+- The scored unit becomes an **underlying event cluster**, not a headline or feed item.
+- Repeated reports increase corroboration/confidence; they do not multiply severity or count as independent shocks.
+- `Geopolitical` becomes a parent facet, not the final scored event type.
+- Candidate leaf event types should include, at minimum:
+  - kinetic action;
+  - force posture or mobilization;
+  - strategic/nuclear signaling;
+  - sanctions or asset restrictions;
+  - tariffs/trade restrictions;
+  - export/technology controls;
+  - maritime/chokepoint disruption;
+  - energy infrastructure or production disruption;
+  - industrial/logistics outage;
+  - sovereign/political instability;
+  - banking/funding/credit stress;
+  - central-bank surprise;
+  - fiscal-policy surprise;
+  - major macro-data surprise;
+  - cyber/critical-infrastructure disruption;
+  - extreme weather/natural disaster/health emergency.
+- Separate three layers explicitly: **event -> transmission mechanism -> market observation**.
+- Require explicit transmission-mechanism mapping before an event elevates a market channel.
+- Proposed event fields:
+  - `eventClusterId`
+  - `eventType`
+  - `parentDomain`
+  - `actionStage` (`rhetoric`, `threatened`, `announced`, `implemented`, `impact-observed`)
+  - `directness` (`direct`, `contextual`, `none`)
+  - `corroboration`
+  - `independentSourceCount`
+  - `sourceQuality`
+  - `novelty` (`new`, `escalating`, `continuing`, `de-escalating`)
+  - `scope`
+  - `firstSeen`
+  - `lastSeen`
+  - affected assets, locations, infrastructure, and mechanisms when known.
+- A single unverified source cannot independently elevate a channel unless a documented exception is approved.
+- Continuing events decay unless a new escalation or observed consequence occurs.
+- De-escalation must be represented explicitly.
+
+### Market-data architecture
+
+Keep these parts unless the audit finds a concrete defect:
+
+- FRED plus Tiingo as the current primary sources;
+- Tiingo `adjClose` for ETF price instruments;
+- one uniform distinction between price returns and level changes;
+- named driver instrument;
+- loud source/key failures;
+- atomic JSON writes;
+- freshness metadata and warnings;
+- immutable historical snapshots.
+
+Audit and likely amend these parts for Methodology 2.0:
+
+1. **Own-series calculation:** compute each instrument's transform on its own valid observation series/calendar instead of first intersecting every instrument onto one global date set.
+2. **Five-observation meaning:** verify and document the exact span of each "5-day" calculation. The target is five valid observations for that instrument, with the actual start/end dates retained.
+3. **Trailing window:** use the latest 252 valid transformed observations per instrument, subject to the Session 14 audit and an explicit frozen definition.
+4. **Dating:** persist `asOf`, observation age, business-day age, and freshness per instrument; derive a visible per-channel `marketAsOf` and freshness state. One lagging crude series must not silently date unrelated channels.
+5. **Channel evidence:** retain the driver, but also expose the second-largest absolute z-score, number of eligible instruments, number above threshold, and a market-breadth indicator.
+6. **Multiple-instrument threshold audit:** quantify the empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. As a simple independence sanity check, four standard-normal instruments would produce at least one `|z| >= 1.5` on roughly 44% of observations; actual correlated data must be measured.
+7. **State semantics:** the current absolute-z test detects unusual movement, not causal pricing. For Methodology 2.0, provisionally replace:
+   - `radar-claim` -> `signal-leading`
+   - `priced` -> `co-movement`
+   - `radar-miss` -> `market-only`
+   - `calm` -> `calm`
+   Preserve legacy state names in historical snapshots and provide a documented mapping rather than rewriting history.
+8. **Direction diagnostic:** consider `expectedDirection`, `observedDirection`, and `directionalConsistency` as a separate diagnostic keyed to the explicit transmission mechanism. Do not claim causality and do not gate the main state on direction until validated.
+9. **Threshold discipline:** keep current thresholds unchanged for legacy output. Freeze any Methodology 2.0 threshold only after the audit; do not optimize thresholds to make the board more interesting.
+10. **Proxy discipline:** do not add BNO/USO or promote any proxy during Session 14. A future supplemental proxy must be clearly labeled; promotion to a primary input requires a visible methodology-version change.
+11. **Reproducibility:** audit whether raw market inputs or input hashes must be persisted so the same methodology plus the same inputs can reproduce a bit-identical board.
+
+### Versioning and migration
+
+- Existing snapshots remain immutable under the legacy/pre-2.0 methodology.
+- Methodology 2.0 artifacts must carry an explicit `methodologyVersion`.
+- Parallel validation output must use a separate path or namespace so it cannot overwrite legacy daily snapshots.
+- The production cutover happens only after a documented comparison period and regression tests.
 
 ---
 
@@ -1000,6 +1104,87 @@ Investigate why the project does not produce one `log/YYYY-MM-DD.json` snapshot 
 
 ---
 
+# Session 14 — Signal Architecture and Market-Data Audit
+
+## Goal
+
+Determine whether the apparent geopolitical dominance survives semantic event clustering and source normalization, and determine whether the current market transform/dating/state semantics are statistically and operationally fit for Methodology 2.0.
+
+## Estimated duration
+
+90 minutes. The audit may produce follow-up work, but it must produce concrete evidence in the current session.
+
+## Gate 0
+
+- Confirm the Session 13 implementation is committed/pushed and that the next Action writes a run record and synchronizes public docs, if this has not already happened.
+- Keep this as baseline housekeeping; do not mix methodology code changes into that commit.
+- 2026-07-10 preflight note: local `git status --short` was clean before this log edit, there were no local ahead/unpushed commits, and local `master` was behind `origin/master` by two Action-created snapshot commits. Fast-forward before future implementation work if the latest remote snapshots are needed locally.
+
+## Signal-audit tasks
+
+- Inspect several successful Crucix runs, not only the displayed top 15.
+- Build a representative sample of roughly 100-150 candidate records or event clusters across multiple runs where available.
+- If historical raw candidate records were not persisted, record that limitation and define raw-candidate persistence as a Methodology 2.0 requirement; do not fabricate samples.
+- Cluster related reports into unique underlying events.
+- Manually label event type, parent domain, action stage, directness, corroboration, novelty, scope, and transmission mechanisms.
+- Compare:
+  - share by raw headline;
+  - share by unique event cluster;
+  - share by source;
+  - share by leaf event type;
+  - direct versus contextual transmission;
+  - single-source versus corroborated events;
+  - new/escalating versus continuing events;
+  - how often one current item elevates multiple channels through primary plus `otherCategories`.
+- Answer explicitly: after event clustering and mechanism requirements, does geopolitics still dominate?
+
+## Market-audit tasks
+
+- Verify the exact current formulas from `scripts/market-data.mjs`; document them rather than relying only on the old design text.
+- For each instrument, report source, type, latest raw observation date, transformed observation date, actual span of the five-observation window, usable-history count, missingness, z-score, age, and freshness.
+- Compare the current global-common-date result with an own-series/per-instrument calculation for the latest date and a meaningful recent sample.
+- Quantify how often the global alignment holds unrelated channels back and how much the z-scores differ.
+- Estimate historical exceedance rates for `|z| >= 1.5` per instrument and `max |z| >= 1.5` per channel.
+- Measure driver stability, second-driver magnitude, count of instruments above threshold, and whether channel moves are single-instrument or broad.
+- Audit the semantic validity of `priced`: inspect sign, event timing, mechanism, and whether the market move preceded the signal.
+- Decide whether Methodology 2.0 should use per-instrument latest dates, a per-channel common date, or another clearly documented rule.
+
+## Suggested audit outputs
+
+Plan for, but do not create during this log-only work order:
+
+- `audit/session14-signal-sample.jsonl`
+- `audit/session14-signal-audit.md`
+- `audit/session14-market-audit.json`
+- `audit/session14-market-audit.md`
+- `audit/methodology-2-proposal.md`
+- regression fixtures covering positive, negative, ambiguous, duplicate, escalation, continuation, and de-escalation cases.
+
+## Guardrails
+
+- No production classifier rewrite in Session 14.
+- No changes to existing thresholds.
+- No changes to market sources or proxies.
+- No global-alignment change in production.
+- No dashboard redesign.
+- No domain work.
+- No fabricated or recomputed historical snapshots.
+- No rewriting of legacy state names in existing files.
+
+## Definition of done
+
+- The audit reports whether geopolitical concentration is real after clustering.
+- A proposed leaf taxonomy is documented with examples and exclusions.
+- Current signal multi-counting and source-bias effects are quantified.
+- Current market formulas and dating behavior are verified from code.
+- Trigger frequencies and the `max |z|` instrument-count effect are quantified.
+- A per-instrument/per-channel dating rule is recommended.
+- Direction-neutral state semantics are accepted or rejected with reasons.
+- A Methodology 2.0 proposal, migration path, regression plan, and provisional Sessions 15-17 are recorded.
+- Production outputs remain unchanged.
+
+---
+
 ## 5. Done Checklist
 
 ### Setup
@@ -1119,6 +1304,27 @@ Investigate why the project does not produce one `log/YYYY-MM-DD.json` snapshot 
 - [x] GitHub Action git-add paths updated for run logs
 - [ ] Custom domain configured
 
+### Methodology 2.0 audit/rebuild
+
+- [ ] Signal concentration audit completed
+- [ ] Semantic event clustering design frozen
+- [ ] Source-share and source-bias audit completed
+- [ ] Leaf taxonomy frozen
+- [ ] Action-stage/directness/corroboration schema frozen
+- [ ] Raw-candidate persistence decision made
+- [ ] Current market formula verified from code
+- [ ] Own-series versus global-alignment comparison completed
+- [ ] Per-instrument/per-channel dating rule frozen
+- [ ] Historical market-trigger frequency measured
+- [ ] `max |z|` instrument-count effect assessed
+- [ ] Market breadth fields designed
+- [ ] Direction-neutral state semantics frozen
+- [ ] Direction diagnostic decision made
+- [ ] Explicit methodology version stamping implemented
+- [ ] Parallel-run namespace implemented
+- [ ] Regression fixtures passed
+- [ ] Cutover decision completed
+
 ### Publishability / safety
 
 - [x] `.env` is local and not tracked
@@ -1196,6 +1402,19 @@ Use this section to record project decisions.
 | 2026-07-08 | Increment methodology version for source changes, transform/window changes, freshness-threshold recalibration, calendar changes, or proxy promotion | These changes alter interpretation and must be visible to readers and regression checks. |
 | 2026-07-08 | Do not blur primary spot data and timely futures proxies | EIA/FRED spot data can remain primary with BNO/USO as supplemental timely reads, or proxies can become primary with spot as lagged confirmation. Quiet swaps are not allowed. |
 | 2026-07-08 | Sequence rollout as additive logging first, calibrated freshness next, proxies last | Snapshots and per-channel dating can ship immediately. Freshness badges need fetch-history calibration for `expectedLagBD`; proxies should arrive later as labeled channels. |
+| 2026-07-10 | Session 14 is now a combined signal-architecture and market-data audit, not domain staging or routine log accumulation | The apparent geopolitical concentration and market dating/state semantics both need evidence before launch work resumes. |
+| 2026-07-10 | Launch/domain/screenshot work is paused until methodology review is complete | Publication should not advance while the methodology may materially change. |
+| 2026-07-10 | The Methodology 2.0 scored unit will be an underlying event cluster | Duplicate reporting should contribute corroboration, not severity/count. |
+| 2026-07-10 | `Geopolitical` will be a parent facet, not a final leaf event type | The current broad category hides actionable distinctions such as kinetic action, sanctions, mobilization, chokepoints, and policy shocks. |
+| 2026-07-10 | Methodology 2.0 will separate event, transmission mechanism, and market observation | Market-channel elevation should require an explicit mechanism rather than keyword proximity alone. |
+| 2026-07-10 | Current Phase 2 output continues as the legacy baseline during the audit | Daily automation can keep running while v2 is designed in parallel. |
+| 2026-07-10 | Existing snapshots are immutable and will not be recomputed | Historical credibility depends on preserving what was actually generated at the time. |
+| 2026-07-10 | FRED and Tiingo remain the current source baseline | The audit should first test dating/transform behavior before changing sources. |
+| 2026-07-10 | The uniform price-return/level-change distinction remains the starting point, but global common-date alignment and channel aggregation are under audit | Code confirms the current implementation uses one global common-date window and per-channel max absolute z-score. |
+| 2026-07-10 | Methodology 2.0 targets per-instrument/per-channel dating rather than one all-instrument board date | One lagging crude series should not silently date unrelated channels. |
+| 2026-07-10 | `priced` is considered too causal for an absolute-z classifier; `co-movement` is the provisional v2 replacement unless direction/timing validation justifies stronger wording | Current states use absolute market movement and do not establish direction, attribution, timing, or causality. |
+| 2026-07-10 | No crude ETF proxies are added before the core market audit | Proxy promotion would be a methodology change and must not happen before the dating/transform audit. |
+| 2026-07-10 | New thresholds will be frozen only after audit and not tuned for visual interest | Threshold discipline protects the track record from hindsight optimization. |
 
 ---
 
@@ -1229,6 +1448,16 @@ Use this section to log unresolved items.
 | Should the run manifest be exposed in the public history UI? | 13 | Open | Session 13 creates `log/runs/index.json` and `docs/log/runs/index.json`, but the UI still focuses on close-date snapshots. Decide later whether history should show run-level attempts, source lag, and same-close-date keeps. |
 | Should crude proxies be supplemental timely reads or primary channel inputs? | 13 | Open | If BNO/USO are added, pick one role explicitly. Supplemental proxy reads do not drive the channel. Promoting a proxy to primary requires a methodology version bump and channel relabel. |
 | When is there enough fetch history to calibrate `expectedLagBD` per source? | 13 | Open | Freshness badges based on expected business-day lag should run in shadow or with conservative thresholds until there are a few weeks of fetch history per source. |
+| Does geopolitics still dominate after event clustering and source normalization? | 14 | Open / audit required | Session 14 must compare raw headline share with unique event-cluster share and source-normalized share. |
+| What is the smallest useful final leaf taxonomy? | 14 | Open / audit required | `Geopolitical` should become a parent facet, but the final leaf list must stay small enough to be usable. |
+| Are sufficient historical raw candidates available for a representative audit? | 14 | Open / audit required | If raw candidates were not persisted, record the limitation and make persistence a v2 requirement. |
+| Should raw candidate/input snapshots or hashes be persisted for reproducibility? | 14 | Open / audit required | Same methodology plus same inputs should be reproducible; the audit must decide whether current artifacts are enough. |
+| Should the market primary statistic remain max absolute z-score, or remain only with breadth/corroboration metadata? | 14 | Open / audit required | The current driver rule is simple but gives channels with more instruments more crossing opportunities. |
+| Should the v2 market threshold vary by instrument count, use an empirical channel percentile, or remain uniform under another calibrated rule? | 14 | Open / audit required | Current `abs(z) >= 1.5` threshold is uniform across channels with different instrument counts. |
+| What exact per-instrument/per-channel date rule should replace global alignment? | 14 | Open / audit required | Options include own-series latest date, per-channel common date, or another documented rule. |
+| Should directional consistency be descriptive only or later affect classification? | 14 | Open / audit required | Direction diagnostics should be keyed to explicit transmission mechanisms and validated before gating states. |
+| Should Macro/Inflation and Weather/Climate receive market columns in Methodology 2.0? | 14 | Open / audit required | They are signal-only in the legacy baseline. |
+| What parallel-run namespace should be used before cutover? | 14 | Open / audit required | v2 validation output must not overwrite legacy daily snapshots. |
 
 ---
 
@@ -1266,6 +1495,15 @@ Use this section to track problems.
 | Local checkout was behind public `origin/master` by three Action-created commits | 12 | Low | Fixed | `git pull --ff-only` fast-forwarded local `master` from `f5fbde2` to `9fc3bad`; local repo now matches `origin/master`. |
 | Git warning: unable to access `C:\Users\heyke/.config/git/ignore` | 12 | Low | Accepted | Warning appeared during `git status --short` but did not block verification or indicate project-file changes. |
 | Same-close-date runs could leave public `docs/*.json` stale | 13 | Medium | Fixed | `scripts/daily-snapshot.mjs` no longer returns early before docs sync when an existing close-date snapshot is kept. Session 13 added run-level logging and verified `docs/divergence.json`, `docs/market-readings.json`, and `docs/market-shock.json` match their `dashboard/public` sources after a same-close-date keep. |
+| Canonical text deduplication does not merge differently worded reports of the same event | 14 | Medium | Open / audit required | `scripts/market-shock-radar.mjs` canonicalizes text and removes exact/canonical duplicates, but it does not perform semantic event clustering. |
+| Broad `Geopolitical Escalation` classification hides actionable distinctions | 14 | Medium | Open / audit required | Current generated `market-shock.json` is concentrated in `Geopolitical Escalation`, but that category mixes different event types and mechanisms. |
+| One item can influence multiple channels through primary and `otherCategories` without separately proven transmission mechanisms | 14 | Medium | Open / audit required | `scripts/divergence.mjs` aggregates both primary category and `otherCategories`; current artifacts show secondary assignments influencing channel scores. |
+| Repeated coverage can inflate signal counts and aggregate scores | 14 | Medium | Open / audit required | Repeated reports of one underlying event are not clustered before scoring. |
+| `priced` is based on absolute movement and does not establish expected direction, timing, attribution, or causality | 14 | Medium | Open / audit required | The divergence classifier uses `abs_market_z >= 1.5`; it does not validate sign or event timing. |
+| Global all-instrument common-date alignment lets lagging crude hold back unrelated channels | 14 | Medium | Open / audit required | `scripts/market-data.mjs` intersects every instrument date set and uses one `globalAsOfClose` for all channels. |
+| A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14 | Medium | Open / audit required | Current formulas use `commonDates[index - LOOKBACK_OBSERVATIONS]`, not each instrument's own valid observation calendar. |
+| Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14 | Medium | Open / audit required | The current channel driver is the largest absolute z-score among eligible instruments, with no adjustment for instrument count. |
+| Raw market inputs may not currently be persisted strongly enough for bit-identical historical reproduction | 14 | Medium | Open / audit required | Generated artifacts store transformed readings and metadata, but the audit must decide whether raw inputs or input hashes are required. |
 
 ---
 
@@ -1299,6 +1537,11 @@ Use this section to change the plan based on what happened.
 | 13 | Add crude proxies only after freshness calibration, and only as explicitly labeled channels or supplemental reads | Avoid ambiguity about which number drives the channel. Proxy promotion is a methodology version bump and relabel. |
 | 13 | Keep domain setup deferred | `crucix.divergencelog.com` remains a dedicated later session; do not mix DNS/Pages custom-domain work into the run-log verification. |
 | 13 | Keep the board screenshot as a required launch-support task | Screenshot remains needed and should be captured when the board/log depth are publication-ready. |
+| 13 | Session 14 replaces the previous likely domain/log-accumulation direction with the combined methodology audit | The signal concentration and market-data semantics both need evidence before launch work resumes. |
+| 13 | Gate 0 is to finish/verify Session 13 commit-push-CI status without mixing in methodology changes | Baseline housekeeping should stay separate from Methodology 2.0 design. |
+| 13 | Production v1 continues daily during the audit | The legacy baseline remains useful as long as it is clearly labeled and unchanged. |
+| 13 | No proxies, source swaps, threshold changes, dashboard redesign, or history rewrite occur before the audit report | These would be methodology or publication changes and must wait for evidence. |
+| 13 | Sessions 15-17 are provisional and must be amended from the evidence | The Session 14 audit can change the rebuild sequence. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -1315,6 +1558,13 @@ Only do these after Phase 2 works.
 - [ ] Add LLM-generated explanation as an optional layer (same discipline as the World Cup project: the language model narrates, it never produces the readings or the states)
 - [ ] Add a small `Why now?` section
 - [ ] Add source weighting so direct OSINT, chokepoints, and market data can be weighted differently from generic headlines
+- [ ] Add semantic event clustering
+- [ ] Persist raw candidate records or input hashes for audit/reproducibility
+- [ ] Add market breadth and second-driver display
+- [ ] Add direction-consistency diagnostics
+- [ ] Add input hashing/raw-input archival for reproducibility
+- [ ] Add a parallel methodology comparison page
+- [ ] Add post-cutover track-record evaluation by methodology version
 - [ ] After 30–40 days of log rows: compute and display the track record — how often `radar-claim` preceded a market move within N days, and how often it did not
 
 ---
@@ -1720,6 +1970,15 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 
 **Section 12 launch-condition adjustment after Session 13:** CI proof, hardening, README v2, publishability checks, public log verification, run-level visibility, and same-close-date docs sync are complete locally. Close-date snapshots remain sparse by design, and run-level records now live under `log/runs/`. The roughly two-week close-date log-depth launch condition remains open. Screenshot remains open. Domain remains deferred.
 
+**Section 12 launch-condition adjustment dated 2026-07-10:** Publication/domain/screenshot progression is paused pending the Methodology 2.0 audit. Existing Phase 2 launch-condition checkmarks remain historical facts and should not be removed. The current public dashboard remains an experimental legacy baseline and must not be presented as a validated predictive system.
+
+New open launch conditions before publication/domain progression resumes:
+
+- [ ] Session 14 methodology audit completed
+- [ ] Methodology 2.0 proposal frozen
+- [ ] Parallel validation completed without overwriting legacy snapshots
+- [ ] Explicit methodology versioning implemented in new artifacts
+
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
 ---
@@ -1729,3 +1988,5 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 ```txt
 Ready for session 14.
 ```
+
+Session 14 is the combined signal-architecture and market-data audit.
