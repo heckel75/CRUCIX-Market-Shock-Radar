@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-10T01:12:35.880Z",
+  "generatedAt": "2026-07-11T01:02:43.747Z",
   "date": "2026-07-02",
   "asOfClose": "2026-07-02",
   "framing": "readings as of market close, 2026-07-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-10T01:12:32.235Z",
-    "generatedDate": "2026-07-10",
+    "generatedAt": "2026-07-11T01:02:40.682Z",
+    "generatedDate": "2026-07-11",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-10T01:12:32.235Z",
-    "generatedDate": "2026-07-10",
-    "runDate": "2026-07-10",
+    "generatedAt": "2026-07-11T01:02:40.682Z",
+    "generatedDate": "2026-07-11",
+    "runDate": "2026-07-11",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-10, readings as of market close, 2026-07-02 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-11, readings as of market close, 2026-07-02 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-02",
-      "generatedDate": "2026-07-10",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-07-10, readings as of market close, 2026-07-02 (8 calendar days old)."
+      "generatedDate": "2026-07-11",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-11, readings as of market close, 2026-07-02 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 2,
+    "radar-claim": 3,
+    "calm": 1,
     "priced": 1
   },
   "rows": [
@@ -68,8 +68,8 @@
       "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 13,
+      "signal_count": 13,
+      "signal_primary_count": 12,
       "signal_secondary_count": 1,
       "top_signal": {
         "path": "root.tg.urgent[4]",
@@ -80,13 +80,13 @@
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "crude",
-          "iran",
-          "blockade"
+          "diesel",
+          "fuel",
+          "russia",
+          "ban"
         ],
-        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
-        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
+        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
       },
       "market_z": 1.38,
       "abs_market_z": 1.38,
@@ -97,22 +97,38 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[4]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "diesel",
+          "fuel",
+          "russia",
+          "ban"
+        ],
+        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
+      },
       "market_z": -1.404,
       "abs_market_z": 1.404,
       "market_moving": false,
@@ -122,8 +138,8 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 9,
+      "state": "radar-claim"
     },
     {
       "channel": "energy-disruption",
@@ -134,9 +150,9 @@
       "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 1,
+      "signal_count": 7,
+      "signal_primary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
         "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
@@ -146,13 +162,13 @@
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "crude",
-          "iran",
-          "blockade"
+          "diesel",
+          "fuel",
+          "russia",
+          "ban"
         ],
-        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
-        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
+        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
       },
       "market_z": -0.946,
       "abs_market_z": 0.946,
@@ -163,7 +179,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -188,37 +204,36 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 6,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 6,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.tg.urgent[2]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 17,
+        "rawScore": 13,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "crude",
           "iran",
-          "blockade"
+          "hormuz",
+          "shipping"
         ],
-        "text": "🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 2026, TankerTrackers repo",
-        "explanation": "Energy Shock match based on keywords: oil, crude. Signal: 🇮🇷🇺🇸⚡️ — IRAN SHIPPED 60 MILLION BARRELS OF CRUDE SINCE BLOCKADE PAUSE ➡️ Iran has exported 60 million barrels of crude oil since the US Navy blockade paused in mid-June 202..."
+        "text": "🇺🇸❌🇮🇷 — BREAKING: Trump administration gives Iran 24-hour ultimatum to publicly acknowledge Hormuz is open and commit to halting attacks on commercial shipping, or face severe consequences, Barak",
+        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸❌🇮🇷 — BREAKING: Trump administration gives Iran 24-hour ultimatum to publicly acknowledge Hormuz is open and commit to halting attacks on commercial shipping, or face seve..."
       },
       "market_z": -2.221,
       "abs_market_z": 2.221,
@@ -229,7 +244,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
