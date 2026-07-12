@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-11T01:02:43.747Z",
+  "generatedAt": "2026-07-12T01:08:29.441Z",
   "date": "2026-07-02",
   "asOfClose": "2026-07-02",
   "framing": "readings as of market close, 2026-07-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-11T01:02:40.682Z",
-    "generatedDate": "2026-07-11",
+    "generatedAt": "2026-07-12T01:08:26.363Z",
+    "generatedDate": "2026-07-12",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-11T01:02:40.682Z",
-    "generatedDate": "2026-07-11",
-    "runDate": "2026-07-11",
+    "generatedAt": "2026-07-12T01:08:26.363Z",
+    "generatedDate": "2026-07-12",
+    "runDate": "2026-07-12",
     "asOfClose": "2026-07-02",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-11, readings as of market close, 2026-07-02 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-12, readings as of market close, 2026-07-02 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-02",
-      "generatedDate": "2026-07-11",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-07-11, readings as of market close, 2026-07-02 (9 calendar days old)."
+      "generatedDate": "2026-07-12",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-07-12, readings as of market close, 2026-07-02 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 1,
+    "radar-claim": 2,
+    "calm": 2,
     "priced": 1
   },
   "rows": [
@@ -63,30 +63,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 12,
-      "signal_secondary_count": 1,
+      "signal_count": 15,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[12]",
         "category": "Geopolitical Escalation",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "diesel",
-          "fuel",
-          "russia",
-          "ban"
+          "war",
+          "iran",
+          "hormuz",
+          "port"
         ],
-        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
-        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
+        "text": "Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera"
       },
       "market_z": 1.38,
       "abs_market_z": 1.38,
@@ -97,38 +97,22 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[4]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "diesel",
-          "fuel",
-          "russia",
-          "ban"
-        ],
-        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
-        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -1.404,
       "abs_market_z": 1.404,
       "market_moving": false,
@@ -138,37 +122,37 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 10,
+      "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
-      "signal_primary_count": 3,
+      "signal_count": 4,
+      "signal_primary_count": 0,
       "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[12]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "diesel",
-          "fuel",
-          "russia",
-          "ban"
+          "war",
+          "iran",
+          "hormuz",
+          "port"
         ],
-        "text": "🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing fuel shortages in Afri",
-        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🇷🇺⛽ — Russia's potential diesel export ban could trigger fuel shortages across multiple regions, the Financial Times reports. ➡️ A Russian ban on diesel exports risks causing ..."
+        "text": "Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera"
       },
       "market_z": -0.946,
       "abs_market_z": 0.946,
@@ -179,7 +163,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
@@ -204,36 +188,37 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 7,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 7,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.news[12]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
+          "war",
           "iran",
           "hormuz",
-          "shipping"
+          "port"
         ],
-        "text": "🇺🇸❌🇮🇷 — BREAKING: Trump administration gives Iran 24-hour ultimatum to publicly acknowledge Hormuz is open and commit to halting attacks on commercial shipping, or face severe consequences, Barak",
-        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸❌🇮🇷 — BREAKING: Trump administration gives Iran 24-hour ultimatum to publicly acknowledge Hormuz is open and commit to halting attacks on commercial shipping, or face seve..."
+        "text": "Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera"
       },
       "market_z": -2.221,
       "abs_market_z": 2.221,
@@ -244,7 +229,7 @@
       "driver_as_of": "2026-07-02",
       "market_as_of": "2026-07-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     }
   ],
