@@ -1,86 +1,30 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-12T01:08:26.213Z",
+  "generatedAt": "2026-07-13T01:12:12.735Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 16,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
   "candidateCount": 133,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[12]",
+      "path": "root.news[36]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 20,
       "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz",
-        "port"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Iranian port cities as IRGC closes Strait of Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine expects partners to fulfill Patriot promises after Russia's overnight attack injured 11 people including a child, Zelensky says. Russia used over 120 drones and 12 missiles, half ballistic. \"W",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: Ukraine expects partners to fulfill Patriot promises after Russia's overnight attack injured 11 people including a child, Zelensky says. Russia used over 120 drones and 12 missi..."
-    },
-    {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -91,42 +35,15 @@
       "matchedKeywords": [
         "missile",
         "drone",
+        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Overnight Russian missile and drone strikes on Ukraine kill eight, officials say | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, ukraine. Signal: Overnight Russian missile and drone strikes on Ukraine kill eight, officials say | France 24"
+      "text": "Nine dead as Russia and Ukraine trade drone and missile salvos | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: Nine dead as Russia and Ukraine trade drone and missile salvos | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺❌🇺🇦— Explosions reported in Kryvyi Rih after a drone strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺❌🇺🇦— Explosions reported in Kryvyi Rih after a drone strike."
-    },
-    {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -150,14 +67,14 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇸❌🇮🇷- American ATACMS and/or HIMARS missiles were launched from Kuwait against targets in Iran. Iranian state media assert that Kuwait and Bahrain are actively participating in the ongoing strike",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸❌🇮🇷- American ATACMS and/or HIMARS missiles were launched from Kuwait against targets in Iran. Iranian state media assert that Kuwait and Bahrain are actively participatin..."
+      "text": "🇺🇸❌🇮🇷 — WATCH: A strike has been reported along the Ahvaz–Haftkel highway in Khuzestan, Iran. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸❌🇮🇷 — WATCH: A strike has been reported along the Ahvaz–Haftkel highway in Khuzestan, Iran. @IntelSlava"
     },
     {
-      "path": "root.news[42]",
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -168,69 +85,49 @@
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "FX"
       ],
       "matchedKeywords": [
+        "war",
         "iran",
-        "hormuz",
-        "shipping"
+        "hormuz"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Hormuz shipping in focus as Iran-US rhetoric heats up | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Hormuz shipping in focus as Iran-US rhetoric heats up | Al Jazeera"
+      "text": "Iran war Update: US bombs Iranian cities again as Hormuz standoff intensifies | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US bombs Iranian cities again as Hormuz standoff intensifies | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "category": "Energy Shock",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Gold",
         "VIX",
-        "Oil",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
+        "oil",
+        "refinery",
         "ukraine"
       ],
-      "otherCategories": [],
-      "text": "Ukraine's General Staff reports strikes on the Kalmius training ground near Dokuchaievsk, drone control posts in Belgorod and Zaporizhzhia regions, and troop concentrations in Horlivka and Karizha. A",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Ukraine's General Staff reports strikes on the Kalmius training ground near Dokuchaievsk, drone control posts in Belgorod and Zaporizhzhia regions, and troop concentrations in H..."
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Ukraine hit the Syzran refinery in Samara region overnight. Explosions and fire were recorded at the plant that processes 8.5 million tons of oil annually for Russian forces, the General Staff reports",
+      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Ukraine hit the Syzran refinery in Samara region overnight. Explosions and fire were recorded at the plant that processes 8.5 million tons of oil annually for Russian forces, th..."
     },
     {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — A U.S. official told Axios' Barak Ravid that the targets of the strikes included air surveillance radars, missile and drone storage facilities, missile and drone launch sites, surface surv",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇺🇸❌🇮🇷 — A U.S. official told Axios' Barak Ravid that the targets of the strikes included air surveillance radars, missile and drone storage facilities, missile and drone lau..."
-    },
-    {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -247,11 +144,32 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷❌🇺🇸 — Image allegedly showing the aftermath of a U.S. airstrike in Bandar Abbas, southern Iran. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇮🇷❌🇺🇸 — Image allegedly showing the aftermath of a U.S. airstrike in Bandar Abbas, southern Iran. @IntelSlava"
+      "text": "🇺🇸❌🇮🇷 — US airstrike reported on Susangerd, Khuzestan Province, southwest Iran.",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇺🇸❌🇮🇷 — US airstrike reported on Susangerd, Khuzestan Province, southwest Iran."
     },
     {
-      "path": "root.news[9]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸❌🇮🇷- Reports are emerging that a missile attack has targeted the Shahid Bakri base IRGC in Dezful. Three explosions have been reported.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇺🇸❌🇮🇷- Reports are emerging that a missile attack has targeted the Shahid Bakri base IRGC in Dezful. Three explosions have been reported."
+    },
+    {
+      "path": "root.news[18]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -264,12 +182,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "escalation",
+        "military",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Mediators push US-Iran talks in Qatar and Oman to avert escalation | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, iran. Signal: Mediators push US-Iran talks in Qatar and Oman to avert escalation | Al Jazeera"
+      "text": "US launches new wave of strikes against Iran, aimed at ‘degrading’ military | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: US launches new wave of strikes against Iran, aimed at ‘degrading’ military | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — US airstrike reported on Susangerd, Khuzestan Province, southwest Iran. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: ❌ — US airstrike reported on Susangerd, Khuzestan Province, southwest Iran. | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -300,34 +239,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇮🇷🇺🇸⚡️— Iran's Islamic Revolutionary Guard Corps Navy (IRGCN) has announced the closure of the Strait of Hormuz after firing warning shots at a vessel that ignored orders and departed the designat",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸⚡️— Iran's Islamic Revolutionary Guard Corps Navy (IRGCN) has announced the closure of the Strait of Hormuz after firing warning shots at a vessel that ignored orders an..."
-    },
-    {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -345,17 +257,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "airstrike",
+        "drone",
         "port"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "The police headquarters in Ahvaz was struck in an airstrike. U.S. airstrikes also targeted Minab, Kangan, Bandar Abbas, Ardabil, and the port of Bandar Dayyer. The image allegedly shows the aftermath",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike. Signal: The police headquarters in Ahvaz was struck in an airstrike. U.S. airstrikes also targeted Minab, Kangan, Bandar Abbas, Ardabil, and the port of Bandar Dayyer. The image alleged..."
+      "text": "Footage of one of the recent Ukrainian drone strikes on the port of Azov in Rostov region.",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Footage of one of the recent Ukrainian drone strikes on the port of Azov in Rostov region."
     },
     {
-      "path": "root.news[11]",
+      "path": "root.news[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -378,11 +290,11 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "US launches fresh strikes as Iran closes Strait of Hormuz",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US launches fresh strikes as Iran closes Strait of Hormuz"
+      "text": "US launches more strikes on Iran as Strait of Hormuz standoff deepens | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US launches more strikes on Iran as Strait of Hormuz standoff deepens | Al Jazeera"
     },
     {
-      "path": "root.news[22]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -393,20 +305,95 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "strike"
+        "attack",
+        "hormuz"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Palestinian aid worker who organized World Cup screenings killed in Israeli strike",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Palestinian aid worker who organized World Cup screenings killed in Israeli strike"
+      "text": "Indian seafarer missing as ship hit in Strait of Hormuz, MEA condemns attack | Indian Express",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Indian seafarer missing as ship hit in Strait of Hormuz, MEA condemns attack | Indian Express"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Middle East Update: US strikes Iran as Gulf states targeted in flareup over Hormuz | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Middle East Update: US strikes Iran as Gulf states targeted in flareup over Hormuz | France 24"
+    },
+    {
+      "path": "root.news[21]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "US insists Strait of Hormuz is open as it exchanges strikes with Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US insists Strait of Hormuz is open as it exchanges strikes with Iran"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     }
   ]
 }
