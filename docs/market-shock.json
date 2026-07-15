@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-14T00:57:11.739Z",
+  "generatedAt": "2026-07-15T00:55:02.531Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -15,14 +15,14 @@
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 116,
+  "candidateCount": 137,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 24,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -37,53 +37,19 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "war",
         "strike",
-        "iran"
+        "attack",
+        "drone",
+        "russia"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Iran war Update: US launches more attacks; UAE says 1 killed in tanker strike | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: US launches more attacks; UAE says 1 killed in tanker strike | Al Jazeera"
+      "text": "It is reported that Russia is facing another massive Ukrainian drone strike tonight. At least 410 attack drones have taken off toward Russia from multiple directions.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone, russia. Signal: It is reported that Russia is facing another massive Ukrainian drone strike tonight. At least 410 attack drones have taken off toward Russia from multiple directions."
     },
     {
-      "path": "root.news[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "naval",
-        "iran",
-        "hormuz",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "Trump reimposes Iran naval blockade, threatens Hormuz fees | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: Trump reimposes Iran naval blockade, threatens Hormuz fees | France 24"
-    },
-    {
-      "path": "root.news[22]",
+      "path": "root.news[42]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -101,33 +67,39 @@
         "israel"
       ],
       "otherCategories": [],
-      "text": "Lindsey Graham’s legacy: Israel advocate, Trump ally, Iran war supporter | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: Lindsey Graham’s legacy: Israel advocate, Trump ally, Iran war supporter | Al Jazeera"
+      "text": "US Senate Democrats block defence bill over Iran war, Israel integration | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: US Senate Democrats block defence bill over Iran war, Israel integration | Al Jazeera"
     },
     {
-      "path": "root.news[38]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "russia",
-        "ukraine"
+        "strike",
+        "missile"
       ],
-      "otherCategories": [],
-      "text": "Ukraine and allies set up coalition to tackle Russia ballistic missile threat | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: Ukraine and allies set up coalition to tackle Russia ballistic missile threat | France 24"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸❌🇮🇷 — A heavy strike has reportedly hit the Dozak missile site in Bandar Abbas.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇺🇸❌🇮🇷 — A heavy strike has reportedly hit the Dozak missile site in Bandar Abbas."
     },
     {
-      "path": "root.news[14]",
+      "path": "root.news[31]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -145,18 +117,18 @@
         "Margins"
       ],
       "matchedKeywords": [
+        "military",
         "naval",
-        "iran",
         "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Trump Reimposes Naval Blockade, as U.S. and Iran Escalate Strikes",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: Trump Reimposes Naval Blockade, as U.S. and Iran Escalate Strikes"
+      "text": "US military reimposes naval blockade on Iranian ports, launches new strikes | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: military, naval. Signal: US military reimposes naval blockade on Iranian ports, launches new strikes | France 24"
     },
     {
-      "path": "root.news[31]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -173,18 +145,46 @@
         "FX"
       ],
       "matchedKeywords": [
-        "military",
+        "war",
         "iran",
         "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran military warns US against Strait of Hormuz ‘interference’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Iran military warns US against Strait of Hormuz ‘interference’ | Al Jazeera"
+      "text": "U.S. and Iran Reignite War Over Strait of Hormuz",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: U.S. and Iran Reignite War Over Strait of Hormuz"
     },
     {
-      "path": "root.news[26]",
+      "path": "root.newsFeed[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "❌ — A heavy strike has reportedly hit the Dozak missile site in Bandar Abbas. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: ❌ — A heavy strike has reportedly hit the Dozak missile site in Bandar Abbas. | INTELSLAVA"
+    },
+    {
+      "path": "root.news[43]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 13,
@@ -206,20 +206,20 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "ukraine",
-        "fuel",
-        "shipping"
+        "iran",
+        "hormuz",
+        "blockade"
       ],
       "otherCategories": [
         "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "Ukraine strikes halt shipping on key wheat route as Russian fuel crisis deepens | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Ukraine strikes halt shipping on key wheat route as Russian fuel crisis deepens | France 24"
+      "text": "Trump scraps threat of 20% fee on Hormuz cargo as US resumes blockade of Iran ports",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Trump scraps threat of 20% fee on Hormuz cargo as US resumes blockade of Iran ports"
     },
     {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -231,16 +231,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "airstrike",
         "iran"
       ],
       "otherCategories": [],
-      "text": "UAE condemns Iran's 'brazen' attack on tankers as US launches fresh strikes",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: UAE condemns Iran's 'brazen' attack on tankers as US launches fresh strikes"
+      "text": "🇺🇸❌🇮🇷 — A U.S. airstrike targeted Qeshm Island, southern Iran, a few moments ago, according to IRNA.",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇺🇸❌🇮🇷 — A U.S. airstrike targeted Qeshm Island, southern Iran, a few moments ago, according to IRNA."
     },
     {
-      "path": "root.news[16]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -252,78 +252,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
+        "missile",
         "israel"
       ],
       "otherCategories": [],
-      "text": "Inside Israel’s Secret Operation to Install Ahmadinejad, Iran’s Former President, as Leader",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Inside Israel’s Secret Operation to Install Ahmadinejad, Iran’s Former President, as Leader"
+      "text": "🇮🇱 Israel just quadrupled its PR budget to $730M. Experts say it won’t work. Spending on image should be “like investing in jets, bombs and missile interceptors,” Israel’s foreign minister says La",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, israel. Signal: 🇮🇱 Israel just quadrupled its PR budget to $730M. Experts say it won’t work. Spending on image should be “like investing in jets, bombs and missile interceptors,” Israel’s for..."
     },
     {
       "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "Israel’s Regime-Change Plan for Iran",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Israel’s Regime-Change Plan for Iran"
-    },
-    {
-      "path": "root.news[28]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "US strikes Iranian ship with drone boats in first-of-its-kind attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: US strikes Iranian ship with drone boats in first-of-its-kind attack | Al Jazeera"
-    },
-    {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Kyiv attacked after Ukraine launches coalition to tackle Russia missiles | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Kyiv attacked after Ukraine launches coalition to tackle Russia missiles | Al Jazeera"
-    },
-    {
-      "path": "root.news[32]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -340,8 +277,29 @@
         "gaza"
       ],
       "otherCategories": [],
-      "text": "Artist sews names of Gaza children killed by Israel into gown | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Artist sews names of Gaza children killed by Israel into gown | Al Jazeera"
+      "text": "Palestine weekly: Israel attacks children, hospitals in bloody week in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Palestine weekly: Israel attacks children, hospitals in bloody week in Gaza | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — A U.S. airstrike targeted Qeshm Island, southern Iran, a few moments ago, according to IRNA. | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: ❌ — A U.S. airstrike targeted Qeshm Island, southern Iran, a few moments ago, according to IRNA. | CIG_TELEGRAM"
     },
     {
       "path": "root.chokepoints[5]",
@@ -372,7 +330,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[20]",
+      "path": "root.news[3]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -395,8 +353,62 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "US, Iran exchange attacks around Strait of Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US, Iran exchange attacks around Strait of Hormuz | Al Jazeera"
+      "text": "Another Indian killed as Iran hits UAE tankers in Strait of Hormuz | Indian Express",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Another Indian killed as Iran hits UAE tankers in Strait of Hormuz | Indian Express"
+    },
+    {
+      "path": "root.news[22]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Watch: The clash between US and Iran for control of the Strait of Hormuz",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Watch: The clash between US and Iran for control of the Strait of Hormuz"
+    },
+    {
+      "path": "root.news[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Trump Drops Plan to Tax Ships in Strait of Hormuz as Fighting with Iran Escalates",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Trump Drops Plan to Tax Ships in Strait of Hormuz as Fighting with Iran Escalates"
     }
   ]
 }
