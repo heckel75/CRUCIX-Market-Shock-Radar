@@ -1,82 +1,49 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-16T01:02:21.176Z",
+  "generatedAt": "2026-07-17T01:06:53.165Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 17,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 1,
+    "Weather / Climate Shock": 1
   },
-  "candidateCount": 131,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
+      "path": "root.news[39]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "drone"
+        "war",
+        "iran",
+        "israel"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the boundary between the station",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the bound..."
+      "otherCategories": [],
+      "text": "JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war"
     },
     {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "russia",
-        "gas"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Russia attacked the Zhytomyr region today and, according to defense minister's advisor Flash, likely used repeaters in Belarus once again to control the Shahed drone that struck a gas station.",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Russia attacked the Zhytomyr region today and, according to defense minister's advisor Flash, likely used repeaters in Belarus once again to control the Shahed drone that struck..."
-    },
-    {
-      "path": "root.news[9]",
+      "path": "root.news[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -95,16 +62,16 @@
       "matchedKeywords": [
         "war",
         "iran",
-        "oil"
+        "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran war Update: Sirens in Bahrain, Kuwait; US ‘disables’ Iranian oil tanker | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Sirens in Bahrain, Kuwait; US ‘disables’ Iranian oil tanker | Al Jazeera"
+      "text": "Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -117,36 +84,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "conflict"
+        "naval",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "— Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate, fast, and uncompromis",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict. Signal: — Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate,..."
+      "text": "🇺🇸❌🇮🇷 — Multiple explosions have been reported across Bandar Lengeh, Hormozgan Province. At the same time, U.S. missiles are striking air and naval bases in Bushehr, southern Iran. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇺🇸❌🇮🇷 — Multiple explosions have been reported across Bandar Lengeh, Hormozgan Province. At the same time, U.S. missiles are striking air and naval bases in Bushehr, souther..."
     },
     {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "An Iranian drone struck a target in Kuwait near the Iraqi border. No details on the nature of the target are available at this time.",
-      "explanation": "Geopolitical Escalation match based on keywords: border, drone. Signal: An Iranian drone struck a target in Kuwait near the Iraqi border. No details on the nature of the target are available at this time."
-    },
-    {
-      "path": "root.news[6]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -163,11 +109,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran War Updates: U.S. and Iran Exchange Strikes for Fifth Straight Day",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: U.S. and Iran Exchange Strikes for Fifth Straight Day"
+      "text": "Iran war Update: US carries out strikes on civilian infrastructure in south | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US carries out strikes on civilian infrastructure in south | Al Jazeera"
     },
     {
-      "path": "root.news[18]",
+      "path": "root.news[21]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -180,33 +126,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine’s Minister of Defense, a Proponent of Drone Warfare, Steps Down",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Ukraine’s Minister of Defense, a Proponent of Drone Warfare, Steps Down"
-    },
-    {
-      "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
+        "military",
         "iran"
       ],
       "otherCategories": [],
-      "text": "At War With Iran Again, Trump Finds an Opponent He Cannot Easily Dominate",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: At War With Iran Again, Trump Finds an Opponent He Cannot Easily Dominate"
+      "text": "Qatar rejects Israeli reports of military action against Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Qatar rejects Israeli reports of military action against Iran | Al Jazeera"
     },
     {
       "path": "root.news[31]",
@@ -223,11 +148,53 @@
       ],
       "matchedKeywords": [
         "war",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine Was on a Roll. Then a Clash Over War Strategy Exploded Into View.",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Ukraine Was on a Roll. Then a Clash Over War Strategy Exploded Into View."
+    },
+    {
+      "path": "root.news[42]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran says peace deal voided, fighting ‘existential war’ after US attacks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran says peace deal voided, fighting ‘existential war’ after US attacks | Al Jazeera"
+      "text": "US mounts sixth straight night of attacks as Iran warns of wider war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US mounts sixth straight night of attacks as Iran warns of wider war | Al Jazeera"
+    },
+    {
+      "path": "root.news[48]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Here’s Where the U.S. and Iran Have Launched Attacks as the War Escalates",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Here’s Where the U.S. and Iran Have Launched Attacks as the War Escalates"
     },
     {
       "path": "root.chokepoints[5]",
@@ -258,7 +225,35 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[36]",
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸❌🇮🇷 — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸❌🇮🇷 — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava"
+    },
+    {
+      "path": "root.news[27]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -269,20 +264,48 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "ukraine",
-        "oil"
+        "strike"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Russian attacks kill 14 as Ukraine hits Black Sea oil tankers",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Russian attacks kill 14 as Ukraine hits Black Sea oil tankers"
+      "text": "One man's hunger strike changed India's map. Can it still change politics?",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: One man's hunger strike changed India's map. Can it still change politics?"
+    },
+    {
+      "path": "root.newsFeed[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "❌ — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: ❌ — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[0]",
@@ -306,27 +329,28 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "path": "root.news[40]",
+      "sourcePriority": "Medium",
+      "category": "Weather / Climate Shock",
+      "score": 6,
+      "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy",
+        "Commodities"
       ],
       "matchedKeywords": [
-        "airstrike"
+        "wildfire",
+        "heatwave"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — Earlier tonight, a U.S. airstrike struck the Ahmad Rizeh police post on the Ramin–Chabahar Road in Sistan and Baluchestan Province. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike. Signal: 🇺🇸❌🇮🇷 — Earlier tonight, a U.S. airstrike struck the Ahmad Rizeh police post on the Ramin–Chabahar Road in Sistan and Baluchestan Province. @IntelSlava"
+      "text": "Spain battles major Aragon wildfire amid heatwave | Euronews",
+      "explanation": "Weather / Climate Shock match based on keywords: wildfire, heatwave. Signal: Spain battles major Aragon wildfire amid heatwave | Euronews"
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -339,31 +363,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "ukraine"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "On the night of July 14, the Armed Forces of Ukraine attacked the Balaklava Thermal Power Plant, triggering a total blackout in Kerch. The city is completely without power. The so-called \"Krymenergo\"",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: On the night of July 14, the Armed Forces of Ukraine attacked the Balaklava Thermal Power Plant, triggering a total blackout in Kerch. The city is completely without power. The ..."
-    },
-    {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇰🇼🇺🇸❌🇮🇷 — Footage of U.S. Army ATACMS tactical ballistic missiles being launched from M142 HIMARS systems in Kuwait toward Iran. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇰🇼🇺🇸❌🇮🇷 — Footage of U.S. Army ATACMS tactical ballistic missiles being launched from M142 HIMARS systems in Kuwait toward Iran. @IntelSlava"
+      "text": "In the RF, explosions rang out this morning on the territory of the Engels airfield. Local residents report a fire. According to preliminary OSINT data, an aircraft parking area and drone flight paths",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: In the RF, explosions rang out this morning on the territory of the Engels airfield. Local residents report a fire. According to preliminary OSINT data, an aircraft parking area..."
     }
   ]
 }

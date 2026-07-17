@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-16T01:02:24.298Z",
+  "generatedAt": "2026-07-17T01:06:56.707Z",
   "date": "2026-07-10",
   "asOfClose": "2026-07-10",
   "framing": "readings as of market close, 2026-07-10",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-16T01:02:21.327Z",
-    "generatedDate": "2026-07-16",
+    "generatedAt": "2026-07-17T01:06:53.307Z",
+    "generatedDate": "2026-07-17",
     "asOfClose": "2026-07-10",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-16T01:02:21.327Z",
-    "generatedDate": "2026-07-16",
-    "runDate": "2026-07-16",
+    "generatedAt": "2026-07-17T01:06:53.307Z",
+    "generatedDate": "2026-07-17",
+    "runDate": "2026-07-17",
     "asOfClose": "2026-07-10",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-16, readings as of market close, 2026-07-10 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-17, readings as of market close, 2026-07-10 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-10",
-      "generatedDate": "2026-07-16",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-07-16, readings as of market close, 2026-07-10 (6 calendar days old)."
+      "generatedDate": "2026-07-17",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-07-17, readings as of market close, 2026-07-10 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,36 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 2
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[39]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
+        "rawScore": 15,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "drone"
+          "war",
+          "iran",
+          "israel"
         ],
-        "text": "The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the boundary between the station",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the bound..."
+        "text": "JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war"
       },
       "market_z": -1.492,
       "abs_market_z": 1.492,
@@ -94,7 +95,7 @@
       "driver_as_of": "2026-07-10",
       "market_as_of": "2026-07-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -119,7 +120,7 @@
       "driver_as_of": "2026-07-10",
       "market_as_of": "2026-07-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
@@ -131,24 +132,24 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 2,
       "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.news[7]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "drone",
-          "russia",
-          "gas"
+          "war",
+          "iran",
+          "hormuz"
         ],
-        "text": "Russia attacked the Zhytomyr region today and, according to defense minister's advisor Flash, likely used repeaters in Belarus once again to control the Shahed drone that struck a gas station.",
-        "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Russia attacked the Zhytomyr region today and, according to defense minister's advisor Flash, likely used repeaters in Belarus once again to control the Shahed drone that struck..."
+        "text": "Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz"
       },
       "market_z": 1.085,
       "abs_market_z": 1.085,
@@ -159,7 +160,7 @@
       "driver_as_of": "2026-07-10",
       "market_as_of": "2026-07-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -184,35 +185,35 @@
       "driver_as_of": "2026-07-10",
       "market_as_of": "2026-07-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone"
+          "taiwan",
+          "container"
         ],
-        "text": "The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the boundary between the station",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The AFU have eliminated an engineer and his driver who worked at the Zaporizhzhia NPP. Oleksandr Yakovlev was killed in a drone strike on a Toyota Camry company car on the bound..."
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": -0.812,
       "abs_market_z": 0.812,
@@ -223,8 +224,8 @@
       "driver_as_of": "2026-07-10",
       "market_as_of": "2026-07-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 7,
+      "state": "calm"
     }
   ],
   "signalOnly": [
@@ -244,15 +245,29 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.3,
+      "signal_score_pct": 30,
+      "signal_raw_score": 6,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null
+      "top_signal": {
+        "path": "root.news[40]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Weather / Climate Shock",
+        "isPrimary": true,
+        "rawScore": 6,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "wildfire",
+          "heatwave"
+        ],
+        "text": "Spain battles major Aragon wildfire amid heatwave | Euronews",
+        "explanation": "Weather / Climate Shock match based on keywords: wildfire, heatwave. Signal: Spain battles major Aragon wildfire amid heatwave | Euronews"
+      }
     }
   ],
   "retiredSignals": [
