@@ -1,54 +1,70 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-17T01:06:53.165Z",
+  "generatedAt": "2026-07-18T01:01:33.352Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 1,
-    "Weather / Climate Shock": 1
+    "Geopolitical Escalation": 14,
+    "Supply Chain Disruption": 1
   },
-  "candidateCount": 134,
+  "candidateCount": 133,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 18,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "israel"
+        "strike",
+        "drone",
+        "oil"
       ],
-      "otherCategories": [],
-      "text": "JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: JD Vance accuses Israel of 'manipulating' US public opinion to prolong Iran war"
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "NASA FIRMS detected a fire at a railway station in Kerch after a drone strike. A possible hit on an oil depot is also reported.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: NASA FIRMS detected a fire at a railway station in Kerch after a drone strike. A possible hit on an oil depot is also reported."
     },
     {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 17,
       "confidence": "Medium",
       "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
         "Gold",
         "VIX",
         "Oil",
@@ -60,18 +76,75 @@
         "FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
+        "port",
+        "strike",
+        "fuel"
       ],
       "otherCategories": [
+        "Geopolitical Escalation",
         "Energy Shock"
       ],
-      "text": "Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: U.S. Launches New Strikes, as Tensions Escalate Over Strait of Hormuz"
+      "text": "Satellite images of Kavkaz port from July 13 show damaged ferries from the June 21 strike, likely being towed by tugboats now, damaged fuel tanks and a long queue of fuel trucks waiting to load, Dnipr",
+      "explanation": "Supply Chain Disruption match based on keywords: port, strike. Signal: Satellite images of Kavkaz port from July 13 show damaged ferries from the June 21 strike, likely being towed by tugboats now, damaged fuel tanks and a long queue of fuel trucks..."
     },
     {
       "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇮🇷❌🇺🇸🇧🇭 — IRGC announces, hours ago, a U.S. Navy USV depot and an artificial intelligence center used to assist CENTCOM targeting were targeted in a missile & UAV strike involving several ballis",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇮🇷❌🇺🇸🇧🇭 — IRGC announces, hours ago, a U.S. Navy USV depot and an artificial intelligence center used to assist CENTCOM targeting were targeted in a missile & UAV strike i..."
+    },
+    {
+      "path": "root.news[48]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "gaza"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Israeli Strike in Gaza Kills Seven People, Health Officials Say",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli Strike in Gaza Kills Seven People, Health Officials Say"
+    },
+    {
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -84,15 +157,78 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "naval",
-        "iran"
+        "drone",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — Multiple explosions have been reported across Bandar Lengeh, Hormozgan Province. At the same time, U.S. missiles are striking air and naval bases in Bushehr, southern Iran. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇺🇸❌🇮🇷 — Multiple explosions have been reported across Bandar Lengeh, Hormozgan Province. At the same time, U.S. missiles are striking air and naval bases in Bushehr, souther..."
+      "text": "The EU Council approved its first sanctions against Russia over deadly strikes on Kyiv July 1-2 and attacks on civilian infrastructure. Five ABS Electro companies are targeted for developing drone com",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: The EU Council approved its first sanctions against Russia over deadly strikes on Kyiv July 1-2 and attacks on civilian infrastructure. Five ABS Electro companies are targeted f..."
     },
     {
-      "path": "root.news[9]",
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Another Ukrainian MIG-29, received from Western partners, was destroyed by a Russian \"Geranium\" kamikaze drone. Even Poland, Ukraine’s closest ally, changed its mind about transferring a new batch of",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Another Ukrainian MIG-29, received from Western partners, was destroyed by a Russian \"Geranium\" kamikaze drone. Even Poland, Ukraine’s closest ally, changed its mind about trans..."
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine's SBU destroyed a Tu-95 aircraft in Engels used for Russian missile strikes on Ukraine, Zelensky says.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: Ukraine's SBU destroyed a Tu-95 aircraft in Engels used for Russian missile strikes on Ukraine, Zelensky says."
+    },
+    {
+      "path": "root.news[5]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Unis lacked 'trauma-informed' care around Hamas-Israel war, royal commission hears | SBS Australia",
+      "explanation": "Geopolitical Escalation match based on keywords: war, israel. Signal: Unis lacked 'trauma-informed' care around Hamas-Israel war, royal commission hears | SBS Australia"
+    },
+    {
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -109,8 +245,71 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: US carries out strikes on civilian infrastructure in south | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US carries out strikes on civilian infrastructure in south | Al Jazeera"
+      "text": "Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straight Day",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straight Day"
+    },
+    {
+      "path": "root.news[14]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "What US, Iran, Russia say is irrelevant, we have to march forward with a smile: V-P | Indian Express",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: What US, Iran, Russia say is irrelevant, we have to march forward with a smile: V-P | Indian Express"
+    },
+    {
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: US and Iran exchange deadly attacks for 7th night | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US and Iran exchange deadly attacks for 7th night | Al Jazeera"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "The Rise and Fall of Ukraine’s Drone Warfare Mastermind",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: The Rise and Fall of Ukraine’s Drone Warfare Mastermind"
     },
     {
       "path": "root.news[21]",
@@ -126,15 +325,36 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "attack",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "EU urges Israel to halt settlement expansion as settlers attack children | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: EU urges Israel to halt settlement expansion as settlers attack children | Al Jazeera"
+    },
+    {
+      "path": "root.news[29]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Qatar rejects Israeli reports of military action against Iran | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Qatar rejects Israeli reports of military action against Iran | Al Jazeera"
+      "text": "War Between U.S. and Iran Expands, With Strikes Across the Region",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War Between U.S. and Iran Expands, With Strikes Across the Region"
     },
     {
-      "path": "root.news[31]",
+      "path": "root.news[38]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -151,223 +371,8 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Ukraine Was on a Roll. Then a Clash Over War Strategy Exploded Into View.",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Ukraine Was on a Roll. Then a Clash Over War Strategy Exploded Into View."
-    },
-    {
-      "path": "root.news[42]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "US mounts sixth straight night of attacks as Iran warns of wider war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US mounts sixth straight night of attacks as Iran warns of wider war | Al Jazeera"
-    },
-    {
-      "path": "root.news[48]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Here’s Where the U.S. and Iran Have Launched Attacks as the War Escalates",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Here’s Where the U.S. and Iran Have Launched Attacks as the War Escalates"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "port"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇸❌🇮🇷 — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸❌🇮🇷 — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "One man's hunger strike changed India's map. Can it still change politics?",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: One man's hunger strike changed India's map. Can it still change politics?"
-    },
-    {
-      "path": "root.newsFeed[36]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "port"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "❌ — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: ❌ — Intense U.S. airstrikes on the port city of Bushehr, southern Iran. @IntelSlava | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.news[40]",
-      "sourcePriority": "Medium",
-      "category": "Weather / Climate Shock",
-      "score": 6,
-      "confidence": "Medium",
-      "channels": [
-        "Agriculture",
-        "Insurance",
-        "Utilities",
-        "Energy",
-        "Commodities"
-      ],
-      "matchedKeywords": [
-        "wildfire",
-        "heatwave"
-      ],
-      "otherCategories": [],
-      "text": "Spain battles major Aragon wildfire amid heatwave | Euronews",
-      "explanation": "Weather / Climate Shock match based on keywords: wildfire, heatwave. Signal: Spain battles major Aragon wildfire amid heatwave | Euronews"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "In the RF, explosions rang out this morning on the territory of the Engels airfield. Local residents report a fire. According to preliminary OSINT data, an aircraft parking area and drone flight paths",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: In the RF, explosions rang out this morning on the territory of the Engels airfield. Local residents report a fire. According to preliminary OSINT data, an aircraft parking area..."
+      "text": "The 20-Somethings Running Ukraine’s War Machine",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: The 20-Somethings Running Ukraine’s War Machine"
     }
   ]
 }
