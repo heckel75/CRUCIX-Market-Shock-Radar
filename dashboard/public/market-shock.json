@@ -1,29 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-18T01:01:33.352Z",
+  "generatedAt": "2026-07-19T01:05:59.773Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Supply Chain Disruption": 1
+    "Geopolitical Escalation": 15
   },
   "candidateCount": 133,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,10 +30,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -43,52 +38,83 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone",
-        "oil"
+        "attack",
+        "iran"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "NASA FIRMS detected a fire at a railway station in Kerch after a drone strike. A possible hit on an oil depot is also reported.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: NASA FIRMS detected a fire at a railway station in Kerch after a drone strike. A possible hit on an oil depot is also reported."
+      "text": "According to WSJ, during Iran's attack on Jordan, both manned and unmanned aircraft were targeted. According to one source, a U.S. Air Force (USAF) F-15E Strike Eagle was destroyed during the Iranian",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, iran. Signal: According to WSJ, during Iran's attack on Jordan, both manned and unmanned aircraft were targeted. According to one source, a U.S. Air Force (USAF) F-15E Strike Eagle was destro..."
     },
     {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 17,
+      "category": "Geopolitical Escalation",
+      "score": 15,
       "confidence": "Medium",
       "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins",
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "port",
-        "strike",
-        "fuel"
+        "missile",
+        "russia",
+        "ukraine"
       ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Energy Shock"
-      ],
-      "text": "Satellite images of Kavkaz port from July 13 show damaged ferries from the June 21 strike, likely being towed by tugboats now, damaged fuel tanks and a long queue of fuel trucks waiting to load, Dnipr",
-      "explanation": "Supply Chain Disruption match based on keywords: port, strike. Signal: Satellite images of Kavkaz port from July 13 show damaged ferries from the June 21 strike, likely being towed by tugboats now, damaged fuel tanks and a long queue of fuel trucks..."
+      "otherCategories": [],
+      "text": "Ukraine's HUR gives NV a mid-July snapshot of Russia's remaining missile stockpile after over 200 strikes on Ukraine since early June: — Iskander-M ballistic: 100+ — Iskander-K cruise: 60+ — Kinzhal",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: Ukraine's HUR gives NV a mid-July snapshot of Russia's remaining missile stockpile after over 200 strikes on Ukraine since early June: — Iskander-M ballistic: 100+ — Iskander-K ..."
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "attack",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran War Updates: U.S. Launches Strikes After Iranian Attack Kills 2 American Soldiers",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran War Updates: U.S. Launches Strikes After Iranian Attack Kills 2 American Soldiers"
+    },
+    {
+      "path": "root.news[18]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "troops",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Deaths of 2 U.S. Troops in Jordan Brings American Toll in the War With Iran to 16",
+      "explanation": "Geopolitical Escalation match based on keywords: war, troops, iran. Signal: Deaths of 2 U.S. Troops in Jordan Brings American Toll in the War With Iran to 16"
+    },
+    {
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -112,8 +138,36 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇮🇷❌🇺🇸🇧🇭 — IRGC announces, hours ago, a U.S. Navy USV depot and an artificial intelligence center used to assist CENTCOM targeting were targeted in a missile & UAV strike involving several ballis",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇮🇷❌🇺🇸🇧🇭 — IRGC announces, hours ago, a U.S. Navy USV depot and an artificial intelligence center used to assist CENTCOM targeting were targeted in a missile & UAV strike i..."
+      "text": "🇷🇺❌🇺🇦 — A massive missile strike was launched on Kiev. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺❌🇺🇦 — A massive missile strike was launched on Kiev. @Intelslava"
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "military"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "US military says two service members killed in Iranian strike in Jordan | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, military. Signal: US military says two service members killed in Iranian strike in Jordan | Al Jazeera"
     },
     {
       "path": "root.news[48]",
@@ -134,185 +188,46 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "gaza"
+        "naval",
+        "iran",
+        "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Israeli Strike in Gaza Kills Seven People, Health Officials Say",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli Strike in Gaza Kills Seven People, Health Officials Say"
+      "text": "What to expect after the US reimposes naval blockade on Iran’s ports? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: What to expect after the US reimposes naval blockade on Iran’s ports? | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "The EU Council approved its first sanctions against Russia over deadly strikes on Kyiv July 1-2 and attacks on civilian infrastructure. Five ABS Electro companies are targeted for developing drone com",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: The EU Council approved its first sanctions against Russia over deadly strikes on Kyiv July 1-2 and attacks on civilian infrastructure. Five ABS Electro companies are targeted f..."
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Another Ukrainian MIG-29, received from Western partners, was destroyed by a Russian \"Geranium\" kamikaze drone. Even Poland, Ukraine’s closest ally, changed its mind about transferring a new batch of",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Another Ukrainian MIG-29, received from Western partners, was destroyed by a Russian \"Geranium\" kamikaze drone. Even Poland, Ukraine’s closest ally, changed its mind about trans..."
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine's SBU destroyed a Tu-95 aircraft in Engels used for Russian missile strikes on Ukraine, Zelensky says.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: Ukraine's SBU destroyed a Tu-95 aircraft in Engels used for Russian missile strikes on Ukraine, Zelensky says."
-    },
-    {
-      "path": "root.news[5]",
+      "path": "root.newsFeed[25]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "israel"
+        "strike",
+        "missile"
       ],
-      "otherCategories": [],
-      "text": "Unis lacked 'trauma-informed' care around Hamas-Israel war, royal commission hears | SBS Australia",
-      "explanation": "Geopolitical Escalation match based on keywords: war, israel. Signal: Unis lacked 'trauma-informed' care around Hamas-Israel war, royal commission hears | SBS Australia"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "❌ — A massive missile strike was launched on Kiev. @Intelslava | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: ❌ — A massive missile strike was launched on Kiev. @Intelslava | INTELSLAVA"
     },
     {
-      "path": "root.news[6]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straight Day",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straight Day"
-    },
-    {
-      "path": "root.news[14]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "What US, Iran, Russia say is irrelevant, we have to march forward with a smile: V-P | Indian Express",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: What US, Iran, Russia say is irrelevant, we have to march forward with a smile: V-P | Indian Express"
-    },
-    {
-      "path": "root.news[16]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: US and Iran exchange deadly attacks for 7th night | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US and Iran exchange deadly attacks for 7th night | Al Jazeera"
-    },
-    {
-      "path": "root.news[19]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "The Rise and Fall of Ukraine’s Drone Warfare Mastermind",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: The Rise and Fall of Ukraine’s Drone Warfare Mastermind"
-    },
-    {
-      "path": "root.news[21]",
+      "path": "root.news[11]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -326,14 +241,14 @@
       ],
       "matchedKeywords": [
         "attack",
-        "israel"
+        "troops"
       ],
       "otherCategories": [],
-      "text": "EU urges Israel to halt settlement expansion as settlers attack children | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: EU urges Israel to halt settlement expansion as settlers attack children | Al Jazeera"
+      "text": "Two US troops killed and one missing after Iranian attack in Jordan",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: Two US troops killed and one missing after Iranian attack in Jordan"
     },
     {
-      "path": "root.news[29]",
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -350,11 +265,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "War Between U.S. and Iran Expands, With Strikes Across the Region",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War Between U.S. and Iran Expands, With Strikes Across the Region"
+      "text": "Iran war Update: US launches new strikes; Trump mourns killed soldiers | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US launches new strikes; Trump mourns killed soldiers | Al Jazeera"
     },
     {
-      "path": "root.news[38]",
+      "path": "root.news[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -368,11 +283,95 @@
       ],
       "matchedKeywords": [
         "war",
-        "ukraine"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "The 20-Somethings Running Ukraine’s War Machine",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: The 20-Somethings Running Ukraine’s War Machine"
+      "text": "Why Jordan Is Becoming a New Focus in the U.S.-Iran War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Why Jordan Is Becoming a New Focus in the U.S.-Iran War"
+    },
+    {
+      "path": "root.news[24]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "troops"
+      ],
+      "otherCategories": [],
+      "text": "Khamenei threatens ‘unforgettable lessons’, two US troops killed in Iranian attack | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: Khamenei threatens ‘unforgettable lessons’, two US troops killed in Iranian attack | France 24"
+    },
+    {
+      "path": "root.news[26]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Why has the ‘ceasefire’ in Gaza failed to stop Israel’s attacks? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Why has the ‘ceasefire’ in Gaza failed to stop Israel’s attacks? | Al Jazeera"
+    },
+    {
+      "path": "root.news[37]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "troops"
+      ],
+      "otherCategories": [],
+      "text": "Two US troops killed in Jordan by Iranian attacks, US military says | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: military, troops. Signal: Two US troops killed in Jordan by Iranian attacks, US military says | Euronews"
+    },
+    {
+      "path": "root.newsFeed[16]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "According to WSJ, during Iran's attack on Jordan, both manned and unmanned aircraft were targeted. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: According to WSJ, during Iran's attack on Jordan, both manned and unmanned aircraft were targeted. | INTELSLAVA"
     }
   ]
 }
