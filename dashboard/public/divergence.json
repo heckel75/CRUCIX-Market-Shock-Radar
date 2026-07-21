@@ -1,40 +1,40 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-20T01:08:45.569Z",
-  "date": "2026-07-10",
-  "asOfClose": "2026-07-10",
-  "framing": "readings as of market close, 2026-07-10",
+  "generatedAt": "2026-07-21T01:02:48.730Z",
+  "date": "2026-07-13",
+  "asOfClose": "2026-07-13",
+  "framing": "readings as of market close, 2026-07-13",
   "sourceFiles": {
     "signal": "dashboard/public/market-shock.json",
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-20T01:08:41.786Z",
-    "generatedDate": "2026-07-20",
-    "asOfClose": "2026-07-10",
-    "calendarLagDays": 10,
+    "generatedAt": "2026-07-21T01:02:45.467Z",
+    "generatedDate": "2026-07-21",
+    "asOfClose": "2026-07-13",
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-20T01:08:41.786Z",
-    "generatedDate": "2026-07-20",
-    "runDate": "2026-07-20",
-    "asOfClose": "2026-07-10",
-    "calendarLagDays": 10,
+    "generatedAt": "2026-07-21T01:02:45.467Z",
+    "generatedDate": "2026-07-21",
+    "runDate": "2026-07-21",
+    "asOfClose": "2026-07-13",
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-20, readings as of market close, 2026-07-10 (10 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-21, readings as of market close, 2026-07-13 (8 calendar days old)."
   },
   "warnings": [
     {
       "code": "market-readings-lagging",
       "severity": "warning",
       "status": "lagging",
-      "asOfClose": "2026-07-10",
-      "generatedDate": "2026-07-20",
-      "calendarLagDays": 10,
-      "message": "Market readings are lagging: generated 2026-07-20, readings as of market close, 2026-07-10 (10 calendar days old)."
+      "asOfClose": "2026-07-13",
+      "generatedDate": "2026-07-21",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-07-21, readings as of market close, 2026-07-13 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 2
+    "priced": 3,
+    "radar-miss": 2
   },
   "rows": [
     {
@@ -68,10 +68,10 @@
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[1]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -87,17 +87,17 @@
         "text": "Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 600km from the Ukrainian",
         "explanation": "Geopolitical Escalation match based on keywords: ukraine, china. Signal: Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 6..."
       },
-      "market_z": -1.492,
-      "abs_market_z": 1.492,
-      "market_moving": false,
+      "market_z": -2.361,
+      "abs_market_z": 2.361,
+      "market_moving": true,
       "driver_instrument": "ITA",
       "driver_instrument_id": "defense-equities",
       "driver_instrument_label": "Defense equities ETF",
-      "driver_as_of": "2026-07-10",
-      "market_as_of": "2026-07-10",
+      "driver_as_of": "2026-07-13",
+      "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     },
     {
       "channel": "sanctions-policy",
@@ -112,17 +112,17 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
-      "market_z": 1.162,
-      "abs_market_z": 1.162,
-      "market_moving": false,
-      "driver_instrument": "DBC",
-      "driver_instrument_id": "broad-commodities",
-      "driver_instrument_label": "Broad commodities ETF",
-      "driver_as_of": "2026-07-10",
-      "market_as_of": "2026-07-10",
+      "market_z": -1.776,
+      "abs_market_z": 1.776,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-07-13",
+      "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
@@ -133,11 +133,11 @@
       "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[1]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -153,17 +153,17 @@
         "text": "Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 600km from the Ukrainian",
         "explanation": "Geopolitical Escalation match based on keywords: ukraine, china. Signal: Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 6..."
       },
-      "market_z": 1.085,
-      "abs_market_z": 1.085,
-      "market_moving": false,
+      "market_z": 2.241,
+      "abs_market_z": 2.241,
+      "market_moving": true,
       "driver_instrument": "DCOILBRENTEU",
       "driver_instrument_id": "brent",
       "driver_instrument_label": "Brent crude oil",
-      "driver_as_of": "2026-07-10",
-      "market_as_of": "2026-07-10",
+      "driver_as_of": "2026-07-13",
+      "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
@@ -178,56 +178,56 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
-      "market_z": 0.778,
-      "abs_market_z": 0.778,
-      "market_moving": false,
+      "market_z": 1.602,
+      "abs_market_z": 1.602,
+      "market_moving": true,
       "driver_instrument": "DGS10",
       "driver_instrument_id": "ten-year-treasury",
       "driver_instrument_label": "10-year Treasury yield",
-      "driver_as_of": "2026-07-10",
-      "market_as_of": "2026-07-10",
+      "driver_as_of": "2026-07-13",
+      "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 4,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[7]",
+        "path": "root.tg.urgent[12]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
+        "primaryCategory": "Supply Chain Disruption",
+        "isPrimary": true,
+        "rawScore": 13,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile"
+          "port",
+          "strike"
         ],
-        "text": "A Russian missile strike completely destroyed the UKRTAC plant and warehouses in Kyiv. Company founder Severion Dangadze called it \"the biggest tragedy in the company's history\" but confirmed all empl",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: A Russian missile strike completely destroyed the UKRTAC plant and warehouses in Kyiv. Company founder Severion Dangadze called it \"the biggest tragedy in the company's history\"..."
+        "text": "Ukrainian Marines used FPV drones launched from Barracuda uncrewed surface vessels for the first time to strike occupier positions near Zaliznyi Port in the Kherson region. The video contains subtit",
+        "explanation": "Supply Chain Disruption match based on keywords: port, strike. Signal: Ukrainian Marines used FPV drones launched from Barracuda uncrewed surface vessels for the first time to strike occupier positions near Zaliznyi Port in the Kherson region. The ..."
       },
-      "market_z": -0.812,
-      "abs_market_z": 0.812,
-      "market_moving": false,
+      "market_z": -1.68,
+      "abs_market_z": 1.68,
+      "market_moving": true,
       "driver_instrument": "XLI",
       "driver_instrument_id": "industrials",
       "driver_instrument_label": "Industrials equities ETF",
-      "driver_as_of": "2026-07-10",
-      "market_as_of": "2026-07-10",
+      "driver_as_of": "2026-07-13",
+      "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 10,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     }
   ],
   "signalOnly": [
