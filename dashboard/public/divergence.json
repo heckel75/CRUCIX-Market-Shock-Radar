@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-21T01:02:48.730Z",
+  "generatedAt": "2026-07-22T01:01:28.146Z",
   "date": "2026-07-13",
   "asOfClose": "2026-07-13",
   "framing": "readings as of market close, 2026-07-13",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-21T01:02:45.467Z",
-    "generatedDate": "2026-07-21",
+    "generatedAt": "2026-07-22T01:01:24.588Z",
+    "generatedDate": "2026-07-22",
     "asOfClose": "2026-07-13",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-21T01:02:45.467Z",
-    "generatedDate": "2026-07-21",
-    "runDate": "2026-07-21",
+    "generatedAt": "2026-07-22T01:01:24.588Z",
+    "generatedDate": "2026-07-22",
+    "runDate": "2026-07-22",
     "asOfClose": "2026-07-13",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-21, readings as of market close, 2026-07-13 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-22, readings as of market close, 2026-07-13 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-13",
-      "generatedDate": "2026-07-21",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-07-21, readings as of market close, 2026-07-13 (8 calendar days old)."
+      "generatedDate": "2026-07-22",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-22, readings as of market close, 2026-07-13 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,38 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
-    "radar-miss": 2
+    "priced": 2,
+    "radar-miss": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 24,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[8]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
+        "rawScore": 24,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "ukraine",
-          "china",
-          "oil",
-          "crude"
+          "strike",
+          "military",
+          "drone",
+          "russia"
         ],
-        "text": "Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 600km from the Ukrainian",
-        "explanation": "Geopolitical Escalation match based on keywords: ukraine, china. Signal: Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 6..."
+        "text": "Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully secure and free of thre",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, military, drone, russia. Signal: Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully ..."
       },
       "market_z": -2.361,
       "abs_market_z": 2.361,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-07-13",
       "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -121,38 +121,22 @@
       "driver_as_of": "2026-07-13",
       "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[1]",
-        "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "ukraine",
-          "china",
-          "oil",
-          "crude"
-        ],
-        "text": "Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 600km from the Ukrainian",
-        "explanation": "Geopolitical Escalation match based on keywords: ukraine, china. Signal: Ukraine's SBU hit another shadow fleet tanker under sanctions for exporting Russian crude to China and India. SBU drones also struck three oil depots in Stavropol region about 6..."
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 2.241,
       "abs_market_z": 2.241,
       "market_moving": true,
@@ -162,8 +146,8 @@
       "driver_as_of": "2026-07-13",
       "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "priced"
+      "market_calendar_lag_days": 9,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -187,35 +171,37 @@
       "driver_as_of": "2026-07-13",
       "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 24,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.tg.urgent[8]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Supply Chain Disruption",
-        "isPrimary": true,
-        "rawScore": 13,
-        "confidence": "Medium",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 24,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "port",
-          "strike"
+          "strike",
+          "military",
+          "drone",
+          "russia"
         ],
-        "text": "Ukrainian Marines used FPV drones launched from Barracuda uncrewed surface vessels for the first time to strike occupier positions near Zaliznyi Port in the Kherson region. The video contains subtit",
-        "explanation": "Supply Chain Disruption match based on keywords: port, strike. Signal: Ukrainian Marines used FPV drones launched from Barracuda uncrewed surface vessels for the first time to strike occupier positions near Zaliznyi Port in the Kherson region. The ..."
+        "text": "Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully secure and free of thre",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, military, drone, russia. Signal: Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully ..."
       },
       "market_z": -1.68,
       "abs_market_z": 1.68,
@@ -226,7 +212,7 @@
       "driver_as_of": "2026-07-13",
       "market_as_of": "2026-07-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
