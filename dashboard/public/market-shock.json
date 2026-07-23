@@ -1,28 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-22T01:01:24.437Z",
+  "generatedAt": "2026-07-23T01:06:14.775Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
     "categoryBreadth": 1
   },
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 139,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
+      "path": "root.news[13]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 24,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -30,72 +30,25 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "military",
-        "drone",
-        "russia"
+        "war",
+        "attack",
+        "iran",
+        "oil"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully secure and free of thre",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, military, drone, russia. Signal: Ukrainian channels report that an FP-2 strike drone hit a Russian military convoy at the Chongar checkpoint near occupied Crimea. Russia previously claimed this route was fully ..."
+      "text": "Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "russia",
-        "china"
-      ],
-      "otherCategories": [],
-      "text": "🇨🇳🇷🇺🇮🇷❌🇺🇸— NEW: China and Russia are both helping Iran in the war, Hegseth tells lawmakers, CNN reports. ➡️ Defense Secretary Pete Hegseth told the Senate Appropriations Committee Tuesday tha",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, russia, china. Signal: 🇨🇳🇷🇺🇮🇷❌🇺🇸— NEW: China and Russia are both helping Iran in the war, Hegseth tells lawmakers, CNN reports. ➡️ Defense Secretary Pete Hegseth told the Senate Appropriations..."
-    },
-    {
-      "path": "root.newsFeed[20]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "russia",
-        "china"
-      ],
-      "otherCategories": [],
-      "text": "❌— NEW: China and Russia are both helping Iran in the war, Hegseth tells lawmakers, CNN reports. ➡️ | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, russia, china. Signal: ❌— NEW: China and Russia are both helping Iran in the war, Hegseth tells lawmakers, CNN reports. ➡️ | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -108,16 +61,104 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "drone",
+        "border",
+        "airstrike",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — NEW: U.S. Central Command says it concluded another wave of strikes against Iran, targeting military operations centers, maritime capabilities, aircraft hangars, drone storage facilities,",
-      "explanation": "Geopolitical Escalation match based on keywords: military, drone, iran. Signal: 🇺🇸❌🇮🇷 — NEW: U.S. Central Command says it concluded another wave of strikes against Iran, targeting military operations centers, maritime capabilities, aircraft hangars, dro..."
+      "text": "🇺🇸🇮🇶🇮🇷⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike.",
+      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: 🇺🇸🇮🇶🇮🇷⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike."
     },
     {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "airstrike",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸🇮🇶🇮🇷⚡️ — A U.S. airstrike targeted the passenger terminal at the Shalamcheh border crossing in southwestern Iran's Khuzestan province a short while ago, according to state media.",
+      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: 🇺🇸🇮🇶🇮🇷⚡️ — A U.S. airstrike targeted the passenger terminal at the Shalamcheh border crossing in southwestern Iran's Khuzestan province a short while ago, according to sta..."
+    },
+    {
+      "path": "root.news[27]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "escalation",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iranian missiles show deadly precision amid US-Iran war escalation | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Iranian missiles show deadly precision amid US-Iran war escalation | Al Jazeera"
+    },
+    {
+      "path": "root.news[42]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine’s new military chief pledges to escalate retaliation against Russia | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: Ukraine’s new military chief pledges to escalate retaliation against Russia | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "airstrike",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike. | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: ⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike. | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -145,7 +186,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine has unveiled a modification of the An-196 \"Liutyi\" strike UAV equipped with air-to-surface missiles at an exhibition in the United Kingdom."
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -173,8 +214,8 @@
       "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Last night, the Russians in Belgorod were once again kept awake. Part of the city is experiencing water outages after a missile strike."
     },
     {
-      "path": "root.news[21]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -192,16 +233,82 @@
       ],
       "matchedKeywords": [
         "strike",
-        "iran"
+        "ukraine"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Iran holds funerals for children killed in Minab school strike | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: Iran holds funerals for children killed in Minab school strike | Al Jazeera"
+      "text": "Dnipro OSINT has compiled the impact of the strike on the Hvardiyske airfield in occupied Crimea, which the Russians used to launch Shahed drones against Ukraine.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Dnipro OSINT has compiled the impact of the strike on the Hvardiyske airfield in occupied Crimea, which the Russians used to launch Shahed drones against Ukraine."
     },
     {
-      "path": "root.tg.urgent[11]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Amidst the strike on a Saudi tanker, oil prices surged sharply, reaching $95 per barrel. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Amidst the strike on a Saudi tanker, oil prices surged sharply, reaching $95 per barrel. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "🇾🇪🚫🇸🇦 — Saudi oil tanker allegedly on fire after the Houthi strike. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇾🇪🚫🇸🇦 — Saudi oil tanker allegedly on fire after the Houthi strike. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -214,15 +321,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "border",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — U.S. airstrikes targeted a military base located right next to Behbehan Northwest Airport in southwestern Iran's Khuzestan Province earlier tonight.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸❌🇮🇷 — U.S. airstrikes targeted a military base located right next to Behbehan Northwest Airport in southwestern Iran's Khuzestan Province earlier tonight."
+      "text": "🇺🇸❌🇮🇷 - Earlier, U.S. airstrikes struck the area surrounding the passenger terminal at the Shalamcheh border crossing between Iran and Iraq. According to the Deputy Governor of Khuzestan Province",
+      "explanation": "Geopolitical Escalation match based on keywords: border, iran. Signal: 🇺🇸❌🇮🇷 - Earlier, U.S. airstrikes struck the area surrounding the passenger terminal at the Shalamcheh border crossing between Iran and Iraq. According to the Deputy Governor..."
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -260,11 +367,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: US launches new attacks; Hegseth says war has cost $37.5bn | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US launches new attacks; Hegseth says war has cost $37.5bn | Al Jazeera"
+      "text": "Iran War Updates: Iran Digs In After Latest Trump Threat on Civilian Targets",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Iran Digs In After Latest Trump Threat on Civilian Targets"
     },
     {
-      "path": "root.news[16]",
+      "path": "root.news[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -277,103 +384,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Zelenskyy replaces Ukraine military chief after protests | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Zelenskyy replaces Ukraine military chief after protests | Al Jazeera"
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine&apos;s Zelenskyy fires his military chief after protests and names a new one",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine&apos;s Zelenskyy fires his military chief after protests and names a new one"
-    },
-    {
-      "path": "root.news[20]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "US defence chief Hegseth puts Iran war cost at $37.5bn so far | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US defence chief Hegseth puts Iran war cost at $37.5bn so far | Al Jazeera"
-    },
-    {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Houthis in Yemen Edge Closer to Entering U.S.-Iran War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Houthis in Yemen Edge Closer to Entering U.S.-Iran War"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+      "text": "Russia's businesses under strain from Ukraine's attacks on Wildberries",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia's businesses under strain from Ukraine's attacks on Wildberries"
     }
   ]
 }
