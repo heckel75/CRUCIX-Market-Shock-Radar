@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-23T01:06:17.865Z",
+  "generatedAt": "2026-07-24T01:01:39.091Z",
   "date": "2026-07-17",
   "asOfClose": "2026-07-17",
   "framing": "readings as of market close, 2026-07-17",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-23T01:06:14.919Z",
-    "generatedDate": "2026-07-23",
+    "generatedAt": "2026-07-24T01:01:19.019Z",
+    "generatedDate": "2026-07-24",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-23T01:06:14.919Z",
-    "generatedDate": "2026-07-23",
-    "runDate": "2026-07-23",
+    "generatedAt": "2026-07-24T01:01:19.019Z",
+    "generatedDate": "2026-07-24",
+    "runDate": "2026-07-24",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-23, readings as of market close, 2026-07-17 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-24, readings as of market close, 2026-07-17 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-17",
-      "generatedDate": "2026-07-23",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-07-23, readings as of market close, 2026-07-17 (6 calendar days old)."
+      "generatedDate": "2026-07-24",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-07-24, readings as of market close, 2026-07-17 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
-    "radar-miss": 1,
+    "priced": 2,
+    "radar-miss": 2,
     "calm": 1
   },
   "rows": [
@@ -72,21 +72,20 @@
       "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[13]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 19,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "attack",
-          "iran",
-          "oil"
+          "strike",
+          "missile",
+          "drone"
         ],
-        "text": "Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera"
+        "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
       },
       "market_z": 1.794,
       "abs_market_z": 1.794,
@@ -97,7 +96,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
@@ -122,38 +121,22 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 3,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
-      "top_signal": {
-        "path": "root.news[13]",
-        "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "war",
-          "attack",
-          "iran",
-          "oil"
-        ],
-        "text": "Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 2.042,
       "abs_market_z": 2.042,
       "market_moving": true,
@@ -163,8 +146,8 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "priced"
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -188,35 +171,36 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "ukraine"
+          "missile",
+          "drone"
         ],
-        "text": "Ukraine has unveiled a modification of the An-196 \"Liutyi\" strike UAV equipped with air-to-surface missiles at an exhibition in the United Kingdom.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine has unveiled a modification of the An-196 \"Liutyi\" strike UAV equipped with air-to-surface missiles at an exhibition in the United Kingdom."
+        "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
       },
       "market_z": -2.216,
       "abs_market_z": 2.216,
@@ -227,7 +211,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-23T01:06:14.775Z",
+  "generatedAt": "2026-07-24T01:01:18.870Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -15,154 +15,15 @@
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 135,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[13]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
       "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "attack",
-        "iran",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: US launches new attacks; Houthis attack 2 Saudi oil tankers | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "airstrike",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🇮🇶🇮🇷⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike.",
-      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: 🇺🇸🇮🇶🇮🇷⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike."
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "airstrike",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🇮🇶🇮🇷⚡️ — A U.S. airstrike targeted the passenger terminal at the Shalamcheh border crossing in southwestern Iran's Khuzestan province a short while ago, according to state media.",
-      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: 🇺🇸🇮🇶🇮🇷⚡️ — A U.S. airstrike targeted the passenger terminal at the Shalamcheh border crossing in southwestern Iran's Khuzestan province a short while ago, according to sta..."
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "escalation",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iranian missiles show deadly precision amid US-Iran war escalation | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Iranian missiles show deadly precision amid US-Iran war escalation | Al Jazeera"
-    },
-    {
-      "path": "root.news[42]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine’s new military chief pledges to escalate retaliation against Russia | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: Ukraine’s new military chief pledges to escalate retaliation against Russia | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[9]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "airstrike",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike. | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike, iran. Signal: ⚡️ — Scenes from the Shalamcheh border crossing in southwestern Iran following a U.S. airstrike. | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -177,16 +38,39 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "missile",
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Ukraine has unveiled a modification of the An-196 \"Liutyi\" strike UAV equipped with air-to-surface missiles at an exhibition in the United Kingdom.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine has unveiled a modification of the An-196 \"Liutyi\" strike UAV equipped with air-to-surface missiles at an exhibition in the United Kingdom."
+      "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.news[11]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "attack",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Trump weighs ‘massive attack’ on Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Trump weighs ‘massive attack’ on Iran | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -210,105 +94,11 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Last night, the Russians in Belgorod were once again kept awake. Part of the city is experiencing water outages after a missile strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Last night, the Russians in Belgorod were once again kept awake. Part of the city is experiencing water outages after a missile strike."
+      "text": "🇷🇺🇺🇦⚡️ — According to intelligence reports, there is a high probability of a ballistic missile strike within the next 48 hours - Ukrainian media outlets are reporting. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — According to intelligence reports, there is a high probability of a ballistic missile strike within the next 48 hours - Ukrainian media outlets are reporting. @Inte..."
     },
     {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Dnipro OSINT has compiled the impact of the strike on the Hvardiyske airfield in occupied Crimea, which the Russians used to launch Shahed drones against Ukraine.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Dnipro OSINT has compiled the impact of the strike on the Hvardiyske airfield in occupied Crimea, which the Russians used to launch Shahed drones against Ukraine."
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "Amidst the strike on a Saudi tanker, oil prices surged sharply, reaching $95 per barrel. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Amidst the strike on a Saudi tanker, oil prices surged sharply, reaching $95 per barrel. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇾🇪🚫🇸🇦 — Saudi oil tanker allegedly on fire after the Houthi strike. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇾🇪🚫🇸🇦 — Saudi oil tanker allegedly on fire after the Houthi strike. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -321,33 +111,54 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "border",
+        "conflict",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇸⚡️ — US President Donald Trump has promised to end the conflict in Ukraine within 24 hours nearly a hundred times and lauded the Anchorage summit, Russian Foreign Ministry Spokeswoman Maria Z",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict, ukraine. Signal: 🇷🇺🇺🇸⚡️ — US President Donald Trump has promised to end the conflict in Ukraine within 24 hours nearly a hundred times and lauded the Anchorage summit, Russian Foreign Minist..."
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇱 🇺🇸 🇮🇷 Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming to speak for Americans generally: \"No one in America wants American casualties… We d",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: 🇮🇱 🇺🇸 🇮🇷 Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming to speak for Americans generally: \"No one in America wants Am..."
+    },
+    {
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "airstrike",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 - Earlier, U.S. airstrikes struck the area surrounding the passenger terminal at the Shalamcheh border crossing between Iran and Iraq. According to the Deputy Governor of Khuzestan Province",
-      "explanation": "Geopolitical Escalation match based on keywords: border, iran. Signal: 🇺🇸❌🇮🇷 - Earlier, U.S. airstrikes struck the area surrounding the passenger terminal at the Shalamcheh border crossing between Iran and Iraq. According to the Deputy Governor..."
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Crimea is under drone attack right now. OSINT monitoring channels report explosions in Yalta and Feodosia. A fire has also been reported in Alushta following the attack. If our translations help you",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Crimea is under drone attack right now. OSINT monitoring channels report explosions in Yalta and Feodosia. A fire has also been reported in Alushta following the attack. If our ..."
+      "text": "🇺🇸❌🇮🇷 — Aftermath of a U.S. airstrike on Jask, Hormozgan Province, southern Iran. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇺🇸❌🇮🇷 — Aftermath of a U.S. airstrike on Jask, Hormozgan Province, southern Iran. @IntelSlava"
     },
     {
       "path": "root.news[6]",
@@ -367,11 +178,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran War Updates: Iran Digs In After Latest Trump Threat on Civilian Targets",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Iran Digs In After Latest Trump Threat on Civilian Targets"
+      "text": "Iran War Updates: Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say"
     },
     {
-      "path": "root.news[17]",
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -384,12 +195,159 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Russia's businesses under strain from Ukraine's attacks on Wildberries",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia's businesses under strain from Ukraine's attacks on Wildberries"
+      "text": "Analyst: voting against Iran war funding a tough sell for Congress | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Analyst: voting against Iran war funding a tough sell for Congress | Al Jazeera"
+    },
+    {
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israel bombs Gaza after displacement orders, kills two Palestinians | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel bombs Gaza after displacement orders, kills two Palestinians | Al Jazeera"
+    },
+    {
+      "path": "root.news[13]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Trump threatens Iran and Houthi rebels with 'major military punishment' | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Trump threatens Iran and Houthi rebels with 'major military punishment' | France 24"
+    },
+    {
+      "path": "root.news[14]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Two Palestinians killed as Israel intensifies strikes on Gaza City | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Two Palestinians killed as Israel intensifies strikes on Gaza City | Al Jazeera"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "US war on Iran: The $110 billion price tag | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US war on Iran: The $110 billion price tag | Al Jazeera"
+    },
+    {
+      "path": "root.news[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "US-Saudi nuclear deal hinges on normalisation with Israel | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, israel. Signal: US-Saudi nuclear deal hinges on normalisation with Israel | Al Jazeera"
+    },
+    {
+      "path": "root.news[41]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "troops",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Senators Ask Hegseth to Fully Account for U.S. Troops Killed or Wounded in Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, iran. Signal: Senators Ask Hegseth to Fully Account for U.S. Troops Killed or Wounded in Iran"
+    },
+    {
+      "path": "root.newsFeed[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming | CIG_TELEGRAM"
     }
   ]
 }
