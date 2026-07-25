@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-24T01:01:18.870Z",
+  "generatedAt": "2026-07-25T01:05:43.110Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -15,11 +15,11 @@
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 134,
+  "candidateCount": 139,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
@@ -38,18 +38,18 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile",
-        "drone"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
+      "text": "Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing a new \"significant\" wav",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing ..."
     },
     {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -61,16 +61,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "attack",
-        "iran"
+        "invasion",
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump weighs ‘massive attack’ on Iran | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Trump weighs ‘massive attack’ on Iran | Al Jazeera"
+      "text": "📝 🇺🇦 🇷🇺 Clément Molin on X: Year 5 of the Russian invasion of Ukraine, let's check how the NATO countries bordering Russia/Belarus are fortifying : POLAND 🇵🇱 : Despite many announcements and m",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, russia, ukraine. Signal: 📝 🇺🇦 🇷🇺 Clément Molin on X: Year 5 of the Russian invasion of Ukraine, let's check how the NATO countries bordering Russia/Belarus are fortifying : POLAND 🇵🇱 : Despite ma..."
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -94,53 +94,67 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — According to intelligence reports, there is a high probability of a ballistic missile strike within the next 48 hours - Ukrainian media outlets are reporting. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — According to intelligence reports, there is a high probability of a ballistic missile strike within the next 48 hours - Ukrainian media outlets are reporting. @Inte..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "conflict",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇸⚡️ — US President Donald Trump has promised to end the conflict in Ukraine within 24 hours nearly a hundred times and lauded the Anchorage summit, Russian Foreign Ministry Spokeswoman Maria Z",
-      "explanation": "Geopolitical Escalation match based on keywords: conflict, ukraine. Signal: 🇷🇺🇺🇸⚡️ — US President Donald Trump has promised to end the conflict in Ukraine within 24 hours nearly a hundred times and lauded the Anchorage summit, Russian Foreign Minist..."
+      "text": "🇺🇦⚡️ — Kiev residents in the metro are preparing to spend the night there due to the threat of a massive missile strike. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇺🇦⚡️ — Kiev residents in the metro are preparing to spend the night there due to the threat of a massive missile strike. @IntelSlava"
     },
     {
       "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "iran",
-        "israel"
+        "strike",
+        "ukraine"
       ],
-      "otherCategories": [],
-      "text": "🇮🇱 🇺🇸 🇮🇷 Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming to speak for Americans generally: \"No one in America wants American casualties… We d",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: 🇮🇱 🇺🇸 🇮🇷 Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming to speak for Americans generally: \"No one in America wants Am..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦⚡️ — The Russians have prepared missiles for a new massive strike on Ukraine: the strike could take place within 48 hours – Zelensky. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: 🇺🇦⚡️ — The Russians have prepared missiles for a new massive strike on Ukraine: the strike could take place within 48 hours – Zelensky. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.newsFeed[28]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — The Russians have prepared missiles for a new massive strike on Ukraine: the strike could take | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: ⚡️ — The Russians have prepared missiles for a new massive strike on Ukraine: the strike could take | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -153,12 +167,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "airstrike",
-        "iran"
+        "missile",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇷 — Aftermath of a U.S. airstrike on Jask, Hormozgan Province, southern Iran. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: 🇺🇸❌🇮🇷 — Aftermath of a U.S. airstrike on Jask, Hormozgan Province, southern Iran. @IntelSlava"
+      "text": "🇮🇷🚫🇮🇶 — Reports of explosions in Erbil, Iraqi Kurdistan, following Iranian drone and missile strikes on the headquarters of Kurdish separatist groups. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇮🇷🚫🇮🇶 — Reports of explosions in Erbil, Iraqi Kurdistan, following Iranian drone and missile strikes on the headquarters of Kurdish separatist groups. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "escalation",
+        "conflict"
+      ],
+      "otherCategories": [],
+      "text": "🇾🇪❌🇸🇦 — Yemen's Houthi foreign ministry says Saudi airstrikes on Hodeidah mark the start of a new phase in the conflict in which the equation of \"escalation with escalation\" will prevail. ➡️ The",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, conflict. Signal: 🇾🇪❌🇸🇦 — Yemen's Houthi foreign ministry says Saudi airstrikes on Hodeidah mark the start of a new phase in the conflict in which the equation of \"escalation with escalation\"..."
     },
     {
       "path": "root.news[6]",
@@ -178,11 +213,32 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran War Updates: Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say"
+      "text": "Iran War Updates: Trump Meets With Cabinet Over Whether to Intensify Iran Strikes",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Updates: Trump Meets With Cabinet Over Whether to Intensify Iran Strikes"
     },
     {
-      "path": "root.news[8]",
+      "path": "root.news[11]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "Ten killed in Russian attack on drone exhibition near Kyiv",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Ten killed in Russian attack on drone exhibition near Kyiv"
+    },
+    {
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -199,11 +255,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Analyst: voting against Iran war funding a tough sell for Congress | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Analyst: voting against Iran war funding a tough sell for Congress | Al Jazeera"
+      "text": "Iran war Update: Trump says US ‘locked and loaded’ as it seeks Iran talks | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says US ‘locked and loaded’ as it seeks Iran talks | Al Jazeera"
     },
     {
-      "path": "root.news[9]",
+      "path": "root.news[21]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -216,15 +272,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
+        "escalation",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Israel bombs Gaza after displacement orders, kills two Palestinians | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel bombs Gaza after displacement orders, kills two Palestinians | Al Jazeera"
+      "text": "Trump Meets With Top Advisers as He Weighs a Major Escalation in Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, iran. Signal: Trump Meets With Top Advisers as He Weighs a Major Escalation in Iran"
     },
     {
-      "path": "root.news[13]",
+      "path": "root.news[39]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -241,11 +297,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Trump threatens Iran and Houthi rebels with 'major military punishment' | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Trump threatens Iran and Houthi rebels with 'major military punishment' | France 24"
+      "text": "Iran military says it targeted US bases in Bahrain, Jordan and Kuwait | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Iran military says it targeted US bases in Bahrain, Jordan and Kuwait | Euronews"
     },
     {
-      "path": "root.news[14]",
+      "path": "root.news[44]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -258,15 +314,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Two Palestinians killed as Israel intensifies strikes on Gaza City | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Two Palestinians killed as Israel intensifies strikes on Gaza City | Al Jazeera"
+      "text": "A New Target for Ukraine’s Long-Range Attacks: Russia’s Version of Amazon",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: A New Target for Ukraine’s Long-Range Attacks: Russia’s Version of Amazon"
     },
     {
-      "path": "root.news[33]",
+      "path": "root.newsFeed[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -279,54 +335,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "invasion",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "US war on Iran: The $110 billion price tag | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US war on Iran: The $110 billion price tag | Al Jazeera"
-    },
-    {
-      "path": "root.news[36]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "US-Saudi nuclear deal hinges on normalisation with Israel | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, israel. Signal: US-Saudi nuclear deal hinges on normalisation with Israel | Al Jazeera"
-    },
-    {
-      "path": "root.news[41]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "troops",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Senators Ask Hegseth to Fully Account for U.S. Troops Killed or Wounded in Iran",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, iran. Signal: Senators Ask Hegseth to Fully Account for U.S. Troops Killed or Wounded in Iran"
+      "text": "📝 Clément Molin on X: Year 5 of the Russian invasion of Ukraine, let's check how the NATO countri | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, ukraine. Signal: 📝 Clément Molin on X: Year 5 of the Russian invasion of Ukraine, let's check how the NATO countri | CIG_TELEGRAM"
     },
     {
       "path": "root.newsFeed[45]",
@@ -342,12 +356,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "israel"
+        "missile",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Israel First pundit Ben Shapiro says he’s willing to see American lives sacrificed in Iran, claiming | CIG_TELEGRAM"
+      "text": "🚫 — Reports of explosions in Erbil, Iraqi Kurdistan, following Iranian drone and missile strikes on | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🚫 — Reports of explosions in Erbil, Iraqi Kurdistan, following Iranian drone and missile strikes on | INTELSLAVA"
     }
   ]
 }

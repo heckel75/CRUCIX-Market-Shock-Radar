@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-24T01:01:39.091Z",
+  "generatedAt": "2026-07-25T01:05:47.708Z",
   "date": "2026-07-17",
   "asOfClose": "2026-07-17",
   "framing": "readings as of market close, 2026-07-17",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-24T01:01:19.019Z",
-    "generatedDate": "2026-07-24",
+    "generatedAt": "2026-07-25T01:05:43.266Z",
+    "generatedDate": "2026-07-25",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-24T01:01:19.019Z",
-    "generatedDate": "2026-07-24",
-    "runDate": "2026-07-24",
+    "generatedAt": "2026-07-25T01:05:43.266Z",
+    "generatedDate": "2026-07-25",
+    "runDate": "2026-07-25",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-24, readings as of market close, 2026-07-17 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-25, readings as of market close, 2026-07-17 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-17",
-      "generatedDate": "2026-07-24",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-07-24, readings as of market close, 2026-07-17 (7 calendar days old)."
+      "generatedDate": "2026-07-25",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-07-25, readings as of market close, 2026-07-17 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -72,7 +72,7 @@
       "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[9]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -81,11 +81,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "drone"
+          "russia",
+          "ukraine"
         ],
-        "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
+        "text": "Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing a new \"significant\" wav",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing ..."
       },
       "market_z": 1.794,
       "abs_market_z": 1.794,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -121,7 +121,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
@@ -146,7 +146,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
@@ -171,7 +171,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -183,11 +183,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[9]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -196,11 +196,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "drone"
+          "russia",
+          "ukraine"
         ],
-        "text": "🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch position, but nothing has be",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇮🇷❌🇰🇼🇺🇸 — CCTV footage shows a fire in northern Kuwait following the impact of an Iranian drone or missile. Initial reports claim the strike targeted a HIMARS launch posit..."
+        "text": "Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing a new \"significant\" wav",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing ..."
       },
       "market_z": -2.216,
       "abs_market_z": 2.216,
@@ -211,7 +211,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
