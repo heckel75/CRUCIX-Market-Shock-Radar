@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-25T01:05:47.708Z",
+  "generatedAt": "2026-07-26T01:10:25.746Z",
   "date": "2026-07-17",
   "asOfClose": "2026-07-17",
   "framing": "readings as of market close, 2026-07-17",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-25T01:05:43.266Z",
-    "generatedDate": "2026-07-25",
+    "generatedAt": "2026-07-26T01:10:22.373Z",
+    "generatedDate": "2026-07-26",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-25T01:05:43.266Z",
-    "generatedDate": "2026-07-25",
-    "runDate": "2026-07-25",
+    "generatedAt": "2026-07-26T01:10:22.373Z",
+    "generatedDate": "2026-07-26",
+    "runDate": "2026-07-26",
     "asOfClose": "2026-07-17",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-25, readings as of market close, 2026-07-17 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-26, readings as of market close, 2026-07-17 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-17",
-      "generatedDate": "2026-07-25",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-07-25, readings as of market close, 2026-07-17 (8 calendar days old)."
+      "generatedDate": "2026-07-26",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-26, readings as of market close, 2026-07-17 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,29 +63,31 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 25,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
       "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[10]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 25,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
+          "missile",
+          "military",
+          "iran",
           "russia",
           "ukraine"
         ],
-        "text": "Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing a new \"significant\" wav",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing ..."
+        "text": "Iranian Telegram channels are threatening ballistic missile strikes on Ukraine after Zelensky said they hit a military vessel carrying cargo between Russia and Iran.",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, military, iran, russia, ukraine. Signal: Iranian Telegram channels are threatening ballistic missile strikes on Ukraine after Zelensky said they hit a military vessel carrying cargo between Russia and Iran."
       },
       "market_z": 1.794,
       "abs_market_z": 1.794,
@@ -96,7 +98,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -121,7 +123,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
@@ -146,7 +148,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
@@ -171,7 +173,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -183,11 +185,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[4]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -196,11 +198,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "russia",
-          "ukraine"
+          "missile",
+          "drone"
         ],
-        "text": "Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing a new \"significant\" wav",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Russians prepared missiles for a new massive strike on Ukraine within 48 hours, Zelensky reports citing intelligence and partners. Intelligence also reports Russia is preparing ..."
+        "text": "DroneBomber posted a range map of Ukrainian strike systems. Liutyi drone 2000km, Flamingo cruise missile 3000km, FP-1 drone 3400km.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: DroneBomber posted a range map of Ukrainian strike systems. Liutyi drone 2000km, Flamingo cruise missile 3000km, FP-1 drone 3400km."
       },
       "market_z": -2.216,
       "abs_market_z": 2.216,
@@ -211,7 +213,7 @@
       "driver_as_of": "2026-07-17",
       "market_as_of": "2026-07-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
