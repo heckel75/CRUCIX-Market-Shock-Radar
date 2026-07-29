@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-28T01:00:50.052Z",
+  "generatedAt": "2026-07-29T01:03:01.264Z",
   "date": "2026-07-20",
   "asOfClose": "2026-07-20",
   "framing": "readings as of market close, 2026-07-20",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-28T01:00:13.137Z",
-    "generatedDate": "2026-07-28",
+    "generatedAt": "2026-07-29T01:02:58.267Z",
+    "generatedDate": "2026-07-29",
     "asOfClose": "2026-07-20",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-28T01:00:13.137Z",
-    "generatedDate": "2026-07-28",
-    "runDate": "2026-07-28",
+    "generatedAt": "2026-07-29T01:02:58.267Z",
+    "generatedDate": "2026-07-29",
+    "runDate": "2026-07-29",
     "asOfClose": "2026-07-20",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-28, readings as of market close, 2026-07-20 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-29, readings as of market close, 2026-07-20 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-20",
-      "generatedDate": "2026-07-28",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-07-28, readings as of market close, 2026-07-20 (8 calendar days old)."
+      "generatedDate": "2026-07-29",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-07-29, readings as of market close, 2026-07-20 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,28 +64,28 @@
       "signal_category": "Geopolitical Escalation",
       "signal_score": 1,
       "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.news[36]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
+        "rawScore": 20,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "missile",
+          "attack",
+          "escalation",
           "iran",
           "ukraine"
         ],
-        "text": "🇮🇷❌🇺🇦 — Iran could strike Ukraine with ballistic missiles at any time, with no adequate interception capability currently in place, Defence Express reports. ➡️ The Ghadr missile has a range of up",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran, ukraine. Signal: 🇮🇷❌🇺🇦 — Iran could strike Ukraine with ballistic missiles at any time, with no adequate interception capability currently in place, Defence Express reports. ➡️ The Ghadr mis..."
+        "text": "Kyiv warns Iran against escalation after Ukraine’s Caspian Sea attack | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, escalation, iran, ukraine. Signal: Kyiv warns Iran against escalation after Ukraine’s Caspian Sea attack | Al Jazeera"
       },
       "market_z": -1.003,
       "abs_market_z": 1.003,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-07-20",
       "market_as_of": "2026-07-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -121,36 +121,36 @@
       "driver_as_of": "2026-07-20",
       "market_as_of": "2026-07-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.6,
-      "signal_score_pct": 60,
-      "signal_raw_score": 12,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 1,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_count": 6,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[15]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 12,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "oil",
-          "crude",
-          "refinery"
+          "missile",
+          "attack",
+          "oil"
         ],
-        "text": "🇮🇶🇸🇦⚡️ — Saudi Arabia's Ministry of Defense confirmed that the Islamic Resistance in Iraq targeted Aramco's Abqaiq refinery, the world's largest oil processing and crude stabilization facility. T",
-        "explanation": "Energy Shock match based on keywords: oil, crude, refinery. Signal: 🇮🇶🇸🇦⚡️ — Saudi Arabia's Ministry of Defense confirmed that the Islamic Resistance in Iraq targeted Aramco's Abqaiq refinery, the world's largest oil processing and crude sta..."
+        "text": "Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker | Al Jazeera"
       },
       "market_z": 0.834,
       "abs_market_z": 0.834,
@@ -161,36 +161,22 @@
       "driver_as_of": "2026-07-20",
       "market_as_of": "2026-07-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[22]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "israel",
-          "bank"
-        ],
-        "text": "UN slams Israel’s expansion of illegal settlements in occupied West Bank | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: UN slams Israel’s expansion of illegal settlements in occupied West Bank | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -0.293,
       "abs_market_z": 0.293,
       "market_moving": false,
@@ -200,37 +186,35 @@
       "driver_as_of": "2026-07-20",
       "market_as_of": "2026-07-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.news[27]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 24,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "iran",
-          "ukraine"
+          "oil"
         ],
-        "text": "🇮🇷❌🇺🇦 — Iran could strike Ukraine with ballistic missiles at any time, with no adequate interception capability currently in place, Defence Express reports. ➡️ The Ghadr missile has a range of up",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran, ukraine. Signal: 🇮🇷❌🇺🇦 — Iran could strike Ukraine with ballistic missiles at any time, with no adequate interception capability currently in place, Defence Express reports. ➡️ The Ghadr mis..."
+        "text": "Houthis Claim Strike on Another Saudi Oil Tanker",
+        "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Houthis Claim Strike on Another Saudi Oil Tanker"
       },
       "market_z": -1.3,
       "abs_market_z": 1.3,
@@ -241,7 +225,7 @@
       "driver_as_of": "2026-07-20",
       "market_as_of": "2026-07-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     }
   ],
@@ -278,14 +262,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[12]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "china",
+          "chips",
+          "stocks"
+        ],
+        "text": "Tech Stocks Tumble on Worries Over A.I. Spending and China’s Chips | NYT Asia",
+        "explanation": "Geopolitical Escalation match based on keywords: china. Signal: Tech Stocks Tumble on Worries Over A.I. Spending and China’s Chips | NYT Asia"
+      }
     }
   ]
 }
