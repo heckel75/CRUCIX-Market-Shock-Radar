@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-29T01:02:58.117Z",
+  "generatedAt": "2026-07-30T00:57:44.630Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,37 +13,101 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
   "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[36]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 20,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: 🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait."
+    },
+    {
+      "path": "root.newsFeed[13]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "❌ — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from K | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: ❌ — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from K | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 17,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "escalation",
-        "iran",
-        "ukraine"
+        "oil",
+        "crude",
+        "refinery",
+        "drone"
       ],
-      "otherCategories": [],
-      "text": "Kyiv warns Iran against escalation after Ukraine’s Caspian Sea attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, escalation, iran, ukraine. Signal: Kyiv warns Iran against escalation after Ukraine’s Caspian Sea attack | Al Jazeera"
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Reports indicate that the primary crude oil distillation complex at the oil refinery in Perm is on fire following drone strikes.",
+      "explanation": "Energy Shock match based on keywords: oil, crude, refinery. Signal: Reports indicate that the primary crude oil distillation complex at the oil refinery in Perm is on fire following drone strikes."
     },
     {
-      "path": "root.news[8]",
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -57,15 +121,43 @@
       ],
       "matchedKeywords": [
         "war",
-        "missile",
+        "military",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: US accuses IRGC of ‘surprise’ ballistic missile attacks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, missile, iran. Signal: Iran war Update: US accuses IRGC of ‘surprise’ ballistic missile attacks | Al Jazeera"
+      "text": "Iran War Updates: U.S. Begins New Wave of Attacks on Iran, Military Says",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: Iran War Updates: U.S. Begins New Wave of Attacks on Iran, Military Says"
     },
     {
-      "path": "root.news[15]",
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "The head of FirePoint published the moment of the launch of a Ukrainian ballistic missile and FP-1/2 strike drones.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: The head of FirePoint published the moment of the launch of a Ukrainian ballistic missile and FP-1/2 strike drones."
+    },
+    {
+      "path": "root.news[28]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -76,38 +168,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker | Al Jazeera"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -116,20 +176,19 @@
       ],
       "matchedKeywords": [
         "strike",
-        "oil"
+        "drone"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "Houthis Claim Strike on Another Saudi Oil Tanker",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Houthis Claim Strike on Another Saudi Oil Tanker"
+      "text": "Two Tankers Hit in Apparent Drone Strike in Egypt",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Two Tankers Hit in Apparent Drone Strike in Egypt"
     },
     {
-      "path": "root.news[12]",
+      "path": "root.news[36]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 12,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -141,26 +200,21 @@
         "Semiconductors",
         "Shipping",
         "Commodities",
-        "Margins",
-        "Equities",
-        "Credit",
-        "FX",
-        "Rates"
+        "Margins"
       ],
       "matchedKeywords": [
-        "china",
-        "chips",
-        "stocks"
+        "escalation",
+        "drone",
+        "port"
       ],
       "otherCategories": [
-        "Supply Chain Disruption",
-        "Market Volatility Signal"
+        "Supply Chain Disruption"
       ],
-      "text": "Tech Stocks Tumble on Worries Over A.I. Spending and China’s Chips | NYT Asia",
-      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: Tech Stocks Tumble on Worries Over A.I. Spending and China’s Chips | NYT Asia"
+      "text": "Drone hits storage tanker at Egyptian port in major Middle East escalation, security firm says | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, drone. Signal: Drone hits storage tanker at Egyptian port in major Middle East escalation, security firm says | France 24"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -173,12 +227,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "military",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷❌🇺🇸 — BREAKING: CENTCOM: At 5:45 p.m. ET today, Islamic Revolutionary Guard Corps forces launched multiple ballistic missiles from Iran in an attempted surprise attack on U.S. forces based in th",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: 🇮🇷❌🇺🇸 — BREAKING: CENTCOM: At 5:45 p.m. ET today, Islamic Revolutionary Guard Corps forces launched multiple ballistic missiles from Iran in an attempted surprise attack on ..."
+      "text": "🇺🇸❌🇮🇷 — BREAKING: The U.S. military is conducting airstrikes in Iran. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸❌🇮🇷 — BREAKING: The U.S. military is conducting airstrikes in Iran. @IntelSlava"
     },
     {
       "path": "root.tg.urgent[6]",
@@ -194,15 +248,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "missile",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Zelenskyy met with Stubb to discuss Ukraine's defense needs and \"long-range sanctions\" against Russia. He emphasized that everything is being done to \"provide more protection for Ukrainian men and wom",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelenskyy met with Stubb to discuss Ukraine's defense needs and \"long-range sanctions\" against Russia. He emphasized that everything is being done to \"provide more protection fo..."
+      "text": "🇺🇸❌🇮🇷 — Scenes from Abadan, southwestern Iran, following U.S. missile strikes launched by American forces in Kuwait.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇺🇸❌🇮🇷 — Scenes from Abadan, southwestern Iran, following U.S. missile strikes launched by American forces in Kuwait."
     },
     {
-      "path": "root.news[21]",
+      "path": "root.news[11]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -215,15 +269,43 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "airstrike",
-        "gaza"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Israeli airstrike destroys Gaza City mosque near displacement camp | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike, gaza. Signal: Israeli airstrike destroys Gaza City mosque near displacement camp | Al Jazeera"
+      "text": "Iran war Update: Trump threatens to hit ‘very hard’ over strikes on Jordan | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump threatens to hit ‘very hard’ over strikes on Jordan | Al Jazeera"
     },
     {
-      "path": "root.news[41]",
+      "path": "root.news[17]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Israel slams Canada for statement opposing West Bank settlement expansion | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel slams Canada for statement opposing West Bank settlement expansion | Al Jazeera"
+    },
+    {
+      "path": "root.news[31]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -236,150 +318,40 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "israel"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "How US defence aid shaped Israel’s military developments since Oct 7, 2023 | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: How US defence aid shaped Israel’s military developments since Oct 7, 2023 | Al Jazeera"
+      "text": "New Strikes Engulf More Countries in the Iran War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: New Strikes Engulf More Countries in the Iran War"
     },
     {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.news[29]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran and Oman exchange proposals to manage Strait of Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran and Oman exchange proposals to manage Strait of Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Oman presents Iran with Gulf-backed plan to ease Strait of Hormuz tensions | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Oman presents Iran with Gulf-backed plan to ease Strait of Hormuz tensions | France 24"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
+        "attack",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "text": "Trump threatens Iran strikes after attack on US base in Jordan | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: Trump threatens Iran strikes after attack on US base in Jordan | Al Jazeera"
     },
     {
       "path": "root.news[38]",
       "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "fuel",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Cuba, Lacking Fuel, Relies on Ingenuity to Defy Trump’s Blockade",
-      "explanation": "Energy Shock match based on keywords: fuel. Signal: Cuba, Lacking Fuel, Relies on Ingenuity to Defy Trump’s Blockade"
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "score": 10,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -388,11 +360,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "airstrike"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸❌🇮🇶 — A second airstrike has struck a Popular Mobilization Forces (PMF) position in Iraq's Wasit Governorate. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: airstrike. Signal: 🇺🇸❌🇮🇶 — A second airstrike has struck a Popular Mobilization Forces (PMF) position in Iraq's Wasit Governorate. @IntelSlava"
+      "text": "Saudi Arabia’s Strikes in Iraq Mark Entry Into U.S.-Iran War.",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Saudi Arabia’s Strikes in Iraq Mark Entry Into U.S.-Iran War."
+    },
+    {
+      "path": "root.newsFeed[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — Scenes from Abadan, southwestern Iran, following U.S. missile strikes launched by American force | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — Scenes from Abadan, southwestern Iran, following U.S. missile strikes launched by American force | CIG_TELEGRAM"
     }
   ]
 }
