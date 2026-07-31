@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-07-30T00:57:48.479Z",
+  "generatedAt": "2026-07-31T01:08:57.534Z",
   "date": "2026-07-24",
   "asOfClose": "2026-07-24",
   "framing": "readings as of market close, 2026-07-24",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-07-30T00:57:44.733Z",
-    "generatedDate": "2026-07-30",
+    "generatedAt": "2026-07-31T01:08:53.830Z",
+    "generatedDate": "2026-07-31",
     "asOfClose": "2026-07-24",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-07-30T00:57:44.733Z",
-    "generatedDate": "2026-07-30",
-    "runDate": "2026-07-30",
+    "generatedAt": "2026-07-31T01:08:53.830Z",
+    "generatedDate": "2026-07-31",
+    "runDate": "2026-07-31",
     "asOfClose": "2026-07-24",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-07-30, readings as of market close, 2026-07-24 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-07-31, readings as of market close, 2026-07-24 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-24",
-      "generatedDate": "2026-07-30",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-07-30, readings as of market close, 2026-07-24 (6 calendar days old)."
+      "generatedDate": "2026-07-31",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-07-31, readings as of market close, 2026-07-24 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,29 +64,31 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 26,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
       "signal_primary_count": 14,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": true,
-        "rawScore": 19,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 26,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
+          "oil",
+          "gas",
+          "energy",
           "strike",
-          "missile",
-          "iran"
+          "drone"
         ],
-        "text": "🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: 🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait."
+        "text": "🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security concerns about the near",
+        "explanation": "Energy Shock match based on keywords: oil, gas, energy. Signal: 🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security c..."
       },
       "market_z": 2.132,
       "abs_market_z": 2.132,
@@ -97,7 +99,7 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
@@ -122,37 +124,38 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 26,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 1,
+      "signal_count": 3,
       "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.tg.urgent[0]",
         "category": "Energy Shock",
         "primaryCategory": "Energy Shock",
         "isPrimary": true,
-        "rawScore": 17,
-        "confidence": "Medium",
+        "rawScore": 26,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "oil",
-          "crude",
-          "refinery",
+          "gas",
+          "energy",
+          "strike",
           "drone"
         ],
-        "text": "Reports indicate that the primary crude oil distillation complex at the oil refinery in Perm is on fire following drone strikes.",
-        "explanation": "Energy Shock match based on keywords: oil, crude, refinery. Signal: Reports indicate that the primary crude oil distillation complex at the oil refinery in Perm is on fire following drone strikes."
+        "text": "🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security concerns about the near",
+        "explanation": "Energy Shock match based on keywords: oil, gas, energy. Signal: 🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security c..."
       },
       "market_z": 2.132,
       "abs_market_z": 2.132,
@@ -163,36 +166,22 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[17]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "israel",
-          "bank"
-        ],
-        "text": "Israel slams Canada for statement opposing West Bank settlement expansion | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel slams Canada for statement opposing West Bank settlement expansion | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.619,
       "abs_market_z": 1.619,
       "market_moving": true,
@@ -202,36 +191,38 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 26,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 8,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 8,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Geopolitical Escalation",
+        "primaryCategory": "Energy Shock",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 26,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
+          "oil",
+          "gas",
+          "energy",
           "strike",
-          "missile",
-          "iran"
+          "drone"
         ],
-        "text": "🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: 🇺🇸🇰🇼❌🇮🇷 — ATACMS/Precision Strike Missile (PrSM) ballistic missiles have been launched towards Iran from Kuwait."
+        "text": "🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security concerns about the near",
+        "explanation": "Energy Shock match based on keywords: oil, gas, energy. Signal: 🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security c..."
       },
       "market_z": 0.726,
       "abs_market_z": 0.726,
@@ -242,7 +233,7 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
