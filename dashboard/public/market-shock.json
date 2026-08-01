@@ -1,40 +1,41 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-07-31T01:08:53.676Z",
+  "generatedAt": "2026-08-01T01:08:24.722Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 18,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Energy Shock": 1,
-    "Geopolitical Escalation": 14
+    "Geopolitical Escalation": 13,
+    "Supply Chain Disruption": 1,
+    "Energy Shock": 1
   },
-  "candidateCount": 133,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 26,
+      "category": "Geopolitical Escalation",
+      "score": 23,
       "confidence": "High",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -42,47 +43,23 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "gas",
-        "energy",
         "strike",
-        "drone"
+        "border",
+        "drone",
+        "fuel"
       ],
       "otherCategories": [
-        "Geopolitical Escalation",
+        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security concerns about the near",
-      "explanation": "Energy Shock match based on keywords: oil, gas, energy. Signal: 🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security c..."
+      "text": "Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel."
     },
     {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Trump says Hamas to disarm, Israel to leave Gaza gradually | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel, gaza. Signal: Iran war Update: Trump says Hamas to disarm, Israel to leave Gaza gradually | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 18,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -99,46 +76,17 @@
       "matchedKeywords": [
         "strike",
         "drone",
-        "iran"
+        "logistics"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇮🇷❌🇮🇶🌞 — Iran carried out a drone strike targeting a base belonging to a Kurdish separatist group in Erbil, Iraqi Kurdistan. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, iran. Signal: 🇮🇷❌🇮🇶🌞 — Iran carried out a drone strike targeting a base belonging to a Kurdish separatist group in Erbil, Iraqi Kurdistan. @IntelSlava"
+      "text": "🇷🇺🇺🇦⚡️ — Footage of the fire at the logistics center in Pavlograd after a strike by a \"Geran-4\" kamikaze drone. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — Footage of the fire at the logistics center in Pavlograd after a strike by a \"Geran-4\" kamikaze drone. @Intelslava"
     },
     {
-      "path": "root.newsFeed[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone",
-        "iran"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "❌🌞 — Iran carried out a drone strike targeting a base belonging to a Kurdish separatist group in Er | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, iran. Signal: ❌🌞 — Iran carried out a drone strike targeting a base belonging to a Kurdish separatist group in Er | INTELSLAVA"
-    },
-    {
-      "path": "root.newsFeed[40]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 18,
       "confidence": "High",
@@ -160,18 +108,18 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone",
-        "oil"
+        "russia",
+        "refinery"
       ],
       "otherCategories": [
         "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "⚔️ Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damage | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚔️ Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damage | CIG_TELEGRAM"
+      "text": "DroneBomber dropped a strike report for overnight Russia. Volgograd refinery and a Wildberries center damaged, TANECO refinery in Nizhnekamsk plus Wildberries and OZON centers in Zelenodolsk and Kazan",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: DroneBomber dropped a strike report for overnight Russia. Volgograd refinery and a Wildberries center damaged, TANECO refinery in Nizhnekamsk plus Wildberries and OZON centers i..."
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -190,44 +138,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile"
+        "iran"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "In the Dnipropetrovsk region, a Russian ballistic missile struck the Voronov family’s home. According to local news outlets, the couple was raising 10 children. At the time of the strike, other child",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: In the Dnipropetrovsk region, a Russian ballistic missile struck the Voronov family’s home. According to local news outlets, the couple was raising 10 children. At the time of t..."
+      "text": "🇺🇸❌🇮🇷 — WSJ, citing U.S. officials, also reports that U.S. President Donald Trump has ordered a heavy strike campaign against Iran that could be conducted this weekend. WSJ reports the strike cam",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸❌🇮🇷 — WSJ, citing U.S. officials, also reports that U.S. President Donald Trump has ordered a heavy strike campaign against Iran that could be conducted this weekend. WSJ ..."
     },
     {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷❌🇮🇶🌞 — Additional footage shows the Iranian drone strike on Erbil, with Kurdish forces attempting to shoot down the drone using small arms fire. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇮🇷❌🇮🇶🌞 — Additional footage shows the Iranian drone strike on Erbil, with Kurdish forces attempting to shoot down the drone using small arms fire. @IntelSlava"
-    },
-    {
-      "path": "root.newsFeed[9]",
+      "path": "root.news[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -246,50 +166,44 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone"
+        "ukraine"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "❌🌞 — Additional footage shows the Iranian drone strike on Erbil, with Kurdish forces attempting to | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ❌🌞 — Additional footage shows the Iranian drone strike on Erbil, with Kurdish forces attempting to | INTELSLAVA"
+      "text": "Ukraine’s Strike on Iranian Ship Shows How Two Wars Could Spiral",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine’s Strike on Iranian Ship Shows How Two Wars Could Spiral"
     },
     {
-      "path": "root.news[8]",
+      "path": "root.newsFeed[43]",
       "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
+      "category": "Supply Chain Disruption",
       "score": 13,
       "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
         "Commodities",
-        "Margins"
+        "Margins",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "red sea",
-        "shipping"
+        "logistics",
+        "strike"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Geopolitical Escalation"
       ],
-      "text": "Saudis Form Military Alliance to Protect Red Sea Shipping",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: Saudis Form Military Alliance to Protect Red Sea Shipping"
+      "text": "⚡️ — Footage of the fire at the logistics center in Pavlograd after a strike by a \"Geran-4\" kamikaze | INTELSLAVA",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: ⚡️ — Footage of the fire at the logistics center in Pavlograd after a strike by a \"Geran-4\" kamikaze | INTELSLAVA"
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -302,15 +216,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "conflict"
+        "nuclear",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "— Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate, fast, and uncompromis",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict. Signal: — Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate,..."
+      "text": "🇺🇳🇷🇺⚡️ — NATO is considering deploying additional US nuclear weapons in Europe due to the threat from Russia — DPA The discussion primarily concerns non-strategic nuclear weapons — they are less",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: 🇺🇳🇷🇺⚡️ — NATO is considering deploying additional US nuclear weapons in Europe due to the threat from Russia — DPA The discussion primarily concerns non-strategic nuclear we..."
     },
     {
-      "path": "root.news[7]",
+      "path": "root.news[5]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -324,35 +238,35 @@
       ],
       "matchedKeywords": [
         "war",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "U.S.-Saudi Attack on Iraqi Militias Risks Drawing Them into War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack. Signal: U.S.-Saudi Attack on Iraqi Militias Risks Drawing Them into War"
-    },
-    {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "escalation",
         "iran"
       ],
       "otherCategories": [],
-      "text": "US Escalation with Iran is ‘pointless’, warns former US diplomat | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, iran. Signal: US Escalation with Iran is ‘pointless’, warns former US diplomat | Al Jazeera"
+      "text": "Iran war Update: Trump threatens strikes, Iran says it has a plan to respond | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump threatens strikes, Iran says it has a plan to respond | Al Jazeera"
     },
     {
-      "path": "root.news[13]",
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Fears of wheat price surge amid Ukraine-Russia clashes in the Black Sea",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Fears of wheat price surge amid Ukraine-Russia clashes in the Black Sea"
+    },
+    {
+      "path": "root.news[31]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -369,15 +283,64 @@
         "gaza"
       ],
       "otherCategories": [],
-      "text": "Trump announces Hamas to disarm paving way for Israel to withdraw from Gaza | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Trump announces Hamas to disarm paving way for Israel to withdraw from Gaza | Al Jazeera"
+      "text": "Trump’s Gaza Deal Sparks Questions on Whether Israel and Hamas Will Comply",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Trump’s Gaza Deal Sparks Questions on Whether Israel and Hamas Will Comply"
     },
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "taiwan",
+        "container"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -386,19 +349,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "Iran War Is Entangling a Growing List of Mideast Nations",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran War Is Entangling a Growing List of Mideast Nations"
+      "text": "🇷🇺🇺🇦⚡️ — Drone strikes, specifically using the \"Geran-2 Siker\" and \"Gerbera Siker\" kamikaze drones, and the \"Lancet\" loitering munition, targeted three cargo ships in the areas of Odesa and Chorno",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇷🇺🇺🇦⚡️ — Drone strikes, specifically using the \"Geran-2 Siker\" and \"Gerbera Siker\" kamikaze drones, and the \"Lancet\" loitering munition, targeted three cargo ships in the ar..."
     },
     {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -407,12 +369,31 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Will Saudi Arabia be dragged further into the war in Iran? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Will Saudi Arabia be dragged further into the war in Iran? | Al Jazeera"
+      "text": "🇺🇸❌🇮🇷 — New York Post, citing two sources, reports that CENTCOM Commander Admiral Brad Cooper has drafted a plan for a two-week long large-scale bombing campaign against Iran. It would be a sust",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸❌🇮🇷 — New York Post, citing two sources, reports that CENTCOM Commander Admiral Brad Cooper has drafted a plan for a two-week long large-scale bombing campaign against Ira..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🤡 Trump says the US never agreed to hand Ukraine licenses to build Patriot interceptors. He says you have to be careful giving out advanced weapons tech, since the people you give it to could turn on",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🤡 Trump says the US never agreed to hand Ukraine licenses to build Patriot interceptors. He says you have to be careful giving out advanced weapons tech, since the people you g..."
     }
   ]
 }
