@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-01T01:08:28.127Z",
+  "generatedAt": "2026-08-02T01:10:15.811Z",
   "date": "2026-07-24",
   "asOfClose": "2026-07-24",
   "framing": "readings as of market close, 2026-07-24",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-01T01:08:24.873Z",
-    "generatedDate": "2026-08-01",
+    "generatedAt": "2026-08-02T01:10:12.298Z",
+    "generatedDate": "2026-08-02",
     "asOfClose": "2026-07-24",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-01T01:08:24.873Z",
-    "generatedDate": "2026-08-01",
-    "runDate": "2026-08-01",
+    "generatedAt": "2026-08-02T01:10:12.298Z",
+    "generatedDate": "2026-08-02",
+    "runDate": "2026-08-02",
     "asOfClose": "2026-07-24",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-01, readings as of market close, 2026-07-24 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-02, readings as of market close, 2026-07-24 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-24",
-      "generatedDate": "2026-08-01",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-08-01, readings as of market close, 2026-07-24 (8 calendar days old)."
+      "generatedDate": "2026-08-02",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-08-02, readings as of market close, 2026-07-24 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,30 +64,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 23,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
+      "signal_count": 13,
       "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[4]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 23,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "border",
+          "attack",
           "drone",
           "fuel"
         ],
-        "text": "Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel."
+        "text": "🇷🇺🇺🇦⚡️ — Drone operators continue to attack targets within Ukrainian-controlled territory in real-time. The footage shows a burning fuel tanker on the Dnipropetrovsk-Kryvyi Rih highway. @Intelsl",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇷🇺🇺🇦⚡️ — Drone operators continue to attack targets within Ukrainian-controlled territory in real-time. The footage shows a burning fuel tanker on the Dnipropetrovsk-Kryvyi ..."
       },
       "market_z": 2.132,
       "abs_market_z": 2.132,
@@ -98,7 +97,7 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -123,37 +122,36 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 23,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 1,
+      "signal_count": 4,
+      "signal_primary_count": 2,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 23,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "border",
+          "attack",
           "drone",
           "fuel"
         ],
-        "text": "Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel."
+        "text": "🇷🇺🇺🇦⚡️ — Drone operators continue to attack targets within Ukrainian-controlled territory in real-time. The footage shows a burning fuel tanker on the Dnipropetrovsk-Kryvyi Rih highway. @Intelsl",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇷🇺🇺🇦⚡️ — Drone operators continue to attack targets within Ukrainian-controlled territory in real-time. The footage shows a burning fuel tanker on the Dnipropetrovsk-Kryvyi ..."
       },
       "market_z": 2.132,
       "abs_market_z": 2.132,
@@ -164,22 +162,36 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[34]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Palestinian children among those detained by Israel in West Bank raids | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Palestinian children among those detained by Israel in West Bank raids | Al Jazeera"
+      },
       "market_z": 1.619,
       "abs_market_z": 1.619,
       "market_moving": true,
@@ -189,37 +201,35 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 23,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 6,
+      "signal_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[6]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 23,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "border",
-          "drone",
-          "fuel"
+          "iran"
         ],
-        "text": "Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: Phoenix Battalion border guards spotted a Russian fuel truck disguised as a regular semi deep in the rear. One Bulava drone strike and the disguise came off along with the fuel."
+        "text": "🇺🇸🇮🇷⚡️ — The United States used one of its most powerful air bombs, weighing nearly a ton, to strike a residential building in Iran, resulting in the deaths of three people, according to The New Y",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇷⚡️ — The United States used one of its most powerful air bombs, weighing nearly a ton, to strike a residential building in Iran, resulting in the deaths of three people,..."
       },
       "market_z": 0.726,
       "abs_market_z": 0.726,
@@ -230,7 +240,7 @@
       "driver_as_of": "2026-07-24",
       "market_as_of": "2026-07-24",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     }
   ],
