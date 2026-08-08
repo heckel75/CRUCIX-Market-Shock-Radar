@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-07T01:52:40.155Z",
+  "generatedAt": "2026-08-08T00:03:00.352Z",
   "date": "2026-07-31",
   "asOfClose": "2026-07-31",
   "framing": "readings as of market close, 2026-07-31",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-07T01:52:36.707Z",
-    "generatedDate": "2026-08-07",
+    "generatedAt": "2026-08-08T00:02:46.395Z",
+    "generatedDate": "2026-08-08",
     "asOfClose": "2026-07-31",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-07T01:52:36.707Z",
-    "generatedDate": "2026-08-07",
-    "runDate": "2026-08-07",
+    "generatedAt": "2026-08-08T00:02:46.395Z",
+    "generatedDate": "2026-08-08",
+    "runDate": "2026-08-08",
     "asOfClose": "2026-07-31",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-07, readings as of market close, 2026-07-31 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-08, readings as of market close, 2026-07-31 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-07-31",
-      "generatedDate": "2026-08-07",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-08-07, readings as of market close, 2026-07-31 (7 calendar days old)."
+      "generatedDate": "2026-08-08",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-08-08, readings as of market close, 2026-07-31 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,35 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 4,
-    "calm": 1
+    "calm": 5
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
-      "signal_elevated": true,
+      "signal_elevated": false,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[13]",
+        "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
+        "rawScore": 10,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "attack",
-          "drone"
+          "drone",
+          "nuclear"
         ],
-        "text": "🇾🇪⚡- Death toll from the Ansarullah missile and drone attack on the Saudi-backed Hadhramaut Emergency Forces al-Ruwyk base, al-Abr direction, eastern Yemen, rises to 40, with over 100+ injured. A la",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: 🇾🇪⚡- Death toll from the Ansarullah missile and drone attack on the Saudi-backed Hadhramaut Emergency Forces al-Ruwyk base, al-Abr direction, eastern Yemen, rises to 40, with ..."
+        "text": "🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines of the Project 955 \"Bor",
+        "explanation": "Geopolitical Escalation match based on keywords: drone, nuclear. Signal: 🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines o..."
       },
       "market_z": -0.949,
       "abs_market_z": 0.949,
@@ -95,37 +93,22 @@
       "driver_as_of": "2026-07-31",
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.news[29]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "iran",
-          "hormuz",
-          "ban"
-        ],
-        "text": "Iran aims to ban U.S. and Israeli ships from Strait of Hormuz and charge others a toll",
-        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran aims to ban U.S. and Israeli ships from Strait of Hormuz and charge others a toll"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -1.344,
       "abs_market_z": 1.344,
       "market_moving": false,
@@ -135,36 +118,35 @@
       "driver_as_of": "2026-07-31",
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 4,
+      "signal_elevated": false,
+      "signal_count": 2,
       "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[11]",
+        "path": "root.news[29]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
-          "war",
-          "iran",
-          "hormuz"
+          "russia",
+          "energy"
         ],
-        "text": "Iran war Update: Trump says war can’t ‘go much longer’; Hormuz deal close | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says war can’t ‘go much longer’; Hormuz deal close | Al Jazeera"
+        "text": "US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews",
+        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews"
       },
       "market_z": -0.926,
       "abs_market_z": 0.926,
@@ -175,8 +157,8 @@
       "driver_as_of": "2026-07-31",
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "credit-stress",
@@ -200,35 +182,35 @@
       "driver_as_of": "2026-07-31",
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 3,
+      "signal_elevated": false,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone"
+          "taiwan",
+          "container"
         ],
-        "text": "🇮🇷❌🌞 — Drone strike reported on Center of Erbil. CORRECTION: Firework.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇮🇷❌🌞 — Drone strike reported on Center of Erbil. CORRECTION: Firework."
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": -1.016,
       "abs_market_z": 1.016,
@@ -239,8 +221,8 @@
       "driver_as_of": "2026-07-31",
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     }
   ],
   "signalOnly": [
