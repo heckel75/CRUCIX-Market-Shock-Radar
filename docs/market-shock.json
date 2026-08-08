@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-08T00:02:46.254Z",
+  "generatedAt": "2026-08-08T23:57:54.913Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -16,11 +16,40 @@
     "Geopolitical Escalation": 14,
     "Energy Shock": 1
   },
-  "candidateCount": 138,
+  "candidateCount": 127,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine",
+        "gas",
+        "pipeline"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was intentional. Ukraine'",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was ..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -33,12 +62,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "nuclear"
+        "missile",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines of the Project 955 \"Bor",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, nuclear. Signal: 🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines o..."
+      "text": "🇺🇦🇺🇸⚡️ — The United States will be providing Ukraine with Patriot missile interceptors on a monthly basis, but even then, it will still not be enough, Zelenskyy stated. According to him, an agree",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: 🇺🇦🇺🇸⚡️ — The United States will be providing Ukraine with Patriot missile interceptors on a monthly basis, but even then, it will still not be enough, Zelenskyy stated. Acco..."
     },
     {
       "path": "root.tg.urgent[5]",
@@ -54,57 +83,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
+        "military",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Ukraine's air defense intercepted only 29 out of 195 ballistic missiles in July, per the Defense Ministry. Russia fired Iskanders, 48N6DM, KN-23, Zircon and other types. Ukraine worked under critical",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Ukraine's air defense intercepted only 29 out of 195 ballistic missiles in July, per the Defense Ministry. Russia fired Iskanders, 48N6DM, KN-23, Zircon and other types. Ukraine..."
+      "text": "🇺🇸⚡️ — The Pentagon has removed a key military official coordinating the delivery of military aid to Ukraine from his position, according to ABC News. The official is Lieutenant General Charles Con",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇺🇸⚡️ — The Pentagon has removed a key military official coordinating the delivery of military aid to Ukraine from his position, according to ABC News. The official is Lieutena..."
     },
     {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🇷🇺🇮🇷⚡️ — The U.S. Senate has approved a bill to tighten American sanctions against Russia and Iran. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: 🇺🇸🇷🇺🇮🇷⚡️ — The U.S. Senate has approved a bill to tighten American sanctions against Russia and Iran. @Intelslava"
-    },
-    {
-      "path": "root.tg.urgent[14]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "US Senate started debating Graham's sanctions package against Russia and Iran. Schumer said thugs like Putin don't care what we say, only what we do. Final vote could happen today.",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: US Senate started debating Graham's sanctions package against Russia and Iran. Schumer said thugs like Putin don't care what we say, only what we do. Final vote could happen today."
-    },
-    {
-      "path": "root.news[16]",
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -117,12 +104,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "military"
+        "nuclear",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Houthis Claim Attack on Yemeni Military Camp",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, military. Signal: Houthis Claim Attack on Yemeni Military Camp"
+      "text": "Vance says US ‘destroyed’ Iran’s nuclear programme | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Vance says US ‘destroyed’ Iran’s nuclear programme | Al Jazeera"
     },
     {
       "path": "root.news[24]",
@@ -139,14 +126,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "iran"
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Iranians Say Trump’s Promises Have Fallen by the Wayside as Iran War Drags On",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iranians Say Trump’s Promises Have Fallen by the Wayside as Iran War Drags On"
+      "text": "Ukraine mourns &apos;collector of souls&apos; Oleksiy Yukov, killed recovering war dead",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Ukraine mourns &apos;collector of souls&apos; Oleksiy Yukov, killed recovering war dead"
     },
     {
-      "path": "root.news[38]",
+      "path": "root.news[43]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -163,11 +150,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "War on Iran: Saudi Arabia, Turkiye and Pakistan sign defence pact | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War on Iran: Saudi Arabia, Turkiye and Pakistan sign defence pact | Al Jazeera"
+      "text": "War on Iran: Phase II: Day 28 | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War on Iran: Phase II: Day 28 | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[24]",
+      "path": "root.news[48]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -180,33 +167,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
+        "war",
         "russia"
       ],
       "otherCategories": [],
-      "text": "⚡️ — The U.S. Senate has approved a bill to tighten American sanctions against Russia and Iran. @In | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: ⚡️ — The U.S. Senate has approved a bill to tighten American sanctions against Russia and Iran. @In | INTELSLAVA"
-    },
-    {
-      "path": "root.newsFeed[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "nuclear"
-      ],
-      "otherCategories": [],
-      "text": "⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, nuclear. Signal: ⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected | INTELSLAVA"
+      "text": "Belarus joins Russia’s war on freedom of information | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Belarus joins Russia’s war on freedom of information | Euronews"
     },
     {
       "path": "root.chokepoints[5]",
@@ -237,7 +203,89 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[29]",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦🇷🇺⚡️ — The aftermath of a strike by Ukrainian FP-2 drones on a vessel near the coast of Gelendzhik, Krasnodar Krai. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇺🇦🇷🇺⚡️ — The aftermath of a strike by Ukrainian FP-2 drones on a vessel near the coast of Gelendzhik, Krasnodar Krai. @Intelslava"
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "— 🇮🇷 Iran’s Supreme National Security Council: ‘Until America corrects its behavior, the Strait of Hormuz will not be opened. Correcting behavior means: 1. Never threaten Iran with any language n",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: — 🇮🇷 Iran’s Supreme National Security Council: ‘Until America corrects its behavior, the Strait of Hormuz will not be opened. Correcting behavior means: 1. Never threaten Iran..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "blockade"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸⚔️🇮🇷 The U.S. blockade on Iran is unsustainable as living conditions on USS Abraham Lincoln resemble the living conditions experienced by the crew of USS Gerald R. Ford. Moldy showers and no so",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸⚔️🇮🇷 The U.S. blockade on Iran is unsustainable as living conditions on USS Abraham Lincoln resemble the living conditions experienced by the crew of USS Gerald R. Ford. M..."
+    },
+    {
+      "path": "root.news[15]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -254,14 +302,68 @@
         "FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "energy"
+        "iran",
+        "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews"
+      "text": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Hormuz talks positive, Oman says, as Iran warns deal would not open strait"
+    },
+    {
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran Issues List of Demands, Dampening Hopes of Reopening Strait of Hormuz",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran Issues List of Demands, Dampening Hopes of Reopening Strait of Hormuz"
+    },
+    {
+      "path": "root.news[37]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties | Al Jazeera"
     },
     {
       "path": "root.chokepoints[0]",
@@ -283,66 +385,6 @@
       "otherCategories": [],
       "text": "Strait of Hormuz | 20% of world oil",
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇩🇪 🇷🇺 🇺🇸 U.S. intelligence has reportedly linked the explosive-laden drone discovered at Germany's Leipzig/Halle Airport this week to the Russian government, according to The Wall Street Journal",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇩🇪 🇷🇺 🇺🇸 U.S. intelligence has reportedly linked the explosive-laden drone discovered at Germany's Leipzig/Halle Airport this week to the Russian government, according to ..."
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war"
-      ],
-      "otherCategories": [],
-      "text": "🇸🇩 More than 10 countries are now involved in the Sudanese Civil War, which has been raging since 2023. Abdulmoniem Suleiman, the Sudanese investigative journalist and Editor-in-Chief of Sudan Peac",
-      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: 🇸🇩 More than 10 countries are now involved in the Sudanese Civil War, which has been raging since 2023. Abdulmoniem Suleiman, the Sudanese investigative journalist and Editor-..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Something caught fire in Bryansk, reportedly near warehouse facilities per Exilnova+. Drone alerts were declared in the region earlier today.",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Something caught fire in Bryansk, reportedly near warehouse facilities per Exilnova+. Drone alerts were declared in the region earlier today."
     }
   ]
 }

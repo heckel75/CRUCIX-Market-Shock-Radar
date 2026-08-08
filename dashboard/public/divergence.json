@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-08T00:03:00.352Z",
+  "generatedAt": "2026-08-08T23:57:57.665Z",
   "date": "2026-07-31",
   "asOfClose": "2026-07-31",
   "framing": "readings as of market close, 2026-07-31",
@@ -9,7 +9,7 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-08T00:02:46.395Z",
+    "generatedAt": "2026-08-08T23:57:55.060Z",
     "generatedDate": "2026-08-08",
     "asOfClose": "2026-07-31",
     "calendarLagDays": 8,
@@ -17,7 +17,7 @@
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-08T00:02:46.395Z",
+    "generatedAt": "2026-08-08T23:57:55.060Z",
     "generatedDate": "2026-08-08",
     "runDate": "2026-08-08",
     "asOfClose": "2026-07-31",
@@ -54,35 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "calm": 5
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
+      "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[13]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 10,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "drone",
-          "nuclear"
+          "ukraine",
+          "gas",
+          "pipeline"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines of the Project 955 \"Bor",
-        "explanation": "Geopolitical Escalation match based on keywords: drone, nuclear. Signal: 🇷🇺🇺🇦⚡️ — Anti-drone nets have now reached Russian nuclear submarines. Western satellites have detected characteristic anti-drone nets covering strategic nuclear submarines o..."
+        "text": "Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was intentional. Ukraine'",
+        "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was ..."
       },
       "market_z": -0.949,
       "abs_market_z": 0.949,
@@ -94,7 +97,7 @@
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
       "market_calendar_lag_days": 8,
-      "state": "calm"
+      "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
@@ -125,28 +128,30 @@
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
+      "signal_elevated": true,
+      "signal_count": 6,
       "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.news[29]",
+        "path": "root.tg.urgent[13]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "russia",
-          "energy"
+          "drone",
+          "ukraine",
+          "gas",
+          "pipeline"
         ],
-        "text": "US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews",
-        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: US Senate approves sweeping Russia sanctions bill targeting energy income | Euronews"
+        "text": "Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was intentional. Ukraine'",
+        "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was ..."
       },
       "market_z": -0.926,
       "abs_market_z": 0.926,
@@ -158,7 +163,7 @@
       "market_as_of": "2026-07-31",
       "market_freshness_status": "lagging",
       "market_calendar_lag_days": 8,
-      "state": "calm"
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
@@ -194,9 +199,9 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 3,
       "top_signal": {
         "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
