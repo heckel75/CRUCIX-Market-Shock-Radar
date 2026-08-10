@@ -1,26 +1,146 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-08T23:57:54.913Z",
+  "generatedAt": "2026-08-10T00:01:50.531Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 127,
+  "candidateCount": 123,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "war",
+        "strike",
+        "russia"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦🇷🇺⚡️ — For every Russian strike, there will be our response. The Russian war will become increasingly felt by them at home, in Russia, - Zelenskyy. Zelenskyy once again resorted to threats, whi",
+      "explanation": "Geopolitical Escalation match based on keywords: war, strike, russia. Signal: 🇺🇦🇷🇺⚡️ — For every Russian strike, there will be our response. The Russian war will become increasingly felt by them at home, in Russia, - Zelenskyy. Zelenskyy once again re..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't successful, but looks like it still caught a few Russian occupiers. If our translations help you stay",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't successful, but looks like it still caught a few Russian occupiers. If our trans..."
+    },
+    {
+      "path": "root.newsFeed[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't suc | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't suc | WARTRANSLATED"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone",
+        "refinery"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "🇸🇦⚔️🇾🇪 A KSA drone bombed something in the Ghor Al-Mashwat area, Ghamr district, Yemen a few hours ago. Which Saudi refinery will the Houthis strike next? 🔗 Al Masirah",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇸🇦⚔️🇾🇪 A KSA drone bombed something in the Ghor Al-Mashwat area, Ghamr district, Yemen a few hours ago. Which Saudi refinery will the Houthis strike next? 🔗 Al Masirah"
+    },
+    {
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 18,
@@ -49,136 +169,76 @@
       "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Bulgaria says a Ukrainian Maya decoy drone likely exploded near a gas pipeline. Bulgaria's defense ministry says Ukrainian forces use this type but there's no indication it was ..."
     },
     {
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Iran War Timeline: Key Moments and Attacks In U.S. and Israel’s Campaign",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: Iran War Timeline: Key Moments and Attacks In U.S. and Israel’s Campaign"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "invasion",
+        "drone",
+        "taiwan"
+      ],
+      "otherCategories": [],
+      "text": "How a Drone ‘Hellscape’ Might Stop a Chinese Invasion of Taiwan",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, drone, taiwan. Signal: How a Drone ‘Hellscape’ Might Stop a Chinese Invasion of Taiwan"
+    },
+    {
+      "path": "root.news[46]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israel rejects Donald Trump’s 15-point plan to end Gaza war | Africa News",
+      "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Israel rejects Donald Trump’s 15-point plan to end Gaza war | Africa News"
+    },
+    {
       "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇦🇺🇸⚡️ — The United States will be providing Ukraine with Patriot missile interceptors on a monthly basis, but even then, it will still not be enough, Zelenskyy stated. According to him, an agree",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: 🇺🇦🇺🇸⚡️ — The United States will be providing Ukraine with Patriot missile interceptors on a monthly basis, but even then, it will still not be enough, Zelenskyy stated. Acco..."
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸⚡️ — The Pentagon has removed a key military official coordinating the delivery of military aid to Ukraine from his position, according to ABC News. The official is Lieutenant General Charles Con",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇺🇸⚡️ — The Pentagon has removed a key military official coordinating the delivery of military aid to Ukraine from his position, according to ABC News. The official is Lieutena..."
-    },
-    {
-      "path": "root.news[4]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Vance says US ‘destroyed’ Iran’s nuclear programme | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Vance says US ‘destroyed’ Iran’s nuclear programme | Al Jazeera"
-    },
-    {
-      "path": "root.news[24]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine mourns &apos;collector of souls&apos; Oleksiy Yukov, killed recovering war dead",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Ukraine mourns &apos;collector of souls&apos; Oleksiy Yukov, killed recovering war dead"
-    },
-    {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "War on Iran: Phase II: Day 28 | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War on Iran: Phase II: Day 28 | Al Jazeera"
-    },
-    {
-      "path": "root.news[48]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Belarus joins Russia’s war on freedom of information | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Belarus joins Russia’s war on freedom of information | Euronews"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -193,198 +253,155 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦🇷🇺⚡️ — The aftermath of a strike by Ukrainian FP-2 drones on a vessel near the coast of Gelendzhik, Krasnodar Krai. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇺🇦🇷🇺⚡️ — The aftermath of a strike by Ukrainian FP-2 drones on a vessel near the coast of Gelendzhik, Krasnodar Krai. @Intelslava"
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "— 🇮🇷 Iran’s Supreme National Security Council: ‘Until America corrects its behavior, the Strait of Hormuz will not be opened. Correcting behavior means: 1. Never threaten Iran with any language n",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: — 🇮🇷 Iran’s Supreme National Security Council: ‘Until America corrects its behavior, the Strait of Hormuz will not be opened. Correcting behavior means: 1. Never threaten Iran..."
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
+        "attack",
         "iran",
         "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇸⚔️🇮🇷 The U.S. blockade on Iran is unsustainable as living conditions on USS Abraham Lincoln resemble the living conditions experienced by the crew of USS Gerald R. Ford. Moldy showers and no so",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸⚔️🇮🇷 The U.S. blockade on Iran is unsustainable as living conditions on USS Abraham Lincoln resemble the living conditions experienced by the crew of USS Gerald R. Ford. M..."
+      "text": "A vessel attempting to violate the blockade is seen burning from the coast of Kumzar, Oman, following an IRGC Navy attack with anti-ship cruise missiles launched from Sirik, southern Iran.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: A vessel attempting to violate the blockade is seen burning from the coast of Kumzar, Oman, following an IRGC Navy attack with anti-ship cruise missiles launched from Sirik, sou..."
     },
     {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Hormuz talks positive, Oman says, as Iran warns deal would not open strait"
-    },
-    {
-      "path": "root.news[16]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran Issues List of Demands, Dampening Hopes of Reopening Strait of Hormuz",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran Issues List of Demands, Dampening Hopes of Reopening Strait of Hormuz"
-    },
-    {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties | Al Jazeera"
-    },
-    {
-      "path": "root.chokepoints[0]",
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "hormuz"
+        "strike",
+        "russia"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russia hit a WHO medical warehouse in Dnipro that supplied frontline hospitals. The organization's CEO says they evacuated 130 out of 300 pallets of humanitarian supplies before the strike.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Russia hit a WHO medical warehouse in Dnipro that supplied frontline hospitals. The organization's CEO says they evacuated 130 out of 300 pallets of humanitarian supplies before..."
+    },
+    {
+      "path": "root.newsFeed[16]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "war",
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — For every Russian strike, there will be our response. The Russian war will become increasingly | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: war, strike. Signal: ⚡️ — For every Russian strike, there will be our response. The Russian war will become increasingly | INTELSLAVA"
+    },
+    {
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "text": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel rejects Trump's 15-point plan for Gaza, Netanyahu says"
+    },
+    {
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "War on Iran: Phase II: Day 29 | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War on Iran: Phase II: Day 29 | Al Jazeera"
+    },
+    {
+      "path": "root.news[40]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "What now as Israel rejects Trump’s 15-point plan for Gaza? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: What now as Israel rejects Trump’s 15-point plan for Gaza? | Al Jazeera"
+    },
+    {
+      "path": "root.news[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "13 killed in Ukraine and 90 injured as Russia intensifies overnight bombardment campaign of Ukrainia | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 13 killed in Ukraine and 90 injured as Russia intensifies overnight bombardment campaign of Ukrainia | Euronews"
     }
   ]
 }
