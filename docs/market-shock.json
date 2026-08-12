@@ -1,153 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-11T00:03:38.983Z",
+  "generatedAt": "2026-08-12T00:09:45.261Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 18,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Supply Chain Disruption": 1,
     "Geopolitical Escalation": 13,
-    "Energy Shock": 1
+    "Energy Shock": 2
   },
-  "candidateCount": 117,
+  "candidateCount": 132,
   "itemCount": 15,
   "items": [
-    {
-      "path": "root.news[29]",
-      "sourcePriority": "Medium",
-      "category": "Supply Chain Disruption",
-      "score": 26,
-      "confidence": "High",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins",
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "port",
-        "shipping",
-        "strike",
-        "iran",
-        "red sea"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation",
-        "Energy Shock"
-      ],
-      "text": "Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes | France 24",
-      "explanation": "Supply Chain Disruption match based on keywords: port, shipping, strike. Signal: Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes | France 24"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "military",
-        "russia"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — Russia plans to launch up to 200 ballistic missiles in a single strike and deploy 11,000 drones in August, according to Deputy Head of Ukrainian Military Intelligence Skibitsky and Comman",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, military, russia. Signal: 🇷🇺🇺🇦⚡️ — Russia plans to launch up to 200 ballistic missiles in a single strike and deploy 11,000 drones in August, according to Deputy Head of Ukrainian Military Intelligen..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't successful, but looks like it still caught a few Russian occupiers. If our translations help you stay",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian occupiers filmed a Ukrainian drone attack on their crew. Unfortunately the strike wasn't successful, but looks like it still caught a few Russian occupiers. If our trans..."
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "The Defence Intelligence of Ukraine struck two Russian S-400 \"Triumf\" launcher systems and a drone control antenna in Crimea. To strike the high-value Russian targets, the intelligence officers utiliz",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: The Defence Intelligence of Ukraine struck two Russian S-400 \"Triumf\" launcher systems and a drone control antenna in Crimea. To strike the high-value Russian targets, the intel..."
-    },
     {
       "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 27,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -158,23 +34,30 @@
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX"
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
+        "strike",
         "attack",
         "drone",
         "oil",
         "refinery"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "🇱🇾⚡️ — Libya’s National Oil Corporation (NOC) says the Zawiya refinery plant was struck by a drone on Monday. No casualties have been reported. This marks the third drone attack on the plant and c",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇱🇾⚡️ — Libya’s National Oil Corporation (NOC) says the Zawiya refinery plant was struck by a drone on Monday. No casualties have been reported. This marks the third drone atta..."
+      "text": "The result of a Russian EW operation following yesterday’s strike drone attack on the \"Taneco\" oil refinery in Nizhnekamsk, Tatarstan. Russian air defense downed a drone straight into an industrial zo",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: The result of a Russian EW operation following yesterday’s strike drone attack on the \"Taneco\" oil refinery in Nizhnekamsk, Tatarstan. Russian air defense downed a drone straigh..."
     },
     {
-      "path": "root.news[32]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -186,17 +69,17 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
+        "missile",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia bars only party opposing war in Ukraine from parliamentary vote | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russia bars only party opposing war in Ukraine from parliamentary vote | Al Jazeera"
+      "text": "🇺🇦🇷🇺 A pause in shelling is unlikely: Russia is fulfilling its missile production plan – Deputy Head of Ukraine's Main Intelligence Directorate of the Ministry of Defense, Skibitsky. For major",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: 🇺🇦🇷🇺 A pause in shelling is unlikely: Russia is fulfilling its missile production plan – Deputy Head of Ukraine's Main Intelligence Directorate of the Ministry of Defense, S..."
     },
     {
-      "path": "root.news[6]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -214,86 +97,107 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "russia"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Inside a secret launch site for Ukraine’s deep-strike drones | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Inside a secret launch site for Ukraine’s deep-strike drones | Al Jazeera"
+      "text": "Approximately 400 strike and jet-powered drones, along with USVs, have meowed their way towards Russia this evening. Looking forward to good news tomorrow. If our translations help you stay informed,",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Approximately 400 strike and jet-powered drones, along with USVs, have meowed their way towards Russia this evening. Looking forward to good news tomorrow. If our translations h..."
     },
     {
-      "path": "root.newsFeed[14]",
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 13,
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Gold",
         "VIX",
+        "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "refinery",
-        "drone"
+        "war",
+        "iran",
+        "blockade"
       ],
       "otherCategories": [
-        "Geopolitical Escalation"
+        "Supply Chain Disruption"
       ],
-      "text": "⚡️ — Libya’s National Oil Corporation (NOC) says the Zawiya refinery plant was struck by a drone on | CIG_TELEGRAM",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: ⚡️ — Libya’s National Oil Corporation (NOC) says the Zawiya refinery plant was struck by a drone on | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "In an interview with the AP, Madyar stated that Russia plans to simultaneously launch up to 200 ballistic missiles at Ukraine. Currently, according to him, the Russian occupiers can fire a salvo of 77",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: In an interview with the AP, Madyar stated that Russia plans to simultaneously launch up to 200 ballistic missiles at Ukraine. Currently, according to him, the Russian occupiers..."
+      "text": "Iran war Update: US fires missiles at cargo ship violating Iran blockade | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US fires missiles at cargo ship violating Iran blockade | Al Jazeera"
     },
     {
       "path": "root.news[31]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "troops",
-        "russia"
+        "military",
+        "iran",
+        "blockade"
       ],
-      "otherCategories": [],
-      "text": "Russia preparing to station more North Korean troops on its territory, Zelenskyy says | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, russia. Signal: Russia preparing to station more North Korean troops on its territory, Zelenskyy says | Euronews"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "US military fires on cargo vessel it said sought to break Iran blockade | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: US military fires on cargo vessel it said sought to break Iran blockade | Al Jazeera"
     },
     {
-      "path": "root.news[42]",
+      "path": "root.news[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "red sea"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Four Killed in Houthi Strike on Red Sea Ship, Yemeni Government Says",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Four Killed in Houthi Strike on Red Sea Ship, Yemeni Government Says"
+    },
+    {
+      "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -306,12 +210,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "conflict",
-        "iran"
+        "war",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Trump says will demand conflict compensation from Iran as part of peace talks | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: conflict, iran. Signal: Trump says will demand conflict compensation from Iran as part of peace talks | Euronews"
+      "text": "In Gaza’s tents, widows face war’s harshest realities alone | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: In Gaza’s tents, widows face war’s harshest realities alone | Al Jazeera"
+    },
+    {
+      "path": "root.news[26]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel demolishes home of Palestinian killed during settler attack | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: Israel demolishes home of Palestinian killed during settler attack | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -342,62 +267,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "military",
-        "factory"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇧🇬⚡️— An explosion and fire occurred at a military factory in Bulgaria, according to Dencho Minev, the head of the city administration. He added that the area around the incident has been cordoned o",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇧🇬⚡️— An explosion and fire occurred at a military factory in Bulgaria, according to Dencho Minev, the head of the city administration. He added that the area around the incid..."
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "This morning, Ukrainian drones struck Nizhnekamsk, Republic of Tatarstan, Russia. According to reports, a major industrial hub housing oil refining and petrochemical enterprises \"TANECO\", \"TAIF-NK\", a",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: This morning, Ukrainian drones struck Nizhnekamsk, Republic of Tatarstan, Russia. According to reports, a major industrial hub housing oil refining and petrochemical enterprises..."
-    },
-    {
-      "path": "root.news[9]",
+      "path": "root.news[14]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -415,13 +285,131 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike"
+        "iran",
+        "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Update: Russian missiles strike Kyiv, triggering fires in city centre | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Update: Russian missiles strike Kyiv, triggering fires in city centre | France 24"
+      "text": "US says helicopter fired missiles to disable ship breaking Iran blockade",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: US says helicopter fired missiles to disable ship breaking Iran blockade"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Libya oil company says blazes contained after drone attacks on complex | Africa News",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Libya oil company says blazes contained after drone attacks on complex | Africa News"
+    },
+    {
+      "path": "root.news[40]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "gaza",
+        "blockade"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Tightened blockade on Gaza causes prices to soar | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: gaza. Signal: Tightened blockade on Gaza causes prices to soar | Al Jazeera"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "energy"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸🛢🇬🇱🇩🇰 The Trump Admin is desperate to find new sources of oil to offset the loss of Middle Eastern barrels. Greenland Energy, a US oil company established last year with ties to President Do",
+      "explanation": "Energy Shock match based on keywords: oil, energy. Signal: 🇺🇸🛢🇬🇱🇩🇰 The Trump Admin is desperate to find new sources of oil to offset the loss of Middle Eastern barrels. Greenland Energy, a US oil company established last year wit..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇩🇬 🇺🇸 🇮🇷 Drone Sightings Are Happening At Diego Garcia, America’s Remote Strategic Island Outpost The sightings highlight concerns about drone attacks from the sea, especially at a time of extr",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇩🇬 🇺🇸 🇮🇷 Drone Sightings Are Happening At Diego Garcia, America’s Remote Strategic Island Outpost The sightings highlight concerns about drone attacks from the sea, especi..."
     }
   ]
 }
