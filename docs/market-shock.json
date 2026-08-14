@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-14T00:11:00.878Z",
+  "generatedAt": "2026-08-14T23:53:35.960Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,197 +13,80 @@
     "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 2,
-    "Credit Stress": 1
+    "Geopolitical Escalation": 13,
+    "Credit Stress": 1,
+    "Energy Shock": 1
   },
   "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 27,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — By the end of the second consecutive night, Ukrainian monitoring systems are again reporting a high probability of missile and drone strikes on Ukraine, urging the local population to pre",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, ukraine. Signal: 🇷🇺🇺🇦⚡️ — By the end of the second consecutive night, Ukrainian monitoring systems are again reporting a high probability of missile and drone strikes on Ukraine, urging the ..."
-    },
-    {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "military",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "—❗️🇮🇱/🇮🇷 BREAKING: Israeli intelligence believes Iran’s military will be fully restored to pre-war status by mid 2027 at the latest The Jerusalem Post, citing IDF and Mossad officials, reports th",
-      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: —❗️🇮🇱/🇮🇷 BREAKING: Israeli intelligence believes Iran’s military will be fully restored to pre-war status by mid 2027 at the latest The Jerusalem Post, citing IDF and Mossad..."
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "— 🇮🇷/🇮🇶 NEW: Iran carried out a Shahed-136 drone attack against Erbil, Iraqi Kurdistan @Middle_East_Spectator",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, iran. Signal: — 🇮🇷/🇮🇶 NEW: Iran carried out a Shahed-136 drone attack against Erbil, Iraqi Kurdistan @Middle_East_Spectator"
-    },
-    {
-      "path": "root.news[41]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Russia-Ukraine war: Grain hub attacks raise fears over global food prices | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russia-Ukraine war: Grain hub attacks raise fears over global food prices | France 24"
-    },
-    {
-      "path": "root.news[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "naval",
-        "china",
-        "taiwan"
-      ],
-      "otherCategories": [],
-      "text": "China and Indonesia’s joint naval drills anger Taiwan | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, china, taiwan. Signal: China and Indonesia’s joint naval drills anger Taiwan | Al Jazeera"
-    },
-    {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Is Russia’s economy cracking despite the Iran war windfall? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, russia. Signal: Is Russia’s economy cracking despite the Iran war windfall? | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "military",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "—❗️/ BREAKING: Israeli intelligence believes Iran’s military will be fully restored to pre-war statu | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: —❗️/ BREAKING: Israeli intelligence believes Iran’s military will be fully restored to pre-war statu | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
+        "missile",
+        "drone",
+        "russia",
         "oil",
-        "refinery",
-        "russia"
+        "fuel",
+        "logistics"
       ],
       "otherCategories": [
-        "Geopolitical Escalation"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "An oil refinery was attacked in Salavat, Republic of Bashkortostan. It is one of Russia's largest refining and petrochemical complexes. The plant has been targeted by drones multiple times - notably i",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: An oil refinery was attacked in Salavat, Republic of Bashkortostan. It is one of Russia's largest refining and petrochemical complexes. The plant has been targeted by drones mul..."
+      "text": "Oko Hora analysts mapped Ukrainian drone and missile strikes on Russia in July. Total 65 confirmed hits including 17 oil refineries, 16 logistics hubs, 10 fuel depots, 9 ports, 4 defense industry faci",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: Oko Hora analysts mapped Ukrainian drone and missile strikes on Russia in July. Total 65 confirmed hits including 17 oil refineries, 16 logistics hubs, 10 fuel depots, 9 ports, ..."
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Trump says he will declare Strait of Hormuz a US ‘territory’ amid Iran war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump says he will declare Strait of Hormuz a US ‘territory’ amid Iran war | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -216,12 +99,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "border",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "🇺🇸⚔️🇮🇷 Trump regime changed Iran but not in the way he wanted Mojtaba Khamenei Is Planning for a Long War Several months into his tenure as supreme leader, Mojtaba Khamenei is beginning to put h",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇺🇸⚔️🇮🇷 Trump regime changed Iran but not in the way he wanted Mojtaba Khamenei Is Planning for a Long War Several months into his tenure as supreme leader, Mojtaba Khamenei ..."
+      "text": "Romania's Defense Ministry reported that an unknown drone crashed 5km from the Ukrainian border near Luncavita, Tulcea county on August 14th. The UAV flew too low for radar detection and crashed in a",
+      "explanation": "Geopolitical Escalation match based on keywords: border, drone. Signal: Romania's Defense Ministry reported that an unknown drone crashed 5km from the Ukrainian border near Luncavita, Tulcea county on August 14th. The UAV flew too low for radar dete..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇾🇪🇾🇪❌🇸🇦 — An Ansar Allah (Houthi) military source told the Saba News Agency that, in the past few minutes, Ansar Allah targeted an Aramco facility in Najran, Saudi Arabia, with a drone. @IntelS",
+      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: 🇾🇪🇾🇪❌🇸🇦 — An Ansar Allah (Houthi) military source told the Saba News Agency that, in the past few minutes, Ansar Allah targeted an Aramco facility in Najran, Saudi Arabia,..."
     },
     {
       "path": "root.tg.urgent[12]",
@@ -237,15 +141,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "ukraine"
+        "attack",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "Ukraine's General Staff stated that on August 12, the Defense Forces launched a series of strikes on Russian military targets in the temporarily occupied territory of Crimea. Specifically, in the Novo",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine's General Staff stated that on August 12, the Defense Forces launched a series of strikes on Russian military targets in the temporarily occupied territory of Crimea. Sp..."
+      "text": "Russians are using a new attack tactic, per Flash. A \"waiting drone\" hides outside the driver's field of view and uses a microphone to detect vehicle passage.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Russians are using a new attack tactic, per Flash. A \"waiting drone\" hides outside the driver's field of view and uses a microphone to detect vehicle passage."
     },
     {
-      "path": "root.news[6]",
+      "path": "root.news[25]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -258,12 +162,61 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
+        "war",
         "gaza"
       ],
       "otherCategories": [],
-      "text": "Gaza City police chief killed as Israel pushes on with deadly strikes | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Gaza City police chief killed as Israel pushes on with deadly strikes | Al Jazeera"
+      "text": "Art offers young Gaza survivors solace and escape from war’s devastation | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: Art offers young Gaza survivors solace and escape from war’s devastation | Al Jazeera"
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Analysis: Israel’s government can’t disown West Bank settler violence | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Analysis: Israel’s government can’t disown West Bank settler violence | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "Romania's Defense Ministry reported that an unknown drone crashed 5km from the Ukrainian border near | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: border, drone. Signal: Romania's Defense Ministry reported that an unknown drone crashed 5km from the Ukrainian border near | WARTRANSLATED"
     },
     {
       "path": "root.chokepoints[5]",
@@ -294,7 +247,35 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[0]",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "logistics"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Ukrainian drone attacks on Wildberries warehouses may have caused 800 billion rubles in damage, about $10 billion, Russian Forbes reports. Over 20 logistics centers were hit, at least 14 burned down.",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Ukrainian drone attacks on Wildberries warehouses may have caused 800 billion rubles in damage, about $10 billion, Russian Forbes reports. Over 20 logistics centers were hit, at..."
+    },
+    {
+      "path": "root.news[1]",
       "sourcePriority": "Medium",
       "category": "Credit Stress",
       "score": 9,
@@ -321,6 +302,34 @@
       "explanation": "Credit Stress match based on keywords: debt. Signal: Colombia faces reconstruction with 96% of the year's debt quota already used | MercoPress | Colombia"
     },
     {
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Houthi attack on port kills four eroding truce with Yemen’s government | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Houthi attack on port kills four eroding truce with Yemen’s government | Al Jazeera"
+    },
+    {
       "path": "root.chokepoints[0]",
       "sourcePriority": "High",
       "category": "Energy Shock",
@@ -342,7 +351,7 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 5,
@@ -358,8 +367,28 @@
         "drone"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇷🇺⚡️ — Satellite images released by the opposing side showing warehouses belonging to Wildberries that were destroyed or severely damaged as a result of drone strikes by the Ukrainian Armed Forc",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇺🇦🇷🇺⚡️ — Satellite images released by the opposing side showing warehouses belonging to Wildberries that were destroyed or severely damaged as a result of drone strikes by t..."
+      "text": "🇷🇺🇺🇦⚡️ — ❗️The Russian Armed Forces have begun using a new tactic – the \"drone-ambush.\" The drone remains hidden from the driver's view. Thanks to AI and a highly sensitive built-in microphone, it",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇷🇺🇺🇦⚡️ — ❗️The Russian Armed Forces have begun using a new tactic – the \"drone-ambush.\" The drone remains hidden from the driver's view. Thanks to AI and a highly sensitive ..."
+    },
+    {
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸 🇨🇺 🇮🇷 US Military Option for Cuba Fades as Trump Focuses on Sanctions The Trump administration’s Cuba strategy is increasingly focused on ramping up sanctions and economic pressure rather th",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇺🇸 🇨🇺 🇮🇷 US Military Option for Cuba Fades as Trump Focuses on Sanctions The Trump administration’s Cuba strategy is increasingly focused on ramping up sanctions and econo..."
     }
   ]
 }
