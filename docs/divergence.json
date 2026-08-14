@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-13T00:10:30.359Z",
+  "generatedAt": "2026-08-14T00:11:04.181Z",
   "date": "2026-08-07",
   "asOfClose": "2026-08-07",
   "framing": "readings as of market close, 2026-08-07",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-13T00:10:26.943Z",
-    "generatedDate": "2026-08-13",
+    "generatedAt": "2026-08-14T00:11:01.026Z",
+    "generatedDate": "2026-08-14",
     "asOfClose": "2026-08-07",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-13T00:10:26.943Z",
-    "generatedDate": "2026-08-13",
-    "runDate": "2026-08-13",
+    "generatedAt": "2026-08-14T00:11:01.026Z",
+    "generatedDate": "2026-08-14",
+    "runDate": "2026-08-14",
     "asOfClose": "2026-08-07",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-13, readings as of market close, 2026-08-07 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-14, readings as of market close, 2026-08-07 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-07",
-      "generatedDate": "2026-08-13",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-08-13, readings as of market close, 2026-08-07 (6 calendar days old)."
+      "generatedDate": "2026-08-14",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-08-14, readings as of market close, 2026-08-07 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,8 +55,8 @@
   },
   "stateCounts": {
     "priced": 1,
-    "calm": 2,
-    "radar-claim": 2
+    "calm": 3,
+    "radar-claim": 1
   },
   "rows": [
     {
@@ -68,9 +68,9 @@
       "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 13,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 1,
       "top_signal": {
         "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
@@ -80,12 +80,12 @@
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "military",
-          "troops",
-          "drone"
+          "missile",
+          "drone",
+          "ukraine"
         ],
-        "text": "📝 🇺🇸 🇺🇦 U.S. Army troops faced off against Ukrainian drone operators at a military exercise in Germany earlier this year. Ukrainian Drone Teams “Wiped Out” a U.S. Armored Brigade in Germany Acc",
-        "explanation": "Geopolitical Escalation match based on keywords: military, troops, drone. Signal: 📝 🇺🇸 🇺🇦 U.S. Army troops faced off against Ukrainian drone operators at a military exercise in Germany earlier this year. Ukrainian Drone Teams “Wiped Out” a U.S. Armored B..."
+        "text": "🇷🇺🇺🇦⚡️ — By the end of the second consecutive night, Ukrainian monitoring systems are again reporting a high probability of missile and drone strikes on Ukraine, urging the local population to pre",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, ukraine. Signal: 🇷🇺🇺🇦⚡️ — By the end of the second consecutive night, Ukrainian monitoring systems are again reporting a high probability of missile and drone strikes on Ukraine, urging the ..."
       },
       "market_z": 1.775,
       "abs_market_z": 1.775,
@@ -96,22 +96,36 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[0]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Credit Stress",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "debt",
+          "quota"
+        ],
+        "text": "Colombia faces reconstruction with 96% of the year's debt quota already used | MercoPress | Colombia",
+        "explanation": "Credit Stress match based on keywords: debt. Signal: Colombia faces reconstruction with 96% of the year's debt quota already used | MercoPress | Colombia"
+      },
       "market_z": -0.884,
       "abs_market_z": 0.884,
       "market_moving": false,
@@ -121,36 +135,36 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 2,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[4]",
+        "path": "root.tg.urgent[3]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 13,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "iran",
-          "hormuz"
+          "oil",
+          "refinery",
+          "russia"
         ],
-        "text": "Iran war Update: US, Tehran exchange opposing claims over Hormuz control | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US, Tehran exchange opposing claims over Hormuz control | Al Jazeera"
+        "text": "An oil refinery was attacked in Salavat, Republic of Bashkortostan. It is one of Russia's largest refining and petrochemical complexes. The plant has been targeted by drones multiple times - notably i",
+        "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: An oil refinery was attacked in Salavat, Republic of Bashkortostan. It is one of Russia's largest refining and petrochemical complexes. The plant has been targeted by drones mul..."
       },
       "market_z": -1.277,
       "abs_market_z": 1.277,
@@ -161,22 +175,36 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null,
+      "top_signal": {
+        "path": "root.news[0]",
+        "category": "Credit Stress",
+        "primaryCategory": "Credit Stress",
+        "isPrimary": true,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "debt",
+          "quota"
+        ],
+        "text": "Colombia faces reconstruction with 96% of the year's debt quota already used | MercoPress | Colombia",
+        "explanation": "Credit Stress match based on keywords: debt. Signal: Colombia faces reconstruction with 96% of the year's debt quota already used | MercoPress | Colombia"
+      },
       "market_z": -1.277,
       "abs_market_z": 1.277,
       "market_moving": false,
@@ -186,35 +214,35 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[35]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "gaza"
+          "taiwan",
+          "container"
         ],
-        "text": "Israeli air strike kills one in northern Gaza | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli air strike kills one in northern Gaza | Al Jazeera"
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": 1.281,
       "abs_market_z": 1.281,
@@ -225,8 +253,8 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 7,
+      "state": "calm"
     }
   ],
   "signalOnly": [
