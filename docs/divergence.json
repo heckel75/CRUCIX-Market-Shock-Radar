@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-15T23:50:11.430Z",
+  "generatedAt": "2026-08-16T23:49:55.137Z",
   "date": "2026-08-07",
   "asOfClose": "2026-08-07",
   "framing": "readings as of market close, 2026-08-07",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-15T23:50:08.462Z",
-    "generatedDate": "2026-08-15",
+    "generatedAt": "2026-08-16T23:49:51.741Z",
+    "generatedDate": "2026-08-16",
     "asOfClose": "2026-08-07",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-15T23:50:08.462Z",
-    "generatedDate": "2026-08-15",
-    "runDate": "2026-08-15",
+    "generatedAt": "2026-08-16T23:49:51.741Z",
+    "generatedDate": "2026-08-16",
+    "runDate": "2026-08-16",
     "asOfClose": "2026-08-07",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-15, readings as of market close, 2026-08-07 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-16, readings as of market close, 2026-08-07 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-07",
-      "generatedDate": "2026-08-15",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-08-15, readings as of market close, 2026-08-07 (8 calendar days old)."
+      "generatedDate": "2026-08-16",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-08-16, readings as of market close, 2026-08-07 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,36 +54,41 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-miss": 1,
-    "calm": 4
+    "priced": 1,
+    "calm": 2,
+    "radar-claim": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 33,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 10,
-      "signal_primary_count": 10,
+      "signal_elevated": true,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[10]",
+        "path": "root.tg.urgent[11]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 33,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "iran"
+          "strike",
+          "missile",
+          "military",
+          "russia",
+          "ukraine",
+          "factory"
         ],
-        "text": "State Department spokesperson on Iran war and U.S. visa revocations",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: State Department spokesperson on Iran war and U.S. visa revocations"
+        "text": "🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russian military satellites",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, military, russia, ukraine. Signal: 🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russi..."
       },
       "market_z": 1.775,
       "abs_market_z": 1.775,
@@ -94,8 +99,8 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 9,
+      "state": "priced"
     },
     {
       "channel": "sanctions-policy",
@@ -119,35 +124,38 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 24,
       "signal_score_max": 20,
-      "signal_elevated": false,
+      "signal_elevated": true,
       "signal_count": 2,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.chokepoints[0]",
+        "path": "root.news[39]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 24,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "oil",
-          "hormuz"
+          "attack",
+          "military",
+          "drone",
+          "ukraine",
+          "energy"
         ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+        "text": "Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, ukraine. Signal: Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews"
       },
       "market_z": -1.277,
       "abs_market_z": 1.277,
@@ -158,8 +166,8 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 9,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
@@ -183,35 +191,39 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 33,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 9,
-      "signal_primary_count": 3,
-      "signal_secondary_count": 6,
+      "signal_elevated": true,
+      "signal_count": 8,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 8,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[11]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
+        "rawScore": 33,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "strike",
+          "missile",
+          "military",
+          "russia",
+          "ukraine",
+          "factory"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russian military satellites",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, military, russia, ukraine. Signal: 🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russi..."
       },
       "market_z": 1.281,
       "abs_market_z": 1.281,
@@ -222,8 +234,8 @@
       "driver_as_of": "2026-08-07",
       "market_as_of": "2026-08-07",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 9,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
@@ -259,14 +271,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[37]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "strike",
+          "ukraine",
+          "market"
+        ],
+        "text": "Ukraine: Russian strike destroys Kyiv book market | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine: Russian strike destroys Kyiv book market | France 24"
+      }
     }
   ]
 }

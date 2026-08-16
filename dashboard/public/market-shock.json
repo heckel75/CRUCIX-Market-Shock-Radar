@@ -1,28 +1,365 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-15T23:50:08.315Z",
+  "generatedAt": "2026-08-16T23:49:51.594Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 18,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
-    "concentrationPenalty": 2.5,
-    "categoryBreadth": 3
+    "concentrationPenalty": 5,
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 10,
-    "Energy Shock": 2,
-    "Supply Chain Disruption": 3
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 133,
+  "candidateCount": 140,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[10]",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 33,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile",
+        "military",
+        "russia",
+        "ukraine",
+        "factory"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russian military satellites",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, military, russia, ukraine. Signal: 🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russi..."
+    },
+    {
+      "path": "root.news[39]",
       "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 24,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "military",
+        "drone",
+        "ukraine",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, ukraine. Signal: Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 22,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "ukraine",
+        "oil",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which makes solid rocket fuel for Uragan, Smerch and Tornado-S systems. Strikes on petrochemical and oil refi",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which makes solid rocket fuel for Uragan, Smerch and Tornado-S systems. Strikes on pet..."
+    },
+    {
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "drone",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Drone and missile strikes kill 19 in Russia and Ukraine | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: Drone and missile strikes kill 19 in Russia and Ukraine | France 24"
+    },
+    {
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦🇷🇺⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Times reports. One of the models is the Nyan drone, developed by Callen-Lenz, a subsidiary of B",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Times reports. One of the models is the Nyan drone, developed by Callen-L..."
+    },
+    {
+      "path": "root.news[37]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 17,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Equities",
+        "Credit",
+        "FX",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "ukraine",
+        "market"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Market Volatility Signal"
+      ],
+      "text": "Ukraine: Russian strike destroys Kyiv book market | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine: Russian strike destroys Kyiv book market | France 24"
+    },
+    {
+      "path": "root.news[4]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "military",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Trump says US to scale back military drills with South Korea after it stayed out of Iran war",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: Trump says US to scale back military drills with South Korea after it stayed out of Iran war"
+    },
+    {
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Largest Ukrainian drone attack on Russia, Moscow says 822 drones shot down | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia. Signal: Largest Ukrainian drone attack on Russia, Moscow says 822 drones shot down | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "russia"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇬🇧 🇺🇦 🇷🇺 UK-made drones strike targets inside Russia British-made drones are being used to strike targets in Russia for the first time. The drones, built by two separate British companies, hav",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: 🇬🇧 🇺🇦 🇷🇺 UK-made drones strike targets inside Russia British-made drones are being used to strike targets in Russia for the first time. The drones, built by two separate B..."
+    },
+    {
+      "path": "root.newsFeed[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "russia"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "UK-made drones strike targets inside Russia British-made drones are being used to strike targets in | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: UK-made drones strike targets inside Russia British-made drones are being used to strike targets in | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.newsFeed[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which mak | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which mak | WARTRANSLATED"
+    },
+    {
+      "path": "root.newsFeed[39]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Time | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: ⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Time | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -35,14 +372,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "iran"
+        "military"
       ],
       "otherCategories": [],
-      "text": "State Department spokesperson on Iran war and U.S. visa revocations",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: State Department spokesperson on Iran war and U.S. visa revocations"
+      "text": "🇾🇪 🇸🇦 🇾🇪 Yemen's Saudi-backed government says it carried out 181 military operations against Ansar Allah in 24 hours as the country's civil war reignites The armed forces of Yemen's Saudi-backe",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military. Signal: 🇾🇪 🇸🇦 🇾🇪 Yemen's Saudi-backed government says it carried out 181 military operations against Ansar Allah in 24 hours as the country's civil war reignites The armed forces ..."
     },
     {
-      "path": "root.news[46]",
+      "path": "root.news[22]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -55,203 +392,19 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "iran",
+        "china"
       ],
       "otherCategories": [],
-      "text": "Ukraine strikes rocket and space centre in Russia's Samara | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Ukraine strikes rocket and space centre in Russia's Samara | Euronews"
+      "text": "As China Pushes to Expand in Asia, Trump Focuses on Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, china. Signal: As China Pushes to Expand in Asia, Trump Focuses on Iran"
     },
     {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷🇺🇸⚡️ — Debris from the fighter-bomber F-15E strike eagle, drones including the MQ-9 Reaper, MQ-1C Gray Eagle, and Hermes 900 (one complete unit with serial number 923, which landed on March 4th)",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇮🇷🇺🇸⚡️ — Debris from the fighter-bomber F-15E strike eagle, drones including the MQ-9 Reaper, MQ-1C Gray Eagle, and Hermes 900 (one complete unit with serial number 923, whi..."
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — A strike by a \"Geran-4\" loitering munition hit a Ukrainian towing vessel in the waters of the Dnieper Estuary in the Nikolaev region. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — A strike by a \"Geran-4\" loitering munition hit a Ukrainian towing vessel in the waters of the Dnieper Estuary in the Nikolaev region. @Intelslava"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — Guardsmen of the 64th Separate Motor Rifle Brigade, part of the Vostok Group of Forces, continue to detect and strike Ukrainian personnel in the Zaporizhzhia direction. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — Guardsmen of the 64th Separate Motor Rifle Brigade, part of the Vostok Group of Forces, continue to detect and strike Ukrainian personnel in the Zaporizhzhia direct..."
-    },
-    {
-      "path": "root.newsFeed[43]",
+      "path": "root.news[26]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 10,
       "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — Debris from the fighter-bomber F-15E strike eagle, drones including the MQ-9 Reaper, MQ-1C Gray | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️ — Debris from the fighter-bomber F-15E strike eagle, drones including the MQ-9 Reaper, MQ-1C Gray | INTELSLAVA"
-    },
-    {
-      "path": "root.newsFeed[49]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — A strike by a \"Geran-4\" loitering munition hit a Ukrainian towing vessel in the waters of the D | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️ — A strike by a \"Geran-4\" loitering munition hit a Ukrainian towing vessel in the waters of the D | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -260,111 +413,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
+        "attack",
         "russia"
       ],
       "otherCategories": [],
-      "text": "Russia claims it shot down 17 Flamingo missiles, 7 guided bombs and 1,328 Ukrainian drones over the past day. They also claims 598 drones were intercepted overnight across 18 regions including Moscow,",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Russia claims it shot down 17 Flamingo missiles, 7 guided bombs and 1,328 Ukrainian drones over the past day. They also claims 598 drones were intercepted overnight across 18 re..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — Putin does not intend to announce a new mobilization in Russia this year — The Guardian. According to the publication's sources in Moscow, the Kremlin now prefers to increase the numbe",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇦⚡️ — Putin does not intend to announce a new mobilization in Russia this year — The Guardian. According to the publication's sources in Moscow, the Kremlin now prefers t..."
-    },
-    {
-      "path": "root.chokepoints[1]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "canal"
-      ],
-      "otherCategories": [],
-      "text": "Suez Canal | 12% of world trade",
-      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Suez Canal | 12% of world trade"
-    },
-    {
-      "path": "root.chokepoints[4]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "red sea"
-      ],
-      "otherCategories": [],
-      "text": "Bab el-Mandeb | Red Sea gateway",
-      "explanation": "Energy Shock match based on keywords: red sea. Signal: Bab el-Mandeb | Red Sea gateway"
-    },
-    {
-      "path": "root.chokepoints[7]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "canal"
-      ],
-      "otherCategories": [],
-      "text": "Panama Canal | 5% of world trade",
-      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Panama Canal | 5% of world trade"
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "port"
-      ],
-      "otherCategories": [],
-      "text": "🇾🇪🇾🇪🇸🇦⚡️ — A major fire has broken out in one of the areas targeted by Ansar Allah (Houthis) ballistic missiles at Mokha (Al-Mokha) Port. @IntelSlava",
-      "explanation": "Supply Chain Disruption match based on keywords: port. Signal: 🇾🇪🇾🇪🇸🇦⚡️ — A major fire has broken out in one of the areas targeted by Ansar Allah (Houthis) ballistic missiles at Mokha (Al-Mokha) Port. @IntelSlava"
+      "text": "Russia says at least seven killed in largest Ukrainian attack of 2026",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia says at least seven killed in largest Ukrainian attack of 2026"
     }
   ]
 }
