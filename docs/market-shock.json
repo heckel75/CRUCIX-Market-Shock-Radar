@@ -1,101 +1,41 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-16T23:49:51.594Z",
+  "generatedAt": "2026-08-17T23:51:48.037Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 18,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Energy Shock": 1,
+    "Geopolitical Escalation": 12,
+    "Sanctions / Policy Shock": 2
   },
   "candidateCount": 140,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[11]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 33,
+      "category": "Energy Shock",
+      "score": 26,
       "confidence": "High",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "missile",
-        "military",
-        "russia",
-        "ukraine",
-        "factory"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russian military satellites",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, military, russia, ukraine. Signal: 🚀 🇺🇦 🇷🇺 Ukraine missile strike on the Progress Rocket Space Centre in Russia's Samara is very significant. The factory produces Soyuz-2 launch vehicles used to deploy Russi..."
-    },
-    {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 24,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "military",
-        "drone",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, ukraine. Signal: Ukraine launches large-scale drone attack on Russian military and energy infrastructure | Euronews"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 22,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -103,43 +43,21 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "ukraine",
         "oil",
-        "fuel"
+        "gas",
+        "energy",
+        "strike",
+        "drone"
       ],
       "otherCategories": [
-        "Energy Shock",
+        "Geopolitical Escalation",
         "Supply Chain Disruption"
       ],
-      "text": "Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which makes solid rocket fuel for Uragan, Smerch and Tornado-S systems. Strikes on petrochemical and oil refi",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which makes solid rocket fuel for Uragan, Smerch and Tornado-S systems. Strikes on pet..."
+      "text": "🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security concerns about the near",
+      "explanation": "Energy Shock match based on keywords: oil, gas, energy. Signal: 🇮🇷⚔️🇺🇸🇪🇬 Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damaged two gas tankers in Egyptian waters has renewed energy security c..."
     },
     {
-      "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "drone",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Drone and missile strikes kill 19 in Russia and Ukraine | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia, ukraine. Signal: Drone and missile strikes kill 19 in Russia and Ukraine | France 24"
-    },
-    {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
@@ -157,52 +75,110 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "drone",
-        "ukraine"
+        "war",
+        "naval",
+        "iran",
+        "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇦🇷🇺⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Times reports. One of the models is the Nyan drone, developed by Callen-Lenz, a subsidiary of B",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Times reports. One of the models is the Nyan drone, developed by Callen-L..."
+      "text": "—❗️🇺🇸/🇮🇷 BREAKING: Iran has issued an ultimatum to the United States; return to serious diplomacy and remove the naval blockade, or face an expansion of the war The deadline, which is said to be",
+      "explanation": "Geopolitical Escalation match based on keywords: war, naval, iran. Signal: —❗️🇺🇸/🇮🇷 BREAKING: Iran has issued an ultimatum to the United States; return to serious diplomacy and remove the naval blockade, or face an expansion of the war The deadline..."
     },
     {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 17,
-      "confidence": "Medium",
+      "score": 18,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
         "Commodities",
-        "Margins",
-        "Equities",
-        "Credit",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone",
+        "oil",
+        "port"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦❌🇬🇷 — A Ukrainian drone struck the Greek tanker Skiros in the Black Sea after it had loaded oil at the port of Novorossiysk on August 16. Greek media published a video of the attack featuring a",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇺🇦❌🇬🇷 — A Ukrainian drone struck the Greek tanker Skiros in the Black Sea after it had loaded oil at the port of Novorossiysk on August 16. Greek media published a video of ..."
+    },
+    {
+      "path": "root.newsFeed[26]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
         "FX",
-        "Rates"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine",
-        "market"
+        "drone",
+        "oil"
       ],
       "otherCategories": [
-        "Supply Chain Disruption",
-        "Market Volatility Signal"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "Ukraine: Russian strike destroys Kyiv book market | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine: Russian strike destroys Kyiv book market | France 24"
+      "text": "⚔️ Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damage | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚔️ Drone strike in Egypt sparks security concerns about Suez oil exports A drone strike that damage | CIG_TELEGRAM"
     },
     {
-      "path": "root.news[4]",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "The Telegraph reports that Russia has set up at least 10 secret drone launch bases within NATO's reach. Seven of them have already been used for massive attacks against Ukraine. Some bases are positio",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia, ukraine. Signal: The Telegraph reports that Russia has set up at least 10 secret drone launch bases within NATO's reach. Seven of them have already been used for massive attacks against Ukraine...."
+    },
+    {
+      "path": "root.news[28]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -220,14 +196,133 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Trump says US to scale back military drills with South Korea after it stayed out of Iran war",
-      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: Trump says US to scale back military drills with South Korea after it stayed out of Iran war"
+      "text": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: Trump says US to reduce military drills with South Korea after it stayed out of Iran war"
     },
     {
-      "path": "root.news[34]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "The General Staff of Ukraine reported that production capacities for rocket fuel were destroyed in Russia's Kamensk-Shakhtinsky. On the night of August 16, \"Kombinat Kamensky\" in the Rostov region cam",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: The General Staff of Ukraine reported that production capacities for rocket fuel were destroyed in Russia's Kamensk-Shakhtinsky. On the night of August 16, \"Kombinat Kamensky\" i..."
+    },
+    {
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
+      "category": "Sanctions / Policy Shock",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ban",
+        "election",
+        "russia"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Russia maintains election ban on opposition Yabloko, jails deputy head | Al Jazeera",
+      "explanation": "Sanctions / Policy Shock match based on keywords: ban, election. Signal: Russia maintains election ban on opposition Yabloko, jails deputy head | Al Jazeera"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Sanctions / Policy Shock",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ban",
+        "election",
+        "russia"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Russia upholds Yabloko party's election ban and jails its deputy chair | Euronews",
+      "explanation": "Sanctions / Policy Shock match based on keywords: ban, election. Signal: Russia upholds Yabloko party's election ban and jails its deputy chair | Euronews"
+    },
+    {
+      "path": "root.news[48]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "red sea"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates"
+    },
+    {
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -237,129 +332,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "drone",
-        "russia"
+        "israel",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Largest Ukrainian drone attack on Russia, Moscow says 822 drones shot down | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia. Signal: Largest Ukrainian drone attack on Russia, Moscow says 822 drones shot down | Al Jazeera"
+      "text": "Kushner Meets Netanyahu in Israel in Effort to Break Logjam Over Gaza",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Kushner Meets Netanyahu in Israel in Effort to Break Logjam Over Gaza"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "russia"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇬🇧 🇺🇦 🇷🇺 UK-made drones strike targets inside Russia British-made drones are being used to strike targets in Russia for the first time. The drones, built by two separate British companies, hav",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: 🇬🇧 🇺🇦 🇷🇺 UK-made drones strike targets inside Russia British-made drones are being used to strike targets in Russia for the first time. The drones, built by two separate B..."
-    },
-    {
-      "path": "root.newsFeed[33]",
+      "path": "root.news[14]",
       "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "russia"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "UK-made drones strike targets inside Russia British-made drones are being used to strike targets in | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: UK-made drones strike targets inside Russia British-made drones are being used to strike targets in | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.newsFeed[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which mak | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's General Staff confirms a strike on the Kamensky Kombinat plant in Rostov region, which mak | WARTRANSLATED"
-    },
-    {
-      "path": "root.newsFeed[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Time | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: ⚡️ — Ukraine has begun using British drones to strike deep inside Russian territory, The Sunday Time | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -372,14 +354,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "military"
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇾🇪 🇸🇦 🇾🇪 Yemen's Saudi-backed government says it carried out 181 military operations against Ansar Allah in 24 hours as the country's civil war reignites The armed forces of Yemen's Saudi-backe",
-      "explanation": "Geopolitical Escalation match based on keywords: war, military. Signal: 🇾🇪 🇸🇦 🇾🇪 Yemen's Saudi-backed government says it carried out 181 military operations against Ansar Allah in 24 hours as the country's civil war reignites The armed forces ..."
+      "text": "How Ukraine’s Satellites Help Drive Its War Drones",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: How Ukraine’s Satellites Help Drive Its War Drones"
     },
     {
-      "path": "root.news[22]",
+      "path": "root.news[24]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -392,15 +374,43 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "china"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "As China Pushes to Expand in Asia, Trump Focuses on Iran",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, china. Signal: As China Pushes to Expand in Asia, Trump Focuses on Iran"
+      "text": "Russian politician sentenced to 11 years for opposing war in Ukraine | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Russian politician sentenced to 11 years for opposing war in Ukraine | Al Jazeera"
     },
     {
-      "path": "root.news[26]",
+      "path": "root.news[37]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "military",
+        "spread"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Britain deploys military as wildfires spread across Europe | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: Britain deploys military as wildfires spread across Europe | Al Jazeera"
+    },
+    {
+      "path": "root.news[42]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -413,12 +423,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "russia"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Russia says at least seven killed in largest Ukrainian attack of 2026",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia says at least seven killed in largest Ukrainian attack of 2026"
+      "text": "War on Iran: Phase II, Day 37 | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: War on Iran: Phase II, Day 37 | Al Jazeera"
     }
   ]
 }
