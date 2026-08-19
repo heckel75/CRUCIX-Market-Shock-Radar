@@ -117,13 +117,13 @@ Commit/push shortcut:
 
 ## 3. Current State
 
-**Current session cursor:** Session 15 complete — next session is Session 16
-**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. Phase 2 added the market side so each channel shows signal vs. market movement, classified into divergence states and logged daily. Phase 2 remains the operational **legacy baseline**, not the final methodology. Session 14 completed the Methodology 2.0 architecture and executable audit protocols. Session 15 completed the signal evidence audit with explicit limitations and without selecting or implementing production behavior. Session 16 now performs the market evidence audit before the Session 17 methodology-freeze gate. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).
-**Methodology review status:** The first Methodology 2.0 planning amendment was committed and pushed (`e4ba8fd Update project log for methodology audit`), and the 2026-07-10 architecture-review amendment remains the sequencing basis. Session 14 froze architecture invariants, persistence/recovery design, the draft minimum core, explicit assessment statuses, a provisional parallel namespace, and executable Session 15–16 protocols in `audit/`. Session 15 then completed the signal audit: 26/26 required measurements are present (20 measured, 6 partial), all frozen evidence hashes passed, and the completion gate passed with explicit limitations. The evidence supports a deterministic high-confidence clustering path with persisted assisted/human adjudication and favors Session-17 review of structural eligibility with transparent ranking, but no final signal rule, scalar score, taxonomy amendment, decay rate, stale interval, corroboration mapping, or production parameter was frozen. Launch staging, custom-domain work, and the deferred board screenshot remain paused until the Methodology 2.0 gates are resolved. Existing daily automation should continue unchanged during the audit unless it is broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
-**Methodology 2.0 production status:** Not started. Sessions 14–15 created architecture/protocol and audit-evidence artifacts only; no v2 registry, production candidate archive, production assignment history, methodology JSON, parallel output, classifier, market calculation, or production version stamping has been implemented.
-**Legacy continuity:** Legacy automation, production methodology, public output, thresholds, sources, transforms, state names, and historical snapshots remained unchanged during Sessions 14–15.
+**Current session cursor:** Session 16 complete — next session is Session 17.
+**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. Phase 2 added the market side so each channel shows signal vs. market movement, classified into divergence states and logged daily. Phase 2 remains the operational **legacy baseline**, not the final methodology. Session 14 completed the Methodology 2.0 architecture and executable audit protocols; Session 15 completed the signal evidence audit; and Session 16 completed the market evidence audit. Both evidence audits passed their completion gates with explicit limitations and without selecting or implementing production behavior. Session 17 is now the sole Methodology 2.0 methodology-freeze gate. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).
+**Methodology review status:** The first Methodology 2.0 planning amendment was committed and pushed (`e4ba8fd Update project log for methodology audit`), and the 2026-07-10 architecture-review amendment remains the sequencing basis. Session 14 froze architecture invariants, persistence/recovery design, the draft minimum core, explicit assessment statuses, a provisional parallel namespace, and executable Session 15–16 protocols in `audit/`. Session 15 completed all 26 required signal measurements (20 measured, 6 partial). Session 16 completed the market audit with 18 measured items, one partial timing item, and one historical-release-vintage item measured as unavailable; its deterministic completion gate passed. The combined evidence supports Session-17 decisions but freezes no final signal rule, scalar score, taxonomy amendment, decay rate, stale interval, corroboration mapping, channel-dating/freshness/minimum-count rule, mixed-date rule, market threshold, percentile alpha, history mode/length, conditioning, fallback, breadth semantics, timing contract, retention rule, or other production parameter. Launch staging, custom-domain work, and the deferred board screenshot remain paused. Existing daily automation should continue unchanged unless broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
+**Methodology 2.0 production status:** Not started. Sessions 14–16 created architecture/protocol and audit-evidence artifacts only; no v2 registry, production candidate archive, production assignment history, methodology JSON, frozen production schema, acceptance fixture, parallel output, classifier, market calculation, migration, or production version stamping has been implemented.
+**Legacy continuity:** Legacy automation, production methodology, public output, thresholds, sources, transforms, state names, workflows, historical snapshots, and run records remained unchanged during Sessions 14–16. Session 16 added no market proxy and promoted no existing fallback or supplemental instrument.
 **Signal layer status:** Production remains the stateless rule-based keyword classifier with exact/canonical text deduplication. Session 15 audited, but did not implement, a stateful event-cluster approach. The audit reconstructed 1,153 fidelity-B observations from 28 retained payload identities at 27 timestamps, kept 64 fidelity-C selected-output observations separate, and selected a deterministic 428-observation manual set. Current-view adjudication accepted 327 assignments into 123 active event clusters and left 101 observations unresolved. Exact duplicate excess in the B census was 834/1,153 (72.333044%), while accepted manual assignments compressed 327 observations to 123 clusters (204/327, 62.385321% reduction). Armed-conflict actions still represented 78/123 clusters (63.414634%), so material conflict concentration remained after duplication and clustering. No production semantic clustering, raw-candidate persistence, registry, or immutable assignment-history path exists yet.
-**Market layer status:** The current market layer uses FRED plus Tiingo EOD `adjClose`, a uniform 5-common-observation transform, a trailing 252-common-date transformed window, global all-instrument common-date alignment, and per-channel `max |z|` driver selection. The global date alignment allows lagging Brent/WTI observations to hold back unrelated channels. Current state names use absolute market movement and therefore do not prove direction, causality, or that an OSINT event was literally "priced."
+**Market layer status:** Production remains the unchanged FRED plus Tiingo EOD `adjClose` legacy calculation: a uniform five-common-observation transform, trailing 252-common-date transformed window, global all-instrument common-date alignment, and per-channel `max |z|` driver selection. Session 16 audited 14 existing mapped instruments from a frozen audit-download-vintage manifest, covering 8,669 normalized observations, 391 evaluation dates, 676 candidate configurations, and 264,316 eligibility rows. It reproduced the latest-date legacy calculation at published rounding, measured own-series five-valid-observation windows spanning 5–12 calendar days, and completed dating, eligibility, instrument-set, trigger-rate, point-in-time percentile, attainable-alpha, history, conditioning, driver/second-driver, breadth, and disagreement analyses. Timing evidence is partial, historical release-vintage identity is unavailable, and no candidate rule or parameter is selected. Current production state names and all candidate audit statistics remain non-causal.
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
@@ -203,6 +203,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 14 architecture-amendment preflight:** On 2026-07-10 before this log-only architecture amendment, `git pull --ff-only` reported `Already up to date`, `git rev-parse --short HEAD` returned `e4ba8fd`, and `git status --short` returned no changed files, with only the recurring warning that Git could not read `C:\Users\heyke/.config/git/ignore`. Repository inspection found no implemented raw-candidate archive, semantic cluster assignments, persistent event registry, `methodology/` directory, explicit v2 output paths, `methodologyVersion` field, or empirical channel-percentile thresholds.
 **Fresh Session 14 execution preflight:** On 2026-08-11, `git rev-parse HEAD` returned `72bba8e568cb46841632cbb779416ff74cc1777b` and `git status --short` was empty, apart from the recurring unreadable global-ignore warning. The legacy scripts/workflow were present. Repository inspection again found no `inputs/candidates/`, `state/events/`, `log/event-assignments/`, `methodology/`, explicit v2 namespace, `methodologyVersion` field, or empirical percentile implementation. Locally ignored `runs/memory/` contained 27 distinct retained run timestamps from 2026-05-22 through 2026-06-23; tracked close snapshots contained only selected top-signal evidence, not historical raw candidates. Session 14 changed documentation/design artifacts only.
 **Fresh Session 15 closeout checks:** On 2026-08-13, repository HEAD was `5ababb0101ae26254962621357b4a1f5380e5560` on `master`. Before this project-log-only closeout, the tracked working tree and index were clean and exactly 19 `audit/session15/` artifacts were untracked; the recurring unreadable global-ignore warning remained non-blocking. The finalizer verified all 64 frozen source files, all 11 private preservation copies totaling 597,000 bytes, the manifest self-hash, fixed artifact hashes, deterministic rebuilds, and 26/26 required measurements. The Session 15 audit artifacts and `runs/session15-preservation/20260813T111218Z` remain untracked/private pending explicit source-term and privacy review; none were modified, staged, committed, or pushed during this closeout.
+**Fresh Session 16 execution/closeout checks:** Session 16 initially observed HEAD `6613b76488b754c281e2ac7999b0e692b182a2e8`; an external `pull --tags origin master` fast-forward occurred during preflight at `2026-08-19T16:11:03+02:00`, after which the frozen audit HEAD was `4a2bb54f2e1e8ea141ec3bb2a65f041070530e6b` on `master`. The working tree and index were clean before Session 16 helpers were created. All 19 fixed Session 15 artifact hashes, all 11 preservation copies, and all nine recorded production hashes passed before this log-only closeout. Session 16 remains a wholly untracked 62-file boundary under `audit/session16/`; Session 15 record-level/private artifacts and preservation copies remain ignored/private. The audit handoff reported 1,579,671,915 bytes for the 62 Session 16 files; closeout re-inventory of those same 62 files measured 1,579,675,442 bytes (1.471187 GiB), a 3,527-byte non-material accounting discrepancy that does not affect any frozen manifest identity, audit result, or completion gate. Before this log edit there were no tracked or staged changes, and only this project log is authorized to change.
 
 ---
 
@@ -240,13 +241,13 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 |---:|---:|---|---|
 | 14 | 90 min | Freeze architecture and executable audit protocols: persistence/recovery, identity/lifecycle, core schema draft, parameter register, source-origin rules, market/timing candidates, namespace, and comparison contract; no production change | Done — documentation/design only |
 | 15 | 120 min | Signal evidence audit: preserve/inventory/hash retained evidence; separate fidelity strata; extract reconstructable candidates; normalize origins; cluster episodes/parents; label event, stage, mechanism, directness, corroboration, lifecycle, and status; adjudicate; compare elevation candidates; measure storage; produce final metrics/report | Done — evidence audit complete with explicit limitations; no signal-v2 production implementation and no final rule frozen |
-| 16 | 90 min | Market evidence audit with frozen FRED/Tiingo inputs: reproduce legacy; calculate own-series transforms; compare channel dating, stale/eligibility, minimum-count, date-gap, and instrument-set candidates; measure raw/percentile trigger rates and breadth; align signal/market timestamps without look-ahead | Planned — execute `audit/session14-market-audit-protocol.md` |
-| 17 | 90 min | Resolve the parameter register from Sessions 15–16; freeze `methodology/2.0.0/*.json`, production schemas/enums, clustering/lifecycle/source rules, signal and market gates, timing/calendar rules, storage/migration contract, parallel-period criteria, and acceptance/reproducibility fixtures | Provisional — depends on Sessions 15–16 evidence |
-| 18 | 120 min | Implement signal v2 in parallel only: immutable candidate and assignment files, recoverable registry, accepted clustering path, minimal taxonomy/evidence/lifecycle rules, version/config hashes, and v2 signal output; keep legacy untouched | Provisional — depends on Session 17 freeze |
-| 19 | 120 min | Implement market/divergence v2 in parallel only: own-series transforms, frozen dating/eligibility/set handling, breadth, threshold, timestamp pending logic, v2 states, manifests, and offline canonical reproduction; keep legacy untouched | Provisional — depends on Session 17 freeze |
+| 16 | 90 min | Market evidence audit with frozen FRED/Tiingo inputs: reproduce legacy; calculate own-series transforms; compare channel dating, stale/eligibility, minimum-count, date-gap, and instrument-set candidates; measure raw/percentile trigger rates and breadth; align signal/market timestamps without look-ahead | Done — evidence audit complete with audit-download-vintage and partial-timing limitations; no market-v2 production implementation and no final parameter frozen |
+| 17 | 90 min | Resolve the parameter register from Sessions 15–16; freeze `methodology/2.0.0/*.json`, production schemas/enums, clustering/lifecycle/source rules, signal and market gates, timing/calendar rules, storage/migration contract, parallel-period criteria, and acceptance/reproducibility fixtures | Planned — sole methodology-freeze gate; both evidence audits complete |
+| 18 | 120 min | Implement signal v2 in parallel only: immutable candidate and assignment files, recoverable registry, accepted clustering path, minimal taxonomy/evidence/lifecycle rules, version/config hashes, and v2 signal output; keep legacy untouched | Planned implementation — depends only on the Session 17 freeze |
+| 19 | 120 min | Implement market/divergence v2 in parallel only: own-series transforms, frozen dating/eligibility/set handling, breadth, threshold, timestamp pending logic, v2 states, manifests, and offline canonical reproduction; keep legacy untouched | Planned implementation — depends only on the Session 17 freeze |
 | 20 | 90 min | Review the Session 17-required number of distinct eligible market closes using distribution/case metrics, identity/lifecycle stability, and reproducibility—not row agreement—and document production cutover, extended parallel run, or rejection without rewriting legacy history | Provisional — depends on Sessions 18–19 and comparison coverage |
 
-Target times are planning estimates. Sessions 15 and 16 are evidence collection, not production implementation. Session 17 is the only methodology-freeze gate; Sessions 18–19 may implement only what it freezes, under the separate v2 namespace. Session 20 evaluates the parallel protocol in `audit/session14-parallel-comparison-protocol.md` and may extend or reject rather than force cutover.
+Target times are planning estimates. Sessions 15 and 16 completed evidence collection without production implementation. Session 17 is the only methodology-freeze gate; Sessions 18–19 may implement only what it freezes, under the separate v2 namespace. Session 20 evaluates the parallel protocol in `audit/session14-parallel-comparison-protocol.md` and may extend or reject rather than force cutover.
 
 Session 14 artifacts:
 
@@ -258,6 +259,8 @@ Session 14 artifacts:
 - `audit/methodology-2-parameter-register.md`
 
 Session 15 evidence artifacts remain untracked pending privacy/source-term review. The frozen inventory and input manifest cover 64 original evidence files; the completion artifacts are `audit/session15/metrics.json` and `audit/session15/signal-audit-report.md`, with sensitivity results in `audit/session15/signal-elevation-sensitivity.json`. The private preservation area `runs/session15-preservation/20260813T111218Z` contains 11 byte-identical copies totaling 597,000 bytes. Raw candidate text, full private URLs, detailed record-level evidence, and preservation copies must not be staged or published without explicit review; sanitized aggregate artifacts are only candidates for later tracking, not authorized publications.
+
+Session 16 evidence artifacts also remain untracked pending privacy/source-term and retention review. The frozen audit-download-vintage manifest covers 14 existing mapped instruments, 8,669 normalized observations, and 29 frozen raw/normalized/ledger files. Its canonical self-hash is `308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d` and physical SHA-256 is `7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6`. The full 62-file Session 16 boundary is approximately 1.47 GiB and contains private raw/download-level and record-level evidence plus aggregate review candidates. This classification is not authorization to stage or publish any Session 16 artifact.
 
 ---
 
@@ -375,7 +378,7 @@ The history page renders these rows backwards. After 30–40 days, the log's rea
 
 ## 4c. Methodology 2.0 Audit Principles
 
-These remain **audit targets**, not completed production implementation. Session 14 converted them into the design and executable protocols under `audit/`; Session 15 completed the specified signal evidence audit with explicit limitations. Session 16 must now collect market evidence, Session 17 must freeze machine-readable methodology artifacts and acceptance tests, and only Sessions 18–19 may implement parallel v2 behavior. The repository still does not contain a production raw-candidate archive, semantic cluster assignments, persistent event registry, Methodology 2.0 machine-readable schema artifacts, implemented v2 output paths, methodology stamping, or empirical channel-percentile thresholds.
+These remain **audit findings and production design targets**, not completed production implementation. Session 14 converted them into the design and executable protocols under `audit/`; Session 15 completed the signal evidence audit and Session 16 completed the market evidence audit, both with explicit limitations. Session 17 is the sole gate that may freeze machine-readable methodology artifacts and acceptance tests, and only Sessions 18–19 may implement parallel v2 behavior. The repository still does not contain a production raw-candidate archive, semantic cluster assignments, persistent event registry, frozen Methodology 2.0 machine-readable schema artifacts, implemented v2 output paths, methodology stamping, or a selected empirical channel-percentile threshold.
 
 ### Signal architecture
 
@@ -400,6 +403,19 @@ These remain **audit targets**, not completed production implementation. Session
 - Elevation candidates: stage-only Candidate B added no eligibility distinction beyond matched structural stage sets after removing Candidate A's lifecycle clause. Structural eligibility with transparent Candidate-C ranking is the leading family for Session-17 review, but no candidate, evidence threshold, stage boundary, scalar score, exception, or final elevation rule was selected.
 - Storage: audit candidate-record evidence projects roughly 86.49–122.96 MB/year at one persisted transaction per day. Immutable retention appears plausible at the measured scale, but cadence, production schema, access-controlled backend/tiering, backups, source terms, and privacy remain unresolved.
 - Completion boundary: 26/26 required measurements are present (20 measured, 6 partial), frozen inputs and preservation copies verified, and the completion gate passed with explicit limitations. Session 15 did not include market evidence and did not change production, legacy output, workflows, history, or public artifacts.
+
+#### Session 16 market-audit evidence (completed 2026-08-19; not a production freeze)
+
+- Frozen evidence: 14 existing mapped FRED/Tiingo instruments, 8,669 normalized observations, and 29 frozen files at cutoff `2026-08-19T14:17:28.039Z`, all labeled `audit-download-vintage`.
+- Manifest identity: canonical self-hash `308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d`; physical SHA-256 `7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6`.
+- Coverage/grid: 391 evaluation dates, 676 candidate configurations, 75 unique statistic series, and 264,316 eligibility rows. Every feasible minimum eligible count and every observed business-day age/date-gap boundary were retained.
+- Legacy reproduction: the global-intersection baseline contained 598 common raw dates and 342 post-warm-up evaluation dates. At overlap date `2026-08-11`, all 14 instrument z-scores and all five channel driver readings reproduced at published rounding.
+- Own-series calculation: actual five-valid-observation windows spanned 5–12 calendar days. Actual window dates, trailing-history coverage, own-versus-global differences, dating, stale/ineligible exclusions, membership changes, and mixed-date gaps were recorded.
+- Raw threshold rates: legacy/strict own-series rates were conflict 44.152%/44.571%, sanctions 32.749%/32.773%, energy 29.825%/30.636%, credit 17.544%/18.487%, and supply chain 23.099%/22.438%.
+- Threshold/history evidence: completed point-in-time no-look-ahead percentiles, every attainable-alpha boundary, every feasible rolling length and minimum history, expanding-versus-rolling comparison, pooled/same-set/eligible-count conditioning, fallback availability, and full candidate-disagreement analysis.
+- Channel evidence: measured primary and second drivers, eligible count, above-threshold count, single-versus-multiple movers, all-eligible moves, breadth, and instrument-set sensitivity without freezing a display or state rule.
+- Timing: all 15 unselected Candidate-C variants were carried through. Timing remains partial because historical publication/event timestamps, FRED intraday availability, and complete source-release timing are unavailable. No causal conclusion was made.
+- Completion boundary: 18 required items measured, one timing item partial, and historical release-vintage identity measured as unavailable. The deterministic completion gate passed. No source/proxy change, production change, alpha, history rule, fallback, dating/eligibility rule, or other parameter was selected.
 
 #### Methodology 2.0 minimum operational core
 
@@ -642,7 +658,7 @@ Audit and likely amend these parts for Methodology 2.0:
 
 1. **Own-series calculation:** compute each instrument's transform on its own valid observation series/calendar instead of first intersecting every instrument onto one global date set.
 2. **Five-observation meaning:** verify and document the exact span of each "5-day" calculation. The target is five valid observations for that instrument, with the actual start/end dates retained.
-3. **Trailing window:** audit the latest 252 valid transformed observations per instrument as the legacy-compatible candidate; Session 16 measures it and Session 17 freezes the v2 definition.
+3. **Trailing window:** Session 16 audited the latest 252 valid transformed observations per instrument as the legacy-compatible candidate; Session 17 freezes or rejects the v2 definition.
 4. **Dating:** persist `asOf`, observation age, business-day age, and freshness per instrument; derive a visible per-channel `marketAsOf` and freshness state. One lagging crude series must not silently date unrelated channels.
 5. **Channel evidence:** retain the driver, but also expose the second-largest absolute z-score, number of eligible instruments, number above threshold, and a market-breadth indicator.
 6. **Multiple-instrument threshold audit:** quantify the empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. Independence sanity checks:
@@ -679,13 +695,13 @@ This can remain a uniform methodology because:
 - cutoffs are estimated point-in-time, without look-ahead;
 - raw z-score, driver, and breadth remain visible.
 
-Session 16 must compare at least three options:
+Session 16 compared all three required options and retained each as evidence for Session 17 without selecting one:
 
 1. retain legacy `max |z| >= 1.5` only for the legacy baseline;
 2. Methodology 2.0 channel-specific empirical percentile with one common `alpha`;
 3. retain a raw threshold but publish measured channel base rates and breadth without changing the binary rule.
 
-For any percentile proposal, freeze decisions on:
+For any percentile proposal, Session 17 must freeze decisions on:
 
 - rolling versus expanding history;
 - minimum sample size;
@@ -696,7 +712,7 @@ For any percentile proposal, freeze decisions on:
 - correlation and regime sensitivity;
 - fallback behavior before sufficient history exists.
 
-Do not freeze a final market threshold before the audit evidence exists.
+The Session 16 audit evidence now exists, but it froze no final market threshold. Any selection or rejection belongs to the Session 17 joint methodology freeze.
 
 #### Market dating, eligibility, and threshold calibration
 
@@ -1519,7 +1535,7 @@ Session 14 is complete when:
 - Assessable fields use typed `assessed`, `unassessed`, `unknown`, or `not-applicable` wrappers rather than sentinel strings in typed values.
 - Evidence independence is based on the originating assertion or observation, not outlet/domain count. Syndicated copies and repeated quotations of one official statement do not multiply independent-source count or severity.
 - Deterministic clustering is preferred if adequate. Any accepted model/embedding-assisted assignment must persist with model, prompt/ruleset, configuration, content hashes, reviewer/override provenance, and assignment version before deterministic scoring.
-- V2 market architecture computes transforms on each instrument's own valid observation calendar and retains actual window dates, as-of/age/eligibility, z-score, and history count. Session 16 still measures the final channel dating, stale, gap, eligible-count, threshold, and breadth rules.
+- V2 market architecture computes transforms on each instrument's own valid observation calendar and retains actual window dates, as-of/age/eligibility, z-score, and history count. Session 16 later measured the channel-dating, stale, gap, eligible-count, threshold, and breadth candidates without selecting them; Session 17 freezes or defers the final rules.
 - V2 output is isolated under the provisional versioned `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/` namespaces and cannot overwrite legacy public output or close-date snapshots.
 - A signal first observed after the relevant close is `pending` until the next eligible market observation. Timing uses timestamps and makes no causal claim.
 - Provisional non-causal v2 state terminology is `signal-leading`, `co-movement`, `market-only`, and `calm`, mapped from legacy `radar-claim`, `priced`, `radar-miss`, and `calm` without renaming history.
@@ -1652,6 +1668,80 @@ Redistribution rights for retained source text were not established. `candidate-
 ## Recommended Session 16 scope
 
 Execute only the Methodology 2.0 market evidence audit in `audit/session14-market-audit-protocol.md`. Freeze the audit-download input manifest before measurement, preserve audit-download-vintage limitations, compare the specified own-series/channel dating, eligibility, minimum-count, date-gap, breadth, raw-threshold, and point-in-time percentile candidates without look-ahead, and make no production Methodology 2.0 change. Signal methodology decisions remain deferred to the Session 17 joint freeze.
+
+---
+
+# Session 16 — Methodology 2.0 Market Evidence Audit
+
+## Goal
+
+Execute `audit/session14-market-audit-protocol.md` against a frozen FRED/Tiingo audit download: reproduce the legacy market calculation, measure own-series transforms and all specified dating/eligibility/threshold/history/breadth/timing candidates without look-ahead, and produce deterministic audit evidence without changing production or selecting Methodology 2.0 parameters.
+
+## Status
+
+**Status:** Complete with explicit partial timing and unavailable historical-release-vintage measurements; deterministic completion gate passed. No production rule selected or implemented.
+**Date completed:** 2026-08-19
+**Next session:** Session 17 — sole joint Methodology 2.0 schema, parameter, migration-contract, and acceptance-fixture freeze gate.
+
+## Preflight and preservation boundary
+
+- Session 16 initially observed HEAD `6613b76488b754c281e2ac7999b0e692b182a2e8`. An external `pull --tags origin master` fast-forward occurred during preflight at `2026-08-19T16:11:03+02:00`; the audit then froze HEAD `4a2bb54f2e1e8ea141ec3bb2a65f041070530e6b` on `master`.
+- The working tree and index were clean before Session 16 helpers were created. The recurring unreadable global Git-ignore warning remained non-blocking.
+- All 19 fixed Session 15 artifacts and all 11 preservation copies totaling 597,000 bytes matched their recorded hashes. Three mutable legacy source paths had advanced under continued automation; their exact Session 15 Git blobs matched the frozen manifest and were neither restored nor modified.
+- All nine production hashes recorded by the Session 16 completion gate passed. Production scripts, workflows, public output, snapshots, and run records were unchanged.
+
+## Frozen input identity
+
+- Frozen cutoff: `2026-08-19T14:17:28.039Z`.
+- Required vintage label: `audit-download-vintage`.
+- Canonical manifest self-hash: `308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d`.
+- Physical manifest SHA-256: `7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6`.
+- Frozen evidence: 14 existing mapped instruments, 8,669 normalized observations, and 29 frozen raw/normalized/ledger files.
+- Raw response bytes: 1,513,301. Normalized-series bytes: 570,668.
+- Historical release-vintage identity is unavailable for every retained historical close because historical raw FRED/Tiingo responses and hashes were not archived. The frozen download can reproduce this audit only; it cannot prove what either API returned on a historical run date.
+- Preferred `DBC` and `SOXX` succeeded, no fallback symbol was used, and no proxy was added or promoted.
+
+## Audit measurements and principal results
+
+- Evaluation grid: 391 dates from `2025-02-24` through `2026-08-18`, 676 configurations, 75 unique statistic series, and 264,316 eligibility rows, of which 255,005 were assessed and 9,311 unassessed.
+- Legacy reproduction: 598 global common raw dates and 342 post-warm-up evaluation dates. On the latest common overlap date, `2026-08-11`, all 14 legacy instrument z-scores and all five channel driver readings reproduced at published three-decimal rounding.
+- Own-series transforms: five valid observations spanned 5–12 calendar days; actual start/end dates and trailing-history coverage were retained. Own-series and legacy-global histories differed at full precision because their valid-date calendars differed.
+- Dating/eligibility: every feasible minimum eligible-instrument count, no-stale diagnostics, legacy 3/14-calendar-day cutoffs, every observed 0–5 business-day age cutoff, and every observed within-channel business-day gap were measured. Mixed-date rows appeared only under the explicit bounded mixed-date Rule 3 candidate.
+- Instrument sets and channel evidence: membership transitions, primary driver, second driver, eligible count, above-threshold count, driver-only/multiple/all-eligible moves, and breadth were measured for all candidates.
+
+| Channel | Exact legacy-global raw triggers | Strict own-series common-date raw triggers |
+|---|---:|---:|
+| Conflict escalation | 151/342 = 44.152% | 156/350 = 44.571% |
+| Sanctions / policy | 112/342 = 32.749% | 117/357 = 32.773% |
+| Energy disruption | 102/342 = 29.825% | 106/346 = 30.636% |
+| Credit stress | 60/342 = 17.544% | 66/357 = 18.487% |
+| Supply chain | 79/342 = 23.099% | 81/361 = 22.438% |
+
+- Threshold/history analysis: measured empirical raw max-`|z|` rates, point-in-time percentiles without look-ahead, exact attainable-alpha boundaries, every feasible rolling length and minimum history, expanding-versus-rolling history, pooled/same-set/eligible-count conditioning, fallback availability, breadth sensitivity, and full candidate-disagreement boundaries.
+- Sensitivity surfaces include 82,884 expanding point-in-time rows, 81,849 rolling-length summaries, 81,849 minimum-history summaries, 197,270 expanded strict-candidate attainable-alpha points, 82,884 disagreement-boundary rows, and 138,140 threshold-result rows.
+- No alpha, history mode/length, minimum history, conditioning, fallback, channel-dating rule, freshness cutoff, date-gap bound, minimum count, instrument-set bridge, breadth classification, or binary market rule was selected.
+
+## Timing evidence
+
+- Timing remains partial. All 15 unselected Candidate-C variants were retained without revisiting Session 15 labels or signal conclusions.
+- Qualifying run/channel cells ranged from 2 to 41 per variant; definitive timing cells ranged from 1 to 11. Definitive cases were supply-chain cases and were signal-before-close. After-close-resolved-next and pending counts were zero in the frozen evidence; market-move-preceding and signal-followed cases varied by unselected candidate.
+- Retained run timestamps are first-observed audit timestamps, not event/publication timestamps. FRED intraday availability, complete source-release timestamps, and historical event/publication timestamps are unavailable. No causal finding was made.
+
+## Reproducibility, privacy, and closeout
+
+- The deterministic completion gate passed with 29 frozen input files and 30 derived artifacts validated. No-look-ahead, actual-window-date, exclusion-reason, mixed-date, set-change, raw-rate, unknown-timing, no-parameter-freeze, Session 15 preservation, and production-preservation checks passed.
+- `metrics.json` SHA-256: `cff404757dfe2daf8ebd404df23726e2c34817373c8a504b1907babe7785fdf4`.
+- `market-audit-report.md` SHA-256: `d1c5053561a6034e22eadac91bac9ac606e35b55768ad37225876a2bdbeb80c8`.
+- Private/untracked evidence includes raw responses, normalized observations, transforms, record-level eligibility/statistic/threshold/timing rows, and large sensitivity surfaces. Aggregate metrics/report/tables and audit helpers are review candidates only and are not authorized for staging or publication.
+- Session 16 contains 62 untracked files. The execution handoff reported 1,579,671,915 bytes; project-log closeout re-inventory measured 1,579,675,442 bytes (1.471187 GiB), 3,527 bytes more. Both totals describe the same 62-file boundary; the closeout measurement is the current filesystem total, and the discrepancy does not affect frozen inputs, artifact hashes, or audit conclusions.
+- No Session 15 or Session 16 evidence file was modified, staged, committed, or pushed during closeout. No production, workflow, public-output, snapshot, or run-record file changed.
+
+## Limitations and Session 17 open questions
+
+- Historical FRED/Tiingo release-vintage identity remains unavailable; source holiday metadata is partial; FRED intraday availability and complete source/publication timestamps are unavailable.
+- Session 17 must jointly freeze or explicitly defer: channel dating; freshness/stale handling; minimum eligible counts; mixed-date permission and maximum gap; raw versus percentile thresholding; common alpha; expanding versus rolling history and length; minimum history; pooled/same-set/count conditioning; fallback; breadth semantics; source-availability timing infrastructure; private evidence retention/backend/tiering; and whether an independent pre-implementation validation is required.
+- Session 17 must reconcile those market choices with the unchanged Session 15 signal evidence questions. Session 15 labels and conclusions are not reopened.
+- Session 17 must freeze the versioned Methodology 2.0 schema, parameter register, migration contracts, and acceptance/reproducibility fixtures before Sessions 18–19 implement parallel v2 output.
 
 ---
 
@@ -1815,15 +1905,25 @@ Execute only the Methodology 2.0 market evidence audit in `audit/session14-marke
 
 #### Market audit and implementation
 
+- [x] Session 16 audit-download input manifest frozen before measurement with inventory, byte counts, SHA-256 hashes, and explicit vintage limitation
+- [x] Latest-date legacy market calculation reproduced at published rounding without claiming historical release-vintage identity
+- [x] Own-series five-valid-observation transforms, actual window dates, trailing-history coverage, and legacy-global differences measured
+- [x] All specified channel-dating, freshness/stale, eligible-count, observed date-gap, and instrument-set candidates measured without selecting one
 - [ ] Own-series/per-channel date and eligibility rule frozen
-- [ ] Empirical channel trigger rates measured
-- [ ] 2/3/4-instrument threshold asymmetry assessed
+- [x] Empirical channel trigger rates measured
+- [x] 2/3/4-instrument threshold asymmetry assessed
+- [x] Point-in-time/no-look-ahead percentiles, attainable-alpha boundaries, and expanding/rolling history sensitivity measured
+- [x] Pooled, same-set, eligible-count-conditioned, fallback-availability, and full candidate-disagreement analyses completed
 - [ ] Empirical percentile rule accepted or rejected with evidence
+- [x] Driver, second driver, eligible count, above-threshold count, single/multiple mover, and breadth evidence measured
+- [x] Timing evidence carried through all 15 unselected Candidate-C variants with unavailable timestamps preserved and no causal conclusion
+- [x] Session 16 deterministic market-audit completion gate passed with explicit partial/unavailable limitations
 - [ ] Market breadth and second-driver schema frozen
 - [ ] Market/divergence v2 parallel output implemented
 
 #### Validation/cutover
 
+- [ ] Versioned Methodology 2.0 schemas, parameter register, migration contracts, and acceptance fixtures frozen
 - [ ] Canonical reproducibility test passes
 - [ ] Comparison period completed in distinct eligible market closes
 - [ ] Disagreement cases reviewed
@@ -1941,7 +2041,7 @@ Use this section to record project decisions.
 | 2026-08-11 Session 14 | Require typed assessed/unassessed/unknown/not-applicable wrappers on assessable fields | Missing values must preserve whether an assessment was attempted, unresolved, or irrelevant without corrupting the eventual value type. |
 | 2026-08-11 Session 14 | Define reporting independence by originating assertion/observation and keep publication count, confidence, and severity separate | Syndication and repeated official quotes cannot multiply evidence or severity. |
 | 2026-08-11 Session 14 | Prefer deterministic clustering; persist every accepted model-assisted proposal and its model/configuration provenance before scoring | Canonical replay must not call a drifting live model. |
-| 2026-08-11 Session 14 | Compute v2 market transforms on each instrument's own valid observation calendar and retain actual window/as-of/age/eligibility/history fields | Session 16 still determines the per-channel dating, stale, gap, minimum-count, threshold, and breadth rules from evidence. |
+| 2026-08-11 Session 14 | Compute v2 market transforms on each instrument's own valid observation calendar and retain actual window/as-of/age/eligibility/history fields | Session 16 later measured the per-channel dating, stale, gap, minimum-count, threshold, and breadth candidates; Session 17 freezes or defers the final rules. |
 | 2026-08-11 Session 14 | Use `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/` as the provisional parallel namespace | Parallel outputs cannot overwrite `dashboard/public/divergence.json` or `log/YYYY-MM-DD.json`. |
 | 2026-08-11 Session 14 | Treat signals first observed after the relevant market close as pending until the next eligible observation | The previous close predates the signal; timestamp uncertainty remains explicit and the comparison makes no causal claim. |
 | 2026-08-11 Session 14 | Use `signal-leading`, `co-movement`, `market-only`, and `calm` as provisional non-causal v2 state names | The mapping preserves legacy terminology historically and avoids implying that absolute movement proves pricing or causation. |
@@ -1958,6 +2058,12 @@ Use this section to record project decisions.
 | 2026-08-13 Session 15 | Retain `lastMaterialChangeAt` as the decay clock architecture, but freeze no numeric decay, stale, or de-escalation parameter | 184/327 accepted observations repeated without material change, while no post-initial escalation or de-escalation was observed. |
 | 2026-08-13 Session 15 | Treat immutable retention as plausible at the measured audit scale while leaving backend, tiering, cadence, source-term, and privacy decisions unresolved | One transaction/day projects to about 86.49–122.96 MB/year for audit candidate records only; raw evidence remains private/access-controlled. |
 | 2026-08-13 Session 15 | Make no production Methodology 2.0 change from signal-audit evidence alone | Session 15 completed evidence collection only; the final signal rule and all consequential parameters remain deferred to the Session 17 joint freeze after Session 16 market evidence. |
+| 2026-08-19 Session 16 | Classify every frozen FRED/Tiingo input and derived market-audit result as `audit-download-vintage` | Historical raw responses and hashes were not archived, so the audit can reproduce its frozen download but cannot claim historical release-vintage identity. |
+| 2026-08-19 Session 16 | Add or promote no market proxy and keep the existing 14-instrument source map unchanged | Session 16 was an evidence audit; source or proxy changes require a later visible methodology-version decision. |
+| 2026-08-19 Session 16 | Retain strict common-date, latest same-date cohort, bounded mixed-date, raw-plus-breadth, percentile, history, conditioning, and fallback results as unselected candidates | The audit measured tradeoffs and attainable boundaries; it did not authorize choosing a configuration or optimizing board output. |
+| 2026-08-19 Session 16 | Treat timing results as partial and non-causal | FRED intraday availability, complete source-release times, and historical event/publication timestamps are unavailable; retained run times are first-observed audit times only. |
+| 2026-08-19 Session 16 | Keep the approximately 1.47 GiB Session 16 evidence package private and untracked pending Session 17 retention/source-term/privacy decisions | Raw/download-level and record-level data are not publication artifacts; aggregate files are review candidates only, not authorized for staging. |
+| 2026-08-19 Session 16 | Make Session 17 the sole Methodology 2.0 freeze gate and make no production change from either evidence audit alone | Signal and market evidence are now complete with limitations; schemas, parameters, migration contracts, and acceptance fixtures must be frozen jointly before Sessions 18–19 implement v2. |
 
 ---
 
@@ -1995,9 +2101,9 @@ Use this section to log unresolved items.
 | What is the smallest useful final leaf taxonomy? | 15/17 | Evidence reviewed; Session-17 freeze pending | Do not freeze the five-leaf audit vocabulary unchanged: 20/123 types remain unknown, candidate disposition is missing, and the zero financial-distress count is sample-specific. Session 17 must amend or explicitly retain the minimum enum; broad ontology expansion can remain 2.1. |
 | Are sufficient historical raw candidates available for a representative audit? | 14 | Answered with limitation | No canonical archive exists. Twenty-seven local ignored memory runs are reconstructable through 2026-06-23; tracked close snapshots contain selected signals only. Session 15 must keep fidelity strata separate and may need prospective collection. |
 | Should raw candidate/input snapshots or hashes be persisted for reproducibility? | 14 | Answered — yes | Retain normalized candidates and hashes needed by any retained v2 result; persist accepted origin/cluster assignments before scoring. Long-term storage backend/tiering freezes in Session 17 after growth measurement. |
-| Should the market primary statistic remain max absolute z-score, or remain only with breadth/corroboration metadata? | 16/17 | Open / market audit | Session 16 retains max absolute z and named driver as diagnostics while measuring second driver, eligible count, above-threshold count, and breadth; Session 17 freezes the binary/statistic rule. |
-| Should the v2 market threshold vary by instrument count, use an empirical channel percentile, or remain uniform under another calibrated rule? | 16/17 | Open / market audit | Compare legacy raw, common-alpha point-in-time percentile, and raw-with-base-rates/breadth candidates; no `alpha` is selected. |
-| What exact per-instrument/per-channel date rule should replace global alignment? | 16/17 | Open / market audit | Compare strict channel-common, latest same-date quorum, and bounded mixed-date candidates using own-series transforms and explicit eligibility. |
+| Should the market primary statistic remain max absolute z-score, or remain only with breadth/corroboration metadata? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 retained max absolute z and named driver while measuring second driver, eligible count, above-threshold count, driver-only/multiple/all-eligible moves, and breadth. Session 17 freezes the binary/statistic and presentation rules. |
+| Should the v2 market threshold vary by instrument count, use an empirical channel percentile, or remain uniform under another calibrated rule? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured legacy raw, common-alpha point-in-time percentile, and raw-with-base-rates/breadth candidates across every attainable alpha boundary. No threshold or `alpha` is selected. |
+| What exact per-instrument/per-channel date rule should replace global alignment? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured strict channel-common, latest same-date quorum, and bounded mixed-date candidates using own-series transforms and explicit eligibility. Session 17 must choose or defer; none is selected. |
 | Should directional consistency be descriptive only or later affect classification? | 2.1 | Deferred | Direction diagnostics are outside the minimum 2.0 core unless later evidence justifies a descriptive addition; they do not gate v2 states now. |
 | Should Macro/Inflation and Weather/Climate receive market columns in Methodology 2.0? | 2.1 | Deferred | The 2.0 architecture targets the existing five market channels and permits zero-channel signal-only events; adding channels is a later versioned decision. |
 | What parallel-run namespace should be used before cutover? | 14 | Answered provisionally | Use `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/`; Session 17 confirms the release version and manifests. |
@@ -2018,9 +2124,14 @@ Use this section to log unresolved items.
 | What prospective point-in-time conflict and corroboration history must be persisted? | 15/17 | Open / required for 2.0 | Naive final-state back-projection changed 113 variant-row memberships across 26 variants and 10 rows. Session 17 must freeze evidence/conflict/corroboration history and correction provenance. |
 | How should fidelity-C and similar chronology-ineligible evidence be handled in production evaluation? | 15/17 | Open / required for 2.0 | Keep C-only history excluded and ignore C observations in mixed clusters for chronology; collect timestamps prospectively. Session 17 must make this exclusion and mixed-cluster handling explicit. |
 | Should the amended Methodology 2.0 taxonomy encode event type and candidate disposition separately? | 15/17 | Open / required for 2.0 | Session 15 shows that unknown event type and unresolved candidate disposition are different problems. Session 17 should freeze separate representations rather than expanding the leaf taxonomy to absorb non-event, multi-incident, or unresolved-identity states. |
-| What common `alpha`, lookback, and minimum sample should be tested for channel percentiles? | 14 architecture amendment | Open / market audit | The percentile rule is a candidate, not a frozen threshold. |
-| How should percentile history be conditioned when the eligible instrument set changes? | 14 architecture amendment | Open / market audit | Instrument-set versioning and stale/ineligible handling affect base rates. |
-| What maximum date gap is allowed within one channel? | 14 architecture amendment | Open / market audit | The v2 dating rule should avoid both global-board lag and unexplained mixed-date statistics. |
+| What common `alpha`, lookback, and minimum sample should be frozen for channel percentiles, if any? | 14/16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured every attainable-alpha boundary, every feasible rolling length and minimum history, and expanding history without selecting an alpha, mode, length, or minimum. |
+| How should percentile history be conditioned when the eligible instrument set changes? | 14/16/17 | Evidence complete; Session-17 freeze pending | Pooled, same-set, and eligible-count-conditioned histories plus fallback availability were measured. Session 17 must select or reject conditioning and freeze any bridge/fallback. |
+| What maximum date gap is allowed within one channel, and are mixed-date channel statistics ever permitted? | 14/16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured every observed within-channel gap; mixed dates occurred only in explicit Rule 3. Session 17 must select strict/same-date/mixed-date behavior and any maximum gap. |
+| What freshness/stale rule and minimum eligible-instrument count should each channel use? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured no-stale, legacy calendar-age, every observed business-day-age cutoff, and every feasible minimum count. None is selected. |
+| Should breadth affect binary state, appear only as explanatory metadata, or use categorical labels? | 16/17 | Evidence complete; Session-17 freeze pending | Driver, second driver, eligible/above-threshold counts, breadth ratios, and single/multiple/all-eligible moves were measured. No breadth schema or state effect is frozen. |
+| What market/source availability timestamp infrastructure is required before timing can affect v2 classification? | 16/17 | Open / prospective infrastructure required | Session 16 timing is partial because FRED intraday availability, complete source-release times, and event/publication timestamps are unavailable. Do not infer timing or causality. |
+| What retention/backend/tiering policy applies to the private Session 16 market evidence package? | 16/17 | Open / required before tracking or production retention | The 62-file package is approximately 1.47 GiB and contains raw/download-level and record-level private evidence. Aggregate review-candidate status is not authorization to stage or publish. |
+| Is an independent validation pass required after the Session 17 freeze and before Sessions 18–19 implementation? | 16/17 | Open / freeze-gate decision | The Session 16 deterministic audit gate passed, but the final jointly selected schema and parameters will differ from the unselected audit grid and may require an independent acceptance-fixture review. |
 | How many distinct eligible market closes are required for parallel validation? | 14 architecture amendment | Open / validation gate | The comparison period should not be defined only in calendar days. |
 | Which canonical fields are excluded from bit-identical reproduction because they are volatile metadata? | 14 | Answered architecturally | Exclude only envelope metadata such as `generatedAt`, duration, host/process/request/retry/temp/log fields. Inputs, event clocks, assignments, as-of values, configuration, and semantic outputs remain canonical. |
 
@@ -2063,17 +2174,17 @@ Use this section to track problems.
 | No canonical historical raw-candidate archive exists | 14 | High | Open / audit limitation | No `inputs/candidates/<run-id>.jsonl` or equivalent complete historical candidate archive was found. Session 15 must not claim complete historical denominators and may require prospective collection. |
 | Locally reconstructable memory/run material is not equivalent to a v2 candidate archive | 14 | Medium | Open / audit limitation | Twenty-seven locally ignored run timestamps were retained under `runs/memory/`, but their payload fidelity, persistence, and provenance differ from immutable normalized candidate observations. Preserve, hash, inventory, and label them as reconstructable-run inputs before use. |
 | Tracked close snapshots contain selected outputs only | 14 | High | Open / audit limitation | The 13 tracked close snapshots contained 42 top-signal occurrences/28 unique texts, not the full candidate population. Use them only as a separate selected-output supplement, never as a complete candidate or compression denominator. |
-| Historical raw FRED/Tiingo responses and hashes were not archived | 14 | Medium | Open / audit limitation | Current downloads may contain revised FRED history or adjusted Tiingo history. Session 16 must freeze an audit input manifest and label results as audit-download vintage rather than claiming historical release-vintage bit identity. |
-| Source provenance and publication/availability timestamps are incomplete | 14 | Medium | Open / audit limitation | Missing origins, URLs, publication times, and intraday FRED availability must remain unknown/unassessed; affected lifecycle and signal-versus-close cases remain ambiguous instead of being inferred from generated dates. |
+| Historical raw FRED/Tiingo responses and hashes were not archived | 14–16 | Medium | Confirmed audit limitation | Session 16 froze an audit-download-vintage manifest, but the responses may contain revised FRED history or subsequently adjusted Tiingo history. Historical release-vintage bit identity remains unavailable and must never be claimed. |
+| Source provenance and publication/availability timestamps are incomplete | 14–16 | Medium | Confirmed limitation / Session-17 infrastructure decision | Missing origins, URLs, publication times, FRED intraday availability, and complete source-release timestamps remain unknown/unassessed. Session 16 timing is partial, and affected signal-versus-close cases remain ambiguous rather than inferred from generated dates. |
 | Canonical text deduplication does not merge differently worded reports of the same event | 14–15 | Medium | Confirmed / production fix deferred | Fidelity-B exact duplicate excess was 834/1,153 (72.333044%), while accepted manual observations still compressed 327→123 clusters. Exact deduplication and semantic event clustering are distinct operations; production clustering waits for the Session 17 freeze and Session 18 implementation. |
 | Broad `Geopolitical Escalation` classification hides actionable distinctions | 14–15 | Medium | Confirmed / narrowed but unresolved | Session 15 found 78/123 active clusters were the narrower `armed-conflict-action` leaf, with 20 unknown types. Conflict concentration persists after clustering, but the five-leaf vocabulary is not ready to freeze unchanged. |
 | One item can influence multiple channels through primary and `otherCategories` without separately proven transmission mechanisms | 14 | Medium | Open / audit required | `scripts/divergence.mjs` aggregates both primary category and `otherCategories`; current artifacts show secondary assignments influencing channel scores. |
 | Repeated coverage can inflate signal counts and aggregate scores | 14–15 | Medium | Confirmed / architecture supported | Session 15 found 184/327 accepted observations continued without material change. Repeats should update `lastObservedAt`, not severity or `lastMaterialChangeAt`; production enforcement waits for v2 implementation. |
 | `priced` is based on absolute movement and does not establish expected direction, timing, attribution, or causality | 14 | Medium | Open / audit required | The divergence classifier uses `abs_market_z >= 1.5`; it does not validate sign or event timing. |
-| Global all-instrument common-date alignment lets lagging crude hold back unrelated channels | 14 | Medium | Open / audit required | `scripts/market-data.mjs` intersects every instrument date set and uses one `globalAsOfClose` for all channels. |
-| A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14 | Medium | Open / audit required | Current formulas use `commonDates[index - LOOKBACK_OBSERVATIONS]`, not each instrument's own valid observation calendar. |
-| Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14 | Medium | Open / audit required | The current channel driver is the largest absolute z-score among eligible instruments, with no adjustment for instrument count. |
-| Raw market inputs may not currently be persisted strongly enough for bit-identical historical reproduction | 14 | Medium | Open / audit required | Generated artifacts store transformed readings and metadata, but the audit must decide whether raw inputs or input hashes are required. |
+| Global all-instrument common-date alignment lets lagging crude hold back unrelated channels | 14–16 | Medium | Measured / production decision deferred | Session 16 measured own-series strict, latest same-date cohort, and bounded mixed-date alternatives. Production still uses one `globalAsOfClose`; Session 17 must freeze the replacement rule before Session 19 implementation. |
+| A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14–16 | Medium | Measured / production decision deferred | Session 16 retained actual own-series window dates and found five-valid-observation spans of 5–12 calendar days. Production remains unchanged; Session 17 freezes the v2 definition. |
+| Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14–16 | Medium | Confirmed and measured / production decision deferred | Session 16 measured materially different raw channel trigger rates plus eligible-count, instrument-set, breadth, and percentile sensitivity. No correction or threshold rule is selected. |
+| Raw market inputs may not currently be persisted strongly enough for bit-identical historical reproduction | 14–16 | Medium | Audit reproduction solved; production retention open | Session 16 froze raw/normalized files and hashes sufficient to reproduce the audit download. Historical release-vintage identity and the production raw-input retention/backend contract remain unresolved. |
 | Methodology 2.0 planning previously under-budgeted the stateful signal rebuild | 14 architecture amendment | Medium | Open / audit required | The first plan compressed architecture, audit, signal implementation, market implementation, and cutover into too few sessions. |
 | No persistent cross-run event registry is documented as implemented | 14 architecture amendment | High | Open / audit required | Repository inspection found no `state/events/registry.json` or equivalent persistent event-state artifact. |
 | Without `lastObservedAt` versus `lastMaterialChangeAt`, repeated coverage could defeat decay | 14 architecture amendment | Medium | Open / audit required | Decay should key off material changes, not merely another article appearing. |
@@ -2094,6 +2205,8 @@ Use this section to track problems.
 | Persisted action stage is furthest/final evidence rather than a complete point-in-time transition trajectory | 15 | High | Open / prospective history required | Zero stage/directness censor counts reflect broad final evidence references, not reconstructable earlier states. Production v2 must persist point-in-time transitions. |
 | Fidelity-B reconstruction may not match the script revision historically used for every retained run | 15 | Medium | Accepted audit limitation | The audit reproduces the frozen current legacy extractor over retained payloads. It does not claim exact historical-script fidelity; future immutable runs need script/configuration hashes. |
 | Session 15 raw and record-level audit artifacts create public-repository privacy and source-term risk | 15 | High | Open / do not stage | Raw candidate text, private URLs, evidence topology, curated judgments, and preservation copies require explicit review. Keep raw/preservation artifacts private and track only reviewed sanitized aggregates if later authorized. |
+| Session 16 market evidence package is approximately 1.47 GiB and contains private raw/download-level and record-level evidence | 16 | High | Open / do not stage | Keep all 62 Session 16 files untracked pending source-term, privacy, retention, backend, tiering, and backup decisions. Aggregate review candidates are not authorized publications. |
+| Session 16 handoff and closeout byte totals differ by 3,527 bytes | 16 closeout | Low | Recorded / non-material | The handoff reported 1,579,671,915 bytes; closeout re-inventory measured 1,579,675,442 bytes across the same 62 files. Frozen manifest/report/metrics hashes and all audit conclusions match; use the closeout total as the current filesystem measurement. |
 
 ---
 
@@ -2157,6 +2270,12 @@ Use this section to change the plan based on what happened.
 | 15 | Session 17 must explicitly resolve candidate disposition, multi-incident handling, minimum taxonomy, clustering/adjudication path, origin edge cases, point-in-time stage/conflict/corroboration history, evidence sufficiency, stage boundary, directness gate, decay/stale/de-escalation deferrals, storage/privacy, and C-like chronology exclusions | These are the principal signal-side freezes left by the completed audit and must be reconciled jointly with Session 16 market evidence. |
 | 15 | Keep legacy automation, thresholds, sources, transforms, state names, public output, and immutable history unchanged through Session 16 | Session 15 provided evidence only and did not authorize a production-methodology change. |
 | 15 | Keep publication, domain, and deferred screenshot work paused | The combined signal-and-market audit gate remains open until Session 16 completes, and later schema/implementation/comparison gates remain unresolved. |
+| 16 | Make Session 17 the sole joint Methodology 2.0 freeze gate | Both evidence audits are complete with limitations. Session 17 must resolve the signal and market parameter registers together and produce versioned schemas, migration contracts, and acceptance fixtures before implementation. |
+| 16 | Freeze or explicitly defer channel dating, freshness, minimum counts, mixed-date gaps, threshold/alpha, history, conditioning, fallback, breadth, and timing infrastructure in Session 17 | Session 16 measured the full candidate surface but intentionally selected no configuration or production behavior. |
+| 16 | Resolve private evidence retention, source terms, backend/tiering, backups, and whether independent post-freeze validation is required | The Session 16 package is approximately 1.47 GiB, and timing/source provenance remains incomplete. These operational choices cannot be hidden in Sessions 18–19 code. |
+| 16 | Keep Session 15 findings unchanged and do not relabel signal evidence during the joint freeze | Session 16 carried all 15 unselected Candidate-C variants only for timing sensitivity and did not revisit Session 15 labels or conclusions. |
+| 16 | Keep legacy automation, thresholds, sources, transforms, state names, workflows, public output, snapshots, and run records unchanged through the Session 17 freeze | Session 16 was evidence-only. Sessions 18–19 remain the implementation sessions and may implement only the versioned specification frozen in Session 17. |
+| 16 | Keep publication, domain, and screenshot progression paused | The evidence-audit gate passed, but schema/parameter freeze, implementation, parallel comparison, review, version stamping, and cutover gates remain open. |
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -2637,7 +2756,7 @@ At the end of every session, paste a short update here or ask ChatGPT to generat
 New open launch conditions before publication/domain progression resumes:
 
 - [x] Session 14 architecture/protocol gate complete
-- [ ] Signal and market audits complete
+- [x] Signal and market audits complete
 - [ ] Methodology 2.0 core schema and parameter register frozen
 - [ ] Persistent registry and reproducibility contract implemented
 - [ ] Signal and market v2 parallel outputs implemented
@@ -2648,6 +2767,8 @@ New open launch conditions before publication/domain progression resumes:
 
 **Section 12 launch-condition adjustment dated 2026-08-13:** The Session 15 signal evidence audit is complete with explicit limitations, but the combined **Signal and market audits complete** gate remains unchecked until Session 16 completes the frozen market protocol. No Session 15 finding is a production Methodology 2.0 freeze. Publication, custom-domain, and screenshot progression remains paused; legacy automation may continue unchanged, and private/raw Session 15 evidence must not be published or staged without explicit review.
 
+**Section 12 launch-condition adjustment dated 2026-08-19:** The Session 16 market evidence audit passed its deterministic completion gate with audit-download-vintage, historical-release-vintage, and partial-timing limitations. The combined **Signal and market audits complete** gate is now satisfied, but publication remains paused. Session 17 must freeze the versioned Methodology 2.0 schema, parameters, migration contracts, and acceptance fixtures; Sessions 18–19 must implement isolated parallel output; and the comparison, disagreement/lifecycle review, version-stamping, and cutover gates must pass before publication/domain/screenshot progression resumes. No audit candidate is a selected production parameter, and private Session 15/16 evidence remains untracked.
+
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
 ---
@@ -2655,7 +2776,7 @@ New open launch conditions before publication/domain progression resumes:
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 16.
+Ready for session 17.
 ```
 
-Session 16 is the Methodology 2.0 market evidence audit. Follow `audit/session14-market-audit-protocol.md` exactly, freeze the audit-download input manifest before measurement, preserve audit-download-vintage limitations, and make no production Methodology 2.0 change.
+Session 17 jointly freezes the versioned Methodology 2.0 schema, parameter register, migration contracts, and acceptance fixtures from the completed signal and market evidence. It is the sole methodology-freeze gate; it must preserve all Session 15/16 limitations, select or explicitly defer every consequential parameter, and make no production implementation that belongs to Sessions 18–19.
