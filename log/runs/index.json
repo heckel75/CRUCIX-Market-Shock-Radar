@@ -1,8 +1,46 @@
 {
   "title": "CRUCIX Daily Run Manifest",
-  "generatedAt": "2026-08-18T23:52:09.770Z",
-  "count": 43,
+  "generatedAt": "2026-08-19T23:52:35.641Z",
+  "count": 44,
   "runs": [
+    {
+      "file": "2026-08-19T23-52-35-484Z.json",
+      "path": "log/runs/2026-08-19T23-52-35-484Z.json",
+      "generatedAt": "2026-08-19T23:52:35.484Z",
+      "recordedAt": "2026-08-19T23:52:35.622Z",
+      "runDate": "2026-08-19",
+      "snapshotDate": "2026-08-14",
+      "asOfClose": "2026-08-14",
+      "snapshotStatus": "wrote",
+      "snapshotWarning": null,
+      "marketFreshness": {
+        "status": "lagging",
+        "generatedAt": "2026-08-19T23:52:31.744Z",
+        "generatedDate": "2026-08-19",
+        "runDate": "2026-08-19",
+        "asOfClose": "2026-08-14",
+        "calendarLagDays": 5,
+        "currentMaxCalendarLagDays": 3,
+        "staleAfterCalendarDays": 14,
+        "warning": "Market readings are lagging: generated 2026-08-19, readings as of market close, 2026-08-14 (5 calendar days old)."
+      },
+      "warnings": [
+        {
+          "code": "market-readings-lagging",
+          "severity": "warning",
+          "status": "lagging",
+          "asOfClose": "2026-08-14",
+          "generatedDate": "2026-08-19",
+          "calendarLagDays": 5,
+          "message": "Market readings are lagging: generated 2026-08-19, readings as of market close, 2026-08-14 (5 calendar days old)."
+        }
+      ],
+      "rowCount": 5,
+      "stateCounts": {
+        "radar-claim": 2,
+        "calm": 3
+      }
+    },
     {
       "file": "2026-08-18T23-52-09-604Z.json",
       "path": "log/runs/2026-08-18T23-52-09-604Z.json",
