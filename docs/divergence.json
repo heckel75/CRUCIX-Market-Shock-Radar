@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-19T23:52:35.484Z",
+  "generatedAt": "2026-08-20T23:54:14.949Z",
   "date": "2026-08-14",
   "asOfClose": "2026-08-14",
   "framing": "readings as of market close, 2026-08-14",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-19T23:52:31.744Z",
-    "generatedDate": "2026-08-19",
+    "generatedAt": "2026-08-20T23:54:09.381Z",
+    "generatedDate": "2026-08-20",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 5,
+    "calendarLagDays": 6,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-19T23:52:31.744Z",
-    "generatedDate": "2026-08-19",
-    "runDate": "2026-08-19",
+    "generatedAt": "2026-08-20T23:54:09.381Z",
+    "generatedDate": "2026-08-20",
+    "runDate": "2026-08-20",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 5,
+    "calendarLagDays": 6,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-19, readings as of market close, 2026-08-14 (5 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-20, readings as of market close, 2026-08-14 (6 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-14",
-      "generatedDate": "2026-08-19",
-      "calendarLagDays": 5,
-      "message": "Market readings are lagging: generated 2026-08-19, readings as of market close, 2026-08-14 (5 calendar days old)."
+      "generatedDate": "2026-08-20",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-08-20, readings as of market close, 2026-08-14 (6 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 3
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[4]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
+          "strike",
           "attack",
-          "russia"
+          "fuel"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Russia is carrying out a massive missile attack on Kyiv. More than 25 missiles have struck Kyiv, including Iskander-M ballistic missiles, allegedly North Korean KN-23 ballistic missiles,",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia. Signal: 🇷🇺🇺🇦⚡️ — Russia is carrying out a massive missile attack on Kyiv. More than 25 missiles have struck Kyiv, including Iskander-M ballistic missiles, allegedly North Korean KN-..."
+        "text": "Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, causing a fuel spill and",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, c..."
       },
       "market_z": 0.515,
       "abs_market_z": 0.515,
@@ -95,7 +95,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 5,
+      "market_calendar_lag_days": 6,
       "state": "radar-claim"
     },
     {
@@ -120,35 +120,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 5,
+      "market_calendar_lag_days": 6,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.chokepoints[0]",
+        "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "hormuz"
+          "strike",
+          "attack",
+          "fuel"
         ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+        "text": "Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, causing a fuel spill and",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, c..."
       },
       "market_z": 0.625,
       "abs_market_z": 0.625,
@@ -159,22 +160,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 5,
-      "state": "calm"
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.news[43]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project"
+      },
       "market_z": 0.726,
       "abs_market_z": 0.726,
       "market_moving": false,
@@ -184,35 +199,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 5,
+      "market_calendar_lag_days": 6,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.news[18]",
+        "path": "root.tg.urgent[4]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "gaza"
+          "attack",
+          "fuel"
         ],
-        "text": "Israeli strike on Gaza City police headquarters kills women’s police chief | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on Gaza City police headquarters kills women’s police chief | Al Jazeera"
+        "text": "Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, causing a fuel spill and",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, c..."
       },
       "market_z": 0.134,
       "abs_market_z": 0.134,
@@ -223,7 +239,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 5,
+      "market_calendar_lag_days": 6,
       "state": "radar-claim"
     }
   ],
@@ -244,15 +260,30 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null
+      "top_signal": {
+        "path": "root.news[8]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Weather / Climate Shock",
+        "isPrimary": true,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "drought",
+          "el nino",
+          "canal"
+        ],
+        "text": "Panama Canal to cut daily ship traffic as drought worsens from El Nino | France 24",
+        "explanation": "Weather / Climate Shock match based on keywords: drought, el nino. Signal: Panama Canal to cut daily ship traffic as drought worsens from El Nino | France 24"
+      }
     }
   ],
   "retiredSignals": [
