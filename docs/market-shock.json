@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-20T23:54:09.254Z",
+  "generatedAt": "2026-08-21T23:52:51.481Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -14,16 +14,16 @@
   },
   "shockCounts": {
     "Geopolitical Escalation": 14,
-    "Weather / Climate Shock": 1
+    "Energy Shock": 1
   },
-  "candidateCount": 133,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 24,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,10 +31,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -43,40 +39,75 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack",
-        "fuel"
+        "troops",
+        "drone",
+        "russia"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, causing a fuel spill and",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in damage to a Su-34 frontline bomber overnight at the airfield in Akhtubinsk, c..."
+      "text": "HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing rear work, about 90",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone, russia. Signal: HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing..."
     },
     {
-      "path": "root.news[28]",
+      "path": "root.news[37]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Drone strike on Ukraine shopping centre kills 14, over 100 injured | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Drone strike on Ukraine shopping centre kills 14, over 100 injured | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "israel",
-        "gaza"
+        "strike",
+        "drone"
       ],
-      "otherCategories": [],
-      "text": "Amputee children learn to swim after losing limbs in Israel’s war on Gaza | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Amputee children learn to swim after losing limbs in Israel’s war on Gaza | Al Jazeera"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Smoke is rising over occupied Donetsk after a drone strike. Locals say there was a secondary detonation.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Smoke is rising over occupied Donetsk after a drone strike. Locals say there was a secondary detonation."
     },
     {
-      "path": "root.newsFeed[18]",
+      "path": "root.news[21]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -95,13 +126,69 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack"
+        "israel"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Last night, an attack by unknown UAVs targeted Akhtubinsk, Astrakhan region. The strike resulted in | WARTRANSLATED"
+      "text": "Western allies slam Israel for ending World Central Kitchen strike probe | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Western allies slam Israel for ending World Central Kitchen strike probe | Al Jazeera"
+    },
+    {
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian double-tap drone strike kills 15 in Ukrainian mall, officials say",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Russian double-tap drone strike kills 15 in Ukrainian mall, officials say"
+    },
+    {
+      "path": "root.news[48]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Ethiopia's Virgin Mary festival in Tigray cancelled over drone strike fears | Ethiopia",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Ethiopia's Virgin Mary festival in Tigray cancelled over drone strike fears | Ethiopia"
     },
     {
       "path": "root.tg.urgent[0]",
@@ -126,18 +213,19 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "oil"
+        "conflict",
+        "oil",
+        "blockade"
       ],
       "otherCategories": [
         "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — The aftermath of the overnight strike on the KLO oil depot in the Brovary district of the Kiev region. It is worth noting that the recent strike is characterized by an unusually large nu",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of the overnight strike on the KLO oil depot in the Brovary district of the Kiev region. It is worth noting that the recent strike is characterized by..."
+      "text": "🇸🇦🇾🇪🇾🇪 Saudi Arabia has a tough choice to make: accept the demands of the Houthis and lift the economic blockade or continue escalating the conflict and risk its oil infrastructure come under re",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict. Signal: 🇸🇦🇾🇪🇾🇪 Saudi Arabia has a tough choice to make: accept the demands of the Houthis and lift the economic blockade or continue escalating the conflict and risk its oil infra..."
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -150,15 +238,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
+        "missile",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia attacked Ukraine with missiles and drones tonight. The Air Force reports that the Air Defense Forces shot down or jammed 186 enemy targets.",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia attacked Ukraine with missiles and drones tonight. The Air Force reports that the Air Defense Forces shot down or jammed 186 enemy targets."
+      "text": "🇷🇺🇺🇦⚡️ — A jet-powered Geran-5 loitering munition/cruise missile flying past shortly before striking the Snovsk railway station in Ukraine’s Chernihiv Oblast. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: 🇷🇺🇺🇦⚡️ — A jet-powered Geran-5 loitering munition/cruise missile flying past shortly before striking the Snovsk railway station in Ukraine’s Chernihiv Oblast. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -171,43 +259,71 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "drone",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Today, the Russians \"courageously\" defeated a watermelon warehouse in Ukraine. As a result of today's attack on Kyiv and the region, a supermarket chain distribution center was damaged, and a craft i",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, ukraine. Signal: Today, the Russians \"courageously\" defeated a watermelon warehouse in Ukraine. As a result of today's attack on Kyiv and the region, a supermarket chain distribution center was ..."
+      "text": "Ukraine's MoD showed Alexa Spatium, a jet-powered interceptor drone. Babel says it can take down Geran-3, Geran-4, Geran-5 and Shahed-131, launches from a mobile catapult in minutes, then can return f",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Ukraine's MoD showed Alexa Spatium, a jet-powered interceptor drone. Babel says it can take down Geran-3, Geran-4, Geran-5 and Shahed-131, launches from a mobile catapult in min..."
     },
     {
-      "path": "root.news[8]",
+      "path": "root.news[22]",
       "sourcePriority": "Medium",
-      "category": "Weather / Climate Shock",
+      "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
       "channels": [
-        "Agriculture",
-        "Insurance",
-        "Utilities",
-        "Energy",
-        "Commodities",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Margins"
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
       ],
       "matchedKeywords": [
-        "drought",
-        "el nino",
-        "canal"
+        "military",
+        "bank"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Credit Stress"
       ],
-      "text": "Panama Canal to cut daily ship traffic as drought worsens from El Nino | France 24",
-      "explanation": "Weather / Climate Shock match based on keywords: drought, el nino. Signal: Panama Canal to cut daily ship traffic as drought worsens from El Nino | France 24"
+      "text": "Israeli settlers and military kill 2 Palestinians – one a teenager – in separate West Bank shootings | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: Israeli settlers and military kill 2 Palestinians – one a teenager – in separate West Bank shootings | France 24"
     },
     {
-      "path": "root.news[38]",
+      "path": "root.news[27]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "How Israel is expanding settlements in drive to reshape West Bank",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: How Israel is expanding settlements in drive to reshape West Bank"
+    },
+    {
+      "path": "root.news[41]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -220,117 +336,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "The Iran war and tariffs are costing farmers. Will Republicans pay in November?",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: The Iran war and tariffs are costing farmers. Will Republicans pay in November?"
-    },
-    {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project"
-    },
-    {
-      "path": "root.news[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "France, Germany, UK and Italy slam Israel's 'E1' West Bank settler project | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: France, Germany, UK and Italy slam Israel's 'E1' West Bank settler project | France 24"
-    },
-    {
-      "path": "root.news[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
+        "drone",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Nord Stream bomb suspect arrested while working on A-list Ukraine war movie starring Sean Penn | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Nord Stream bomb suspect arrested while working on A-list Ukraine war movie starring Sean Penn | Euronews"
-    },
-    {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "European leaders demand Israel halt controversial E1 settlement project in West Bank | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: European leaders demand Israel halt controversial E1 settlement project in West Bank | Euronews"
+      "text": "Deadly 'double-tap' Russian drone strikes target Ukraine shopping centre | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Deadly 'double-tap' Russian drone strikes target Ukraine shopping centre | France 24"
     },
     {
       "path": "root.chokepoints[5]",
@@ -361,34 +372,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "gas"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "A Romanian Air Force F-16 destroyed a kamikaze drone near a gas platform in the Black Sea. The country's Ministry of Defense reported that the drone was not of Ukrainian origin, and the Romanian Presi",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: A Romanian Air Force F-16 destroyed a kamikaze drone near a gas platform in the Black Sea. The country's Ministry of Defense reported that the drone was not of Ukrainian origin,..."
-    },
-    {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[14]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -411,8 +395,29 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Police officers rescued a 51-year-old security guard who was trapped under the rubble after a ballistic strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Police officers rescued a 51-year-old security guard who was trapped under the rubble after a ballistic strike."
+      "text": "⚡🇷🇺🇺🇦 A new strike on Kiev has begun using ballistic missiles.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡🇷🇺🇺🇦 A new strike on Kiev has begun using ballistic missiles."
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     }
   ]
 }
