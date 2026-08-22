@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-21T23:52:54.896Z",
+  "generatedAt": "2026-08-22T23:50:49.268Z",
   "date": "2026-08-14",
   "asOfClose": "2026-08-14",
   "framing": "readings as of market close, 2026-08-14",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-21T23:52:51.633Z",
-    "generatedDate": "2026-08-21",
+    "generatedAt": "2026-08-22T23:50:45.529Z",
+    "generatedDate": "2026-08-22",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-21T23:52:51.633Z",
-    "generatedDate": "2026-08-21",
-    "runDate": "2026-08-21",
+    "generatedAt": "2026-08-22T23:50:45.529Z",
+    "generatedDate": "2026-08-22",
+    "runDate": "2026-08-22",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-21, readings as of market close, 2026-08-14 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-22, readings as of market close, 2026-08-14 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-14",
-      "generatedDate": "2026-08-21",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-08-21, readings as of market close, 2026-08-14 (7 calendar days old)."
+      "generatedDate": "2026-08-22",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-08-22, readings as of market close, 2026-08-14 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,30 +62,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 0,
+      "signal_count": 13,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[3]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "troops",
-          "drone",
-          "russia"
+          "russia",
+          "ukraine"
         ],
-        "text": "HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing rear work, about 90",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone, russia. Signal: HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing..."
+        "text": "Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar station and 18 warehouse bui",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar stati..."
       },
       "market_z": 0.515,
       "abs_market_z": 0.515,
@@ -96,7 +95,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -121,36 +120,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_count": 6,
+      "signal_primary_count": 3,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "conflict",
-          "oil",
-          "blockade"
+          "strike",
+          "missile",
+          "gas"
         ],
-        "text": "🇸🇦🇾🇪🇾🇪 Saudi Arabia has a tough choice to make: accept the demands of the Houthis and lift the economic blockade or continue escalating the conflict and risk its oil infrastructure come under re",
-        "explanation": "Geopolitical Escalation match based on keywords: conflict. Signal: 🇸🇦🇾🇪🇾🇪 Saudi Arabia has a tough choice to make: accept the demands of the Houthis and lift the economic blockade or continue escalating the conflict and risk its oil infra..."
+        "text": "🇷🇺🇺🇦⚡️ — Boryspil in the Kiev region. After the strike, trucks and a gas station are on fire. They are also reporting that the missile had a cluster warhead. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — Boryspil in the Kiev region. After the strike, trucks and a gas station are on fire. They are also reporting that the missile had a cluster warhead. @IntelSlava"
       },
       "market_z": 0.625,
       "abs_market_z": 0.625,
@@ -161,36 +160,22 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 2,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.news[22]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "military",
-          "bank"
-        ],
-        "text": "Israeli settlers and military kill 2 Palestinians – one a teenager – in separate West Bank shootings | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: Israeli settlers and military kill 2 Palestinians – one a teenager – in separate West Bank shootings | France 24"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 0.726,
       "abs_market_z": 0.726,
       "market_moving": false,
@@ -200,37 +185,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 9,
+      "signal_count": 8,
       "signal_primary_count": 0,
-      "signal_secondary_count": 9,
+      "signal_secondary_count": 8,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[3]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 24,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "troops",
-          "drone",
-          "russia"
+          "russia",
+          "ukraine"
         ],
-        "text": "HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing rear work, about 90",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone, russia. Signal: HUR says North Korea sent 8,500 more troops to Russia, including 400 strike-drone operators, CNN reports citing HUR deputy chief Vadym Skibitsky. He says most are in Kursk doing..."
+        "text": "Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar station and 18 warehouse bui",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar stati..."
       },
       "market_z": 0.134,
       "abs_market_z": 0.134,
@@ -241,7 +225,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
