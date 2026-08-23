@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-22T23:50:49.268Z",
+  "generatedAt": "2026-08-23T23:51:14.037Z",
   "date": "2026-08-14",
   "asOfClose": "2026-08-14",
   "framing": "readings as of market close, 2026-08-14",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-22T23:50:45.529Z",
-    "generatedDate": "2026-08-22",
+    "generatedAt": "2026-08-23T23:51:10.218Z",
+    "generatedDate": "2026-08-23",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-22T23:50:45.529Z",
-    "generatedDate": "2026-08-22",
-    "runDate": "2026-08-22",
+    "generatedAt": "2026-08-23T23:51:10.218Z",
+    "generatedDate": "2026-08-23",
+    "runDate": "2026-08-23",
     "asOfClose": "2026-08-14",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-22, readings as of market close, 2026-08-14 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-23, readings as of market close, 2026-08-14 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-14",
-      "generatedDate": "2026-08-22",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-08-22, readings as of market close, 2026-08-14 (8 calendar days old)."
+      "generatedDate": "2026-08-23",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-08-23, readings as of market close, 2026-08-14 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,29 +62,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 12,
-      "signal_secondary_count": 1,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.news[6]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 18,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "russia",
-          "ukraine"
+          "war",
+          "iran",
+          "gas",
+          "energy"
         ],
-        "text": "Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar station and 18 warehouse bui",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar stati..."
+        "text": "Iran discovers major new gas reserves amid war-hit energy sector | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran discovers major new gas reserves amid war-hit energy sector | France 24"
       },
       "market_z": 0.515,
       "abs_market_z": 0.515,
@@ -95,22 +96,37 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null,
+      "top_signal": {
+        "path": "root.news[38]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Sanctions / Policy Shock",
+        "isPrimary": true,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "election",
+          "climate",
+          "rally"
+        ],
+        "text": "Thousands rally in Sweden to protest climate policies ahead of general election | France 24",
+        "explanation": "Sanctions / Policy Shock match based on keywords: election. Signal: Thousands rally in Sweden to protest climate policies ahead of general election | France 24"
+      },
       "market_z": 1.104,
       "abs_market_z": 1.104,
       "market_moving": false,
@@ -120,7 +136,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -132,24 +148,25 @@
       "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 6,
-      "signal_primary_count": 3,
-      "signal_secondary_count": 3,
+      "signal_count": 2,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[6]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 18,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "missile",
-          "gas"
+          "war",
+          "iran",
+          "gas",
+          "energy"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Boryspil in the Kiev region. After the strike, trucks and a gas station are on fire. They are also reporting that the missile had a cluster warhead. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — Boryspil in the Kiev region. After the strike, trucks and a gas station are on fire. They are also reporting that the missile had a cluster warhead. @IntelSlava"
+        "text": "Iran discovers major new gas reserves amid war-hit energy sector | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran discovers major new gas reserves amid war-hit energy sector | France 24"
       },
       "market_z": 0.625,
       "abs_market_z": 0.625,
@@ -160,22 +177,36 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[7]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Is Israel about to split the occupied West Bank in half? | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Is Israel about to split the occupied West Bank in half? | Al Jazeera"
+      },
       "market_z": 0.726,
       "abs_market_z": 0.726,
       "market_moving": false,
@@ -185,36 +216,35 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 8,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 8,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[4]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "russia",
-          "ukraine"
+          "drone"
         ],
-        "text": "Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar station and 18 warehouse bui",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: Ukraine's General Staff says additional analysis confirmed damage from the Aug 20 strike at Primorsko-Akhtarsk airfield area in Russia's Krasnodar region. One Niobiy radar stati..."
+        "text": "The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cyclist near Kramatorsk. They pulled it down only after the story blew up online.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cyclist near Kramatorsk. They pulled it down only after the story blew up online."
       },
       "market_z": 0.134,
       "abs_market_z": 0.134,
@@ -225,7 +255,7 @@
       "driver_as_of": "2026-08-14",
       "market_as_of": "2026-08-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     }
   ],
@@ -246,15 +276,30 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[38]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Sanctions / Policy Shock",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "election",
+          "climate",
+          "rally"
+        ],
+        "text": "Thousands rally in Sweden to protest climate policies ahead of general election | France 24",
+        "explanation": "Sanctions / Policy Shock match based on keywords: election. Signal: Thousands rally in Sweden to protest climate policies ahead of general election | France 24"
+      }
     }
   ],
   "retiredSignals": [
@@ -262,14 +307,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[38]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Sanctions / Policy Shock",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "election",
+          "climate",
+          "rally"
+        ],
+        "text": "Thousands rally in Sweden to protest climate policies ahead of general election | France 24",
+        "explanation": "Sanctions / Policy Shock match based on keywords: election. Signal: Thousands rally in Sweden to protest climate policies ahead of general election | France 24"
+      }
     }
   ]
 }
