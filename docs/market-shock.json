@@ -1,267 +1,133 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-23T23:51:10.072Z",
+  "generatedAt": "2026-08-24T23:51:45.683Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 17,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Sanctions / Policy Shock": 1
+    "Energy Shock": 1,
+    "Credit Stress": 1,
+    "Geopolitical Escalation": 13
   },
-  "candidateCount": 134,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[6]",
+      "path": "root.news[32]",
       "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
+      "category": "Energy Shock",
+      "score": 13,
+      "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX"
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "gas",
-        "energy"
+        "oil",
+        "red sea",
+        "attack"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Geopolitical Escalation"
       ],
-      "text": "Iran discovers major new gas reserves amid war-hit energy sector | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran discovers major new gas reserves amid war-hit energy sector | France 24"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Zelensky says Ukraine destroyed an Iskander launcher near the border today, part of a hunt for ballistic launchers. He says Russia has about 600 to 630 ballistic missiles left and can make up to 1300",
-      "explanation": "Geopolitical Escalation match based on keywords: border, russia, ukraine. Signal: Zelensky says Ukraine destroyed an Iskander launcher near the border today, part of a hunt for ballistic launchers. He says Russia has about 600 to 630 ballistic missiles left a..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cyclist near Kramatorsk. They pulled it down only after the story blew up online.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cyclist near Kramatorsk. They pulled it down only after the story blew up online."
-    },
-    {
-      "path": "root.newsFeed[32]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cy | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The Russian Armed Forces 3rd Army channel deleted its own post bragging about a drone strike on a cy | WARTRANSLATED"
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "conflict",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇶🇦⚡️— According to a report in the Financial Times, due to the damage caused by the conflict with Iran, Qatar has reduced the budgets of its ministries by 30% and decreased funding for foreign aid b",
-      "explanation": "Geopolitical Escalation match based on keywords: conflict, iran. Signal: 🇶🇦⚡️— According to a report in the Financial Times, due to the damage caused by the conflict with Iran, Qatar has reduced the budgets of its ministries by 30% and decreased fu..."
-    },
-    {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "Is Israel about to split the occupied West Bank in half? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Is Israel about to split the occupied West Bank in half? | Al Jazeera"
-    },
-    {
-      "path": "root.news[17]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Trump has ‘run out of options’ in Iran war: Stephen Walt | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump has ‘run out of options’ in Iran war: Stephen Walt | Al Jazeera"
-    },
-    {
-      "path": "root.news[21]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war: Top US lawmaker says Republicans can ‘absolutely’ win midterms | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war: Top US lawmaker says Republicans can ‘absolutely’ win midterms | Al Jazeera"
-    },
-    {
-      "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran Warns Gulf States Not to Join Trump’s Economic War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran Warns Gulf States Not to Join Trump’s Economic War"
-    },
-    {
-      "path": "root.news[31]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Can Nigeria cash in on Iran war? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Can Nigeria cash in on Iran war? | Al Jazeera"
+      "text": "Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera",
+      "explanation": "Energy Shock match based on keywords: oil, red sea. Signal: Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera"
     },
     {
       "path": "root.news[35]",
       "sourcePriority": "Medium",
+      "category": "Credit Stress",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities",
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "bank",
+        "fuel",
+        "shortage"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera",
+      "explanation": "Credit Stress match based on keywords: bank. Signal: Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera"
+    },
+    {
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "UK Prime Minister Burnham Arrives in Ukraine as Russia Amps Up Warnings",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: UK Prime Minister Burnham Arrives in Ukraine as Russia Amps Up Warnings"
+    },
+    {
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel's Netanyahu says Iran tried to assassinate one of his sons | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Israel's Netanyahu says Iran tried to assassinate one of his sons | France 24"
+    },
+    {
+      "path": "root.news[13]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -274,42 +140,95 @@
       ],
       "matchedKeywords": [
         "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "US public support for Iran war falls as Trump approval at record low: Poll | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US public support for Iran war falls as Trump approval at record low: Poll | Al Jazeera"
+    },
+    {
+      "path": "root.news[27]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "troops",
         "gaza"
       ],
       "otherCategories": [],
-      "text": "Gaza families search for children missing after years of war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: Gaza families search for children missing after years of war | Al Jazeera"
+      "text": "Uganda Pledges 1,200 Troops as Burundi Eyes Gaza Force | Africa News",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, gaza. Signal: Uganda Pledges 1,200 Troops as Burundi Eyes Gaza Force | Africa News"
+    },
+    {
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Video: Israel attacks desalination plant and mosque in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Video: Israel attacks desalination plant and mosque in Gaza | Al Jazeera"
     },
     {
       "path": "root.news[38]",
       "sourcePriority": "Medium",
-      "category": "Sanctions / Policy Shock",
+      "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
       "channels": [
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities",
-        "Agriculture",
-        "Insurance",
-        "Utilities",
-        "Energy",
+        "Gold",
         "VIX",
-        "Rates"
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "election",
-        "climate",
-        "rally"
+        "israel",
+        "gaza"
       ],
-      "otherCategories": [
-        "Weather / Climate Shock",
-        "Market Volatility Signal"
+      "otherCategories": [],
+      "text": "Israel threatens attacks in Gaza over children’s kites | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel threatens attacks in Gaza over children’s kites | Al Jazeera"
+    },
+    {
+      "path": "root.news[43]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
-      "text": "Thousands rally in Sweden to protest climate policies ahead of general election | France 24",
-      "explanation": "Sanctions / Policy Shock match based on keywords: election. Signal: Thousands rally in Sweden to protest climate policies ahead of general election | France 24"
+      "matchedKeywords": [
+        "missile",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "UK, France ‘re-announce’ anti-missile technology for Ukraine: ‘None will be online for years’ | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: UK, France ‘re-announce’ anti-missile technology for Ukraine: ‘None will be online for years’ | France 24"
     },
     {
       "path": "root.news[48]",
@@ -326,11 +245,11 @@
       ],
       "matchedKeywords": [
         "war",
-        "ukraine"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "The week in pictures: a French woman in space, wildfires in Europe and the war in Ukraine | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: The week in pictures: a French woman in space, wildfires in Europe and the war in Ukraine | France 24"
+      "text": "Trump administration announces global economic war on Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump administration announces global economic war on Iran | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -361,7 +280,89 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[36]",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇺🇦⚡️ — Ukraine has created defenses for its energy infrastructure that will help it withstand attacks from ballistic missiles, but the winter will be difficult, according to Energy Minister Shmyhal.",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦⚡️ — Ukraine has created defenses for its energy infrastructure that will help it withstand attacks from ballistic missiles, but the winter will be difficult, according to E..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "More satellite images showing the aftermath of the strike on the warehouse in Dagestan. A significant part of the warehouse had already completely burned down by the time the photo was taken. This is",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: More satellite images showing the aftermath of the strike on the warehouse in Dagestan. A significant part of the warehouse had already completely burned down by the time the ph..."
+    },
+    {
+      "path": "root.news[49]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "blockade"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "What the renewed Black Sea blockade means for Ukraine’s farmers | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: What the renewed Black Sea blockade means for Ukraine’s farmers | France 24"
+    },
+    {
+      "path": "root.newsFeed[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -378,14 +379,14 @@
         "FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "fuel"
+        "ukraine",
+        "energy"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran’s government signals fuel price hike on eve of new US sanctions | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran’s government signals fuel price hike on eve of new US sanctions | Al Jazeera"
+      "text": "⚡️ — Ukraine has created defenses for its energy infrastructure that will help it withstand attacks | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ⚡️ — Ukraine has created defenses for its energy infrastructure that will help it withstand attacks | INTELSLAVA"
     }
   ]
 }
