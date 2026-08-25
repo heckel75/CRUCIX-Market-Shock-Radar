@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-24T23:51:50.448Z",
+  "generatedAt": "2026-08-25T23:53:05.188Z",
   "date": "2026-08-18",
   "asOfClose": "2026-08-18",
   "framing": "readings as of market close, 2026-08-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-24T23:51:45.834Z",
-    "generatedDate": "2026-08-24",
+    "generatedAt": "2026-08-25T23:53:01.847Z",
+    "generatedDate": "2026-08-25",
     "asOfClose": "2026-08-18",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-24T23:51:45.834Z",
-    "generatedDate": "2026-08-24",
-    "runDate": "2026-08-24",
+    "generatedAt": "2026-08-25T23:53:01.847Z",
+    "generatedDate": "2026-08-25",
+    "runDate": "2026-08-25",
     "asOfClose": "2026-08-18",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-24, readings as of market close, 2026-08-18 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-25, readings as of market close, 2026-08-18 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-18",
-      "generatedDate": "2026-08-24",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-08-24, readings as of market close, 2026-08-18 (6 calendar days old)."
+      "generatedDate": "2026-08-25",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-08-25, readings as of market close, 2026-08-18 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 4,
-    "calm": 1
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
+      "signal_count": 13,
       "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[32]",
+        "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": false,
-        "rawScore": 13,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "red sea",
-          "attack"
+          "russia",
+          "ukraine",
+          "energy"
         ],
-        "text": "Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera",
-        "explanation": "Energy Shock match based on keywords: oil, red sea. Signal: Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera"
+        "text": "🇺🇸🇺🇦🇷🇺⚡️ — According to Ukrainian media reports, CIA Director John Ratcliffe discussed with Russian officials a mutual cessation of strikes by Russia and Ukraine against energy infrastructure an",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡️ — According to Ukrainian media reports, CIA Director John Ratcliffe discussed with Russian officials a mutual cessation of strikes by Russia and Ukraine against e..."
       },
       "market_z": -0.309,
       "abs_market_z": 0.309,
@@ -95,22 +95,36 @@
       "driver_as_of": "2026-08-18",
       "market_as_of": "2026-08-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[19]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "war",
+          "tariff"
+        ],
+        "text": "How U.S.-Canada Tariff Negotiations Turned Into an All-Out Trade War",
+        "explanation": "Geopolitical Escalation match based on keywords: war. Signal: How U.S.-Canada Tariff Negotiations Turned Into an All-Out Trade War"
+      },
       "market_z": 0.348,
       "abs_market_z": 0.348,
       "market_moving": false,
@@ -120,36 +134,36 @@
       "driver_as_of": "2026-08-18",
       "market_as_of": "2026-08-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 4,
       "signal_primary_count": 1,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.news[32]",
+        "path": "root.tg.urgent[2]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 13,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "oil",
-          "red sea",
-          "attack"
+          "russia",
+          "ukraine",
+          "energy"
         ],
-        "text": "Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera",
-        "explanation": "Energy Shock match based on keywords: oil, red sea. Signal: Yemen’s Houthis report attack on Saudi oil tanker in Red Sea | Al Jazeera"
+        "text": "🇺🇸🇺🇦🇷🇺⚡️ — According to Ukrainian media reports, CIA Director John Ratcliffe discussed with Russian officials a mutual cessation of strikes by Russia and Ukraine against energy infrastructure an",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡️ — According to Ukrainian media reports, CIA Director John Ratcliffe discussed with Russian officials a mutual cessation of strikes by Russia and Ukraine against e..."
       },
       "market_z": 0.84,
       "abs_market_z": 0.84,
@@ -160,37 +174,22 @@
       "driver_as_of": "2026-08-18",
       "market_as_of": "2026-08-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
-      "signal_primary_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
       "signal_secondary_count": 0,
-      "top_signal": {
-        "path": "root.news[35]",
-        "category": "Credit Stress",
-        "primaryCategory": "Credit Stress",
-        "isPrimary": true,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "bank",
-          "fuel",
-          "shortage"
-        ],
-        "text": "Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera",
-        "explanation": "Credit Stress match based on keywords: bank. Signal: Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera"
-      },
+      "top_signal": null,
       "market_z": 0.31,
       "abs_market_z": 0.31,
       "market_moving": false,
@@ -200,36 +199,35 @@
       "driver_as_of": "2026-08-18",
       "market_as_of": "2026-08-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 7,
+      "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 0,
+      "signal_count": 5,
+      "signal_primary_count": 1,
       "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.news[35]",
+        "path": "root.tg.urgent[10]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 13,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "bank",
-          "fuel",
-          "shortage"
+          "strike",
+          "drone"
         ],
-        "text": "Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera",
-        "explanation": "Credit Stress match based on keywords: bank. Signal: Israeli restrictions cause fuel shortage in occupied West Bank | Al Jazeera"
+        "text": "The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated independent and active every",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated indepe..."
       },
       "market_z": -0.816,
       "abs_market_z": 0.816,
@@ -240,7 +238,7 @@
       "driver_as_of": "2026-08-18",
       "market_as_of": "2026-08-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
