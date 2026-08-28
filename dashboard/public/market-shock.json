@@ -1,29 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-27T04:58:51.704Z",
+  "generatedAt": "2026-08-28T07:03:36.298Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 134,
+  "candidateCount": 130,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 22,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -34,22 +33,51 @@
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX"
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "nuclear",
-        "israel",
-        "energy"
+        "strike",
+        "drone",
+        "oil",
+        "refinery"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is not yet prepared to all",
-      "explanation": "Geopolitical Escalation match based on keywords: war, nuclear, israel. Signal: Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is ..."
+      "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "escalation",
+        "military",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Russia does not need any \"military escalation\" in Ukraine, because it is already advancing — Peskov. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, military, russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia does not need any \"military escalation\" in Ukraine, because it is already advancing — Peskov. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -71,8 +99,30 @@
       "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: According to monitoring channels, Donetsk came under a massive missile and drone attack, with about ten explosions recorded. One of the strikes hit a building located at 97 Illi..."
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "military",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Defense Express reports that the Armed Forces of Ukraine may have used the latest American JDAM-LR missile against Donetsk for the first time. At the site of the destroyed underground Russian military",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, military, ukraine. Signal: Defense Express reports that the Armed Forces of Ukraine may have used the latest American JDAM-LR missile against Donetsk for the first time. At the site of the destroyed under..."
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -90,16 +140,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone"
+        "border"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated independent and active every",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated indepe..."
+      "text": "Chad accuses Sudan of air strike near shared border that killed 12 | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, border. Signal: Chad accuses Sudan of air strike near shared border that killed 12 | Al Jazeera"
     },
     {
-      "path": "root.news[10]",
+      "path": "root.news[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -116,80 +166,81 @@
         "FX"
       ],
       "matchedKeywords": [
-        "military",
+        "war",
         "iran",
         "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran to allow no military ship in Hormuz under potential deal with Oman | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Iran to allow no military ship in Hormuz under potential deal with Oman | Euronews"
+      "text": "Iran war Update: Tehran prepares conditions to open Strait of Hormuz | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran prepares conditions to open Strait of Hormuz | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "hormuz",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷⚡️ — Reports of explosions in the Strait of Hormuz following IRGC Navy anti-ship missile launches targeting vessels violating the blockade. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — Reports of explosions in the Strait of Hormuz following IRGC Navy anti-ship missile launches targeting vessels violating the blockade. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "refinery",
-        "russia"
+        "attack",
+        "ukraine"
       ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "Reuters reported today that all of Lukoil's major oil refineries in Russia have shut down operations due to damage. In particular, the country's fourth-largest refinery, \"Lukoil-Nizhegorodnefteorgsint",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Reuters reported today that all of Lukoil's major oil refineries in Russia have shut down operations due to damage. In particular, the country's fourth-largest refinery, \"Lukoil..."
+      "otherCategories": [],
+      "text": "Russians attacked Ukraine all night long today. Odesa, Kyiv, Dnipropetrovsk, Poltava, and Zaporizhzhia regions came under attack. They used various types of weapons: \"Oniks\" anti-ship missiles, \"Iskan",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, ukraine. Signal: Russians attacked Ukraine all night long today. Odesa, Kyiv, Dnipropetrovsk, Poltava, and Zaporizhzhia regions came under attack. They used various types of weapons: \"Oniks\" ant..."
     },
     {
-      "path": "root.news[30]",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️🇺🇸🇷🇺 – CIA Director Ratcliffe's visit to Moscow was to warn Russia not to attack NATO countries, according to a Wall Street Journal exclusive. @GeoPWatch",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: ⚡️🇺🇸🇷🇺 – CIA Director Ratcliffe's visit to Moscow was to warn Russia not to attack NATO countries, according to a Wall Street Journal exclusive. @GeoPWatch"
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Last night, approximately 330 drones and jet-powered UAVs (blue arrows) flew to attack Russia and the temporarily occupied territories.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Last night, approximately 330 drones and jet-powered UAVs (blue arrows) flew to attack Russia and the temporarily occupied territories."
+    },
+    {
+      "path": "root.news[10]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -206,8 +257,29 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Qatar PM to visit Tehran; Trump ‘not in a hurry’ over talks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Qatar PM to visit Tehran; Trump ‘not in a hurry’ over talks | Al Jazeera"
+      "text": "Six months of war between Iran, US leave Arab states facing tough questions | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Six months of war between Iran, US leave Arab states facing tough questions | Al Jazeera"
+    },
+    {
+      "path": "root.news[13]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "troops"
+      ],
+      "otherCategories": [],
+      "text": "German troops on NATO’s eastern flank: War has never been this close | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: war, troops. Signal: German troops on NATO’s eastern flank: War has never been this close | Euronews"
     },
     {
       "path": "root.chokepoints[5]",
@@ -238,7 +310,63 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[49]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "war",
+        "policy"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the origins of what NATO is",
+      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: 🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the ori..."
+    },
+    {
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "logistics"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Meanwhile, a Wildberries warehouse is on fire again in Russia. Overnight, Ukrainian drones visited Kotovsk in Russia's Tambov region. This logistics hub, one of the company's largest in Central Russia",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Meanwhile, a Wildberries warehouse is on fire again in Russia. Overnight, Ukrainian drones visited Kotovsk in Russia's Tambov region. This logistics hub, one of the company's la..."
+    },
+    {
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -261,143 +389,8 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Navigation, jurisdiction, costs: Iran, Oman attempt to hammer out Hormuz deal | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Navigation, jurisdiction, costs: Iran, Oman attempt to hammer out Hormuz deal | France 24"
-    },
-    {
-      "path": "root.newsFeed[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Israel and the United States are seeking access for International Atomic Energy Agency inspectors to | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel and the United States are seeking access for International Atomic Energy Agency inspectors to | INTELSLAVA"
-    },
-    {
-      "path": "root.newsFeed[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "⚡️ — Reports of explosions in the Strait of Hormuz following IRGC Navy anti-ship missile launches ta | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: ⚡️ — Reports of explosions in the Strait of Hormuz following IRGC Navy anti-ship missile launches ta | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — At least three newly delivered Patriot PAC-3 interceptor missiles were launched during the attack on Kyiv. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇷🇺🇺🇦⚡️ — At least three newly delivered Patriot PAC-3 interceptor missiles were launched during the attack on Kyiv. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "Russian media report that several \"Flamingo\" drones struck Donetsk. A total of 13 impacts have been reported. The combined attack caused significant damage in the occupied city.",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Russian media report that several \"Flamingo\" drones struck Donetsk. A total of 13 impacts have been reported. The combined attack caused significant damage in the occupied city."
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — Footage shows the moment a North Korean KN-23 ballistic missile struck Zaporizhzhia City. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇷🇺🇺🇦⚡️ — Footage shows the moment a North Korean KN-23 ballistic missile struck Zaporizhzhia City. @IntelSlava"
+      "text": "Iran says it will name its terms for reopening Strait of Hormuz | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran says it will name its terms for reopening Strait of Hormuz | Al Jazeera"
     }
   ]
 }

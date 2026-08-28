@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-27T04:58:55.056Z",
+  "generatedAt": "2026-08-28T07:03:40.164Z",
   "date": "2026-08-21",
   "asOfClose": "2026-08-21",
   "framing": "readings as of market close, 2026-08-21",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-27T04:58:51.856Z",
-    "generatedDate": "2026-08-27",
+    "generatedAt": "2026-08-28T07:03:36.444Z",
+    "generatedDate": "2026-08-28",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-27T04:58:51.856Z",
-    "generatedDate": "2026-08-27",
-    "runDate": "2026-08-27",
+    "generatedAt": "2026-08-28T07:03:36.444Z",
+    "generatedDate": "2026-08-28",
+    "runDate": "2026-08-28",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-27, readings as of market close, 2026-08-21 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-28, readings as of market close, 2026-08-21 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-21",
-      "generatedDate": "2026-08-27",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-08-27, readings as of market close, 2026-08-21 (6 calendar days old)."
+      "generatedDate": "2026-08-28",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-08-28, readings as of market close, 2026-08-21 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,30 +63,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_count": 15,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 22,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "nuclear",
-          "israel",
-          "energy"
+          "strike",
+          "drone",
+          "oil",
+          "refinery"
         ],
-        "text": "Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is not yet prepared to all",
-        "explanation": "Geopolitical Escalation match based on keywords: war, nuclear, israel. Signal: Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is ..."
+        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
       },
       "market_z": -2.194,
       "abs_market_z": 2.194,
@@ -97,22 +97,36 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[10]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "war",
+          "policy"
+        ],
+        "text": "🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the origins of what NATO is",
+        "explanation": "Geopolitical Escalation match based on keywords: war. Signal: 🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the ori..."
+      },
       "market_z": 1.228,
       "abs_market_z": 1.228,
       "market_moving": false,
@@ -122,37 +136,37 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 8,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 6,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[2]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 22,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "nuclear",
-          "israel",
-          "energy"
+          "strike",
+          "drone",
+          "oil",
+          "refinery"
         ],
-        "text": "Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is not yet prepared to all",
-        "explanation": "Geopolitical Escalation match based on keywords: war, nuclear, israel. Signal: Israel and the United States are seeking access for International Atomic Energy Agency inspectors to Iranian nuclear facilities that were targeted during the war, but Tehran is ..."
+        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
       },
       "market_z": 1.862,
       "abs_market_z": 1.862,
@@ -163,7 +177,7 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
@@ -188,35 +202,37 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[2]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 22,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "drone"
+          "drone",
+          "oil",
+          "refinery"
         ],
-        "text": "The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated independent and active every",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: The pilots of the Strike Drone Company wish the Russians a good night. If our translations help you stay informed, consider supporting the project. It keeps WarTranslated indepe..."
+        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
       },
       "market_z": -1.887,
       "abs_market_z": 1.887,
@@ -227,7 +243,7 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     }
   ],
