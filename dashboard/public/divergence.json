@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-28T07:03:40.164Z",
+  "generatedAt": "2026-08-29T04:18:03.784Z",
   "date": "2026-08-21",
   "asOfClose": "2026-08-21",
   "framing": "readings as of market close, 2026-08-21",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-28T07:03:36.444Z",
-    "generatedDate": "2026-08-28",
+    "generatedAt": "2026-08-29T04:17:59.769Z",
+    "generatedDate": "2026-08-29",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-28T07:03:36.444Z",
-    "generatedDate": "2026-08-28",
-    "runDate": "2026-08-28",
+    "generatedAt": "2026-08-29T04:17:59.769Z",
+    "generatedDate": "2026-08-29",
+    "runDate": "2026-08-29",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-28, readings as of market close, 2026-08-21 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-29, readings as of market close, 2026-08-21 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-21",
-      "generatedDate": "2026-08-28",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-08-28, readings as of market close, 2026-08-21 (7 calendar days old)."
+      "generatedDate": "2026-08-29",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-08-29, readings as of market close, 2026-08-21 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,39 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
+    "priced": 2,
     "calm": 1,
-    "radar-miss": 1
+    "radar-miss": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[3]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 22,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "drone",
-          "oil",
-          "refinery"
+          "attack",
+          "drone"
         ],
-        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
+        "text": "🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an earlier attack is also vi",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: 🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an ea..."
       },
       "market_z": -2.194,
       "abs_market_z": 2.194,
@@ -97,36 +96,22 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[10]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "war",
-          "policy"
-        ],
-        "text": "🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the origins of what NATO is",
-        "explanation": "Geopolitical Escalation match based on keywords: war. Signal: 🇺🇸🪖⚡️ — Under Secretary of War for Policy, Elbridge A. Colby: The United States is not leaving the continent. It’s not leaving the Alliance. We’re going to go back to the ori..."
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.228,
       "abs_market_z": 1.228,
       "market_moving": false,
@@ -136,37 +121,35 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
+      "signal_elevated": false,
       "signal_count": 3,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[4]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
+        "rawScore": 9,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone",
-          "oil",
-          "refinery"
+          "missile",
+          "hormuz"
         ],
-        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
+        "text": "🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava"
       },
       "market_z": 1.862,
       "abs_market_z": 1.862,
@@ -177,8 +160,8 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "priced"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -202,37 +185,36 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[3]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 22,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "drone",
-          "oil",
-          "refinery"
+          "attack",
+          "drone"
         ],
-        "text": "🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirms that a large oil sto",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇾🇪⚔️🇸🇦 New damage is now visible at the Jazan Oil Refinery in southern Saudi Arabia following the Houthi drone strike on August 18. New Sentinel-2L satellite imagery confirm..."
+        "text": "🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an earlier attack is also vi",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: 🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an ea..."
       },
       "market_z": -1.887,
       "abs_market_z": 1.887,
@@ -243,7 +225,7 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
