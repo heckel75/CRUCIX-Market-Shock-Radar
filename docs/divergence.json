@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-08-29T04:18:03.784Z",
+  "generatedAt": "2026-08-30T01:36:08.782Z",
   "date": "2026-08-21",
   "asOfClose": "2026-08-21",
   "framing": "readings as of market close, 2026-08-21",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-08-29T04:17:59.769Z",
-    "generatedDate": "2026-08-29",
+    "generatedAt": "2026-08-30T01:36:05.142Z",
+    "generatedDate": "2026-08-30",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-08-29T04:17:59.769Z",
-    "generatedDate": "2026-08-29",
-    "runDate": "2026-08-29",
+    "generatedAt": "2026-08-30T01:36:05.142Z",
+    "generatedDate": "2026-08-30",
+    "runDate": "2026-08-30",
     "asOfClose": "2026-08-21",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-08-29, readings as of market close, 2026-08-21 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-08-30, readings as of market close, 2026-08-21 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-21",
-      "generatedDate": "2026-08-29",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-08-29, readings as of market close, 2026-08-21 (8 calendar days old)."
+      "generatedDate": "2026-08-30",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-08-30, readings as of market close, 2026-08-21 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,38 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
+    "priced": 3,
     "calm": 1,
-    "radar-miss": 2
+    "radar-miss": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[10]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 18,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "drone"
+          "russia",
+          "logistics"
         ],
-        "text": "🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an earlier attack is also vi",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: 🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an ea..."
+        "text": "Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 separate strikes hit Ukrain",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 sepa..."
       },
       "market_z": -2.194,
       "abs_market_z": 2.194,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -121,35 +121,36 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 3,
-      "signal_primary_count": 2,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 1,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[7]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "missile",
+          "war",
+          "iran",
           "hormuz"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava"
+        "text": "Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera"
       },
       "market_z": 1.862,
       "abs_market_z": 1.862,
@@ -160,22 +161,36 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 9,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[8]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "attack",
+          "bank"
+        ],
+        "text": "Israeli settlers attack international news team in occupied West Bank | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers attack international news team in occupied West Bank | Al Jazeera"
+      },
       "market_z": -1.751,
       "abs_market_z": 1.751,
       "market_moving": true,
@@ -185,36 +200,36 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[10]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 18,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "drone"
+          "russia",
+          "logistics"
         ],
-        "text": "🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an earlier attack is also vi",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: 🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an ea..."
+        "text": "Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 separate strikes hit Ukrain",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 sepa..."
       },
       "market_z": -1.887,
       "abs_market_z": 1.887,
@@ -225,7 +240,7 @@
       "driver_as_of": "2026-08-21",
       "market_as_of": "2026-08-21",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],

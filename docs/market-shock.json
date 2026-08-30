@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-29T04:17:59.613Z",
+  "generatedAt": "2026-08-30T01:36:04.992Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,17 +13,17 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 133,
+  "candidateCount": 126,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 18,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -39,14 +39,14 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack",
-        "drone"
+        "russia",
+        "logistics"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an earlier attack is also vi",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: 🇺🇦⚔️🇷🇺 Satellite imagery shows the aftermath of an overnight kamikaze drone strike on a Russian Tu-95MS strategic bomber at Engels-2 airbase. A training Tu-95MS hit in an ea..."
+      "text": "Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 separate strikes hit Ukrain",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 sepa..."
     },
     {
       "path": "root.tg.urgent[8]",
@@ -62,17 +62,17 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "naval",
+        "attack",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia is planning to produce 10,000 cheap Dan-T missiles with a 135 kg warhead to intensify mass strikes on Ukraine, with plans to scale up launches from ground, naval and air platforms in 2027, Mili",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, russia, ukraine. Signal: Russia is planning to produce 10,000 cheap Dan-T missiles with a 135 kg warhead to intensify mass strikes on Ukraine, with plans to scale up launches from ground, naval and air ..."
+      "text": "⚡🇺🇦🇷🇺 Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down near Moscow. For a moment it seemed that the Russian attack on Kiev had ended, but it is stil",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: ⚡🇺🇦🇷🇺 Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down near Moscow. For a moment it seemed that the Russian attack on Kiev had..."
     },
     {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
+      "path": "root.news[47]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -84,16 +84,44 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "russia",
-        "ukraine"
+        "war",
+        "conflict",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Zelensky, citing HUR chief Oleh Ivashchenko, says Russia plans to scale up ballistic missile production. Ukraine is calling on partners to fully block supplies of components, equipment, and machinery",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: Zelensky, citing HUR chief Oleh Ivashchenko, says Russia plans to scale up ballistic missile production. Ukraine is calling on partners to fully block supplies of components, eq..."
+      "text": "Iran war reaches 6-month mark: Conflict cost $1,100 per US taxpayer | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war reaches 6-month mark: Conflict cost $1,100 per US taxpayer | France 24"
     },
     {
-      "path": "root.news[21]",
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera"
+    },
+    {
+      "path": "root.news[19]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -111,18 +139,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "blockade"
+        "strike",
+        "ukraine"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Iran war Update: IRGC asserts strait control, US enforces blockade | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC asserts strait control, US enforces blockade | Al Jazeera"
+      "text": "37 Killed After Russian Strike on Weapons Depot as Ukraine Blames Negligence",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: 37 Killed After Russian Strike on Weapons Depot as Ukraine Blames Negligence"
     },
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -135,15 +162,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
+        "attack",
         "russia"
       ],
       "otherCategories": [],
-      "text": "Russia has successfully launched an RS-24 Yars intercontinental ballistic missile (ICBM) from the Plesetsk Cosmodrome. The Russian Defense Ministry said the launch was conducted to verify the missile",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: Russia has successfully launched an RS-24 Yars intercontinental ballistic missile (ICBM) from the Plesetsk Cosmodrome. The Russian Defense Ministry said the launch was conducted..."
+      "text": "🇩🇪 🇷🇺 🇪🇺 Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedrich Merz is set to level new sanctions at Russian entities, in parallel with punishing",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: 🇩🇪 🇷🇺 🇪🇺 Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedrich Merz is set to level new sanctions at Russian entities, in p..."
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -156,16 +183,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "russia"
+        "military",
+        "china"
       ],
       "otherCategories": [],
-      "text": "Russia has shifted to a new air terror tactic in recent days – hitting Kyiv and other cities in small drone waves every 30–60 minutes around the clock. Retired Major Hetman warns alerts could last we",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Russia has shifted to a new air terror tactic in recent days – hitting Kyiv and other cities in small drone waves every 30–60 minutes around the clock. Retired Major Hetman warn..."
+      "text": "✈️ 🇨🇳 🏗 China is rapidly expanding the Lop Nur flight test complex in Xinjiang, a highly restricted facility used for testing advanced and experimental military aircraft. Lop Nur has previously be",
+      "explanation": "Geopolitical Escalation match based on keywords: military, china. Signal: ✈️ 🇨🇳 🏗 China is rapidly expanding the Lop Nur flight test complex in Xinjiang, a highly restricted facility used for testing advanced and experimental military aircraft. Lop..."
     },
     {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
+      "path": "root.news[8]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -174,18 +201,25 @@
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "attack",
+        "bank"
       ],
-      "otherCategories": [],
-      "text": "Russia hit a UNICEF humanitarian warehouse near Kyiv on August 27, destroying supplies for war-affected children and families. Second UNICEF warehouse gone in Kyiv region in two months. The July strik",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Russia hit a UNICEF humanitarian warehouse near Kyiv on August 27, destroying supplies for war-affected children and families. Second UNICEF warehouse gone in Kyiv region in two..."
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Israeli settlers attack international news team in occupied West Bank | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers attack international news team in occupied West Bank | Al Jazeera"
     },
     {
-      "path": "root.news[13]",
+      "path": "root.newsFeed[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -198,15 +232,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Somali piracy surges as the impact of the US-Iran war ripples outwards",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Somali piracy surges as the impact of the US-Iran war ripples outwards"
+      "text": "⚡ Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down ne | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡ Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down ne | INTELSLAVA"
     },
     {
-      "path": "root.newsFeed[44]",
+      "path": "root.newsFeed[26]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -219,12 +253,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
+        "attack",
         "russia"
       ],
       "otherCategories": [],
-      "text": "Russia has successfully launched an RS-24 Yars intercontinental ballistic missile (ICBM) from the Pl | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: Russia has successfully launched an RS-24 Yars intercontinental ballistic missile (ICBM) from the Pl | INTELSLAVA"
+      "text": "Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedri | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedri | CIG_TELEGRAM"
     },
     {
       "path": "root.chokepoints[5]",
@@ -255,34 +289,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇷🇺🇺🇦⚡️ — A vessel in violation of Iranian regulations was struck by an Iranian anti-ship missile in the Strait of Hormuz. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -305,11 +312,11 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — Aftermath of a Geran-4 loitering munition strike on the “33 m²” building materials and household goods store in Pavlohrad, Dnipropetrovsk Oblast. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — Aftermath of a Geran-4 loitering munition strike on the “33 m²” building materials and household goods store in Pavlohrad, Dnipropetrovsk Oblast. @IntelSlava"
+      "text": "Exilenova+ reports that the August 26 strike on Donetsk command posts left 27 dead and 58 wounded, including two generals and three senior officers critically injured.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Exilenova+ reports that the August 26 strike on Donetsk command posts left 27 dead and 58 wounded, including two generals and three senior officers critically injured."
     },
     {
-      "path": "root.news[30]",
+      "path": "root.news[22]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -332,8 +339,35 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Israeli strike kills three Palestinians in Jenin | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Israeli strike kills three Palestinians in Jenin | Al Jazeera"
+      "text": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot"
+    },
+    {
+      "path": "root.news[46]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian strike near Kyiv kills 37, in one of the year&apos;s deadliest attacks",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Russian strike near Kyiv kills 37, in one of the year&apos;s deadliest attacks"
     },
     {
       "path": "root.chokepoints[0]",
@@ -355,27 +389,6 @@
       "otherCategories": [],
       "text": "Strait of Hormuz | 20% of world oil",
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "gas",
-        "pipeline"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇨🇳⚡️ — Putin and Xi to Discuss the Power of Siberia 2 gas pipeline and potentially finalize key agreements when they meet on August 31. @IntelSlava",
-      "explanation": "Energy Shock match based on keywords: gas, pipeline. Signal: 🇷🇺🇨🇳⚡️ — Putin and Xi to Discuss the Power of Siberia 2 gas pipeline and potentially finalize key agreements when they meet on August 31. @IntelSlava"
     }
   ]
 }
