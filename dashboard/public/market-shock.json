@@ -1,29 +1,30 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-08-30T01:36:04.992Z",
+  "generatedAt": "2026-08-31T01:33:36.241Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 18,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 1,
+    "Supply Chain Disruption": 1
   },
-  "candidateCount": 126,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 29,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -39,17 +40,94 @@
       ],
       "matchedKeywords": [
         "strike",
-        "russia",
-        "logistics"
+        "missile",
+        "attack",
+        "drone",
+        "iran"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 separate strikes hit Ukrain",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Russia's first confirmed strike on Ukrainian civilian logistics dates back to February 28, 2022, hitting Epicentr in Chernihiv. Over the following four and a half years, 25 sepa..."
+      "text": "🇮🇷❌🇺🇸🇯🇴 — Iran's IRGC says it launched a combined ballistic missile and drone attack against the American King Hussein and Muwaffaq Salti air bases in Jordan in retaliation for the strike on Ira",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, attack, drone, iran. Signal: 🇮🇷❌🇺🇸🇯🇴 — Iran's IRGC says it launched a combined ballistic missile and drone attack against the American King Hussein and Muwaffaq Salti air bases in Jordan in retaliatio..."
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "military",
+        "iran",
+        "china"
+      ],
+      "otherCategories": [],
+      "text": "📝 🇺🇸 🇮🇷 A classified Pentagon assessment has directly warned Trump's Secretary of War Hegseth that extending the Iran war will leave the US military dangerously weakened, including for China and",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran, china. Signal: 📝 🇺🇸 🇮🇷 A classified Pentagon assessment has directly warned Trump's Secretary of War Hegseth that extending the Iran war will leave the US military dangerously weakened, i..."
+    },
+    {
+      "path": "root.newsFeed[14]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack",
+        "drone",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "❌ — Iran's IRGC says it launched a combined ballistic missile and drone attack against the American | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone, iran. Signal: ❌ — Iran's IRGC says it launched a combined ballistic missile and drone attack against the American | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 17,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "brent",
+        "crude",
+        "hormuz",
+        "missile"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇮🇷🇺🇸⚡️ — Brent crude has surged above $90 a barrel, rising more than 2% following US strikes on Iranian missile launchers on Larak Island in the Strait of Hormuz — Reuters. @IntelSlava",
+      "explanation": "Energy Shock match based on keywords: brent, crude, hormuz. Signal: 🇮🇷🇺🇸⚡️ — Brent crude has surged above $90 a barrel, rising more than 2% following US strikes on Iranian missile launchers on Larak Island in the Strait of Hormuz — Reuters. ..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -62,39 +140,17 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "war",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "⚡🇺🇦🇷🇺 Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down near Moscow. For a moment it seemed that the Russian attack on Kiev had ended, but it is stil",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: ⚡🇺🇦🇷🇺 Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down near Moscow. For a moment it seemed that the Russian attack on Kiev had..."
+      "text": "Ukrainian Defense Minister Yevhen Khmara's key points, per reporters. Russia's goal is not Donetsk or Luhansk alone. It wants all of Ukraine, and for Ukraine this war is existential. Only the sense",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Ukrainian Defense Minister Yevhen Khmara's key points, per reporters. Russia's goal is not Donetsk or Luhansk alone. It wants all of Ukraine, and for Ukraine this war is existen..."
     },
     {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "conflict",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war reaches 6-month mark: Conflict cost $1,100 per US taxpayer | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war reaches 6-month mark: Conflict cost $1,100 per US taxpayer | France 24"
-    },
-    {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -104,24 +160,52 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
+        "strike",
+        "missile"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran in no rush to reopen Hormuz; settlers besiege Qusra | Al Jazeera"
+      "text": "🇮🇷❌️🇯🇴🇺🇸 Footage purporting to show a successful Iranian ballistic missile strike on Jordan's Mwafaq al-Salti US Airbase. Note the pulse drive action of the warhead. This is new! @SimurghRes",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇮🇷❌️🇯🇴🇺🇸 Footage purporting to show a successful Iranian ballistic missile strike on Jordan's Mwafaq al-Salti US Airbase. Note the pulse drive action of the warhead. This ..."
     },
     {
-      "path": "root.news[19]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian Belgorod is under a massive missile strike right now, Exilenova+ reports.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Russian Belgorod is under a massive missile strike right now, Exilenova+ reports."
+    },
+    {
+      "path": "root.news[13]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -140,61 +224,19 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "37 Killed After Russian Strike on Weapons Depot as Ukraine Blames Negligence",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: 37 Killed After Russian Strike on Weapons Depot as Ukraine Blames Negligence"
+      "text": "Israeli strike kills 3-year-old child in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike kills 3-year-old child in Gaza | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇩🇪 🇷🇺 🇪🇺 Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedrich Merz is set to level new sanctions at Russian entities, in parallel with punishing",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: 🇩🇪 🇷🇺 🇪🇺 Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedrich Merz is set to level new sanctions at Russian entities, in p..."
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "china"
-      ],
-      "otherCategories": [],
-      "text": "✈️ 🇨🇳 🏗 China is rapidly expanding the Lop Nur flight test complex in Xinjiang, a highly restricted facility used for testing advanced and experimental military aircraft. Lop Nur has previously be",
-      "explanation": "Geopolitical Escalation match based on keywords: military, china. Signal: ✈️ 🇨🇳 🏗 China is rapidly expanding the Lop Nur flight test complex in Xinjiang, a highly restricted facility used for testing advanced and experimental military aircraft. Lop..."
-    },
-    {
-      "path": "root.news[8]",
+      "path": "root.newsFeed[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -202,24 +244,139 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "attack",
-        "bank"
+        "strike",
+        "missile"
       ],
       "otherCategories": [
-        "Credit Stress"
+        "Supply Chain Disruption"
       ],
-      "text": "Israeli settlers attack international news team in occupied West Bank | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers attack international news team in occupied West Bank | Al Jazeera"
+      "text": "❌️ Footage purporting to show a successful Iranian ballistic missile strike on Jordan's Mwafaq al-Sa | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: ❌️ Footage purporting to show a successful Iranian ballistic missile strike on Jordan's Mwafaq al-Sa | INTELSLAVA"
     },
     {
-      "path": "root.newsFeed[7]",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "logistics",
+        "strike"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The aftermath of a Geran-4 loitering munition strike on a logistics facility in the village of Pohreby, Kyiv Oblast. @IntelSlava",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of a Geran-4 loitering munition strike on a logistics facility in the village of Pohreby, Kyiv Oblast. @IntelSlava"
+    },
+    {
+      "path": "root.news[14]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "US forces strike Iranian rocket launchers in Strait of Hormuz as IRGC warns of 'retaliatory response | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: US forces strike Iranian rocket launchers in Strait of Hormuz as IRGC warns of 'retaliatory response | Euronews"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "US forces strike Iranian launchers on Larak island in Strait of Hormuz | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: US forces strike Iranian launchers on Larak island in Strait of Hormuz | France 24"
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🚨🇮🇷🇯🇴🇺🇸 — The Revolutionary Guard releases footage showing the launch of ballistic missiles and UAVs during a combined missile-drone operation designated \"Punish the Aggressor\" under the operat",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🚨🇮🇷🇯🇴🇺🇸 — The Revolutionary Guard releases footage showing the launch of ballistic missiles and UAVs during a combined missile-drone operation designated \"Punish the Aggr..."
+    },
+    {
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -232,33 +389,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "⚡ Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down ne | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡ Ukraine has launched at least 500 drones toward Russia. First reports of drones being shot down ne | INTELSLAVA"
-    },
-    {
-      "path": "root.newsFeed[26]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedri | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Germany plans to blame Russia for Leipzig attack as tensions with Putin escalate Chancellor Friedri | CIG_TELEGRAM"
+      "text": "Iran war Update: IRGC attacks US bases in Jordan after US bombs Larak Island | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC attacks US bases in Jordan after US bombs Larak Island | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -287,108 +423,6 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Exilenova+ reports that the August 26 strike on Donetsk command posts left 27 dead and 58 wounded, including two generals and three senior officers critically injured.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Exilenova+ reports that the August 26 strike on Donetsk command posts left 27 dead and 58 wounded, including two generals and three senior officers critically injured."
-    },
-    {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot"
-    },
-    {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Russian strike near Kyiv kills 37, in one of the year&apos;s deadliest attacks",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Russian strike near Kyiv kills 37, in one of the year&apos;s deadliest attacks"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     }
   ]
 }
