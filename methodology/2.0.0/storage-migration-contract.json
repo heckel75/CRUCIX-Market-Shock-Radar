@@ -1,0 +1,46 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-storage-migration-contract/v1",
+  "status": "freeze-candidate",
+  "namespaces": {
+    "publicDashboard": "dashboard/public/v2/2.0.0/",
+    "publicLog": "log/v2/2.0.0/",
+    "privateLogicalRunRoot": "private:v2/2.0.0/runs/{runId}/",
+    "privateLogicalRegistryRoot": "private:v2/2.0.0/registry/",
+    "privateLogicalMarketRoot": "private:v2/2.0.0/market/{runId}/"
+  },
+  "immutableRunCollections": [
+    "run-manifest.json",
+    "candidates.jsonl",
+    "assignments.jsonl",
+    "signal-output.json",
+    "market-output.json",
+    "divergence-output.json",
+    "provenance.jsonl"
+  ],
+  "recoverableRegistryCollections": [
+    "event-clusters.jsonl",
+    "parent-series.jsonl",
+    "lineage.jsonl",
+    "corrections.jsonl",
+    "registry-manifest.json"
+  ],
+  "marketRetention": {
+    "requirement": "Each run persists permitted raw source responses or a lossless normalized equivalent, plus acquisition metadata, source terms status, content hashes, and the transformation/configuration hashes used by the output.",
+    "publicExposure": "Raw inputs, source URLs containing credentials, and licensed record-level evidence are never copied into either public namespace.",
+    "unavailableRaw": "If terms prohibit raw retention, persist the normalized equivalent, exact retrieval metadata, raw-retention status, and hash when legally available; the run remains ineligible for cutover if independent reproduction is not possible."
+  },
+  "migration": {
+    "legacyPolicy": "Legacy paths and artifacts remain read-only and unchanged. Version 2.0.0 writes only to its isolated namespaces.",
+    "dualRun": "Sessions 18 and 19 may implement and exercise v2 in parallel, but must not replace, alias over, or reinterpret legacy production outputs.",
+    "backfill": "A replay is a new version-stamped run referencing immutable source identities; it never mutates an earlier run.",
+    "cutover": "No cutover, public publication, or legacy retirement is authorized by this candidate."
+  },
+  "locking": {
+    "implementationRule": "Use an atomic exclusive-create lock record bound to runId and owner. Any existing lock blocks the writer.",
+    "staleTimeout": null,
+    "recovery": "There is no automatic stale-lock takeover. Recovery requires a persisted human decision and a new run; the abandoned run remains intact."
+  },
+  "atomicPublication": "A public versioned manifest is written last and references already durable content-addressed artifacts. Readers reject missing, mismatched, or mixed-version members.",
+  "unresolvedBackend": "The durable private storage backend, tiering, retention duration, and disaster-recovery service level remain deferred. Until resolved, implementation may use access-controlled local storage with no pruning; cutover is blocked."
+}

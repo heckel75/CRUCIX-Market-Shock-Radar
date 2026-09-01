@@ -1,0 +1,74 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-leaf-channel-map/v1",
+  "mapVersion": "leaf-channel-map-2.0.0",
+  "channels": [
+    {
+      "channelId": "conflict-escalation",
+      "eventType": "conflict-escalation",
+      "minimumEligibleInstrumentCount": 3,
+      "mappedInstrumentCount": 4,
+      "session16SelectedConfigurationId": "config-925f49fec21a27358c47",
+      "session16StatisticSeriesId": "statistic-series-076634ccc273e002e924",
+      "instruments": [
+        { "instrumentId": "brent", "source": "FRED", "sourceKey": "DCOILBRENTEU", "transform": "five-valid-observation-return" },
+        { "instrumentId": "defense-equities", "source": "Tiingo", "sourceKey": "ITA", "transform": "five-valid-observation-return" },
+        { "instrumentId": "gold", "source": "Tiingo", "sourceKey": "GLD", "transform": "five-valid-observation-return" },
+        { "instrumentId": "vix", "source": "FRED", "sourceKey": "VIXCLS", "transform": "five-valid-observation-level-change" }
+      ]
+    },
+    {
+      "channelId": "credit-stress",
+      "eventType": "credit-stress",
+      "minimumEligibleInstrumentCount": 2,
+      "mappedInstrumentCount": 3,
+      "session16SelectedConfigurationId": "config-b0d071b0d0ee34724409",
+      "session16StatisticSeriesId": "statistic-series-094b503b2dec0e0b18c6",
+      "instruments": [
+        { "instrumentId": "banks", "source": "Tiingo", "sourceKey": "KBE", "transform": "five-valid-observation-return" },
+        { "instrumentId": "high-yield-spreads", "source": "FRED", "sourceKey": "BAMLH0A0HYM2", "transform": "five-valid-observation-level-change" },
+        { "instrumentId": "ten-year-treasury", "source": "FRED", "sourceKey": "DGS10", "transform": "five-valid-observation-level-change" }
+      ]
+    },
+    {
+      "channelId": "energy-disruption",
+      "eventType": "energy-disruption",
+      "minimumEligibleInstrumentCount": 2,
+      "mappedInstrumentCount": 3,
+      "session16SelectedConfigurationId": "config-33bfac40784ae6195a7d",
+      "session16StatisticSeriesId": "statistic-series-4d4993bcf8648987b7c9",
+      "instruments": [
+        { "instrumentId": "brent", "source": "FRED", "sourceKey": "DCOILBRENTEU", "transform": "five-valid-observation-return" },
+        { "instrumentId": "inflation-expectations", "source": "FRED", "sourceKey": "T10YIE", "transform": "five-valid-observation-level-change" },
+        { "instrumentId": "wti", "source": "FRED", "sourceKey": "DCOILWTICO", "transform": "five-valid-observation-return" }
+      ]
+    },
+    {
+      "channelId": "sanctions-policy",
+      "eventType": "sanctions-policy",
+      "minimumEligibleInstrumentCount": 2,
+      "mappedInstrumentCount": 3,
+      "session16SelectedConfigurationId": "config-d850c6ef2a0bd7f88612",
+      "session16StatisticSeriesId": "statistic-series-a6dbd8d1dc809b452a78",
+      "instruments": [
+        { "instrumentId": "broad-commodities", "source": "Tiingo", "sourceKey": "DBC", "transform": "five-valid-observation-return" },
+        { "instrumentId": "broad-usd", "source": "FRED", "sourceKey": "DTWEXBGS", "transform": "five-valid-observation-return" },
+        { "instrumentId": "em-equities", "source": "Tiingo", "sourceKey": "EEM", "transform": "five-valid-observation-return" }
+      ]
+    },
+    {
+      "channelId": "supply-chain",
+      "eventType": "supply-chain",
+      "minimumEligibleInstrumentCount": 2,
+      "mappedInstrumentCount": 2,
+      "session16SelectedConfigurationId": "config-e32a31be376b32a9959c",
+      "session16StatisticSeriesId": "statistic-series-dfb8bdea79eb5cbd261b",
+      "instruments": [
+        { "instrumentId": "industrials", "source": "Tiingo", "sourceKey": "XLI", "transform": "five-valid-observation-return" },
+        { "instrumentId": "semiconductors", "source": "Tiingo", "sourceKey": "SOXX", "transform": "five-valid-observation-return" }
+      ]
+    }
+  ],
+  "instrumentSetVersionRule": "sha256 of canonical JSON containing methodologyVersion, mapVersion, channelId, eligibleInstrumentCount, and ascending included instrumentId/source/sourceKey/transform tuples",
+  "semanticConstraint": "Mapping records association only. It does not assert causal direction, prediction, or market confirmation."
+}

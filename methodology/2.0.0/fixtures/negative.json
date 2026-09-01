@@ -1,0 +1,430 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-acceptance-fixtures/v1",
+  "suite": "negative",
+  "cases": [
+    {
+      "id": "syndication-counted-as-independent",
+      "category": "source-origin",
+      "ruleId": "syndication-origin-count",
+      "input": { "reporterIds": ["outlet-a", "outlet-b"], "originIds": ["wire-1", "wire-1"], "independentOriginCount": 2 },
+      "expectedValid": false,
+      "expectedReasonCode": "syndicated-counted-independent"
+    },
+    {
+      "id": "unknown-origin-elevates",
+      "category": "source-origin",
+      "ruleId": "unknown-origin-conservative",
+      "input": { "originStatus": "unknown", "independentOriginCount": 1, "qualifiesE2": true, "elevated": true },
+      "expectedValid": false,
+      "expectedReasonCode": "unknown-origin-elevated"
+    },
+    {
+      "id": "contextual-mechanism-elevates",
+      "category": "signal-eligibility",
+      "ruleId": "direct-mechanism-required",
+      "input": { "mechanismRelations": ["contextual"], "elevated": true },
+      "expectedValid": false,
+      "expectedReasonCode": "direct-mechanism-missing"
+    },
+    {
+      "id": "cluster-contributes-twice",
+      "category": "signal-eligibility",
+      "ruleId": "one-contribution-per-cluster-channel-run",
+      "input": { "runId": "run-x", "clusterId": "evt-x", "channelId": "energy-disruption", "candidateCount": 4, "directMechanismCount": 2, "contributionCount": 2 },
+      "expectedValid": false,
+      "expectedReasonCode": "cluster-channel-double-count"
+    },
+    {
+      "id": "announced-event-elevates",
+      "category": "signal-eligibility",
+      "ruleId": "stage-boundary",
+      "input": { "stage": "announced", "visible": true, "elevated": true },
+      "expectedValid": false,
+      "expectedReasonCode": "announced-elevated"
+    },
+    {
+      "id": "continuing-repeat-moves-material-clock",
+      "category": "lifecycle",
+      "ruleId": "material-clock",
+      "input": { "state": "continuing", "priorLastMaterialChangeAt": "2026-08-01T10:00:00.000Z", "lastMaterialChangeAt": "2026-08-03T10:00:00.000Z", "priorLastObservedAt": "2026-08-02T10:00:00.000Z", "lastObservedAt": "2026-08-03T10:00:00.000Z", "elevated": false },
+      "expectedValid": false,
+      "expectedReasonCode": "nonmaterial-repeat-moved-clock"
+    },
+    {
+      "id": "unresolved-relabelled-nonevent",
+      "category": "candidate-disposition",
+      "ruleId": "unresolved-is-not-nonevent",
+      "input": { "observedDisposition": "unresolved-event-identity", "storedDisposition": "no-discrete-event", "eventTypeStatus": "unknown", "scored": false },
+      "expectedValid": false,
+      "expectedReasonCode": "unresolved-relabelled"
+    },
+    {
+      "id": "decomposition-without-provenance",
+      "category": "atomic-decomposition",
+      "ruleId": "atomic-decomposition-provenance",
+      "input": { "parentDisposition": "decomposed-parent", "childDispositions": ["atomic-event-observation", "atomic-event-observation"], "childCount": 2, "provenanceOperations": [], "rawParentRetained": true },
+      "expectedValid": false,
+      "expectedReasonCode": "decomposition-provenance-missing"
+    },
+    {
+      "id": "assignment-history-overwritten",
+      "category": "lineage",
+      "ruleId": "append-only-lineage",
+      "input": { "priorAssignmentRetained": false, "operations": ["assigned", "merged"], "allOperationsHaveProvenance": true, "idsReused": false },
+      "expectedValid": false,
+      "expectedReasonCode": "prior-assignment-not-retained"
+    },
+    {
+      "id": "chronology-ineligible-included",
+      "category": "timing",
+      "ruleId": "chronology-fidelity",
+      "input": { "fidelity": "C", "pointInTimeEligible": false, "includedInThresholdHistory": true },
+      "expectedValid": false,
+      "expectedReasonCode": "chronology-ineligible-included"
+    },
+    {
+      "id": "own-series-window-without-dates",
+      "category": "market-history",
+      "ruleId": "own-series-window",
+      "input": { "instrumentId": "brent", "actualObservationDates": [], "lookbackValidObservations": 5, "usesGlobalDates": false },
+      "expectedValid": false,
+      "expectedReasonCode": "actual-window-dates-missing"
+    },
+    {
+      "id": "global-date-required",
+      "category": "market-dating",
+      "ruleId": "per-channel-dating",
+      "input": { "channelDates": { "conflict-escalation": "2026-08-28", "energy-disruption": "2026-08-28" }, "eachChannelSameDate": true, "requiresGlobalDate": true },
+      "expectedValid": false,
+      "expectedReasonCode": "global-date-dependency"
+    },
+    {
+      "id": "stale-four-weekdays-included",
+      "category": "market-dating",
+      "ruleId": "freshness-bound",
+      "input": { "businessDayAge": 4, "eligible": true },
+      "expectedValid": false,
+      "expectedReasonCode": "stale-reading-included"
+    },
+    {
+      "id": "two-instrument-quorum-too-low",
+      "category": "market-dating",
+      "ruleId": "minimum-eligible-count",
+      "input": { "mappedCount": 2, "eligibleCount": 1, "minimumCount": 1, "assessed": true },
+      "expectedValid": false,
+      "expectedReasonCode": "minimum-count-mismatch"
+    },
+    {
+      "id": "mixed-date-binary-statistic",
+      "category": "market-dating",
+      "ruleId": "no-mixed-date-statistic",
+      "input": { "includedDates": ["2026-08-27", "2026-08-28"], "status": "assessed" },
+      "expectedValid": false,
+      "expectedReasonCode": "mixed-date-binary-statistic"
+    },
+    {
+      "id": "percentile-lookahead",
+      "category": "percentile",
+      "ruleId": "prior-only-percentile",
+      "input": { "currentDate": "2026-08-28", "historyDates": ["2026-08-27", "2026-08-28"], "currentIncludedInHistory": true },
+      "expectedValid": false,
+      "expectedReasonCode": "lookahead-history"
+    },
+    {
+      "id": "incompatible-history-pooled",
+      "category": "market-history",
+      "ruleId": "conditioned-history",
+      "input": { "currentInstrumentSetVersion": "set-a", "currentEligibleCount": 3, "historyKeys": ["set-a|3", "set-b|3"], "pooledDifferentKey": true },
+      "expectedValid": false,
+      "expectedReasonCode": "incompatible-history-pooled"
+    },
+    {
+      "id": "insufficient-history-raw-fallback",
+      "category": "market-history",
+      "ruleId": "insufficient-history",
+      "input": { "conditionedPriorCount": 125, "status": "assessed", "threshold": 1.5, "elevated": true, "fallbackUsed": true },
+      "expectedValid": false,
+      "expectedReasonCode": "hidden-history-fallback"
+    },
+    {
+      "id": "quantile-equality-triggers",
+      "category": "percentile",
+      "ruleId": "quantile-tie",
+      "input": { "history": [1, 2, 3, 4, 5], "alpha": 0.2, "rank": 4, "threshold": 4, "current": 4, "elevated": true },
+      "expectedValid": false,
+      "expectedReasonCode": "threshold-equality-triggered"
+    },
+    {
+      "id": "breadth-used-as-hidden-gate",
+      "category": "breadth",
+      "ruleId": "market-diagnostics",
+      "input": { "zByInstrument": { "a": 2.2, "b": -1.9, "c": 0.5 }, "driver": "a", "secondDriver": "b", "eligibleCount": 3, "aboveThresholdCount": 2, "breadth": 0.666666666667, "breadthAffectsBinary": true },
+      "expectedValid": false,
+      "expectedReasonCode": "breadth-used-as-binary-gate"
+    },
+    {
+      "id": "after-close-forced-to-state",
+      "category": "timing",
+      "ruleId": "after-close-pending",
+      "input": { "signalObservedAt": "2026-08-28T21:00:00.000Z", "relevantCloseAt": "2026-08-28T20:00:00.000Z", "status": "assessed", "state": "signal-leading" },
+      "expectedValid": false,
+      "expectedReasonCode": "after-close-not-pending"
+    },
+    {
+      "id": "unknown-timing-forced-to-state",
+      "category": "timing",
+      "ruleId": "unknown-timing",
+      "input": { "timestampReliability": "unreliable", "status": "assessed", "state": "co-movement" },
+      "expectedValid": false,
+      "expectedReasonCode": "unreliable-timing-classified"
+    },
+    {
+      "id": "causal-state-language",
+      "category": "divergence",
+      "ruleId": "noncausal-language",
+      "input": { "canonicalSemantics": ["signal predicts the market response"] },
+      "expectedValid": false,
+      "expectedReasonCode": "causal-language"
+    },
+    {
+      "id": "legacy-artifact-stamped",
+      "category": "identity",
+      "ruleId": "legacy-immutability",
+      "input": { "legacyMethodologyVersion": "2.0.0", "beforeSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "afterSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+      "expectedValid": false,
+      "expectedReasonCode": "legacy-restamped"
+    },
+    {
+      "id": "v2-artifact-missing-version",
+      "category": "identity",
+      "ruleId": "v2-version-stamp",
+      "input": { "namespace": "dashboard/public/v2/2.0.0/", "methodologyVersion": null },
+      "expectedValid": false,
+      "expectedReasonCode": "v2-version-missing"
+    },
+    {
+      "id": "volatile-metadata-changes-canonical-hash",
+      "category": "canonicalization",
+      "ruleId": "canonical-reproduction",
+      "input": { "payloadA": { "b": 2, "a": 1, "generatedAt": "2026-08-01T00:00:00.000Z" }, "payloadB": { "generatedAt": "2026-08-02T00:00:00.000Z", "a": 1, "b": 2 }, "excludedViewFields": [], "sameCanonicalHash": false },
+      "expectedValid": false,
+      "expectedReasonCode": "volatile-field-not-excluded"
+    },
+    {
+      "id": "adversarial-assessed-enum-without-value",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": { "schemaDefinition": "enumAssessment", "invariantId": "INV-ASSESS-001", "record": { "status": "assessed", "evidenceRefs": ["evidence-1"] } },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-ASSESS-001"
+    },
+    {
+      "id": "adversarial-unknown-enum-with-value",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": { "schemaDefinition": "enumAssessment", "invariantId": "INV-ASSESS-002", "record": { "status": "unknown", "value": "implemented", "reason": "not observed", "evidenceRefs": [] } },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-ASSESS-002"
+    },
+    {
+      "id": "adversarial-independent-class-with-zero-origins",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "originEvidence",
+        "invariantId": "INV-ORIGIN-001",
+        "record": {
+          "status": "assessed", "assessmentVersion": 1, "evidenceClass": "corroborated-independent-nonconflicting",
+          "specificOriginIds": ["origin-source-a", "origin-source-b"], "reportingSourceIds": ["reporting-source-outlet-a", "reporting-source-outlet-b"],
+          "originatingAssertionIds": ["assertion-direct-a", "assertion-direct-b"], "reportingOriginIds": ["origin-source-a", "origin-source-b"],
+          "independenceGroupIds": ["independence-group-a", "independence-group-b"],
+          "provenanceEdgeIds": ["origin-edge-a-1", "origin-edge-a-2", "origin-edge-a-3", "origin-edge-a-4", "origin-edge-b-1", "origin-edge-b-2", "origin-edge-b-3", "origin-edge-b-4"],
+          "independentOriginCount": 0, "conflicting": false, "evidenceRefs": ["evidence-1"], "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+        }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-ORIGIN-001"
+    },
+    {
+      "id": "adversarial-unknown-status-with-resolved-origin",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "originEvidence",
+        "invariantId": "INV-ORIGIN-001",
+        "record": {
+          "status": "unknown", "assessmentVersion": 1, "evidenceClass": "resolved-single-origin-nonconflicting",
+          "specificOriginIds": ["origin-source-a"], "reportingSourceIds": ["reporting-source-outlet-a"], "originatingAssertionIds": ["assertion-direct-a"],
+          "reportingOriginIds": ["origin-source-a"], "independenceGroupIds": ["independence-group-a"],
+          "provenanceEdgeIds": ["origin-edge-a-1", "origin-edge-a-2", "origin-edge-a-3", "origin-edge-a-4"],
+          "independentOriginCount": 1, "conflicting": false, "reason": "unresolved", "evidenceRefs": ["evidence-1"], "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+        }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-ORIGIN-001"
+    },
+    {
+      "id": "adversarial-automatic-assignment-without-rule-or-cluster",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "assignment", "invariantId": "INV-ASSIGN-001",
+        "record": { "recordType": "assignment", "methodologyVersion": "2.0.0", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "assignmentVersion": 1, "assignmentId": "asn-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "candidateId": "cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "decisionMode": "deterministic-automatic", "decision": "join", "decidedAt": "2026-08-01T12:00:00.000Z", "decidedBy": "validator", "evidenceRefs": ["evidence-1"], "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-ASSIGN-001"
+    },
+    {
+      "id": "adversarial-continuing-transition-marked-material",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "lifecycleTransition", "invariantId": "INV-LIFE-002",
+        "record": { "state": "continuing", "assessmentStatus": "assessed", "transitionVersion": 2, "effectiveAt": "2026-08-01T13:00:00.000Z", "material": true, "evidenceRefs": ["evidence-1"], "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0" }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-LIFE-002"
+    },
+    {
+      "id": "adversarial-escalating-transition-marked-nonmaterial",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "lifecycleTransition", "invariantId": "INV-LIFE-002",
+        "record": { "state": "escalating", "assessmentStatus": "assessed", "transitionVersion": 2, "effectiveAt": "2026-08-01T13:00:00.000Z", "material": false, "evidenceRefs": ["evidence-1"], "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "materialTransitionProvenanceId": "prov-sha256-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0" }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-LIFE-002"
+    },
+    {
+      "id": "adversarial-eligible-reading-with-exclusion-and-no-window",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "instrumentReading", "invariantId": "INV-MARKET-001",
+        "record": { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "instrumentId": "brent", "instrumentSetVersion": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "conditioningKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc|3", "asOf": "2026-07-31", "actualWindowObservationCount": 6, "availabilityAt": { "status": "unknown", "reliability": "unknown", "reason": "date only", "evidenceRefs": [] }, "observationAgeCalendarDays": 1, "businessDayAge": 1, "freshnessStatus": "fresh", "transform": 0.1, "zScoreAssessment": "assessed", "zScore": 2, "absoluteZScore": 2, "eligibilityStatus": "eligible", "eligible": true, "exclusionReason": "missing" }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-MARKET-001"
+    },
+    {
+      "id": "adversarial-assessed-market-with-null-statistic-and-empty-cohort",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "marketChannelOutput", "invariantId": "INV-MARKET-003",
+        "record": { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "conflict-escalation", "status": "assessed", "freshnessStatus": "fresh", "evaluationDate": "2026-08-01", "marketAsOf": null, "instrumentSetVersion": null, "conditioningKey": null, "eligibleInstrumentCount": 0, "minimumEligibleInstrumentCount": 3, "includedInstrumentReadings": [], "excludedInstrumentIds": [], "marketStatistic": null, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 0, "percentileThreshold": null, "elevated": null, "driverInstrumentId": null, "driverZ": null, "secondDriverInstrumentId": null, "secondDriverZ": null, "numberAbovePercentileThreshold": null, "numberAboveRawDiagnosticThreshold": null, "breadthRatio": null, "reasonCodes": [] }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-MARKET-003"
+    },
+    {
+      "id": "adversarial-assessed-divergence-with-inconsistent-state",
+      "category": "schema",
+      "ruleId": "schema-adversarial-record",
+      "input": {
+        "schemaDefinition": "divergenceChannelOutput", "invariantId": "INV-DIV-001",
+        "record": { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "conflict-escalation", "status": "assessed", "state": "calm", "signalElevated": true, "marketElevated": true, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": "2026-07-31", "reasonCodes": [] }
+      },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-DIV-001"
+    },
+    {
+      "id": "normalization-version-mismatch-cannot-auto-assign",
+      "category": "normalization",
+      "ruleId": "normalization-auto-assignment",
+      "input": { "leftVersion": "crucix-session15-conservative-normalization/v1", "rightVersion": "other-normalization/v1", "leftHash": "495830f7f0fea319beda3916c6b75f9b05895f7c08525b31d46bb5012122fb4e", "rightHash": "495830f7f0fea319beda3916c6b75f9b05895f7c08525b31d46bb5012122fb4e", "decisionMode": "deterministic-automatic" },
+      "expectedValid": false,
+      "expectedReasonCode": "normalization-version-mismatch"
+    },
+    {
+      "id": "malformed-normalized-content-hash",
+      "category": "normalization",
+      "ruleId": "normalization-auto-assignment",
+      "input": { "leftVersion": "crucix-session15-conservative-normalization/v1", "rightVersion": "crucix-session15-conservative-normalization/v1", "leftHash": "NOT-A-SHA256", "rightHash": "NOT-A-SHA256", "decisionMode": "deterministic-automatic" },
+      "expectedValid": false,
+      "expectedReasonCode": "malformed-normalized-content-hash"
+    },
+    {
+      "id": "incorrect-normalized-content-hash",
+      "category": "normalization",
+      "ruleId": "normalization-hash-reproduction",
+      "input": { "normalizationVersion": "crucix-session15-conservative-normalization/v1", "rawInput": "Alpha alert", "recordedHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+      "expectedValid": false,
+      "expectedReasonCode": "normalized-content-hash-mismatch"
+    },
+    {
+      "id": "ambiguous-normalized-match-requires-adjudication",
+      "category": "clustering",
+      "ruleId": "ambiguous-match-adjudication",
+      "input": { "normalizationVersionEqual": true, "normalizedHashEqual": true, "assessedIncidentFieldConflict": true, "decisionMode": "deterministic-automatic", "proposalPersisted": false },
+      "expectedValid": false,
+      "expectedReasonCode": "ambiguous-match-not-adjudicated"
+    },
+    {
+      "id": "origin-topology-dangling-edge",
+      "category": "origin-topology",
+      "ruleId": "origin-topology-integrity",
+      "input": { "nodeIds": ["candidate-a", "reporter-a"], "edges": [{ "from": "candidate-a", "to": "missing-assertion", "type": "reporter-reports-assertion" }] },
+      "expectedValid": false,
+      "expectedReasonCode": "origin-edge-dangling"
+    },
+    {
+      "id": "origin-topology-circular-derivation",
+      "category": "origin-topology",
+      "ruleId": "origin-topology-integrity",
+      "input": { "nodeIds": ["origin-a", "origin-b"], "edges": [{ "from": "origin-a", "to": "origin-b", "type": "derived-from" }, { "from": "origin-b", "to": "origin-a", "type": "derived-from" }] },
+      "expectedValid": false,
+      "expectedReasonCode": "origin-edge-cycle"
+    },
+    {
+      "id": "origin-topology-broken-self-edge",
+      "category": "origin-topology",
+      "ruleId": "origin-topology-integrity",
+      "input": { "nodeIds": ["origin-a"], "edges": [{ "from": "origin-a", "to": "origin-a", "type": "syndicated-from" }] },
+      "expectedValid": false,
+      "expectedReasonCode": "origin-edge-self-reference"
+    },
+    {
+      "id": "complete-event-cluster-invalid-chronology",
+      "category": "complete-record",
+      "ruleId": "complete-record-mutation",
+      "input": { "sourceFixtureId": "complete-end-to-end-v2-bundle", "recordPath": "registry.eventClusters.0", "schemaDefinition": "eventCluster", "set": { "firstSeen": "2026-08-02T12:00:00.000Z" }, "invariantId": "INV-LIFE-001" },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-LIFE-001"
+    },
+    {
+      "id": "complete-instrument-reading-missing-history-count",
+      "category": "complete-record",
+      "ruleId": "complete-record-mutation",
+      "input": { "sourceFixtureId": "complete-end-to-end-v2-bundle", "recordPath": "marketOutput.channels.0.includedInstrumentReadings.0", "schemaDefinition": "instrumentReading", "deletePaths": ["historyCount"], "invariantId": "INV-MARKET-002" },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-MARKET-002"
+    },
+    {
+      "id": "complete-instrument-reading-malformed-window-date",
+      "category": "complete-record",
+      "ruleId": "complete-record-mutation",
+      "input": { "sourceFixtureId": "complete-end-to-end-v2-bundle", "recordPath": "marketOutput.channels.0.includedInstrumentReadings.0", "schemaDefinition": "instrumentReading", "set": { "windowStart": "not-a-date" }, "invariantId": "INV-MARKET-001" },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-MARKET-001"
+    },
+    {
+      "id": "complete-instrument-reading-chronology-invalid",
+      "category": "complete-record",
+      "ruleId": "complete-record-mutation",
+      "input": { "sourceFixtureId": "complete-end-to-end-v2-bundle", "recordPath": "marketOutput.channels.0.includedInstrumentReadings.0", "schemaDefinition": "instrumentReading", "set": { "instrumentObservationDates": ["2026-07-24", "2026-07-28", "2026-07-27", "2026-07-29", "2026-07-30", "2026-07-31"] }, "invariantId": "INV-MARKET-001" },
+      "expectedValid": false,
+      "expectedReasonCode": "INV-MARKET-001"
+    },
+    {
+      "id": "canonical-sequence-history-out-of-order",
+      "category": "canonicalization",
+      "ruleId": "canonical-sequence-order",
+      "input": { "property": "lifecycleHistory", "sequence": [{ "effectiveAt": "2026-08-02T12:00:00.000Z", "transitionVersion": 2 }, { "effectiveAt": "2026-08-01T12:00:00.000Z", "transitionVersion": 1 }], "mustRejectRatherThanSort": true },
+      "expectedValid": false,
+      "expectedReasonCode": "canonical-sequence-order-invalid"
+    }
+  ]
+}

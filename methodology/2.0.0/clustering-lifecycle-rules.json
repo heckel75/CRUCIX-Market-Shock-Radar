@@ -1,0 +1,118 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-clustering-lifecycle-rules/v1",
+  "normalizedContentIdentity": {
+    "normalizationVersion": "crucix-session15-conservative-normalization/v1",
+    "normativeImplementation": "String(rawText).normalize('NFKC').replace(/\\r\\n?/g, '\\n').trim().replace(/\\s+/gu, ' ')",
+    "inputContract": "rawText is the exact extracted candidate string. Its JavaScript String value is normalized; no parsing, decoding, fetching, or URL canonicalization occurs.",
+    "unicodeHandling": "Apply ECMAScript String.prototype.normalize with NFKC exactly once before all other transformations.",
+    "caseHandling": "Preserve case. A lowercase comparison copy used by historical diagnostics is not the normalized-content automatic-match identity.",
+    "lineEndingHandling": "Replace CRLF and lone CR with LF; the later Unicode-whitespace collapse converts every remaining whitespace run, including LF, to one ASCII space.",
+    "whitespaceHandling": "Trim leading and trailing whitespace, then replace each ECMAScript Unicode /\\s+/gu run with one U+0020 SPACE.",
+    "punctuationHandling": "Preserve punctuation, numbers, negation, named entities, attribution, emoji, and symbols after NFKC; do not strip or rewrite them.",
+    "urlHandling": "Preserve URLs byte-for-byte after NFKC and whitespace normalization; do not lowercase, decode, resolve, remove parameters, or follow redirects.",
+    "prohibitedTransformations": ["translation", "summarization", "completion", "de-attribution", "spell repair", "punctuation stripping", "case folding", "URL canonicalization"],
+    "hashInput": "The exact UTF-8 bytes, without BOM or terminal newline insertion, of the normalized JavaScript string.",
+    "hash": { "algorithm": "sha256", "encoding": "lowercase hexadecimal", "length": 64 },
+    "retention": "normalized content may be retained only in approved private evidence storage after source-terms, licensing, and privacy review; canonical/public records must retain normalizationVersion and normalizedContentHash even when normalized text is not retained",
+    "automaticMatchRequirement": "Both records must have normalizationVersion exactly equal to crucix-session15-conservative-normalization/v1 and normalizedContentHash exactly equal. A hash match under a missing or different version is not an automatic match."
+  },
+  "clustering": {
+    "scoringUnit": "event-cluster",
+    "candidateIdentityRetention": "Every raw candidate remains immutable and addressable after assignment, merge, split, alias, correction, or decomposition.",
+    "atomicity": "A cluster represents one incident. A source record containing multiple separable incidents is retained as a decomposed parent and produces immutable child candidates. If safe decomposition is not possible, disposition is unresolved-multi-incident and it is excluded from scoring.",
+    "automaticJoin": {
+      "allowedRuleIds": [
+        "exact-source-incident-id",
+        "exact-normalized-content-hash"
+      ],
+      "allowedOnlyWhen": [
+        "an immutable source incident identifier exactly matches and assessed actor, action, target, location, and incident time do not conflict",
+        "normalizationVersion and normalizedContentHash exactly match under crucix-session15-conservative-normalization/v1 and no assessed incident field conflicts"
+      ],
+      "prohibitedMethods": [
+        "fuzzy text similarity",
+        "embedding similarity",
+        "token overlap or edit distance",
+        "undocumented semantic or model-only matching"
+      ],
+      "confidenceScalar": null,
+      "similarityThreshold": null,
+      "timeWindow": null,
+      "locationWindow": null
+    },
+    "ambiguousJoin": "Persist a proposal and require assisted-human-confirmed or human disposition. No unrecorded model decision is valid.",
+    "deterministicTieOrder": [
+      "exact immutable incident identifier",
+      "exact normalized content hash",
+      "eventClusterId ascending"
+    ],
+    "tieOrderConstraint": "Lexical ordering makes recorded equal-evidence choices reproducible; it never converts unresolved evidence into a high-confidence match.",
+    "nonReuse": "Event-cluster and parent-series IDs are stable opaque identifiers and are never reused."
+  },
+  "lineage": {
+    "operations": [
+      "assignment",
+      "reassignment",
+      "merge",
+      "split",
+      "alias",
+      "supersession",
+      "correction",
+      "retraction",
+      "decomposition"
+    ],
+    "appendOnly": true,
+    "requiredFields": [
+      "provenanceId",
+      "operation",
+      "subjectIds",
+      "resultIds",
+      "decidedAt",
+      "decidedBy",
+      "reason",
+      "methodologyVersion"
+    ]
+  },
+  "lifecycle": {
+    "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+    "states": [
+      "new",
+      "escalating",
+      "continuing",
+      "de-escalating"
+    ],
+    "lastMaterialChangeAt": "Maximum reliable timestamp among the cluster's persisted material lifecycle transitions. It is not the latest mention or observation time.",
+    "materialChange": "A persisted change to action stage, operational scope, direct mechanism, correction state, or explicit de-escalation supported by evidence.",
+    "nonMaterialRepeat": "Repeated coverage without a material change can update lastObservedAt but cannot update lastMaterialChangeAt.",
+    "chronologyInvariants": [
+      "firstSeen must be less than or equal to lastObservedAt",
+      "lastMaterialChangeAt must be between firstSeen and lastObservedAt inclusive",
+      "lifecycleHistory effectiveAt values and transitionVersion values must be strictly monotonic",
+      "a continuing transition is nonmaterial and cannot change lastMaterialChangeAt",
+      "new, escalating, and de-escalating transitions are material and require explicit materialTransitionProvenanceId"
+    ],
+    "signalEligibility": {
+      "new": true,
+      "escalating": true,
+      "continuing": false,
+      "de-escalating": true
+    },
+    "noDecayOrExpiry": "Continuing clusters remain visible in the registry but do not elevate without a recorded material transition. No time-based decay, expiry, stale interval, or inferred de-escalation exists in 2.0.0."
+  },
+  "signalSelection": {
+    "structuralRequirements": [
+      "event type assessed as one of the five leaves",
+      "candidate disposition resolved to atomic-event-observation",
+      "action stage implemented or impact-observed",
+      "lifecycle new, escalating, or de-escalating",
+      "E2 origin evidence qualifies",
+      "at least one assessed direct mechanism maps to the channel",
+      "correction state original or corrected"
+    ],
+    "announcedHandling": "Announced, rhetoric, and threatened events remain visible but are non-elevating.",
+    "contribution": "A qualifying event cluster contributes at most once to a channel in a run, regardless of candidate count, mechanism count, or report count.",
+    "ranking": "Within each channel, sort qualifying clusters by action-stage ordinal descending and eventClusterId ascending. Expose all clusters tied on action-stage ordinal; the ID key selects a deterministic leader only.",
+    "scalarScore": null
+  }
+}

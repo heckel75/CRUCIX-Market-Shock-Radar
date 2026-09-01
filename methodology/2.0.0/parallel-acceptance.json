@@ -1,0 +1,70 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-parallel-acceptance/v1",
+  "candidateStatus": "not-authorized-for-cutover",
+  "minimumWindow": {
+    "distinctEligibleMarketCloses": 30,
+    "countingRule": "Count a close once only when all five channels have an assessed or explicitly insufficient-conditioned-history record under the frozen input contract; repeated runs for one close do not add observations.",
+    "extension": "The window extends whenever a required assessment is missing, evidence integrity is unresolved, regime coverage is judged inadequate, or a deterministic discrepancy remains unexplained. Thirty closes is a minimum, never a forced completion point."
+  },
+  "requiredGates": [
+    {
+      "gateId": "PA-01",
+      "requirement": "All methodology artifacts, references, fixtures, canonical hashes, and evidence identities pass the Session 17 validator.",
+      "failureEffect": "blocks implementation and cutover"
+    },
+    {
+      "gateId": "PA-02",
+      "requirement": "Every repeated run over identical canonical inputs is byte-identical after exclusion of no fields; acquisition time belongs to the input manifest.",
+      "failureEffect": "blocks cutover and requires explanation or rejection"
+    },
+    {
+      "gateId": "PA-03",
+      "requirement": "No legacy, production, workflow, project-log, public, or private frozen-evidence path is modified by v2 execution.",
+      "failureEffect": "blocks implementation and cutover"
+    },
+    {
+      "gateId": "PA-04",
+      "requirement": "All automatic cluster joins satisfy an allowed exact-match rule; every ambiguous proposal is persisted and human-confirmed or remains excluded.",
+      "failureEffect": "blocks cutover"
+    },
+    {
+      "gateId": "PA-05",
+      "requirement": "Raw candidate identity, assignment history, cluster lineage, corrections, and input/configuration hashes are recoverable for every run.",
+      "failureEffect": "blocks cutover"
+    },
+    {
+      "gateId": "PA-06",
+      "requirement": "Signal, market, and divergence outputs expose typed pending, insufficient, and unknown states without fallback or causal wording.",
+      "failureEffect": "blocks cutover"
+    },
+    {
+      "gateId": "PA-07",
+      "requirement": "Observed channel coverage, threshold availability, trigger rates, set transitions, driver concentration, breadth, signal selection, and divergence-state counts are reported for the complete window without post-freeze tuning.",
+      "failureEffect": "may extend the window or reject 2.0.0"
+    },
+    {
+      "gateId": "PA-08",
+      "requirement": "A reviewer independent of this first freeze pass reruns the post-freeze validator and signs the artifact/evidence identities before Session 18 begins.",
+      "failureEffect": "blocks Session 18 implementation and cutover"
+    },
+    {
+      "gateId": "PA-09",
+      "requirement": "Deferred durable-storage, retention, and recovery controls are resolved before any public cutover.",
+      "failureEffect": "does not block isolated implementation; blocks cutover"
+    }
+  ],
+  "decisionOutcomes": {
+    "accept": "Only after every gate passes and a separate cutover authorization is recorded.",
+    "extend": "Continue parallel observations without changing frozen parameters when evidence is insufficient or unstable.",
+    "reject": "Issue a new methodology version; do not silently patch 2.0.0 or back-edit its evidence."
+  },
+  "preImplementationGate": "This first-pass validation does not satisfy PA-08. Session 18 may begin only after the separately recorded independent post-freeze validation passes.",
+  "explicitNonAcceptance": [
+    "reaching 30 closes by itself",
+    "matching legacy labels",
+    "achieving a preferred trigger rate",
+    "a favorable narrative interpretation",
+    "manual inspection without persisted results"
+  ]
+}

@@ -1,0 +1,1226 @@
+{
+  "recordType": "pa08-independent-validation",
+  "schemaVersion": "crucix-session17-independent-validation/v1",
+  "methodologyVersion": "2.0.0",
+  "decision": "FAIL",
+  "independentResultState": "fixed-before-first-validator-execution",
+  "independenceStatement": "Authored and executed without importing, executing, or inspecting the logic/report of audit/session17/validate-freeze.mjs; only opaque hashes of those two files were included in the mutation boundary.",
+  "repository": {
+    "branch": "master",
+    "head": "bfce08feece67444ce7fd98ea6fe2b42d15eea24",
+    "shortHead": "bfce08f",
+    "originMaster": "bfce08feece67444ce7fd98ea6fe2b42d15eea24",
+    "staged": "",
+    "statusAtStart": "?? audit/session16/\n?? audit/session17/\n?? methodology/",
+    "untrackedAtStart": [
+      "audit/session16/channel-date-eligibility.jsonl",
+      "audit/session16/channel-statistics.jsonl",
+      "audit/session16/fetch-freeze-market-inputs.mjs",
+      "audit/session16/input-manifest.json",
+      "audit/session16/instrument-observations.jsonl",
+      "audit/session16/instrument-transforms.jsonl",
+      "audit/session16/market-audit-report.md",
+      "audit/session16/metrics.json",
+      "audit/session16/raw-market-inputs/banks--KBE.normalized.json",
+      "audit/session16/raw-market-inputs/banks--KBE.raw.json",
+      "audit/session16/raw-market-inputs/brent--DCOILBRENTEU.normalized.json",
+      "audit/session16/raw-market-inputs/brent--DCOILBRENTEU.raw.json",
+      "audit/session16/raw-market-inputs/broad-commodities--DBC.normalized.json",
+      "audit/session16/raw-market-inputs/broad-commodities--DBC.raw.json",
+      "audit/session16/raw-market-inputs/broad-usd--DTWEXBGS.normalized.json",
+      "audit/session16/raw-market-inputs/broad-usd--DTWEXBGS.raw.json",
+      "audit/session16/raw-market-inputs/defense-equities--ITA.normalized.json",
+      "audit/session16/raw-market-inputs/defense-equities--ITA.raw.json",
+      "audit/session16/raw-market-inputs/em-equities--EEM.normalized.json",
+      "audit/session16/raw-market-inputs/em-equities--EEM.raw.json",
+      "audit/session16/raw-market-inputs/gold--GLD.normalized.json",
+      "audit/session16/raw-market-inputs/gold--GLD.raw.json",
+      "audit/session16/raw-market-inputs/high-yield-spreads--BAMLH0A0HYM2.normalized.json",
+      "audit/session16/raw-market-inputs/high-yield-spreads--BAMLH0A0HYM2.raw.json",
+      "audit/session16/raw-market-inputs/industrials--XLI.normalized.json",
+      "audit/session16/raw-market-inputs/industrials--XLI.raw.json",
+      "audit/session16/raw-market-inputs/inflation-expectations--T10YIE.normalized.json",
+      "audit/session16/raw-market-inputs/inflation-expectations--T10YIE.raw.json",
+      "audit/session16/raw-market-inputs/semiconductors--SOXX.normalized.json",
+      "audit/session16/raw-market-inputs/semiconductors--SOXX.raw.json",
+      "audit/session16/raw-market-inputs/ten-year-treasury--DGS10.normalized.json",
+      "audit/session16/raw-market-inputs/ten-year-treasury--DGS10.raw.json",
+      "audit/session16/raw-market-inputs/vix--VIXCLS.normalized.json",
+      "audit/session16/raw-market-inputs/vix--VIXCLS.raw.json",
+      "audit/session16/raw-market-inputs/wti--DCOILWTICO.normalized.json",
+      "audit/session16/raw-market-inputs/wti--DCOILWTICO.raw.json",
+      "audit/session16/run-market-audit.mjs",
+      "audit/session16/signal-market-timing.jsonl",
+      "audit/session16/tables/01-source-instrument-inventory.json",
+      "audit/session16/tables/02-latest-and-missing-date-distribution.json",
+      "audit/session16/tables/03-five-valid-observation-span-distribution.json",
+      "audit/session16/tables/04-own-series-versus-legacy-global.json",
+      "audit/session16/tables/05-channel-dating-age-gap-coverage.json",
+      "audit/session16/tables/06-exclusions-and-eligible-counts.json",
+      "audit/session16/tables/07-instrument-set-transition-matrix.json",
+      "audit/session16/tables/08-channel-M-distributions.json",
+      "audit/session16/tables/09-raw-trigger-rates.json",
+      "audit/session16/tables/10-attainable-alpha-curves.jsonl",
+      "audit/session16/tables/11-expanding-rolling-history-sensitivity.jsonl",
+      "audit/session16/tables/12-pooled-same-set-count-conditioned.json",
+      "audit/session16/tables/13-fallback-availability-state-impact.json",
+      "audit/session16/tables/14-primary-second-driver-frequency.json",
+      "audit/session16/tables/15-single-versus-multi-instrument-moves.json",
+      "audit/session16/tables/16-breadth-and-eligible-count-sensitivity.json",
+      "audit/session16/tables/17-threshold-candidate-disagreements.jsonl",
+      "audit/session16/tables/18-signal-market-timing-counts.json",
+      "audit/session16/tables/19-historical-release-vintage-unavailable.json",
+      "audit/session16/tables/20-session17-configuration-candidates.json",
+      "audit/session16/tables/configuration-to-statistic-series-map.json",
+      "audit/session16/tables/instrument-trailing-history-coverage.json",
+      "audit/session16/tables/legacy-calculation-reproduction.json",
+      "audit/session16/threshold-results.jsonl",
+      "audit/session17/decision-register.json",
+      "audit/session17/deferred-items.json",
+      "audit/session17/freeze-report.md",
+      "audit/session17/independent-validation-report.md",
+      "audit/session17/independent-validation-results.json",
+      "audit/session17/parameter-traceability.json",
+      "audit/session17/validate-freeze.mjs",
+      "audit/session17/validate-independent.mjs",
+      "audit/session17/validation-report.md",
+      "methodology/2.0.0/README.md",
+      "methodology/2.0.0/clustering-lifecycle-rules.json",
+      "methodology/2.0.0/enums.json",
+      "methodology/2.0.0/fixtures/negative.json",
+      "methodology/2.0.0/fixtures/positive.json",
+      "methodology/2.0.0/leaf-channel-map.json",
+      "methodology/2.0.0/manifest.json",
+      "methodology/2.0.0/parallel-acceptance.json",
+      "methodology/2.0.0/parameters.json",
+      "methodology/2.0.0/schema.json",
+      "methodology/2.0.0/source-origin-rules.json",
+      "methodology/2.0.0/storage-migration-contract.json"
+    ],
+    "ahead": 0,
+    "behind": 0
+  },
+  "identities": {
+    "manifestCanonicalSelf": "809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33",
+    "artifactIdentityCount": 11,
+    "evidenceIdentityCount": 50,
+    "artifactFailures": [],
+    "evidenceFailures": [],
+    "productionFailures": [],
+    "session15": {
+      "physicalManifestSha256": "95fe87b181f4a714a4571960fc6fca03fa62c96a94b82b4920c0a471a5767f0c",
+      "canonicalSelfSha256": "3a864319add335d4f2fb3550fa8b865a6282d29f4a37819200e516106cdf3651",
+      "preservationFiles": 11,
+      "preservationBytes": 597000
+    },
+    "session16": {
+      "physicalManifestSha256": "7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6",
+      "canonicalSelfSha256": "308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d",
+      "frozenFileCount": 62
+    }
+  },
+  "signal": {
+    "candidateAndAssignmentCounts": {
+      "fidelityB": 1153,
+      "fidelityC": 64,
+      "chronologyEligible": 1153,
+      "chronologyIneligible": 64,
+      "uniqueNormalizedB": 319,
+      "duplicateExcessB": 834,
+      "manualAuditRows": 428,
+      "finalAssignmentRows": 428,
+      "accepted": 327,
+      "unresolved": 101
+    },
+    "selectedRule": {
+      "candidateFamily": "Candidate C (structural eligibility plus ranking only)",
+      "evidenceFamily": "E2: single-origin or corroborated-independent; unknown provenance excluded",
+      "minimumIndependentOriginsForCorroboration": 2,
+      "minimumActionStageOrdinal": 3,
+      "includedStages": [
+        "implemented",
+        "impact-observed"
+      ],
+      "qualifyingLifecycleStates": [
+        "new",
+        "escalating",
+        "de-escalating"
+      ],
+      "directMechanismRequired": true,
+      "maximumClusterContributionPerChannelPerRun": 1,
+      "ranking": "action stage descending, eventClusterId ascending"
+    },
+    "recomputed": {
+      "qualifyingClusterRunChannelRows": 82,
+      "distinctQualifyingClusters": 62,
+      "channelCounts": {
+        "conflict-escalation": 55,
+        "credit-stress": 2,
+        "energy-disruption": 6,
+        "sanctions-policy": 6,
+        "supply-chain": 13
+      },
+      "activeRunChannelCells": 140,
+      "nonzeroCells": 36,
+      "zeroOneMultiple": {
+        "zero": 104,
+        "one": 23,
+        "multiple": 13
+      },
+      "rankingTieCells": 10,
+      "topRankTieCells": 9
+    },
+    "storedCrossCheck": {
+      "qualifyingClusterRunChannelRows": 82,
+      "channelBreadth": {
+        "denominatorActiveRunChannelCells": 140,
+        "meanQualifyingClusterCountPerActiveRunChannel": 0.585714,
+        "medianQualifyingClusterCountPerActiveRunChannel": 0,
+        "maximumQualifyingClusterCountPerActiveRunChannel": 8,
+        "zeroOneMultipleDistribution": {
+          "zero": 104,
+          "one": 23,
+          "multiple": 13
+        },
+        "exactCountDistribution": {
+          "0": 104,
+          "1": 23,
+          "2": 3,
+          "3": 4,
+          "6": 2,
+          "7": 3,
+          "8": 1
+        }
+      },
+      "rankingTieCells": 10,
+      "topRankTieCells": 9,
+      "eligibilityIdenticalToStructuralVariant": true
+    },
+    "assessmentDiagnostics": {
+      "eventClusterAssessments": 123,
+      "eventTypes": {
+        "armed-conflict-action": 78,
+        "energy-system-event": 9,
+        "policy-restriction-action": 5,
+        "production-logistics-event": 11,
+        "typed-unknown": 20
+      },
+      "directMechanismOpportunities": {
+        "energy-supply-disruption": 14,
+        "funding-credit-transmission": 6,
+        "production-transport-bottleneck": 23,
+        "security-risk-repricing": 88,
+        "trade-asset-access-restriction": 9
+      },
+      "corroboration": {
+        "conflicting": 1,
+        "corroborated-independent": 4,
+        "single-origin": 97,
+        "unknown-origin": 21
+      },
+      "exactIndependentCount": {
+        "assessed": 102,
+        "unknown": 21
+      },
+      "continuingNonmaterialRepeats": 184
+    }
+  },
+  "market": {
+    "observations": 8669,
+    "instruments": 14,
+    "transforms": 8599,
+    "maximumTransformError": 0,
+    "maximumZScoreError": 0,
+    "channels": {
+      "conflict-escalation": {
+        "configurationId": "config-925f49fec21a27358c47",
+        "statisticSeriesId": "statistic-series-076634ccc273e002e924",
+        "evaluationDates": 391,
+        "assessedEvaluationDates": 379,
+        "unassessedEvaluationDates": 12,
+        "distinctMarketObservations": 361,
+        "eligibleInstrumentCountDistribution": {
+          "3": 11,
+          "4": 350
+        },
+        "rawDiagnostic": {
+          "threshold": 1.5,
+          "triggers": 158,
+          "rate": 0.4376731301939058
+        },
+        "conditionedNearestRank": {
+          "alpha": 0.2,
+          "priorOnly": true,
+          "minimumHistory": 126,
+          "rollingMaximum": 252,
+          "strictGreaterThan": true,
+          "available": 224,
+          "insufficient": 137,
+          "triggers": 56,
+          "triggerRateWhenAvailable": 0.25,
+          "equalityTies": 0
+        }
+      },
+      "credit-stress": {
+        "configurationId": "config-b0d071b0d0ee34724409",
+        "statisticSeriesId": "statistic-series-094b503b2dec0e0b18c6",
+        "evaluationDates": 391,
+        "assessedEvaluationDates": 379,
+        "unassessedEvaluationDates": 12,
+        "distinctMarketObservations": 362,
+        "eligibleInstrumentCountDistribution": {
+          "2": 5,
+          "3": 357
+        },
+        "rawDiagnostic": {
+          "threshold": 1.5,
+          "triggers": 69,
+          "rate": 0.19060773480662985
+        },
+        "conditionedNearestRank": {
+          "alpha": 0.2,
+          "priorOnly": true,
+          "minimumHistory": 126,
+          "rollingMaximum": 252,
+          "strictGreaterThan": true,
+          "available": 231,
+          "insufficient": 131,
+          "triggers": 46,
+          "triggerRateWhenAvailable": 0.19913419913419914,
+          "equalityTies": 0
+        }
+      },
+      "energy-disruption": {
+        "configurationId": "config-33bfac40784ae6195a7d",
+        "statisticSeriesId": "statistic-series-4d4993bcf8648987b7c9",
+        "evaluationDates": 391,
+        "assessedEvaluationDates": 376,
+        "unassessedEvaluationDates": 15,
+        "distinctMarketObservations": 353,
+        "eligibleInstrumentCountDistribution": {
+          "2": 7,
+          "3": 346
+        },
+        "rawDiagnostic": {
+          "threshold": 1.5,
+          "triggers": 108,
+          "rate": 0.3059490084985836
+        },
+        "conditionedNearestRank": {
+          "alpha": 0.2,
+          "priorOnly": true,
+          "minimumHistory": 126,
+          "rollingMaximum": 252,
+          "strictGreaterThan": true,
+          "available": 220,
+          "insufficient": 133,
+          "triggers": 58,
+          "triggerRateWhenAvailable": 0.2636363636363636,
+          "equalityTies": 0
+        }
+      },
+      "sanctions-policy": {
+        "configurationId": "config-d850c6ef2a0bd7f88612",
+        "statisticSeriesId": "statistic-series-a6dbd8d1dc809b452a78",
+        "evaluationDates": 391,
+        "assessedEvaluationDates": 379,
+        "unassessedEvaluationDates": 12,
+        "distinctMarketObservations": 361,
+        "eligibleInstrumentCountDistribution": {
+          "2": 4,
+          "3": 357
+        },
+        "rawDiagnostic": {
+          "threshold": 1.5,
+          "triggers": 117,
+          "rate": 0.32409972299168976
+        },
+        "conditionedNearestRank": {
+          "alpha": 0.2,
+          "priorOnly": true,
+          "minimumHistory": 126,
+          "rollingMaximum": 252,
+          "strictGreaterThan": true,
+          "available": 231,
+          "insufficient": 130,
+          "triggers": 69,
+          "triggerRateWhenAvailable": 0.2987012987012987,
+          "equalityTies": 0
+        }
+      },
+      "supply-chain": {
+        "configurationId": "config-e32a31be376b32a9959c",
+        "statisticSeriesId": "statistic-series-dfb8bdea79eb5cbd261b",
+        "evaluationDates": 391,
+        "assessedEvaluationDates": 379,
+        "unassessedEvaluationDates": 12,
+        "distinctMarketObservations": 361,
+        "eligibleInstrumentCountDistribution": {
+          "2": 361
+        },
+        "rawDiagnostic": {
+          "threshold": 1.5,
+          "triggers": 81,
+          "rate": 0.22437673130193905
+        },
+        "conditionedNearestRank": {
+          "alpha": 0.2,
+          "priorOnly": true,
+          "minimumHistory": 126,
+          "rollingMaximum": 252,
+          "strictGreaterThan": true,
+          "available": 235,
+          "insufficient": 126,
+          "triggers": 73,
+          "triggerRateWhenAvailable": 0.31063829787234043,
+          "equalityTies": 0
+        }
+      }
+    },
+    "timing": {
+      "rows": 140,
+      "qualifying": 36,
+      "definitive": 10,
+      "ambiguous": 26,
+      "signalBeforeClose": 10,
+      "marketMovePrecedingSignal": 4,
+      "signalFollowedByMarketMove": 7,
+      "causalAttributionClaims": 0
+    }
+  },
+  "schemaAudit": {
+    "mutations": [
+      {
+        "id": "assessed-enum-without-value",
+        "definition": "enumAssessment",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "unknown-enum-with-value",
+        "definition": "enumAssessment",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "independent-class-with-zero-origins",
+        "definition": "originEvidence",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "unknown-status-with-resolved-origin",
+        "definition": "originEvidence",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "automatic-assignment-without-rule-or-cluster",
+        "definition": "assignment",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "continuing-transition-marked-material",
+        "definition": "lifecycleTransition",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "escalating-transition-marked-nonmaterial",
+        "definition": "lifecycleTransition",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "eligible-reading-with-exclusion-and-no-window",
+        "definition": "instrumentReading",
+        "admitted": false,
+        "validationErrors": [
+          "$.availabilityAt: expected exactly one oneOf match, found 0"
+        ]
+      },
+      {
+        "id": "assessed-market-with-null-statistic-and-empty-cohort",
+        "definition": "marketChannelOutput",
+        "admitted": true,
+        "validationErrors": []
+      },
+      {
+        "id": "assessed-divergence-with-inconsistent-state",
+        "definition": "divergenceChannelOutput",
+        "admitted": false,
+        "validationErrors": [
+          "$.signalAsOf: expected exactly one oneOf match, found 0"
+        ]
+      }
+    ],
+    "admittedSemanticallyInvalidCount": 8,
+    "structuralGaps": {
+      "candidateRawIdentityHasNormalizedContentHash": false,
+      "candidateHasNormalizedContentHash": false,
+      "eventClusterHasFirstSeen": false,
+      "instrumentReadingRetainsWindowStart": false,
+      "instrumentReadingRetainsWindowEnd": false,
+      "instrumentReadingRetainsHistoryCount": false,
+      "originEvidenceStoresReporterOriginRelationships": false
+    }
+  },
+  "fixtures": {
+    "positive": 37,
+    "negative": 26,
+    "total": 63,
+    "passed": 63,
+    "completeSchemaRecordCases": 0,
+    "failures": []
+  },
+  "traceability": {
+    "measurement": "E2 is the Session 15 recommended evidence family; 101/123 clusters had unresolved independent-source status, making E3's lower-bound unknown path less conservative.",
+    "directUnknownExactCountClusters": 21,
+    "mismatch": true
+  },
+  "constants": {
+    "declaredNumericValues": [
+      "0",
+      "0.2",
+      "0.8",
+      "1",
+      "1.5",
+      "2",
+      "3",
+      "4",
+      "5",
+      "12",
+      "20",
+      "30",
+      "64",
+      "126",
+      "252"
+    ],
+    "usedNumericValues": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "30",
+      "252"
+    ],
+    "undeclared": []
+  },
+  "deferrals": {
+    "pass": true,
+    "itemCount": 6,
+    "failures": []
+  },
+  "checks": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "items": [
+      {
+        "id": "repository-preflight",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "branch": "master",
+          "head": "bfce08feece67444ce7fd98ea6fe2b42d15eea24",
+          "shortHead": "bfce08f",
+          "originMaster": "bfce08feece67444ce7fd98ea6fe2b42d15eea24",
+          "staged": "",
+          "statusAtStart": "?? audit/session16/\n?? audit/session17/\n?? methodology/",
+          "untrackedAtStart": [
+            "audit/session16/channel-date-eligibility.jsonl",
+            "audit/session16/channel-statistics.jsonl",
+            "audit/session16/fetch-freeze-market-inputs.mjs",
+            "audit/session16/input-manifest.json",
+            "audit/session16/instrument-observations.jsonl",
+            "audit/session16/instrument-transforms.jsonl",
+            "audit/session16/market-audit-report.md",
+            "audit/session16/metrics.json",
+            "audit/session16/raw-market-inputs/banks--KBE.normalized.json",
+            "audit/session16/raw-market-inputs/banks--KBE.raw.json",
+            "audit/session16/raw-market-inputs/brent--DCOILBRENTEU.normalized.json",
+            "audit/session16/raw-market-inputs/brent--DCOILBRENTEU.raw.json",
+            "audit/session16/raw-market-inputs/broad-commodities--DBC.normalized.json",
+            "audit/session16/raw-market-inputs/broad-commodities--DBC.raw.json",
+            "audit/session16/raw-market-inputs/broad-usd--DTWEXBGS.normalized.json",
+            "audit/session16/raw-market-inputs/broad-usd--DTWEXBGS.raw.json",
+            "audit/session16/raw-market-inputs/defense-equities--ITA.normalized.json",
+            "audit/session16/raw-market-inputs/defense-equities--ITA.raw.json",
+            "audit/session16/raw-market-inputs/em-equities--EEM.normalized.json",
+            "audit/session16/raw-market-inputs/em-equities--EEM.raw.json",
+            "audit/session16/raw-market-inputs/gold--GLD.normalized.json",
+            "audit/session16/raw-market-inputs/gold--GLD.raw.json",
+            "audit/session16/raw-market-inputs/high-yield-spreads--BAMLH0A0HYM2.normalized.json",
+            "audit/session16/raw-market-inputs/high-yield-spreads--BAMLH0A0HYM2.raw.json",
+            "audit/session16/raw-market-inputs/industrials--XLI.normalized.json",
+            "audit/session16/raw-market-inputs/industrials--XLI.raw.json",
+            "audit/session16/raw-market-inputs/inflation-expectations--T10YIE.normalized.json",
+            "audit/session16/raw-market-inputs/inflation-expectations--T10YIE.raw.json",
+            "audit/session16/raw-market-inputs/semiconductors--SOXX.normalized.json",
+            "audit/session16/raw-market-inputs/semiconductors--SOXX.raw.json",
+            "audit/session16/raw-market-inputs/ten-year-treasury--DGS10.normalized.json",
+            "audit/session16/raw-market-inputs/ten-year-treasury--DGS10.raw.json",
+            "audit/session16/raw-market-inputs/vix--VIXCLS.normalized.json",
+            "audit/session16/raw-market-inputs/vix--VIXCLS.raw.json",
+            "audit/session16/raw-market-inputs/wti--DCOILWTICO.normalized.json",
+            "audit/session16/raw-market-inputs/wti--DCOILWTICO.raw.json",
+            "audit/session16/run-market-audit.mjs",
+            "audit/session16/signal-market-timing.jsonl",
+            "audit/session16/tables/01-source-instrument-inventory.json",
+            "audit/session16/tables/02-latest-and-missing-date-distribution.json",
+            "audit/session16/tables/03-five-valid-observation-span-distribution.json",
+            "audit/session16/tables/04-own-series-versus-legacy-global.json",
+            "audit/session16/tables/05-channel-dating-age-gap-coverage.json",
+            "audit/session16/tables/06-exclusions-and-eligible-counts.json",
+            "audit/session16/tables/07-instrument-set-transition-matrix.json",
+            "audit/session16/tables/08-channel-M-distributions.json",
+            "audit/session16/tables/09-raw-trigger-rates.json",
+            "audit/session16/tables/10-attainable-alpha-curves.jsonl",
+            "audit/session16/tables/11-expanding-rolling-history-sensitivity.jsonl",
+            "audit/session16/tables/12-pooled-same-set-count-conditioned.json",
+            "audit/session16/tables/13-fallback-availability-state-impact.json",
+            "audit/session16/tables/14-primary-second-driver-frequency.json",
+            "audit/session16/tables/15-single-versus-multi-instrument-moves.json",
+            "audit/session16/tables/16-breadth-and-eligible-count-sensitivity.json",
+            "audit/session16/tables/17-threshold-candidate-disagreements.jsonl",
+            "audit/session16/tables/18-signal-market-timing-counts.json",
+            "audit/session16/tables/19-historical-release-vintage-unavailable.json",
+            "audit/session16/tables/20-session17-configuration-candidates.json",
+            "audit/session16/tables/configuration-to-statistic-series-map.json",
+            "audit/session16/tables/instrument-trailing-history-coverage.json",
+            "audit/session16/tables/legacy-calculation-reproduction.json",
+            "audit/session16/threshold-results.jsonl",
+            "audit/session17/decision-register.json",
+            "audit/session17/deferred-items.json",
+            "audit/session17/freeze-report.md",
+            "audit/session17/independent-validation-report.md",
+            "audit/session17/independent-validation-results.json",
+            "audit/session17/parameter-traceability.json",
+            "audit/session17/validate-freeze.mjs",
+            "audit/session17/validate-independent.mjs",
+            "audit/session17/validation-report.md",
+            "methodology/2.0.0/README.md",
+            "methodology/2.0.0/clustering-lifecycle-rules.json",
+            "methodology/2.0.0/enums.json",
+            "methodology/2.0.0/fixtures/negative.json",
+            "methodology/2.0.0/fixtures/positive.json",
+            "methodology/2.0.0/leaf-channel-map.json",
+            "methodology/2.0.0/manifest.json",
+            "methodology/2.0.0/parallel-acceptance.json",
+            "methodology/2.0.0/parameters.json",
+            "methodology/2.0.0/schema.json",
+            "methodology/2.0.0/source-origin-rules.json",
+            "methodology/2.0.0/storage-migration-contract.json"
+          ],
+          "ahead": 0,
+          "behind": 0
+        }
+      },
+      {
+        "id": "methodology-artifact-physical-identities",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "checked": 11,
+          "failures": []
+        }
+      },
+      {
+        "id": "frozen-evidence-physical-identities",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "checked": 50,
+          "failures": []
+        }
+      },
+      {
+        "id": "production-baseline-physical-identities",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "checked": 12,
+          "failures": []
+        }
+      },
+      {
+        "id": "methodology-manifest-canonical-self",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "expected": "809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33",
+          "actual": "809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33"
+        }
+      },
+      {
+        "id": "session16-manifest-canonical-self",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "physical": "7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6",
+          "canonicalSelf": "308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d",
+          "inventoryCount": 14
+        }
+      },
+      {
+        "id": "session15-manifest-and-preservation",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "physicalManifest": "95fe87b181f4a714a4571960fc6fca03fa62c96a94b82b4920c0a471a5767f0c",
+          "canonicalSelf": "3a864319add335d4f2fb3550fa8b865a6282d29f4a37819200e516106cdf3651",
+          "preservationFiles": 11,
+          "preservationBytes": 597000
+        }
+      },
+      {
+        "id": "signal-c-e2-s2-independent-recomputation",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "expected": {
+            "rows": 82,
+            "clusters": 62,
+            "channelCounts": {
+              "conflict-escalation": 55,
+              "credit-stress": 2,
+              "energy-disruption": 6,
+              "sanctions-policy": 6,
+              "supply-chain": 13
+            },
+            "nonzero": 36,
+            "one": 23,
+            "multiple": 13,
+            "ties": 10,
+            "topTies": 9
+          },
+          "observed": {
+            "qualifyingClusterRunChannelRows": 82,
+            "distinctQualifyingClusters": 62,
+            "channelCounts": {
+              "conflict-escalation": 55,
+              "credit-stress": 2,
+              "energy-disruption": 6,
+              "sanctions-policy": 6,
+              "supply-chain": 13
+            },
+            "activeRunChannelCells": 140,
+            "nonzeroCells": 36,
+            "zeroOneMultiple": {
+              "zero": 104,
+              "one": 23,
+              "multiple": 13
+            },
+            "rankingTieCells": 10,
+            "topRankTieCells": 9
+          }
+        }
+      },
+      {
+        "id": "signal-frozen-ledger-denominators",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "candidateAndAssignmentCounts": {
+            "fidelityB": 1153,
+            "fidelityC": 64,
+            "chronologyEligible": 1153,
+            "chronologyIneligible": 64,
+            "uniqueNormalizedB": 319,
+            "duplicateExcessB": 834,
+            "manualAuditRows": 428,
+            "finalAssignmentRows": 428,
+            "accepted": 327,
+            "unresolved": 101
+          },
+          "selectedRule": {
+            "candidateFamily": "Candidate C (structural eligibility plus ranking only)",
+            "evidenceFamily": "E2: single-origin or corroborated-independent; unknown provenance excluded",
+            "minimumIndependentOriginsForCorroboration": 2,
+            "minimumActionStageOrdinal": 3,
+            "includedStages": [
+              "implemented",
+              "impact-observed"
+            ],
+            "qualifyingLifecycleStates": [
+              "new",
+              "escalating",
+              "de-escalating"
+            ],
+            "directMechanismRequired": true,
+            "maximumClusterContributionPerChannelPerRun": 1,
+            "ranking": "action stage descending, eventClusterId ascending"
+          },
+          "recomputed": {
+            "qualifyingClusterRunChannelRows": 82,
+            "distinctQualifyingClusters": 62,
+            "channelCounts": {
+              "conflict-escalation": 55,
+              "credit-stress": 2,
+              "energy-disruption": 6,
+              "sanctions-policy": 6,
+              "supply-chain": 13
+            },
+            "activeRunChannelCells": 140,
+            "nonzeroCells": 36,
+            "zeroOneMultiple": {
+              "zero": 104,
+              "one": 23,
+              "multiple": 13
+            },
+            "rankingTieCells": 10,
+            "topRankTieCells": 9
+          },
+          "storedCrossCheck": {
+            "qualifyingClusterRunChannelRows": 82,
+            "channelBreadth": {
+              "denominatorActiveRunChannelCells": 140,
+              "meanQualifyingClusterCountPerActiveRunChannel": 0.585714,
+              "medianQualifyingClusterCountPerActiveRunChannel": 0,
+              "maximumQualifyingClusterCountPerActiveRunChannel": 8,
+              "zeroOneMultipleDistribution": {
+                "zero": 104,
+                "one": 23,
+                "multiple": 13
+              },
+              "exactCountDistribution": {
+                "0": 104,
+                "1": 23,
+                "2": 3,
+                "3": 4,
+                "6": 2,
+                "7": 3,
+                "8": 1
+              }
+            },
+            "rankingTieCells": 10,
+            "topRankTieCells": 9,
+            "eligibilityIdenticalToStructuralVariant": true
+          },
+          "assessmentDiagnostics": {
+            "eventClusterAssessments": 123,
+            "eventTypes": {
+              "armed-conflict-action": 78,
+              "energy-system-event": 9,
+              "policy-restriction-action": 5,
+              "production-logistics-event": 11,
+              "typed-unknown": 20
+            },
+            "directMechanismOpportunities": {
+              "energy-supply-disruption": 14,
+              "funding-credit-transmission": 6,
+              "production-transport-bottleneck": 23,
+              "security-risk-repricing": 88,
+              "trade-asset-access-restriction": 9
+            },
+            "corroboration": {
+              "conflicting": 1,
+              "corroborated-independent": 4,
+              "single-origin": 97,
+              "unknown-origin": 21
+            },
+            "exactIndependentCount": {
+              "assessed": 102,
+              "unknown": 21
+            },
+            "continuingNonmaterialRepeats": 184
+          }
+        }
+      },
+      {
+        "id": "market-own-series-transform-recomputation",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "observationCount": 8669,
+          "instrumentCount": 14,
+          "expectedTransformCount": 8599,
+          "persistedCount": 8599,
+          "mismatches": 0,
+          "maxTransformError": 0,
+          "maxZError": 0,
+          "samples": []
+        }
+      },
+      {
+        "id": "market-selected-rule2-row-recomputation",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "selectedRows": 1955,
+          "expectedSelectedRows": 1955,
+          "semanticMismatches": 0,
+          "mismatchSamples": []
+        }
+      },
+      {
+        "id": "market-selected-series-counts-and-history",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "expected": {
+            "conflict-escalation": {
+              "rows": 361,
+              "available": 224,
+              "raw": 158
+            },
+            "credit-stress": {
+              "rows": 362,
+              "available": 231,
+              "raw": 69
+            },
+            "energy-disruption": {
+              "rows": 353,
+              "available": 220,
+              "raw": 108
+            },
+            "sanctions-policy": {
+              "rows": 361,
+              "available": 231,
+              "raw": 117
+            },
+            "supply-chain": {
+              "rows": 361,
+              "available": 235,
+              "raw": 81
+            }
+          },
+          "observed": {
+            "conflict-escalation": {
+              "configurationId": "config-925f49fec21a27358c47",
+              "statisticSeriesId": "statistic-series-076634ccc273e002e924",
+              "evaluationDates": 391,
+              "assessedEvaluationDates": 379,
+              "unassessedEvaluationDates": 12,
+              "distinctMarketObservations": 361,
+              "eligibleInstrumentCountDistribution": {
+                "3": 11,
+                "4": 350
+              },
+              "rawDiagnostic": {
+                "threshold": 1.5,
+                "triggers": 158,
+                "rate": 0.4376731301939058
+              },
+              "conditionedNearestRank": {
+                "alpha": 0.2,
+                "priorOnly": true,
+                "minimumHistory": 126,
+                "rollingMaximum": 252,
+                "strictGreaterThan": true,
+                "available": 224,
+                "insufficient": 137,
+                "triggers": 56,
+                "triggerRateWhenAvailable": 0.25,
+                "equalityTies": 0
+              }
+            },
+            "credit-stress": {
+              "configurationId": "config-b0d071b0d0ee34724409",
+              "statisticSeriesId": "statistic-series-094b503b2dec0e0b18c6",
+              "evaluationDates": 391,
+              "assessedEvaluationDates": 379,
+              "unassessedEvaluationDates": 12,
+              "distinctMarketObservations": 362,
+              "eligibleInstrumentCountDistribution": {
+                "2": 5,
+                "3": 357
+              },
+              "rawDiagnostic": {
+                "threshold": 1.5,
+                "triggers": 69,
+                "rate": 0.19060773480662985
+              },
+              "conditionedNearestRank": {
+                "alpha": 0.2,
+                "priorOnly": true,
+                "minimumHistory": 126,
+                "rollingMaximum": 252,
+                "strictGreaterThan": true,
+                "available": 231,
+                "insufficient": 131,
+                "triggers": 46,
+                "triggerRateWhenAvailable": 0.19913419913419914,
+                "equalityTies": 0
+              }
+            },
+            "energy-disruption": {
+              "configurationId": "config-33bfac40784ae6195a7d",
+              "statisticSeriesId": "statistic-series-4d4993bcf8648987b7c9",
+              "evaluationDates": 391,
+              "assessedEvaluationDates": 376,
+              "unassessedEvaluationDates": 15,
+              "distinctMarketObservations": 353,
+              "eligibleInstrumentCountDistribution": {
+                "2": 7,
+                "3": 346
+              },
+              "rawDiagnostic": {
+                "threshold": 1.5,
+                "triggers": 108,
+                "rate": 0.3059490084985836
+              },
+              "conditionedNearestRank": {
+                "alpha": 0.2,
+                "priorOnly": true,
+                "minimumHistory": 126,
+                "rollingMaximum": 252,
+                "strictGreaterThan": true,
+                "available": 220,
+                "insufficient": 133,
+                "triggers": 58,
+                "triggerRateWhenAvailable": 0.2636363636363636,
+                "equalityTies": 0
+              }
+            },
+            "sanctions-policy": {
+              "configurationId": "config-d850c6ef2a0bd7f88612",
+              "statisticSeriesId": "statistic-series-a6dbd8d1dc809b452a78",
+              "evaluationDates": 391,
+              "assessedEvaluationDates": 379,
+              "unassessedEvaluationDates": 12,
+              "distinctMarketObservations": 361,
+              "eligibleInstrumentCountDistribution": {
+                "2": 4,
+                "3": 357
+              },
+              "rawDiagnostic": {
+                "threshold": 1.5,
+                "triggers": 117,
+                "rate": 0.32409972299168976
+              },
+              "conditionedNearestRank": {
+                "alpha": 0.2,
+                "priorOnly": true,
+                "minimumHistory": 126,
+                "rollingMaximum": 252,
+                "strictGreaterThan": true,
+                "available": 231,
+                "insufficient": 130,
+                "triggers": 69,
+                "triggerRateWhenAvailable": 0.2987012987012987,
+                "equalityTies": 0
+              }
+            },
+            "supply-chain": {
+              "configurationId": "config-e32a31be376b32a9959c",
+              "statisticSeriesId": "statistic-series-dfb8bdea79eb5cbd261b",
+              "evaluationDates": 391,
+              "assessedEvaluationDates": 379,
+              "unassessedEvaluationDates": 12,
+              "distinctMarketObservations": 361,
+              "eligibleInstrumentCountDistribution": {
+                "2": 361
+              },
+              "rawDiagnostic": {
+                "threshold": 1.5,
+                "triggers": 81,
+                "rate": 0.22437673130193905
+              },
+              "conditionedNearestRank": {
+                "alpha": 0.2,
+                "priorOnly": true,
+                "minimumHistory": 126,
+                "rollingMaximum": 252,
+                "strictGreaterThan": true,
+                "available": 235,
+                "insufficient": 126,
+                "triggers": 73,
+                "triggerRateWhenAvailable": 0.31063829787234043,
+                "equalityTies": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "signal-market-timing-recomputation",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "rows": 140,
+          "qualifying": 36,
+          "definitive": 10,
+          "ambiguous": 26,
+          "signalBeforeClose": 10,
+          "marketMovePrecedingSignal": 4,
+          "signalFollowedByMarketMove": 7,
+          "causalAttributionClaims": 0
+        }
+      },
+      {
+        "id": "fixture-independent-semantic-replay",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "positive": 37,
+          "negative": 26,
+          "passed": 63,
+          "failures": []
+        }
+      },
+      {
+        "id": "hidden-numeric-constant-scan",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "used": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "30",
+            "252"
+          ],
+          "undeclared": []
+        }
+      },
+      {
+        "id": "deferral-governance",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "itemCount": 6,
+          "failures": [],
+          "items": [
+            {
+              "id": "DEF-001",
+              "topic": "numeric event decay, stale-event interval, automatic expiry, and de-escalation expiry",
+              "blockEffect": "does not block isolated parallel implementation; any later automatic decay or expiry requires a new methodology version and is outside the 2.0.0 cutover"
+            },
+            {
+              "id": "DEF-002",
+              "topic": "fuzzy automatic-clustering similarity thresholds and actor/time/location windows",
+              "blockEffect": "does not block isolated parallel implementation; blocks any broader automatic join behavior and blocks cutover if ambiguous decisions are unrecorded"
+            },
+            {
+              "id": "DEF-003",
+              "topic": "durable private storage backend, retention duration, tiering, disaster recovery, and service level",
+              "blockEffect": "does not block isolated parallel implementation; blocks public cutover"
+            },
+            {
+              "id": "DEF-004",
+              "topic": "automatic stale-lock timeout and lock takeover",
+              "blockEffect": "does not block single-writer parallel implementation; blocks automatic takeover behavior"
+            },
+            {
+              "id": "DEF-005",
+              "topic": "complete exchange-holiday/early-close calendar and reliable provider availability timestamps",
+              "blockEffect": "does not block parallel implementation; unknown-timing records cannot enter a four-state assessment and material unresolved coverage may extend the parallel window or block cutover"
+            },
+            {
+              "id": "DEF-006",
+              "topic": "raw-response retention where source terms restrict storage",
+              "blockEffect": "does not block permitted-source parallel implementation; blocks cutover for any non-reproducible required source"
+            }
+          ]
+        }
+      },
+      {
+        "id": "frozen-surface-start-end-identity",
+        "pass": true,
+        "severity": "hard",
+        "evidence": {
+          "pass": true,
+          "filesCompared": 122,
+          "startTreeSha256": "953a0b32357ddbf11dc98351c6c144bedcabb61d8e3f2b6df23599739394b34c",
+          "endTreeSha256": "953a0b32357ddbf11dc98351c6c144bedcabb61d8e3f2b6df23599739394b34c",
+          "mismatches": []
+        }
+      }
+    ]
+  },
+  "materialDefects": [
+    {
+      "id": "PA08-D01",
+      "title": "The exact normalized-content automatic clustering path has no persisted input identity",
+      "evidence": "The clustering rules permit exact-normalized-content-hash joins, but schema.$defs.rawIdentity and schema.$defs.candidate expose no normalized-content hash and the frozen parameter package defines no candidate-text normalization algorithm. Structural test result: raw identity has normalized hash = false.",
+      "requiredCorrection": "Add the normalized input field and deterministic normalization contract, add positive/negative record fixtures, regenerate identities, and rerun PA-08."
+    },
+    {
+      "id": "PA08-D02",
+      "title": "The schema admits states that contradict the frozen signal and market rules",
+      "evidence": "8/10 adversarial records were schema-admissible, including independent corroboration with zero origins, automatic join without an allowed rule or cluster, continuing marked material, assessed market with no cohort/statistic, and an inconsistent assessed divergence state.",
+      "requiredCorrection": "Encode cross-field conditions in the schema (or a normative validator bound by hash), add mutation fixtures, regenerate the package, and rerun."
+    },
+    {
+      "id": "PA08-D03",
+      "title": "Required temporal and own-series audit surfaces are absent from the final schema",
+      "evidence": "eventCluster.firstSeen=false; instrumentReading.windowStart=false; windowEnd=false; historyCount=false. These fields are required to demonstrate lifecycle clocks and the five-valid-observation/no-lookahead calculation.",
+      "requiredCorrection": "Restore required retained fields and their ordering/consistency constraints, then add complete schema-record fixtures."
+    },
+    {
+      "id": "PA08-D04",
+      "title": "Reporter/origin/syndication independence cannot be reconstructed from the frozen origin schema",
+      "evidence": "originEvidence stores a flat origin-ID list and count but no reporter-to-asserted-origin or derivation/syndication relationship; structural relationship field present=false. The schema therefore cannot enforce the two-origin rule from recoverable records.",
+      "requiredCorrection": "Persist relationship evidence and bind independentOriginCount/evidenceClass/conflicting to it with record-level tests."
+    },
+    {
+      "id": "PA08-D05",
+      "title": "Canonicalization and fixture coverage do not prove byte determinism",
+      "evidence": "The parameters promise schema-defined array order, but ordering is declared for only 9 broad collections while critical arrays such as evidenceRefs, histories, mechanisms, readings, reasonCodes, and hashes lack normative ordering. The 63 fixtures contain 0 complete v2 schema records and test only one object-key/volatile-field canonicalization example.",
+      "requiredCorrection": "Define every persisted array's canonical ordering and add byte fixtures for arrays, LF, rounding, negative zero, timestamps, and repeated full records."
+    },
+    {
+      "id": "PA08-D06",
+      "title": "Parameter traceability materially overstates unresolved cluster provenance",
+      "evidence": "parameter-traceability.json entries[0].evidence[0].measurement states \"E2 is the Session 15 recommended evidence family; 101/123 clusters had unresolved independent-source status, making E3's lower-bound unknown path less conservative.\", while direct ledger recomputation finds 21/123 clusters with unknown exact independent-source count; 101 is the unresolved observation assignment count out of 428.",
+      "requiredCorrection": "Correct the evidence statement and review the E2/E3 rationale, regenerate hashes/reports, and rerun both validators."
+    }
+  ],
+  "observations": [
+    {
+      "id": "PA08-O01",
+      "text": "The storage contract allows a lossless normalized equivalent but does not freeze a raw/normalized market-input record schema; this is governance debt under the already-deferred PA-09 durable-storage/cutover boundary."
+    },
+    {
+      "id": "PA08-O02",
+      "text": "The fixture suite does not include a direct negative case for corroborated-independent with fewer than two origins, a 3-of-4 quorum failure, or invalid escalating/de-escalating material flags; the mutation audit exposes these omissions."
+    }
+  ],
+  "mutationBoundary": {
+    "pass": true,
+    "filesCompared": 122,
+    "startTreeSha256": "953a0b32357ddbf11dc98351c6c144bedcabb61d8e3f2b6df23599739394b34c",
+    "endTreeSha256": "953a0b32357ddbf11dc98351c6c144bedcabb61d8e3f2b6df23599739394b34c",
+    "mismatches": []
+  },
+  "originalValidatorComparison": {
+    "status": "completed-after-independent-result-fixed",
+    "validator": "audit/session17/validate-freeze.mjs",
+    "report": "audit/session17/validation-report.md",
+    "independentFindingsLocked": true,
+    "exitCode": 0,
+    "reportedDecision": "PASS",
+    "reportedGroups": {
+      "passed": 15,
+      "total": 15
+    },
+    "agreements": [
+      "JSON parsing and local reference resolution",
+      "supplied positive/negative fixture replay",
+      "enumeration, channel-map, parameter, manifest, evidence, production-baseline, and working-tree identity checks",
+      "bounded deferrals and absence of hidden numeric constants"
+    ],
+    "materialDisagreement": "The original validator reports PASS because it checks supplied fixture expectations and structural consistency, but it does not reject the adversarial schema-admissible contradictions, missing normalized-content/origin relationship fields, missing temporal/own-series audit surfaces, incomplete canonical array/byte fixtures, or the 101/123 traceability misstatement found independently. Therefore its PASS does not cure PA-08 FAIL.",
+    "independentDecisionChanged": false
+  },
+  "authorizedOutputs": [
+    "audit/session17/validate-independent.mjs",
+    "audit/session17/independent-validation-results.json",
+    "audit/session17/independent-validation-report.md"
+  ],
+  "prohibitedActions": {
+    "repairedFreezeCandidate": false,
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "implementedSession18Or19": false,
+    "appendedProjectLog": false
+  }
+}

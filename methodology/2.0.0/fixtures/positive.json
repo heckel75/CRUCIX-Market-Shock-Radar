@@ -1,0 +1,582 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-acceptance-fixtures/v1",
+  "suite": "positive",
+  "cases": [
+    {
+      "id": "syndicated-reports-one-origin",
+      "category": "source-origin",
+      "ruleId": "syndication-origin-count",
+      "input": { "reporterIds": ["outlet-a", "outlet-b", "outlet-c"], "originIds": ["wire-1", "wire-1", "wire-1"], "independentOriginCount": 1 },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "genuine-independent-corroboration",
+      "category": "source-origin",
+      "ruleId": "independent-corroboration",
+      "input": { "originStatus": "assessed", "originIds": ["first-hand-a", "first-hand-b"], "independentOriginCount": 2, "conflicting": false, "qualifiesE2": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "unknown-provenance-conservative",
+      "category": "source-origin",
+      "ruleId": "unknown-origin-conservative",
+      "input": { "originStatus": "unknown", "independentOriginCount": 0, "qualifiesE2": false, "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "contextual-mechanism-does-not-elevate",
+      "category": "signal-eligibility",
+      "ruleId": "direct-mechanism-required",
+      "input": { "mechanismRelations": ["contextual"], "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "absent-mechanism-does-not-elevate",
+      "category": "signal-eligibility",
+      "ruleId": "direct-mechanism-required",
+      "input": { "mechanismRelations": [], "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "direct-cluster-contributes-once",
+      "category": "signal-eligibility",
+      "ruleId": "one-contribution-per-cluster-channel-run",
+      "input": { "runId": "run-x", "clusterId": "evt-x", "channelId": "energy-disruption", "candidateCount": 4, "directMechanismCount": 2, "contributionCount": 1 },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "announced-visible-non-elevating",
+      "category": "signal-eligibility",
+      "ruleId": "stage-boundary",
+      "input": { "stage": "announced", "visible": true, "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "implemented-qualifies",
+      "category": "signal-eligibility",
+      "ruleId": "stage-boundary",
+      "input": { "stage": "implemented", "visible": true, "elevated": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "impact-observed-qualifies",
+      "category": "signal-eligibility",
+      "ruleId": "stage-boundary",
+      "input": { "stage": "impact-observed", "visible": true, "elevated": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "continuing-repeat-keeps-material-clock",
+      "category": "lifecycle",
+      "ruleId": "material-clock",
+      "input": { "state": "continuing", "priorLastMaterialChangeAt": "2026-08-01T10:00:00.000Z", "lastMaterialChangeAt": "2026-08-01T10:00:00.000Z", "priorLastObservedAt": "2026-08-02T10:00:00.000Z", "lastObservedAt": "2026-08-03T10:00:00.000Z", "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "explicit-escalation-updates-material-clock",
+      "category": "lifecycle",
+      "ruleId": "material-transition",
+      "input": { "state": "escalating", "material": true, "transitionAt": "2026-08-03T10:00:00.000Z", "lastMaterialChangeAt": "2026-08-03T10:00:00.000Z", "evidenceRefs": ["evidence-1"] },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "explicit-deescalation-updates-material-clock",
+      "category": "lifecycle",
+      "ruleId": "material-transition",
+      "input": { "state": "de-escalating", "material": true, "transitionAt": "2026-08-04T10:00:00.000Z", "lastMaterialChangeAt": "2026-08-04T10:00:00.000Z", "evidenceRefs": ["evidence-2"] },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "unresolved-disposition-preserved",
+      "category": "candidate-disposition",
+      "ruleId": "unresolved-is-not-nonevent",
+      "input": { "observedDisposition": "unresolved-event-identity", "storedDisposition": "unresolved-event-identity", "eventTypeStatus": "unknown", "scored": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "atomic-multi-incident-decomposition",
+      "category": "atomic-decomposition",
+      "ruleId": "atomic-decomposition-provenance",
+      "input": { "parentDisposition": "decomposed-parent", "childDispositions": ["atomic-event-observation", "atomic-event-observation"], "childCount": 2, "provenanceOperations": ["decomposed"], "rawParentRetained": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "immutable-assignment-lineage",
+      "category": "lineage",
+      "ruleId": "append-only-lineage",
+      "input": { "priorAssignmentRetained": true, "operations": ["assigned", "merged", "split", "aliased", "superseded", "corrected"], "allOperationsHaveProvenance": true, "idsReused": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "chronology-ineligible-evidence-excluded",
+      "category": "timing",
+      "ruleId": "chronology-fidelity",
+      "input": { "fidelity": "C", "pointInTimeEligible": false, "includedInThresholdHistory": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "own-series-five-valid-window",
+      "category": "market-history",
+      "ruleId": "own-series-window",
+      "input": { "instrumentId": "brent", "actualObservationDates": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-10"], "lookbackValidObservations": 5, "usesGlobalDates": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "per-channel-independent-same-date",
+      "category": "market-dating",
+      "ruleId": "per-channel-dating",
+      "input": { "channelDates": { "conflict-escalation": "2026-08-28", "energy-disruption": "2026-08-27" }, "eachChannelSameDate": true, "requiresGlobalDate": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "freshness-bound-inclusive",
+      "category": "market-dating",
+      "ruleId": "freshness-bound",
+      "input": { "businessDayAge": 3, "eligible": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "minimum-count-n-minus-one",
+      "category": "market-dating",
+      "ruleId": "minimum-eligible-count",
+      "input": { "mappedCount": 4, "eligibleCount": 3, "minimumCount": 3, "assessed": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "two-instrument-channel-requires-all",
+      "category": "market-dating",
+      "ruleId": "minimum-eligible-count",
+      "input": { "mappedCount": 2, "eligibleCount": 1, "minimumCount": 2, "assessed": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "binary-statistic-same-date-only",
+      "category": "market-dating",
+      "ruleId": "no-mixed-date-statistic",
+      "input": { "includedDates": ["2026-08-28", "2026-08-28", "2026-08-28"], "status": "assessed" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "point-in-time-no-lookahead",
+      "category": "percentile",
+      "ruleId": "prior-only-percentile",
+      "input": { "currentDate": "2026-08-28", "historyDates": ["2026-08-25", "2026-08-26", "2026-08-27"], "currentIncludedInHistory": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "condition-on-set-and-count",
+      "category": "market-history",
+      "ruleId": "conditioned-history",
+      "input": { "currentInstrumentSetVersion": "set-a", "currentEligibleCount": 3, "historyKeys": ["set-a|3", "set-a|3"], "pooledDifferentKey": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "insufficient-history-no-fallback",
+      "category": "market-history",
+      "ruleId": "insufficient-history",
+      "input": { "conditionedPriorCount": 125, "status": "insufficient-conditioned-history", "threshold": null, "elevated": null, "fallbackUsed": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "nearest-rank-equality-does-not-trigger",
+      "category": "percentile",
+      "ruleId": "quantile-tie",
+      "input": { "history": [1, 2, 3, 4, 5], "alpha": 0.2, "rank": 4, "threshold": 4, "current": 4, "elevated": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "diagnostics-retained",
+      "category": "breadth",
+      "ruleId": "market-diagnostics",
+      "input": { "zByInstrument": { "a": 2.2, "b": -1.9, "c": 0.5 }, "driver": "a", "secondDriver": "b", "eligibleCount": 3, "aboveThresholdCount": 2, "breadth": 0.666666666667, "breadthAffectsBinary": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "after-close-is-pending",
+      "category": "timing",
+      "ruleId": "after-close-pending",
+      "input": { "signalObservedAt": "2026-08-28T21:00:00.000Z", "relevantCloseAt": "2026-08-28T20:00:00.000Z", "status": "pending-next-eligible-close", "state": null },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "unreliable-timing-is-unknown",
+      "category": "timing",
+      "ruleId": "unknown-timing",
+      "input": { "timestampReliability": "unreliable", "status": "unknown-timing", "state": null },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "state-signal-leading",
+      "category": "divergence",
+      "ruleId": "four-state-table",
+      "input": { "signalElevated": true, "marketElevated": false, "state": "signal-leading" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "state-co-movement",
+      "category": "divergence",
+      "ruleId": "four-state-table",
+      "input": { "signalElevated": true, "marketElevated": true, "state": "co-movement" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "state-market-only",
+      "category": "divergence",
+      "ruleId": "four-state-table",
+      "input": { "signalElevated": false, "marketElevated": true, "state": "market-only" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "state-calm",
+      "category": "divergence",
+      "ruleId": "four-state-table",
+      "input": { "signalElevated": false, "marketElevated": false, "state": "calm" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "state-semantics-noncausal",
+      "category": "divergence",
+      "ruleId": "noncausal-language",
+      "input": { "canonicalSemantics": ["signal elevated and market not elevated", "signal and market elevated", "market elevated and signal not elevated", "neither elevated"] },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "legacy-remains-unstamped-immutable",
+      "category": "identity",
+      "ruleId": "legacy-immutability",
+      "input": { "legacyMethodologyVersion": null, "beforeSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "afterSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "v2-version-stamped",
+      "category": "identity",
+      "ruleId": "v2-version-stamp",
+      "input": { "namespace": "dashboard/public/v2/2.0.0/", "methodologyVersion": "2.0.0" },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "canonical-reproduction-excludes-volatile-view",
+      "category": "canonicalization",
+      "ruleId": "canonical-reproduction",
+      "input": { "payloadA": { "b": 2, "a": 1, "generatedAt": "2026-08-01T00:00:00.000Z" }, "payloadB": { "generatedAt": "2026-08-02T00:00:00.000Z", "a": 1, "b": 2 }, "excludedViewFields": ["generatedAt"], "sameCanonicalHash": true },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "normalization-equivalent-session15-inputs",
+      "category": "normalization",
+      "ruleId": "normative-normalization",
+      "input": {
+        "normalizationVersion": "crucix-session15-conservative-normalization/v1",
+        "rawInputs": ["Ａlpha\r\n  alert", "Alpha   alert"],
+        "expectedNormalized": "Alpha alert",
+        "expectedHash": "495830f7f0fea319beda3916c6b75f9b05895f7c08525b31d46bb5012122fb4e",
+        "expectEqual": true
+      },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "normalization-material-difference-preserved",
+      "category": "normalization",
+      "ruleId": "normalization-distinguishes-content",
+      "input": {
+        "normalizationVersion": "crucix-session15-conservative-normalization/v1",
+        "rawInputs": ["Alpha alert", "Alpha ALERT", "Alpha alert."],
+        "expectedHashes": [
+          "495830f7f0fea319beda3916c6b75f9b05895f7c08525b31d46bb5012122fb4e",
+          "e5baac7c4d562fae6c5abc7483fd9ad6338facf1a87b696f0fa8a79176a37e3f",
+          "6608bf2724222b4e93ccd30339df2ab6267f62c3caf283e95b3d027033ef5895"
+        ],
+        "expectAllDifferent": true
+      },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "thirty-syndicated-copies-one-group",
+      "category": "origin-topology",
+      "ruleId": "origin-copy-collapse",
+      "input": { "reporterCount": 30, "assertionCount": 1, "originCount": 1, "independenceGroupCount": 1, "edgeType": "syndicated-from", "independentOriginCount": 1 },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "official-statement-quotations-one-group",
+      "category": "origin-topology",
+      "ruleId": "official-quotation-collapse",
+      "input": { "reporterCount": 12, "officialStatementCount": 1, "originCount": 1, "independenceGroupCount": 1, "edgeType": "quotes-official-statement", "independentOriginCount": 1 },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "independent-direct-observation-second-group",
+      "category": "origin-topology",
+      "ruleId": "independent-direct-observation",
+      "input": { "assessedDirectObservationCount": 2, "distinctOriginCount": 2, "distinctIndependenceGroupCount": 2, "conflicting": false, "independentOriginCount": 2 },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "unknown-derivation-remains-noncorroborating",
+      "category": "origin-topology",
+      "ruleId": "unknown-derivation-noncorroborating",
+      "input": { "edgeType": "unknown-derivation", "assessmentStatus": "unknown", "countsAsIndependent": false, "qualifiesE2": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "conflicting-origins-do-not-increase-confidence",
+      "category": "origin-topology",
+      "ruleId": "conflicting-origin-conservative",
+      "input": { "distinctOriginCount": 2, "conflicting": true, "evidenceClass": "conflicting-origin", "qualifiesE2": false },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "complete-end-to-end-v2-bundle",
+      "category": "complete-record",
+      "ruleId": "complete-schema-record",
+      "input": {
+        "schemaDefinition": "runBundle",
+        "record": {
+          "recordType": "run-bundle",
+          "methodologyVersion": "2.0.0",
+          "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+          "candidates": [
+            {
+              "recordType": "candidate",
+              "methodologyVersion": "2.0.0",
+              "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+              "candidateId": "cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa",
+              "rawIdentity": {
+                "reportingSourceId": "reporting-source-outlet-a",
+                "sourceRecordId": "source-record-1",
+                "rawContentSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "normalizationVersion": "crucix-session15-conservative-normalization/v1",
+                "normalizedContentHash": "495830f7f0fea319beda3916c6b75f9b05895f7c08525b31d46bb5012122fb4e",
+                "normalizedContentRetention": "hash-only"
+              },
+              "observedAt": { "status": "assessed", "value": "2026-08-01T12:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["evidence-candidate-1"] },
+              "disposition": "atomic-event-observation",
+              "eventType": { "status": "assessed", "value": "conflict-escalation", "evidenceRefs": ["evidence-candidate-1"] },
+              "actionStage": { "status": "assessed", "value": "implemented", "evidenceRefs": ["evidence-candidate-1"] },
+              "correctionState": { "status": "assessed", "value": "original", "evidenceRefs": ["evidence-candidate-1"] },
+              "originEvidence": {
+                "status": "assessed",
+                "assessmentVersion": 1,
+                "evidenceClass": "resolved-single-origin-nonconflicting",
+                "specificOriginIds": ["origin-source-a"],
+                "reportingSourceIds": ["reporting-source-outlet-a"],
+                "originatingAssertionIds": ["assertion-direct-a"],
+                "reportingOriginIds": ["origin-source-a"],
+                "independenceGroupIds": ["independence-group-a"],
+                "provenanceEdgeIds": ["origin-edge-assertion-origin", "origin-edge-candidate-reporter", "origin-edge-origin-group", "origin-edge-reporter-assertion"],
+                "independentOriginCount": 1,
+                "conflicting": false,
+                "evidenceRefs": ["evidence-candidate-1"],
+                "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+              },
+              "derivedCandidateIds": [],
+              "provenanceIds": ["prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+            }
+          ],
+          "originProvenance": [
+            {
+              "recordType": "origin-provenance",
+              "methodologyVersion": "2.0.0",
+              "topologyVersion": "crucix-origin-topology/v2.0.0",
+              "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+              "candidateId": "cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "assessmentVersion": 1,
+              "reportingSources": [{ "reportingSourceId": "reporting-source-outlet-a", "outletName": "Outlet A", "evidenceRefs": ["evidence-candidate-1"] }],
+              "originatingAssertions": [{ "assertionId": "assertion-direct-a", "assertionType": "direct-observation", "descriptionHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "evidenceRefs": ["evidence-candidate-1"] }],
+              "reportingOrigins": [{ "reportingOriginId": "origin-source-a", "originType": "first-hand-observer", "assessmentStatus": "assessed", "evidenceRefs": ["evidence-candidate-1"] }],
+              "independenceGroups": [{ "independenceGroupId": "independence-group-a", "assessmentStatus": "assessed", "memberOriginIds": ["origin-source-a"], "evidenceRefs": ["evidence-candidate-1"] }],
+              "provenanceEdges": [
+                { "provenanceEdgeId": "origin-edge-assertion-origin", "fromNodeId": "assertion-direct-a", "toNodeId": "origin-source-a", "edgeType": "assertion-originated-by", "assessmentStatus": "assessed", "evidenceRefs": ["evidence-candidate-1"], "assessmentVersion": 1 },
+                { "provenanceEdgeId": "origin-edge-candidate-reporter", "fromNodeId": "cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "toNodeId": "reporting-source-outlet-a", "edgeType": "candidate-reported-by", "assessmentStatus": "assessed", "evidenceRefs": ["evidence-candidate-1"], "assessmentVersion": 1 },
+                { "provenanceEdgeId": "origin-edge-origin-group", "fromNodeId": "origin-source-a", "toNodeId": "independence-group-a", "edgeType": "origin-member-of-independence-group", "assessmentStatus": "assessed", "evidenceRefs": ["evidence-candidate-1"], "assessmentVersion": 1 },
+                { "provenanceEdgeId": "origin-edge-reporter-assertion", "fromNodeId": "reporting-source-outlet-a", "toNodeId": "assertion-direct-a", "edgeType": "reporter-reports-assertion", "assessmentStatus": "assessed", "evidenceRefs": ["evidence-candidate-1"], "assessmentVersion": 1 }
+              ],
+              "originEvidence": {
+                "status": "assessed", "assessmentVersion": 1, "evidenceClass": "resolved-single-origin-nonconflicting",
+                "specificOriginIds": ["origin-source-a"], "reportingSourceIds": ["reporting-source-outlet-a"], "originatingAssertionIds": ["assertion-direct-a"], "reportingOriginIds": ["origin-source-a"], "independenceGroupIds": ["independence-group-a"],
+                "provenanceEdgeIds": ["origin-edge-assertion-origin", "origin-edge-candidate-reporter", "origin-edge-origin-group", "origin-edge-reporter-assertion"],
+                "independentOriginCount": 1, "conflicting": false, "evidenceRefs": ["evidence-candidate-1"], "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+              },
+              "provenanceIds": ["prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+            }
+          ],
+          "assignments": [
+            {
+              "recordType": "assignment", "methodologyVersion": "2.0.0", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "assignmentVersion": 1,
+              "assignmentId": "asn-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "candidateId": "cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "eventClusterId": "evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "decisionMode": "human", "decision": "create", "decidedAt": "2026-08-01T12:00:00.000Z", "decidedBy": "reviewer-a",
+              "evidenceRefs": ["evidence-candidate-1"], "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "registry": {
+            "recordType": "registry", "methodologyVersion": "2.0.0", "asOf": "2026-08-01T13:00:00.000Z",
+            "eventClusters": [
+              {
+                "recordType": "event-cluster", "methodologyVersion": "2.0.0", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+                "eventClusterId": "evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "assignmentVersion": 1, "provenanceVersion": 1,
+                "candidateIds": ["cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],
+                "eventType": { "status": "assessed", "value": "conflict-escalation", "evidenceRefs": ["evidence-candidate-1"] },
+                "actionStage": { "status": "assessed", "value": "implemented", "evidenceRefs": ["evidence-candidate-1"] },
+                "correctionState": { "status": "assessed", "value": "original", "evidenceRefs": ["evidence-candidate-1"] },
+                "correctionHistory": [{ "effectiveAt": "2026-08-01T12:00:00.000Z", "state": "original", "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "evidenceRefs": ["evidence-candidate-1"] }],
+                "originEvidence": {
+                  "status": "assessed", "assessmentVersion": 1, "evidenceClass": "resolved-single-origin-nonconflicting",
+                  "specificOriginIds": ["origin-source-a"], "reportingSourceIds": ["reporting-source-outlet-a"], "originatingAssertionIds": ["assertion-direct-a"], "reportingOriginIds": ["origin-source-a"], "independenceGroupIds": ["independence-group-a"],
+                  "provenanceEdgeIds": ["origin-edge-assertion-origin", "origin-edge-candidate-reporter", "origin-edge-origin-group", "origin-edge-reporter-assertion"],
+                  "independentOriginCount": 1, "conflicting": false, "evidenceRefs": ["evidence-candidate-1"], "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+                },
+                "originEvidenceHistory": [{
+                  "effectiveAt": "2026-08-01T12:00:00.000Z", "assessmentVersion": 1,
+                  "value": {
+                    "status": "assessed", "assessmentVersion": 1, "evidenceClass": "resolved-single-origin-nonconflicting",
+                    "specificOriginIds": ["origin-source-a"], "reportingSourceIds": ["reporting-source-outlet-a"], "originatingAssertionIds": ["assertion-direct-a"], "reportingOriginIds": ["origin-source-a"], "independenceGroupIds": ["independence-group-a"],
+                    "provenanceEdgeIds": ["origin-edge-assertion-origin", "origin-edge-candidate-reporter", "origin-edge-origin-group", "origin-edge-reporter-assertion"],
+                    "independentOriginCount": 1, "conflicting": false, "evidenceRefs": ["evidence-candidate-1"], "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0"
+                  },
+                  "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }],
+                "mechanisms": [{ "mechanismId": "mech-aaaaaaaaaaaaaaaaaaaa", "channelId": "conflict-escalation", "relation": "direct", "assessment": "assessed", "evidenceRefs": ["evidence-candidate-1"] }],
+                "lifecycleStatus": "new", "lifecycleAssessmentStatus": "assessed",
+                "lifecycleHistory": [{ "state": "new", "assessmentStatus": "assessed", "transitionVersion": 1, "effectiveAt": "2026-08-01T12:00:00.000Z", "material": true, "evidenceRefs": ["evidence-candidate-1"], "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "materialTransitionProvenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0" }],
+                "firstSeen": "2026-08-01T12:00:00.000Z", "lastObservedAt": "2026-08-01T13:00:00.000Z", "lastMaterialChangeAt": "2026-08-01T12:00:00.000Z",
+                "aliases": [], "parentSeriesIds": ["series-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa"], "provenanceIds": ["prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+              }
+            ],
+            "parentSeries": [{ "recordType": "parent-series", "methodologyVersion": "2.0.0", "parentSeriesId": "series-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "eventClusterIds": ["evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa"], "label": "Example series", "supersedesParentSeriesIds": [], "supersededByParentSeriesId": null, "provenanceIds": ["prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"] }],
+            "lineage": [{ "recordType": "lineage", "methodologyVersion": "2.0.0", "provenanceId": "prov-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "operation": "created", "subjectIds": ["cand-sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "resultIds": ["evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa"], "decidedAt": "2026-08-01T12:00:00.000Z", "decidedBy": "reviewer-a", "reason": "fixture", "evidenceRefs": ["evidence-candidate-1"] }],
+            "registrySha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          },
+          "signalOutput": {
+            "recordType": "signal-output", "methodologyVersion": "2.0.0", "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "asOf": "2026-08-01T13:00:00.000Z", "scoringUnit": "event-cluster", "scalarScore": null,
+            "channels": [
+              { "channelId": "conflict-escalation", "status": "assessed", "elevated": true, "qualifyingClusterIds": ["evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa"], "rankedClusters": [{ "eventClusterId": "evt-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "actionStageOrdinal": 3, "rank": 1, "stageTie": false, "directMechanismIds": ["mech-aaaaaaaaaaaaaaaaaaaa"] }], "visibleNonElevatingClusterIds": [], "reasonCodes": [] },
+              { "channelId": "credit-stress", "status": "nonqualifying-mechanism", "elevated": false, "qualifyingClusterIds": [], "rankedClusters": [], "visibleNonElevatingClusterIds": [], "reasonCodes": ["no-direct-mechanism"] },
+              { "channelId": "energy-disruption", "status": "nonqualifying-mechanism", "elevated": false, "qualifyingClusterIds": [], "rankedClusters": [], "visibleNonElevatingClusterIds": [], "reasonCodes": ["no-direct-mechanism"] },
+              { "channelId": "sanctions-policy", "status": "nonqualifying-mechanism", "elevated": false, "qualifyingClusterIds": [], "rankedClusters": [], "visibleNonElevatingClusterIds": [], "reasonCodes": ["no-direct-mechanism"] },
+              { "channelId": "supply-chain", "status": "nonqualifying-mechanism", "elevated": false, "qualifyingClusterIds": [], "rankedClusters": [], "visibleNonElevatingClusterIds": [], "reasonCodes": ["no-direct-mechanism"] }
+            ],
+            "inputHashes": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+          },
+          "marketOutput": {
+            "recordType": "market-output", "methodologyVersion": "2.0.0", "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "evaluationDate": "2026-08-01", "datingRule": "latest-same-date-eligible-cohort", "calendarRule": "utc-weekday-only-v1",
+            "channels": [
+              {
+                "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "conflict-escalation", "status": "assessed", "freshnessStatus": "fresh", "evaluationDate": "2026-08-01", "marketAsOf": "2026-07-31",
+                "instrumentSetVersion": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "conditioningKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc|3", "eligibleInstrumentCount": 3, "minimumEligibleInstrumentCount": 3,
+                "includedInstrumentReadings": [
+                  { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "instrumentId": "brent", "instrumentSetVersion": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "conditioningKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc|3", "windowStart": "2026-07-24", "windowEnd": "2026-07-31", "asOf": "2026-07-31", "instrumentObservationDates": ["2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"], "actualWindowObservationCount": 6, "historyCount": 252, "availabilityAt": { "status": "assessed", "value": "2026-07-31T20:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["market-brent"] }, "observationAgeCalendarDays": 1, "businessDayAge": 1, "freshnessStatus": "fresh", "transform": 0.02, "zScoreAssessment": "assessed", "zScore": 2, "absoluteZScore": 2, "eligibilityStatus": "eligible", "eligible": true, "exclusionReason": null },
+                  { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "instrumentId": "gold", "instrumentSetVersion": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "conditioningKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc|3", "windowStart": "2026-07-24", "windowEnd": "2026-07-31", "asOf": "2026-07-31", "instrumentObservationDates": ["2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"], "actualWindowObservationCount": 6, "historyCount": 252, "availabilityAt": { "status": "assessed", "value": "2026-07-31T20:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["market-gold"] }, "observationAgeCalendarDays": 1, "businessDayAge": 1, "freshnessStatus": "fresh", "transform": 0.01, "zScoreAssessment": "assessed", "zScore": 1, "absoluteZScore": 1, "eligibilityStatus": "eligible", "eligible": true, "exclusionReason": null },
+                  { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "instrumentId": "vix", "instrumentSetVersion": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "conditioningKey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc|3", "windowStart": "2026-07-24", "windowEnd": "2026-07-31", "asOf": "2026-07-31", "instrumentObservationDates": ["2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"], "actualWindowObservationCount": 6, "historyCount": 252, "availabilityAt": { "status": "assessed", "value": "2026-07-31T20:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["market-vix"] }, "observationAgeCalendarDays": 1, "businessDayAge": 1, "freshnessStatus": "fresh", "transform": 0.5, "zScoreAssessment": "assessed", "zScore": 0.5, "absoluteZScore": 0.5, "eligibilityStatus": "eligible", "eligible": true, "exclusionReason": null }
+                ],
+                "excludedInstrumentIds": ["defense-equities"], "marketStatistic": 2, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 126, "percentileThreshold": 1.8, "elevated": true,
+                "driverInstrumentId": "brent", "driverZ": 2, "secondDriverInstrumentId": "gold", "secondDriverZ": 1, "numberAbovePercentileThreshold": 1, "numberAboveRawDiagnosticThreshold": 1, "breadthRatio": 0.333333333333, "reasonCodes": []
+              },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "credit-stress", "status": "insufficient-same-date-cohort", "freshnessStatus": "unknown", "evaluationDate": "2026-08-01", "marketAsOf": null, "instrumentSetVersion": null, "conditioningKey": null, "eligibleInstrumentCount": 0, "minimumEligibleInstrumentCount": 2, "includedInstrumentReadings": [], "excludedInstrumentIds": [], "marketStatistic": null, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 0, "percentileThreshold": null, "elevated": null, "driverInstrumentId": null, "driverZ": null, "secondDriverInstrumentId": null, "secondDriverZ": null, "numberAbovePercentileThreshold": null, "numberAboveRawDiagnosticThreshold": null, "breadthRatio": null, "reasonCodes": ["insufficient-same-date-cohort"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "energy-disruption", "status": "insufficient-same-date-cohort", "freshnessStatus": "unknown", "evaluationDate": "2026-08-01", "marketAsOf": null, "instrumentSetVersion": null, "conditioningKey": null, "eligibleInstrumentCount": 0, "minimumEligibleInstrumentCount": 2, "includedInstrumentReadings": [], "excludedInstrumentIds": [], "marketStatistic": null, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 0, "percentileThreshold": null, "elevated": null, "driverInstrumentId": null, "driverZ": null, "secondDriverInstrumentId": null, "secondDriverZ": null, "numberAbovePercentileThreshold": null, "numberAboveRawDiagnosticThreshold": null, "breadthRatio": null, "reasonCodes": ["insufficient-same-date-cohort"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "sanctions-policy", "status": "insufficient-same-date-cohort", "freshnessStatus": "unknown", "evaluationDate": "2026-08-01", "marketAsOf": null, "instrumentSetVersion": null, "conditioningKey": null, "eligibleInstrumentCount": 0, "minimumEligibleInstrumentCount": 2, "includedInstrumentReadings": [], "excludedInstrumentIds": [], "marketStatistic": null, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 0, "percentileThreshold": null, "elevated": null, "driverInstrumentId": null, "driverZ": null, "secondDriverInstrumentId": null, "secondDriverZ": null, "numberAbovePercentileThreshold": null, "numberAboveRawDiagnosticThreshold": null, "breadthRatio": null, "reasonCodes": ["insufficient-same-date-cohort"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "supply-chain", "status": "insufficient-same-date-cohort", "freshnessStatus": "unknown", "evaluationDate": "2026-08-01", "marketAsOf": null, "instrumentSetVersion": null, "conditioningKey": null, "eligibleInstrumentCount": 0, "minimumEligibleInstrumentCount": 2, "includedInstrumentReadings": [], "excludedInstrumentIds": [], "marketStatistic": null, "percentileAlpha": 0.2, "conditionedPriorObservationCount": 0, "percentileThreshold": null, "elevated": null, "driverInstrumentId": null, "driverZ": null, "secondDriverInstrumentId": null, "secondDriverZ": null, "numberAbovePercentileThreshold": null, "numberAboveRawDiagnosticThreshold": null, "breadthRatio": null, "reasonCodes": ["insufficient-same-date-cohort"] }
+            ],
+            "inputHashes": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "configurationHashes": ["bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+          },
+          "divergenceOutput": {
+            "recordType": "divergence-output", "methodologyVersion": "2.0.0", "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa",
+            "channels": [
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "conflict-escalation", "status": "assessed", "state": "co-movement", "signalElevated": true, "marketElevated": true, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": "2026-07-31", "reasonCodes": [] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "credit-stress", "status": "insufficient-market-history", "state": null, "signalElevated": false, "marketElevated": null, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": null, "reasonCodes": ["insufficient-market-history"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "energy-disruption", "status": "insufficient-market-history", "state": null, "signalElevated": false, "marketElevated": null, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": null, "reasonCodes": ["insufficient-market-history"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "sanctions-policy", "status": "insufficient-market-history", "state": null, "signalElevated": false, "marketElevated": null, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": null, "reasonCodes": ["insufficient-market-history"] },
+              { "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0", "channelId": "supply-chain", "status": "insufficient-market-history", "state": null, "signalElevated": false, "marketElevated": null, "signalAsOf": { "status": "assessed", "value": "2026-08-01T13:00:00.000Z", "reliability": "reliable", "evidenceRefs": ["signal-run"] }, "marketAsOf": null, "reasonCodes": ["insufficient-market-history"] }
+            ],
+            "languageConstraint": "descriptive-noncausal", "inputHashes": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+          },
+          "runManifest": {
+            "recordType": "run-manifest", "methodologyVersion": "2.0.0", "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "acquiredAt": "2026-08-01T12:00:00.000Z",
+            "inputArtifacts": [{ "path": "private/input.json", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bytes": 100 }],
+            "configurationArtifacts": [{ "path": "methodology/2.0.0/parameters.json", "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "bytes": 200 }],
+            "outputArtifacts": [{ "path": "private/output.json", "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "bytes": 300 }],
+            "registryBeforeSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "registryAfterSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        }
+      },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    },
+    {
+      "id": "canonical-complete-run-manifest-bytes",
+      "category": "canonicalization",
+      "ruleId": "canonical-complete-record",
+      "input": {
+        "schemaDefinition": "runManifest",
+        "payloadA": {
+          "outputArtifacts": [{ "bytes": 2, "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "path": "z.json" }, { "path": "a.json", "bytes": 1, "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }],
+          "registryAfterSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "methodologyVersion": "2.0.0",
+          "configurationArtifacts": [{ "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "bytes": 3, "path": "config.json" }],
+          "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa",
+          "inputArtifacts": [{ "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "path": "z.json", "bytes": 2 }, { "bytes": 1, "path": "a.json", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }],
+          "recordType": "run-manifest",
+          "registryBeforeSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "acquiredAt": "2026-08-01T12:00:00.000Z"
+        },
+        "payloadB": {
+          "recordType": "run-manifest", "methodologyVersion": "2.0.0", "runId": "run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa", "acquiredAt": "2026-08-01T12:00:00.000Z",
+          "inputArtifacts": [{ "path": "a.json", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bytes": 1 }, { "path": "z.json", "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "bytes": 2 }],
+          "configurationArtifacts": [{ "path": "config.json", "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "bytes": 3 }],
+          "outputArtifacts": [{ "path": "a.json", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bytes": 1 }, { "path": "z.json", "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "bytes": 2 }],
+          "registryBeforeSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "registryAfterSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        "expectedCanonicalUtf8": "{\"acquiredAt\":\"2026-08-01T12:00:00.000Z\",\"configurationArtifacts\":[{\"bytes\":3,\"path\":\"config.json\",\"sha256\":\"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\"}],\"inputArtifacts\":[{\"bytes\":1,\"path\":\"a.json\",\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"},{\"bytes\":2,\"path\":\"z.json\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"methodologyVersion\":\"2.0.0\",\"outputArtifacts\":[{\"bytes\":1,\"path\":\"a.json\",\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"},{\"bytes\":2,\"path\":\"z.json\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"recordType\":\"run-manifest\",\"registryAfterSha256\":\"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\"registryBeforeSha256\":\"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\"runId\":\"run-20260801T120000000Z-aaaaaaaaaaaaaaaaaaaa\"}\n",
+        "expectedSha256": "e871a28d2d2b6634246939c4b078b0116c8f4b65fb04ff37e7082218f0f7c7c7",
+        "repeatCount": 2
+      },
+      "expectedValid": true,
+      "expectedReasonCode": null
+    }
+  ]
+}

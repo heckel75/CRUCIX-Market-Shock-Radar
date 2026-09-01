@@ -1,0 +1,95 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-source-origin-rules/v1",
+  "topologyVersion": "crucix-origin-topology/v2.0.0",
+  "semanticValidationVersion": "crucix-methodology-semantic-validation/v2.0.0",
+  "recoverableTopology": {
+    "path": [
+      "candidateId",
+      "reportingSourceId",
+      "assertionId",
+      "reportingOriginId",
+      "independenceGroupId"
+    ],
+    "edgeTypes": [
+      "candidate-reported-by",
+      "reporter-reports-assertion",
+      "assertion-originated-by",
+      "origin-member-of-independence-group",
+      "syndicated-from",
+      "quotes-official-statement",
+      "derived-from",
+      "repeats",
+      "independent-direct-observation",
+      "unknown-derivation"
+    ],
+    "requirements": [
+      "Every edge endpoint resolves to a node in the same origin-provenance record.",
+      "The candidate-to-reporting-source-to-assertion-to-origin-to-independence-group path is recoverable without prose interpretation.",
+      "Syndication, repetition, derivation, and quotation edges are directed and acyclic.",
+      "Unknown endpoints or relationships use typed unknown assessments and never create corroboration.",
+      "independentOriginCount equals the number of distinct assessed independence groups supporting the atomic incident; shared, conflicting, unknown, and dangling groups do not count."
+    ]
+  },
+  "rules": [
+    {
+      "ruleId": "origin-01-observation-is-not-origin",
+      "requirement": "The reporting observation and the asserted originating source are stored separately. Syndication, quotation, and republication do not create independence."
+    },
+    {
+      "ruleId": "origin-02-assertion-observation-split",
+      "requirement": "Each origin assessment names both the observed reporter and the claimed first-hand assertion owner when known."
+    },
+    {
+      "ruleId": "origin-03-independent-only-when-resolved",
+      "requirement": "independent-origin is permitted only when both specific origin identities are assessed and unequal and neither is an unattributed relay of the other."
+    },
+    {
+      "ruleId": "origin-04-unknown-conservative",
+      "requirement": "Missing, generic, circular, or unresolved provenance is typed unknown and cannot be counted as independent corroboration."
+    },
+    {
+      "ruleId": "origin-05-e2-single-origin",
+      "requirement": "A single-origin E2 path may qualify only when the specific origin is resolved, the evidence is not conflicting, and the correction state is assessed as original or corrected. An unverified or unknown origin cannot independently elevate a channel."
+    },
+    {
+      "ruleId": "origin-06-independent-corroboration",
+      "requirement": "The corroborated-independent E2 path requires at least two assessed independent origins supporting the same atomic incident and no unresolved conflict or retraction."
+    },
+    {
+      "ruleId": "origin-07-persist-evidence",
+      "requirement": "Every origin judgment persists observation IDs, asserted origin IDs, relationship status, evidence references, actor, timestamp, and rule version."
+    },
+    {
+      "ruleId": "origin-08-corrections-append",
+      "requirement": "A correction, dispute, or retraction appends provenance and never rewrites the earlier origin assessment."
+    },
+    {
+      "ruleId": "origin-09-topology-integrity",
+      "requirement": "Every provenance edge has stable endpoints present in the same record; dangling, circular derivation, and self-copy edges are invalid."
+    },
+    {
+      "ruleId": "origin-10-official-quotation-collapse",
+      "requirement": "Any number of reports quoting or repeating one official statement retain the statement owner's one reporting origin and one independence group unless a separately evidenced direct observation exists."
+    },
+    {
+      "ruleId": "origin-11-conflict-is-not-confidence",
+      "requirement": "Conflicting origins are preserved and produce conflicting-origin status; their count never mechanically increases E2 confidence."
+    }
+  ],
+  "e2Eligibility": {
+    "qualifying": [
+      "resolved-single-origin-nonconflicting",
+      "corroborated-independent-nonconflicting"
+    ],
+    "nonqualifying": [
+      "shared-origin-only",
+      "unknown-origin",
+      "unverified-origin",
+      "conflicting-origin",
+      "retracted",
+      "disputed"
+    ],
+    "numericConfidenceScore": null
+  }
+}

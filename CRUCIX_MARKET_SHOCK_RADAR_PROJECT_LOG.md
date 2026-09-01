@@ -117,13 +117,13 @@ Commit/push shortcut:
 
 ## 3. Current State
 
-**Current session cursor:** Session 16 complete — next session is Session 17.
-**Overall status:** Phase 1 (Sessions 1–6) complete. Project pivoted on 2026-06-11: the original Session 7 (LinkedIn launch) is **superseded**. Phase 2 added the market side so each channel shows signal vs. market movement, classified into divergence states and logged daily. Phase 2 remains the operational **legacy baseline**, not the final methodology. Session 14 completed the Methodology 2.0 architecture and executable audit protocols; Session 15 completed the signal evidence audit; and Session 16 completed the market evidence audit. Both evidence audits passed their completion gates with explicit limitations and without selecting or implementing production behavior. Session 17 is now the sole Methodology 2.0 methodology-freeze gate. The LinkedIn post is deferred and will be drafted **outside these ChatGPT sessions** against a separate strategy file (see Section 12).
-**Methodology review status:** The first Methodology 2.0 planning amendment was committed and pushed (`e4ba8fd Update project log for methodology audit`), and the 2026-07-10 architecture-review amendment remains the sequencing basis. Session 14 froze architecture invariants, persistence/recovery design, the draft minimum core, explicit assessment statuses, a provisional parallel namespace, and executable Session 15–16 protocols in `audit/`. Session 15 completed all 26 required signal measurements (20 measured, 6 partial). Session 16 completed the market audit with 18 measured items, one partial timing item, and one historical-release-vintage item measured as unavailable; its deterministic completion gate passed. The combined evidence supports Session-17 decisions but freezes no final signal rule, scalar score, taxonomy amendment, decay rate, stale interval, corroboration mapping, channel-dating/freshness/minimum-count rule, mixed-date rule, market threshold, percentile alpha, history mode/length, conditioning, fallback, breadth semantics, timing contract, retention rule, or other production parameter. Launch staging, custom-domain work, and the deferred board screenshot remain paused. Existing daily automation should continue unchanged unless broken. Existing close-date snapshots and run records remain immutable and must not be recomputed retrospectively. Do not retroactively claim that legacy snapshots contain a methodology version; current artifacts do not carry an explicit `methodologyVersion` field and should be referred to as legacy/pre-2.0 methodology outputs until version stamping is implemented.
-**Methodology 2.0 production status:** Not started. Sessions 14–16 created architecture/protocol and audit-evidence artifacts only; no v2 registry, production candidate archive, production assignment history, methodology JSON, frozen production schema, acceptance fixture, parallel output, classifier, market calculation, migration, or production version stamping has been implemented.
-**Legacy continuity:** Legacy automation, production methodology, public output, thresholds, sources, transforms, state names, workflows, historical snapshots, and run records remained unchanged during Sessions 14–16. Session 16 added no market proxy and promoted no existing fallback or supplemental instrument.
-**Signal layer status:** Production remains the stateless rule-based keyword classifier with exact/canonical text deduplication. Session 15 audited, but did not implement, a stateful event-cluster approach. The audit reconstructed 1,153 fidelity-B observations from 28 retained payload identities at 27 timestamps, kept 64 fidelity-C selected-output observations separate, and selected a deterministic 428-observation manual set. Current-view adjudication accepted 327 assignments into 123 active event clusters and left 101 observations unresolved. Exact duplicate excess in the B census was 834/1,153 (72.333044%), while accepted manual assignments compressed 327 observations to 123 clusters (204/327, 62.385321% reduction). Armed-conflict actions still represented 78/123 clusters (63.414634%), so material conflict concentration remained after duplication and clustering. No production semantic clustering, raw-candidate persistence, registry, or immutable assignment-history path exists yet.
-**Market layer status:** Production remains the unchanged FRED plus Tiingo EOD `adjClose` legacy calculation: a uniform five-common-observation transform, trailing 252-common-date transformed window, global all-instrument common-date alignment, and per-channel `max |z|` driver selection. Session 16 audited 14 existing mapped instruments from a frozen audit-download-vintage manifest, covering 8,669 normalized observations, 391 evaluation dates, 676 candidate configurations, and 264,316 eligibility rows. It reproduced the latest-date legacy calculation at published rounding, measured own-series five-valid-observation windows spanning 5–12 calendar days, and completed dating, eligibility, instrument-set, trigger-rate, point-in-time percentile, attainable-alpha, history, conditioning, driver/second-driver, breadth, and disagreement analyses. Timing evidence is partial, historical release-vintage identity is unavailable, and no candidate rule or parameter is selected. Current production state names and all candidate audit statistics remain non-causal.
+**Current session cursor:** Session 17 complete — next session is Session 18.
+**Overall status:** Phase 1 (Sessions 1–6) and the Phase 2 legacy divergence baseline are complete. Sessions 14–16 completed architecture and evidence collection. Session 17 completed the sole Methodology 2.0 specification-freeze gate on 2026-09-01 through four recorded steps: initial freeze candidate, first independent PA-08 failure, correction of six material defect classes, and fresh PA-08 round-two pass. The corrected frozen manifest identity is `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`; failed candidate identity `809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33` remains historical only. Session 18 is next and may implement only the frozen signal-v2 contract in isolation. Publication, domain, screenshot, comparison, and cutover work remain gated.
+**Methodology review status:** Methodology `2.0.0` is frozen and independently validated as a specification. The package contains 12 files under `methodology/2.0.0/`, and Session 17 audit history contains 13 files under `audit/session17/`, including the failed validation, correction record, and passing round-two validation. These 25 Session 17 files remain untracked pending explicit closeout/final staging instructions. The 62 Session 16 files remain a separate private/untracked boundary and must not be staged accidentally. Session 15 private/raw evidence and preservation material remain unchanged. The corrected package freezes the signal, market, timing, schema, canonicalization, migration, parallel-acceptance, and deferral contracts; it does not deploy them.
+**Methodology 2.0 implementation status:** Signal-v2 implementation has not started. Market/divergence-v2 implementation has not started. The persistent registry is designed and specified but not implemented. Public methodology stamping is specified but not implemented. Parallel comparison has not started. Production cutover is not authorized. PA-09 durable storage, retention, tiering, backup, and disaster recovery remains a public-cutover blocker, but it does not block isolated Session 18 parallel signal implementation.
+**Legacy continuity:** Legacy production behavior, automation, workflows, public output, thresholds, sources, transforms, state names, historical snapshots, and run records remain unchanged. Existing close-date snapshots and run records remain immutable and must not be recomputed or retroactively stamped. Legacy automation may continue unchanged unless broken.
+**Signal layer status:** Production remains the stateless legacy keyword classifier. The frozen, not-yet-implemented signal-v2 specification scores the event cluster; uses the structural Candidate-C/E2 family with no scalar signal score; requires an explicit direct mechanism, `implemented` or `impact-observed` stage, a `new`, materially `escalating`, or materially `de-escalating` transition, and two independent reporting origins; and permits one contribution per cluster/channel. Automatic clustering is exact incident ID or exact versioned normalized-content-hash equality only. Ambiguous assignments require persisted adjudication. Candidate disposition remains separate from event type; multi-incident candidates are atomically decomposed where possible; typed unknowns remain explicit; chronology-ineligible evidence is excluded. `lastMaterialChangeAt` is the lifecycle clock, while numeric decay/staleness/expiry is frozen as deferred with no automatic behavior. Session 15 denominators remain 101/428 unresolved observations, 21/123 unknown-origin clusters, 102/123 clusters with assessed exact independent-source counts, and corroboration 97 single-origin / 4 corroborated-independent / 1 conflicting / 21 unknown-origin.
+**Market layer status:** Production remains the unchanged legacy FRED/Tiingo calculation. The frozen, not-yet-implemented market-v2 specification uses own-series five-valid-observation transforms with actual window dates and sample-SD z-scores; at most 252 transformed observations; independently dated latest same-date per-channel cohorts; mixed-date gap `0`; maximum age three weekdays; quorum `3/4`, `2/3`, or `2/2` by channel size; common point-in-time `alpha = 0.20`; nearest-rank 80th percentile with strict exceedance; 126 minimum and 252 maximum prior eligible closes; instrument-set and eligible-count conditioning; and no pooled or raw fallback. Raw `M >= 1.5` is diagnostic only; breadth has binary weight `0`; named driver and second driver are retained. After-close signals remain pending, unreliable timing remains typed unknown, and no state implies causal attribution. The Session 16 frozen-package wording remains 29 files when the manifest/package boundary is included; validator reports of 28 frozen raw/normalized inputs exclude the manifest identity file and are not contradictory.
 **Repo status:** Crucix cloned locally at `D:\WinProjects\CRUCIX`  
 **Crucix running locally:** Yes, when started with `npm run dev`  
 **`/api/data` working:** Yes  
@@ -204,6 +204,7 @@ Recorded after Session 4; Sessions 5–6 changed files since (`.gitignore`, `pac
 **Fresh Session 14 execution preflight:** On 2026-08-11, `git rev-parse HEAD` returned `72bba8e568cb46841632cbb779416ff74cc1777b` and `git status --short` was empty, apart from the recurring unreadable global-ignore warning. The legacy scripts/workflow were present. Repository inspection again found no `inputs/candidates/`, `state/events/`, `log/event-assignments/`, `methodology/`, explicit v2 namespace, `methodologyVersion` field, or empirical percentile implementation. Locally ignored `runs/memory/` contained 27 distinct retained run timestamps from 2026-05-22 through 2026-06-23; tracked close snapshots contained only selected top-signal evidence, not historical raw candidates. Session 14 changed documentation/design artifacts only.
 **Fresh Session 15 closeout checks:** On 2026-08-13, repository HEAD was `5ababb0101ae26254962621357b4a1f5380e5560` on `master`. Before this project-log-only closeout, the tracked working tree and index were clean and exactly 19 `audit/session15/` artifacts were untracked; the recurring unreadable global-ignore warning remained non-blocking. The finalizer verified all 64 frozen source files, all 11 private preservation copies totaling 597,000 bytes, the manifest self-hash, fixed artifact hashes, deterministic rebuilds, and 26/26 required measurements. The Session 15 audit artifacts and `runs/session15-preservation/20260813T111218Z` remain untracked/private pending explicit source-term and privacy review; none were modified, staged, committed, or pushed during this closeout.
 **Fresh Session 16 execution/closeout checks:** Session 16 initially observed HEAD `6613b76488b754c281e2ac7999b0e692b182a2e8`; an external `pull --tags origin master` fast-forward occurred during preflight at `2026-08-19T16:11:03+02:00`, after which the frozen audit HEAD was `4a2bb54f2e1e8ea141ec3bb2a65f041070530e6b` on `master`. The working tree and index were clean before Session 16 helpers were created. All 19 fixed Session 15 artifact hashes, all 11 preservation copies, and all nine recorded production hashes passed before this log-only closeout. Session 16 remains a wholly untracked 62-file boundary under `audit/session16/`; Session 15 record-level/private artifacts and preservation copies remain ignored/private. The audit handoff reported 1,579,671,915 bytes for the 62 Session 16 files; closeout re-inventory of those same 62 files measured 1,579,675,442 bytes (1.471187 GiB), a 3,527-byte non-material accounting discrepancy that does not affect any frozen manifest identity, audit result, or completion gate. Before this log edit there were no tracked or staged changes, and only this project log is authorized to change.
+**Fresh Session 17 closeout preflight:** On 2026-09-01, `master`, HEAD, and `origin/master` were `bfce08feece67444ce7fd98ea6fe2b42d15eea24`, ahead/behind `0/0`. The tracked tree and index were clean before this documentation-only edit; the only untracked roots were `audit/session16/`, `audit/session17/`, and `methodology/`. The expanded first-pass validator passed 24/24 groups, and the fresh independent round-two validator passed 27/27 groups. Corrected manifest identity `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c` and canonical fixture identity `e871a28d2d2b6634246939c4b078b0116c8f4b65fb04ff37e7082218f0f7c7c7` reproduced. All Methodology, Session 15/16 evidence, Session 17 audit, preservation-copy, and production-baseline identities passed before the edit. No implementation, staging, commit, push, publication, snapshot rewrite, or run-record change occurred.
 
 ---
 
@@ -242,12 +243,12 @@ Rationale: Phase 1 produces an estimate and puts it next to nothing. There is no
 | 14 | 90 min | Freeze architecture and executable audit protocols: persistence/recovery, identity/lifecycle, core schema draft, parameter register, source-origin rules, market/timing candidates, namespace, and comparison contract; no production change | Done — documentation/design only |
 | 15 | 120 min | Signal evidence audit: preserve/inventory/hash retained evidence; separate fidelity strata; extract reconstructable candidates; normalize origins; cluster episodes/parents; label event, stage, mechanism, directness, corroboration, lifecycle, and status; adjudicate; compare elevation candidates; measure storage; produce final metrics/report | Done — evidence audit complete with explicit limitations; no signal-v2 production implementation and no final rule frozen |
 | 16 | 90 min | Market evidence audit with frozen FRED/Tiingo inputs: reproduce legacy; calculate own-series transforms; compare channel dating, stale/eligibility, minimum-count, date-gap, and instrument-set candidates; measure raw/percentile trigger rates and breadth; align signal/market timestamps without look-ahead | Done — evidence audit complete with audit-download-vintage and partial-timing limitations; no market-v2 production implementation and no final parameter frozen |
-| 17 | 90 min | Resolve the parameter register from Sessions 15–16; freeze `methodology/2.0.0/*.json`, production schemas/enums, clustering/lifecycle/source rules, signal and market gates, timing/calendar rules, storage/migration contract, parallel-period criteria, and acceptance/reproducibility fixtures | Planned — sole methodology-freeze gate; both evidence audits complete |
-| 18 | 120 min | Implement signal v2 in parallel only: immutable candidate and assignment files, recoverable registry, accepted clustering path, minimal taxonomy/evidence/lifecycle rules, version/config hashes, and v2 signal output; keep legacy untouched | Planned implementation — depends only on the Session 17 freeze |
-| 19 | 120 min | Implement market/divergence v2 in parallel only: own-series transforms, frozen dating/eligibility/set handling, breadth, threshold, timestamp pending logic, v2 states, manifests, and offline canonical reproduction; keep legacy untouched | Planned implementation — depends only on the Session 17 freeze |
-| 20 | 90 min | Review the Session 17-required number of distinct eligible market closes using distribution/case metrics, identity/lifecycle stability, and reproducibility—not row agreement—and document production cutover, extended parallel run, or rejection without rewriting legacy history | Provisional — depends on Sessions 18–19 and comparison coverage |
+| 17 | 90 min | Freeze versioned schemas/enums, parameter register, clustering/lifecycle/source-origin rules, signal and market gates, timing/calendar rules, storage/migration contract, parallel-period criteria, complete fixtures, deterministic canonicalization, and independent validation | **Done 2026-09-01 — specification frozen; PA-08 R2 passed; no implementation** |
+| 18 | 120 min | Implement signal v2 in parallel only: immutable candidate and assignment files, recoverable registry/materialized state, exact-only automatic clustering, persisted adjudication, origin topology/history, frozen structural eligibility/ranking, version/config/input hashes, and isolated v2 signal output; keep legacy untouched | Planned — depends on frozen `2.0.0` signal specification and PA-08 pass |
+| 19 | 120 min | Implement market/divergence v2 in parallel only: own-series transforms, frozen dating/eligibility/set handling, breadth, threshold, timestamp pending logic, v2 states, manifests, and offline canonical reproduction; keep legacy untouched | Planned — market/divergence implementation has not started |
+| 20 | 90 min | Review at least 30 distinct eligible market closes using distribution/case metrics, identity/lifecycle stability, and reproducibility—not row agreement—and document production cutover, extended parallel run, or rejection without rewriting legacy history | Provisional — may extend or reject; depends on Sessions 18–19 and comparison coverage |
 
-Target times are planning estimates. Sessions 15 and 16 completed evidence collection without production implementation. Session 17 is the only methodology-freeze gate; Sessions 18–19 may implement only what it freezes, under the separate v2 namespace. Session 20 evaluates the parallel protocol in `audit/session14-parallel-comparison-protocol.md` and may extend or reject rather than force cutover.
+Target times are planning estimates. Sessions 15 and 16 completed evidence collection without production implementation. Session 17 completed the only methodology-freeze gate. Sessions 18–19 may implement only the frozen `2.0.0` contract under separate v2 namespaces. Session 20 requires at least 30 distinct eligible market closes, evaluates the parallel protocol, and may extend or reject rather than force cutover. PA-09 durable storage/retention/DR blocks public cutover, not isolated parallel implementation.
 
 Session 14 artifacts:
 
@@ -261,6 +262,8 @@ Session 14 artifacts:
 Session 15 evidence artifacts remain untracked pending privacy/source-term review. The frozen inventory and input manifest cover 64 original evidence files; the completion artifacts are `audit/session15/metrics.json` and `audit/session15/signal-audit-report.md`, with sensitivity results in `audit/session15/signal-elevation-sensitivity.json`. The private preservation area `runs/session15-preservation/20260813T111218Z` contains 11 byte-identical copies totaling 597,000 bytes. Raw candidate text, full private URLs, detailed record-level evidence, and preservation copies must not be staged or published without explicit review; sanitized aggregate artifacts are only candidates for later tracking, not authorized publications.
 
 Session 16 evidence artifacts also remain untracked pending privacy/source-term and retention review. The frozen audit-download-vintage manifest covers 14 existing mapped instruments, 8,669 normalized observations, and 29 frozen raw/normalized/ledger files. Its canonical self-hash is `308089d94d9b4f5825adb3204b99d3b421c85cd362c6d9e62e261037ff597d1d` and physical SHA-256 is `7386d1297b30f21e1691b3d41884480feb124b3f3cbb6f36b5fa4089cf93d8d6`. The full 62-file Session 16 boundary is approximately 1.47 GiB and contains private raw/download-level and record-level evidence plus aggregate review candidates. This classification is not authorization to stage or publish any Session 16 artifact.
+
+Session 17 adds a 25-file untracked specification-and-audit boundary: 12 files under `methodology/2.0.0/` and 13 under `audit/session17/`. It contains the corrected frozen schemas/enums, parameter register, clustering/lifecycle/source-origin rules, signal and market gates, timing/calendar behavior, storage/migration and parallel-acceptance contracts, complete fixtures, deterministic canonicalization evidence, the historical failed PA-08 record, the six-defect correction record, and the passing independent round-two validation. Corrected manifest identity is `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`. These files are specifications and audit records, not production implementation, and remain untracked pending final staging instructions. Keep the separate 62-file Session 16 private boundary out of any Session 17 staging selection.
 
 ---
 
@@ -378,7 +381,7 @@ The history page renders these rows backwards. After 30–40 days, the log's rea
 
 ## 4c. Methodology 2.0 Audit Principles
 
-These remain **audit findings and production design targets**, not completed production implementation. Session 14 converted them into the design and executable protocols under `audit/`; Session 15 completed the signal evidence audit and Session 16 completed the market evidence audit, both with explicit limitations. Session 17 is the sole gate that may freeze machine-readable methodology artifacts and acceptance tests, and only Sessions 18–19 may implement parallel v2 behavior. The repository still does not contain a production raw-candidate archive, semantic cluster assignments, persistent event registry, frozen Methodology 2.0 machine-readable schema artifacts, implemented v2 output paths, methodology stamping, or a selected empirical channel-percentile threshold.
+Sessions 14–16 remain historical architecture and evidence records. Session 17 completed the sole specification-freeze gate on 2026-09-01: Methodology `2.0.0` machine-readable artifacts and acceptance tests are frozen and independently validated. This section does not claim production implementation. The repository still has no implemented v2 raw-candidate archive, semantic assignments, persistent registry/materialized state, signal-v2 output, market/divergence-v2 output, public methodology stamp, parallel comparison, or production cutover. Sessions 18–19 may implement only the frozen contract in isolated namespaces.
 
 ### Signal architecture
 
@@ -417,9 +420,58 @@ These remain **audit findings and production design targets**, not completed pro
 - Timing: all 15 unselected Candidate-C variants were carried through. Timing remains partial because historical publication/event timestamps, FRED intraday availability, and complete source-release timing are unavailable. No causal conclusion was made.
 - Completion boundary: 18 required items measured, one timing item partial, and historical release-vintage identity measured as unavailable. The deterministic completion gate passed. No source/proxy change, production change, alpha, history rule, fallback, dating/eligibility rule, or other parameter was selected.
 
+#### Session 17 Methodology 2.0 freeze (completed 2026-09-01; specification only)
+
+Methodology `2.0.0` is frozen and independently validated under corrected manifest identity `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`. The failed candidate identity `809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33` remains immutable historical evidence. The freeze creates no production implementation.
+
+Frozen signal contract:
+
+- score the event cluster, not reports or headlines;
+- use structural Candidate-C/E2 eligibility and transparent ranking, with no scalar signal score;
+- require a direct transmission mechanism, `implemented` or `impact-observed` stage, a `new`, materially `escalating`, or materially `de-escalating` transition, and two independent reporting origins;
+- contribute each qualifying cluster at most once per channel;
+- permit automatic clustering only by exact incident ID or exact equality of the versioned normalized-content hash with no assessed-field conflict;
+- persist assisted/human adjudication for every ambiguous assignment; keep unresolved candidates non-scoring;
+- separate candidate disposition from event type, atomically decompose multi-incident text where possible, preserve typed unknowns, and exclude chronology-ineligible evidence;
+- update `lastObservedAt` for continuing reports while leaving `lastMaterialChangeAt` unchanged; apply no automatic numeric decay, staleness, expiry, or inferred lifecycle transition.
+
+Frozen market contract:
+
+- compute own-series five-valid-observation price/level transforms, retain actual `windowStart`/`windowEnd`, and use sample-SD z-scores with at most 252 transformed observations;
+- use the independently dated latest same-date per-channel cohort, mixed-date gap `0`, maximum freshness age three weekdays, and quorum `3/4`, `2/3`, or `2/2` according to channel size;
+- calculate point-in-time nearest-rank 80th-percentile thresholds with common `alpha = 0.20`, strict exceedance, 126 minimum and 252 maximum prior eligible closes, and instrument-set plus eligible-count conditioning;
+- use no pooled-history fallback and no raw-threshold fallback; retain raw `M >= 1.5` as diagnostic only;
+- retain named driver and second driver; breadth binary weight is `0`.
+
+Frozen state and timing contract:
+
+- v2 states are `signal-leading`, `co-movement`, `market-only`, and `calm`;
+- a reliable signal first seen after close is `pending` until the next eligible market observation;
+- unreliable or unavailable timing remains typed unknown and cannot enter a four-state assessment;
+- state and timing labels are descriptive and never establish causal attribution.
+
+Frozen reproducibility, namespace, and comparison contract:
+
+- complete schemas cover all 11 production definitions; all 47 array-bearing fields have explicit set-like or sequence-like policies;
+- canonical output uses deterministic UTF-8 encoding, object-key ordering, array policy, whitespace/newline, number/rounding/negative-zero, null/typed-unknown, and volatile-envelope exclusion rules;
+- the canonical fixture is exactly 924 LF-terminated UTF-8 bytes with SHA-256 `e871a28d2d2b6634246939c4b078b0116c8f4b65fb04ff37e7082218f0f7c7c7`;
+- parallel output is isolated under `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/`; legacy output is never overwritten or retroactively stamped;
+- Session 20 requires at least 30 distinct eligible market closes and may extend the comparison or reject cutover; row agreement is not the acceptance criterion.
+
+Six bounded deferrals remain specifications for safe behavior, not completed implementation:
+
+1. **Numeric lifecycle decay/staleness/expiry:** no automatic decay or inferred transition; continuing clusters do not elevate and explicit material evidence is required. Does not block isolated parallel work; any automatic behavior requires a later methodology version.
+2. **Fuzzy clustering thresholds/windows:** only the two exact automatic joins are permitted; all other proposals require persisted adjudication. Does not block parallel work, but broader automatic joining is prohibited and unrecorded ambiguity blocks cutover.
+3. **Durable storage/retention/tiering/backup/DR:** use private access-controlled local immutable files with hashes and no pruning during parallel work. Does not block isolated implementation; PA-09 blocks public cutover until retention approval, source review, RPO/RTO ownership, and a recovery drill exist.
+4. **Stale-lock timeout/takeover:** exclusive-create locks block writers; takeover/deletion is never automatic and recovery is a persisted human decision plus new run. Does not block single-writer parallel work; automatic takeover remains blocked.
+5. **Complete holiday/early-close calendars and provider timestamps:** use the frozen weekday/16:00 New York convention, do not infer holidays or early closes, preserve unknown timing, and mark reliable after-close signals pending. Does not block parallel work; unresolved coverage may extend comparison or block cutover.
+6. **Provider-specific raw-retention permission:** keep raw inputs private when permitted; otherwise retain lossless normalized data, retrieval metadata, retention status, and available identity. Does not block permitted-source parallel work; any required non-reproducible source blocks cutover.
+
+PA-08 history: the initial independent validation failed even though calculations and identities reproduced; it identified six material defect classes covering normalization, adversarial invariant completeness, operational fields, recoverable origin topology, complete schema/canonical bytes, and denominator traceability. The correction pass changed the candidate without changing methodology selections. The corrected first-pass validator passed 24/24 groups and fresh independent PA-08 R2 passed 27/27 with no material defects. This satisfies the independent-validation requirement for the corrected identity. Signal-v2, market/divergence-v2, registry, stamping, parallel comparison, publication, and cutover remain unimplemented.
+
 #### Methodology 2.0 minimum operational core
 
-The proposed minimum operational core must be resolved before a production cutover:
+Session 17 froze the following minimum operational core in the versioned package. None is implemented in production yet:
 
 - stable `eventClusterId`;
 - a broader `parentSeriesId` or equivalent parent-crisis/campaign identifier;
@@ -468,7 +520,7 @@ The candidate long-term leaf ontology remains useful reference material, but eve
 
 #### Explicit assessment status
 
-Fields not yet populated must not simply disappear. The schema design target must distinguish:
+Fields not yet populated must not simply disappear. The frozen schema distinguishes:
 
 - `unassessed`: the pipeline did not attempt the assessment;
 - `unknown`: it attempted the assessment but evidence was insufficient;
@@ -486,11 +538,11 @@ Do not insert strings such as `"unassessed"` into fields that will later be nume
 }
 ```
 
-This pattern is a design target, not an implemented schema.
+This pattern is now part of the frozen schema contract, not an implemented production record format.
 
 #### Persistent event registry and immutable assignment history
 
-Stable cluster identity, `firstSeen`, novelty, decay, escalation, and de-escalation require state across runs. Session 14 decided and documented the architecture for:
+Stable cluster identity, `firstSeen`, novelty, escalation, and de-escalation require state across runs. Sessions 14 and 17 designed and specified, but did not implement:
 
 - registry location and format;
 - atomic read/update/write behavior;
@@ -502,7 +554,7 @@ Stable cluster identity, `firstSeen`, novelty, decay, escalation, and de-escalat
 - human-correction provenance;
 - merge, split, alias, and supersession behavior.
 
-Provisional path examples, not completed or irrevocably frozen paths:
+Frozen isolated path contract for later implementation:
 
 ```txt
 inputs/candidates/<run-id>.jsonl
@@ -560,7 +612,7 @@ Keep the existing project discipline that a language model may narrate or propos
 
 #### Frozen signal parameters and source independence
 
-All consequential parameters must live in versioned methodology artifacts rather than unexplained constants in code. The freeze list must include at least:
+All consequential selected parameters now live in versioned methodology artifacts rather than unexplained constants in code. Unsupported numeric or operational choices are explicit bounded deferrals, not hidden defaults. The governed parameter topics include:
 
 - event similarity threshold;
 - actor/location/time matching windows;
@@ -604,12 +656,12 @@ Keep severity and confidence separate:
 
 The legacy signal threshold of **60% of the Phase 1 keyword-score ceiling** remains frozen only for legacy/pre-2.0 output. It must not be inherited automatically by a cluster-based signal system because the score distribution and semantics change.
 
-Sessions 15 and 17 must evaluate whether Methodology 2.0 should use a scalar score at all. Candidate structural gate, not a frozen final rule:
+Session 17 resolved this question: Methodology 2.0 uses no scalar signal score. The frozen structural Candidate-C/E2 gate is:
 
 ```txt
-explicit transmission mechanism
-AND sufficient evidence/corroboration
-AND qualifying action stage or observed consequence
+direct transmission mechanism
+AND implemented or impact-observed action stage
+AND two independent reporting origins
 AND new event, material escalation, or material de-escalation
 ```
 
@@ -622,7 +674,7 @@ Aggregation principles:
 - do not use category quotas to force visual balance;
 - avoid replacing one opaque headline aggregate with an opaque event-score aggregate.
 
-Proposed event fields from the earlier plan remain candidates and must be split between 2.0 core and 2.1 expansion:
+The versioned schema freezes the operational 2.0 forms of these fields; richer enrichment remains a 2.1 candidate:
 
 - `eventClusterId`
 - `eventType`
@@ -637,8 +689,8 @@ Proposed event fields from the earlier plan remain candidates and must be split 
 - `firstSeen`
 - `lastSeen`
 - affected assets, locations, infrastructure, and mechanisms when known.
-- A single unverified source cannot independently elevate a channel unless a documented exception is approved.
-- Continuing events decay unless a new escalation or observed consequence occurs.
+- A single reporting origin cannot elevate a channel; no exception is frozen.
+- Continuing events do not elevate, update `lastObservedAt` only, and receive no automatic decay or expiry under `2.0.0`.
 - De-escalation must be represented explicitly.
 
 ### Market-data architecture
@@ -654,38 +706,38 @@ Keep these parts unless the audit finds a concrete defect:
 - freshness metadata and warnings;
 - immutable historical snapshots.
 
-Audit and likely amend these parts for Methodology 2.0:
+Session 17 resolved these Methodology 2.0 specification points; implementation remains for Session 19:
 
 1. **Own-series calculation:** compute each instrument's transform on its own valid observation series/calendar instead of first intersecting every instrument onto one global date set.
-2. **Five-observation meaning:** verify and document the exact span of each "5-day" calculation. The target is five valid observations for that instrument, with the actual start/end dates retained.
-3. **Trailing window:** Session 16 audited the latest 252 valid transformed observations per instrument as the legacy-compatible candidate; Session 17 freezes or rejects the v2 definition.
+2. **Five-observation meaning:** use five valid observations for that instrument, retaining the actual start/end dates.
+3. **Trailing window:** use at most 252 valid transformed observations per instrument.
 4. **Dating:** persist `asOf`, observation age, business-day age, and freshness per instrument; derive a visible per-channel `marketAsOf` and freshness state. One lagging crude series must not silently date unrelated channels.
 5. **Channel evidence:** retain the driver, but also expose the second-largest absolute z-score, number of eligible instruments, number above threshold, and a market-breadth indicator.
-6. **Multiple-instrument threshold audit:** quantify the empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. Independence sanity checks:
+6. **Multiple-instrument threshold diagnostic:** retain the measured empirical trigger frequency of `max |z| >= 1.5` for each channel. Do not assume the same false-alert rate when channels have different instrument counts. Independence sanity checks:
    - `P(max |Z| >= 1.5) ≈ 24.94%` for 2 independent instruments
    - `P(max |Z| >= 1.5) ≈ 34.97%` for 3 independent instruments
    - `P(max |Z| >= 1.5) ≈ 43.66%` for 4 independent instruments
    Actual channel values are correlated and therefore must be measured empirically, but the calculation demonstrates structural asymmetry: a four-instrument channel has more chances to cross a raw threshold than a two-instrument channel.
-7. **State semantics:** the current absolute-z test detects unusual movement, not causal pricing. For Methodology 2.0, provisionally replace:
+7. **State semantics:** the current absolute-z test detects unusual movement, not causal pricing. Methodology 2.0 freezes this legacy-to-v2 mapping:
    - `radar-claim` -> `signal-leading`
    - `priced` -> `co-movement`
    - `radar-miss` -> `market-only`
    - `calm` -> `calm`
    Preserve legacy state names in historical snapshots and provide a documented mapping rather than rewriting history.
 8. **Direction diagnostic:** consider `expectedDirection`, `observedDirection`, and `directionalConsistency` as a separate diagnostic keyed to the explicit transmission mechanism. Do not claim causality and do not gate the main state on direction until validated.
-9. **Threshold discipline:** keep current thresholds unchanged for legacy output. Freeze any Methodology 2.0 threshold only after the audit; do not optimize thresholds to make the board more interesting.
+9. **Threshold discipline:** keep current thresholds unchanged for legacy output. Use the frozen conditioned point-in-time percentile only in isolated v2 output; do not retune it for visual interest.
 10. **Proxy discipline:** Session 14 added no BNO/USO proxy and promoted no proxy. A future supplemental proxy must be clearly labeled; promotion to a primary input requires a visible methodology-version change.
-11. **Reproducibility:** audit whether raw market inputs or input hashes must be persisted so the same methodology plus the same inputs can reproduce a bit-identical board.
+11. **Reproducibility:** persist input identities and the permitted raw or lossless-normalized evidence needed for the same methodology plus the same inputs to reproduce a bit-identical board; provider permissions remain DEF-006/PA-09 work.
 
-#### Market-threshold audit candidate
+#### Frozen market-threshold rule
 
-Keep the current raw z-score and named driver as diagnostics. The leading candidate uniform rule for audit, not a frozen decision:
+Keep raw z-score, named driver, and second driver as diagnostics. The frozen uniform rule is:
 
 ```txt
 M(c,t) = max absolute z-score among eligible instruments in channel c at time t
 
-market moving when M(c,t) exceeds the point-in-time
-(1 - alpha) empirical quantile of channel c's prior M distribution
+market moving when M(c,t) strictly exceeds the point-in-time
+nearest-rank 80th percentile of the eligible conditioned prior M history
 ```
 
 This can remain a uniform methodology because:
@@ -695,30 +747,30 @@ This can remain a uniform methodology because:
 - cutoffs are estimated point-in-time, without look-ahead;
 - raw z-score, driver, and breadth remain visible.
 
-Session 16 compared all three required options and retained each as evidence for Session 17 without selecting one:
+Session 16 compared all three required options. Session 17 selected the point-in-time common-alpha percentile for v2, retained raw `M >= 1.5` as diagnostic only, and rejected pooled/raw fallback:
 
 1. retain legacy `max |z| >= 1.5` only for the legacy baseline;
 2. Methodology 2.0 channel-specific empirical percentile with one common `alpha`;
 3. retain a raw threshold but publish measured channel base rates and breadth without changing the binary rule.
 
-For any percentile proposal, Session 17 must freeze decisions on:
+The frozen percentile contract resolves these decisions as follows:
 
-- rolling versus expanding history;
-- minimum sample size;
+- rolling prior-only history capped at 252 eligible closes;
+- minimum sample size 126;
 - no-look-ahead calculation;
-- instrument-set versioning;
+- instrument-set and eligible-count conditioning;
 - stale/ineligible instrument handling;
-- changes in eligible instrument count;
+- changes in eligible instrument count are separately conditioned;
 - correlation and regime sensitivity;
-- fallback behavior before sufficient history exists.
+- no fallback before sufficient history exists.
 
-The Session 16 audit evidence now exists, but it froze no final market threshold. Any selection or rejection belongs to the Session 17 joint methodology freeze.
+Session 17 made this specification selection from the Session 16 evidence. It remains unimplemented.
 
 #### Market dating, eligibility, and threshold calibration
 
 The market-threshold decision cannot be separated from the date/eligibility decision.
 
-Methodology 2.0 must retain per instrument:
+The frozen Methodology 2.0 schema retains per instrument:
 
 - own-series transform;
 - actual five-observation `windowStart` and `windowEnd`;
@@ -728,28 +780,28 @@ Methodology 2.0 must retain per instrument:
 - z-score;
 - history count.
 
-A documented channel rule must define:
+The frozen channel rule defines:
 
-- `marketAsOf`;
-- maximum permitted lag between instruments;
+- `marketAsOf` as the latest same-date eligible cohort;
+- maximum permitted lag between included instruments of `0` weekdays;
 - stale-instrument exclusion;
-- minimum eligible-instrument count;
+- minimum eligible-instrument count of `3/4`, `2/3`, or `2/2` by channel size;
 - how breadth is calculated when eligibility changes;
-- whether the channel statistic may combine instruments ending on different dates.
+- no combination of instruments ending on different dates.
 
 Methodology 2.0 should avoid both extremes:
 
 - one global all-instrument intersection that lets crude date unrelated channels;
 - an unexplained mixture of arbitrarily different dates inside one channel statistic.
 
-The audit must compare own-series calculations with a clearly defined per-channel dating/eligibility rule.
+The maximum permitted observation age is three weekdays. Session 16 supplied the comparison evidence; Session 17 froze the rule. Session 19 will implement it.
 
 #### Signal-versus-market timing
 
 - A signal first observed after the relevant market close has not yet had an opportunity to be reflected in that close.
-- It must be marked pending the next eligible market observation rather than immediately classified as co-movement or market-only against the prior close.
+- It is marked pending the next eligible market observation rather than immediately classified as co-movement or market-only against the prior close.
 - Event `firstSeen` and `lastMaterialChangeAt` should be compared with market-close timestamps, not dates alone.
-- The audit must inspect cases where the market move preceded the signal.
+- Parallel comparison must inspect cases where the market move preceded the signal.
 - Do not claim causal attribution even when timing aligns.
 
 #### Parallel-run comparison
@@ -773,14 +825,14 @@ The comparison must report:
 - market-before-signal and after-close/pending cases;
 - stability of cluster identity and lifecycle across runs.
 
-Disagreement is expected during recalibration. Success is determined by auditability, reproducibility, stable lifecycle behavior, sensible base rates, and documented error cases, not by matching legacy rows. The comparison-period criterion must be frozen in Session 17 and defined in distinct eligible market closes, not merely calendar days.
+Disagreement is expected during recalibration. Success is determined by auditability, reproducibility, stable lifecycle behavior, sensible base rates, and documented error cases, not by matching legacy rows. Session 17 froze a minimum of 30 distinct eligible market closes; Session 20 may extend the period or reject cutover.
 
 ### Versioning and migration
 
 - Existing snapshots remain immutable under the legacy/pre-2.0 methodology.
 - Methodology 2.0 artifacts must carry an explicit `methodologyVersion`.
 - Parallel validation output must use a separate path or namespace so it cannot overwrite legacy daily snapshots.
-- The production cutover happens only after a documented comparison period and regression tests.
+- Production cutover requires the documented 30-close minimum comparison, regression/acceptance review, explicit authorization, and PA-09 durable-storage/retention/DR completion.
 
 ---
 
@@ -1745,6 +1797,107 @@ Execute `audit/session14-market-audit-protocol.md` against a frozen FRED/Tiingo 
 
 ---
 
+# Session 17 — Methodology 2.0 Specification Freeze and Independent Validation
+
+## Goal
+
+Resolve the Session 15–16 evidence into one versioned Methodology `2.0.0` specification; freeze schemas/enums, parameters, clustering/lifecycle/source-origin rules, signal and market gates, timing/calendar behavior, storage/migration and parallel-acceptance contracts, complete fixtures, and deterministic canonicalization; then require independent PA-08 validation before Session 18. Make no production implementation.
+
+## Status
+
+**Status:** Complete — corrected specification frozen and independently validated; no material defects remain.
+**Date completed:** 2026-09-01
+**Next session:** Session 18 — isolated signal-v2 implementation only.
+
+## Preflight and evidence boundary
+
+- Final closeout preflight: `master`, HEAD, and `origin/master` at `bfce08feece67444ce7fd98ea6fe2b42d15eea24`, ahead/behind `0/0`; tracked tree and index clean before the log edit.
+- Only untracked roots: `audit/session16/`, `audit/session17/`, and `methodology/`.
+- Session 15 evidence, 11 preservation copies totaling 597,000 bytes, Session 16 evidence, Methodology artifacts, Session 17 audit history, and production baselines reproduced before closeout.
+- The established Session 16 package count is 29 when the manifest/package boundary is included. The round-two validator's 28-input count refers only to the 14 raw plus 14 normalized inputs and excludes the manifest identity file.
+- No production, workflow, public-output, snapshot, run-record, or private-evidence file changed.
+
+## Initial freeze candidate and first validation
+
+- The initial candidate created the 12-file `methodology/2.0.0/` package and Session 17 decision, deferral, traceability, report, and validator records.
+- It selected version `2.0.0`, isolated future namespaces, Candidate-C/E2 structural signal eligibility, the implemented/impact stage boundary, two-origin corroboration, exact-only automatic clustering, material-change lifecycle clock, Rule-2 latest-same-date market cohorts, age three, gap zero, quorums `3/4`, `2/3`, and `2/2`, common `alpha = 0.20`, prior-only conditioned history `126–252`, strict exceedance, no fallback, breadth weight zero, non-causal states, after-close pending, and a 30-close minimum.
+- The initial first-pass validator passed 15/15 groups. That result covered the supplied package but was not an independent acceptance decision.
+
+## First independent PA-08 failure
+
+The first independent PA-08 correctly failed despite reproducing the signal/market calculations, Methodology artifact identities, 50 evidence identities, deferrals, and production preservation. Failed manifest identity `809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33` remains historical only. Six material defects were recorded:
+
+1. normalized-content automatic clustering lacked persisted normalization version/hash identity and an exact normative algorithm;
+2. schema conditionals admitted ten adversarial cross-field contradictions;
+3. lifecycle and market complete records omitted required operational and chronological fields;
+4. reporter/assertion/origin/independence and derivation/syndication/quotation topology was not recoverable;
+5. complete production records, all array policies, and canonical byte-level fixtures were insufficient;
+6. traceability conflated unresolved observations with unknown-origin clusters instead of preserving separate denominators.
+
+## Correction pass
+
+- Added exact `crucix-session15-conservative-normalization/v1` NFKC/line-ending/Unicode-whitespace behavior, persisted lowercase SHA-256 identity, retention state, conflict checks, and explicit prohibition of fuzzy/semantic automatic joins.
+- Added invariant-specific schema enforcement and fixtures for all ten adversarial records.
+- Required complete lifecycle, topology, instrument, market, divergence, and run-manifest records with chronological and semantic invariants.
+- Added the recoverable candidate → reporting source → originating assertion/observation → reporting origin → independence group topology and invalid-edge rejection.
+- Defined all 47 array policies and deterministic canonical JSON behavior; added an end-to-end bundle covering all 11 production definitions.
+- Corrected traceability to 101/428 unresolved observations, 21/123 unknown-origin clusters, 102/123 assessed exact independent-source counts, and corroboration 97/4/1/21.
+- Frozen methodology selections and all six bounded deferrals remained unchanged. Corrected manifest identity became `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`.
+
+## Passing PA-08 round two
+
+- Corrected expanded first-pass validation: 24/24 groups passed.
+- Fresh independent PA-08 R2: 27/27 groups passed; no material defects.
+- Independently rebuilt all 8,599 transforms from 8,669 observations across 14 instruments with zero mismatches.
+- Parsed 15/15 required JSON inputs and resolved 171/171 schema references.
+- Passed 46/46 positive and 48/48 negative semantic fixtures; all ten adversarial records rejected at their intended invariants.
+- All 47 array policies were defined. The canonical fixture reproduced as exactly 924 LF-terminated UTF-8 bytes with SHA-256 `e871a28d2d2b6634246939c4b078b0116c8f4b65fb04ff37e7082218f0f7c7c7`.
+- The corrected manifest identity reproduced twice in clean processes. The independent-validation requirement is satisfied.
+
+## Frozen signal selections
+
+- Scored unit: event cluster, maximum one contribution per cluster/channel/run.
+- Structural Candidate-C/E2 rule: direct mechanism; implemented or impact-observed stage; new/materially escalating/materially de-escalating transition; two independent reporting origins; no scalar signal score.
+- Automatic clustering: exact incident ID or exact versioned normalized-content hash only; persisted adjudication for ambiguous proposals.
+- Candidate disposition is distinct from event type; multi-incident text is atomically decomposed where possible; typed unknowns persist; chronology-ineligible evidence is excluded.
+- `lastMaterialChangeAt` is the lifecycle clock; continuing observations update `lastObservedAt` only. Numeric decay, staleness, and expiry are deferred with no automatic behavior.
+- Evidence denominators: 101/428 unresolved observations; 21/123 unknown-origin clusters; 102/123 assessed exact independent-source counts; corroboration 97 single-origin, 4 corroborated-independent, 1 conflicting, and 21 unknown-origin.
+
+## Frozen market and timing selections
+
+- Own-series five-valid-observation transforms, actual window dates, sample-SD z-score, and at most 252 transformed observations.
+- Latest same-date per-channel cohort; gap `0`; maximum age three weekdays; quorum `3/4`, `2/3`, or `2/2` by channel size.
+- Common point-in-time `alpha = 0.20`; nearest-rank 80th percentile; strict exceedance; 126 minimum and 252 maximum prior eligible closes; instrument-set and eligible-count conditioning; no pooled/raw fallback.
+- Raw `M >= 1.5` is diagnostic only; breadth binary weight `0`; named driver and second driver retained.
+- States: `signal-leading`, `co-movement`, `market-only`, `calm`; reliable after-close signals pending; unreliable timing unknown; no causal attribution.
+- Independent timing reproduction: 36 qualifying cells, 10 definitive, 26 ambiguous, zero causal conclusions.
+
+## Schemas, fixtures, canonicalization, and identities
+
+- Complete versioned schemas/enums, parameter registry, source-origin and clustering/lifecycle rules, storage/migration contract, parallel acceptance, fixtures, and README are frozen under `methodology/2.0.0/`.
+- The connected schema-valid bundle covers all 11 production definitions; all required operational fields and topology links are recoverable from records.
+- Object keys, set-like arrays, sequence histories, UTF-8, whitespace/newline, numbers, rounding, negative zero, nulls, typed unknowns, and volatile-field exclusion are deterministic.
+- Twelve Methodology package files and thirteen Session 17 audit files form the 25-file Session 17 boundary. All 11 manifest-listed Methodology artifact identities, 50 evidence identities, 11 Session 15 preservation copies, 28 raw/normalized Session 16 inputs plus their manifest boundary, and 12 production/legacy baselines reproduce.
+
+## Deferrals, PA-09, privacy, and staging boundary
+
+- Six bounded deferrals remain open: numeric lifecycle decay/expiry; fuzzy clustering thresholds/windows; durable storage/retention/tiering/backup/DR; stale-lock takeover; complete holiday/early-close calendars and reliable provider timestamps; provider-specific raw-retention permission.
+- Each deferral has frozen safe behavior, evidence required, and a future gate. None silently becomes an implementation default.
+- PA-09 durable storage/retention/DR does not block isolated Session 18 parallel signal implementation, but it remains a high-priority public-cutover blocker.
+- All 62 Session 16 files remain a distinct private/untracked boundary and must not be included accidentally when the 25 Session 17 files are eventually staged. Session 15 raw/private evidence and preservation copies remain unpublished.
+
+## Validation and production preservation
+
+- Pre-closeout first-pass: 24/24. Pre-closeout independent R2: 27/27.
+- Corrected manifest and canonical fixture identities reproduced; frozen trees and production baselines matched their pre-edit identities.
+- Legacy production, automation, public output, workflows, snapshots, and run records remained unchanged. No Session 18/19 implementation, staging, commit, push, or publication occurred.
+
+## Recommended Session 18 scope
+
+Implement only the frozen signal-v2 contract in the isolated `2.0.0` namespace. Verify the corrected manifest and PA-08 R2 identities first; create immutable per-run candidates and assignments, recoverable registry/materialized state, exact-only automatic clustering, persisted ambiguous adjudication, origin topology and point-in-time histories, structural eligibility and transparent ranking, and version/config/input hashes. Write only isolated v2 signal output. Do not implement market/divergence v2, change legacy behavior/history, invent hidden constants, resolve PA-09 in code, publish, or authorize cutover.
+
+---
+
 ## 5. Done Checklist
 
 ### Setup
@@ -1900,7 +2053,7 @@ Execute `audit/session14-market-audit-protocol.md` against a frozen FRED/Tiingo 
 - [x] All 26 required Session 15 measurements recorded, including 6 explicit partial measurements
 - [x] Storage growth and immutable-retention plausibility measured with production-capacity limitations stated
 - [x] Sanitized aggregate Session 15 metrics and final signal-audit report completed
-- [ ] Decay and corroboration mappings frozen
+- [x] Corroboration mapping and lifecycle clock frozen; numeric decay/staleness/expiry explicitly frozen as deferred with no automatic behavior
 - [ ] Signal v2 parallel output implemented
 
 #### Market audit and implementation
@@ -1909,22 +2062,23 @@ Execute `audit/session14-market-audit-protocol.md` against a frozen FRED/Tiingo 
 - [x] Latest-date legacy market calculation reproduced at published rounding without claiming historical release-vintage identity
 - [x] Own-series five-valid-observation transforms, actual window dates, trailing-history coverage, and legacy-global differences measured
 - [x] All specified channel-dating, freshness/stale, eligible-count, observed date-gap, and instrument-set candidates measured without selecting one
-- [ ] Own-series/per-channel date and eligibility rule frozen
+- [x] Own-series/per-channel latest-same-date, age, gap, and quorum eligibility rule frozen
 - [x] Empirical channel trigger rates measured
 - [x] 2/3/4-instrument threshold asymmetry assessed
 - [x] Point-in-time/no-look-ahead percentiles, attainable-alpha boundaries, and expanding/rolling history sensitivity measured
 - [x] Pooled, same-set, eligible-count-conditioned, fallback-availability, and full candidate-disagreement analyses completed
-- [ ] Empirical percentile rule accepted or rejected with evidence
+- [x] Point-in-time empirical percentile rule accepted with Session 16 evidence
 - [x] Driver, second driver, eligible count, above-threshold count, single/multiple mover, and breadth evidence measured
 - [x] Timing evidence carried through all 15 unselected Candidate-C variants with unavailable timestamps preserved and no causal conclusion
 - [x] Session 16 deterministic market-audit completion gate passed with explicit partial/unavailable limitations
-- [ ] Market breadth and second-driver schema frozen
+- [x] Market breadth and second-driver schema frozen; breadth binary weight remains `0`
 - [ ] Market/divergence v2 parallel output implemented
 
 #### Validation/cutover
 
-- [ ] Versioned Methodology 2.0 schemas, parameter register, migration contracts, and acceptance fixtures frozen
-- [ ] Canonical reproducibility test passes
+- [x] Versioned Methodology 2.0 schemas, parameter register, migration contracts, and acceptance fixtures frozen
+- [x] Canonical reproducibility test passes: 924 LF-terminated UTF-8 bytes and expected SHA-256
+- [ ] Persistent registry/materialized-state implementation completed
 - [ ] Comparison period completed in distinct eligible market closes
 - [ ] Disagreement cases reviewed
 - [ ] Explicit Methodology 2.0 version stamping implemented
@@ -2064,6 +2218,21 @@ Use this section to record project decisions.
 | 2026-08-19 Session 16 | Treat timing results as partial and non-causal | FRED intraday availability, complete source-release times, and historical event/publication timestamps are unavailable; retained run times are first-observed audit times only. |
 | 2026-08-19 Session 16 | Keep the approximately 1.47 GiB Session 16 evidence package private and untracked pending Session 17 retention/source-term/privacy decisions | Raw/download-level and record-level data are not publication artifacts; aggregate files are review candidates only, not authorized for staging. |
 | 2026-08-19 Session 16 | Make Session 17 the sole Methodology 2.0 freeze gate and make no production change from either evidence audit alone | Signal and market evidence are now complete with limitations; schemas, parameters, migration contracts, and acceptance fixtures must be frozen jointly before Sessions 18–19 implement v2. |
+| 2026-09-01 Session 17 | Freeze release `2.0.0` and isolate future output under `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/` | Versioned parallel output must not overwrite or retroactively stamp the legacy baseline. |
+| 2026-09-01 Session 17 | Freeze the event-cluster structural Candidate-C/E2 elevation contract with direct mechanism, implemented/impact stage, material lifecycle transition, transparent ranking, and no scalar score | This is the evidence-supported explainable signal family and prevents report duplication or hidden score calibration. |
+| 2026-09-01 Session 17 | Require two genuinely independent reporting origins for elevation | Syndication, repeated official quotations, unknown derivation, and conflict do not manufacture corroboration. |
+| 2026-09-01 Session 17 | Allow automatic clustering only by exact incident ID or exact versioned normalized-content hash; persist adjudication for every ambiguous case | No labeled holdout supports fuzzy thresholds, and canonical replay cannot depend on unrecorded semantic judgment. |
+| 2026-09-01 Session 17 | Keep candidate disposition separate from event type and atomically decompose multi-incident text where possible | Non-event, multi-incident, unresolved identity, and unknown event type are different states and require immutable provenance. |
+| 2026-09-01 Session 17 | Use `lastMaterialChangeAt` as the lifecycle clock and defer numeric decay/staleness/expiry with no automatic behavior | Session 15 observed 184 continuing reports but no empirical post-initial transition distribution. |
+| 2026-09-01 Session 17 | Freeze own-series latest-same-date market cohorts, age at most three weekdays, gap zero, and quorums `3/4`, `2/3`, or `2/2` | This preserves high measured coverage without silently mixing market dates. |
+| 2026-09-01 Session 17 | Freeze common `alpha = 0.20`, nearest-rank strict exceedance, 126–252 prior eligible closes, instrument-set/count conditioning, and no pooled/raw fallback | Point-in-time Session 16 evidence supports a uniform rule while preserving insufficient-history states. |
+| 2026-09-01 Session 17 | Retain raw `M >= 1.5`, driver, second driver, and breadth as diagnostics; set breadth binary weight to `0` | These fields explain the reading without becoming an unvalidated second binary gate. |
+| 2026-09-01 Session 17 | Freeze `signal-leading`, `co-movement`, `market-only`, and `calm`; keep reliable after-close signals pending and unreliable timing unknown; make no causal claim | The market observation can describe alignment but cannot prove attribution, especially with incomplete provider timing. |
+| 2026-09-01 Session 17 | Require complete production-definition schemas, explicit policies for all 47 arrays, and deterministic canonical bytes | Reordered equivalent records must reproduce bit-identically; chronological histories remain ordered and validated. |
+| 2026-09-01 Session 17 | Require at least 30 distinct eligible market closes for parallel comparison and allow extension or rejection | Cutover is an evidence decision, not an automatic consequence of elapsed calendar time. |
+| 2026-09-01 Session 17 | Require independent PA-08 after the freeze and record it satisfied only for corrected manifest `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c` | The initial candidate failed six material defect classes; corrected first-pass 24/24 and independent round two 27/27 leave no material defects. |
+| 2026-09-01 Session 17 | Keep PA-09 durable storage/retention/tiering/backup/DR open as a public-cutover blocker, not an isolated Session 18 blocker | Parallel implementation may use the frozen safe private/local behavior, but cutover requires approved retention and recovery controls. |
+| 2026-09-01 Session 17 | Preserve legacy production/history and keep Session 15/16 private evidence and all Session 17 artifacts unpublished/untracked pending explicit staging review | A specification freeze does not authorize implementation, publication, history rewrite, or accidental staging of private evidence. |
 
 ---
 
@@ -2098,42 +2267,49 @@ Use this section to log unresolved items.
 | Should crude proxies be supplemental timely reads or primary channel inputs? | 13 | Open | If BNO/USO are added, pick one role explicitly. Supplemental proxy reads do not drive the channel. Promoting a proxy to primary requires a methodology version bump and channel relabel. |
 | When is there enough fetch history to calibrate `expectedLagBD` per source? | 13 | Open | Freshness badges based on expected business-day lag should run in shadow or with conservative thresholds until there are a few weeks of fetch history per source. |
 | Does geopolitics still dominate after event clustering and source normalization? | 15 | Answered with limitation | Yes in the retained manual evidence: `armed-conflict-action` is 78/123 active clusters (63.414634%; 20 unknown types remain in the denominator). The top assessed origin is only 28/341 observations and HHI is 0.018670290, so residual conflict concentration is not supported as primarily a one-origin duplication effect. This enriched sample is not a population prevalence estimate. |
-| What is the smallest useful final leaf taxonomy? | 15/17 | Evidence reviewed; Session-17 freeze pending | Do not freeze the five-leaf audit vocabulary unchanged: 20/123 types remain unknown, candidate disposition is missing, and the zero financial-distress count is sample-specific. Session 17 must amend or explicitly retain the minimum enum; broad ontology expansion can remain 2.1. |
+| What is the smallest useful final leaf taxonomy? | 15/17 | Answered/frozen for 2.0.0 | The five operational leaves remain versioned separately from candidate disposition and typed unknown status; broad ontology expansion remains a 2.1 question. |
 | Are sufficient historical raw candidates available for a representative audit? | 14 | Answered with limitation | No canonical archive exists. Twenty-seven local ignored memory runs are reconstructable through 2026-06-23; tracked close snapshots contain selected signals only. Session 15 must keep fidelity strata separate and may need prospective collection. |
-| Should raw candidate/input snapshots or hashes be persisted for reproducibility? | 14 | Answered — yes | Retain normalized candidates and hashes needed by any retained v2 result; persist accepted origin/cluster assignments before scoring. Long-term storage backend/tiering freezes in Session 17 after growth measurement. |
-| Should the market primary statistic remain max absolute z-score, or remain only with breadth/corroboration metadata? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 retained max absolute z and named driver while measuring second driver, eligible count, above-threshold count, driver-only/multiple/all-eligible moves, and breadth. Session 17 freezes the binary/statistic and presentation rules. |
-| Should the v2 market threshold vary by instrument count, use an empirical channel percentile, or remain uniform under another calibrated rule? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured legacy raw, common-alpha point-in-time percentile, and raw-with-base-rates/breadth candidates across every attainable alpha boundary. No threshold or `alpha` is selected. |
-| What exact per-instrument/per-channel date rule should replace global alignment? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured strict channel-common, latest same-date quorum, and bounded mixed-date candidates using own-series transforms and explicit eligibility. Session 17 must choose or defer; none is selected. |
+| Should raw candidate/input snapshots or hashes be persisted for reproducibility? | 14/17 | Answered/frozen — yes | Persist normalized candidates and content identities needed by retained v2 results plus accepted origin/cluster assignments before scoring. Durable backend/tiering/DR remains PA-09-deferred. |
+| Should the market primary statistic remain max absolute z-score, or remain only with breadth/corroboration metadata? | 16/17 | Answered/frozen for 2.0.0 | Use max absolute own-series z for the conditioned percentile decision; retain driver, second driver, eligible/above-threshold counts, breadth, and raw M as diagnostics. |
+| Should the v2 market threshold vary by instrument count, use an empirical channel percentile, or remain uniform under another calibrated rule? | 16/17 | Answered/frozen for 2.0.0 | Use point-in-time nearest-rank 80th percentile with common `alpha = 0.20`, instrument-set/count conditioning, strict exceedance, and no pooled/raw fallback. |
+| What exact per-instrument/per-channel date rule should replace global alignment? | 16/17 | Answered/frozen for 2.0.0 | Use own-series transforms and the independently dated latest same-date eligible cohort; gap `0`, age at most three weekdays, and quorum `3/4`, `2/3`, or `2/2`. |
 | Should directional consistency be descriptive only or later affect classification? | 2.1 | Deferred | Direction diagnostics are outside the minimum 2.0 core unless later evidence justifies a descriptive addition; they do not gate v2 states now. |
 | Should Macro/Inflation and Weather/Climate receive market columns in Methodology 2.0? | 2.1 | Deferred | The 2.0 architecture targets the existing five market channels and permits zero-channel signal-only events; adding channels is a later versioned decision. |
-| What parallel-run namespace should be used before cutover? | 14 | Answered provisionally | Use `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/`; Session 17 confirms the release version and manifests. |
-| What exact minimal leaf set is sufficient for Methodology 2.0 and the five current market channels? | 15/17 | Architecture default; evidence/freeze pending | Audit `armed-conflict-action`, `policy-restriction-action`, `energy-system-event`, `financial-distress-event`, and `production-logistics-event`. |
-| What registry format and path best balance atomic updates, reviewability, and repository growth? | 14 | Answered architecturally | Use immutable per-run candidate/assignment JSONL plus an atomically replaced `state/events/registry.json` that is recoverable from assignment history. Storage backend freezes in Session 17. |
-| What raw-candidate retention period is feasible? | 15/17 | Scale measured; backend/tiering pending | Audit candidate records project to about 86.49–122.96 MB/year at one persisted transaction/day, so immutable retention appears plausible at this scale. Session 17 must still freeze cadence, schema, access-controlled backend/tiering, backups, source terms, and duration. |
+| What parallel-run namespace should be used before cutover? | 14/17 | Answered/frozen | Use `dashboard/public/v2/2.0.0/` and `log/v2/2.0.0/`; neither is implemented yet. |
+| What exact minimal leaf set is sufficient for Methodology 2.0 and the five current market channels? | 15/17 | Answered/frozen for 2.0.0 | Use `armed-conflict-action`, `policy-restriction-action`, `energy-system-event`, `financial-distress-event`, and `production-logistics-event`, with candidate disposition and typed unknowns modeled separately. |
+| What registry format and path best balance atomic updates, reviewability, and repository growth? | 14/17 | Answered/specified; not implemented | Use immutable per-run candidate/assignment JSONL plus an atomically replaced `state/events/registry.json` recoverable from assignment history. Durable backend/tiering remains PA-09-deferred. |
+| What raw-candidate retention period is feasible? | 15/17 | Open / PA-09 bounded deferral | Audit candidate records project to about 86.49–122.96 MB/year at one transaction/day. `2.0.0` freezes no pruning for isolated parallel work; duration, backend, tiering, backup, DR, source terms, and approval remain cutover requirements. |
 | How are parent crises/campaigns separated from specific event episodes? | 14 | Answered architecturally | `eventClusterId` identifies one episode; optional `parentSeriesId` groups broader related episodes and is never scored. |
 | What deterministic merge/split/alias rules are acceptable? | 14 | Answered architecturally | Merges use alias/canonical successor; splits create new IDs with lineage; corrections append provenance; historical assignments remain immutable. |
-| Is deterministic clustering adequate, or is model assistance required? | 15 | Evidence supports a hybrid path; exact freeze pending | Use deterministic high-confidence exact/explicit-ID assignment plus persisted assisted/human adjudication for ambiguous cases. Session 15 does not establish that model assistance is required or measure production error rates; Session 17 must freeze the accepted path and provenance requirements. |
-| If model assistance is used, what review and assignment-freeze process applies? | 14/17 | Architecture answered; exact configuration pending | Persist model/version/prompt/config/proposal/reviewer provenance and accept the assignment before scoring; Session 17 freezes exact requirements if adopted. |
-| What exact decay clock and function should be frozen? | 15/17 | Clock evidence-supported; numeric function unresolved | Keep `lastMaterialChangeAt`, not `lastObservedAt`: 184/327 accepted observations repeated without material change. With zero post-initial material transitions, Session 15 cannot calibrate a numeric decay rate, stale interval, or de-escalation expiry; prospective evidence is required. |
-| What corroboration-to-confidence mapping should be frozen? | 15/17 | Architecture supported; mapping unresolved | Preserve exact independent-source count and conservative lower bound separately, with 97 single-origin, 4 corroborated-independent, 1 conflicting, and 21 unknown-origin clusters. Publication count remains separate. No numeric confidence mapping or single-origin exception was frozen. |
-| What constitutes an independent reporting origin in ambiguous syndication cases? | 14/15 | Architecture supported; edge handling pending | Continue grouping originating assertions/observations rather than domains, keep origin and independence group separate, and retain unknown wrappers. Session 15 resolved 341/428 origins but left 87 unknown and 13 unresolved independence-group singletons; Session 17 must freeze edge-case handling. |
-| Should Methodology 2.0 use a scalar signal score or a structural elevation gate? | 15/17 | Structural-plus-ranking family leads; final rule pending | The tested stage-only scalar adds no eligibility distinction beyond matched structural stage sets without lifecycle. Structural eligibility plus transparent Candidate-C ranking leads Session-17 review, but no candidate, evidence level, stage cutoff, ranking rule, or final gate is frozen. |
-| How should unresolved candidate disposition be represented? | 15/17 | Open / required for 2.0 | The 101/428 unresolved observations conflate no discrete episode, multi-incident candidate, and discrete episode with unresolved identity. Session 17 must add an explicit candidate-disposition/non-event representation without relabeling unknowns as non-events. |
-| How should multi-incident candidate observations be decomposed or assigned? | 15/17 | Open / required for 2.0 | Five unresolved grouped cases explicitly contain multiple incidents. Session 17 must choose atomic decomposition or multiple candidate-to-event edges and preserve append-only provenance. |
-| What prospective point-in-time action-stage history must be persisted? | 15/17 | Open / required for 2.0 | Session 15 retained only furthest/final directly evidenced stage and cannot reconstruct full transitions. Persist stage transitions prospectively before any no-look-ahead production evaluation. |
-| What prospective point-in-time conflict and corroboration history must be persisted? | 15/17 | Open / required for 2.0 | Naive final-state back-projection changed 113 variant-row memberships across 26 variants and 10 rows. Session 17 must freeze evidence/conflict/corroboration history and correction provenance. |
-| How should fidelity-C and similar chronology-ineligible evidence be handled in production evaluation? | 15/17 | Open / required for 2.0 | Keep C-only history excluded and ignore C observations in mixed clusters for chronology; collect timestamps prospectively. Session 17 must make this exclusion and mixed-cluster handling explicit. |
-| Should the amended Methodology 2.0 taxonomy encode event type and candidate disposition separately? | 15/17 | Open / required for 2.0 | Session 15 shows that unknown event type and unresolved candidate disposition are different problems. Session 17 should freeze separate representations rather than expanding the leaf taxonomy to absorb non-event, multi-incident, or unresolved-identity states. |
-| What common `alpha`, lookback, and minimum sample should be frozen for channel percentiles, if any? | 14/16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured every attainable-alpha boundary, every feasible rolling length and minimum history, and expanding history without selecting an alpha, mode, length, or minimum. |
-| How should percentile history be conditioned when the eligible instrument set changes? | 14/16/17 | Evidence complete; Session-17 freeze pending | Pooled, same-set, and eligible-count-conditioned histories plus fallback availability were measured. Session 17 must select or reject conditioning and freeze any bridge/fallback. |
-| What maximum date gap is allowed within one channel, and are mixed-date channel statistics ever permitted? | 14/16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured every observed within-channel gap; mixed dates occurred only in explicit Rule 3. Session 17 must select strict/same-date/mixed-date behavior and any maximum gap. |
-| What freshness/stale rule and minimum eligible-instrument count should each channel use? | 16/17 | Evidence complete; Session-17 freeze pending | Session 16 measured no-stale, legacy calendar-age, every observed business-day-age cutoff, and every feasible minimum count. None is selected. |
-| Should breadth affect binary state, appear only as explanatory metadata, or use categorical labels? | 16/17 | Evidence complete; Session-17 freeze pending | Driver, second driver, eligible/above-threshold counts, breadth ratios, and single/multiple/all-eligible moves were measured. No breadth schema or state effect is frozen. |
+| Is deterministic clustering adequate, or is model assistance required? | 15/17 | Answered/frozen for 2.0.0 | Automatic joins are exact incident ID or exact versioned normalized-content hash only. Any assisted/model/human proposal is persisted and confirmed before scoring; fuzzy automatic calibration remains deferred. |
+| If model assistance is used, what review and assignment-freeze process applies? | 14/17 | Answered/frozen | Persist model/version/prompt/config/proposal/reviewer provenance and accept the assignment before scoring; live drifting output cannot be a scoring dependency. |
+| What exact decay clock and function should be frozen? | 15/17 | Clock frozen; numeric behavior deferred | Use `lastMaterialChangeAt`; continuing reports update `lastObservedAt` only. Apply no automatic decay, stale interval, or expiry in `2.0.0`; prospective evidence and a later methodology version are required. |
+| What corroboration-to-confidence mapping should be frozen? | 15/17 | Answered/frozen for 2.0.0 | Require two independent origins for the corroborated path; keep exact count, lower bound, conflict, and unknown status explicit; use no scalar confidence score or single-origin exception. |
+| What constitutes an independent reporting origin in ambiguous syndication cases? | 14/15/17 | Answered/frozen for 2.0.0 | Reconstruct reporting source → originating assertion/observation → reporting origin → independence group; syndication and repeated official quotations remain one group, unknown derivation remains non-corroborating, and conflict does not raise confidence. |
+| Should Methodology 2.0 use a scalar signal score or a structural elevation gate? | 15/17 | Answered/frozen | Use structural Candidate-C/E2 eligibility and deterministic transparent ranking; no scalar signal score. |
+| How should unresolved candidate disposition be represented? | 15/17 | Answered/frozen | Candidate disposition is a separate typed field; unresolved identity is not a confirmed non-event and remains non-scoring. The evidence denominator remains 101/428 unresolved observations. |
+| How should multi-incident candidate observations be decomposed or assigned? | 15/17 | Answered/frozen | Atomically decompose where possible; otherwise retain explicit unresolved multi-incident disposition and append-only provenance rather than force one assignment. |
+| What prospective point-in-time action-stage history must be persisted? | 15/17 | Answered/frozen | Persist ordered point-in-time lifecycle/evidence history with transition provenance and both observation/material clocks before no-look-ahead evaluation. |
+| What prospective point-in-time conflict and corroboration history must be persisted? | 15/17 | Answered/frozen | Persist ordered origin-evidence, conflict, corroboration, assessment-version, and correction provenance; never back-project final state. |
+| How should fidelity-C and similar chronology-ineligible evidence be handled in production evaluation? | 15/17 | Answered/frozen | Exclude chronology-ineligible evidence from point-in-time eligibility; ignore such observations in mixed-cluster chronology and preserve the exclusion reason. |
+| Should the amended Methodology 2.0 taxonomy encode event type and candidate disposition separately? | 15/17 | Answered/frozen | Yes. Event type, candidate disposition, and typed assessment status are separate schema concerns. |
+| What common `alpha`, lookback, and minimum sample should be frozen for channel percentiles, if any? | 14/16/17 | Answered/frozen | Common `alpha = 0.20`; nearest-rank 80th percentile; strict exceedance; 126 minimum and 252 maximum prior eligible closes. |
+| How should percentile history be conditioned when the eligible instrument set changes? | 14/16/17 | Answered/frozen | Condition by instrument-set version and eligible count; use prior-only history and no pooled/raw fallback. |
+| What maximum date gap is allowed within one channel, and are mixed-date channel statistics ever permitted? | 14/16/17 | Answered/frozen | Gap `0`; v2 binary channel statistics use one latest same-date eligible cohort and never mix dates. |
+| What freshness/stale rule and minimum eligible-instrument count should each channel use? | 16/17 | Answered/frozen | Age at most three weekdays; quorum `3/4`, `2/3`, or `2/2` by channel size. Complete holiday/provider-time infrastructure remains deferred. |
+| Should breadth affect binary state, appear only as explanatory metadata, or use categorical labels? | 16/17 | Answered/frozen | Retain breadth and driver diagnostics, but breadth binary weight is `0`. |
 | What market/source availability timestamp infrastructure is required before timing can affect v2 classification? | 16/17 | Open / prospective infrastructure required | Session 16 timing is partial because FRED intraday availability, complete source-release times, and event/publication timestamps are unavailable. Do not infer timing or causality. |
 | What retention/backend/tiering policy applies to the private Session 16 market evidence package? | 16/17 | Open / required before tracking or production retention | The 62-file package is approximately 1.47 GiB and contains raw/download-level and record-level private evidence. Aggregate review-candidate status is not authorization to stage or publish. |
-| Is an independent validation pass required after the Session 17 freeze and before Sessions 18–19 implementation? | 16/17 | Open / freeze-gate decision | The Session 16 deterministic audit gate passed, but the final jointly selected schema and parameters will differ from the unselected audit grid and may require an independent acceptance-fixture review. |
-| How many distinct eligible market closes are required for parallel validation? | 14 architecture amendment | Open / validation gate | The comparison period should not be defined only in calendar days. |
+| Is an independent validation pass required after the Session 17 freeze and before Sessions 18–19 implementation? | 16/17 | Answered and satisfied | Yes. Corrected first-pass passed 24/24 and fresh independent PA-08 R2 passed 27/27 for manifest `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`. |
+| How many distinct eligible market closes are required for parallel validation? | 14/17 | Answered/frozen | At least 30 distinct eligible market closes; Session 20 may extend or reject rather than force cutover. |
 | Which canonical fields are excluded from bit-identical reproduction because they are volatile metadata? | 14 | Answered architecturally | Exclude only envelope metadata such as `generatedAt`, duration, host/process/request/retry/temp/log fields. Inputs, event clocks, assignments, as-of values, configuration, and semantic outputs remain canonical. |
+| What numeric lifecycle decay/staleness/expiry rule should a later methodology version use? | 17 | Open / bounded deferral DEF-001 | `2.0.0` applies none. Resolve only from prospective reviewed transition records after the parallel minimum; any automatic behavior requires a new version. |
+| What fuzzy clustering threshold and actor/time/location windows are safe? | 17 | Open / bounded deferral DEF-002 | No fuzzy automatic join is permitted in `2.0.0`. Require prospective adjudicated labels, false-merge/split analysis, and an independent holdout before a later-version decision. |
+| What durable storage, retention, tiering, backup, and DR service should production use? | 17 | Open / PA-09 cutover blocker | Private immutable local storage is the safe parallel behavior. Public cutover requires source review, measured volume/latency, retention approval, recovery drill, and RPO/RTO ownership. |
+| What stale-lock timeout or takeover policy is safe? | 17 | Open / bounded deferral DEF-004 | No automatic takeover. Existing exclusive locks block; human recovery creates a recorded decision and a new run. Resolve after runtime/crash/concurrency evidence. |
+| What complete holiday/early-close calendar and provider availability timestamps are required? | 17 | Open / bounded deferral DEF-005 | Use the frozen weekday/16:00 New York convention, preserve unknowns, and keep reliable after-close signals pending. Parallel evidence may extend comparison or block cutover. |
+| Which providers permit raw-response retention? | 17 | Open / bounded deferral DEF-006 | Complete a provider-specific terms matrix. Where raw retention is restricted, preserve a lossless normalized equivalent, retrieval metadata, retention status, and available identity; non-reproducible required sources block cutover. |
+| What is the Session 20 cutover decision? | 17 | Open / future gate | After at least 30 distinct eligible closes, review distributions, disagreements, lifecycle stability, reproducibility, PA-09, and case queues; extend, reject, or explicitly authorize cutover. |
 
 ---
 
@@ -2175,44 +2351,52 @@ Use this section to track problems.
 | Locally reconstructable memory/run material is not equivalent to a v2 candidate archive | 14 | Medium | Open / audit limitation | Twenty-seven locally ignored run timestamps were retained under `runs/memory/`, but their payload fidelity, persistence, and provenance differ from immutable normalized candidate observations. Preserve, hash, inventory, and label them as reconstructable-run inputs before use. |
 | Tracked close snapshots contain selected outputs only | 14 | High | Open / audit limitation | The 13 tracked close snapshots contained 42 top-signal occurrences/28 unique texts, not the full candidate population. Use them only as a separate selected-output supplement, never as a complete candidate or compression denominator. |
 | Historical raw FRED/Tiingo responses and hashes were not archived | 14–16 | Medium | Confirmed audit limitation | Session 16 froze an audit-download-vintage manifest, but the responses may contain revised FRED history or subsequently adjusted Tiingo history. Historical release-vintage bit identity remains unavailable and must never be claimed. |
-| Source provenance and publication/availability timestamps are incomplete | 14–16 | Medium | Confirmed limitation / Session-17 infrastructure decision | Missing origins, URLs, publication times, FRED intraday availability, and complete source-release timestamps remain unknown/unassessed. Session 16 timing is partial, and affected signal-versus-close cases remain ambiguous rather than inferred from generated dates. |
-| Canonical text deduplication does not merge differently worded reports of the same event | 14–15 | Medium | Confirmed / production fix deferred | Fidelity-B exact duplicate excess was 834/1,153 (72.333044%), while accepted manual observations still compressed 327→123 clusters. Exact deduplication and semantic event clustering are distinct operations; production clustering waits for the Session 17 freeze and Session 18 implementation. |
-| Broad `Geopolitical Escalation` classification hides actionable distinctions | 14–15 | Medium | Confirmed / narrowed but unresolved | Session 15 found 78/123 active clusters were the narrower `armed-conflict-action` leaf, with 20 unknown types. Conflict concentration persists after clustering, but the five-leaf vocabulary is not ready to freeze unchanged. |
-| One item can influence multiple channels through primary and `otherCategories` without separately proven transmission mechanisms | 14 | Medium | Open / audit required | `scripts/divergence.mjs` aggregates both primary category and `otherCategories`; current artifacts show secondary assignments influencing channel scores. |
+| Source provenance and publication/availability timestamps are incomplete | 14–17 | Medium | Confirmed limitation / bounded deferral DEF-005 | Missing origins/timestamps remain typed unknown. `2.0.0` uses reliable after-close pending and excludes unreliable timing from four-state assessment; complete calendars/provider availability remain prospective infrastructure. |
+| Canonical text deduplication does not merge differently worded reports of the same event | 14–17 | Medium | V2 specification fixed; implementation pending | Automatic joins are exact incident ID or exact versioned normalized-content hash only; differently worded ambiguity requires persisted adjudication. Session 18 implements this without inventing fuzzy thresholds. |
+| Broad `Geopolitical Escalation` classification hides actionable distinctions | 14–17 | Medium | V2 schema fixed; implementation pending | Session 17 froze five operational leaves, separate candidate disposition, and typed unknowns. The 78/123 conflict concentration remains historical evidence, not a production taxonomy shortcut. |
+| One item can influence multiple channels through primary and `otherCategories` without separately proven transmission mechanisms | 14–17 | Medium | V2 specification fixed; implementation pending | V2 requires separate direct mechanism evidence for each channel and at most one contribution per cluster/channel; legacy behavior remains unchanged. |
 | Repeated coverage can inflate signal counts and aggregate scores | 14–15 | Medium | Confirmed / architecture supported | Session 15 found 184/327 accepted observations continued without material change. Repeats should update `lastObservedAt`, not severity or `lastMaterialChangeAt`; production enforcement waits for v2 implementation. |
-| `priced` is based on absolute movement and does not establish expected direction, timing, attribution, or causality | 14 | Medium | Open / audit required | The divergence classifier uses `abs_market_z >= 1.5`; it does not validate sign or event timing. |
-| Global all-instrument common-date alignment lets lagging crude hold back unrelated channels | 14–16 | Medium | Measured / production decision deferred | Session 16 measured own-series strict, latest same-date cohort, and bounded mixed-date alternatives. Production still uses one `globalAsOfClose`; Session 17 must freeze the replacement rule before Session 19 implementation. |
-| A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14–16 | Medium | Measured / production decision deferred | Session 16 retained actual own-series window dates and found five-valid-observation spans of 5–12 calendar days. Production remains unchanged; Session 17 freezes the v2 definition. |
-| Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14–16 | Medium | Confirmed and measured / production decision deferred | Session 16 measured materially different raw channel trigger rates plus eligible-count, instrument-set, breadth, and percentile sensitivity. No correction or threshold rule is selected. |
+| `priced` is based on absolute movement and does not establish expected direction, timing, attribution, or causality | 14–17 | Medium | V2 terminology fixed; implementation pending | V2 uses non-causal `signal-leading`, `co-movement`, `market-only`, and `calm`, with pending/unknown outside the four-state assessment. Legacy names remain historical. |
+| Global all-instrument common-date alignment lets lagging crude hold back unrelated channels | 14–17 | Medium | V2 specification fixed; implementation pending | Session 17 froze own-series latest-same-date per-channel cohorts with gap zero, age three, and quorums. Legacy production still uses `globalAsOfClose`; Session 19 implements v2 without changing legacy history. |
+| A five-observation move on the global intersection may span a different calendar interval than five valid observations on an instrument's own series | 14–17 | Medium | V2 specification fixed; implementation pending | V2 uses own-series five-valid-observation transforms and retains actual window dates. Legacy production remains unchanged. |
+| Max absolute z-score gives channels with more instruments more chances to cross the market-moving threshold | 14–17 | Medium | V2 specification fixed; implementation pending | V2 uses conditioned point-in-time percentiles; raw `M >= 1.5`, driver, second driver, and breadth remain diagnostics only. |
 | Raw market inputs may not currently be persisted strongly enough for bit-identical historical reproduction | 14–16 | Medium | Audit reproduction solved; production retention open | Session 16 froze raw/normalized files and hashes sufficient to reproduce the audit download. Historical release-vintage identity and the production raw-input retention/backend contract remain unresolved. |
-| Methodology 2.0 planning previously under-budgeted the stateful signal rebuild | 14 architecture amendment | Medium | Open / audit required | The first plan compressed architecture, audit, signal implementation, market implementation, and cutover into too few sessions. |
-| No persistent cross-run event registry is documented as implemented | 14 architecture amendment | High | Open / audit required | Repository inspection found no `state/events/registry.json` or equivalent persistent event-state artifact. |
-| Without `lastObservedAt` versus `lastMaterialChangeAt`, repeated coverage could defeat decay | 14 architecture amendment | Medium | Open / audit required | Decay should key off material changes, not merely another article appearing. |
-| Merge/split behavior can silently rewrite history unless assignments remain immutable | 14 architecture amendment | Medium | Open / audit required | Candidate-to-cluster assignments need append-only provenance and lineage rules. |
-| Live model-assisted clustering would break reproduction if assignments are not persisted | 14 architecture amendment | High | Open / audit required | Production scoring must consume recorded assignments rather than a drifting model response. |
-| Absent optional fields are ambiguous without explicit assessment status | 14 architecture amendment | Medium | Open / audit required | Missing data must distinguish unassessed, unknown, not-applicable, and assessed values. |
-| The full proposed taxonomy may create implementation scope before the minimum channel mapping is validated | 14 architecture amendment | Medium | Open / audit required | Methodology 2.0 should freeze a small operational core before expanding to Methodology 2.1 ontology enrichment. |
-| Decay and corroboration mappings are hidden tunables until versioned | 14 architecture amendment | Medium | Open / audit required | Consequential signal parameters need a methodology parameter register. |
-| Simple outlet/domain counts overstate independent corroboration under syndication | 14 architecture amendment | Medium | Open / audit required | Source independence must be based on reporting origin, not repeated publication copies. |
-| The legacy 60% signal threshold is tied to the Phase 1 keyword-score scale and is not portable to event clusters | 14 architecture amendment | Medium | Open / audit required | V2 may need a structural elevation gate or newly calibrated score. |
-| Raw max absolute z-score threshold produces structurally different trigger opportunities for channels with 2, 3, and 4 instruments | 14 architecture amendment | Medium | Open / audit required | Independence sanity checks show crossing probability rises with instrument count before correlation is measured. |
-| A percentile threshold can introduce look-ahead or regime drift unless its history and fallback rules are frozen | 14 architecture amendment | Medium | Open / audit required | Rolling/expanding history, minimum sample, instrument eligibility, and fallback rules must be specified before adoption. |
-| Signals observed after close can be misclassified against a market observation that preceded them | 14 architecture amendment | Medium | Open / audit required | After-close signals should remain pending until the next eligible market observation. |
-| Expecting row-level agreement in the parallel run would misdiagnose intended recalibration as a bug | 14 architecture amendment | Low | Open / audit required | V2 success should be based on auditability, reproducibility, sensible base rates, lifecycle stability, and documented disagreements. |
-| One hundred one manual observations remain unresolved and cannot be treated as confirmed non-events | 15 | High | Open / Session-17 schema decision required | Current disposition conflates no discrete episode, multi-incident text, and unresolved event identity. Add explicit candidate-disposition handling before production freeze. |
-| Multi-incident candidate text cannot be represented cleanly by the current one-observation/one-assignment audit shape | 15 | Medium | Open / Session-17 design required | Five unresolved grouped cases explicitly contain multiple incidents. Choose atomic decomposition or multiple event edges with immutable provenance. |
+| Methodology 2.0 planning previously under-budgeted the stateful signal rebuild | 14–17 | Medium | Plan corrected | Sessions 14–17 separated architecture, evidence, freeze, correction, and independent validation; Sessions 18–20 remain distinct implementation/comparison gates. |
+| No persistent cross-run event registry is documented as implemented | 14–17 | High | Specified; implementation pending | `2.0.0` specifies immutable per-run records plus recoverable materialized registry state. Session 18 implements it; no production registry exists yet. |
+| Without `lastObservedAt` versus `lastMaterialChangeAt`, repeated coverage could defeat decay | 14–17 | Medium | Specification fixed; implementation pending | V2 separates both clocks; continuing reports update observation time only and no automatic numeric decay exists in `2.0.0`. |
+| Merge/split behavior can silently rewrite history unless assignments remain immutable | 14–17 | Medium | Specification fixed; implementation pending | Assignments are immutable; merge/split/alias/correction uses append-only lineage and provenance. |
+| Live model-assisted clustering would break reproduction if assignments are not persisted | 14–17 | High | Specification fixed; implementation pending | Any assisted proposal and review provenance must be persisted and accepted before scoring; live drifting output is prohibited. |
+| Absent optional fields are ambiguous without explicit assessment status | 14–17 | Medium | Fixed in frozen schema | Complete schemas distinguish assessed, unassessed, unknown, and not-applicable with typed wrappers. |
+| The full proposed taxonomy may create implementation scope before the minimum channel mapping is validated | 14–17 | Medium | 2.0/2.1 boundary frozen | `2.0.0` freezes the minimum operational leaves and mechanisms; wider ontology enrichment remains 2.1. |
+| Decay and corroboration mappings are hidden tunables until versioned | 14–17 | Medium | Fixed/deferred explicitly | Two-origin corroboration is frozen; numeric decay/staleness/expiry is an explicit null/deferred parameter with no automatic behavior. |
+| Simple outlet/domain counts overstate independent corroboration under syndication | 14–17 | Medium | Fixed in frozen topology contract | Independence is reconstructed from reporting origin and independence group; syndication/repeated official quotes remain one group and unknown derivation does not corroborate. |
+| The legacy 60% signal threshold is tied to the Phase 1 keyword-score scale and is not portable to event clusters | 14–17 | Medium | V2 specification fixed | V2 uses structural Candidate-C/E2 eligibility and transparent ranking with no scalar score; legacy 60% remains legacy-only. |
+| Raw max absolute z-score threshold produces structurally different trigger opportunities for channels with 2, 3, and 4 instruments | 14–17 | Medium | V2 specification fixed | Raw `M >= 1.5` is diagnostic only; the binary rule is the conditioned point-in-time percentile. |
+| A percentile threshold can introduce look-ahead or regime drift unless its history and fallback rules are frozen | 14–17 | Medium | Fixed in frozen specification | Use prior-only 126–252 history, set/count conditioning, nearest-rank strict 80th percentile, and no fallback. |
+| Signals observed after close can be misclassified against a market observation that preceded them | 14–17 | Medium | Fixed in frozen timing contract | Reliable after-close signals remain pending; unreliable timing is unknown and excluded from the four-state assessment. |
+| Expecting row-level agreement in the parallel run would misdiagnose intended recalibration as a bug | 14–17 | Low | Fixed in acceptance contract | Compare distributions, cases, lifecycle stability, and reproduction for at least 30 eligible closes; extension/rejection is permitted. |
+| One hundred one manual observations remain unresolved and cannot be treated as confirmed non-events | 15–17 | High | Schema distinction fixed; evidence remains unresolved | Candidate disposition is separate from event type and unresolved identity remains non-scoring. The correct observation denominator is 101/428. |
+| Multi-incident candidate text cannot be represented cleanly by the current one-observation/one-assignment audit shape | 15–17 | Medium | Specification fixed; implementation pending | Atomically decompose where possible; otherwise preserve explicit unresolved multi-incident disposition and immutable provenance. |
 | No post-initial material escalation or de-escalation was observed | 15 | Medium | Evidence limitation / prospective collection required | Session 15 supports the material-change clock but cannot calibrate numeric decay, stale-event, or de-escalation-expiry parameters. |
 | Persisted action stage is furthest/final evidence rather than a complete point-in-time transition trajectory | 15 | High | Open / prospective history required | Zero stage/directness censor counts reflect broad final evidence references, not reconstructable earlier states. Production v2 must persist point-in-time transitions. |
 | Fidelity-B reconstruction may not match the script revision historically used for every retained run | 15 | Medium | Accepted audit limitation | The audit reproduces the frozen current legacy extractor over retained payloads. It does not claim exact historical-script fidelity; future immutable runs need script/configuration hashes. |
 | Session 15 raw and record-level audit artifacts create public-repository privacy and source-term risk | 15 | High | Open / do not stage | Raw candidate text, private URLs, evidence topology, curated judgments, and preservation copies require explicit review. Keep raw/preservation artifacts private and track only reviewed sanitized aggregates if later authorized. |
 | Session 16 market evidence package is approximately 1.47 GiB and contains private raw/download-level and record-level evidence | 16 | High | Open / do not stage | Keep all 62 Session 16 files untracked pending source-term, privacy, retention, backend, tiering, and backup decisions. Aggregate review candidates are not authorized publications. |
 | Session 16 handoff and closeout byte totals differ by 3,527 bytes | 16 closeout | Low | Recorded / non-material | The handoff reported 1,579,671,915 bytes; closeout re-inventory measured 1,579,675,442 bytes across the same 62 files. Frozen manifest/report/metrics hashes and all audit conclusions match; use the closeout total as the current filesystem measurement. |
+| Initial Methodology 2.0 freeze candidate failed independent PA-08 | 17 | High | Fixed in corrected candidate | Calculations and identities reproduced, but normalization identity, adversarial schema invariants, operational fields, origin topology, complete canonical records, and denominator traceability were materially incomplete. Failed manifest `809fb5119c3634ab6c30349c8b58ef7659effd4b0b227af69186ed876e63bf33` remains historical. |
+| Six PA-08 defect classes required a correction pass | 17 | High | Fixed and independently verified | Added exact normalization/hash persistence, ten invariant-specific rejections, complete operational records, recoverable origin topology, all 47 canonical array policies/full bundle, and corrected observation-versus-cluster traceability without changing frozen selections. |
+| Corrected Methodology 2.0 candidate required fresh independent validation | 17 | High | Passed | Corrected first-pass passed 24/24; independent PA-08 R2 passed 27/27 for manifest `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`; no material defects remain. |
+| Durable storage, retention, tiering, backup, and disaster recovery are not implemented | 17 / PA-09 | High | Open / public-cutover blocker | Isolated parallel implementation may use private immutable local storage and no pruning. Public cutover requires the PA-09 evidence, approval, and recovery controls. |
+| Session 15/16 private evidence and Session 17 package remain untracked | 15–17 | High | Open / do not stage accidentally | Session 16 has a separate 62-file private boundary; Session 17 has 25 specification/audit files. Explicit privacy/source-term and staging review remains required. |
+| Session 17 introduced a production or legacy regression | 17 | None | Not observed | Production scripts, workflows, public output, automation, snapshots, and run records preserved their pre-closeout identities; Session 17 was specification/audit only. |
 
 ---
 
 ## 9. Next Session Adjustments
 
 Use this section to change the plan based on what happened.
+
+Historical rows below remain the decision trail. **The sole current next-session focus is Session 18 signal-v2 implementation in isolation.**
 
 | After session | Adjustment | Reason |
 |---:|---|---|
@@ -2276,6 +2460,26 @@ Use this section to change the plan based on what happened.
 | 16 | Keep Session 15 findings unchanged and do not relabel signal evidence during the joint freeze | Session 16 carried all 15 unselected Candidate-C variants only for timing sensitivity and did not revisit Session 15 labels or conclusions. |
 | 16 | Keep legacy automation, thresholds, sources, transforms, state names, workflows, public output, snapshots, and run records unchanged through the Session 17 freeze | Session 16 was evidence-only. Sessions 18–19 remain the implementation sessions and may implement only the versioned specification frozen in Session 17. |
 | 16 | Keep publication, domain, and screenshot progression paused | The evidence-audit gate passed, but schema/parameter freeze, implementation, parallel comparison, review, version stamping, and cutover gates remain open. |
+| 17 | Make Session 18 the sole next-session focus: implement only the frozen signal-v2 contract under the isolated `2.0.0` namespace | The corrected specification and PA-08 R2 gate passed; market/divergence-v2 remains Session 19, comparison remains Session 20, and legacy/public behavior stays unchanged. |
+
+### Current Session 18 instruction (authoritative)
+
+Session 18 must:
+
+- verify corrected manifest identity `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c` and the passing PA-08 R2 artifact identities before implementation;
+- implement signal v2 only;
+- write immutable per-run candidate and assignment records;
+- implement the recoverable registry/materialized state specified by `2.0.0`;
+- enforce exact-incident-ID or exact versioned normalized-content-hash automatic clustering only;
+- persist every ambiguous adjudication and all relevant provenance;
+- implement recoverable origin topology and point-in-time stage/origin/corroboration/lifecycle histories;
+- implement the frozen structural Candidate-C/E2 signal eligibility and transparent deterministic ranking without a scalar score;
+- stamp methodology version plus configuration and input identities;
+- write only isolated v2 signal output under the `2.0.0` namespace;
+- preserve legacy production behavior and immutable history;
+- avoid all market/divergence-v2 implementation until Session 19;
+- keep PA-09 and public cutover unresolved;
+- introduce no hidden constant, fallback, fuzzy threshold, decay rule, or methodology decision in code.
 ---
 
 ## 10. Backlog / Optional Upgrades
@@ -2757,7 +2961,7 @@ New open launch conditions before publication/domain progression resumes:
 
 - [x] Session 14 architecture/protocol gate complete
 - [x] Signal and market audits complete
-- [ ] Methodology 2.0 core schema and parameter register frozen
+- [x] Methodology 2.0 core schema and parameter register frozen
 - [ ] Persistent registry and reproducibility contract implemented
 - [ ] Signal and market v2 parallel outputs implemented
 - [ ] Comparison period completed in distinct eligible market closes
@@ -2769,6 +2973,8 @@ New open launch conditions before publication/domain progression resumes:
 
 **Section 12 launch-condition adjustment dated 2026-08-19:** The Session 16 market evidence audit passed its deterministic completion gate with audit-download-vintage, historical-release-vintage, and partial-timing limitations. The combined **Signal and market audits complete** gate is now satisfied, but publication remains paused. Session 17 must freeze the versioned Methodology 2.0 schema, parameters, migration contracts, and acceptance fixtures; Sessions 18–19 must implement isolated parallel output; and the comparison, disagreement/lifecycle review, version-stamping, and cutover gates must pass before publication/domain/screenshot progression resumes. No audit candidate is a selected production parameter, and private Session 15/16 evidence remains untracked.
 
+**Section 12 launch-condition adjustment dated 2026-09-01:** The Methodology `2.0.0` specification freeze and independent validation gate passed under corrected manifest `c99059b2aa12022d73d3fd5ffb5505d805de5e2e77aa093de975b309cdc8196c`. This checks only the core-schema/parameter-register freeze. Registry implementation, signal-v2 and market/divergence-v2 output, the 30-close comparison, disagreement/lifecycle review, public version stamping, and cutover remain unchecked. PA-09 durable storage/retention/DR blocks cutover. Publication, domain, and screenshot progression remains paused; legacy automation may continue unchanged. Private Session 15/16 evidence and the untracked Session 17 package remain unpublished and must not be staged without explicit review.
+
 **Known timing constraints from the post strategy (for awareness only, not for action in these sessions):** the post is a Tuesday-heavy bridge piece, sequenced after at least one Travel post and one more clearly non-capital-markets post, and not close to the previous side-project post. Realistically late June 2026 at the earliest. This is convenient: it is exactly the time the log needs to accumulate rows.
 
 ---
@@ -2776,7 +2982,7 @@ New open launch conditions before publication/domain progression resumes:
 ## 13. Current Prompt to Use Next
 
 ```txt
-Ready for session 17.
+Ready for session 18.
 ```
 
-Session 17 jointly freezes the versioned Methodology 2.0 schema, parameter register, migration contracts, and acceptance fixtures from the completed signal and market evidence. It is the sole methodology-freeze gate; it must preserve all Session 15/16 limitations, select or explicitly defer every consequential parameter, and make no production implementation that belongs to Sessions 18–19.
+Session 18 implements the frozen signal-v2 contract in parallel only under the isolated `2.0.0` namespace, without market-v2 work, legacy changes, publication, or cutover.

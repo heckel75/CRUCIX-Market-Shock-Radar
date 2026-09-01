@@ -1,0 +1,125 @@
+{
+  "methodologyVersion": "2.0.0",
+  "schemaVersion": "crucix-methodology-enums/v1",
+  "enumerations": {
+    "actionStage": [
+      "rhetoric-or-threatened",
+      "announced",
+      "implemented",
+      "impact-observed"
+    ],
+    "assessmentStatus": [
+      "assessed",
+      "not-observed",
+      "not-applicable",
+      "unknown"
+    ],
+    "assignmentDecisionMode": [
+      "deterministic-automatic",
+      "assisted-human-confirmed",
+      "human"
+    ],
+    "candidateDisposition": [
+      "atomic-event-observation",
+      "contextual-observation",
+      "no-discrete-event",
+      "unresolved-event-identity",
+      "unresolved-multi-incident",
+      "decomposed-parent"
+    ],
+    "correctionState": [
+      "original",
+      "corrected",
+      "retracted",
+      "disputed"
+    ],
+    "divergenceAssessmentStatus": [
+      "assessed",
+      "pending-next-eligible-close",
+      "insufficient-signal-assessment",
+      "insufficient-market-history",
+      "unknown-timing"
+    ],
+    "divergenceState": [
+      "signal-leading",
+      "co-movement",
+      "market-only",
+      "calm"
+    ],
+    "eventType": [
+      "conflict-escalation",
+      "sanctions-policy",
+      "energy-disruption",
+      "credit-stress",
+      "supply-chain"
+    ],
+    "lifecycleState": [
+      "new",
+      "escalating",
+      "continuing",
+      "de-escalating"
+    ],
+    "marketAssessmentStatus": [
+      "assessed",
+      "insufficient-instrument-history",
+      "insufficient-same-date-cohort",
+      "insufficient-conditioned-history",
+      "unknown-source-availability",
+      "invalid-input"
+    ],
+    "mechanismRelation": [
+      "direct",
+      "contextual"
+    ],
+    "originRelationship": [
+      "same-origin",
+      "independent-origin",
+      "unknown"
+    ],
+    "provenanceAction": [
+      "created",
+      "assigned",
+      "reassigned",
+      "merged",
+      "split",
+      "aliased",
+      "superseded",
+      "corrected",
+      "retracted",
+      "assessed",
+      "decomposed"
+    ],
+    "signalAssessmentStatus": [
+      "assessed",
+      "insufficient-cluster-assessment",
+      "unknown-origin",
+      "conflicting-evidence",
+      "nonqualifying-stage",
+      "nonqualifying-lifecycle",
+      "nonqualifying-mechanism",
+      "retracted-or-disputed"
+    ],
+    "timingReliability": [
+      "reliable",
+      "unreliable",
+      "unknown"
+    ]
+  },
+  "semantics": {
+    "typedUnknown": "Unknown is carried by an assessment wrapper status and is never added as a sixth event-type leaf.",
+    "dispositionSeparation": "Candidate disposition describes whether an observation can safely identify an event. Event type describes the event only after that distinction is resolved.",
+    "divergenceStates": {
+      "signal-leading": "A qualifying signal assessment is elevated and the aligned market assessment is not elevated.",
+      "co-movement": "Qualifying signal and aligned market assessments are both elevated.",
+      "market-only": "The aligned market assessment is elevated and the qualifying signal assessment is not elevated.",
+      "calm": "Neither the qualifying signal assessment nor the aligned market assessment is elevated."
+    },
+    "nonStates": "Pending, insufficient-history, insufficient-signal, and unknown-timing outcomes are assessment statuses, not divergence states."
+  },
+  "legacyReadOnlyMapping": {
+    "signals-leading-markets": "signal-leading",
+    "signals-and-markets-confirm": "co-movement",
+    "markets-moving-without-signals": "market-only",
+    "no-shock-confirmation": "calm"
+  }
+}

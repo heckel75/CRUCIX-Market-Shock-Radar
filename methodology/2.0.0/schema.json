@@ -1,0 +1,917 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://crucix.local/methodology/2.0.0/schema.json",
+  "title": "CRUCIX Methodology 2.0.0 corrected freeze-candidate record schema",
+  "type": "object",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "runId": {
+      "type": "string",
+      "pattern": "^run-[0-9]{8}T[0-9]{9}Z-[0-9a-f]{20}$"
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^cand-sha256-[0-9a-f]{64}$"
+    },
+    "assignmentId": {
+      "type": "string",
+      "pattern": "^asn-sha256-[0-9a-f]{64}$"
+    },
+    "eventClusterId": {
+      "type": "string",
+      "pattern": "^evt-[0-9]{8}T[0-9]{9}Z-[0-9a-f]{20}$"
+    },
+    "parentSeriesId": {
+      "type": "string",
+      "pattern": "^series-[0-9]{8}T[0-9]{9}Z-[0-9a-f]{20}$"
+    },
+    "provenanceId": {
+      "type": "string",
+      "pattern": "^prov-sha256-[0-9a-f]{64}$"
+    },
+    "normalizationVersion": {
+      "const": "crucix-session15-conservative-normalization/v1"
+    },
+    "semanticValidationVersion": {
+      "const": "crucix-methodology-semantic-validation/v2.0.0"
+    },
+    "reportingSourceId": {
+      "type": "string",
+      "pattern": "^reporting-source-[a-z0-9][a-z0-9-]{2,127}$"
+    },
+    "assertionId": {
+      "type": "string",
+      "pattern": "^assertion-[a-z0-9][a-z0-9-]{2,127}$"
+    },
+    "reportingOriginId": {
+      "type": "string",
+      "pattern": "^origin-[a-z0-9][a-z0-9-]{2,127}$"
+    },
+    "independenceGroupId": {
+      "type": "string",
+      "pattern": "^independence-[a-z0-9][a-z0-9-]{2,127}$"
+    },
+    "provenanceEdgeId": {
+      "type": "string",
+      "pattern": "^origin-edge-[a-z0-9][a-z0-9-]{2,127}$"
+    },
+    "eventType": {
+      "enum": [
+        "conflict-escalation",
+        "sanctions-policy",
+        "energy-disruption",
+        "credit-stress",
+        "supply-chain"
+      ]
+    },
+    "assessmentReason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventTypeAssessment": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["status", "value", "evidenceRefs"],
+          "properties": {
+            "status": { "const": "assessed" },
+            "value": { "$ref": "#/$defs/eventType" },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["status", "reason", "evidenceRefs"],
+          "properties": {
+            "status": { "enum": ["not-observed", "not-applicable", "unknown"] },
+            "reason": { "$ref": "#/$defs/assessmentReason" },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "enumAssessment": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["status", "value", "evidenceRefs"],
+          "properties": {
+            "status": { "const": "assessed" },
+            "value": { "type": "string", "minLength": 1 },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["status", "reason", "evidenceRefs"],
+          "properties": {
+            "status": { "enum": ["not-observed", "not-applicable", "unknown"] },
+            "reason": { "$ref": "#/$defs/assessmentReason" },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "timestampAssessment": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["status", "value", "reliability", "evidenceRefs"],
+          "properties": {
+            "status": { "const": "assessed" },
+            "value": { "$ref": "#/$defs/timestamp" },
+            "reliability": { "const": "reliable" },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["status", "reliability", "reason", "evidenceRefs"],
+          "properties": {
+            "status": { "enum": ["not-observed", "unknown"] },
+            "reliability": { "enum": ["unreliable", "unknown"] },
+            "reason": { "$ref": "#/$defs/assessmentReason" },
+            "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "originEvidence": {
+      "type": "object",
+      "required": ["status", "assessmentVersion", "evidenceClass", "specificOriginIds", "reportingSourceIds", "originatingAssertionIds", "reportingOriginIds", "independenceGroupIds", "provenanceEdgeIds", "independentOriginCount", "conflicting", "evidenceRefs", "semanticValidationVersion"],
+      "properties": {
+        "status": { "enum": ["assessed", "unknown"] },
+        "assessmentVersion": { "type": "integer", "minimum": 1 },
+        "evidenceClass": { "enum": ["resolved-single-origin-nonconflicting", "corroborated-independent-nonconflicting", "shared-origin-only", "unknown-origin", "unverified-origin", "conflicting-origin"] },
+        "specificOriginIds": { "type": "array", "items": { "$ref": "#/$defs/reportingOriginId" }, "uniqueItems": true },
+        "reportingSourceIds": { "type": "array", "items": { "$ref": "#/$defs/reportingSourceId" }, "uniqueItems": true },
+        "originatingAssertionIds": { "type": "array", "items": { "$ref": "#/$defs/assertionId" }, "uniqueItems": true },
+        "reportingOriginIds": { "type": "array", "items": { "$ref": "#/$defs/reportingOriginId" }, "uniqueItems": true },
+        "independenceGroupIds": { "type": "array", "items": { "$ref": "#/$defs/independenceGroupId" }, "uniqueItems": true },
+        "provenanceEdgeIds": { "type": "array", "items": { "$ref": "#/$defs/provenanceEdgeId" }, "uniqueItems": true },
+        "independentOriginCount": { "type": "integer", "minimum": 0 },
+        "conflicting": { "type": "boolean" },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "reason": { "$ref": "#/$defs/assessmentReason" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "unknown" } }, "required": ["status"] },
+          "then": {
+            "required": ["reason"],
+            "properties": {
+              "evidenceClass": { "enum": ["unknown-origin", "unverified-origin"] },
+              "specificOriginIds": { "maxItems": 0 },
+              "reportingOriginIds": { "maxItems": 0 },
+              "independenceGroupIds": { "maxItems": 0 },
+              "independentOriginCount": { "const": 0 },
+              "conflicting": { "const": false }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "evidenceClass": { "const": "resolved-single-origin-nonconflicting" } }, "required": ["evidenceClass"] },
+          "then": {
+            "properties": {
+              "status": { "const": "assessed" },
+              "specificOriginIds": { "minItems": 1 },
+              "reportingSourceIds": { "minItems": 1 },
+              "originatingAssertionIds": { "minItems": 1 },
+              "reportingOriginIds": { "minItems": 1 },
+              "independenceGroupIds": { "minItems": 1, "maxItems": 1 },
+              "provenanceEdgeIds": { "minItems": 4 },
+              "independentOriginCount": { "const": 1 },
+              "conflicting": { "const": false }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "evidenceClass": { "const": "corroborated-independent-nonconflicting" } }, "required": ["evidenceClass"] },
+          "then": {
+            "properties": {
+              "status": { "const": "assessed" },
+              "specificOriginIds": { "minItems": 2 },
+              "reportingSourceIds": { "minItems": 2 },
+              "originatingAssertionIds": { "minItems": 2 },
+              "reportingOriginIds": { "minItems": 2 },
+              "independenceGroupIds": { "minItems": 2 },
+              "provenanceEdgeIds": { "minItems": 8 },
+              "independentOriginCount": { "minimum": 2 },
+              "conflicting": { "const": false }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "evidenceClass": { "const": "conflicting-origin" } }, "required": ["evidenceClass"] },
+          "then": { "properties": { "conflicting": { "const": true } } }
+        }
+      ]
+    },
+    "originEvidenceHistoryEntry": {
+      "type": "object",
+      "required": ["effectiveAt", "assessmentVersion", "value", "provenanceId"],
+      "properties": {
+        "effectiveAt": { "$ref": "#/$defs/timestamp" },
+        "assessmentVersion": { "type": "integer", "minimum": 1 },
+        "value": { "$ref": "#/$defs/originEvidence" },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" }
+      },
+      "additionalProperties": false
+    },
+    "reportingSourceNode": {
+      "type": "object",
+      "required": ["reportingSourceId", "outletName", "evidenceRefs"],
+      "properties": {
+        "reportingSourceId": { "$ref": "#/$defs/reportingSourceId" },
+        "outletName": { "type": "string", "minLength": 1 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "originatingAssertionNode": {
+      "type": "object",
+      "required": ["assertionId", "assertionType", "descriptionHash", "evidenceRefs"],
+      "properties": {
+        "assertionId": { "$ref": "#/$defs/assertionId" },
+        "assertionType": { "enum": ["direct-observation", "official-statement", "derived-analysis", "unknown"] },
+        "descriptionHash": { "$ref": "#/$defs/sha256" },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "reportingOriginNode": {
+      "type": "object",
+      "required": ["reportingOriginId", "originType", "assessmentStatus", "evidenceRefs"],
+      "properties": {
+        "reportingOriginId": { "$ref": "#/$defs/reportingOriginId" },
+        "originType": { "enum": ["first-hand-observer", "official-speaker", "derived-analysis", "syndicator", "unknown"] },
+        "assessmentStatus": { "enum": ["assessed", "unknown"] },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "independenceGroupNode": {
+      "type": "object",
+      "required": ["independenceGroupId", "assessmentStatus", "memberOriginIds", "evidenceRefs"],
+      "properties": {
+        "independenceGroupId": { "$ref": "#/$defs/independenceGroupId" },
+        "assessmentStatus": { "enum": ["assessed", "unknown"] },
+        "memberOriginIds": { "type": "array", "items": { "$ref": "#/$defs/reportingOriginId" }, "minItems": 1, "uniqueItems": true },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "originProvenanceEdge": {
+      "type": "object",
+      "required": ["provenanceEdgeId", "fromNodeId", "toNodeId", "edgeType", "assessmentStatus", "evidenceRefs", "assessmentVersion"],
+      "properties": {
+        "provenanceEdgeId": { "$ref": "#/$defs/provenanceEdgeId" },
+        "fromNodeId": { "type": "string", "minLength": 1 },
+        "toNodeId": { "type": "string", "minLength": 1 },
+        "edgeType": { "enum": ["candidate-reported-by", "reporter-reports-assertion", "assertion-originated-by", "origin-member-of-independence-group", "syndicated-from", "quotes-official-statement", "derived-from", "repeats", "independent-direct-observation", "unknown-derivation"] },
+        "assessmentStatus": { "enum": ["assessed", "unknown"] },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "assessmentVersion": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "assessmentStatus": { "const": "assessed" } }, "required": ["assessmentStatus"] },
+          "then": { "properties": { "evidenceRefs": { "minItems": 1 } } }
+        }
+      ]
+    },
+    "originProvenance": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "topologyVersion", "semanticValidationVersion", "candidateId", "assessmentVersion", "reportingSources", "originatingAssertions", "reportingOrigins", "independenceGroups", "provenanceEdges", "originEvidence", "provenanceIds"],
+      "properties": {
+        "recordType": { "const": "origin-provenance" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "topologyVersion": { "const": "crucix-origin-topology/v2.0.0" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "candidateId": { "$ref": "#/$defs/candidateId" },
+        "assessmentVersion": { "type": "integer", "minimum": 1 },
+        "reportingSources": { "type": "array", "items": { "$ref": "#/$defs/reportingSourceNode" }, "minItems": 1, "uniqueItems": true },
+        "originatingAssertions": { "type": "array", "items": { "$ref": "#/$defs/originatingAssertionNode" }, "minItems": 1, "uniqueItems": true },
+        "reportingOrigins": { "type": "array", "items": { "$ref": "#/$defs/reportingOriginNode" }, "minItems": 1, "uniqueItems": true },
+        "independenceGroups": { "type": "array", "items": { "$ref": "#/$defs/independenceGroupNode" }, "minItems": 1, "uniqueItems": true },
+        "provenanceEdges": { "type": "array", "items": { "$ref": "#/$defs/originProvenanceEdge" }, "minItems": 4, "uniqueItems": true },
+        "originEvidence": { "$ref": "#/$defs/originEvidence" },
+        "provenanceIds": { "type": "array", "items": { "$ref": "#/$defs/provenanceId" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "correctionHistoryEntry": {
+      "type": "object",
+      "required": ["effectiveAt", "state", "provenanceId", "evidenceRefs"],
+      "properties": {
+        "effectiveAt": { "$ref": "#/$defs/timestamp" },
+        "state": { "enum": ["original", "corrected", "retracted", "disputed"] },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "rawIdentity": {
+      "type": "object",
+      "required": ["reportingSourceId", "sourceRecordId", "rawContentSha256", "normalizationVersion", "normalizedContentHash", "normalizedContentRetention"],
+      "properties": {
+        "reportingSourceId": { "$ref": "#/$defs/reportingSourceId" },
+        "sourceRecordId": { "type": "string", "minLength": 1 },
+        "rawContentSha256": { "$ref": "#/$defs/sha256" },
+        "normalizationVersion": { "$ref": "#/$defs/normalizationVersion" },
+        "normalizedContentHash": { "$ref": "#/$defs/sha256" },
+        "normalizedContentRetention": { "enum": ["hash-only", "private-normalized-content-and-hash"] },
+        "privateNormalizedContentRef": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "semanticValidationVersion", "candidateId", "runId", "rawIdentity", "observedAt", "disposition", "eventType", "actionStage", "correctionState", "originEvidence", "derivedCandidateIds", "provenanceIds"],
+      "properties": {
+        "recordType": { "const": "candidate" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "candidateId": { "$ref": "#/$defs/candidateId" },
+        "runId": { "$ref": "#/$defs/runId" },
+        "rawIdentity": { "$ref": "#/$defs/rawIdentity" },
+        "observedAt": { "$ref": "#/$defs/timestampAssessment" },
+        "disposition": { "enum": ["atomic-event-observation", "contextual-observation", "no-discrete-event", "unresolved-event-identity", "unresolved-multi-incident", "decomposed-parent"] },
+        "eventType": { "$ref": "#/$defs/eventTypeAssessment" },
+        "actionStage": { "$ref": "#/$defs/enumAssessment" },
+        "correctionState": { "$ref": "#/$defs/enumAssessment" },
+        "originEvidence": { "$ref": "#/$defs/originEvidence" },
+        "decompositionOfCandidateId": { "$ref": "#/$defs/candidateId" },
+        "derivedCandidateIds": { "type": "array", "items": { "$ref": "#/$defs/candidateId" }, "uniqueItems": true },
+        "provenanceIds": { "type": "array", "items": { "$ref": "#/$defs/provenanceId" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "assignment": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "semanticValidationVersion", "assignmentVersion", "assignmentId", "candidateId", "decisionMode", "decision", "decidedAt", "decidedBy", "evidenceRefs", "provenanceId"],
+      "properties": {
+        "recordType": { "const": "assignment" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "assignmentVersion": { "type": "integer", "minimum": 1 },
+        "assignmentId": { "$ref": "#/$defs/assignmentId" },
+        "candidateId": { "$ref": "#/$defs/candidateId" },
+        "eventClusterId": { "$ref": "#/$defs/eventClusterId" },
+        "proposalId": { "type": "string", "minLength": 1 },
+        "decisionMode": { "enum": ["deterministic-automatic", "assisted-human-confirmed", "human"] },
+        "automaticRuleId": { "enum": ["exact-source-incident-id", "exact-normalized-content-hash"] },
+        "normalizationVersion": { "$ref": "#/$defs/normalizationVersion" },
+        "normalizedContentHash": { "$ref": "#/$defs/sha256" },
+        "sourceIncidentId": { "type": "string", "minLength": 1 },
+        "decision": { "enum": ["join", "create", "exclude-unresolved"] },
+        "decidedAt": { "$ref": "#/$defs/timestamp" },
+        "decidedBy": { "type": "string", "minLength": 1 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "decisionMode": { "const": "deterministic-automatic" } }, "required": ["decisionMode"] },
+          "then": { "required": ["automaticRuleId", "eventClusterId"] }
+        },
+        {
+          "if": { "properties": { "automaticRuleId": { "const": "exact-normalized-content-hash" } }, "required": ["automaticRuleId"] },
+          "then": { "required": ["normalizationVersion", "normalizedContentHash"] }
+        },
+        {
+          "if": { "properties": { "automaticRuleId": { "const": "exact-source-incident-id" } }, "required": ["automaticRuleId"] },
+          "then": { "required": ["sourceIncidentId"] }
+        },
+        {
+          "if": { "properties": { "decision": { "enum": ["join", "create"] } }, "required": ["decision"] },
+          "then": { "required": ["eventClusterId"] }
+        },
+        {
+          "if": { "properties": { "decision": { "const": "exclude-unresolved" } }, "required": ["decision"] },
+          "then": { "required": ["proposalId"] }
+        }
+      ]
+    },
+    "mechanism": {
+      "type": "object",
+      "required": ["mechanismId", "channelId", "relation", "assessment", "evidenceRefs"],
+      "properties": {
+        "mechanismId": { "type": "string", "pattern": "^mech-[0-9a-f]{20}$" },
+        "channelId": { "$ref": "#/$defs/eventType" },
+        "relation": { "enum": ["direct", "contextual"] },
+        "assessment": { "enum": ["assessed", "unknown"] },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "lifecycleTransition": {
+      "type": "object",
+      "required": ["state", "assessmentStatus", "transitionVersion", "effectiveAt", "material", "evidenceRefs", "provenanceId", "semanticValidationVersion"],
+      "properties": {
+        "state": { "enum": ["new", "escalating", "continuing", "de-escalating"] },
+        "assessmentStatus": { "const": "assessed" },
+        "transitionVersion": { "type": "integer", "minimum": 1 },
+        "effectiveAt": { "$ref": "#/$defs/timestamp" },
+        "material": { "type": "boolean" },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" },
+        "materialTransitionProvenanceId": { "$ref": "#/$defs/provenanceId" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "state": { "const": "continuing" } }, "required": ["state"] },
+          "then": { "properties": { "material": { "const": false } }, "not": { "required": ["materialTransitionProvenanceId"] } }
+        },
+        {
+          "if": { "properties": { "state": { "enum": ["new", "escalating", "de-escalating"] } }, "required": ["state"] },
+          "then": { "properties": { "material": { "const": true } }, "required": ["materialTransitionProvenanceId"] }
+        }
+      ]
+    },
+    "clusterAlias": {
+      "type": "object",
+      "required": ["aliasId", "alias", "effectiveAt", "provenanceId"],
+      "properties": {
+        "aliasId": { "type": "string", "pattern": "^alias-[a-z0-9][a-z0-9-]{2,127}$" },
+        "alias": { "type": "string", "minLength": 1 },
+        "effectiveAt": { "$ref": "#/$defs/timestamp" },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" }
+      },
+      "additionalProperties": false
+    },
+    "eventCluster": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "semanticValidationVersion", "eventClusterId", "assignmentVersion", "provenanceVersion", "candidateIds", "eventType", "actionStage", "correctionState", "correctionHistory", "originEvidence", "originEvidenceHistory", "mechanisms", "lifecycleStatus", "lifecycleAssessmentStatus", "lifecycleHistory", "firstSeen", "lastObservedAt", "lastMaterialChangeAt", "aliases", "parentSeriesIds", "provenanceIds"],
+      "properties": {
+        "recordType": { "const": "event-cluster" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "eventClusterId": { "$ref": "#/$defs/eventClusterId" },
+        "assignmentVersion": { "type": "integer", "minimum": 1 },
+        "provenanceVersion": { "type": "integer", "minimum": 1 },
+        "candidateIds": { "type": "array", "items": { "$ref": "#/$defs/candidateId" }, "minItems": 1, "uniqueItems": true },
+        "eventType": { "$ref": "#/$defs/eventTypeAssessment" },
+        "actionStage": { "$ref": "#/$defs/enumAssessment" },
+        "correctionState": { "$ref": "#/$defs/enumAssessment" },
+        "correctionHistory": { "type": "array", "items": { "$ref": "#/$defs/correctionHistoryEntry" }, "minItems": 1 },
+        "originEvidence": { "$ref": "#/$defs/originEvidence" },
+        "originEvidenceHistory": { "type": "array", "items": { "$ref": "#/$defs/originEvidenceHistoryEntry" }, "minItems": 1 },
+        "mechanisms": { "type": "array", "items": { "$ref": "#/$defs/mechanism" }, "uniqueItems": true },
+        "lifecycleStatus": { "enum": ["new", "escalating", "continuing", "de-escalating"] },
+        "lifecycleAssessmentStatus": { "const": "assessed" },
+        "lifecycleHistory": { "type": "array", "items": { "$ref": "#/$defs/lifecycleTransition" }, "minItems": 1 },
+        "firstSeen": { "$ref": "#/$defs/timestamp" },
+        "lastObservedAt": { "$ref": "#/$defs/timestamp" },
+        "lastMaterialChangeAt": { "$ref": "#/$defs/timestamp" },
+        "aliases": { "type": "array", "items": { "$ref": "#/$defs/clusterAlias" }, "uniqueItems": true },
+        "parentSeriesIds": { "type": "array", "items": { "$ref": "#/$defs/parentSeriesId" }, "uniqueItems": true },
+        "provenanceIds": { "type": "array", "items": { "$ref": "#/$defs/provenanceId" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "parentSeries": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "parentSeriesId", "eventClusterIds", "label", "supersedesParentSeriesIds", "supersededByParentSeriesId", "provenanceIds"],
+      "properties": {
+        "recordType": { "const": "parent-series" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "parentSeriesId": { "$ref": "#/$defs/parentSeriesId" },
+        "eventClusterIds": { "type": "array", "items": { "$ref": "#/$defs/eventClusterId" }, "minItems": 1, "uniqueItems": true },
+        "label": { "type": "string", "minLength": 1 },
+        "supersedesParentSeriesIds": { "type": "array", "items": { "$ref": "#/$defs/parentSeriesId" }, "uniqueItems": true },
+        "supersededByParentSeriesId": { "oneOf": [{ "$ref": "#/$defs/parentSeriesId" }, { "type": "null" }] },
+        "provenanceIds": { "type": "array", "items": { "$ref": "#/$defs/provenanceId" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "registry": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "asOf", "eventClusters", "parentSeries", "lineage", "registrySha256"],
+      "properties": {
+        "recordType": { "const": "registry" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "asOf": { "$ref": "#/$defs/timestamp" },
+        "eventClusters": { "type": "array", "items": { "$ref": "#/$defs/eventCluster" } },
+        "parentSeries": { "type": "array", "items": { "$ref": "#/$defs/parentSeries" } },
+        "lineage": { "type": "array", "items": { "$ref": "#/$defs/lineage" } },
+        "registrySha256": { "$ref": "#/$defs/sha256" }
+      },
+      "additionalProperties": false
+    },
+    "rankedCluster": {
+      "type": "object",
+      "required": ["eventClusterId", "actionStageOrdinal", "rank", "stageTie", "directMechanismIds"],
+      "properties": {
+        "eventClusterId": { "$ref": "#/$defs/eventClusterId" },
+        "actionStageOrdinal": { "type": "integer", "minimum": 3, "maximum": 4 },
+        "rank": { "type": "integer", "minimum": 1 },
+        "stageTie": { "type": "boolean" },
+        "directMechanismIds": { "type": "array", "items": { "type": "string", "pattern": "^mech-[0-9a-f]{20}$" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "signalChannelOutput": {
+      "type": "object",
+      "required": ["channelId", "status", "elevated", "qualifyingClusterIds", "rankedClusters", "visibleNonElevatingClusterIds", "reasonCodes"],
+      "properties": {
+        "channelId": { "$ref": "#/$defs/eventType" },
+        "status": { "enum": ["assessed", "insufficient-cluster-assessment", "unknown-origin", "conflicting-evidence", "nonqualifying-stage", "nonqualifying-lifecycle", "nonqualifying-mechanism", "retracted-or-disputed"] },
+        "elevated": { "type": ["boolean", "null"] },
+        "qualifyingClusterIds": { "type": "array", "items": { "$ref": "#/$defs/eventClusterId" }, "uniqueItems": true },
+        "rankedClusters": { "type": "array", "items": { "$ref": "#/$defs/rankedCluster" } },
+        "visibleNonElevatingClusterIds": { "type": "array", "items": { "$ref": "#/$defs/eventClusterId" }, "uniqueItems": true },
+        "reasonCodes": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "signalOutput": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "runId", "asOf", "scoringUnit", "scalarScore", "channels", "inputHashes"],
+      "properties": {
+        "recordType": { "const": "signal-output" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "runId": { "$ref": "#/$defs/runId" },
+        "asOf": { "$ref": "#/$defs/timestamp" },
+        "scoringUnit": { "const": "event-cluster" },
+        "scalarScore": { "type": "null" },
+        "channels": { "type": "array", "items": { "$ref": "#/$defs/signalChannelOutput" }, "minItems": 5, "maxItems": 5 },
+        "inputHashes": { "type": "array", "items": { "$ref": "#/$defs/sha256" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "instrumentReading": {
+      "type": "object",
+      "required": ["semanticValidationVersion", "instrumentId", "instrumentSetVersion", "conditioningKey", "windowStart", "windowEnd", "asOf", "instrumentObservationDates", "actualWindowObservationCount", "historyCount", "availabilityAt", "observationAgeCalendarDays", "businessDayAge", "freshnessStatus", "transform", "zScoreAssessment", "zScore", "absoluteZScore", "eligibilityStatus", "eligible", "exclusionReason"],
+      "properties": {
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "instrumentId": { "type": "string", "minLength": 1 },
+        "instrumentSetVersion": { "$ref": "#/$defs/sha256" },
+        "conditioningKey": { "type": "string", "pattern": "^[0-9a-f]{64}\\|[0-4]$" },
+        "windowStart": { "$ref": "#/$defs/date" },
+        "windowEnd": { "$ref": "#/$defs/date" },
+        "asOf": { "$ref": "#/$defs/date" },
+        "instrumentObservationDates": { "type": "array", "items": { "$ref": "#/$defs/date" }, "minItems": 6, "maxItems": 6, "uniqueItems": true },
+        "actualWindowObservationCount": { "const": 6 },
+        "historyCount": { "type": "integer", "minimum": 0, "maximum": 252 },
+        "availabilityAt": { "$ref": "#/$defs/timestampAssessment" },
+        "observationAgeCalendarDays": { "type": "integer", "minimum": 0 },
+        "businessDayAge": { "type": "integer", "minimum": 0 },
+        "freshnessStatus": { "enum": ["fresh", "stale", "unknown"] },
+        "transform": { "type": ["number", "null"] },
+        "zScoreAssessment": { "enum": ["assessed", "insufficient-history", "unknown"] },
+        "zScore": { "type": ["number", "null"] },
+        "absoluteZScore": { "type": ["number", "null"], "minimum": 0 },
+        "eligibilityStatus": { "enum": ["eligible", "excluded", "unknown"] },
+        "eligible": { "type": ["boolean", "null"] },
+        "exclusionReason": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "eligibilityStatus": { "const": "eligible" } }, "required": ["eligibilityStatus"] },
+          "then": {
+            "properties": {
+              "eligible": { "const": true },
+              "exclusionReason": { "type": "null" },
+              "freshnessStatus": { "const": "fresh" },
+              "zScoreAssessment": { "const": "assessed" },
+              "transform": { "type": "number" },
+              "zScore": { "type": "number" },
+              "absoluteZScore": { "type": "number", "minimum": 0 },
+              "historyCount": { "const": 252 }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "eligibilityStatus": { "const": "excluded" } }, "required": ["eligibilityStatus"] },
+          "then": { "properties": { "eligible": { "const": false }, "exclusionReason": { "type": "string", "minLength": 1 } } }
+        },
+        {
+          "if": { "properties": { "eligibilityStatus": { "const": "unknown" } }, "required": ["eligibilityStatus"] },
+          "then": { "properties": { "eligible": { "type": "null" }, "exclusionReason": { "type": "string", "minLength": 1 }, "freshnessStatus": { "const": "unknown" } } }
+        }
+      ]
+    },
+    "marketChannelOutput": {
+      "type": "object",
+      "required": ["semanticValidationVersion", "channelId", "status", "freshnessStatus", "evaluationDate", "marketAsOf", "instrumentSetVersion", "conditioningKey", "eligibleInstrumentCount", "minimumEligibleInstrumentCount", "includedInstrumentReadings", "excludedInstrumentIds", "marketStatistic", "percentileAlpha", "conditionedPriorObservationCount", "percentileThreshold", "elevated", "driverInstrumentId", "driverZ", "secondDriverInstrumentId", "secondDriverZ", "numberAbovePercentileThreshold", "numberAboveRawDiagnosticThreshold", "breadthRatio", "reasonCodes"],
+      "properties": {
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "channelId": { "$ref": "#/$defs/eventType" },
+        "status": { "enum": ["assessed", "insufficient-instrument-history", "insufficient-same-date-cohort", "insufficient-conditioned-history", "unknown-source-availability", "invalid-input"] },
+        "freshnessStatus": { "enum": ["fresh", "stale", "unknown"] },
+        "evaluationDate": { "$ref": "#/$defs/date" },
+        "marketAsOf": { "oneOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+        "instrumentSetVersion": { "oneOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }] },
+        "conditioningKey": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}\\|[0-4]$" },
+        "eligibleInstrumentCount": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "minimumEligibleInstrumentCount": { "type": "integer", "minimum": 2, "maximum": 3 },
+        "includedInstrumentReadings": { "type": "array", "items": { "$ref": "#/$defs/instrumentReading" }, "uniqueItems": true },
+        "excludedInstrumentIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "marketStatistic": { "type": ["number", "null"] },
+        "percentileAlpha": { "type": "number", "minimum": 0, "maximum": 1 },
+        "conditionedPriorObservationCount": { "type": "integer", "minimum": 0, "maximum": 252 },
+        "percentileThreshold": { "type": ["number", "null"] },
+        "elevated": { "type": ["boolean", "null"] },
+        "driverInstrumentId": { "type": ["string", "null"] },
+        "driverZ": { "type": ["number", "null"] },
+        "secondDriverInstrumentId": { "type": ["string", "null"] },
+        "secondDriverZ": { "type": ["number", "null"] },
+        "numberAbovePercentileThreshold": { "type": ["integer", "null"], "minimum": 0 },
+        "numberAboveRawDiagnosticThreshold": { "type": ["integer", "null"], "minimum": 0 },
+        "breadthRatio": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "reasonCodes": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "assessed" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "freshnessStatus": { "const": "fresh" },
+              "marketAsOf": { "$ref": "#/$defs/date" },
+              "instrumentSetVersion": { "$ref": "#/$defs/sha256" },
+              "conditioningKey": { "type": "string", "pattern": "^[0-9a-f]{64}\\|[2-4]$" },
+              "eligibleInstrumentCount": { "minimum": 2 },
+              "includedInstrumentReadings": { "minItems": 2 },
+              "marketStatistic": { "type": "number" },
+              "conditionedPriorObservationCount": { "minimum": 126 },
+              "percentileThreshold": { "type": "number" },
+              "elevated": { "type": "boolean" },
+              "driverInstrumentId": { "type": "string", "minLength": 1 },
+              "driverZ": { "type": "number" },
+              "numberAbovePercentileThreshold": { "type": "integer", "minimum": 0 },
+              "numberAboveRawDiagnosticThreshold": { "type": "integer", "minimum": 0 },
+              "breadthRatio": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "status": { "const": "insufficient-conditioned-history" } }, "required": ["status"] },
+          "then": { "properties": { "percentileThreshold": { "type": "null" }, "elevated": { "type": "null" }, "conditionedPriorObservationCount": { "maximum": 125 } } }
+        }
+      ]
+    },
+    "marketOutput": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "runId", "evaluationDate", "datingRule", "calendarRule", "channels", "inputHashes", "configurationHashes"],
+      "properties": {
+        "recordType": { "const": "market-output" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "runId": { "$ref": "#/$defs/runId" },
+        "evaluationDate": { "$ref": "#/$defs/date" },
+        "datingRule": { "const": "latest-same-date-eligible-cohort" },
+        "calendarRule": { "const": "utc-weekday-only-v1" },
+        "channels": { "type": "array", "items": { "$ref": "#/$defs/marketChannelOutput" }, "minItems": 5, "maxItems": 5 },
+        "inputHashes": { "type": "array", "items": { "$ref": "#/$defs/sha256" }, "minItems": 1, "uniqueItems": true },
+        "configurationHashes": { "type": "array", "items": { "$ref": "#/$defs/sha256" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "divergenceChannelOutput": {
+      "type": "object",
+      "required": ["semanticValidationVersion", "channelId", "status", "state", "signalElevated", "marketElevated", "signalAsOf", "marketAsOf", "reasonCodes"],
+      "properties": {
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "channelId": { "$ref": "#/$defs/eventType" },
+        "status": { "enum": ["assessed", "pending-next-eligible-close", "insufficient-signal-assessment", "insufficient-market-history", "unknown-timing"] },
+        "state": { "type": ["string", "null"], "enum": ["signal-leading", "co-movement", "market-only", "calm", null] },
+        "signalElevated": { "type": ["boolean", "null"] },
+        "marketElevated": { "type": ["boolean", "null"] },
+        "signalAsOf": { "$ref": "#/$defs/timestampAssessment" },
+        "marketAsOf": { "oneOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+        "reasonCodes": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "assessed" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "state": { "enum": ["signal-leading", "co-movement", "market-only", "calm"] },
+              "signalElevated": { "type": "boolean" },
+              "marketElevated": { "type": "boolean" },
+              "marketAsOf": { "$ref": "#/$defs/date" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "status": { "enum": ["pending-next-eligible-close", "insufficient-signal-assessment", "insufficient-market-history", "unknown-timing"] } }, "required": ["status"] },
+          "then": { "properties": { "state": { "type": "null" } } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "assessed" }, "signalElevated": { "const": true }, "marketElevated": { "const": false } }, "required": ["status", "signalElevated", "marketElevated"] },
+          "then": { "properties": { "state": { "const": "signal-leading" } } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "assessed" }, "signalElevated": { "const": true }, "marketElevated": { "const": true } }, "required": ["status", "signalElevated", "marketElevated"] },
+          "then": { "properties": { "state": { "const": "co-movement" } } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "assessed" }, "signalElevated": { "const": false }, "marketElevated": { "const": true } }, "required": ["status", "signalElevated", "marketElevated"] },
+          "then": { "properties": { "state": { "const": "market-only" } } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "assessed" }, "signalElevated": { "const": false }, "marketElevated": { "const": false } }, "required": ["status", "signalElevated", "marketElevated"] },
+          "then": { "properties": { "state": { "const": "calm" } } }
+        }
+      ]
+    },
+    "divergenceOutput": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "runId", "channels", "languageConstraint", "inputHashes"],
+      "properties": {
+        "recordType": { "const": "divergence-output" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "runId": { "$ref": "#/$defs/runId" },
+        "channels": { "type": "array", "items": { "$ref": "#/$defs/divergenceChannelOutput" }, "minItems": 5, "maxItems": 5 },
+        "languageConstraint": { "const": "descriptive-noncausal" },
+        "inputHashes": { "type": "array", "items": { "$ref": "#/$defs/sha256" }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "lineage": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "provenanceId", "operation", "subjectIds", "resultIds", "decidedAt", "decidedBy", "reason", "evidenceRefs"],
+      "properties": {
+        "recordType": { "const": "lineage" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" },
+        "operation": { "enum": ["created", "assigned", "reassigned", "merged", "split", "aliased", "superseded", "corrected", "retracted", "assessed", "decomposed"] },
+        "subjectIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "resultIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "decidedAt": { "$ref": "#/$defs/timestamp" },
+        "decidedBy": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "provenanceId", "action", "subjectIds", "resultIds", "recordedAt", "recordedBy", "reason", "evidenceRefs", "priorRecordSha256"],
+      "properties": {
+        "recordType": { "const": "provenance" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" },
+        "action": { "enum": ["created", "assigned", "reassigned", "merged", "split", "aliased", "superseded", "corrected", "retracted", "assessed", "decomposed"] },
+        "subjectIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "resultIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "recordedAt": { "$ref": "#/$defs/timestamp" },
+        "recordedBy": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "priorRecordSha256": { "oneOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }] }
+      },
+      "additionalProperties": false
+    },
+    "correction": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "provenanceId", "subjectId", "priorStateSha256", "newCorrectionState", "reason", "effectiveAt", "decidedBy", "evidenceRefs"],
+      "properties": {
+        "recordType": { "const": "correction" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "provenanceId": { "$ref": "#/$defs/provenanceId" },
+        "subjectId": { "type": "string", "minLength": 1 },
+        "priorStateSha256": { "$ref": "#/$defs/sha256" },
+        "newCorrectionState": { "enum": ["corrected", "retracted", "disputed"] },
+        "reason": { "type": "string", "minLength": 1 },
+        "effectiveAt": { "$ref": "#/$defs/timestamp" },
+        "decidedBy": { "type": "string", "minLength": 1 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "runManifest": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "runId", "acquiredAt", "inputArtifacts", "configurationArtifacts", "outputArtifacts", "registryBeforeSha256", "registryAfterSha256"],
+      "properties": {
+        "recordType": { "const": "run-manifest" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "runId": { "$ref": "#/$defs/runId" },
+        "acquiredAt": { "$ref": "#/$defs/timestamp" },
+        "inputArtifacts": { "$ref": "#/$defs/artifactList" },
+        "configurationArtifacts": { "$ref": "#/$defs/artifactList" },
+        "outputArtifacts": { "$ref": "#/$defs/artifactList" },
+        "registryBeforeSha256": { "$ref": "#/$defs/sha256" },
+        "registryAfterSha256": { "$ref": "#/$defs/sha256" }
+      },
+      "additionalProperties": false
+    },
+    "runBundle": {
+      "type": "object",
+      "required": ["recordType", "methodologyVersion", "semanticValidationVersion", "candidates", "originProvenance", "assignments", "registry", "signalOutput", "marketOutput", "divergenceOutput", "runManifest"],
+      "properties": {
+        "recordType": { "const": "run-bundle" },
+        "methodologyVersion": { "const": "2.0.0" },
+        "semanticValidationVersion": { "$ref": "#/$defs/semanticValidationVersion" },
+        "candidates": { "type": "array", "items": { "$ref": "#/$defs/candidate" }, "minItems": 1, "uniqueItems": true },
+        "originProvenance": { "type": "array", "items": { "$ref": "#/$defs/originProvenance" }, "minItems": 1, "uniqueItems": true },
+        "assignments": { "type": "array", "items": { "$ref": "#/$defs/assignment" }, "minItems": 1, "uniqueItems": true },
+        "registry": { "$ref": "#/$defs/registry" },
+        "signalOutput": { "$ref": "#/$defs/signalOutput" },
+        "marketOutput": { "$ref": "#/$defs/marketOutput" },
+        "divergenceOutput": { "$ref": "#/$defs/divergenceOutput" },
+        "runManifest": { "$ref": "#/$defs/runManifest" }
+      },
+      "additionalProperties": false
+    },
+    "artifactList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "bytes"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "$ref": "#/$defs/sha256" },
+          "bytes": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "acceptanceCase": {
+      "type": "object",
+      "required": ["id", "category", "ruleId", "input", "expectedValid", "expectedReasonCode"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+        "category": { "enum": ["candidate-disposition", "atomic-decomposition", "source-origin", "origin-topology", "clustering", "lifecycle", "signal-eligibility", "signal-ranking", "market-dating", "market-history", "percentile", "breadth", "timing", "divergence", "lineage", "identity", "normalization", "schema", "complete-record", "canonicalization"] },
+        "ruleId": { "type": "string", "minLength": 1 },
+        "input": { "type": "object" },
+        "expectedValid": { "type": "boolean" },
+        "expectedReasonCode": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "fixtureSuite": {
+      "type": "object",
+      "required": ["methodologyVersion", "schemaVersion", "suite", "cases"],
+      "properties": {
+        "methodologyVersion": { "const": "2.0.0" },
+        "schemaVersion": { "const": "crucix-acceptance-fixtures/v1" },
+        "suite": { "enum": ["positive", "negative"] },
+        "cases": { "type": "array", "items": { "$ref": "#/$defs/acceptanceCase" }, "minItems": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/candidate" },
+    { "$ref": "#/$defs/originProvenance" },
+    { "$ref": "#/$defs/assignment" },
+    { "$ref": "#/$defs/eventCluster" },
+    { "$ref": "#/$defs/parentSeries" },
+    { "$ref": "#/$defs/registry" },
+    { "$ref": "#/$defs/mechanism" },
+    { "$ref": "#/$defs/signalOutput" },
+    { "$ref": "#/$defs/marketOutput" },
+    { "$ref": "#/$defs/divergenceOutput" },
+    { "$ref": "#/$defs/runManifest" },
+    { "$ref": "#/$defs/runBundle" },
+    { "$ref": "#/$defs/lineage" },
+    { "$ref": "#/$defs/provenance" },
+    { "$ref": "#/$defs/correction" },
+    { "$ref": "#/$defs/fixtureSuite" }
+  ],
+  "x-semanticValidation": {
+    "interfaceVersion": "crucix-methodology-semantic-validation/v2.0.0",
+    "requiredInterface": "A conforming implementation MUST apply JSON Schema draft 2020-12 first, then apply every invariant whose appliesTo list contains the record definition. A record is invalid if either phase fails; the invariant ID is the required failure reason.",
+    "invariants": [
+      { "invariantId": "INV-NORM-001", "appliesTo": ["candidate", "assignment"], "requirement": "Recompute normalizedContentHash from retained normalized content when available; require normalizationVersion equality and hash equality for exact-normalized-content-hash automatic assignment. Reject malformed, mismatched, missing-version, fuzzy, embedding, token-similarity, and undocumented matches." },
+      { "invariantId": "INV-ORIGIN-001", "appliesTo": ["originEvidence", "originProvenance"], "requirement": "independentOriginCount equals distinct assessed nonconflicting independence groups reachable through complete candidate-to-reporter-to-assertion-to-origin-to-group paths." },
+      { "invariantId": "INV-ORIGIN-002", "appliesTo": ["originProvenance"], "requirement": "Every edge endpoint exists, candidate topology paths are complete, and syndication/quotation/derivation/repetition edges are directed, non-self-referential, and acyclic." },
+      { "invariantId": "INV-LIFE-001", "appliesTo": ["eventCluster"], "requirement": "firstSeen <= lastMaterialChangeAt <= lastObservedAt; history effectiveAt and transitionVersion are monotonic; lifecycleStatus equals the last lifecycle transition state." },
+      { "invariantId": "INV-LIFE-002", "appliesTo": ["eventCluster"], "requirement": "A continuing repeat may advance lastObservedAt but cannot advance lastMaterialChangeAt; every material transition has explicit provenance." },
+      { "invariantId": "INV-MARKET-001", "appliesTo": ["instrumentReading"], "requirement": "instrumentObservationDates contains exactly the six strictly increasing actual own-series dates; windowStart is the first, windowEnd and asOf are the last, and the transform uses the current and five-valid-observation-prior values." },
+      { "invariantId": "INV-MARKET-002", "appliesTo": ["instrumentReading", "marketChannelOutput"], "requirement": "conditioningKey equals instrumentSetVersion plus eligible count; history is strictly prior-only, capped at 252, and no cross-set/count or raw fallback is permitted." },
+      { "invariantId": "INV-MARKET-003", "appliesTo": ["marketChannelOutput"], "requirement": "Included readings share marketAsOf, satisfy freshness and quorum, and reproduce M, driver, second driver, threshold counts, and breadth from the included z-score inputs." },
+      { "invariantId": "INV-DIV-001", "appliesTo": ["divergenceChannelOutput"], "requirement": "Assessed boolean inputs map exactly to signal-leading, co-movement, market-only, or calm; pending/insufficient/unknown timing has null state." },
+      { "invariantId": "INV-CANON-001", "appliesTo": ["all canonical v2 payloads"], "requirement": "Apply crucix-canonical-json/v2.0.0, require a declared policy for every array, reject sequence-order violations, append one LF, and reproduce the expected UTF-8 bytes and SHA-256." },
+      { "invariantId": "INV-BUNDLE-001", "appliesTo": ["runBundle"], "requirement": "All IDs and hashes referenced by the bundle resolve internally or to a run-manifest artifact; run IDs and methodology versions agree across records." }
+    ]
+  }
+}

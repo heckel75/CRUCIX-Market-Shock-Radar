@@ -1,0 +1,61 @@
+{
+  "auditSession": 17,
+  "methodologyVersion": "2.0.0",
+  "candidateStatus": "freeze-candidate",
+  "items": [
+    {
+      "deferredItemId": "DEF-001",
+      "topic": "numeric event decay, stale-event interval, automatic expiry, and de-escalation expiry",
+      "whyEvidenceIsInsufficient": "Session 15 observed 184 repeated observations but zero post-initial lifecycle transitions. It therefore contains no empirical transition-time or outcome distribution from which to calibrate a duration or rate.",
+      "safeSession18Or19Behavior": "Persist continuing clusters, update lastObservedAt on repeats, leave lastMaterialChangeAt unchanged, and make continuing non-elevating. Permit de-escalation only from an explicit material evidence record. Apply no decay, expiry, staleness, or inferred transition.",
+      "blockEffect": "does not block isolated parallel implementation; any later automatic decay or expiry requires a new methodology version and is outside the 2.0.0 cutover",
+      "evidenceNeeded": "Prospective reviewed lifecycle-transition records with reliable material-change times, false-persistence analysis, and outcome-sensitive comparison across candidate intervals.",
+      "futureGate": "post-parallel methodology review after the 30-close minimum; new-version decision, not an implementation default"
+    },
+    {
+      "deferredItemId": "DEF-002",
+      "topic": "fuzzy automatic-clustering similarity thresholds and actor/time/location windows",
+      "whyEvidenceIsInsufficient": "Session 15 establishes heavy duplication and unresolved assignments but does not provide a labeled out-of-sample error surface for numeric similarity or incident windows.",
+      "safeSession18Or19Behavior": "Automatically join only on the two frozen exact-match rules with no assessed-field conflict. Persist every other proposal and require assisted-human-confirmed or human disposition; unresolved candidates do not score.",
+      "blockEffect": "does not block isolated parallel implementation; blocks any broader automatic join behavior and blocks cutover if ambiguous decisions are unrecorded",
+      "evidenceNeeded": "Prospective adjudicated join/non-join labels, false-merge and false-split analysis by rule, and an independent holdout evaluation.",
+      "futureGate": "parallel gate PA-04 and independent post-freeze validation"
+    },
+    {
+      "deferredItemId": "DEF-003",
+      "topic": "durable private storage backend, retention duration, tiering, disaster recovery, and service level",
+      "whyEvidenceIsInsufficient": "Session 15 estimated JSONL volume but did not establish production throughput, contractual retention, recovery-time objectives, or a selected durable service. Session 16 provides a frozen audit volume, not an operating forecast.",
+      "safeSession18Or19Behavior": "Use access-controlled non-public local storage, immutable per-run files, hashes, append-only registry lineage, and no pruning. Keep public namespaces empty unless separately authorized. Treat any irreproducible run as ineligible for cutover.",
+      "blockEffect": "does not block isolated parallel implementation; blocks public cutover",
+      "evidenceNeeded": "Measured parallel-run volume and latency, source-license review, recovery drill, retention approval, and documented RPO/RTO ownership.",
+      "futureGate": "parallel gate PA-09 before cutover authorization"
+    },
+    {
+      "deferredItemId": "DEF-004",
+      "topic": "automatic stale-lock timeout and lock takeover",
+      "whyEvidenceIsInsufficient": "No production v2 runtime, writer-concurrency distribution, or crash-recovery evidence exists, so a timeout would be invented.",
+      "safeSession18Or19Behavior": "Use atomic exclusive-create locks. Any existing lock blocks the writer. Recovery is a persisted human decision followed by a new run; never delete or take over a lock automatically.",
+      "blockEffect": "does not block single-writer parallel implementation; blocks automatic takeover behavior",
+      "evidenceNeeded": "Parallel runtime measurements, crash simulations, duplicate-writer tests, and an approved recovery procedure.",
+      "futureGate": "Session 18 implementation review and PA-02 determinism gate"
+    },
+    {
+      "deferredItemId": "DEF-005",
+      "topic": "complete exchange-holiday/early-close calendar and reliable provider availability timestamps",
+      "whyEvidenceIsInsufficient": "Session 16 froze date-only FRED observations, could not reconstruct historical release vintages, and explicitly lacked complete holiday, early-close, and intraday availability metadata.",
+      "safeSession18Or19Behavior": "Use the frozen UTC Monday-Friday age convention and 16:00 America/New_York weekday close. Do not infer holiday or early-close adjustments. Mark missing or unreliable availability times unknown; mark a reliable after-close signal pending until the next eligible weekday close.",
+      "blockEffect": "does not block parallel implementation; unknown-timing records cannot enter a four-state assessment and material unresolved coverage may extend the parallel window or block cutover",
+      "evidenceNeeded": "Versioned exchange calendars, provider-specific availability timestamps, reliability audits, and measured unknown/pending rates during parallel operation.",
+      "futureGate": "PA-06, PA-07, and independent post-freeze validation"
+    },
+    {
+      "deferredItemId": "DEF-006",
+      "topic": "raw-response retention where source terms restrict storage",
+      "whyEvidenceIsInsufficient": "The audits classify privacy and preserve available responses but do not constitute a legal or contractual retention determination for every future provider.",
+      "safeSession18Or19Behavior": "Keep raw data private when permitted; otherwise persist a lossless normalized equivalent, retrieval metadata, retention status, and available content identity. Do not publish raw inputs or credentials. A run that cannot be independently reproduced is not cutover-eligible.",
+      "blockEffect": "does not block permitted-source parallel implementation; blocks cutover for any non-reproducible required source",
+      "evidenceNeeded": "Provider-by-provider terms review, approved retention matrix, and an independent reconstruction test.",
+      "futureGate": "PA-05 and PA-09 before cutover authorization"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "auditSession": 17,
+  "methodologyVersion": "2.0.0",
+  "candidateStatus": "corrected-freeze-candidate-awaiting-fresh-pa08",
+  "entries": [
+    {
+      "traceId": "TR-001",
+      "parameterPaths": ["parameters.signal.selectedEvidenceFamily", "parameters.signal.minimumIndependentOriginsForCorroboration"],
+      "status": "frozen",
+      "selection": { "family": "E2-resolved-single-or-independent", "minimumIndependentOrigins": 2 },
+      "evidence": [{ "artifact": "audit/session15/signal-elevation-sensitivity.json", "measurement": "E2 is the Session 15 recommended evidence family. Observation disposition and cluster origin are separate denominators: 101/428 observations remained unresolved and were not confirmed non-events; 21/123 active clusters had unknown-origin/independent-source status; exact independent-source count was assessed for 102/123 clusters. Corroboration remained 97 single-origin, 4 corroborated-independent, 1 conflicting, and 21 unknown-origin, so E3's lower-bound unknown path is less conservative." }],
+      "rationale": "Uses resolved origin evidence without requiring the sparse E1-only subset and does not treat unknown provenance as corroboration.",
+      "rejected": ["E1 independently-corroborated-only as unnecessarily sparse for the parallel candidate", "E3 lower-bound path because unresolved provenance would elevate"]
+    },
+    {
+      "traceId": "TR-002",
+      "parameterPaths": ["parameters.signal.minimumQualifyingActionStageOrdinal", "parameters.signal.actionStageOrdinals"],
+      "status": "frozen",
+      "selection": "implemented or impact-observed (ordinal >= 3)",
+      "evidence": [{ "artifact": "audit/session15/signal-elevation-sensitivity.json", "measurement": "Under E2, extending from implemented/impact-observed to announced added 9 eligible clusters, while relaxing from impact-observed to implemented added 42; announced evidence did not establish a safer elevation boundary." }],
+      "rationale": "Freezes the user-approved conservative S2 boundary while retaining announcements visibly.",
+      "rejected": ["impact-observed only", "announced or later"]
+    },
+    {
+      "traceId": "TR-003",
+      "parameterPaths": ["parameters.signal.maximumClusterContributionPerChannelPerRun", "parameters.signal.scalarSignalScore", "parameters.signal.rankingKeys"],
+      "status": "frozen",
+      "selection": "one contribution; no scalar; stage descending then eventClusterId ascending",
+      "evidence": [{ "artifact": "audit/session15/metrics.json", "measurement": "327 accepted observations compressed to 123 clusters (62.385321% compression), so report-count scoring would duplicate events." }, { "artifact": "audit/session15/signal-elevation-sensitivity.json", "measurement": "Candidate C is structural eligibility with stage-descending and cluster-ID ranking." }],
+      "rationale": "Prevents duplicate amplification and keeps selection auditable.",
+      "rejected": ["report counts", "opaque scalar confidence"]
+    },
+    {
+      "traceId": "TR-004",
+      "parameterPaths": ["clustering.automaticJoin"],
+      "status": "frozen",
+      "selection": "exact incident ID or exact normalized content hash only",
+      "evidence": [{ "artifact": "audit/session15/metrics.json", "measurement": "834/1,153 extracted observations were exact-duplicate excess (72.333044%); 101 candidate records remained unresolved, with no calibrated fuzzy error surface." }],
+      "rationale": "Automates the measured high-confidence duplicate boundary and sends ambiguity to persisted adjudication.",
+      "rejected": ["unrecorded model assignment", "invented similarity score"]
+    },
+    {
+      "traceId": "TR-005",
+      "parameterPaths": ["lifecycle.lastMaterialChangeAt", "parameters.signal.qualifyingLifecycleStates"],
+      "status": "frozen",
+      "selection": "material transition clock; new/escalating/de-escalating qualify; continuing does not",
+      "evidence": [{ "artifact": "audit/session15/metrics.json", "measurement": "184/327 accepted observations were repeats, but zero post-initial lifecycle transitions were observed." }],
+      "rationale": "Prevents repeated coverage from masquerading as a new signal while preserving explicit material changes.",
+      "rejected": ["lastObservedAt as lifecycle clock"]
+    },
+    {
+      "traceId": "TR-006",
+      "parameterPaths": ["eventDecay", "staleEventInterval", "deEscalationExpiry"],
+      "status": "deferred",
+      "selection": null,
+      "evidence": [{ "artifact": "audit/session15/metrics.json", "measurement": "Zero calibrating post-initial transitions." }],
+      "rationale": "See DEF-001; any numeric value would be invented.",
+      "rejected": []
+    },
+    {
+      "traceId": "TR-007",
+      "parameterPaths": ["parameters.market.transformLookbackValidObservations"],
+      "status": "frozen",
+      "selection": 5,
+      "evidence": [{ "artifact": "audit/session16/tables/03-five-valid-observation-span-distribution.json", "measurement": "Actual five-valid-observation spans ranged from 5 to 12 calendar days." }, { "artifact": "audit/session16/tables/legacy-calculation-reproduction.json", "measurement": "14/14 z values and 5/5 channel drivers reproduced at published three-decimal precision on the overlap date." }],
+      "rationale": "Retains the audited transform while making actual dates explicit.",
+      "rejected": ["five calendar days", "global common observation dates"]
+    },
+    {
+      "traceId": "TR-008",
+      "parameterPaths": ["parameters.market.zHistoryValidTransformsMinimum", "parameters.market.zHistoryValidTransformsMaximum", "parameters.market.sampleStandardDeviationDegreesOfFreedomAdjustment"],
+      "status": "frozen",
+      "selection": { "minimum": 252, "maximum": 252, "sampleDdof": 1 },
+      "evidence": [{ "artifact": "audit/session16/tables/04-own-series-versus-legacy-global.json", "measurement": "The own-series comparator preserved the legacy 252-transform sample-SD formula while removing global-date loss." }],
+      "rationale": "Maintains reproduced scale and avoids a hidden short-history z-score.",
+      "rejected": ["expanding z window", "population standard deviation"]
+    },
+    {
+      "traceId": "TR-009",
+      "parameterPaths": ["parameters.market.sameDateMaximumGapBusinessDays"],
+      "status": "frozen",
+      "selection": 0,
+      "evidence": [{ "artifact": "audit/session16/tables/05-channel-dating-age-gap-coverage.json", "measurement": "Selected Rule 2 same-date configurations had zero mixed-date rows and assessed 376-379 of 391 evaluation dates." }],
+      "rationale": "Avoids comparing noncontemporaneous readings in a binary channel statistic.",
+      "rejected": ["bounded mixed-date Rule 3"]
+    },
+    {
+      "traceId": "TR-010",
+      "parameterPaths": ["parameters.market.freshnessMaximumBusinessDays", "parameters.market.weekdayNumbersIncludedUtc"],
+      "status": "frozen",
+      "selection": { "maximumAge": 3, "weekdays": [1, 2, 3, 4, 5] },
+      "evidence": [{ "artifact": "audit/session16/tables/05-channel-dating-age-gap-coverage.json", "measurement": "The audit measured the full 0-5 business-day grid; selected age-3 same-date configurations retained 96.16%-96.93% evaluation-date coverage with maximum selected age 3 and mean calendar age 0.079-0.109 days." }, { "artifact": "audit/session16/market-audit-report.md", "measurement": "Session 16 declared weekday-only business-day measurement because complete holiday calendars were unavailable." }],
+      "rationale": "Freezes the approved conservative default without claiming absent calendar metadata.",
+      "rejected": ["no-stale exclusion", "calendar-age-14 legacy rule", "age 0-2 without distinguishing evidence", "age 4-5 as less conservative"]
+    },
+    {
+      "traceId": "TR-011",
+      "parameterPaths": ["parameters.market.minimumEligibleInstrumentCountByMappedCount"],
+      "status": "frozen",
+      "selection": { "2": 2, "3": 2, "4": 3 },
+      "evidence": [{ "artifact": "audit/session16/tables/06-exclusions-and-eligible-counts.json", "measurement": "Selected configurations assessed 376-379 dates; conflict used 3 members on 11 closes and 4 on 368, while supply used both members on every assessed close." }, { "artifact": "audit/session16/tables/16-breadth-and-eligible-count-sensitivity.json", "measurement": "Eligible-count changes materially alter interpretation and remain exposed." }],
+      "rationale": "Applies the approved all/N-1 posture and prevents single-instrument two-name channels.",
+      "rejected": ["k=1", "all mapped for every channel"]
+    },
+    {
+      "traceId": "TR-012",
+      "parameterPaths": ["parameters.market.marketStatistic", "parameters.market.diagnosticRawZThreshold"],
+      "status": "frozen",
+      "selection": { "statistic": "maximum-absolute-own-series-z", "rawDiagnostic": 1.5 },
+      "evidence": [{ "artifact": "audit/session16/tables/09-raw-trigger-rates.json", "measurement": "For selected configurations, raw M>=1.5 rates were conflict 43.767313%, credit 19.060773%, energy 30.594901%, sanctions 32.409972%, and supply 22.437673%." }],
+      "rationale": "Retains the reproduced statistic and legacy threshold as a visible diagnostic, not a fallback binary rule.",
+      "rejected": ["raw 1.5 as v2 binary threshold"]
+    },
+    {
+      "traceId": "TR-013",
+      "parameterPaths": ["parameters.market.percentileAlpha", "parameters.market.percentileQuantile", "parameters.market.percentileComparison", "parameters.market.percentileRankFormula"],
+      "status": "frozen",
+      "selection": { "alpha": 0.2, "quantile": 0.8, "comparison": "strictly-greater-than", "rank": "max(1,ceil(0.8*n))" },
+      "evidence": [{ "artifact": "audit/session16/tables/10-attainable-alpha-curves.jsonl", "measurement": "Session 16 enumerated all attainable point-in-time alpha boundaries and nearest-rank tie behavior." }, { "artifact": "audit/session16/tables/17-threshold-candidate-disagreements.jsonl", "measurement": "Threshold-candidate disagreements were retained rather than tuned away." }],
+      "rationale": "Uses the approved common alpha and conservative strict tie rule.",
+      "rejected": ["channel-specific alpha", "greater-than-or-equal tie"]
+    },
+    {
+      "traceId": "TR-014",
+      "parameterPaths": ["parameters.market.percentileMinimumConditionedPriorObservations", "parameters.market.percentileRollingPriorObservationMaximum"],
+      "status": "frozen",
+      "selection": { "minimum": 126, "maximum": 252 },
+      "evidence": [{ "artifact": "audit/session16/tables/11-expanding-rolling-history-sensitivity.jsonl", "measurement": "The audit measured every feasible minimum and rolling length." }, { "artifact": "audit/session16/tables/12-pooled-same-set-count-conditioned.json", "measurement": "For the selected same-date series, available/insufficient distinct closes at alpha .20, min 126, cap 252 were conflict 224/137, credit 231/131, energy 220/133, sanctions 231/130, and supply 235/126." }],
+      "rationale": "Uses the approved half/full-window conservative starting values while exposing warm-up loss.",
+      "rejected": ["shorter minimum", "uncapped expanding history"]
+    },
+    {
+      "traceId": "TR-015",
+      "parameterPaths": ["market.percentileConditioning", "nonNumericRules.historyFallback"],
+      "status": "frozen",
+      "selection": "instrumentSetVersion plus eligibleInstrumentCount; no fallback",
+      "evidence": [{ "artifact": "audit/session16/tables/12-pooled-same-set-count-conditioned.json", "measurement": "Same-set histories had 1-3 set changes per selected channel series and materially different history counts." }, { "artifact": "audit/session16/tables/13-fallback-availability-state-impact.json", "measurement": "At minimum 126, raw fallback would have changed 22-52 otherwise unavailable selected-series closes by channel." }],
+      "rationale": "Prevents silent regime pooling and binary state invention.",
+      "rejected": ["pooled history", "raw-threshold fallback", "cross-count fallback"]
+    },
+    {
+      "traceId": "TR-016",
+      "parameterPaths": ["parameters.market.breadthBinaryWeight"],
+      "status": "frozen",
+      "selection": 0,
+      "evidence": [{ "artifact": "audit/session16/tables/14-primary-second-driver-frequency.json", "measurement": "Driver concentration varies by channel." }, { "artifact": "audit/session16/tables/15-single-versus-multi-instrument-moves.json", "measurement": "Single- versus multi-instrument moves differ." }, { "artifact": "audit/session16/tables/16-breadth-and-eligible-count-sensitivity.json", "measurement": "Breadth adds diagnostic context but no calibrated second binary boundary was selected." }],
+      "rationale": "Keeps breadth visible without creating a hidden gate.",
+      "rejected": ["breadth minimum as binary condition"]
+    },
+    {
+      "traceId": "TR-017",
+      "parameterPaths": ["parameters.market.marketCloseLocalTime", "parameters.market.marketCloseTimeZone", "parameters.market.afterCloseDeferralEligibleCloses"],
+      "status": "frozen",
+      "selection": { "close": "16:00:00 America/New_York", "deferral": 1 },
+      "evidence": [{ "artifact": "audit/session16/tables/18-signal-market-timing-counts.json", "measurement": "Candidate-C E2-S2 timing review had 36 qualifying records: 10 definitive and 26 ambiguous; 4 market-preceding and 7 market-following cases were descriptive, not causal." }, { "artifact": "audit/session16/tables/19-historical-release-vintage-unavailable.json", "measurement": "FRED intraday availability and historical release vintage were unavailable." }],
+      "rationale": "Makes after-close handling explicit and preserves unknown timing.",
+      "rejected": ["date-only timestamps treated as before-close"]
+    },
+    {
+      "traceId": "TR-018",
+      "parameterPaths": ["parameters.canonicalization.computedDecimalPlaces", "parameters.canonicalization.displayDecimalPlaces"],
+      "status": "frozen",
+      "selection": { "persisted": 12, "display": 3 },
+      "evidence": [{ "artifact": "audit/session16/tables/legacy-calculation-reproduction.json", "measurement": "Legacy values reproduced at three-decimal published precision; full audit values were retained for deterministic comparisons." }],
+      "rationale": "Twelve persisted decimals retain substantially more diagnostic precision while three decimals remain presentation-only.",
+      "rejected": ["intermediate rounding", "three-decimal storage"]
+    },
+    {
+      "traceId": "TR-019",
+      "parameterPaths": ["parameters.parallelAcceptance.minimumDistinctEligibleMarketCloses", "parameters.parallelAcceptance.requiredIndependentPostFreezeValidationPasses"],
+      "status": "frozen",
+      "selection": { "closes": 30, "independentPasses": 1 },
+      "evidence": [{ "artifact": "audit/session14-parallel-comparison-protocol.md", "measurement": "Parallel comparison requires a prospective observation window and explicit nonautomatic cutover." }, { "artifact": "CRUCIX_MARKET_SHOCK_RADAR_PROJECT_LOG.md", "measurement": "Session 17 is the sole freeze gate; independent validation is required before Session 18." }],
+      "rationale": "Freezes the approved minimum while preserving extension and rejection.",
+      "rejected": ["automatic cutover at observation 30"]
+    },
+    {
+      "traceId": "TR-020",
+      "parameterPaths": ["storage.privateBackend", "storage.retentionDuration", "storage.disasterRecovery"],
+      "status": "deferred",
+      "selection": null,
+      "evidence": [{ "artifact": "audit/session15/signal-audit-report.md", "measurement": "Estimated candidate JSONL volume was approximately 86.49-122.96 MB/year at one run/day, explicitly not a capacity guarantee." }],
+      "rationale": "See DEF-003.",
+      "rejected": []
+    },
+    {
+      "traceId": "TR-021",
+      "parameterPaths": ["storage.lockStaleTimeout"],
+      "status": "deferred",
+      "selection": null,
+      "evidence": [{ "artifact": "audit/session14-architecture-decision.md", "measurement": "Requires recoverable state and safe concurrency but provides no runtime distribution." }],
+      "rationale": "See DEF-004.",
+      "rejected": []
+    },
+    {
+      "traceId": "TR-022",
+      "parameterPaths": ["market.completeHolidayCalendar", "market.providerAvailabilityTimestampContract"],
+      "status": "deferred",
+      "selection": null,
+      "evidence": [{ "artifact": "audit/session16/tables/19-historical-release-vintage-unavailable.json", "measurement": "Complete holiday/early-close metadata, FRED intraday availability, and historical release vintages were unavailable." }],
+      "rationale": "See DEF-005; weekday behavior and unknown handling are frozen safely.",
+      "rejected": []
+    },
+    {
+      "traceId": "TR-023",
+      "parameterPaths": ["storage.providerRawRetentionPermissions"],
+      "status": "deferred",
+      "selection": null,
+      "evidence": [{ "artifact": "audit/session16/input-manifest.json", "measurement": "Audit inputs are classified private and credential-safe, but the manifest does not grant future contractual retention rights." }],
+      "rationale": "See DEF-006.",
+      "rejected": []
+    }
+  ]
+}
