@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-01T02:01:52.606Z",
+  "generatedAt": "2026-09-02T01:19:17.930Z",
   "date": "2026-08-25",
   "asOfClose": "2026-08-25",
   "framing": "readings as of market close, 2026-08-25",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-01T02:01:21.428Z",
-    "generatedDate": "2026-09-01",
+    "generatedAt": "2026-09-02T01:19:15.449Z",
+    "generatedDate": "2026-09-02",
     "asOfClose": "2026-08-25",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-01T02:01:21.428Z",
-    "generatedDate": "2026-09-01",
-    "runDate": "2026-09-01",
+    "generatedAt": "2026-09-02T01:19:15.449Z",
+    "generatedDate": "2026-09-02",
+    "runDate": "2026-09-02",
     "asOfClose": "2026-08-25",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-01, readings as of market close, 2026-08-25 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-02, readings as of market close, 2026-08-25 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-25",
-      "generatedDate": "2026-09-01",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-01, readings as of market close, 2026-08-25 (7 calendar days old)."
+      "generatedDate": "2026-09-02",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-02, readings as of market close, 2026-08-25 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -68,23 +68,23 @@
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[12]",
+        "path": "root.tg.urgent[3]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 19,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
           "strike",
+          "missile",
           "iran"
         ],
-        "text": "Iran war Update: Trump vows to strike Iran ‘hard’ after first clash in month | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Trump vows to strike Iran ‘hard’ after first clash in month | Al Jazeera"
+        "text": "🇮🇷❌🇺🇸🇮🇶 — Iran's IRGC announces conducting a joint ballistic missile and UAV strike against U.S. bases in Erbil, Iraqi Kurdistan. IRGC claims the destruction of a maintenance facility, a contro",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: 🇮🇷❌🇺🇸🇮🇶 — Iran's IRGC announces conducting a joint ballistic missile and UAV strike against U.S. bases in Erbil, Iraqi Kurdistan. IRGC claims the destruction of a maintena..."
       },
       "market_z": -2.385,
       "abs_market_z": 2.385,
@@ -95,7 +95,7 @@
       "driver_as_of": "2026-08-25",
       "market_as_of": "2026-08-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -120,7 +120,7 @@
       "driver_as_of": "2026-08-25",
       "market_as_of": "2026-08-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -145,7 +145,7 @@
       "driver_as_of": "2026-08-25",
       "market_as_of": "2026-08-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -170,7 +170,7 @@
       "driver_as_of": "2026-08-25",
       "market_as_of": "2026-08-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -182,24 +182,24 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 9,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 8,
+      "signal_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.news[12]",
+        "path": "root.tg.urgent[3]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 19,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
           "strike",
+          "missile",
           "iran"
         ],
-        "text": "Iran war Update: Trump vows to strike Iran ‘hard’ after first clash in month | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Trump vows to strike Iran ‘hard’ after first clash in month | Al Jazeera"
+        "text": "🇮🇷❌🇺🇸🇮🇶 — Iran's IRGC announces conducting a joint ballistic missile and UAV strike against U.S. bases in Erbil, Iraqi Kurdistan. IRGC claims the destruction of a maintenance facility, a contro",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: 🇮🇷❌🇺🇸🇮🇶 — Iran's IRGC announces conducting a joint ballistic missile and UAV strike against U.S. bases in Erbil, Iraqi Kurdistan. IRGC claims the destruction of a maintena..."
       },
       "market_z": -1.579,
       "abs_market_z": 1.579,
@@ -210,7 +210,7 @@
       "driver_as_of": "2026-08-25",
       "market_as_of": "2026-08-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
