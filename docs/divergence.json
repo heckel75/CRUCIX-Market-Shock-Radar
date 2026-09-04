@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-03T01:24:11.515Z",
+  "generatedAt": "2026-09-04T01:20:13.112Z",
   "date": "2026-08-28",
   "asOfClose": "2026-08-28",
   "framing": "readings as of market close, 2026-08-28",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-03T01:24:08.577Z",
-    "generatedDate": "2026-09-03",
+    "generatedAt": "2026-09-04T01:20:10.336Z",
+    "generatedDate": "2026-09-04",
     "asOfClose": "2026-08-28",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-03T01:24:08.577Z",
-    "generatedDate": "2026-09-03",
-    "runDate": "2026-09-03",
+    "generatedAt": "2026-09-04T01:20:10.336Z",
+    "generatedDate": "2026-09-04",
+    "runDate": "2026-09-04",
     "asOfClose": "2026-08-28",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-03, readings as of market close, 2026-08-28 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-04, readings as of market close, 2026-08-28 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-28",
-      "generatedDate": "2026-09-03",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-09-03, readings as of market close, 2026-08-28 (6 calendar days old)."
+      "generatedDate": "2026-09-04",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-09-04, readings as of market close, 2026-08-28 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,38 +54,36 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 2
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.tg.urgent[6]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "russia",
-          "ukraine",
-          "treasury"
+          "strike",
+          "attack"
         ],
-        "text": "🇺🇸 🇷🇺 🇺🇦 The U.S. Treasury Secretary issued Russia an ultimatum on the war in Ukraine at a G20 meeting According to Reuters, citing its sources, Bessent made it clear to Russian Finance Ministe",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸 🇷🇺 🇺🇦 The U.S. Treasury Secretary issued Russia an ultimatum on the war in Ukraine at a G20 meeting According to Reuters, citing its sources, Bessent made it clear to R..."
+        "text": "A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, according to the company'",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, ac..."
       },
       "market_z": -1.061,
       "abs_market_z": 1.061,
@@ -96,7 +94,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -121,36 +119,35 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_elevated": true,
+      "signal_elevated": false,
       "signal_count": 1,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[31]",
+        "path": "root.chokepoints[0]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 8,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "iran",
+          "oil",
           "hormuz"
         ],
-        "text": "Trump suggests renaming Strait of Hormuz as Trump Strait amid Iran war | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump suggests renaming Strait of Hormuz as Trump Strait amid Iran war | Al Jazeera"
+        "text": "Strait of Hormuz | 20% of world oil",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
       "market_z": -1.02,
       "abs_market_z": 1.02,
@@ -161,8 +158,8 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 7,
+      "state": "calm"
     },
     {
       "channel": "credit-stress",
@@ -186,7 +183,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
@@ -198,23 +195,23 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 7,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 7,
       "top_signal": {
-        "path": "root.news[4]",
+        "path": "root.tg.urgent[6]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "iran"
+          "attack"
         ],
-        "text": "Iran, US trade threats as Tehran blames Washington for wedding strike | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: Iran, US trade threats as Tehran blames Washington for wedding strike | France 24"
+        "text": "A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, according to the company'",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, ac..."
       },
       "market_z": -1.033,
       "abs_market_z": 1.033,
@@ -225,7 +222,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
@@ -233,30 +230,28 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.tg.urgent[11]",
         "category": "Macro / Inflation Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
+        "rawScore": 8,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "russia",
-          "ukraine",
+          "iran",
           "treasury"
         ],
-        "text": "🇺🇸 🇷🇺 🇺🇦 The U.S. Treasury Secretary issued Russia an ultimatum on the war in Ukraine at a G20 meeting According to Reuters, citing its sources, Bessent made it clear to Russian Finance Ministe",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸 🇷🇺 🇺🇦 The U.S. Treasury Secretary issued Russia an ultimatum on the war in Ukraine at a G20 meeting According to Reuters, citing its sources, Bessent made it clear to R..."
+        "text": "🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The United States stands",
+        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The..."
       }
     },
     {
