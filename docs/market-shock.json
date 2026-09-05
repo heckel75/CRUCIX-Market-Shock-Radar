@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-04T01:20:10.194Z",
+  "generatedAt": "2026-09-05T01:20:39.560Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -10,21 +10,20 @@
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 135,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
+      "score": 19,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
@@ -39,20 +38,21 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack"
+        "conflict",
+        "iran"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, according to the company'",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, ac..."
+      "text": "🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the conflict for months rather",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, conflict, iran. Signal: 🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the con..."
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
+      "score": 19,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
@@ -67,16 +67,39 @@
       ],
       "matchedKeywords": [
         "strike",
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "—❗️🇮🇷/🇯🇴/🇺🇸 BREAKING: Iran has carried out a surprise ballistic missile strike against U.S. bases in Jordan @Middle_East_Spectator",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, iran. Signal: —❗️🇮🇷/🇯🇴/🇺🇸 BREAKING: Iran has carried out a surprise ballistic missile strike against U.S. bases in Jordan @Middle_East_Spectator"
+    },
+    {
+      "path": "root.news[21]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
         "ukraine"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Germany has launched the serial production of more than 5,000 long-range strike drones for Ukraine. The drones will have a range of up to 1,500 km. They are equipped with AI designed to help them reac",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Germany has launched the serial production of more than 5,000 long-range strike drones for Ukraine. The drones will have a range of up to 1,500 km. They are equipped with AI des..."
+      "otherCategories": [],
+      "text": "Witkoff and Kushner will travel to ‘end’ Russia’s war in Ukraine: Trump | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Witkoff and Kushner will travel to ‘end’ Russia’s war in Ukraine: Trump | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -95,16 +118,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile"
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "It is reported that a lieutenant colonel of the Russian 41st Combined Arms Army was liquidated as a result of a missile strike on headquarters in Donetsk.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: It is reported that a lieutenant colonel of the Russian 41st Combined Arms Army was liquidated as a result of a missile strike on headquarters in Donetsk."
+      "text": "🇷🇺🇺🇦⚡️ — A Russian operator using an “Upyr” fiber-optic FPV drone destroyed a Roshel Senator armored vehicle operated by the Ukrainian Armed Forces with a single precise strike in Dnipropetrovsk O",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — A Russian operator using an “Upyr” fiber-optic FPV drone destroyed a Roshel Senator armored vehicle operated by the Ukrainian Armed Forces with a single precise str..."
     },
     {
-      "path": "root.newsFeed[31]",
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -123,16 +146,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "escalation"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Germany has launched the serial production of more than 5,000 long-range strike drones for Ukraine. | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Germany has launched the serial production of more than 5,000 long-range strike drones for Ukraine. | WARTRANSLATED"
+      "text": "Israeli strike kills two in southern Lebanon amid ongoing escalation | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, escalation. Signal: Israeli strike kills two in southern Lebanon amid ongoing escalation | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -145,12 +168,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "naval",
-        "iran"
+        "attack",
+        "nuclear"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇺🇸⚡️ — Iran has confirmed the deaths of three pilots in U.S. strikes two nights ago: Mojtaba Bagheri and Hamed Okati of the Naval Aviation Force, and Hossein Mahdavian of the Air Force. @IntelS",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran has confirmed the deaths of three pilots in U.S. strikes two nights ago: Mojtaba Bagheri and Hamed Okati of the Naval Aviation Force, and Hossein Mahdavian of ..."
+      "text": "🇺🇸🇮🇷⚡️ — The United States may soon deliver an attack on what is supposed to be an Iranian underground nuclear facility near Natanz, US President Donald Trump warned. “We may hit Pickaxe very soo",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, nuclear. Signal: 🇺🇸🇮🇷⚡️ — The United States may soon deliver an attack on what is supposed to be an Iranian underground nuclear facility near Natanz, US President Donald Trump warned. “We ma..."
     },
     {
       "path": "root.tg.urgent[12]",
@@ -166,15 +189,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "border"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇵🇱 🇺🇦 🇧🇾 Poland to restrict low-altitude flights along eastern border The measures are intended to give Poland’s air-defense systems more room to respond to potential threats from the war in ne",
-      "explanation": "Geopolitical Escalation match based on keywords: war, border. Signal: 🇵🇱 🇺🇦 🇧🇾 Poland to restrict low-altitude flights along eastern border The measures are intended to give Poland’s air-defense systems more room to respond to potential thre..."
+      "text": "Trump envoys Steve Witkoff and Jared Kushner will visit Kyiv this Sunday after stopping in Moscow, Zelensky said. Ukraine will pause airstrikes on Russia during their visit for security reasons, and K",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Trump envoys Steve Witkoff and Jared Kushner will visit Kyiv this Sunday after stopping in Moscow, Zelensky said. Ukraine will pause airstrikes on Russia during their visit for ..."
     },
     {
-      "path": "root.news[5]",
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -191,32 +214,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: US rules out Iran talks until ship attacks stop | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US rules out Iran talks until ship attacks stop | Al Jazeera"
+      "text": "Iran war Update: Trump says US may target Iran’s Pickaxe Mountain ‘very soon’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says US may target Iran’s Pickaxe Mountain ‘very soon’ | Al Jazeera"
     },
     {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "US investigating if missile hit Iran wedding, Vance says",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: US investigating if missile hit Iran wedding, Vance says"
-    },
-    {
-      "path": "root.news[20]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -233,11 +235,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "US Vice President JD Vance declines to offer timeline for end of Iran war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US Vice President JD Vance declines to offer timeline for end of Iran war | Al Jazeera"
+      "text": "‘Small potatoes’: US President Trump downplays war on Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: ‘Small potatoes’: US President Trump downplays war on Iran | Al Jazeera"
     },
     {
-      "path": "root.news[27]",
+      "path": "root.news[26]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -250,12 +252,75 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
+        "military",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Israel kills 3 in Gaza as far-right minister plans for Palestinian removals | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel kills 3 in Gaza as far-right minister plans for Palestinian removals | Al Jazeera"
+      "text": "Will Europe pay the US to provide military aid to Ukraine? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Will Europe pay the US to provide military aid to Ukraine? | Al Jazeera"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Trump calls Iran war ‘small potatoes’, compares US deaths with Vietnam war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump calls Iran war ‘small potatoes’, compares US deaths with Vietnam war | Al Jazeera"
+    },
+    {
+      "path": "root.news[49]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Russian Drone Strikes Office of Ukraine’s Intelligence Chief",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Russian Drone Strikes Office of Ukraine’s Intelligence Chief"
+    },
+    {
+      "path": "root.newsFeed[37]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️ — Trump says Putin is not looking to attack NATO territory, citing his good talks with the Russia | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: ⚡️ — Trump says Putin is not looking to attack NATO territory, citing his good talks with the Russia | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -304,89 +369,13 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "attack",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Meanwhile, around 430 Ukrainian drones took off to attack the Russian Federation and the temporarily occupied territories. Is this already the beginning of the blockade of Russian airspace? If our t",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Meanwhile, around 430 Ukrainian drones took off to attack the Russian Federation and the temporarily occupied territories. Is this already the beginning of the blockade of Russi..."
-    },
-    {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
         "strike"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Funeral held for child killed in US strike on Iranian wedding | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Funeral held for child killed in US strike on Iranian wedding | Al Jazeera"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Rates",
-        "Treasuries",
-        "FX",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "treasury"
-      ],
-      "otherCategories": [
-        "Macro / Inflation Shock"
-      ],
-      "text": "🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The United States stands",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The..."
+      "text": "Ukrainian forces destroyed over 4,600 air targets in August and neutralized 50,000 tactical drones. The haul included cruise missiles, ballistic missiles, 1,876 Shahed strike drones, 1,460 Shahed-238s",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Ukrainian forces destroyed over 4,600 air targets in August and neutralized 50,000 tactical drones. The haul included cruise missiles, ballistic missiles, 1,876 Shahed strike dr..."
     }
   ]
 }

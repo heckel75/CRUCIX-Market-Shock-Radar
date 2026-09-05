@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-04T01:20:13.112Z",
+  "generatedAt": "2026-09-05T01:20:43.102Z",
   "date": "2026-08-28",
   "asOfClose": "2026-08-28",
   "framing": "readings as of market close, 2026-08-28",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-04T01:20:10.336Z",
-    "generatedDate": "2026-09-04",
+    "generatedAt": "2026-09-05T01:20:39.670Z",
+    "generatedDate": "2026-09-05",
     "asOfClose": "2026-08-28",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-04T01:20:10.336Z",
-    "generatedDate": "2026-09-04",
-    "runDate": "2026-09-04",
+    "generatedAt": "2026-09-05T01:20:39.670Z",
+    "generatedDate": "2026-09-05",
+    "runDate": "2026-09-05",
     "asOfClose": "2026-08-28",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-04, readings as of market close, 2026-08-28 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-05, readings as of market close, 2026-08-28 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-08-28",
-      "generatedDate": "2026-09-04",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-04, readings as of market close, 2026-08-28 (7 calendar days old)."
+      "generatedDate": "2026-09-05",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-05, readings as of market close, 2026-08-28 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,28 +62,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[1]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack"
+          "conflict",
+          "iran"
         ],
-        "text": "A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, according to the company'",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, ac..."
+        "text": "🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the conflict for months rather",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, conflict, iran. Signal: 🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the con..."
       },
       "market_z": -1.061,
       "abs_market_z": 1.061,
@@ -94,7 +95,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -119,36 +120,22 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
+      "signal_count": 0,
+      "signal_primary_count": 0,
       "signal_secondary_count": 0,
-      "top_signal": {
-        "path": "root.chokepoints[0]",
-        "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "oil",
-          "hormuz"
-        ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-      },
+      "top_signal": null,
       "market_z": -1.02,
       "abs_market_z": 1.02,
       "market_moving": false,
@@ -158,7 +145,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -183,35 +170,36 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 7,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[1]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack"
+          "conflict",
+          "iran"
         ],
-        "text": "A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, according to the company'",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: A Russian strike destroyed a Nova Poshta depot and branch in Dnipro, the company reported. As a result of the attack, an NP employee was killed, and five others were injured, ac..."
+        "text": "🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the conflict for months rather",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, conflict, iran. Signal: 🇺🇸🇮🇷⚡️ — U.S. intelligence assessments suggest Iran has become increasingly confident in its ability to strike targets across the Middle East and may seek to prolong the con..."
       },
       "market_z": -1.033,
       "abs_market_z": 1.033,
@@ -222,7 +210,7 @@
       "driver_as_of": "2026-08-28",
       "market_as_of": "2026-08-28",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
@@ -230,29 +218,15 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[11]",
-        "category": "Macro / Inflation Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "iran",
-          "treasury"
-        ],
-        "text": "🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The United States stands",
-        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇺🇸🇪🇺❌🇮🇷 — U.S. Treasury Secretary Bessent on Iran: The European Union has officially joined Operation Economic Outcast and we appreciate their strong and early stance. The..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     },
     {
       "signal_category": "Weather / Climate Shock",
