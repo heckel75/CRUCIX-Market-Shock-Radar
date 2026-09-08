@@ -1,30 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-07T01:16:51.861Z",
+  "generatedAt": "2026-09-08T01:21:45.023Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Energy Shock": 2,
-    "Supply Chain Disruption": 1
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 133,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 27,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -43,48 +42,109 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz",
-        "shipping"
+        "strike",
+        "missile",
+        "drone",
+        "oil",
+        "refinery"
       ],
       "otherCategories": [
         "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "Iran war Update: Tehran to announce new Hormuz shipping route in coming days | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran to announce new Hormuz shipping route in coming days | Al Jazeera"
+      "text": "🇾🇪🇾🇪❌🇸🇦 — Smoke is reportedly rising from the Jizan oil refinery in Saudi Arabia following an apparent Ansar Allah drone and/or missile strike. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇾🇪🇾🇪❌🇸🇦 — Smoke is reportedly rising from the Jizan oil refinery in Saudi Arabia following an apparent Ansar Allah drone and/or missile strike. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran",
-        "energy"
+        "missile",
+        "attack",
+        "drone"
       ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇺🇸🇮🇷 US Energy Secretary Chris Wright says a nuclear deal with Iran may not be reached, warning that Washington could instead seek to destroy Tehran’s ability to develop nuclear weapons. @Breakin",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇺🇸🇮🇷 US Energy Secretary Chris Wright says a nuclear deal with Iran may not be reached, warning that Washington could instead seek to destroy Tehran’s ability to develop nuc..."
+      "otherCategories": [],
+      "text": "—❗️🇸🇦/🇾🇪 BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack against King Khalid Airbase and Abha International Airport in Saudi Arabia @Middle_East_Spe",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: —❗️🇸🇦/🇾🇪 BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack against King Khalid Airbase and Abha International Airport in Saudi A..."
     },
     {
-      "path": "root.newsFeed[32]",
+      "path": "root.news[18]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israel’s removal of Gaza rubble risk to war crimes evidence: UN | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Israel’s removal of Gaza rubble risk to war crimes evidence: UN | Al Jazeera"
+    },
+    {
+      "path": "root.news[39]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "attack",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel warns of 'full-scale war' if Palestinian Authority launches Oct. 7-style attack | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, israel. Signal: Israel warns of 'full-scale war' if Palestinian Authority launches Oct. 7-style attack | France 24"
+    },
+    {
+      "path": "root.newsFeed[13]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "—❗️/ BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: —❗️/ BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.news[47]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -103,16 +163,86 @@
       "matchedKeywords": [
         "nuclear",
         "iran",
-        "energy"
+        "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "US Energy Secretary Chris Wright says a nuclear deal with Iran may not be reached, warning that Wash | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: US Energy Secretary Chris Wright says a nuclear deal with Iran may not be reached, warning that Wash | INTELSLAVA"
+      "text": "IAEA says Iran blocking nuclear inspectors as Hormuz threats mount | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: IAEA says Iran blocking nuclear inspectors as Hormuz threats mount | Euronews"
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz",
+        "iran"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Oil prices surge as US-Iran strikes intensify in Strait of Hormuz | Al Jazeera",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Oil prices surge as US-Iran strikes intensify in Strait of Hormuz | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial concessions — Zelensky. According to him, Moscow hopes that a large-scale winter offensive",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial concessions — Zelensky. According to him, Moscow hopes that a large-sca..."
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇫🇮 🇷🇺 🚷 Finland fences Russian border to foil ‘hybrid warfare’ Finland on Monday unveiled a 200-kilometre (124-mile) fence erected in sections on its eastern border with Russia to dissuade Mosco",
+      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: 🇫🇮 🇷🇺 🚷 Finland fences Russian border to foil ‘hybrid warfare’ Finland on Monday unveiled a 200-kilometre (124-mile) fence erected in sections on its eastern border with Ru..."
+    },
+    {
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -129,12 +259,82 @@
         "attack"
       ],
       "otherCategories": [],
-      "text": "🇷🇺⚡️ — An S8000 “Banderol” small cruise missile mounted on a Russian Mi-28NM attack helicopter. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇷🇺⚡️ — An S8000 “Banderol” small cruise missile mounted on a Russian Mi-28NM attack helicopter. @IntelSlava"
+      "text": "🇾🇪🇾🇪❌🇸🇦 — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launched by Ansar Allah (Houthis) from Yemen. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇾🇪❌🇸🇦 — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launched by Ansar Allah (Houthis) from Yemen. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Qatar warns of ‘industrial catastrophe’ if crisis continues | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Qatar warns of ‘industrial catastrophe’ if crisis continues | Al Jazeera"
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Israel’s plan to split the West Bank | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s plan to split the West Bank | Al Jazeera"
+    },
+    {
+      "path": "root.news[43]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "Israel Launches Deadly Strikes in Lebanon as Military Campaign Intensifies",
+      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Israel Launches Deadly Strikes in Lebanon as Military Campaign Intensifies"
+    },
+    {
+      "path": "root.newsFeed[18]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -147,14 +347,14 @@
       ],
       "matchedKeywords": [
         "missile",
-        "ukraine"
+        "attack"
       ],
       "otherCategories": [],
-      "text": "Zelensky says Witkoff and Kushner didn’t come for nothing. He says the US will ramp up Patriot missile production next year, and Ukraine expects additional systems.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, ukraine. Signal: Zelensky says Witkoff and Kushner didn’t come for nothing. He says the US will ramp up Patriot missile production next year, and Ukraine expects additional systems."
+      "text": "❌ — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launc | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: ❌ — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launc | INTELSLAVA"
     },
     {
-      "path": "root.news[21]",
+      "path": "root.newsFeed[30]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -171,206 +371,8 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain"
-    },
-    {
-      "path": "root.news[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Trump official says ‘there may not be a nuclear agreement’ with Iran | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Trump official says ‘there may not be a nuclear agreement’ with Iran | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[31]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "⚡️ — An S8000 “Banderol” small cruise missile mounted on a Russian Mi-28NM attack helicopter. @Inte | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: ⚡️ — An S8000 “Banderol” small cruise missile mounted on a Russian Mi-28NM attack helicopter. @Inte | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Equities",
-        "Credit",
-        "FX",
-        "Rates"
-      ],
-      "matchedKeywords": [
-        "china",
-        "market"
-      ],
-      "otherCategories": [
-        "Market Volatility Signal"
-      ],
-      "text": "China’s New Graduates, Facing a Dire Job Market, Must Also Contend With A.I.",
-      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China’s New Graduates, Facing a Dire Job Market, Must Also Contend With A.I."
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile"
-      ],
-      "otherCategories": [],
-      "text": "Precision-guided air-launched munitions for the Su-57E, displayed by Rosoboronexport at the El Alamein International Airshow 2026 in Egypt: • S-71M “Monokhrom” stealth cruise missile • S-71K “Kovyor”",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: Precision-guided air-launched munitions for the Su-57E, displayed by Rosoboronexport at the El Alamein International Airshow 2026 in Egypt: • S-71M “Monokhrom” stealth cruise mi..."
-    },
-    {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
-    },
-    {
-      "path": "root.chokepoints[1]",
-      "sourcePriority": "High",
-      "category": "Supply Chain Disruption",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "canal"
-      ],
-      "otherCategories": [],
-      "text": "Suez Canal | 12% of world trade",
-      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Suez Canal | 12% of world trade"
-    },
-    {
-      "path": "root.chokepoints[4]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 4,
-      "confidence": "Low",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "red sea"
-      ],
-      "otherCategories": [],
-      "text": "Bab el-Mandeb | Red Sea gateway",
-      "explanation": "Energy Shock match based on keywords: red sea. Signal: Bab el-Mandeb | Red Sea gateway"
+      "text": "⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial co | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial co | INTELSLAVA"
     }
   ]
 }
