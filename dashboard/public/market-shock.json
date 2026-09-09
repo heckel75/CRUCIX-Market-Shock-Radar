@@ -1,29 +1,30 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-08T01:21:45.023Z",
+  "generatedAt": "2026-09-09T01:28:13.967Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 17,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
+    "Geopolitical Escalation": 13,
+    "Credit Stress": 1,
     "Energy Shock": 1
   },
-  "candidateCount": 136,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
       "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 27,
+      "score": 18,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,10 +32,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -43,20 +40,46 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile",
         "drone",
-        "oil",
-        "refinery"
+        "factory"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — Smoke is reportedly rising from the Jizan oil refinery in Saudi Arabia following an apparent Ansar Allah drone and/or missile strike. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, drone. Signal: 🇾🇪🇾🇪❌🇸🇦 — Smoke is reportedly rising from the Jizan oil refinery in Saudi Arabia following an apparent Ansar Allah drone and/or missile strike. @IntelSlava"
+      "text": "🇷🇺🇺🇦⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila Tserkva, Kyiv Oblast. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila Tserkva, Kyiv Oblast. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.newsFeed[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone",
+        "factory"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila T | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila T | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -69,85 +92,145 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack",
+        "invasion",
+        "border",
         "drone"
       ],
       "otherCategories": [],
-      "text": "—❗️🇸🇦/🇾🇪 BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack against King Khalid Airbase and Abha International Airport in Saudi Arabia @Middle_East_Spe",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: —❗️🇸🇦/🇾🇪 BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack against King Khalid Airbase and Abha International Airport in Saudi A..."
+      "text": "The Phoenix border guard unit released drone footage showing what the town of Bilozerske in the Pokrovsk district of the Donetsk region looks like today. Before the full-scale invasion, about 15,000 p",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, border, drone. Signal: The Phoenix border guard unit released drone footage showing what the town of Bilozerske in the Pokrovsk district of the Donetsk region looks like today. Before the full-scale i..."
     },
     {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "israel",
-        "gaza"
+        "strike",
+        "missile"
       ],
-      "otherCategories": [],
-      "text": "Israel’s removal of Gaza rubble risk to war crimes evidence: UN | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Israel’s removal of Gaza rubble risk to war crimes evidence: UN | Al Jazeera"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇮🇷❌🇺🇸 — The IRGC announced that it targeted the U.S. Navy Arleigh Burke-class guided-missile destroyers USS Delbert D. Black (DDG-119) and USS John Paul Jones (DDG-53), assigned to Carrier Strike",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇮🇷❌🇺🇸 — The IRGC announced that it targeted the U.S. Navy Arleigh Burke-class guided-missile destroyers USS Delbert D. Black (DDG-119) and USS John Paul Jones (DDG-53), assi..."
     },
     {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "attack",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "Israel warns of 'full-scale war' if Palestinian Authority launches Oct. 7-style attack | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, israel. Signal: Israel warns of 'full-scale war' if Palestinian Authority launches Oct. 7-style attack | France 24"
-    },
-    {
-      "path": "root.newsFeed[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "—❗️/ BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: —❗️/ BREAKING: Yemen’s Ansarallah are carrying out a large scale ballistic missile and drone attack | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.news[47]",
+      "path": "root.news[35]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Police bodycam captures Russian missile strike on Kyiv | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Police bodycam captures Russian missile strike on Kyiv | Al Jazeera"
+    },
+    {
+      "path": "root.news[11]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: US hits Iranian tankers, IRGC attacks US forces in Jordan | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US hits Iranian tankers, IRGC attacks US forces in Jordan | Al Jazeera"
+    },
+    {
+      "path": "root.news[49]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Trump tells Putin he wants swift end to Ukraine war, Kremlin says | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Trump tells Putin he wants swift end to Ukraine war, Kremlin says | France 24"
+    },
+    {
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "taiwan",
+        "container"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -161,133 +244,68 @@
         "FX"
       ],
       "matchedKeywords": [
-        "nuclear",
         "iran",
-        "hormuz"
+        "oil"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "IAEA says Iran blocking nuclear inspectors as Hormuz threats mount | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: IAEA says Iran blocking nuclear inspectors as Hormuz threats mount | Euronews"
+      "text": "Middle East Update: US destroys five Iranian oil tankers as Iran threatens Kuwait and Bahrain | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Middle East Update: US destroys five Iranian oil tankers as Iran threatens Kuwait and Bahrain | France 24"
     },
     {
-      "path": "root.news[16]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
+      "category": "Credit Stress",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit"
+      ],
+      "matchedKeywords": [
+        "bank",
+        "sanction"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "UK, France, ⁠Canada sanction Israeli West Bank goods | France 24",
+      "explanation": "Credit Stress match based on keywords: bank. Signal: UK, France, ⁠Canada sanction Israeli West Bank goods | France 24"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
       "category": "Energy Shock",
-      "score": 13,
+      "score": 8,
       "confidence": "Medium",
       "channels": [
         "Oil",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
+        "FX"
       ],
       "matchedKeywords": [
         "oil",
-        "hormuz",
-        "iran"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "Oil prices surge as US-Iran strikes intensify in Strait of Hormuz | Al Jazeera",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Oil prices surge as US-Iran strikes intensify in Strait of Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "hormuz"
       ],
       "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial concessions — Zelensky. According to him, Moscow hopes that a large-scale winter offensive",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial concessions — Zelensky. According to him, Moscow hopes that a large-sca..."
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "border",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇫🇮 🇷🇺 🚷 Finland fences Russian border to foil ‘hybrid warfare’ Finland on Monday unveiled a 200-kilometre (124-mile) fence erected in sections on its eastern border with Russia to dissuade Mosco",
-      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: 🇫🇮 🇷🇺 🚷 Finland fences Russian border to foil ‘hybrid warfare’ Finland on Monday unveiled a 200-kilometre (124-mile) fence erected in sections on its eastern border with Ru..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launched by Ansar Allah (Houthis) from Yemen. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇾🇪❌🇸🇦 — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launched by Ansar Allah (Houthis) from Yemen. @IntelSlava"
-    },
-    {
-      "path": "root.news[7]",
+      "path": "root.news[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Qatar warns of ‘industrial catastrophe’ if crisis continues | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Qatar warns of ‘industrial catastrophe’ if crisis continues | Al Jazeera"
-    },
-    {
-      "path": "root.news[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 8,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -295,28 +313,27 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
+        "Rates",
         "Treasuries",
-        "Dollar Funding",
+        "FX",
         "Equities"
       ],
       "matchedKeywords": [
-        "israel",
-        "bank"
+        "war",
+        "wages"
       ],
       "otherCategories": [
-        "Credit Stress"
+        "Macro / Inflation Shock"
       ],
-      "text": "Israel’s plan to split the West Bank | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s plan to split the West Bank | Al Jazeera"
+      "text": "Hegseth is shaking up the Pentagon as the US wages war - but at what cost?",
+      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: Hegseth is shaking up the Pentagon as the US wages war - but at what cost?"
     },
     {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -325,19 +342,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "israel"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Israel Launches Deadly Strikes in Lebanon as Military Campaign Intensifies",
-      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Israel Launches Deadly Strikes in Lebanon as Military Campaign Intensifies"
+      "text": "🇮🇷❌🇺🇸 — Iran launched +10 ballistic missiles from Khorramabad, Tabriz, Khomeyn, Tehran, Yazd, and Isfahan toward an unknown destination. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷❌🇺🇸 — Iran launched +10 ballistic missiles from Khorramabad, Tabriz, Khomeyn, Tehran, Yazd, and Isfahan toward an unknown destination. @IntelSlava"
     },
     {
-      "path": "root.newsFeed[18]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -346,19 +362,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "❌ — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launc | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: ❌ — Four loud explosions were heard at Abha Airport in Saudi Arabia following a missile attack launc | INTELSLAVA"
+      "text": "And this is footage of the impact on the TV station building. A Russian drone struck the building while journalists were live on air. The building is partially destroyed. As of now, five casualties ha",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: And this is footage of the impact on the TV station building. A Russian drone struck the building while journalists were live on air. The building is partially destroyed. As of ..."
     },
     {
-      "path": "root.newsFeed[30]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -367,12 +382,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial co | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡️ — Russia expects to break Ukraine with massive strikes in winter and force it into territorial co | INTELSLAVA"
+      "text": "German Defense Minister Boris Pistorius announced that Germany will urgently supply Ukraine with Patriot missiles from its own stockpiles.",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: German Defense Minister Boris Pistorius announced that Germany will urgently supply Ukraine with Patriot missiles from its own stockpiles."
     }
   ]
 }
