@@ -1,27 +1,109 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-09T01:28:13.967Z",
+  "generatedAt": "2026-09-10T01:24:26.882Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Credit Stress": 1,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 134,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.news[30]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 28,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "war",
+        "strike",
+        "attack",
+        "iran",
+        "shipping"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Iran and US strike tankers in biggest shipping attack since war began | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, strike, attack, iran. Signal: Iran and US strike tankers in biggest shipping attack since war began | France 24"
+    },
+    {
+      "path": "root.news[31]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 25,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "border",
+        "drone",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Two die at Moldovan border as Russia-Ukraine drone war rages",
+      "explanation": "Geopolitical Escalation match based on keywords: war, border, drone, russia, ukraine. Signal: Two die at Moldovan border as Russia-Ukraine drone war rages"
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "missile",
+        "naval"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "\"Madyar\": Defense Forces destroyed a Su-33 carrier-based fighter, a Mi-8 helicopter in Anapa, and some vessels - including missile carriers - during a strike on the Novorossiysk Naval Base.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, naval. Signal: \"Madyar\": Defense Forces destroyed a Su-33 carrier-based fighter, a Mi-8 helicopter in Anapa, and some vessels - including missile carriers - during a strike on the Novorossiysk..."
+    },
+    {
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 18,
@@ -40,46 +122,17 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone",
-        "factory"
+        "attack",
+        "port"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila Tserkva, Kyiv Oblast. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila Tserkva, Kyiv Oblast. @IntelSlava"
+      "text": "Ukrainian drones visited Novorossiysk overnight. OSINT analysts report that a large fire was recorded in the area of Novorossiysk's port infrastructure, and the city was under attack by strike drones.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Ukrainian drones visited Novorossiysk overnight. OSINT analysts report that a large fire was recorded in the area of Novorossiysk's port infrastructure, and the city was under a..."
     },
     {
-      "path": "root.newsFeed[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone",
-        "factory"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila T | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — A Russian drone strike targeted the REEVA instant-food factory in the industrial zone of Bila T | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -101,35 +154,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: invasion, border, drone. Signal: The Phoenix border guard unit released drone footage showing what the town of Bilozerske in the Pokrovsk district of the Donetsk region looks like today. Before the full-scale i..."
     },
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "missile"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷❌🇺🇸 — The IRGC announced that it targeted the U.S. Navy Arleigh Burke-class guided-missile destroyers USS Delbert D. Black (DDG-119) and USS John Paul Jones (DDG-53), assigned to Carrier Strike",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇮🇷❌🇺🇸 — The IRGC announced that it targeted the U.S. Navy Arleigh Burke-class guided-missile destroyers USS Delbert D. Black (DDG-119) and USS John Paul Jones (DDG-53), assi..."
-    },
-    {
-      "path": "root.news[35]",
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -148,16 +173,37 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile"
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Police bodycam captures Russian missile strike on Kyiv | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Police bodycam captures Russian missile strike on Kyiv | Al Jazeera"
+      "text": "Israeli strike targets home in Gaza’s al-Shati refugee camp | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike targets home in Gaza’s al-Shati refugee camp | Al Jazeera"
     },
     {
-      "path": "root.news[11]",
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷🇺🇸⚡️ — Iran warns the IAEA’s decision to refer Tehran to the UN Security Council could undermine and ultimately collapse the global nuclear non-proliferation regime. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran warns the IAEA’s decision to refer Tehran to the UN Security Council could undermine and ultimately collapse the global nuclear non-proliferation regime. @Inte..."
+    },
+    {
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -174,11 +220,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: US hits Iranian tankers, IRGC attacks US forces in Jordan | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US hits Iranian tankers, IRGC attacks US forces in Jordan | Al Jazeera"
+      "text": "Iran war Update: Iran media say ‘enemy’ projectiles hit Sirik areas | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran media say ‘enemy’ projectiles hit Sirik areas | Al Jazeera"
     },
     {
-      "path": "root.news[49]",
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -192,17 +238,38 @@
       ],
       "matchedKeywords": [
         "war",
-        "ukraine"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Trump tells Putin he wants swift end to Ukraine war, Kremlin says | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Trump tells Putin he wants swift end to Ukraine war, Kremlin says | France 24"
+      "text": "Trump says the US-Iran war will end right after midterms | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump says the US-Iran war will end right after midterms | Al Jazeera"
     },
     {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
+      "path": "root.news[13]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war looms over Trump at Republican midterm convention in Dallas | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war looms over Trump at Republican midterm convention in Dallas | Al Jazeera"
+    },
+    {
+      "path": "root.news[15]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -210,130 +277,28 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.news[19]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Middle East Update: US destroys five Iranian oil tankers as Iran threatens Kuwait and Bahrain | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Middle East Update: US destroys five Iranian oil tankers as Iran threatens Kuwait and Bahrain | France 24"
-    },
-    {
-      "path": "root.news[33]",
-      "sourcePriority": "Medium",
-      "category": "Credit Stress",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
         "High Yield Credit",
         "Banks",
         "Treasuries",
         "Dollar Funding",
-        "Equities",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit"
-      ],
-      "matchedKeywords": [
-        "bank",
-        "sanction"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "UK, France, ⁠Canada sanction Israeli West Bank goods | France 24",
-      "explanation": "Credit Stress match based on keywords: bank. Signal: UK, France, ⁠Canada sanction Israeli West Bank goods | France 24"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.news[17]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Rates",
-        "Treasuries",
-        "FX",
         "Equities"
       ],
       "matchedKeywords": [
-        "war",
-        "wages"
+        "israel",
+        "bank"
       ],
       "otherCategories": [
-        "Macro / Inflation Shock"
+        "Credit Stress"
       ],
-      "text": "Hegseth is shaking up the Pentagon as the US wages war - but at what cost?",
-      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: Hegseth is shaking up the Pentagon as the US wages war - but at what cost?"
+      "text": "Land in limbo: BBC visits West Bank village in area earmarked by Israel for settlement",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Land in limbo: BBC visits West Bank village in area earmarked by Israel for settlement"
     },
     {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
+      "path": "root.news[22]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "score": 10,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -342,18 +307,19 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
+        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷❌🇺🇸 — Iran launched +10 ballistic missiles from Khorramabad, Tabriz, Khomeyn, Tehran, Yazd, and Isfahan toward an unknown destination. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷❌🇺🇸 — Iran launched +10 ballistic missiles from Khorramabad, Tabriz, Khomeyn, Tehran, Yazd, and Isfahan toward an unknown destination. @IntelSlava"
+      "text": "Trump says Iran war ‘will end immediately’ after US midterm elections | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump says Iran war ‘will end immediately’ after US midterm elections | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "score": 10,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -362,31 +328,54 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "And this is footage of the impact on the TV station building. A Russian drone struck the building while journalists were live on air. The building is partially destroyed. As of now, five casualties ha",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: And this is footage of the impact on the TV station building. A Russian drone struck the building while journalists were live on air. The building is partially destroyed. As of ..."
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
+        "war",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "German Defense Minister Boris Pistorius announced that Germany will urgently supply Ukraine with Patriot missiles from its own stockpiles.",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: German Defense Minister Boris Pistorius announced that Germany will urgently supply Ukraine with Patriot missiles from its own stockpiles."
+      "text": "Trump says Putin wants to make a deal to end Ukraine war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Trump says Putin wants to make a deal to end Ukraine war | Al Jazeera"
+    },
+    {
+      "path": "root.news[32]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "IAEA board refers Iran to UN Security Council over nuclear ‘non-compliance’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: IAEA board refers Iran to UN Security Council over nuclear ‘non-compliance’ | Al Jazeera"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran referred to UN Security Council for nuclear non-compliance",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Iran referred to UN Security Council for nuclear non-compliance"
     }
   ]
 }
