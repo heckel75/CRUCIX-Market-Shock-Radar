@@ -1,80 +1,27 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-10T01:24:26.882Z",
+  "generatedAt": "2026-09-11T01:24:40.663Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 17,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 13,
+    "Supply Chain Disruption": 1,
+    "Energy Shock": 1
   },
-  "candidateCount": 135,
+  "candidateCount": 130,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 28,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "strike",
-        "attack",
-        "iran",
-        "shipping"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Iran and US strike tankers in biggest shipping attack since war began | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike, attack, iran. Signal: Iran and US strike tankers in biggest shipping attack since war began | France 24"
-    },
-    {
-      "path": "root.news[31]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 25,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "border",
-        "drone",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Two die at Moldovan border as Russia-Ukraine drone war rages",
-      "explanation": "Geopolitical Escalation match based on keywords: war, border, drone, russia, ukraine. Signal: Two die at Moldovan border as Russia-Ukraine drone war rages"
-    },
-    {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 19,
@@ -93,21 +40,78 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile",
-        "naval"
+        "border",
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "\"Madyar\": Defense Forces destroyed a Su-33 carrier-based fighter, a Mi-8 helicopter in Anapa, and some vessels - including missile carriers - during a strike on the Novorossiysk Naval Base.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, naval. Signal: \"Madyar\": Defense Forces destroyed a Su-33 carrier-based fighter, a Mi-8 helicopter in Anapa, and some vessels - including missile carriers - during a strike on the Novorossiysk..."
+      "text": "A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the driver, despite damage to",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the dr..."
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.news[42]",
+      "sourcePriority": "Medium",
+      "category": "Supply Chain Disruption",
+      "score": 17,
+      "confidence": "Medium",
+      "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "port",
+        "shipping",
+        "iran",
+        "red sea"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation",
+        "Energy Shock"
+      ],
+      "text": "Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24",
+      "explanation": "Supply Chain Disruption match based on keywords: port, shipping. Signal: Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24"
+    },
+    {
+      "path": "root.news[46]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Moscow Claims Ukraine Planned to Start a War Between Russia and the U.K.",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Moscow Claims Ukraine Planned to Start a War Between Russia and the U.K."
+    },
+    {
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
+      "score": 14,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -122,39 +126,106 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack",
-        "port"
+        "missile"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Ukrainian drones visited Novorossiysk overnight. OSINT analysts report that a large fire was recorded in the area of Novorossiysk's port infrastructure, and the city was under attack by strike drones.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: Ukrainian drones visited Novorossiysk overnight. OSINT analysts report that a large fire was recorded in the area of Novorossiysk's port infrastructure, and the city was under a..."
+      "text": "Also in Novorossiysk: possible damage caused by a Neptune missile on the Russian missile frigate \"Admiral Essen\", a repeated strike on the Russian missile frigate \"Admiral Makarov\", and damage to por",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Also in Novorossiysk: possible damage caused by a Neptune missile on the Russian missile frigate \"Admiral Essen\", a repeated strike on the Russian missile frigate \"Admiral Makar..."
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "invasion",
-        "border",
-        "drone"
+        "nuclear",
+        "spread",
+        "energy"
       ],
-      "otherCategories": [],
-      "text": "The Phoenix border guard unit released drone footage showing what the town of Bilozerske in the Pokrovsk district of the Donetsk region looks like today. Before the full-scale invasion, about 15,000 p",
-      "explanation": "Geopolitical Escalation match based on keywords: invasion, border, drone. Signal: The Phoenix border guard unit released drone footage showing what the town of Bilozerske in the Pokrovsk district of the Donetsk region looks like today. Before the full-scale i..."
+      "otherCategories": [
+        "Credit Stress",
+        "Energy Shock"
+      ],
+      "text": "International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine for a second, if, with t",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine fo..."
     },
     {
-      "path": "root.news[40]",
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran claims to have captured a US ‘sail drone’ near Hormuz Strait | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: Iran claims to have captured a US ‘sail drone’ near Hormuz Strait | Al Jazeera"
+    },
+    {
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran war Update: IRGC attacks US unmanned vessel in Hormuz; two ships hit | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC attacks US unmanned vessel in Hormuz; two ships hit | Al Jazeera"
+    },
+    {
+      "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -173,16 +244,50 @@
       ],
       "matchedKeywords": [
         "strike",
-        "gaza"
+        "ukraine"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Israeli strike targets home in Gaza’s al-Shati refugee camp | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike targets home in Gaza’s al-Shati refugee camp | Al Jazeera"
+      "text": "Russian strike hits shopping centre in central Ukraine | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Russian strike hits shopping centre in central Ukraine | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "red sea",
+        "port"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha | France 24"
+    },
+    {
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -195,81 +300,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇷🇺🇸⚡️ — Iran warns the IAEA’s decision to refer Tehran to the UN Security Council could undermine and ultimately collapse the global nuclear non-proliferation regime. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran warns the IAEA’s decision to refer Tehran to the UN Security Council could undermine and ultimately collapse the global nuclear non-proliferation regime. @Inte..."
-    },
-    {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
         "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Iran media say ‘enemy’ projectiles hit Sirik areas | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran media say ‘enemy’ projectiles hit Sirik areas | Al Jazeera"
+      "text": "🇺🇸🇮🇷⚡️ — NEW: Vice President JD Vance contacted senior U.S. commanders in spring and summer for direct assessments on the Iran war before Pentagon consolidation, according to NYT. ➤ Commanders wa",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇺🇸🇮🇷⚡️ — NEW: Vice President JD Vance contacted senior U.S. commanders in spring and summer for direct assessments on the Iran war before Pentagon consolidation, according t..."
     },
     {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Trump says the US-Iran war will end right after midterms | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump says the US-Iran war will end right after midterms | Al Jazeera"
-    },
-    {
-      "path": "root.news[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war looms over Trump at Republican midterm convention in Dallas | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war looms over Trump at Republican midterm convention in Dallas | Al Jazeera"
-    },
-    {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -277,105 +319,123 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "israel",
-        "bank"
+        "taiwan",
+        "container"
       ],
       "otherCategories": [
-        "Credit Stress"
+        "Supply Chain Disruption"
       ],
-      "text": "Land in limbo: BBC visits West Bank village in area earmarked by Israel for settlement",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Land in limbo: BBC visits West Bank village in area earmarked by Israel for settlement"
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "iran",
+        "hormuz"
       ],
-      "otherCategories": [],
-      "text": "Trump says Iran war ‘will end immediately’ after US midterm elections | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Trump says Iran war ‘will end immediately’ after US midterm elections | Al Jazeera"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇮🇷🇺🇸⚡️ — Iran’s IRGC Navy destroyed a U.S. Navy Saildrone unmanned surface vessel (USV) near the entrance to the Strait of Hormuz. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸⚡️ — Iran’s IRGC Navy destroyed a U.S. Navy Saildrone unmanned surface vessel (USV) near the entrance to the Strait of Hormuz. @IntelSlava"
     },
     {
-      "path": "root.news[25]",
+      "path": "root.news[20]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "war",
-        "ukraine"
+        "gaza",
+        "fuel"
       ],
-      "otherCategories": [],
-      "text": "Trump says Putin wants to make a deal to end Ukraine war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Trump says Putin wants to make a deal to end Ukraine war | Al Jazeera"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Gaza hospitals ration power as fuel shortages deepen | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: gaza. Signal: Gaza hospitals ration power as fuel shortages deepen | Al Jazeera"
     },
     {
-      "path": "root.news[32]",
+      "path": "root.news[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "iran",
+        "fuel"
       ],
-      "otherCategories": [],
-      "text": "IAEA board refers Iran to UN Security Council over nuclear ‘non-compliance’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: IAEA board refers Iran to UN Security Council over nuclear ‘non-compliance’ | Al Jazeera"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran raises fuel prices for heavy users | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran raises fuel prices for heavy users | France 24"
     },
     {
-      "path": "root.news[33]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
       "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "oil",
+        "hormuz"
       ],
       "otherCategories": [],
-      "text": "Iran referred to UN Security Council for nuclear non-compliance",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Iran referred to UN Security Council for nuclear non-compliance"
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     }
   ]
 }
