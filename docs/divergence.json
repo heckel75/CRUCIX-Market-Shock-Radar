@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-11T01:24:43.865Z",
+  "generatedAt": "2026-09-12T01:29:19.990Z",
   "date": "2026-09-04",
   "asOfClose": "2026-09-04",
   "framing": "readings as of market close, 2026-09-04",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-11T01:24:40.812Z",
-    "generatedDate": "2026-09-11",
+    "generatedAt": "2026-09-12T01:29:17.345Z",
+    "generatedDate": "2026-09-12",
     "asOfClose": "2026-09-04",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-11T01:24:40.812Z",
-    "generatedDate": "2026-09-11",
-    "runDate": "2026-09-11",
+    "generatedAt": "2026-09-12T01:29:17.345Z",
+    "generatedDate": "2026-09-12",
+    "runDate": "2026-09-12",
     "asOfClose": "2026-09-04",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-11, readings as of market close, 2026-09-04 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-04",
-      "generatedDate": "2026-09-11",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-11, readings as of market close, 2026-09-04 (7 calendar days old)."
+      "generatedDate": "2026-09-12",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 4,
-    "calm": 1
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_count": 12,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[9]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 18,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "border",
-          "drone"
+          "war",
+          "iran",
+          "pipeline",
+          "red sea"
         ],
-        "text": "A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the driver, despite damage to",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the dr..."
+        "text": "Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera"
       },
       "market_z": 1.498,
       "abs_market_z": 1.498,
@@ -95,7 +96,7 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -120,37 +121,37 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 9,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 8,
+      "signal_count": 8,
+      "signal_primary_count": 3,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.news[42]",
+        "path": "root.news[9]",
         "category": "Energy Shock",
-        "primaryCategory": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "Medium",
         "matchedKeywords": [
-          "port",
-          "shipping",
+          "war",
           "iran",
+          "pipeline",
           "red sea"
         ],
-        "text": "Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24",
-        "explanation": "Supply Chain Disruption match based on keywords: port, shipping. Signal: Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24"
+        "text": "Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera"
       },
       "market_z": 1.498,
       "abs_market_z": 1.498,
@@ -161,37 +162,22 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[8]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "nuclear",
-          "spread",
-          "energy"
-        ],
-        "text": "International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine for a second, if, with t",
-        "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine fo..."
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.258,
       "abs_market_z": 1.258,
       "market_moving": false,
@@ -201,36 +187,35 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 6,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 5,
+      "signal_elevated": false,
+      "signal_count": 4,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 9,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "border",
-          "drone"
+          "taiwan",
+          "container"
         ],
-        "text": "A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the driver, despite damage to",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the dr..."
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": -1.107,
       "abs_market_z": 1.107,
@@ -241,23 +226,38 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     }
   ],
   "signalOnly": [
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[5]",
+        "category": "Macro / Inflation Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "russia",
+          "energy",
+          "treasury"
+        ],
+        "text": "🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US Treasury Secretary Sc",
+        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US..."
+      }
     },
     {
       "signal_category": "Weather / Climate Shock",

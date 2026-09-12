@@ -1,30 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-11T01:24:40.663Z",
+  "generatedAt": "2026-09-12T01:29:17.197Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Supply Chain Disruption": 1,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 12,
+    "Energy Shock": 3
   },
-  "candidateCount": 130,
+  "candidateCount": 138,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 18,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -32,231 +31,28 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "border",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the driver, despite damage to",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, border, drone. Signal: A Russian drone attacked a vehicle belonging to artillery border guards of the \"Hart\" Brigade in the northern Kharkiv region. The armored Humvee withstood the strike, and the dr..."
-    },
-    {
-      "path": "root.news[42]",
-      "sourcePriority": "Medium",
-      "category": "Supply Chain Disruption",
-      "score": 17,
-      "confidence": "Medium",
-      "channels": [
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins",
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX"
       ],
       "matchedKeywords": [
-        "port",
-        "shipping",
+        "war",
         "iran",
+        "pipeline",
         "red sea"
       ],
       "otherCategories": [
-        "Geopolitical Escalation",
         "Energy Shock"
       ],
-      "text": "Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24",
-      "explanation": "Supply Chain Disruption match based on keywords: port, shipping. Signal: Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping | France 24"
+      "text": "Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera"
     },
     {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Moscow Claims Ukraine Planned to Start a War Between Russia and the U.K.",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Moscow Claims Ukraine Planned to Start a War Between Russia and the U.K."
-    },
-    {
-      "path": "root.tg.urgent[6]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "missile"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Also in Novorossiysk: possible damage caused by a Neptune missile on the Russian missile frigate \"Admiral Essen\", a repeated strike on the Russian missile frigate \"Admiral Makarov\", and damage to por",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Also in Novorossiysk: possible damage caused by a Neptune missile on the Russian missile frigate \"Admiral Essen\", a repeated strike on the Russian missile frigate \"Admiral Makar..."
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "spread",
-        "energy"
-      ],
-      "otherCategories": [
-        "Credit Stress",
-        "Energy Shock"
-      ],
-      "text": "International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine for a second, if, with t",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: International Atomic Energy Agency Director General Rafael Grossi fears that the spread of nuclear weapons to more countries would inevitably lead to their use. “Just imagine fo..."
-    },
-    {
-      "path": "root.news[6]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran claims to have captured a US ‘sail drone’ near Hormuz Strait | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: Iran claims to have captured a US ‘sail drone’ near Hormuz Strait | Al Jazeera"
-    },
-    {
-      "path": "root.news[9]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: IRGC attacks US unmanned vessel in Hormuz; two ships hit | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC attacks US unmanned vessel in Hormuz; two ships hit | Al Jazeera"
-    },
-    {
-      "path": "root.news[23]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Russian strike hits shopping centre in central Ukraine | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Russian strike hits shopping centre in central Ukraine | Al Jazeera"
-    },
-    {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 12,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -268,27 +64,46 @@
         "Inflation Expectations",
         "Energy Equities",
         "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Rates",
+        "Treasuries",
+        "Equities"
       ],
       "matchedKeywords": [
-        "iran",
-        "red sea",
-        "port"
+        "russia",
+        "energy",
+        "treasury"
       ],
       "otherCategories": [
         "Energy Shock",
-        "Supply Chain Disruption"
+        "Macro / Inflation Shock"
       ],
-      "text": "Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha | France 24"
+      "text": "🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US Treasury Secretary Sc",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US..."
     },
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇱🇹⚡️ Dmitry Medvedev warns Lithuania could be wiped off the map if it enters a military confrontation with Russia. He says NATO would not defend Lithuania after any Russian retaliation over nuc",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: 🇷🇺🇱🇹⚡️ Dmitry Medvedev warns Lithuania could be wiped off the map if it enters a military confrontation with Russia. He says NATO would not defend Lithuania after any Russia..."
+    },
+    {
+      "path": "root.news[31]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -304,8 +119,29 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇸🇮🇷⚡️ — NEW: Vice President JD Vance contacted senior U.S. commanders in spring and summer for direct assessments on the Iran war before Pentagon consolidation, according to NYT. ➤ Commanders wa",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇺🇸🇮🇷⚡️ — NEW: Vice President JD Vance contacted senior U.S. commanders in spring and summer for direct assessments on the Iran war before Pentagon consolidation, according t..."
+      "text": "Lightning Houthi advance in Yemen may bring dangerous new dimension to Iran war",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Lightning Houthi advance in Yemen may bring dangerous new dimension to Iran war"
+    },
+    {
+      "path": "root.news[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Zelensky urges Trump to impose new Russia sanctions 'now', after deadly Ukraine strikes | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelensky urges Trump to impose new Russia sanctions 'now', after deadly Ukraine strikes | France 24"
     },
     {
       "path": "root.chokepoints[5]",
@@ -336,7 +172,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -359,11 +195,11 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇮🇷🇺🇸⚡️ — Iran’s IRGC Navy destroyed a U.S. Navy Saildrone unmanned surface vessel (USV) near the entrance to the Strait of Hormuz. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸⚡️ — Iran’s IRGC Navy destroyed a U.S. Navy Saildrone unmanned surface vessel (USV) near the entrance to the Strait of Hormuz. @IntelSlava"
+      "text": "🇸🇦⚡️ — The last six months for the Kingdom of Saudi Arabia: — Iran takes control of the Strait of Hormuz — Aramco facilities targeted by Iran's IRGC — Aramco facilities targeted by the Houthis — H",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇸🇦⚡️ — The last six months for the Kingdom of Saudi Arabia: — Iran takes control of the Strait of Hormuz — Aramco facilities targeted by Iran's IRGC — Aramco facilities target..."
     },
     {
-      "path": "root.news[20]",
+      "path": "root.news[2]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -374,23 +210,52 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "gaza",
-        "fuel"
+        "escalation",
+        "shipping"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Gaza hospitals ration power as fuel shortages deepen | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: gaza. Signal: Gaza hospitals ration power as fuel shortages deepen | Al Jazeera"
+      "text": "Middle East shipping escalation about to hit every Australian wallet | SBS Australia | Australia",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation. Signal: Middle East shipping escalation about to hit every Australian wallet | SBS Australia | Australia"
     },
     {
-      "path": "root.news[45]",
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "shipping"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Iran-backed Houthis seize near control of vital Bab el-Mandeb shipping lane | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran-backed Houthis seize near control of vital Bab el-Mandeb shipping lane | France 24"
+    },
+    {
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -408,13 +273,40 @@
       ],
       "matchedKeywords": [
         "iran",
-        "fuel"
+        "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran raises fuel prices for heavy users | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran raises fuel prices for heavy users | France 24"
+      "text": "Iran says will discuss Strait of Hormuz with Gulf states on Monday | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran says will discuss Strait of Hormuz with Gulf states on Monday | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[0]",
@@ -436,6 +328,82 @@
       "otherCategories": [],
       "text": "Strait of Hormuz | 20% of world oil",
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "red sea",
+        "shipping"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane",
+      "explanation": "Energy Shock match based on keywords: red sea. Signal: Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane"
+    },
+    {
+      "path": "root.news[32]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Rates",
+        "Treasuries",
+        "FX",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "war",
+        "jobs"
+      ],
+      "otherCategories": [
+        "Macro / Inflation Shock"
+      ],
+      "text": "Amid war and sanctions, many Iranians are losing their jobs and struggling to get by",
+      "explanation": "Geopolitical Escalation match based on keywords: war. Signal: Amid war and sanctions, many Iranians are losing their jobs and struggling to get by"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "pipeline"
+      ],
+      "otherCategories": [],
+      "text": "🔴 Update: Saudi shuts East-West oil pipeline after multiple Houthi attacks | France 24",
+      "explanation": "Energy Shock match based on keywords: oil, pipeline. Signal: 🔴 Update: Saudi shuts East-West oil pipeline after multiple Houthi attacks | France 24"
     }
   ]
 }

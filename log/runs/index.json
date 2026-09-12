@@ -1,8 +1,46 @@
 {
   "title": "CRUCIX Daily Run Manifest",
-  "generatedAt": "2026-09-11T01:24:44.025Z",
-  "count": 66,
+  "generatedAt": "2026-09-12T01:29:20.162Z",
+  "count": 67,
   "runs": [
+    {
+      "file": "2026-09-12T01-29-19-990Z.json",
+      "path": "log/runs/2026-09-12T01-29-19-990Z.json",
+      "generatedAt": "2026-09-12T01:29:19.990Z",
+      "recordedAt": "2026-09-12T01:29:20.141Z",
+      "runDate": "2026-09-12",
+      "snapshotDate": "2026-09-04",
+      "asOfClose": "2026-09-04",
+      "snapshotStatus": "kept",
+      "snapshotWarning": "Snapshot for 2026-09-04 already exists with different contents.\nMarket readings have not advanced beyond this close date.\nKeeping existing log/2026-09-04.json. Use --force only for an intentional correction.",
+      "marketFreshness": {
+        "status": "lagging",
+        "generatedAt": "2026-09-12T01:29:17.345Z",
+        "generatedDate": "2026-09-12",
+        "runDate": "2026-09-12",
+        "asOfClose": "2026-09-04",
+        "calendarLagDays": 8,
+        "currentMaxCalendarLagDays": 3,
+        "staleAfterCalendarDays": 14,
+        "warning": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
+      },
+      "warnings": [
+        {
+          "code": "market-readings-lagging",
+          "severity": "warning",
+          "status": "lagging",
+          "asOfClose": "2026-09-04",
+          "generatedDate": "2026-09-12",
+          "calendarLagDays": 8,
+          "message": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
+        }
+      ],
+      "rowCount": 5,
+      "stateCounts": {
+        "radar-claim": 2,
+        "calm": 3
+      }
+    },
     {
       "file": "2026-09-11T01-24-43-865Z.json",
       "path": "log/runs/2026-09-11T01-24-43-865Z.json",
