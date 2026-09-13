@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-12T01:29:19.990Z",
+  "generatedAt": "2026-09-13T01:22:42.757Z",
   "date": "2026-09-04",
   "asOfClose": "2026-09-04",
   "framing": "readings as of market close, 2026-09-04",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-12T01:29:17.345Z",
-    "generatedDate": "2026-09-12",
+    "generatedAt": "2026-09-13T01:22:38.548Z",
+    "generatedDate": "2026-09-13",
     "asOfClose": "2026-09-04",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-12T01:29:17.345Z",
-    "generatedDate": "2026-09-12",
-    "runDate": "2026-09-12",
+    "generatedAt": "2026-09-13T01:22:38.548Z",
+    "generatedDate": "2026-09-13",
+    "runDate": "2026-09-13",
     "asOfClose": "2026-09-04",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-13, readings as of market close, 2026-09-04 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-04",
-      "generatedDate": "2026-09-12",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-09-12, readings as of market close, 2026-09-04 (8 calendar days old)."
+      "generatedDate": "2026-09-13",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-09-13, readings as of market close, 2026-09-04 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,38 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 3
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 12,
-      "signal_primary_count": 12,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[9]",
+        "path": "root.news[34]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
-        "confidence": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "iran",
-          "pipeline",
-          "red sea"
+          "escalation",
+          "iran"
         ],
-        "text": "Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera"
+        "text": "Iran Finds Escalation Is Fruitful Path to Leverage in War With U.S.",
+        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Iran Finds Escalation Is Fruitful Path to Leverage in War With U.S."
       },
       "market_z": 1.498,
       "abs_market_z": 1.498,
@@ -96,7 +95,7 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -121,37 +120,36 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 8,
-      "signal_primary_count": 3,
-      "signal_secondary_count": 5,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[9]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "Medium",
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "iran",
-          "pipeline",
-          "red sea"
+          "drone",
+          "fuel",
+          "shipping"
         ],
-        "text": "Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis control Red Sea coast, Saudi pipeline shut down | Al Jazeera"
+        "text": "Russian refineries are stacking shipping containers around fuel tanks as makeshift blast walls and firebreaks, Dnipro Osint reports. Along with anti-drone nets and metal cages, the defenses complicate",
+        "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Russian refineries are stacking shipping containers around fuel tanks as makeshift blast walls and firebreaks, Dnipro Osint reports. Along with anti-drone nets and metal cages, ..."
       },
       "market_z": 1.498,
       "abs_market_z": 1.498,
@@ -162,7 +160,7 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -187,35 +185,36 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
+      "signal_elevated": true,
       "signal_count": 4,
       "signal_primary_count": 0,
       "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
+        "rawScore": 14,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "military",
+          "iran",
+          "blockade"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🇺🇸🇮🇱⚡️ — The US military has redirected 100 commercial vessels since Washington resumed its maritime blockade on Iran in July, the US Central Command (CENTCOM) said in a statement. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸🇮🇱⚡️ — The US military has redirected 100 commercial vessels since Washington resumed its maritime blockade on Iran in July, the US Central Command (CENTCOM) said in a sta..."
       },
       "market_z": -1.107,
       "abs_market_z": 1.107,
@@ -226,38 +225,23 @@
       "driver_as_of": "2026-09-04",
       "market_as_of": "2026-09-04",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 9,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.6,
-      "signal_score_pct": 60,
-      "signal_raw_score": 12,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.tg.urgent[5]",
-        "category": "Macro / Inflation Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 12,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "russia",
-          "energy",
-          "treasury"
-        ],
-        "text": "🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US Treasury Secretary Sc",
-        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇸 Russia will participate in next week’s G20 energy summit in Houston, signaling continued high-level engagement with the US. The move follows a recent meeting between US..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     },
     {
       "signal_category": "Weather / Climate Shock",

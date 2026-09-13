@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-09-13T01:22:42.757Z",
+  "recordedAt": "2026-09-13T01:22:42.865Z",
+  "runDate": "2026-09-13",
+  "snapshotDate": "2026-09-04",
+  "asOfClose": "2026-09-04",
+  "snapshotStatus": "kept",
+  "snapshotWarning": "Snapshot for 2026-09-04 already exists with different contents.\nMarket readings have not advanced beyond this close date.\nKeeping existing log/2026-09-04.json. Use --force only for an intentional correction.",
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-09-13T01:22:38.548Z",
+    "generatedDate": "2026-09-13",
+    "runDate": "2026-09-13",
+    "asOfClose": "2026-09-04",
+    "calendarLagDays": 9,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-09-13, readings as of market close, 2026-09-04 (9 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-09-04",
+      "generatedDate": "2026-09-13",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-09-13, readings as of market close, 2026-09-04 (9 calendar days old)."
+    }
+  ],
+  "rowCount": 5,
+  "stateCounts": {
+    "radar-claim": 3,
+    "calm": 2
+  }
+}
