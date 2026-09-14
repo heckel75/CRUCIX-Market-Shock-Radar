@@ -1,25 +1,152 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-13T01:22:38.433Z",
+  "generatedAt": "2026-09-14T01:32:52.370Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 16,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 12,
+    "Energy Shock": 3
   },
   "candidateCount": 139,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[34]",
+      "path": "root.news[21]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "escalation",
+        "border",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Poland, Ukraine accuse Russia of ‘escalation’ after strikes near border | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, border, russia, ukraine. Signal: Poland, Ukraine accuse Russia of ‘escalation’ after strikes near border | Al Jazeera"
+    },
+    {
+      "path": "root.news[39]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "drone",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine, Poland condemn Russia after drone strikes train near border | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: border, drone, russia, ukraine. Signal: Ukraine, Poland condemn Russia after drone strikes train near border | France 24"
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "VIX",
+        "Equities",
+        "Credit",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "pipeline",
+        "red sea",
+        "port",
+        "stocks"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Market Volatility Signal"
+      ],
+      "text": "🇸🇦🛢 The loss of the East-West pipeline cutoff 4% of the globe's oil supply The oil stocks in the Red Sea port of Yanbu, Saudi Arabia's main export route for oil, hold reserves for just 7 days mean",
+      "explanation": "Energy Shock match based on keywords: oil, pipeline, red sea. Signal: 🇸🇦🛢 The loss of the East-West pipeline cutoff 4% of the globe's oil supply The oil stocks in the Red Sea port of Yanbu, Saudi Arabia's main export route for oil, hold reserve..."
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇾🇪❌🇸🇦 — Sirens activated in Abha and Khamis Mushait due to a combined Houthi missile and drone attack.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: 🇾🇪❌🇸🇦 — Sirens activated in Abha and Khamis Mushait due to a combined Houthi missile and drone attack."
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷❌🌞🇮🇶 — NOW: Iran is conducting a drone attack on Kurdish separatist positions in Sulaymaniyah, according to Kurdish local sources.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, iran. Signal: 🇮🇷❌🌞🇮🇶 — NOW: Iran is conducting a drone attack on Kurdish separatist positions in Sulaymaniyah, according to Kurdish local sources."
+    },
+    {
+      "path": "root.newsFeed[14]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -32,45 +159,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "escalation",
-        "iran"
+        "missile",
+        "attack",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "Iran Finds Escalation Is Fruitful Path to Leverage in War With U.S.",
-      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Iran Finds Escalation Is Fruitful Path to Leverage in War With U.S."
+      "text": "❌ — Sirens activated in Abha and Khamis Mushait due to a combined Houthi missile and drone attack. | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: ❌ — Sirens activated in Abha and Khamis Mushait due to a combined Houthi missile and drone attack. | INTELSLAVA"
     },
     {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "military",
-        "iran",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇸🇮🇱⚡️ — The US military has redirected 100 commercial vessels since Washington resumed its maritime blockade on Iran in July, the US Central Command (CENTCOM) said in a statement. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸🇮🇱⚡️ — The US military has redirected 100 commercial vessels since Washington resumed its maritime blockade on Iran in July, the US Central Command (CENTCOM) said in a sta..."
-    },
-    {
-      "path": "root.news[19]",
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -81,97 +179,77 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Only Roland Garros towel left, says Ukraine tennis player after Russian strike hits flat",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Only Roland Garros towel left, says Ukraine tennis player after Russian strike hits flat"
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "fuel",
-        "shipping"
+        "war",
+        "iran",
+        "hormuz"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Russian refineries are stacking shipping containers around fuel tanks as makeshift blast walls and firebreaks, Dnipro Osint reports. Along with anti-drone nets and metal cages, the defenses complicate",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: Russian refineries are stacking shipping containers around fuel tanks as makeshift blast walls and firebreaks, Dnipro Osint reports. Along with anti-drone nets and metal cages, ..."
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "BREAKING: 🇮🇷 Iran prepares to withdraw from the Nuclear Non-Proliferation Treaty and conduct a nuclear weapons test as soon as possible. @BreakingGlobalHQ",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: BREAKING: 🇮🇷 Iran prepares to withdraw from the Nuclear Non-Proliferation Treaty and conduct a nuclear weapons test as soon as possible. @BreakingGlobalHQ"
+      "text": "Iran war Update: Oman says Hormuz talks with Iran, Gulf states postponed | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Oman says Hormuz talks with Iran, Gulf states postponed | Al Jazeera"
     },
     {
       "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "category": "Energy Shock",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Gold",
         "VIX",
-        "Oil",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "drone"
+        "oil",
+        "pipeline",
+        "attack"
       ],
-      "otherCategories": [],
-      "text": "—❗️🇸🇦/🇾🇪 NEW: Alerts in Khamis Mushait and Abha Yemeni ballistic missile and drone attacks against Saudi Arabia have become an almost daily occurence. @Middle_East_Spectator",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: —❗️🇸🇦/🇾🇪 NEW: Alerts in Khamis Mushait and Abha Yemeni ballistic missile and drone attacks against Saudi Arabia have become an almost daily occurence. @Middle_East_Spectator"
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇮🇶🇮🇷❌🇸🇦 — High-resolution satellite image shows significant damage at one of the East–West oil pipeline pumping stations in Saudi Arabia after an alleged attack by the Islamic Resistance in Iraq",
+      "explanation": "Energy Shock match based on keywords: oil, pipeline. Signal: 🇮🇶🇮🇷❌🇸🇦 — High-resolution satellite image shows significant damage at one of the East–West oil pipeline pumping stations in Saudi Arabia after an alleged attack by the Isl..."
+    },
+    {
+      "path": "root.newsFeed[31]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 11,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "VIX",
+        "Equities",
+        "Credit",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "pipeline",
+        "stocks"
+      ],
+      "otherCategories": [
+        "Market Volatility Signal"
+      ],
+      "text": "🛢 The loss of the East-West pipeline cutoff 4% of the globe's oil supply The oil stocks in the Red | CIG_TELEGRAM",
+      "explanation": "Energy Shock match based on keywords: oil, pipeline. Signal: 🛢 The loss of the East-West pipeline cutoff 4% of the globe's oil supply The oil stocks in the Red | CIG_TELEGRAM"
     },
     {
       "path": "root.tg.urgent[4]",
@@ -187,100 +265,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "missile",
+        "border"
       ],
       "otherCategories": [],
-      "text": "Zelensky says Ukraine wants 100 to 120 Patriot interceptors a month and plans to use FREYJA in December. He says Russia makes about 140 ballistic missiles monthly, and NATO math means it takes roughly",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelensky says Ukraine wants 100 to 120 Patriot interceptors a month and plans to use FREYJA in December. He says Russia makes about 140 ballistic missiles monthly, and NATO math..."
+      "text": "🇮🇷❌🌞🇮🇶 — NOW: Missile sightings reported over the Sulaimaniyah border area, with multiple loud explosions heard in Halabja, Sharazur, and Zar Gwez, local sources report.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, border. Signal: 🇮🇷❌🌞🇮🇶 — NOW: Missile sightings reported over the Sulaimaniyah border area, with multiple loud explosions heard in Halabja, Sharazur, and Zar Gwez, local sources report."
     },
     {
-      "path": "root.news[6]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Saudi Arabia and Houthis trade strikes over Bab al-Mandeb | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Saudi Arabia and Houthis trade strikes over Bab al-Mandeb | Al Jazeera"
-    },
-    {
-      "path": "root.news[26]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Will Houthi advances in Yemen give Iran leverage in its war with the US? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Will Houthi advances in Yemen give Iran leverage in its war with the US? | Al Jazeera"
-    },
-    {
-      "path": "root.news[29]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iraq probes drone strikes on Saudi Arabia, shuts three crossings to Iran | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: Iraq probes drone strikes on Saudi Arabia, shuts three crossings to Iran | Al Jazeera"
-    },
-    {
-      "path": "root.news[32]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "conflict",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran, UAE hold first talks at BRICS summit since conflict began | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: conflict, iran. Signal: Iran, UAE hold first talks at BRICS summit since conflict began | Al Jazeera"
-    },
-    {
-      "path": "root.news[46]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -296,11 +290,11 @@
         "russia"
       ],
       "otherCategories": [],
-      "text": "Erdogan hints at larger nuclear partnership with Russia, unsettling Turkey's allies",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: Erdogan hints at larger nuclear partnership with Russia, unsettling Turkey's allies"
+      "text": "Medvedev threatens Lithuania, saying if it deploys nuclear weapons and Russia has to respond, no one will step in. He claims NATO Article 5 won’t apply and says Lithuania would “disappear from the map",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: Medvedev threatens Lithuania, saying if it deploys nuclear weapons and Russia has to respond, no one will step in. He claims NATO Article 5 won’t apply and says Lithuania would ..."
     },
     {
-      "path": "root.newsFeed[36]",
+      "path": "root.news[28]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -313,15 +307,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "attack",
+        "israel"
       ],
       "otherCategories": [],
-      "text": "BREAKING: Iran prepares to withdraw from the Nuclear Non-Proliferation Treaty and conduct a nuclear | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: BREAKING: Iran prepares to withdraw from the Nuclear Non-Proliferation Treaty and conduct a nuclear | INTELSLAVA"
+      "text": "US Envoy Jared Kushner says Doha attack left Israel ‘globally isolated’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: US Envoy Jared Kushner says Doha attack left Israel ‘globally isolated’ | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[43]",
+      "path": "root.newsFeed[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -335,11 +329,11 @@
       ],
       "matchedKeywords": [
         "missile",
-        "drone"
+        "border"
       ],
       "otherCategories": [],
-      "text": "—❗️/ NEW: Alerts in Khamis Mushait and Abha Yemeni ballistic missile and drone attacks against Saud | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: —❗️/ NEW: Alerts in Khamis Mushait and Abha Yemeni ballistic missile and drone attacks against Saud | CIG_TELEGRAM"
+      "text": "❌🌞 — NOW: Missile sightings reported over the Sulaimaniyah border area, with multiple loud explosio | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, border. Signal: ❌🌞 — NOW: Missile sightings reported over the Sulaimaniyah border area, with multiple loud explosio | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -368,6 +362,33 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇾🇪❌🇸🇦 — All clear, alerts ended. It was a larger attack than the previous attack last week, probably impacting oil refineries.",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇾🇪❌🇸🇦 — All clear, alerts ended. It was a larger attack than the previous attack last week, probably impacting oil refineries."
     }
   ]
 }
