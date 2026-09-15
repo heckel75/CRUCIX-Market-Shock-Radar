@@ -1,8 +1,43 @@
 {
   "title": "CRUCIX Market Shock Snapshot Manifest",
-  "generatedAt": "2026-09-11T01:24:44.031Z",
-  "count": 24,
+  "generatedAt": "2026-09-15T01:51:11.851Z",
+  "count": 25,
   "snapshots": [
+    {
+      "date": "2026-09-09",
+      "file": "2026-09-09.json",
+      "path": "log/2026-09-09.json",
+      "framing": "readings as of market close, 2026-09-09",
+      "generatedAt": "2026-09-15T01:51:11.679Z",
+      "marketFreshness": {
+        "status": "lagging",
+        "generatedAt": "2026-09-15T01:51:08.297Z",
+        "generatedDate": "2026-09-15",
+        "runDate": "2026-09-15",
+        "asOfClose": "2026-09-09",
+        "calendarLagDays": 6,
+        "currentMaxCalendarLagDays": 3,
+        "staleAfterCalendarDays": 14,
+        "warning": "Market readings are lagging: generated 2026-09-15, readings as of market close, 2026-09-09 (6 calendar days old)."
+      },
+      "warnings": [
+        {
+          "code": "market-readings-lagging",
+          "severity": "warning",
+          "status": "lagging",
+          "asOfClose": "2026-09-09",
+          "generatedDate": "2026-09-15",
+          "calendarLagDays": 6,
+          "message": "Market readings are lagging: generated 2026-09-15, readings as of market close, 2026-09-09 (6 calendar days old)."
+        }
+      ],
+      "rowCount": 5,
+      "stateCounts": {
+        "priced": 2,
+        "calm": 2,
+        "radar-claim": 1
+      }
+    },
     {
       "date": "2026-09-04",
       "file": "2026-09-04.json",
