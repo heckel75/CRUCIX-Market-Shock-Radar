@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-15T01:51:08.143Z",
+  "generatedAt": "2026-09-16T01:36:23.695Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -16,134 +16,33 @@
     "Geopolitical Escalation": 14,
     "Energy Shock": 1
   },
-  "candidateCount": 137,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 23,
-      "confidence": "High",
+      "score": 15,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "russia",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦🇷🇺⚡️ — The energy ceasefire between Ukraine and Russia has not been finalized; talk of an agreement not to strike energy infrastructure is premature, and terms are still being developed with no",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — The energy ceasefire between Ukraine and Russia has not been finalized; talk of an agreement not to strike energy infrastructure is premature, and terms are still b..."
-    },
-    {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 22,
-      "confidence": "High",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "crude",
-        "pipeline",
         "attack",
-        "drone"
+        "russia",
+        "ukraine"
       ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "🇾🇪⚔️🇸🇦 Extensive damage is visible in today’s sat imagery at Pump Station 9 on Saudi Arabia’s East–West Crude Oil Pipeline, following the Sept. 10 drone attack launched from Iraq. This is another",
-      "explanation": "Energy Shock match based on keywords: oil, crude, pipeline. Signal: 🇾🇪⚔️🇸🇦 Extensive damage is visible in today’s sat imagery at Pump Station 9 on Saudi Arabia’s East–West Crude Oil Pipeline, following the Sept. 10 drone attack launched from..."
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Russia’s rapid expansion of jet-powered attack drones is creating a growing challenge for Ukraine’s air-defense system and forcing Kyiv to adapt to a faster and more demanding threat. - R",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia’s rapid expansion of jet-powered attack drones is creating a growing challenge for Ukraine’s air-defense system and forcing Kyiv to adapt to a faster and mor..."
     },
     {
       "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "iran",
-        "china"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇸 🇨🇳 🇮🇷 Trump says China ‘spies on us’ after report links Chinese satellite imagery to deadly Iran strike President Donald Trump said China “spies on us” just as the United States spies on Bei",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran, china. Signal: 🇺🇸 🇨🇳 🇮🇷 Trump says China ‘spies on us’ after report links Chinese satellite imagery to deadly Iran strike President Donald Trump said China “spies on us” just as the Unit..."
-    },
-    {
-      "path": "root.newsFeed[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "iran",
-        "china"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Trump says China ‘spies on us’ after report links Chinese satellite imagery to deadly Iran strike P | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran, china. Signal: Trump says China ‘spies on us’ after report links Chinese satellite imagery to deadly Iran strike P | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -165,10 +64,216 @@
       "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: OSINT channels report explosions at JSC \"Sebryakovcement\" in Russia's Volgograd region. Following the blasts, the facility was engulfed in smoke. It is also reported that missil..."
     },
     {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
+      "path": "root.news[8]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "china"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Iran’s top diplomat heads to China as war drags on | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, china. Signal: Iran war Update: Iran’s top diplomat heads to China as war drags on | Al Jazeera"
+    },
+    {
+      "path": "root.news[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "military",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "US Military Faces Ammunition Shortages Amid Ongoing Iran War | Africa News",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: US Military Faces Ammunition Shortages Amid Ongoing Iran War | Africa News"
+    },
+    {
+      "path": "root.news[41]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Russia stages early voting in occupied Ukraine ahead of national election | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia stages early voting in occupied Ukraine ahead of national election | Euronews"
+    },
+    {
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Rates",
+        "Treasuries",
+        "FX",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "inflation"
+      ],
+      "otherCategories": [
+        "Macro / Inflation Shock"
+      ],
+      "text": "Iran war increasing inflation, straining US munitions: congressional report | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war increasing inflation, straining US munitions: congressional report | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺❌🇺🇦🇪🇺 — Ukraine asks the West to urgently supply locomotives amid Russian drone strikes. Over 250 locomotives have been destroyed or damaged in Ukraine this year by UAV strikes, according to",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: 🇷🇺❌🇺🇦🇪🇺 — Ukraine asks the West to urgently supply locomotives amid Russian drone strikes. Over 250 locomotives have been destroyed or damaged in Ukraine this year by UAV ..."
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "china"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸 🇷🇺 🇨🇳 USTR data compiled by the Senate Foreign Relations Committee shows countries that’d be subject to tariffs under the Senate-passed Russia sanctions bill China tops all 3 categories: cru",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, china. Signal: 🇺🇸 🇷🇺 🇨🇳 USTR data compiled by the Senate Foreign Relations Committee shows countries that’d be subject to tariffs under the Senate-passed Russia sanctions bill China tops..."
+    },
+    {
+      "path": "root.news[27]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war has led to US munitions shortfalls, Pentagon inspector confirms",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war has led to US munitions shortfalls, Pentagon inspector confirms"
+    },
+    {
+      "path": "root.news[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israel lacking respect for dead buried in Gaza rubble: UN | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel lacking respect for dead buried in Gaza rubble: UN | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[29]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️ — Russia’s rapid expansion of jet-powered attack drones is creating a growing challenge for Ukrai | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: ⚡️ — Russia’s rapid expansion of jet-powered attack drones is creating a growing challenge for Ukrai | INTELSLAVA"
+    },
+    {
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -183,20 +288,20 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "missile"
+        "taiwan",
+        "container"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "The Russians report that Lieutenant-General Milchakov was killed in a missile strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: The Russians report that Lieutenant-General Milchakov was killed in a missile strike."
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[8]",
+      "path": "root.news[47]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -204,168 +309,49 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: CENTCOM disputes IRGC claim supertanker struck by Hormuz nav | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: CENTCOM disputes IRGC claim supertanker struck by Hormuz nav | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[9]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "⚡️ — The energy ceasefire between Ukraine and Russia has not been finalized; talk of an agreement no | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡️ — The energy ceasefire between Ukraine and Russia has not been finalized; talk of an agreement no | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇦⚡️ — Zelensky has appointed a new Commander of the Medical Forces of the Armed Forces of Ukraine: Konstantin Humenyuk, a military surgeon and Colonel of the Medical Service, according to a decree.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇺🇦⚡️ — Zelensky has appointed a new Commander of the Medical Forces of the Armed Forces of Ukraine: Konstantin Humenyuk, a military surgeon and Colonel of the Medical Service,..."
-    },
-    {
-      "path": "root.news[5]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Russia resupplies military bases in Syria for first time under new deal | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: Russia resupplies military bases in Syria for first time under new deal | Al Jazeera"
-    },
-    {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Zelensky says Ukraine ready to de-escalate if Russia halts strikes | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelensky says Ukraine ready to de-escalate if Russia halts strikes | France 24"
-    },
-    {
-      "path": "root.news[19]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israeli attack targets Gaza displacement camp | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, gaza. Signal: Israeli attack targets Gaza displacement camp | Al Jazeera"
-    },
-    {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
         "Equities"
       ],
       "matchedKeywords": [
-        "israel",
-        "bank"
+        "china",
+        "policy"
       ],
       "otherCategories": [
-        "Credit Stress"
+        "Sanctions / Policy Shock"
       ],
-      "text": "Rights group accuses Israel of dismantling 'Palestinian existence' in West Bank | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Rights group accuses Israel of dismantling 'Palestinian existence' in West Bank | France 24"
+      "text": "'Revolutionary change in American foreign policy': Canada pivoting towards EU, India and China | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: 'Revolutionary change in American foreign policy': Canada pivoting towards EU, India and China | France 24"
     },
     {
-      "path": "root.news[24]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
       "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -374,33 +360,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "airstrike"
       ],
       "otherCategories": [],
-      "text": "US blocks Iran nuclear chief from attending key Vienna conference | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: US blocks Iran nuclear chief from attending key Vienna conference | Al Jazeera"
-    },
-    {
-      "path": "root.news[25]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israel probing Naza film on Gaza for treason, inciting anti-Semitism | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel probing Naza film on Gaza for treason, inciting anti-Semitism | Al Jazeera"
+      "text": "🇾🇪⚡- Initial reports: Muhammad Sharaf Adla, Deputy Director of the Office of Ansarullah's Chief Abdul-Malik al-Houthi, was killed in an airstrike in the al-Mocha area, southwest Yemen.",
+      "explanation": "Geopolitical Escalation match based on keywords: airstrike. Signal: 🇾🇪⚡- Initial reports: Muhammad Sharaf Adla, Deputy Director of the Office of Ansarullah's Chief Abdul-Malik al-Houthi, was killed in an airstrike in the al-Mocha area, southwe..."
     }
   ]
 }
