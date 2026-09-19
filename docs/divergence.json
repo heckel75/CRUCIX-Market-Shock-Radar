@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-18T01:26:28.108Z",
+  "generatedAt": "2026-09-19T01:31:03.307Z",
   "date": "2026-09-11",
   "asOfClose": "2026-09-11",
   "framing": "readings as of market close, 2026-09-11",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-18T01:26:24.776Z",
-    "generatedDate": "2026-09-18",
+    "generatedAt": "2026-09-19T01:30:58.746Z",
+    "generatedDate": "2026-09-19",
     "asOfClose": "2026-09-11",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-18T01:26:24.776Z",
-    "generatedDate": "2026-09-18",
-    "runDate": "2026-09-18",
+    "generatedAt": "2026-09-19T01:30:58.746Z",
+    "generatedDate": "2026-09-19",
+    "runDate": "2026-09-19",
     "asOfClose": "2026-09-11",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-18, readings as of market close, 2026-09-11 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-19, readings as of market close, 2026-09-11 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-11",
-      "generatedDate": "2026-09-18",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-18, readings as of market close, 2026-09-11 (7 calendar days old)."
+      "generatedDate": "2026-09-19",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-19, readings as of market close, 2026-09-11 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,9 +54,9 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
+    "priced": 1,
     "calm": 1,
-    "radar-miss": 1,
+    "radar-miss": 2,
     "radar-claim": 1
   },
   "rows": [
@@ -64,30 +64,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 15,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 22,
-        "confidence": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "attack",
-          "oil",
-          "refinery"
+          "missile",
+          "drone",
+          "russia"
         ],
-        "text": "The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged the AVT-3 primary proc",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged ..."
+        "text": "🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent, while NATO says it se",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: 🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent..."
       },
       "market_z": 1.891,
       "abs_market_z": 1.891,
@@ -98,7 +97,7 @@
       "driver_as_of": "2026-09-11",
       "market_as_of": "2026-09-11",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -123,38 +122,22 @@
       "driver_as_of": "2026-09-11",
       "market_as_of": "2026-09-11",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 3,
-      "top_signal": {
-        "path": "root.tg.urgent[1]",
-        "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "strike",
-          "attack",
-          "oil",
-          "refinery"
-        ],
-        "text": "The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged the AVT-3 primary proc",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged ..."
-      },
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.891,
       "abs_market_z": 1.891,
       "market_moving": true,
@@ -164,8 +147,8 @@
       "driver_as_of": "2026-09-11",
       "market_as_of": "2026-09-11",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "priced"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -189,37 +172,35 @@
       "driver_as_of": "2026-09-11",
       "market_as_of": "2026-09-11",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[6]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "oil",
-          "refinery"
+          "gaza"
         ],
-        "text": "The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged the AVT-3 primary proc",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged ..."
+        "text": "Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera"
       },
       "market_z": -0.746,
       "abs_market_z": 0.746,
@@ -230,7 +211,7 @@
       "driver_as_of": "2026-09-11",
       "market_as_of": "2026-09-11",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],

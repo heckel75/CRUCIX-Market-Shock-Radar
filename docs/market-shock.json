@@ -1,113 +1,25 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-18T01:26:24.623Z",
+  "generatedAt": "2026-09-19T01:30:58.622Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 138,
+  "candidateCount": 139,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 22,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "attack",
-        "oil",
-        "refinery"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged the AVT-3 primary proc",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukrainian drones, Reuters reports, citing four industry sources. The strike damaged ..."
-    },
-    {
-      "path": "root.news[40]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 20,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "iran",
-        "russia",
-        "china"
-      ],
-      "otherCategories": [],
-      "text": "Russia and China Veto U.S. Bid to Renew U.N. Monitoring of Iran Nuclear Program",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran, russia, china. Signal: Russia and China Veto U.S. Bid to Renew U.N. Monitoring of Iran Nuclear Program"
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Last night, the Defense Forces of Ukraine attacked Rostov, targeting aviation and military base infrastructure. At present, the strike on an An-12 aircraft, two An-26s, and three more helicopters in R",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, military, ukraine. Signal: Last night, the Defense Forces of Ukraine attacked Rostov, targeting aviation and military base infrastructure. At present, the strike on an An-12 aircraft, two An-26s, and thre..."
-    },
-    {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -120,19 +32,156 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
+        "missile",
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent, while NATO says it se",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: 🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
         "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇾🇪🇾🇪❌🇸🇦 — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid sirens sounding in several areas across the Kingdom. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: 🇾🇪🇾🇪❌🇸🇦 — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid sirens sounding in several areas across the Kingdom. @IntelSlava"
+    },
+    {
+      "path": "root.news[5]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Trump signs sweeping Russia sanctions over Ukraine war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump signs sweeping Russia sanctions over Ukraine war | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[24]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "❌ — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: ❌ — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid | INTELSLAVA"
+    },
+    {
+      "path": "root.newsFeed[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "❌ — European leaders are increasingly alarmed that Russia could stage drone or missile attacks again | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: ❌ — European leaders are increasingly alarmed that Russia could stage drone or missile attacks again | INTELSLAVA"
+    },
+    {
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "gaza"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
         "border",
-        "ukraine"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Ukraine continues to massively attack the Russian border region. As a result of an attack on the Bryansk region, the head of the Starodub district and three employees of an agricultural enterprise wer",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, border, ukraine. Signal: Ukraine continues to massively attack the Russian border region. As a result of an attack on the Bryansk region, the head of the Starodub district and three employees of an agri..."
+      "text": "🇪🇪🇷🇺⚡️ — Estonia is ready to immediately close its border with Russia in the event of a general mobilization being declared in the Russian Federation, Prime Minister Mihkel stated. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: 🇪🇪🇷🇺⚡️ — Estonia is ready to immediately close its border with Russia in the event of a general mobilization being declared in the Russian Federation, Prime Minister Mihkel ..."
     },
     {
-      "path": "root.news[23]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -142,97 +191,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "russia",
-        "china"
+        "war",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Russia, China veto UN mandate to monitor Iran sanctions | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia, china. Signal: Russia, China veto UN mandate to monitor Iran sanctions | Al Jazeera"
-    },
-    {
-      "path": "root.news[9]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: Trump weighs ‘big decision’ on Iran, tanker hit in Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump weighs ‘big decision’ on Iran, tanker hit in Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.news[33]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "U.S. Strike on Iranian School May Have Been War Crime, U.N. Report Says",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike. Signal: U.S. Strike on Iranian School May Have Been War Crime, U.N. Report Says"
-    },
-    {
-      "path": "root.newsFeed[46]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "refinery",
-        "attack"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukraini | INTELSLAVA",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: The Russian Yaroslavl refinery \"Slavneft-YANOS\" has halted oil processing after an attack by Ukraini | INTELSLAVA"
+      "text": "🇷🇺🇪🇺⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the confrontation to shore up falling approval ratings and deflect from economic and social prob",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇷🇺🇪🇺⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the confrontation to shore up falling approval ratings and deflect from e..."
     },
     {
       "path": "root.tg.urgent[11]",
@@ -248,12 +212,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "russia"
+        "missile",
+        "attack"
       ],
       "otherCategories": [],
-      "text": "The U.S. House of Representatives has passed a bill imposing tough sanctions against Russia and Iran. The initiative was authored by Senator Lindsey Graham. The document now awaits Donald Trump's sign",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: The U.S. House of Representatives has passed a bill imposing tough sanctions against Russia and Iran. The initiative was authored by Senator Lindsey Graham. The document now awa..."
+      "text": "In my opinion, the target of the Ansarallah ballistic missile attack on Riyadh was likely King Salman Airbase, just south of Riyadh. If the target was Prince Sultan Airbase, there likely wouldn't ha",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: In my opinion, the target of the Ansarallah ballistic missile attack on Riyadh was likely King Salman Airbase, just south of Riyadh. If the target was Prince Sultan Airbase, the..."
+    },
+    {
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Trump extends sanctions on Iran, Houthi supporters in Sanaa | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump extends sanctions on Iran, Houthi supporters in Sanaa | Al Jazeera"
     },
     {
       "path": "root.news[15]",
@@ -269,137 +254,96 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "UN experts say grounds to believe US committed war crimes in Iran strikes",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: UN experts say grounds to believe US committed war crimes in Iran strikes"
-    },
-    {
-      "path": "root.news[35]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Russia’s plans may include strikes against Ukraine’s allies, Poland says | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia’s plans may include strikes against Ukraine’s allies, Poland says | Al Jazeera"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Dmytro Lubinets, the Ukrainian Parliament Commissioner for Human Rights: Oleshky has become a deadly trap, as Russia has once again ignored IHL norms and basic humanity. Due to a complete blockade and",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Dmytro Lubinets, the Ukrainian Parliament Commissioner for Human Rights: Oleshky has become a deadly trap, as Russia has once again ignored IHL norms and basic humanity. Due to ..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
         "missile",
-        "oil"
+        "russia"
       ],
-      "otherCategories": [
-        "Energy Shock"
+      "otherCategories": [],
+      "text": "A four-minute warning isn't enough: Russia's new relentless missile tactics exhaust Kyiv residents",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: A four-minute warning isn't enough: Russia's new relentless missile tactics exhaust Kyiv residents"
+    },
+    {
+      "path": "root.news[32]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
-      "text": "🇾🇪❌🇸🇦 — Smoke continues to rise from oil facilities in Yanbu following missile attacks by Yemen’s armed forces.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇾🇪❌🇸🇦 — Smoke continues to rise from oil facilities in Yanbu following missile attacks by Yemen’s armed forces."
+      "matchedKeywords": [
+        "troops",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Rejecting Trump, South Korean Leader Says He Will Not Send Troops to Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, iran. Signal: Rejecting Trump, South Korean Leader Says He Will Not Send Troops to Iran"
+    },
+    {
+      "path": "root.news[46]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Russia’s drones threaten Kyiv-bound Western officials as war effort stalls | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Russia’s drones threaten Kyiv-bound Western officials as war effort stalls | Al Jazeera"
+    },
+    {
+      "path": "root.news[48]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "As Russia strikes Kyiv and Kharkiv, Russian cooling tower hit by drone | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: As Russia strikes Kyiv and Kharkiv, Russian cooling tower hit by drone | Euronews"
+    },
+    {
+      "path": "root.newsFeed[31]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: ⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the | INTELSLAVA"
     }
   ]
 }
