@@ -1,47 +1,83 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-19T01:30:58.622Z",
+  "generatedAt": "2026-09-20T01:33:09.196Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 15,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
     "categoryBreadth": 1
   },
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 139,
+  "candidateCount": 123,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 23,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "missile",
+        "strike",
         "drone",
-        "russia"
+        "ukraine",
+        "fuel"
       ],
-      "otherCategories": [],
-      "text": "🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent, while NATO says it se",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: 🇷🇺❌🇪🇺 — European leaders are increasingly alarmed that Russia could stage drone or missile attacks against NATO countries amid a broader hybrid campaign across the continent..."
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "Ukraine’s HUR strike drone unit found a Russian fuel and ammo depot in Zaporizhzhia region, then on the next sortie epically destroyed the building and its stockpiles.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Ukraine’s HUR strike drone unit found a Russian fuel and ammo depot in Zaporizhzhia region, then on the next sortie epically destroyed the building and its stockpiles."
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "conflict",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Slovak PM Robert Fico accuses some Western leaders of seeking to trigger a direct NATO-Russia conflict after efforts to defeat Moscow through the war in Ukraine failed. He says Russia cannot be defea",
+      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, russia, ukraine. Signal: Slovak PM Robert Fico accuses some Western leaders of seeking to trigger a direct NATO-Russia conflict after efforts to defeat Moscow through the war in Ukraine failed. He says ..."
+    },
+    {
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -54,13 +90,13 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack",
-        "drone"
+        "escalation",
+        "conflict",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid sirens sounding in several areas across the Kingdom. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: 🇾🇪🇾🇪❌🇸🇦 — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid sirens sounding in several areas across the Kingdom. @IntelSlava"
+      "text": "🇺🇸🇾🇪🇸🇦⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the Iran-backed Houthis.\" - U.S. State Department.",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, conflict, iran. Signal: 🇺🇸🇾🇪🇸🇦⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the Iran-backed Houthis.\" - U.S. State Department."
     },
     {
       "path": "root.news[5]",
@@ -77,18 +113,18 @@
       ],
       "matchedKeywords": [
         "war",
-        "russia",
-        "ukraine"
+        "attack",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Trump signs sweeping Russia sanctions over Ukraine war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump signs sweeping Russia sanctions over Ukraine war | Al Jazeera"
+      "text": "Iran war Update: Tehran sets terms for peace; Saudi forces foil Riyadh attack | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Tehran sets terms for peace; Saudi forces foil Riyadh attack | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[24]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -98,19 +134,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack",
+        "military",
         "drone"
       ],
       "otherCategories": [],
-      "text": "❌ — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone. Signal: ❌ — Ansar Allah launched a drone and ballistic missile attack targeting Saudi Arabia, with air raid | INTELSLAVA"
+      "text": "Zelensky says SBU military counterintelligence has created and already used a new interceptor drone against jet Shaheds. A video shows a Geran-5 shootdown, the fastest Shahed type at about 600 km/h.",
+      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: Zelensky says SBU military counterintelligence has created and already used a new interceptor drone against jet Shaheds. A video shows a Geran-5 shootdown, the fastest Shahed ty..."
     },
     {
-      "path": "root.newsFeed[34]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -120,46 +155,80 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
         "drone",
         "russia"
       ],
       "otherCategories": [],
-      "text": "❌ — European leaders are increasingly alarmed that Russia could stage drone or missile attacks again | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: ❌ — European leaders are increasingly alarmed that Russia could stage drone or missile attacks again | INTELSLAVA"
+      "text": "Zelensky adviser Flash says Russia is trying to guide Shahed drones without satellite navigation so EW can’t jam them. One option is ground radio beacons, a drone can fix its location from signals of",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Zelensky adviser Flash says Russia is trying to guide Shahed drones without satellite navigation so EW can’t jam them. One option is ground radio beacons, a drone can fix its lo..."
     },
     {
-      "path": "root.news[6]",
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "US State Dept OK’d a possible $2.68B air defense package for Ukraine, longer-range systems, mobile launchers, counter-drone radars, spares, software, support. Ukraine would pay with European contribut",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: US State Dept OK’d a possible $2.68B air defense package for Ukraine, longer-range systems, mobile launchers, counter-drone radars, spares, software, support. Ukraine would pay ..."
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine’s 3rd Army Corps posted footage of a string of strikes on Russian military vehicles deep behind the lines, mostly as they move along roads, so the crews get caught in the hits too.",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine’s 3rd Army Corps posted footage of a string of strikes on Russian military vehicles deep behind the lines, mostly as they move along roads, so the crews get caught in th..."
+    },
+    {
+      "path": "root.tg.urgent[14]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "invasion",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine’s General Staff reports that Defense Forces have neutralized over 50,000 Russian artillery systems since the start of the full-scale invasion.",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, ukraine. Signal: Ukraine’s General Staff reports that Defense Forces have neutralized over 50,000 Russian artillery systems since the start of the full-scale invasion."
+    },
+    {
+      "path": "root.news[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "gaza"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on motorcycle kills Palestinian in Gaza City, injures child | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
       "channels": [
@@ -170,57 +239,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "border",
-        "russia"
+        "attack",
+        "escalation"
       ],
       "otherCategories": [],
-      "text": "🇪🇪🇷🇺⚡️ — Estonia is ready to immediately close its border with Russia in the event of a general mobilization being declared in the Russian Federation, Prime Minister Mihkel stated. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: 🇪🇪🇷🇺⚡️ — Estonia is ready to immediately close its border with Russia in the event of a general mobilization being declared in the Russian Federation, Prime Minister Mihkel ..."
+      "text": "In Significant Escalation, Houthis Attack Saudi Capital",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, escalation. Signal: In Significant Escalation, Houthis Attack Saudi Capital"
     },
     {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇪🇺⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the confrontation to shore up falling approval ratings and deflect from economic and social prob",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇷🇺🇪🇺⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the confrontation to shore up falling approval ratings and deflect from e..."
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "In my opinion, the target of the Ansarallah ballistic missile attack on Riyadh was likely King Salman Airbase, just south of Riyadh. If the target was Prince Sultan Airbase, there likely wouldn't ha",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: In my opinion, the target of the Ansarallah ballistic missile attack on Riyadh was likely King Salman Airbase, just south of Riyadh. If the target was Prince Sultan Airbase, the..."
-    },
-    {
-      "path": "root.news[7]",
+      "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -237,29 +264,8 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump extends sanctions on Iran, Houthi supporters in Sanaa | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump extends sanctions on Iran, Houthi supporters in Sanaa | Al Jazeera"
-    },
-    {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "A four-minute warning isn't enough: Russia's new relentless missile tactics exhaust Kyiv residents",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: A four-minute warning isn't enough: Russia's new relentless missile tactics exhaust Kyiv residents"
+      "text": "Hegseth kicks off ‘Send Me Tour’ amid Iran war backlash | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Hegseth kicks off ‘Send Me Tour’ amid Iran war backlash | Al Jazeera"
     },
     {
       "path": "root.news[32]",
@@ -275,15 +281,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "troops",
+        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Rejecting Trump, South Korean Leader Says He Will Not Send Troops to Iran",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, iran. Signal: Rejecting Trump, South Korean Leader Says He Will Not Send Troops to Iran"
+      "text": "Iran says conditions to re-engage in talks, end war sent to US via Qatar | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran says conditions to re-engage in talks, end war sent to US via Qatar | Al Jazeera"
     },
     {
-      "path": "root.news[46]",
+      "path": "root.newsFeed[13]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -296,15 +302,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "escalation",
+        "conflict"
       ],
       "otherCategories": [],
-      "text": "Russia’s drones threaten Kyiv-bound Western officials as war effort stalls | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Russia’s drones threaten Kyiv-bound Western officials as war effort stalls | Al Jazeera"
+      "text": "⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, conflict. Signal: ⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the | CIG_TELEGRAM"
     },
     {
-      "path": "root.news[48]",
+      "path": "root.newsFeed[42]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -317,33 +323,40 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "russia"
+        "military",
+        "drone"
       ],
       "otherCategories": [],
-      "text": "As Russia strikes Kyiv and Kharkiv, Russian cooling tower hit by drone | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: As Russia strikes Kyiv and Kharkiv, Russian cooling tower hit by drone | Euronews"
+      "text": "Zelensky says SBU military counterintelligence has created and already used a new interceptor drone | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: Zelensky says SBU military counterintelligence has created and already used a new interceptor drone | WARTRANSLATED"
     },
     {
-      "path": "root.newsFeed[31]",
-      "sourcePriority": "Medium",
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "taiwan",
+        "container"
       ],
-      "otherCategories": [],
-      "text": "⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: ⚡️— Putin says some European leaders are openly declaring war on Russia, accusing them of using the | INTELSLAVA"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     }
   ]
 }
