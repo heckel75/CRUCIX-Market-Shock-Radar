@@ -1,28 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-20T01:33:09.196Z",
+  "generatedAt": "2026-09-21T01:32:58.223Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 123,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
+      "path": "root.news[21]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 23,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -30,101 +31,59 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
         "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
         "Commodities",
-        "Margins"
+        "Emerging Markets",
+        "Credit",
+        "Equities"
       ],
       "matchedKeywords": [
-        "strike",
         "drone",
+        "russia",
         "ukraine",
-        "fuel"
+        "election"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Sanctions / Policy Shock"
       ],
-      "text": "Ukraine’s HUR strike drone unit found a Russian fuel and ammo depot in Zaporizhzhia region, then on the next sortie epically destroyed the building and its stockpiles.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Ukraine’s HUR strike drone unit found a Russian fuel and ammo depot in Zaporizhzhia region, then on the next sortie epically destroyed the building and its stockpiles."
+      "text": "Russia's ruling party on track to win election after Ukraine's drone attacks on Moscow | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia, ukraine. Signal: Russia's ruling party on track to win election after Ukraine's drone attacks on Moscow | France 24"
     },
     {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
+      "path": "root.news[22]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 20,
+      "score": 18,
       "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy",
+        "Commodities"
       ],
       "matchedKeywords": [
         "war",
-        "conflict",
-        "russia",
-        "ukraine"
+        "iran",
+        "israel",
+        "earthquake"
       ],
-      "otherCategories": [],
-      "text": "Slovak PM Robert Fico accuses some Western leaders of seeking to trigger a direct NATO-Russia conflict after efforts to defeat Moscow through the war in Ukraine failed. He says Russia cannot be defea",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, russia, ukraine. Signal: Slovak PM Robert Fico accuses some Western leaders of seeking to trigger a direct NATO-Russia conflict after efforts to defeat Moscow through the war in Ukraine failed. He says ..."
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+      "otherCategories": [
+        "Weather / Climate Shock"
       ],
-      "matchedKeywords": [
-        "escalation",
-        "conflict",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🇾🇪🇸🇦⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the Iran-backed Houthis.\" - U.S. State Department.",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, conflict, iran. Signal: 🇺🇸🇾🇪🇸🇦⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the Iran-backed Houthis.\" - U.S. State Department."
-    },
-    {
-      "path": "root.news[5]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "attack",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Tehran sets terms for peace; Saudi forces foil Riyadh attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Tehran sets terms for peace; Saudi forces foil Riyadh attack | Al Jazeera"
+      "text": "Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel. Signal: Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ | Al Jazeera"
     },
     {
       "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -134,39 +93,19 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Zelensky says SBU military counterintelligence has created and already used a new interceptor drone against jet Shaheds. A video shows a Geran-5 shootdown, the fastest Shahed type at about 600 km/h.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: Zelensky says SBU military counterintelligence has created and already used a new interceptor drone against jet Shaheds. A video shows a Geran-5 shootdown, the fastest Shahed ty..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
+        "missile",
         "drone",
         "russia"
       ],
       "otherCategories": [],
-      "text": "Zelensky adviser Flash says Russia is trying to guide Shahed drones without satellite navigation so EW can’t jam them. One option is ground radio beacons, a drone can fix its location from signals of",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: Zelensky adviser Flash says Russia is trying to guide Shahed drones without satellite navigation so EW can’t jam them. One option is ground radio beacons, a drone can fix its lo..."
+      "text": "🇪🇺🇷🇺🇺🇦⚡️ — European intelligence officials warn that Russia could test NATO within “months, not years,” potentially through drone or missile strikes, false-flag operations, influence operations",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: 🇪🇺🇷🇺🇺🇦⚡️ — European intelligence officials warn that Russia could test NATO within “months, not years,” potentially through drone or missile strikes, false-flag operations..."
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -176,60 +115,19 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "ukraine"
+        "war",
+        "conflict",
+        "military"
       ],
       "otherCategories": [],
-      "text": "US State Dept OK’d a possible $2.68B air defense package for Ukraine, longer-range systems, mobile launchers, counter-drone radars, spares, software, support. Ukraine would pay with European contribut",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: US State Dept OK’d a possible $2.68B air defense package for Ukraine, longer-range systems, mobile launchers, counter-drone radars, spares, software, support. Ukraine would pay ..."
+      "text": "📂 — WAR ROOM is a curated network of independent news channels, conflict observers, military analysts, and open-source researchers covering conflicts and geopolitical developments around the world.",
+      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, military. Signal: 📂 — WAR ROOM is a curated network of independent news channels, conflict observers, military analysts, and open-source researchers covering conflicts and geopolitical developme..."
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine’s 3rd Army Corps posted footage of a string of strikes on Russian military vehicles deep behind the lines, mostly as they move along roads, so the crews get caught in the hits too.",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine’s 3rd Army Corps posted footage of a string of strikes on Russian military vehicles deep behind the lines, mostly as they move along roads, so the crews get caught in th..."
-    },
-    {
-      "path": "root.tg.urgent[14]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "invasion",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Ukraine’s General Staff reports that Defense Forces have neutralized over 50,000 Russian artillery systems since the start of the full-scale invasion.",
-      "explanation": "Geopolitical Escalation match based on keywords: invasion, ukraine. Signal: Ukraine’s General Staff reports that Defense Forces have neutralized over 50,000 Russian artillery systems since the start of the full-scale invasion."
-    },
-    {
-      "path": "root.news[16]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -240,14 +138,59 @@
       ],
       "matchedKeywords": [
         "attack",
-        "escalation"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "In Significant Escalation, Houthis Attack Saudi Capital",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, escalation. Signal: In Significant Escalation, Houthis Attack Saudi Capital"
+      "text": "Zelensky says Russia fired over 2,000 attack drones, mostly jet-powered, 1,700 guided bombs and 19 missiles at Ukraine this week alone. Strikes hit Kherson, Kharkiv, Sumy, Odesa, Dnipro, Zaporizhzhia,",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: Zelensky says Russia fired over 2,000 attack drones, mostly jet-powered, 1,700 guided bombs and 19 missiles at Ukraine this week alone. Strikes hit Kherson, Kharkiv, Sumy, Odesa..."
     },
     {
-      "path": "root.news[23]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "drone",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine’s State Border Guard Service says its Phoenix unit in the Pomsta brigade spotted a Russian Buk SAM hidden in a treeline and hit it with several drone strikes. It also says Russian DRG groups n",
+      "explanation": "Geopolitical Escalation match based on keywords: border, drone, ukraine. Signal: Ukraine’s State Border Guard Service says its Phoenix unit in the Pomsta brigade spotted a Russian Buk SAM hidden in a treeline and hit it with several drone strikes. It also sa..."
+    },
+    {
+      "path": "root.newsFeed[40]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "conflict",
+        "military"
+      ],
+      "otherCategories": [],
+      "text": "📂 — WAR ROOM is a curated network of independent news channels, conflict observers, military analys | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: war, conflict, military. Signal: 📂 — WAR ROOM is a curated network of independent news channels, conflict observers, military analys | INTELSLAVA"
+    },
+    {
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -264,11 +207,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Hegseth kicks off ‘Send Me Tour’ amid Iran war backlash | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Hegseth kicks off ‘Send Me Tour’ amid Iran war backlash | Al Jazeera"
+      "text": "Iran war Update: Tehran warns US against new strikes; fighting rages in Yemen | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran warns US against new strikes; fighting rages in Yemen | Al Jazeera"
     },
     {
-      "path": "root.news[32]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -278,57 +221,22 @@
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "israel",
+        "bank"
       ],
-      "otherCategories": [],
-      "text": "Iran says conditions to re-engage in talks, end war sent to US via Qatar | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran says conditions to re-engage in talks, end war sent to US via Qatar | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+      "otherCategories": [
+        "Credit Stress"
       ],
-      "matchedKeywords": [
-        "escalation",
-        "conflict"
-      ],
-      "otherCategories": [],
-      "text": "⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, conflict. Signal: ⚡️- BREAKING: \"There is a possibility of an escalation in the conflict between Saudi Arabia and the | CIG_TELEGRAM"
-    },
-    {
-      "path": "root.newsFeed[42]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Zelensky says SBU military counterintelligence has created and already used a new interceptor drone | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: Zelensky says SBU military counterintelligence has created and already used a new interceptor drone | WARTRANSLATED"
+      "text": "Inside the Breakdown of U.K.-Israel Relations Over West Bank Settlements",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Inside the Breakdown of U.K.-Israel Relations Over West Bank Settlements"
     },
     {
       "path": "root.chokepoints[5]",
@@ -357,6 +265,135 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The aftermath of a strike on warehouses in the city of Boyarka, Kyiv Oblast. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of a strike on warehouses in the city of Boyarka, Kyiv Oblast. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The aftermath of the strike on a warehouse in Kiev. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of the strike on a warehouse in Kiev. @IntelSlava"
+    },
+    {
+      "path": "root.newsFeed[30]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — The aftermath of a strike on warehouses in the city of Boyarka, Kyiv Oblast. @IntelSlava | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️ — The aftermath of a strike on warehouses in the city of Boyarka, Kyiv Oblast. @IntelSlava | INTELSLAVA"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Rates",
+        "Treasuries",
+        "FX",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "inflation"
+      ],
+      "otherCategories": [
+        "Macro / Inflation Shock"
+      ],
+      "text": "🇮🇷🇺🇸⚡️ — CNN reports Iran’s medicine shortages are worsening amid sanctions, inflation, and large unpaid insurance debts to pharmacies. The Iranian Pharmacists Association says nearly 800 medicin",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸⚡️ — CNN reports Iran’s medicine shortages are worsening amid sanctions, inflation, and large unpaid insurance debts to pharmacies. The Iranian Pharmacists Association s..."
     }
   ]
 }
