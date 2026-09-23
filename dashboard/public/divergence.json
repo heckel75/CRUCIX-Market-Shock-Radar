@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-22T01:48:19.330Z",
+  "generatedAt": "2026-09-23T01:43:40.368Z",
   "date": "2026-09-15",
   "asOfClose": "2026-09-15",
   "framing": "readings as of market close, 2026-09-15",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-22T01:48:14.770Z",
-    "generatedDate": "2026-09-22",
+    "generatedAt": "2026-09-23T01:43:36.585Z",
+    "generatedDate": "2026-09-23",
     "asOfClose": "2026-09-15",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-22T01:48:14.770Z",
-    "generatedDate": "2026-09-22",
-    "runDate": "2026-09-22",
+    "generatedAt": "2026-09-23T01:43:36.585Z",
+    "generatedDate": "2026-09-23",
+    "runDate": "2026-09-23",
     "asOfClose": "2026-09-15",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-22, readings as of market close, 2026-09-15 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-23, readings as of market close, 2026-09-15 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-15",
-      "generatedDate": "2026-09-22",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-22, readings as of market close, 2026-09-15 (7 calendar days old)."
+      "generatedDate": "2026-09-23",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-23, readings as of market close, 2026-09-15 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,30 +62,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 1,
+      "signal_count": 13,
+      "signal_primary_count": 13,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[43]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "attack",
-          "drone",
-          "crude",
-          "refinery"
+          "war",
+          "russia",
+          "ukraine"
         ],
-        "text": "🇺🇦❌🇷🇺 — BREAKING: Gazprom Neft’s major Moscow refinery halted crude processing after fires hit its main distillation units following a Ukrainian drone attack on Sept. 20, Reuters reports.",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇺🇦❌🇷🇺 — BREAKING: Gazprom Neft’s major Moscow refinery halted crude processing after fires hit its main distillation units following a Ukrainian drone attack on Sept. 20, Re..."
+        "text": "Zelensky Says He Hopes Trump Will Help to End Russia-Ukraine War ‘Before Winter’",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Zelensky Says He Hopes Trump Will Help to End Russia-Ukraine War ‘Before Winter’"
       },
       "market_z": 2.501,
       "abs_market_z": 2.501,
@@ -96,7 +95,7 @@
       "driver_as_of": "2026-09-15",
       "market_as_of": "2026-09-15",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -112,19 +111,19 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[28]",
+        "path": "root.tg.urgent[13]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
           "russia",
           "election"
         ],
-        "text": "Putin’s party wins supermajority in Russia’s parliamentary election | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Putin’s party wins supermajority in Russia’s parliamentary election | Al Jazeera"
+        "text": "🇷🇺🗳 Putin’s party wins supermajority in tightly controlled parliamentary election Russian President Vladimir Putin’s United Russia party secured more than 58% of the vote in Russian elections, put",
+        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🗳 Putin’s party wins supermajority in tightly controlled parliamentary election Russian President Vladimir Putin’s United Russia party secured more than 58% of the vote in ..."
       },
       "market_z": -1.648,
       "abs_market_z": 1.648,
@@ -135,37 +134,36 @@
       "driver_as_of": "2026-09-15",
       "market_as_of": "2026-09-15",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_count": 4,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[7]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "attack",
-          "drone",
-          "crude",
-          "refinery"
+          "russia",
+          "ukraine",
+          "energy"
         ],
-        "text": "🇺🇦❌🇷🇺 — BREAKING: Gazprom Neft’s major Moscow refinery halted crude processing after fires hit its main distillation units following a Ukrainian drone attack on Sept. 20, Reuters reports.",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇺🇦❌🇷🇺 — BREAKING: Gazprom Neft’s major Moscow refinery halted crude processing after fires hit its main distillation units following a Ukrainian drone attack on Sept. 20, Re..."
+        "text": "Zelenskyy says Ukraine ready for energy truce with Russia after Trump talks | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelenskyy says Ukraine ready for energy truce with Russia after Trump talks | Al Jazeera"
       },
       "market_z": 2.501,
       "abs_market_z": 2.501,
@@ -176,7 +174,7 @@
       "driver_as_of": "2026-09-15",
       "market_as_of": "2026-09-15",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -201,36 +199,35 @@
       "driver_as_of": "2026-09-15",
       "market_as_of": "2026-09-15",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
+      "signal_count": 3,
+      "signal_primary_count": 0,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.news[48]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "strike",
-          "drone",
-          "port"
+          "iran"
         ],
-        "text": "🇺🇦🇷🇺⚡️ — Satellite imagery shows the aftermath of another strike by the Ukrainian Armed Forces on a drone port near the village of Cimbulovo in the Oryol region. This time, the strikes targeted t",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇺🇦🇷🇺⚡️ — Satellite imagery shows the aftermath of another strike by the Ukrainian Armed Forces on a drone port near the village of Cimbulovo in the Oryol region. This time, ..."
+        "text": "At U.N., Trump Says He Will Strike a Deal With Iran or ‘Annihilate’ It",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: At U.N., Trump Says He Will Strike a Deal With Iran or ‘Annihilate’ It"
       },
       "market_z": -1.662,
       "abs_market_z": 1.662,
@@ -241,7 +238,7 @@
       "driver_as_of": "2026-09-15",
       "market_as_of": "2026-09-15",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
