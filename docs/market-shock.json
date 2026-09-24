@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-23T01:43:36.470Z",
+  "generatedAt": "2026-09-24T01:37:28.810Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,14 +13,49 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Supply Chain Disruption": 1
   },
-  "candidateCount": 121,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[43]",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 22,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone",
+        "rail",
+        "gas"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Energy Shock"
+      ],
+      "text": "🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Holosiivskyi districts, st",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Hol..."
+    },
+    {
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -38,68 +73,12 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Zelensky Says He Hopes Trump Will Help to End Russia-Ukraine War ‘Before Winter’",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Zelensky Says He Hopes Trump Will Help to End Russia-Ukraine War ‘Before Winter’"
+      "text": "U.N. Updates: Zelensky Warns of Growing Global Cost of Russia’s War in Ukraine",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: U.N. Updates: Zelensky Warns of Growing Global Cost of Russia’s War in Ukraine"
     },
     {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Zelenskyy says Ukraine ready for energy truce with Russia after Trump talks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelenskyy says Ukraine ready for energy truce with Russia after Trump talks | Al Jazeera"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Zelensky says Ukraine is ready for an energy ceasefire with Russia | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelensky says Ukraine is ready for an energy ceasefire with Russia | France 24"
-    },
-    {
-      "path": "root.news[48]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -122,11 +101,109 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "At U.N., Trump Says He Will Strike a Deal With Iran or ‘Annihilate’ It",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: At U.N., Trump Says He Will Strike a Deal With Iran or ‘Annihilate’ It"
+      "text": "🇺🇸🇮🇷⚡️ — Eight U.S. Navy sailors from the USS Abraham Lincoln carrier strike group attempted suicide during a deployment that included combat operations against Iran, a letter from acting Navy Sec",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇷⚡️ — Eight U.S. Navy sailors from the USS Abraham Lincoln carrier strike group attempted suicide during a deployment that included combat operations against Iran, a lett..."
     },
     {
-      "path": "root.tg.urgent[7]",
+      "path": "root.news[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "gaza"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Gaza flotilla activist on hunger strike in Tunisia jail ‘on verge of death’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Gaza flotilla activist on hunger strike in Tunisia jail ‘on verge of death’ | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "logistics",
+        "strike"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "⚓️ 🇺🇸 🇬🇺 The crew of the USS Abraham Lincoln touched American soil for the first time in nine months, when the strike group pulled into Apra Harbor, Guam, for a brief logistics stop and on-base li",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: ⚓️ 🇺🇸 🇬🇺 The crew of the USS Abraham Lincoln touched American soil for the first time in nine months, when the strike group pulled into Apra Harbor, Guam, for a brief logist..."
+    },
+    {
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇫🇮🇺🇦🇷🇺⚡️ — \"Please, Russia, stop this war,\" said the President of Finland, Alexander Stubb. At the end of August, Stubb also stated that Ukrainian strikes on logistical centers like Wildberries",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇫🇮🇺🇦🇷🇺⚡️ — \"Please, Russia, stop this war,\" said the President of Finland, Alexander Stubb. At the end of August, Stubb also stated that Ukrainian strikes on logistical ce..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸🇷🇺🇪🇸🇮🇹🇫🇷⚡️ — The CIA has warned European governments that Russia is preparing possible drone attacks against Mediterranean countries like Spain, France, and Italy, according to Spanish new",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: 🇺🇸🇷🇺🇪🇸🇮🇹🇫🇷⚡️ — The CIA has warned European governments that Russia is preparing possible drone attacks against Mediterranean countries like Spain, France, and Italy, a..."
+    },
+    {
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -147,7 +224,28 @@
       "explanation": "Geopolitical Escalation match based on keywords: attack, escalation. Signal: Lithuanian authorities have developed several evacuation scenarios in case of a serious escalation, including a possible Russian attack. At the same time, Prime Minister Mindaug..."
     },
     {
-      "path": "root.news[12]",
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺❌🇪🇸🇫🇷🇮🇹 — The CIA has warned Spain, France and Italy that Russia may be preparing drone attacks against them, sharing intelligence with European governments after CIA Director John Ratcliffe",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: 🇷🇺❌🇪🇸🇫🇷🇮🇹 — The CIA has warned Spain, France and Italy that Russia may be preparing drone attacks against them, sharing intelligence with European governments after CIA ..."
+    },
+    {
+      "path": "root.news[14]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -164,11 +262,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump confirms ‘very good’ meeting with Iran at UN | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump confirms ‘very good’ meeting with Iran at UN | Al Jazeera"
+      "text": "Iran war Update: Tehran says it won’t be bullied, remains open for talks | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran says it won’t be bullied, remains open for talks | Al Jazeera"
     },
     {
-      "path": "root.news[25]",
+      "path": "root.news[33]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -181,33 +279,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "russia"
+        "nuclear",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Macron Criticizes Israel and Russia in Final U.N. Speech as France’s President",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, russia. Signal: Macron Criticizes Israel and Russia in Final U.N. Speech as France’s President"
-    },
-    {
-      "path": "root.news[32]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Kyiv and Washington want war in Ukraine to end 'before winter,' Zelenskyy says | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Kyiv and Washington want war in Ukraine to end 'before winter,' Zelenskyy says | Euronews"
+      "text": "Iran’s president says his country will not give up its right to a peaceful nuclear program.",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Iran’s president says his country will not give up its right to a peaceful nuclear program."
     },
     {
       "path": "root.news[39]",
@@ -227,161 +304,71 @@
         "russia"
       ],
       "otherCategories": [],
-      "text": "Viral NATO video falsely framed as ‘war propaganda’ against Russia | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Viral NATO video falsely framed as ‘war propaganda’ against Russia | France 24"
+      "text": "Zelensky Warns Russia’s War Will Expand if It Is Not Ended Soon",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Zelensky Warns Russia’s War Will Expand if It Is Not Ended Soon"
     },
     {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "taiwan",
-        "container"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️🇮🇷🇺🇸 — IRGC spokesman Sardar Mohebbi addresses strike contingencies and diplomatic posture: «I do not give a definitive opinion regarding the speculation about 'Mount Kolang' [Pickaxe Mountain],",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️🇮🇷🇺🇸 — IRGC spokesman Sardar Mohebbi addresses strike contingencies and diplomatic posture: «I do not give a definitive opinion regarding the speculation about 'Mount Kola..."
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "🇷🇺🗳 Putin’s party wins supermajority in tightly controlled parliamentary election Russian President Vladimir Putin’s United Russia party secured more than 58% of the vote in Russian elections, put",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🗳 Putin’s party wins supermajority in tightly controlled parliamentary election Russian President Vladimir Putin’s United Russia party secured more than 58% of the vote in ..."
-    },
-    {
-      "path": "root.news[37]",
+      "path": "root.news[48]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "How Ceuta, football and Israel are shaping Morocco's election",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: How Ceuta, football and Israel are shaping Morocco's election"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "text": "Ukraine’s Zelenskyy calls for sustained pressure to end ‘Putin’s crazy war’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Ukraine’s Zelenskyy calls for sustained pressure to end ‘Putin’s crazy war’ | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
+      "path": "root.newsFeed[11]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "refinery"
+        "drone",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Overnight, Ukrainian drones attacked the Kuibyshev oil refinery in Samara. The refinery is part of Rosneft's Samara refining hub, which also includes plants in Novokuibyshevsk and Syzran. The Kuibyshe",
-      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Overnight, Ukrainian drones attacked the Kuibyshev oil refinery in Samara. The refinery is part of Rosneft's Samara refining hub, which also includes plants in Novokuibyshevsk a..."
+      "text": "⚡️ — The CIA has warned European governments that Russia is preparing possible drone attacks against | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, russia. Signal: ⚡️ — The CIA has warned European governments that Russia is preparing possible drone attacks against | CIG_TELEGRAM"
+    },
+    {
+      "path": "root.newsFeed[49]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️ — \"Please, Russia, stop this war,\" said the President of Finland, Alexander Stubb. At the end of | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: ⚡️ — \"Please, Russia, stop this war,\" said the President of Finland, Alexander Stubb. At the end of | INTELSLAVA"
     }
   ]
 }
