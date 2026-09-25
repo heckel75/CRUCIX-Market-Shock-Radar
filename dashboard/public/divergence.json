@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-24T01:37:33.141Z",
+  "generatedAt": "2026-09-25T01:50:51.045Z",
   "date": "2026-09-18",
   "asOfClose": "2026-09-18",
   "framing": "readings as of market close, 2026-09-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-24T01:37:28.959Z",
-    "generatedDate": "2026-09-24",
+    "generatedAt": "2026-09-25T01:50:48.412Z",
+    "generatedDate": "2026-09-25",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-24T01:37:28.959Z",
-    "generatedDate": "2026-09-24",
-    "runDate": "2026-09-24",
+    "generatedAt": "2026-09-25T01:50:48.412Z",
+    "generatedDate": "2026-09-25",
+    "runDate": "2026-09-25",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-24, readings as of market close, 2026-09-18 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-25, readings as of market close, 2026-09-18 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-18",
-      "generatedDate": "2026-09-24",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-09-24, readings as of market close, 2026-09-18 (6 calendar days old)."
+      "generatedDate": "2026-09-25",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-09-25, readings as of market close, 2026-09-18 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,7 +55,7 @@
   },
   "stateCounts": {
     "radar-claim": 3,
-    "radar-miss": 1,
+    "priced": 1,
     "calm": 1
   },
   "rows": [
@@ -63,30 +63,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 12,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[3]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 22,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone",
-          "rail",
-          "gas"
+          "attack",
+          "troops",
+          "oil"
         ],
-        "text": "🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Holosiivskyi districts, st",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Hol..."
+        "text": "🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. \"Not to engage in any",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: 🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. ..."
       },
       "market_z": -0.761,
       "abs_market_z": 0.761,
@@ -97,22 +96,37 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 1,
       "signal_secondary_count": 0,
-      "top_signal": null,
+      "top_signal": {
+        "path": "root.news[39]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Sanctions / Policy Shock",
+        "isPrimary": true,
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "ban",
+          "election",
+          "israel"
+        ],
+        "text": "Israel moves to ban main Palestinian-led lists from election | Al Jazeera",
+        "explanation": "Sanctions / Policy Shock match based on keywords: ban, election. Signal: Israel moves to ban main Palestinian-led lists from election | Al Jazeera"
+      },
       "market_z": 1.815,
       "abs_market_z": 1.815,
       "market_moving": true,
@@ -122,37 +136,36 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 7,
+      "state": "priced"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 1,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 1,
+      "signal_count": 4,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[3]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone",
-          "rail",
-          "gas"
+          "attack",
+          "troops",
+          "oil"
         ],
-        "text": "🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Holosiivskyi districts, st",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Hol..."
+        "text": "🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. \"Not to engage in any",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: 🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. ..."
       },
       "market_z": -0.778,
       "abs_market_z": 0.778,
@@ -163,7 +176,7 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -188,37 +201,36 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 4,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[4]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
+        "rawScore": 13,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone",
-          "rail",
-          "gas"
+          "iran",
+          "hormuz",
+          "shipping"
         ],
-        "text": "🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Holosiivskyi districts, st",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺❌🇺🇦 — A massive drone strike on Kyiv has raged through the day and night, hitting rail infrastructure, warehouses, gas stations and data centers. In the Darnytskyi and Hol..."
+        "text": "🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz.",
+        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz."
       },
       "market_z": -0.857,
       "abs_market_z": 0.857,
@@ -229,7 +241,7 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
