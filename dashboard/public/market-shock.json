@@ -1,27 +1,48 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-25T01:50:48.264Z",
+  "generatedAt": "2026-09-26T01:54:19.990Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 12,
-    "Sanctions / Policy Shock": 1,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 136,
+  "candidateCount": 121,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "iran",
+        "israel"
+      ],
+      "otherCategories": [],
+      "text": "🇮🇷🇺🇸⚡️ — Iran’s Foreign Minister Abbas Araghchi: The allegation that Iran is on the verge of acquiring a nuclear weapon is a big lie, first concocted by Israel in 2003, and the United States and",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran, israel. Signal: 🇮🇷🇺🇸⚡️ — Iran’s Foreign Minister Abbas Araghchi: The allegation that Iran is on the verge of acquiring a nuclear weapon is a big lie, first concocted by Israel in 2003, and ..."
+    },
+    {
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -38,21 +59,49 @@
         "FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "troops",
-        "oil"
+        "missile",
+        "iran",
+        "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. \"Not to engage in any",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: 🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. ..."
+      "text": "🇮🇷❌🇺🇸 — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified violating ships.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷❌🇺🇸 — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified violating ships."
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "18+ Kyiv mayor Vitali Klitschko says a drone hit an office building in the Solomianskyi district. Local channels are posting photos of probable victims of a Russian terrorist strike.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 18+ Kyiv mayor Vitali Klitschko says a drone hit an office building in the Solomianskyi district. Local channels are posting photos of probable victims of a Russian terrorist st..."
+    },
+    {
+      "path": "root.news[5]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -63,56 +112,77 @@
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "FX"
       ],
       "matchedKeywords": [
+        "war",
         "iran",
-        "hormuz",
-        "shipping"
+        "hormuz"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz.",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz."
+      "text": "Iran war Update: Tehran offers US plan to reopen Hormuz within seven days | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran offers US plan to reopen Hormuz within seven days | Al Jazeera"
     },
     {
-      "path": "root.news[39]",
+      "path": "root.newsFeed[12]",
       "sourcePriority": "Medium",
-      "category": "Sanctions / Policy Shock",
-      "score": 13,
+      "category": "Geopolitical Escalation",
+      "score": 14,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "❌ — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified | INTELSLAVA"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 12,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
         "FX",
         "Commodities",
         "Emerging Markets",
         "Credit",
-        "Equities",
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Equities"
       ],
       "matchedKeywords": [
-        "ban",
-        "election",
-        "israel"
+        "diesel",
+        "fuel",
+        "ban"
       ],
       "otherCategories": [
-        "Geopolitical Escalation"
+        "Sanctions / Policy Shock"
       ],
-      "text": "Israel moves to ban main Palestinian-led lists from election | Al Jazeera",
-      "explanation": "Sanctions / Policy Shock match based on keywords: ban, election. Signal: Israel moves to ban main Palestinian-led lists from election | Al Jazeera"
+      "text": "What would a US diesel export ban mean for global fuel prices? | Al Jazeera",
+      "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: What would a US diesel export ban mean for global fuel prices? | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -125,15 +195,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
-        "china"
+        "military",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇨🇳⚡️ — China sent approximately 1,300 shipments of dual-use components to Iran’s Ministry of Defense during H1 2026, including electronics that can be used in UAVs and missiles. — WSJ @IntelSla",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, china. Signal: 🇮🇷🇨🇳⚡️ — China sent approximately 1,300 shipments of dual-use components to Iran’s Ministry of Defense during H1 2026, including electronics that can be used in UAVs and mis..."
+      "text": "Zelensky says Ukraine is $27 billion short for defense, with the most urgent gap in drones, missiles and support for the military in Q4, plus critical costs for next year. He says about $9 billion is",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Zelensky says Ukraine is $27 billion short for defense, with the most urgent gap in drones, missiles and support for the military in Q4, plus critical costs for next year. He sa..."
     },
     {
-      "path": "root.tg.urgent[11]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -146,33 +216,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "russia"
+        "drone",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "This is how Russia \"strives for peace\". In Staria Hnylytsia, Kharkiv region, the Russians killed six people at a vegetable warehouse - two men and four women. At the moment of the attack, they were so",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: This is how Russia \"strives for peace\". In Staria Hnylytsia, Kharkiv region, the Russians killed six people at a vegetable warehouse - two men and four women. At the moment of t..."
-    },
-    {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "During the night Russian attack on Kyiv, a Russian Kinzhal missile hit a yard right between parked cars, but failed to explode.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: During the night Russian attack on Kyiv, a Russian Kinzhal missile hit a yard right between parked cars, but failed to explode."
+      "text": "Moldovan police found wreckage of a Geran-4 drone 1.7 km away from Ukraine. The craft detonated midair after hitting trees at roughly 10 meters in Briceni district, damaging surrounding flora within 2",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Moldovan police found wreckage of a Geran-4 drone 1.7 km away from Ukraine. The craft detonated midair after hitting trees at roughly 10 meters in Briceni district, damaging sur..."
     },
     {
       "path": "root.news[7]",
@@ -192,11 +241,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran Proposes 7-Day Plan to End War",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran Proposes 7-Day Plan to End War"
+      "text": "Iran says it awaits US response on seven-day roadmap to end war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran says it awaits US response on seven-day roadmap to end war | Al Jazeera"
     },
     {
-      "path": "root.news[13]",
+      "path": "root.news[24]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -209,15 +258,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Tehran wants Washington to re-enter MoU before US midterms | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran wants Washington to re-enter MoU before US midterms | Al Jazeera"
+      "text": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says"
     },
     {
-      "path": "root.news[15]",
+      "path": "root.news[37]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -227,57 +276,22 @@
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "israel",
+        "bank"
       ],
-      "otherCategories": [],
-      "text": "Update: Iran's President says US ‘must choose’ whether to end war | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Update: Iran's President says US ‘must choose’ whether to end war | France 24"
-    },
-    {
-      "path": "root.news[35]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+      "otherCategories": [
+        "Credit Stress"
       ],
-      "matchedKeywords": [
-        "iran",
-        "taiwan"
-      ],
-      "otherCategories": [],
-      "text": "Trade truce, Taiwan and Iran top Trump-Xi agenda in Washington | Africa News",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, taiwan. Signal: Trade truce, Taiwan and Iran top Trump-Xi agenda in Washington | Africa News"
-    },
-    {
-      "path": "root.news[40]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "In one of their last votes before November, Senate GOP blocks effort to end Iran war",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: In one of their last votes before November, Senate GOP blocks effort to end Iran war"
+      "text": "How Israel’s ‘Blue Line’ team seizes Palestinian land in the West Bank | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: How Israel’s ‘Blue Line’ team seizes Palestinian land in the West Bank | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -308,7 +322,61 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.newsFeed[38]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇮🇷🇺🇸⚡️ — Iranian officials told Reuters that Tehran will not compromise on its nuclear program, even if a deal is reached to reopen the Strait of Hormuz. The remarks contradict Iranian President",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear. Signal: 🇮🇷🇺🇸⚡️ — Iranian officials told Reuters that Tehran will not compromise on its nuclear program, even if a deal is reached to reopen the Strait of Hormuz. The remarks contrad..."
+    },
+    {
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇮🇷⚡️ — The IRGC Navy struck a violating vessel in the Strait of Hormuz with an anti-ship cruise missile. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — The IRGC Navy struck a violating vessel in the Strait of Hormuz with an anti-ship cruise missile. @IntelSlava"
+    },
+    {
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -319,70 +387,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "shipping"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "❌ — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of H | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: ❌ — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of H | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX"
       ],
       "matchedKeywords": [
-        "oil",
+        "iran",
         "hormuz"
       ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "port"
-      ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Saudi reports fresh Houthi attacks as France pledges to defend key oil port | France 24",
-      "explanation": "Energy Shock match based on keywords: oil. Signal: Saudi reports fresh Houthi attacks as France pledges to defend key oil port | France 24"
+      "text": "Iran offers US deal to reopen Strait of Hormuz in seven days",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran offers US deal to reopen Strait of Hormuz in seven days"
     }
   ]
 }

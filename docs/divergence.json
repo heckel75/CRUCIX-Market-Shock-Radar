@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-25T01:50:51.045Z",
+  "generatedAt": "2026-09-26T01:54:23.446Z",
   "date": "2026-09-18",
   "asOfClose": "2026-09-18",
   "framing": "readings as of market close, 2026-09-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-25T01:50:48.412Z",
-    "generatedDate": "2026-09-25",
+    "generatedAt": "2026-09-26T01:54:20.137Z",
+    "generatedDate": "2026-09-26",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-25T01:50:48.412Z",
-    "generatedDate": "2026-09-25",
-    "runDate": "2026-09-25",
+    "generatedAt": "2026-09-26T01:54:20.137Z",
+    "generatedDate": "2026-09-26",
+    "runDate": "2026-09-26",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-25, readings as of market close, 2026-09-18 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-26, readings as of market close, 2026-09-18 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-18",
-      "generatedDate": "2026-09-25",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-25, readings as of market close, 2026-09-18 (7 calendar days old)."
+      "generatedDate": "2026-09-26",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-26, readings as of market close, 2026-09-18 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,29 +63,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 12,
-      "signal_secondary_count": 1,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[12]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
+        "rawScore": 15,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "troops",
-          "oil"
+          "nuclear",
+          "iran",
+          "israel"
         ],
-        "text": "🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. \"Not to engage in any",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: 🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. ..."
+        "text": "🇮🇷🇺🇸⚡️ — Iran’s Foreign Minister Abbas Araghchi: The allegation that Iran is on the verge of acquiring a nuclear weapon is a big lie, first concocted by Israel in 2003, and the United States and",
+        "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran, israel. Signal: 🇮🇷🇺🇸⚡️ — Iran’s Foreign Minister Abbas Araghchi: The allegation that Iran is on the verge of acquiring a nuclear weapon is a big lie, first concocted by Israel in 2003, and ..."
       },
       "market_z": -0.761,
       "abs_market_z": 0.761,
@@ -96,36 +96,36 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 1,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[39]",
+        "path": "root.news[19]",
         "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Sanctions / Policy Shock",
-        "isPrimary": true,
-        "rawScore": 13,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 12,
         "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
-          "ban",
-          "election",
-          "israel"
+          "diesel",
+          "fuel",
+          "ban"
         ],
-        "text": "Israel moves to ban main Palestinian-led lists from election | Al Jazeera",
-        "explanation": "Sanctions / Policy Shock match based on keywords: ban, election. Signal: Israel moves to ban main Palestinian-led lists from election | Al Jazeera"
+        "text": "What would a US diesel export ban mean for global fuel prices? | Al Jazeera",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: What would a US diesel export ban mean for global fuel prices? | Al Jazeera"
       },
       "market_z": 1.815,
       "abs_market_z": 1.815,
@@ -136,7 +136,7 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -148,11 +148,11 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 2,
+      "signal_count": 7,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[7]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -160,12 +160,12 @@
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "troops",
-          "oil"
+          "missile",
+          "iran",
+          "hormuz"
         ],
-        "text": "🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. \"Not to engage in any",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, troops. Signal: 🇫🇷 🇸🇦 🇾🇪 French President Macron says France will deploy troops, radars, and air defense systems to protect Saudi Arabia's Yanbu oil terminal, damaged by a Houthi attack. ..."
+        "text": "🇮🇷❌🇺🇸 — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified violating ships.",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷❌🇺🇸 — An explosion was heard in the Strait of Hormuz after Iran launched a missile toward unidentified violating ships."
       },
       "market_z": -0.778,
       "abs_market_z": 0.778,
@@ -176,22 +176,36 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[37]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "How Israel’s ‘Blue Line’ team seizes Palestinian land in the West Bank | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: How Israel’s ‘Blue Line’ team seizes Palestinian land in the West Bank | Al Jazeera"
+      },
       "market_z": -0.934,
       "abs_market_z": 0.934,
       "market_moving": false,
@@ -201,36 +215,35 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.tg.urgent[9]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 13,
+        "rawScore": 14,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "iran",
-          "hormuz",
-          "shipping"
+          "strike",
+          "drone"
         ],
-        "text": "🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz.",
-        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷❌🇺🇸 — Missiles were reportedly launched from Sirik, Iran, likely targeting shipping in the Strait of Hormuz."
+        "text": "18+ Kyiv mayor Vitali Klitschko says a drone hit an office building in the Solomianskyi district. Local channels are posting photos of probable victims of a Russian terrorist strike.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 18+ Kyiv mayor Vitali Klitschko says a drone hit an office building in the Solomianskyi district. Local channels are posting photos of probable victims of a Russian terrorist st..."
       },
       "market_z": -0.857,
       "abs_market_z": 0.857,
@@ -241,7 +254,7 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
