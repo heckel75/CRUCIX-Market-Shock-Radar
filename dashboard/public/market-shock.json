@@ -1,28 +1,27 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-09-27T01:43:27.843Z",
+  "generatedAt": "2026-09-28T01:57:08.321Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 17,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 3
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Supply Chain Disruption": 1,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 14,
+    "Supply Chain Disruption": 1
   },
-  "candidateCount": 135,
+  "candidateCount": 133,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[5]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -34,38 +33,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "russia",
-        "ukraine"
+        "missile",
+        "attack",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Russian Foreign Minister Vows Russia Will See Ukraine War Through",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russian Foreign Minister Vows Russia Will See Ukraine War Through"
+      "text": "Overnight attack on Azov in Russia’s Rostov region. Local monitoring channels reported missile strikes, possibly jet-powered drones.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia. Signal: Overnight attack on Azov in Russia’s Rostov region. Local monitoring channels reported missile strikes, possibly jet-powered drones."
     },
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Lavrov: Russia’s war in Ukraine will continue ‘through to the end’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Lavrov: Russia’s war in Ukraine will continue ‘through to the end’ | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -84,44 +61,16 @@
       ],
       "matchedKeywords": [
         "strike",
-        "attack"
+        "russia"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located in the \"Protasov\" business center in Kiev. It is reported that as a result of the attack,",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: 🇷🇺🇺🇦⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located in the \"Protasov\" business center in Kiev. It is reported that as a ..."
+      "text": "Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings, and the Saudi ambassa",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings..."
     },
     {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "naval",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "—❗️🇺🇸/🇮🇷 NEW: At least some of the missiles fired tonight into the Strait of Hormuz carried naval mines Iran is once again laying mines in the Strait of Hormuz, this time apparently in the illega",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: At least some of the missiles fired tonight into the Strait of Hormuz carried naval mines Iran is once again laying mines in the Strait of Hormuz, this time ap..."
-    },
-    {
-      "path": "root.news[6]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -145,11 +94,101 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran war Update: Tehran awaits official response as Trump rejects Hormuz plan | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran awaits official response as Trump rejects Hormuz plan | Al Jazeera"
+      "text": "Iran war Update: Tehran says it’s fully prepared for war amid Hormuz tensions | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran says it’s fully prepared for war amid Hormuz tensions | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.news[18]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank",
+        "ban"
+      ],
+      "otherCategories": [
+        "Credit Stress",
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24"
+    },
+    {
+      "path": "root.news[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "iran",
+        "hormuz"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran claims seizure of an underwater US drone in Hormuz, US denies the claim | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: Iran claims seizure of an underwater US drone in Hormuz, US denies the claim | Euronews"
+    },
+    {
+      "path": "root.newsFeed[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "russia"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. I | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. I | WARTRANSLATED"
+    },
+    {
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Supply Chain Disruption",
       "score": 13,
@@ -167,18 +206,99 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "port",
         "logistics",
-        "ukraine"
+        "strike"
       ],
       "otherCategories": [
         "Geopolitical Escalation"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — The Armed Forces of the Russian Federation continue to carry out strikes against Ukraine’s port infrastructure, logistics centers, and maritime vessels involved in supporting the Armed Fo",
-      "explanation": "Supply Chain Disruption match based on keywords: port, logistics. Signal: 🇷🇺🇺🇦⚡️ — The Armed Forces of the Russian Federation continue to carry out strikes against Ukraine’s port infrastructure, logistics centers, and maritime vessels involved in ..."
+      "text": "🇷🇺🇺🇦⚡️ — The aftermath of a strike on a logistics center belonging to the transport company Zammler Group in Kiev Oblast. @IntelSlava",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of a strike on a logistics center belonging to the transport company Zammler Group in Kiev Oblast. @IntelSlava"
     },
     {
-      "path": "root.news[19]",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Equities",
+        "Credit",
+        "FX",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "invasion",
+        "iran",
+        "market"
+      ],
+      "otherCategories": [
+        "Market Volatility Signal"
+      ],
+      "text": "🇮🇷🇺🇸⚡️ — Iran's Parliament Speaker Ghalibaf: US gaslighting bureau says Iran doesn’t control SOH, but the market prices a big premium, $35 over pre-invasion and $50 using dated/actual. So eit",
+      "explanation": "Geopolitical Escalation match based on keywords: invasion, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran's Parliament Speaker Ghalibaf: US gaslighting bureau says Iran doesn’t control SOH, but the market prices a big premium, $35 over pre-invasion and $50 using da..."
+    },
+    {
+      "path": "root.news[24]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 12,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Equities",
+        "Credit",
+        "FX",
+        "Rates"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "market"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption",
+        "Market Volatility Signal"
+      ],
+      "text": "Deadly strike hits market in Yemen’s Taiz | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Deadly strike hits market in Yemen’s Taiz | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Ukrainian military officials report that a \"Geran\" drone was spotted in the Odesa region, reaching speeds of up to 800 km/h. They speculate that a new engine is being tested on the \"Gera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: 🇷🇺🇺🇦⚡️ — Ukrainian military officials report that a \"Geran\" drone was spotted in the Odesa region, reaching speeds of up to 800 km/h. They speculate that a new engine is bei..."
+    },
+    {
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -191,15 +311,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "israel",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Russia scales up strikes on Ukraine as largest steelmaker halts operations | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia scales up strikes on Ukraine as largest steelmaker halts operations | Al Jazeera"
+      "text": "Ireland beats Israel 3-0 wearing black armbands to support Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Ireland beats Israel 3-0 wearing black armbands to support Gaza | Al Jazeera"
     },
     {
-      "path": "root.news[49]",
+      "path": "root.news[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -212,12 +332,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
+        "war",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "At least 16 people killed as Russia and Ukraine trade deadly air strikes | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: At least 16 people killed as Russia and Ukraine trade deadly air strikes | France 24"
+      "text": "Russian attacks kill eight in Ukraine after Moscow vows to continue war | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Russian attacks kill eight in Ukraine after Moscow vows to continue war | France 24"
+    },
+    {
+      "path": "root.news[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Pubs in Ireland refuse to screen Israel match in protest over Gaza genocide | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Pubs in Ireland refuse to screen Israel match in protest over Gaza genocide | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -248,7 +389,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -265,143 +406,14 @@
         "FX"
       ],
       "matchedKeywords": [
-        "missile",
+        "naval",
         "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇮🇷⚡️ — An explosion was heard in the Strait of Hormuz after the IRGC Navy struck a violating vessel with an anti-ship cruise missile. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — An explosion was heard in the Strait of Hormuz after the IRGC Navy struck a violating vessel with an anti-ship cruise missile. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇮🇷⚡️ — Multiple explosions were reported near Qeshm Island in the Strait of Hormuz, with Iranian sources stating that the IRGC Navy carried out several anti-ship missile launches. @IntelSlave",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — Multiple explosions were reported near Qeshm Island in the Strait of Hormuz, with Iranian sources stating that the IRGC Navy carried out several anti-ship missile launc..."
-    },
-    {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Trump rejects Iran deal to reopen Strait of Hormuz in seven days"
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Trump Rejects Iran’s Cease-Fire Proposal to Reopen Strait of Hormuz",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Trump Rejects Iran’s Cease-Fire Proposal to Reopen Strait of Hormuz"
-    },
-    {
-      "path": "root.newsFeed[29]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located | INTELSLAVA"
-    },
-    {
-      "path": "root.chokepoints[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "hormuz"
-      ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "text": "🇮🇷❌🇺🇸 — IRGC naval forces seized a second U.S. unmanned surface vessel (USV) in the Strait of Hormuz, the IRGC says. The captured USV is an advanced \"Remus 600\" type, which the IRGC claims belong",
+      "explanation": "Geopolitical Escalation match based on keywords: naval. Signal: 🇮🇷❌🇺🇸 — IRGC naval forces seized a second U.S. unmanned surface vessel (USV) in the Strait of Hormuz, the IRGC says. The captured USV is an advanced \"Remus 600\" type, which ..."
     }
   ]
 }

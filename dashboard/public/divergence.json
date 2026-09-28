@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-27T01:43:31.449Z",
+  "generatedAt": "2026-09-28T01:57:11.571Z",
   "date": "2026-09-18",
   "asOfClose": "2026-09-18",
   "framing": "readings as of market close, 2026-09-18",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-27T01:43:27.960Z",
-    "generatedDate": "2026-09-27",
+    "generatedAt": "2026-09-28T01:57:08.438Z",
+    "generatedDate": "2026-09-28",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-27T01:43:27.960Z",
-    "generatedDate": "2026-09-27",
-    "runDate": "2026-09-27",
+    "generatedAt": "2026-09-28T01:57:08.438Z",
+    "generatedDate": "2026-09-28",
+    "runDate": "2026-09-28",
     "asOfClose": "2026-09-18",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-27, readings as of market close, 2026-09-18 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-28, readings as of market close, 2026-09-18 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-18",
-      "generatedDate": "2026-09-27",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-09-27, readings as of market close, 2026-09-18 (9 calendar days old)."
+      "generatedDate": "2026-09-28",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-09-28, readings as of market close, 2026-09-18 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,9 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "radar-miss": 1,
-    "calm": 1
+    "radar-claim": 4,
+    "priced": 1
   },
   "rows": [
     {
@@ -68,24 +67,24 @@
       "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 13,
+      "signal_count": 15,
+      "signal_primary_count": 14,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[5]",
+        "path": "root.tg.urgent[5]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 15,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "russia",
-          "ukraine"
+          "missile",
+          "attack",
+          "russia"
         ],
-        "text": "Russian Foreign Minister Vows Russia Will See Ukraine War Through",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russian Foreign Minister Vows Russia Will See Ukraine War Through"
+        "text": "Overnight attack on Azov in Russia’s Rostov region. Local monitoring channels reported missile strikes, possibly jet-powered drones.",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia. Signal: Overnight attack on Azov in Russia’s Rostov region. Local monitoring channels reported missile strikes, possibly jet-powered drones."
       },
       "market_z": -0.761,
       "abs_market_z": 0.761,
@@ -96,22 +95,37 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[18]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank",
+          "ban"
+        ],
+        "text": "Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24"
+      },
       "market_z": 1.815,
       "abs_market_z": 1.815,
       "market_moving": true,
@@ -121,8 +135,8 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 10,
+      "state": "priced"
     },
     {
       "channel": "energy-disruption",
@@ -133,24 +147,24 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 6,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.news[9]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "naval",
+          "war",
           "iran",
           "hormuz"
         ],
-        "text": "—❗️🇺🇸/🇮🇷 NEW: At least some of the missiles fired tonight into the Strait of Hormuz carried naval mines Iran is once again laying mines in the Strait of Hormuz, this time apparently in the illega",
-        "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: At least some of the missiles fired tonight into the Strait of Hormuz carried naval mines Iran is once again laying mines in the Strait of Hormuz, this time ap..."
+        "text": "Iran war Update: Tehran says it’s fully prepared for war amid Hormuz tensions | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran says it’s fully prepared for war amid Hormuz tensions | Al Jazeera"
       },
       "market_z": -0.778,
       "abs_market_z": 0.778,
@@ -161,22 +175,37 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[18]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank",
+          "ban"
+        ],
+        "text": "Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel revokes credentials of Dutch diplomats in West Bank over settlement goods ban | France 24"
+      },
       "market_z": -0.934,
       "abs_market_z": 0.934,
       "market_moving": false,
@@ -186,8 +215,8 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "calm"
+      "market_calendar_lag_days": 10,
+      "state": "radar-claim"
     },
     {
       "channel": "supply-chain",
@@ -198,11 +227,11 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 5,
       "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[7]",
+        "path": "root.tg.urgent[6]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -211,10 +240,10 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack"
+          "russia"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located in the \"Protasov\" business center in Kiev. It is reported that as a result of the attack,",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: 🇷🇺🇺🇦⚡️ — The result of a second strike on the data center of the internet provider COSMONOVA|NET located in the \"Protasov\" business center in Kiev. It is reported that as a ..."
+        "text": "Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings, and the Saudi ambassa",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings..."
       },
       "market_z": -0.857,
       "abs_market_z": 0.857,
@@ -225,7 +254,7 @@
       "driver_as_of": "2026-09-18",
       "market_as_of": "2026-09-18",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     }
   ],
@@ -262,14 +291,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[4]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "invasion",
+          "iran",
+          "market"
+        ],
+        "text": "🇮🇷🇺🇸⚡️ — Iran's Parliament Speaker Ghalibaf: US gaslighting bureau says Iran doesn’t control SOH, but the market prices a big premium, $35 over pre-invasion and $50 using dated/actual. So eit",
+        "explanation": "Geopolitical Escalation match based on keywords: invasion, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran's Parliament Speaker Ghalibaf: US gaslighting bureau says Iran doesn’t control SOH, but the market prices a big premium, $35 over pre-invasion and $50 using da..."
+      }
     }
   ]
 }
