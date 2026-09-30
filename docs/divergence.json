@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-29T02:42:28.214Z",
+  "generatedAt": "2026-09-30T02:20:06.909Z",
   "date": "2026-09-22",
   "asOfClose": "2026-09-22",
   "framing": "readings as of market close, 2026-09-22",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-29T02:42:24.813Z",
-    "generatedDate": "2026-09-29",
+    "generatedAt": "2026-09-30T02:20:00.714Z",
+    "generatedDate": "2026-09-30",
     "asOfClose": "2026-09-22",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-29T02:42:24.813Z",
-    "generatedDate": "2026-09-29",
-    "runDate": "2026-09-29",
+    "generatedAt": "2026-09-30T02:20:00.714Z",
+    "generatedDate": "2026-09-30",
+    "runDate": "2026-09-30",
     "asOfClose": "2026-09-22",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-29, readings as of market close, 2026-09-22 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-09-30, readings as of market close, 2026-09-22 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-22",
-      "generatedDate": "2026-09-29",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-09-29, readings as of market close, 2026-09-22 (7 calendar days old)."
+      "generatedDate": "2026-09-30",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-09-30, readings as of market close, 2026-09-22 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
-    "radar-miss": 1,
+    "priced": 2,
+    "radar-miss": 2,
     "calm": 1
   },
   "rows": [
@@ -63,30 +63,28 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[9]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "drone",
-          "oil",
-          "crude"
+          "strike",
+          "iran"
         ],
-        "text": "🇸🇦🇪🇺 The KSA is cancelling some oil shipments bound for Europe as a result of the Houthis missile and drone strikes on the pumping stations running along the East-West Yanbu-Abqaiq crude oil pipel",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇸🇦🇪🇺 The KSA is cancelling some oil shipments bound for Europe as a result of the Houthis missile and drone strikes on the pumping stations running along the East-West Yanbu..."
+        "text": "🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent."
       },
       "market_z": -1.56,
       "abs_market_z": 1.56,
@@ -97,7 +95,7 @@
       "driver_as_of": "2026-09-22",
       "market_as_of": "2026-09-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -122,37 +120,35 @@
       "driver_as_of": "2026-09-22",
       "market_as_of": "2026-09-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_elevated": false,
+      "signal_count": 2,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.chokepoints[0]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 8,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "drone",
           "oil",
-          "crude"
+          "hormuz"
         ],
-        "text": "🇸🇦🇪🇺 The KSA is cancelling some oil shipments bound for Europe as a result of the Houthis missile and drone strikes on the pumping stations running along the East-West Yanbu-Abqaiq crude oil pipel",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: 🇸🇦🇪🇺 The KSA is cancelling some oil shipments bound for Europe as a result of the Houthis missile and drone strikes on the pumping stations running along the East-West Yanbu..."
+        "text": "Strait of Hormuz | 20% of world oil",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
       "market_z": -1.56,
       "abs_market_z": 1.56,
@@ -163,8 +159,8 @@
       "driver_as_of": "2026-09-22",
       "market_as_of": "2026-09-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "priced"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -188,7 +184,7 @@
       "driver_as_of": "2026-09-22",
       "market_as_of": "2026-09-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -200,11 +196,11 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.tg.urgent[9]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -213,10 +209,10 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "russia"
+          "iran"
         ],
-        "text": "Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings, and the Saudi ambassa",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, russia. Signal: Zelenskyy reported Russia launched 277 strike drones overnight, with 155 being jet-powered models. In Kyiv, strikes damaged two kindergartens, two schools, residential buildings..."
+        "text": "🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent."
       },
       "market_z": 2.206,
       "abs_market_z": 2.206,
@@ -227,7 +223,7 @@
       "driver_as_of": "2026-09-22",
       "market_as_of": "2026-09-22",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
