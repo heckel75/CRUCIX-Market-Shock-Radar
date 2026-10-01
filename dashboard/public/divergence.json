@@ -1,40 +1,40 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-09-30T02:20:06.909Z",
-  "date": "2026-09-22",
-  "asOfClose": "2026-09-22",
-  "framing": "readings as of market close, 2026-09-22",
+  "generatedAt": "2026-10-01T02:21:23.404Z",
+  "date": "2026-09-25",
+  "asOfClose": "2026-09-25",
+  "framing": "readings as of market close, 2026-09-25",
   "sourceFiles": {
     "signal": "dashboard/public/market-shock.json",
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-09-30T02:20:00.714Z",
-    "generatedDate": "2026-09-30",
-    "asOfClose": "2026-09-22",
-    "calendarLagDays": 8,
+    "generatedAt": "2026-10-01T02:21:19.817Z",
+    "generatedDate": "2026-10-01",
+    "asOfClose": "2026-09-25",
+    "calendarLagDays": 6,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-09-30T02:20:00.714Z",
-    "generatedDate": "2026-09-30",
-    "runDate": "2026-09-30",
-    "asOfClose": "2026-09-22",
-    "calendarLagDays": 8,
+    "generatedAt": "2026-10-01T02:21:19.817Z",
+    "generatedDate": "2026-10-01",
+    "runDate": "2026-10-01",
+    "asOfClose": "2026-09-25",
+    "calendarLagDays": 6,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-09-30, readings as of market close, 2026-09-22 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-01, readings as of market close, 2026-09-25 (6 calendar days old)."
   },
   "warnings": [
     {
       "code": "market-readings-lagging",
       "severity": "warning",
       "status": "lagging",
-      "asOfClose": "2026-09-22",
-      "generatedDate": "2026-09-30",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-09-30, readings as of market close, 2026-09-22 (8 calendar days old)."
+      "asOfClose": "2026-09-25",
+      "generatedDate": "2026-10-01",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-10-01, readings as of market close, 2026-09-25 (6 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,49 +54,50 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
-    "radar-miss": 2,
-    "calm": 1
+    "radar-claim": 2,
+    "calm": 1,
+    "radar-miss": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 12,
+      "signal_primary_count": 12,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[1]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "iran"
+          "attack",
+          "ukraine"
         ],
-        "text": "🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent."
+        "text": "🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the Dnepropetrovsk region",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the ..."
       },
-      "market_z": -1.56,
-      "abs_market_z": 1.56,
-      "market_moving": true,
-      "driver_instrument": "DCOILBRENTEU",
-      "driver_instrument_id": "brent",
-      "driver_instrument_label": "Brent crude oil",
-      "driver_as_of": "2026-09-22",
-      "market_as_of": "2026-09-22",
+      "market_z": -0.594,
+      "abs_market_z": 0.594,
+      "market_moving": false,
+      "driver_instrument": "GLD",
+      "driver_instrument_id": "gold",
+      "driver_instrument_label": "Gold ETF",
+      "driver_as_of": "2026-09-25",
+      "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "priced"
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
@@ -111,17 +112,17 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
-      "market_z": -1.588,
-      "abs_market_z": 1.588,
-      "market_moving": true,
-      "driver_instrument": "DBC",
-      "driver_instrument_id": "broad-commodities",
-      "driver_instrument_label": "Broad commodities ETF",
-      "driver_as_of": "2026-09-22",
-      "market_as_of": "2026-09-22",
+      "market_z": 1.089,
+      "abs_market_z": 1.089,
+      "market_moving": false,
+      "driver_instrument": "DTWEXBGS",
+      "driver_instrument_id": "broad-usd",
+      "driver_instrument_label": "Broad U.S. dollar index",
+      "driver_as_of": "2026-09-25",
+      "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 6,
+      "state": "calm"
     },
     {
       "channel": "energy-disruption",
@@ -132,8 +133,8 @@
       "signal_raw_score": 8,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 2,
-      "signal_primary_count": 2,
+      "signal_count": 3,
+      "signal_primary_count": 3,
       "signal_secondary_count": 0,
       "top_signal": {
         "path": "root.chokepoints[0]",
@@ -150,16 +151,16 @@
         "text": "Strait of Hormuz | 20% of world oil",
         "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
-      "market_z": -1.56,
-      "abs_market_z": 1.56,
+      "market_z": -2.196,
+      "abs_market_z": 2.196,
       "market_moving": true,
-      "driver_instrument": "DCOILBRENTEU",
-      "driver_instrument_id": "brent",
-      "driver_instrument_label": "Brent crude oil",
-      "driver_as_of": "2026-09-22",
-      "market_as_of": "2026-09-22",
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-09-25",
+      "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 6,
       "state": "radar-miss"
     },
     {
@@ -175,56 +176,57 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
-      "market_z": -1.459,
-      "abs_market_z": 1.459,
-      "market_moving": false,
-      "driver_instrument": "KBE",
-      "driver_instrument_id": "banks",
-      "driver_instrument_label": "Bank equities ETF",
-      "driver_as_of": "2026-09-22",
-      "market_as_of": "2026-09-22",
+      "market_z": 2.17,
+      "abs_market_z": 2.17,
+      "market_moving": true,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "driver_instrument_id": "high-yield-spreads",
+      "driver_instrument_label": "High-yield option-adjusted spread",
+      "driver_as_of": "2026-09-25",
+      "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 6,
+      "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.tg.urgent[1]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "iran"
+          "attack",
+          "ukraine"
         ],
-        "text": "🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸🇮🇱❌🇮🇷 — INTEL: According to my intel, a surprise strike on Iran is imminent."
+        "text": "🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the Dnepropetrovsk region",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the ..."
       },
-      "market_z": 2.206,
-      "abs_market_z": 2.206,
-      "market_moving": true,
+      "market_z": 0.941,
+      "abs_market_z": 0.941,
+      "market_moving": false,
       "driver_instrument": "SOXX",
       "driver_instrument_id": "semiconductors",
       "driver_instrument_label": "Semiconductor equities ETF",
-      "driver_as_of": "2026-09-22",
-      "market_as_of": "2026-09-22",
+      "driver_as_of": "2026-09-25",
+      "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "priced"
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
@@ -260,14 +262,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[12]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "military",
+          "russia",
+          "crash"
+        ],
+        "text": "A military aircraft crashed in the village of Krasnoyarovo, Amur Region, Russia. Seven service members were on board. Three people were killed and four others were injured in the crash.",
+        "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: A military aircraft crashed in the village of Krasnoyarovo, Amur Region, Russia. Seven service members were on board. Three people were killed and four others were injured in th..."
+      }
     }
   ]
 }
