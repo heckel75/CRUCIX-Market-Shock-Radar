@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-01T02:21:23.404Z",
+  "generatedAt": "2026-10-02T02:32:11.155Z",
   "date": "2026-09-25",
   "asOfClose": "2026-09-25",
   "framing": "readings as of market close, 2026-09-25",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-01T02:21:19.817Z",
-    "generatedDate": "2026-10-01",
+    "generatedAt": "2026-10-02T02:32:08.130Z",
+    "generatedDate": "2026-10-02",
     "asOfClose": "2026-09-25",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-01T02:21:19.817Z",
-    "generatedDate": "2026-10-01",
-    "runDate": "2026-10-01",
+    "generatedAt": "2026-10-02T02:32:08.130Z",
+    "generatedDate": "2026-10-02",
+    "runDate": "2026-10-02",
     "asOfClose": "2026-09-25",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-01, readings as of market close, 2026-09-25 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-02, readings as of market close, 2026-09-25 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-25",
-      "generatedDate": "2026-10-01",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-10-01, readings as of market close, 2026-09-25 (6 calendar days old)."
+      "generatedDate": "2026-10-02",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-10-02, readings as of market close, 2026-09-25 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -56,7 +56,7 @@
   "stateCounts": {
     "radar-claim": 2,
     "calm": 1,
-    "radar-miss": 2
+    "priced": 2
   },
   "rows": [
     {
@@ -68,11 +68,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 12,
-      "signal_primary_count": 12,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[7]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -81,11 +81,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "ukraine"
+          "drone",
+          "russia"
         ],
-        "text": "🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the Dnepropetrovsk region",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the ..."
+        "text": "🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali Klitschko confirmed t",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia. Signal: 🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali..."
       },
       "market_z": -0.594,
       "abs_market_z": 0.594,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -121,35 +121,37 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 3,
-      "signal_primary_count": 3,
-      "signal_secondary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.chokepoints[0]",
+        "path": "root.tg.urgent[12]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 17,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
+          "russia",
+          "ukraine",
           "oil",
-          "hormuz"
+          "gdp"
         ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+        "text": "🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no longer has a steel indus",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no l..."
       },
       "market_z": -2.196,
       "abs_market_z": 2.196,
@@ -160,22 +162,37 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 7,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[12]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "drone",
+          "gaza",
+          "bank"
+        ],
+        "text": "Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: drone, gaza. Signal: Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank | Al Jazeera"
+      },
       "market_z": 2.17,
       "abs_market_z": 2.17,
       "market_moving": true,
@@ -185,8 +202,8 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 7,
+      "state": "priced"
     },
     {
       "channel": "supply-chain",
@@ -201,7 +218,7 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[7]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -210,11 +227,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "ukraine"
+          "drone",
+          "russia"
         ],
-        "text": "🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the Dnepropetrovsk region",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇷🇺❌🇺🇦 — Ukraine faces threat of major overnight strike Ukraine could face a major mass attack tonight, with monitoring resources warning of a heightened threat to Kiev, the ..."
+        "text": "🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali Klitschko confirmed t",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia. Signal: 🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali..."
       },
       "market_z": 0.941,
       "abs_market_z": 0.941,
@@ -225,7 +242,7 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
@@ -233,15 +250,31 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[12]",
+        "category": "Macro / Inflation Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "russia",
+          "ukraine",
+          "oil",
+          "gdp"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no longer has a steel indus",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no l..."
+      }
     },
     {
       "signal_category": "Weather / Climate Shock",
@@ -262,29 +295,14 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[12]",
-        "category": "Market Volatility Signal",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "military",
-          "russia",
-          "crash"
-        ],
-        "text": "A military aircraft crashed in the village of Krasnoyarovo, Amur Region, Russia. Seven service members were on board. Three people were killed and four others were injured in the crash.",
-        "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: A military aircraft crashed in the village of Krasnoyarovo, Amur Region, Russia. Seven service members were on board. Three people were killed and four others were injured in th..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ]
 }
