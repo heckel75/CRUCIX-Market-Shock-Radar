@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-02T02:32:11.155Z",
+  "generatedAt": "2026-10-03T02:17:23.700Z",
   "date": "2026-09-25",
   "asOfClose": "2026-09-25",
   "framing": "readings as of market close, 2026-09-25",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-02T02:32:08.130Z",
-    "generatedDate": "2026-10-02",
+    "generatedAt": "2026-10-03T02:17:20.478Z",
+    "generatedDate": "2026-10-03",
     "asOfClose": "2026-09-25",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-02T02:32:08.130Z",
-    "generatedDate": "2026-10-02",
-    "runDate": "2026-10-02",
+    "generatedAt": "2026-10-03T02:17:20.478Z",
+    "generatedDate": "2026-10-03",
+    "runDate": "2026-10-03",
     "asOfClose": "2026-09-25",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-02, readings as of market close, 2026-09-25 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-03, readings as of market close, 2026-09-25 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-25",
-      "generatedDate": "2026-10-02",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-02, readings as of market close, 2026-09-25 (7 calendar days old)."
+      "generatedDate": "2026-10-03",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-03, readings as of market close, 2026-09-25 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,38 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 1,
-    "priced": 2
+    "radar-claim": 3,
+    "priced": 1,
+    "radar-miss": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[7]",
+        "path": "root.news[19]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "drone",
-          "russia"
+          "war",
+          "israel",
+          "gaza"
         ],
-        "text": "🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali Klitschko confirmed t",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia. Signal: 🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali..."
+        "text": "Israel could’ve ended Gaza war, freed captives sooner: Israel ex-negotiator | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Israel could’ve ended Gaza war, freed captives sooner: Israel ex-negotiator | Al Jazeera"
       },
       "market_z": -0.594,
       "abs_market_z": 0.594,
@@ -96,22 +96,37 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[37]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "oil",
+          "diesel",
+          "ban"
+        ],
+        "text": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
+        "explanation": "Energy Shock match based on keywords: oil, diesel. Signal: G7 to release 100 million barrels of oil and diesel after Trump export ban threat"
+      },
       "market_z": 1.089,
       "abs_market_z": 1.089,
       "market_moving": false,
@@ -121,37 +136,36 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-claim"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 3,
+      "signal_count": 2,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.news[37]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 17,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 12,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "russia",
-          "ukraine",
           "oil",
-          "gdp"
+          "diesel",
+          "ban"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no longer has a steel indus",
-        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no l..."
+        "text": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
+        "explanation": "Energy Shock match based on keywords: oil, diesel. Signal: G7 to release 100 million barrels of oil and diesel after Trump export ban threat"
       },
       "market_z": -2.196,
       "abs_market_z": 2.196,
@@ -162,37 +176,22 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[12]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 15,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "drone",
-          "gaza",
-          "bank"
-        ],
-        "text": "Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: drone, gaza. Signal: Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 2.17,
       "abs_market_z": 2.17,
       "market_moving": true,
@@ -202,36 +201,35 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "priced"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 6,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 6,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[7]",
+        "path": "root.tg.urgent[12]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "drone",
-          "russia"
+          "ukraine"
         ],
-        "text": "🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali Klitschko confirmed t",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia. Signal: 🇷🇺❌🇺🇦 — Russia carried out another Geran-5 drone strike on the Southern Bridge in Kyiv moments ago, after the bridge was repeatedly targeted earlier today. Kyiv Mayor Vitali..."
+        "text": "Ukraine’s Defense Forces FP-2 strike drones destroyed a Russian Pantsir-S2 air defense system. After a secondary detonation, the system was blown apart.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine’s Defense Forces FP-2 strike drones destroyed a Russian Pantsir-S2 air defense system. After a secondary detonation, the system was blown apart."
       },
       "market_z": 0.941,
       "abs_market_z": 0.941,
@@ -242,7 +240,7 @@
       "driver_as_of": "2026-09-25",
       "market_as_of": "2026-09-25",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
@@ -250,31 +248,15 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.tg.urgent[12]",
-        "category": "Macro / Inflation Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "russia",
-          "ukraine",
-          "oil",
-          "gdp"
-        ],
-        "text": "🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no longer has a steel indus",
-        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — As a result of Ukraine's strikes on Russian oil refineries, Russia has lost approximately 1 percent of its GDP, but after Russia's retaliatory strikes, Ukraine no l..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     },
     {
       "signal_category": "Weather / Climate Shock",
