@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-03T02:17:20.338Z",
+  "generatedAt": "2026-10-04T02:50:34.722Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -16,34 +16,70 @@
     "Geopolitical Escalation": 13,
     "Energy Shock": 2
   },
-  "candidateCount": 133,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[19]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 19,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
         "war",
-        "israel",
-        "gaza"
+        "strike",
+        "iran"
       ],
-      "otherCategories": [],
-      "text": "Israel could’ve ended Gaza war, freed captives sooner: Israel ex-negotiator | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, israel, gaza. Signal: Israel could’ve ended Gaza war, freed captives sooner: Israel ex-negotiator | Al Jazeera"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Iran war Update: Yemeni forces strike Sanaa as Trump warns Tehran of hard way | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Yemeni forces strike Sanaa as Trump warns Tehran of hard way | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 17,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "refinery",
+        "energy",
+        "ukraine"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Ukraine's Defense Ministry confirmed deep strikes on three key Russian energy facilities up to 1,000 km behind the front line. The targets included the Volgograd oil refinery, a Samara petrochemical p",
+      "explanation": "Energy Shock match based on keywords: oil, refinery, energy. Signal: Ukraine's Defense Ministry confirmed deep strikes on three key Russian energy facilities up to 1,000 km behind the front line. The targets included the Volgograd oil refinery, a..."
+    },
+    {
+      "path": "root.news[18]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -61,44 +97,49 @@
       ],
       "matchedKeywords": [
         "strike",
-        "ukraine"
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Ukraine’s Defense Forces FP-2 strike drones destroyed a Russian Pantsir-S2 air defense system. After a secondary detonation, the system was blown apart.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine’s Defense Forces FP-2 strike drones destroyed a Russian Pantsir-S2 air defense system. After a secondary detonation, the system was blown apart."
+      "text": "Funeral held at Gaza church for mother and daughter killed in Gaza strike | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Funeral held at Gaza church for mother and daughter killed in Gaza strike | Al Jazeera"
     },
     {
-      "path": "root.news[37]",
+      "path": "root.news[43]",
       "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 12,
+      "category": "Geopolitical Escalation",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
         "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
+        "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "diesel",
-        "ban"
+        "strike",
+        "oil"
       ],
       "otherCategories": [
-        "Sanctions / Policy Shock"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
-      "explanation": "Energy Shock match based on keywords: oil, diesel. Signal: G7 to release 100 million barrels of oil and diesel after Trump export ban threat"
+      "text": "Houthis claim strike on oil facilty near Riyadh, accuse Saudi forces of pounding Yemen's capital | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Houthis claim strike on oil facilty near Riyadh, accuse Saudi forces of pounding Yemen's capital | France 24"
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -111,37 +152,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "military"
+        "nuclear",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇷🇺⚡️ — During the main phase of the Tsentr-2026 (Center-2026) military exercise, the latest Izdeliye 347 ground-launched missile system, equipped with a modified Kh-39 Light Multipurpose Guided Miss",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, military. Signal: 🇷🇺⚡️ — During the main phase of the Tsentr-2026 (Center-2026) military exercise, the latest Izdeliye 347 ground-launched missile system, equipped with a modified Kh-39 Light M..."
+      "text": "🇷🇺🇺🇦⚡️ — Dmitry Medvedev says Ukraine must accept neutrality, non-nuclear status, and recognize Donetsk, Luhansk, Zaporizhzhia, and Kherson as Russian for a sustainable political settlement. @Int",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Dmitry Medvedev says Ukraine must accept neutrality, non-nuclear status, and recognize Donetsk, Luhansk, Zaporizhzhia, and Kherson as Russian for a sustainable poli..."
     },
     {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[14]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — A drone attack was reported in the city center of Dnipro, according to local news sources. The city was attacked by \"Shahed\" drones. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇷🇺🇺🇦⚡️ — A drone attack was reported in the city center of Dnipro, according to local news sources. The city was attacked by \"Shahed\" drones. @Intelslava"
-    },
-    {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -154,14 +174,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "iran"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Fighting intensifies in Yemen, hundreds killed or injured | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Fighting intensifies in Yemen, hundreds killed or injured | Al Jazeera"
+      "text": "Moldovan President Maia Sandu stated that Russia’s war is dangerously encroaching on Moldova after five Russian aerial targets, including drones and missiles, violated the country's airspace and deton",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Moldovan President Maia Sandu stated that Russia’s war is dangerously encroaching on Moldova after five Russian aerial targets, including drones and missiles, violated the count..."
     },
     {
-      "path": "root.news[29]",
+      "path": "root.news[34]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -174,15 +194,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Israel Lists 170 Killed in Gaza It Says Were Militants Posing as Media Workers",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel Lists 170 Killed in Gaza It Says Were Militants Posing as Media Workers"
+      "text": "Russia hits second major bridge in Ukraine's capital Kyiv",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia hits second major bridge in Ukraine's capital Kyiv"
     },
     {
-      "path": "root.newsFeed[34]",
+      "path": "root.newsFeed[27]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -195,12 +215,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "drone"
+        "nuclear",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "⚡️ — A drone attack was reported in the city center of Dnipro, according to local news sources. The | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: ⚡️ — A drone attack was reported in the city center of Dnipro, according to local news sources. The | INTELSLAVA"
+      "text": "⚡️ — Dmitry Medvedev says Ukraine must accept neutrality, non-nuclear status, and recognize Donetsk, | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, ukraine. Signal: ⚡️ — Dmitry Medvedev says Ukraine must accept neutrality, non-nuclear status, and recognize Donetsk, | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -231,7 +251,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -254,8 +274,63 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺❌🇺🇦 — There are reports of a Russian UAV strike on Hostomel.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — There are reports of a Russian UAV strike on Hostomel."
+      "text": "🇷🇺🇺🇦⚡️ — The moment of the strike on the Northern Bridge in Kiev. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — The moment of the strike on the Northern Bridge in Kiev. @Intelslava"
+    },
+    {
+      "path": "root.news[11]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "embargo"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Pelosi-backed US candidate calls for ‘full arms embargo’ on Israel | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Pelosi-backed US candidate calls for ‘full arms embargo’ on Israel | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — The moment of the strike on the Northern Bridge in Kiev. @Intelslava | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡️ — The moment of the strike on the Northern Bridge in Kiev. @Intelslava | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[0]",
@@ -279,84 +354,59 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "score": 8,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy",
+        "Commodities"
       ],
       "matchedKeywords": [
-        "missile"
+        "attack",
+        "harvest"
       ],
-      "otherCategories": [],
-      "text": "🇸🇦❌🇾🇪🇾🇪 — Over the past 24 hours, Saudi warplanes conducted 94 air raids and missile strikes targeting civilian areas in the governorates of Sana'a, Sa'ada, Taiz, Hajjah, Amran, and Ibb, resulti",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇸🇦❌🇾🇪🇾🇪 — Over the past 24 hours, Saudi warplanes conducted 94 air raids and missile strikes targeting civilian areas in the governorates of Sana'a, Sa'ada, Taiz, Hajjah, ..."
+      "otherCategories": [
+        "Weather / Climate Shock"
+      ],
+      "text": "Israeli settlers attack Palestinian farmers during olive harvest | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers attack Palestinian farmers during olive harvest | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "score": 8,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Equities",
+        "Credit",
+        "FX",
+        "Rates"
       ],
       "matchedKeywords": [
-        "russia"
+        "missile",
+        "crash"
       ],
-      "otherCategories": [],
-      "text": "⚡️🇺🇦🇯🇵🇷🇺 — Ukrainian President Volodymyr Zelenskyy: I highly appreciate the decision of the Government of Japan to introduce additional sanctions against Russia, specifically targeting the shad",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: ⚡️🇺🇦🇯🇵🇷🇺 — Ukrainian President Volodymyr Zelenskyy: I highly appreciate the decision of the Government of Japan to introduce additional sanctions against Russia, specifica..."
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+      "otherCategories": [
+        "Market Volatility Signal"
       ],
-      "matchedKeywords": [
-        "military"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺⚡️ — The new 57 mm ZAK-57-MSK and 30 mm ZAK-30 “Citadel” systems designed to counter drones during the Center-2026 military exercise. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺⚡️ — The new 57 mm ZAK-57-MSK and 30 mm ZAK-30 “Citadel” systems designed to counter drones during the Center-2026 military exercise. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺⚡️ — The Arena-M active protection system (APS) on T-90M tanks engaging FPV drones and fixed-wing-type drones during the Center-2026 military exercise. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺⚡️ — The Arena-M active protection system (APS) on T-90M tanks engaging FPV drones and fixed-wing-type drones during the Center-2026 military exercise. @IntelSlava"
+      "text": "Italy’s Ustica enigma: Can French files solve mystery crash blamed on stray missile? | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: Italy’s Ustica enigma: Can French files solve mystery crash blamed on stray missile? | France 24"
     }
   ]
 }
