@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-06T03:17:55.147Z",
+  "generatedAt": "2026-10-07T02:40:39.894Z",
   "date": "2026-09-29",
   "asOfClose": "2026-09-29",
   "framing": "readings as of market close, 2026-09-29",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-06T03:17:52.325Z",
-    "generatedDate": "2026-10-06",
+    "generatedAt": "2026-10-07T02:40:36.571Z",
+    "generatedDate": "2026-10-07",
     "asOfClose": "2026-09-29",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-06T03:17:52.325Z",
-    "generatedDate": "2026-10-06",
-    "runDate": "2026-10-06",
+    "generatedAt": "2026-10-07T02:40:36.571Z",
+    "generatedDate": "2026-10-07",
+    "runDate": "2026-10-07",
     "asOfClose": "2026-09-29",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-06, readings as of market close, 2026-09-29 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-07, readings as of market close, 2026-09-29 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-09-29",
-      "generatedDate": "2026-10-06",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-06, readings as of market close, 2026-09-29 (7 calendar days old)."
+      "generatedDate": "2026-10-07",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-07, readings as of market close, 2026-09-29 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,8 +55,9 @@
   },
   "stateCounts": {
     "radar-claim": 2,
-    "radar-miss": 2,
-    "calm": 1
+    "priced": 1,
+    "calm": 1,
+    "radar-miss": 1
   },
   "rows": [
     {
@@ -68,11 +69,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -81,11 +82,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "military",
-          "drone"
+          "missile",
+          "attack"
         ],
-        "text": "🇾🇪❌🇾🇪🇵🇰 - According to Yemeni Sources to Tasnim News, a Houthi Drone strike killed a Foreign Military Advisor deployed to Yemen. It is unclear the nationality of the advisor however reports indi",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, military, drone. Signal: 🇾🇪❌🇾🇪🇵🇰 - According to Yemeni Sources to Tasnim News, a Houthi Drone strike killed a Foreign Military Advisor deployed to Yemen. It is unclear the nationality of the advis..."
+        "text": "🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical ballistic missiles, as w",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, attack. Signal: 🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical b..."
       },
       "market_z": -1.178,
       "abs_market_z": 1.178,
@@ -96,22 +97,37 @@
       "driver_as_of": "2026-09-29",
       "market_as_of": "2026-09-29",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[4]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "attack",
+          "israel",
+          "election"
+        ],
+        "text": "Israel marks third anniversary of October 7 attack as election looms | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: Israel marks third anniversary of October 7 attack as election looms | France 24"
+      },
       "market_z": 1.881,
       "abs_market_z": 1.881,
       "market_moving": true,
@@ -121,35 +137,35 @@
       "driver_as_of": "2026-09-29",
       "market_as_of": "2026-09-29",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 3,
+      "signal_count": 1,
       "signal_primary_count": 1,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[14]",
+        "path": "root.chokepoints[0]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 9,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 8,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "military",
-          "red sea"
+          "oil",
+          "hormuz"
         ],
-        "text": "Yemeni military says it has 'secured' Red Sea waterway",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: Yemeni military says it has 'secured' Red Sea waterway"
+        "text": "Strait of Hormuz | 20% of world oil",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
       "market_z": 0.545,
       "abs_market_z": 0.545,
@@ -160,7 +176,7 @@
       "driver_as_of": "2026-09-29",
       "market_as_of": "2026-09-29",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -185,7 +201,7 @@
       "driver_as_of": "2026-09-29",
       "market_as_of": "2026-09-29",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
@@ -198,10 +214,10 @@
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 6,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -210,11 +226,11 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "military",
-          "drone"
+          "missile",
+          "attack"
         ],
-        "text": "🇾🇪❌🇾🇪🇵🇰 - According to Yemeni Sources to Tasnim News, a Houthi Drone strike killed a Foreign Military Advisor deployed to Yemen. It is unclear the nationality of the advisor however reports indi",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, military, drone. Signal: 🇾🇪❌🇾🇪🇵🇰 - According to Yemeni Sources to Tasnim News, a Houthi Drone strike killed a Foreign Military Advisor deployed to Yemen. It is unclear the nationality of the advis..."
+        "text": "🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical ballistic missiles, as w",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, attack. Signal: 🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical b..."
       },
       "market_z": -0.448,
       "abs_market_z": 0.448,
@@ -225,7 +241,7 @@
       "driver_as_of": "2026-09-29",
       "market_as_of": "2026-09-29",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
