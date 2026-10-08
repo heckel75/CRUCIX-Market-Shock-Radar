@@ -1,40 +1,40 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-07T02:40:39.894Z",
-  "date": "2026-09-29",
-  "asOfClose": "2026-09-29",
-  "framing": "readings as of market close, 2026-09-29",
+  "generatedAt": "2026-10-08T02:52:30.513Z",
+  "date": "2026-10-02",
+  "asOfClose": "2026-10-02",
+  "framing": "readings as of market close, 2026-10-02",
   "sourceFiles": {
     "signal": "dashboard/public/market-shock.json",
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-07T02:40:36.571Z",
-    "generatedDate": "2026-10-07",
-    "asOfClose": "2026-09-29",
-    "calendarLagDays": 8,
+    "generatedAt": "2026-10-08T02:52:26.947Z",
+    "generatedDate": "2026-10-08",
+    "asOfClose": "2026-10-02",
+    "calendarLagDays": 6,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-07T02:40:36.571Z",
-    "generatedDate": "2026-10-07",
-    "runDate": "2026-10-07",
-    "asOfClose": "2026-09-29",
-    "calendarLagDays": 8,
+    "generatedAt": "2026-10-08T02:52:26.947Z",
+    "generatedDate": "2026-10-08",
+    "runDate": "2026-10-08",
+    "asOfClose": "2026-10-02",
+    "calendarLagDays": 6,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-07, readings as of market close, 2026-09-29 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-08, readings as of market close, 2026-10-02 (6 calendar days old)."
   },
   "warnings": [
     {
       "code": "market-readings-lagging",
       "severity": "warning",
       "status": "lagging",
-      "asOfClose": "2026-09-29",
-      "generatedDate": "2026-10-07",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-10-07, readings as of market close, 2026-09-29 (8 calendar days old)."
+      "asOfClose": "2026-10-02",
+      "generatedDate": "2026-10-08",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-10-08, readings as of market close, 2026-10-02 (6 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,10 +54,9 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "priced": 1,
-    "calm": 1,
-    "radar-miss": 1
+    "priced": 2,
+    "calm": 2,
+    "radar-claim": 1
   },
   "rows": [
     {
@@ -69,11 +68,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 13,
+      "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[12]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -83,106 +82,27 @@
         "matchedKeywords": [
           "strike",
           "missile",
-          "attack"
+          "russia"
         ],
-        "text": "🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical ballistic missiles, as w",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, attack. Signal: 🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical b..."
+        "text": "At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children have been recovered fr",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children..."
       },
-      "market_z": -1.178,
-      "abs_market_z": 1.178,
-      "market_moving": false,
-      "driver_instrument": "GLD",
-      "driver_instrument_id": "gold",
-      "driver_instrument_label": "Gold ETF",
-      "driver_as_of": "2026-09-29",
-      "market_as_of": "2026-09-29",
+      "market_z": 1.725,
+      "abs_market_z": 1.725,
+      "market_moving": true,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-10-02",
+      "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 6,
+      "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
-      "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[4]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "attack",
-          "israel",
-          "election"
-        ],
-        "text": "Israel marks third anniversary of October 7 attack as election looms | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: Israel marks third anniversary of October 7 attack as election looms | France 24"
-      },
-      "market_z": 1.881,
-      "abs_market_z": 1.881,
-      "market_moving": true,
-      "driver_instrument": "DTWEXBGS",
-      "driver_instrument_id": "broad-usd",
-      "driver_instrument_label": "Broad U.S. dollar index",
-      "driver_as_of": "2026-09-29",
-      "market_as_of": "2026-09-29",
-      "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "priced"
-    },
-    {
-      "channel": "energy-disruption",
-      "channel_label": "Energy disruption",
-      "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
-      "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 0,
-      "top_signal": {
-        "path": "root.chokepoints[0]",
-        "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "oil",
-          "hormuz"
-        ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-      },
-      "market_z": 0.545,
-      "abs_market_z": 0.545,
-      "market_moving": false,
-      "driver_instrument": "T10YIE",
-      "driver_instrument_id": "inflation-expectations",
-      "driver_instrument_label": "10-year breakeven inflation rate",
-      "driver_as_of": "2026-09-29",
-      "market_as_of": "2026-09-29",
-      "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
-    },
-    {
-      "channel": "credit-stress",
-      "channel_label": "Credit stress",
-      "signal_category": "Credit Stress",
       "signal_score": 0,
       "signal_score_pct": 0,
       "signal_raw_score": 0,
@@ -192,17 +112,96 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
-      "market_z": 3.32,
-      "abs_market_z": 3.32,
-      "market_moving": true,
-      "driver_instrument": "DGS10",
-      "driver_instrument_id": "ten-year-treasury",
-      "driver_instrument_label": "10-year Treasury yield",
-      "driver_as_of": "2026-09-29",
-      "market_as_of": "2026-09-29",
+      "market_z": 1.338,
+      "abs_market_z": 1.338,
+      "market_moving": false,
+      "driver_instrument": "DTWEXBGS",
+      "driver_instrument_id": "broad-usd",
+      "driver_instrument_label": "Broad U.S. dollar index",
+      "driver_as_of": "2026-10-02",
+      "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 6,
+      "state": "calm"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[9]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "war",
+          "iran",
+          "oil",
+          "stocks"
+        ],
+        "text": "US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera"
+      },
+      "market_z": 1.754,
+      "abs_market_z": 1.754,
+      "market_moving": true,
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-10-02",
+      "market_as_of": "2026-10-02",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0.25,
+      "signal_score_pct": 25,
+      "signal_raw_score": 5,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 1,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Credit Stress",
+        "primaryCategory": "Credit Stress",
+        "isPrimary": true,
+        "rawScore": 5,
+        "confidence": "Low",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "bank"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — The right bank of Kiev is without power after \"Geran\" strikes. Electric transport has been halted. Air defense continues to operate over the city, downed drones are falling in residenti",
+        "explanation": "Credit Stress match based on keywords: bank. Signal: 🇷🇺🇺🇦⚡️ — The right bank of Kiev is without power after \"Geran\" strikes. Electric transport has been halted. Air defense continues to operate over the city, downed drones are..."
+      },
+      "market_z": 1.29,
+      "abs_market_z": 1.29,
+      "market_moving": false,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "driver_instrument_id": "high-yield-spreads",
+      "driver_instrument_label": "High-yield option-adjusted spread",
+      "driver_as_of": "2026-10-02",
+      "market_as_of": "2026-10-02",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "calm"
     },
     {
       "channel": "supply-chain",
@@ -213,11 +212,11 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 6,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 6,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[12]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -227,21 +226,21 @@
         "matchedKeywords": [
           "strike",
           "missile",
-          "attack"
+          "russia"
         ],
-        "text": "🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical ballistic missiles, as w",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, attack. Signal: 🇷🇺❌🇺🇦 — Explosions were heard in Kiev, Dnipro, and Trypillia following a Russian missile strike. The attack reportedly involved Iskander-M and Hwasong-11A (KN-23) tactical b..."
+        "text": "At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children have been recovered fr",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children..."
       },
-      "market_z": -0.448,
-      "abs_market_z": 0.448,
+      "market_z": -0.252,
+      "abs_market_z": 0.252,
       "market_moving": false,
       "driver_instrument": "XLI",
       "driver_instrument_id": "industrials",
       "driver_instrument_label": "Industrials equities ETF",
-      "driver_as_of": "2026-09-29",
-      "market_as_of": "2026-09-29",
+      "driver_as_of": "2026-10-02",
+      "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 6,
       "state": "radar-claim"
     }
   ],
@@ -278,14 +277,30 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[9]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 17,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "war",
+          "iran",
+          "oil",
+          "stocks"
+        ],
+        "text": "US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera"
+      }
     }
   ]
 }
