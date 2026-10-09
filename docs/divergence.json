@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-08T02:52:30.513Z",
+  "generatedAt": "2026-10-09T03:03:40.708Z",
   "date": "2026-10-02",
   "asOfClose": "2026-10-02",
   "framing": "readings as of market close, 2026-10-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-08T02:52:26.947Z",
-    "generatedDate": "2026-10-08",
+    "generatedAt": "2026-10-09T03:03:37.390Z",
+    "generatedDate": "2026-10-09",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-08T02:52:26.947Z",
-    "generatedDate": "2026-10-08",
-    "runDate": "2026-10-08",
+    "generatedAt": "2026-10-09T03:03:37.390Z",
+    "generatedDate": "2026-10-09",
+    "runDate": "2026-10-09",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-08, readings as of market close, 2026-10-02 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-09, readings as of market close, 2026-10-02 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-02",
-      "generatedDate": "2026-10-08",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-10-08, readings as of market close, 2026-10-02 (6 calendar days old)."
+      "generatedDate": "2026-10-09",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-10-09, readings as of market close, 2026-10-02 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,37 +55,39 @@
   },
   "stateCounts": {
     "priced": 2,
-    "calm": 2,
-    "radar-claim": 1
+    "calm": 1,
+    "radar-claim": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 25,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 13,
       "signal_primary_count": 13,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.tg.urgent[9]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 25,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile",
-          "russia"
+          "war",
+          "escalation",
+          "conflict",
+          "ukraine",
+          "spread"
         ],
-        "text": "At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children have been recovered fr",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children..."
+        "text": "🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, conflict, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava"
       },
       "market_z": 1.725,
       "abs_market_z": 1.725,
@@ -96,7 +98,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
@@ -121,37 +123,37 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_count": 4,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[9]",
+        "path": "root.tg.urgent[1]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
+          "missile",
+          "drone",
           "iran",
-          "oil",
-          "stocks"
+          "energy"
         ],
-        "text": "US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera"
+        "text": "🇺🇸🇮🇷⚡️ — The Pentagon has developed plans for a possible three-day campaign of intensive strikes against Iran, targeting its rebuilt missile and drone arsenal, energy infrastructure, and IRGC comm",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, iran. Signal: 🇺🇸🇮🇷⚡️ — The Pentagon has developed plans for a possible three-day campaign of intensive strikes against Iran, targeting its rebuilt missile and drone arsenal, energy infras..."
       },
       "market_z": 1.754,
       "abs_market_z": 1.754,
@@ -162,34 +164,38 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.25,
-      "signal_score_pct": 25,
-      "signal_raw_score": 5,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 25,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[9]",
         "category": "Credit Stress",
-        "primaryCategory": "Credit Stress",
-        "isPrimary": true,
-        "rawScore": 5,
-        "confidence": "Low",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 25,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "bank"
+          "war",
+          "escalation",
+          "conflict",
+          "ukraine",
+          "spread"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The right bank of Kiev is without power after \"Geran\" strikes. Electric transport has been halted. Air defense continues to operate over the city, downed drones are falling in residenti",
-        "explanation": "Credit Stress match based on keywords: bank. Signal: 🇷🇺🇺🇦⚡️ — The right bank of Kiev is without power after \"Geran\" strikes. Electric transport has been halted. Air defense continues to operate over the city, downed drones are..."
+        "text": "🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, conflict, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava"
       },
       "market_z": 1.29,
       "abs_market_z": 1.29,
@@ -200,36 +206,35 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "calm"
+      "market_calendar_lag_days": 7,
+      "state": "radar-claim"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.news[14]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "russia"
+          "gaza"
         ],
-        "text": "At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children have been recovered fr",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: At around 6:00 a.m., Russia launched a missile strike on Pryluky, Chernihiv Oblast. One missile hit a five-story residential building. At this time, the bodies of three children..."
+        "text": "A father’s agony after an Israeli air strike hits Gaza apartment | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: A father’s agony after an Israeli air strike hits Gaza apartment | Al Jazeera"
       },
       "market_z": -0.252,
       "abs_market_z": 0.252,
@@ -240,7 +245,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
@@ -277,30 +282,14 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0.85,
-      "signal_score_pct": 85,
-      "signal_raw_score": 17,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[9]",
-        "category": "Market Volatility Signal",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 17,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "war",
-          "iran",
-          "oil",
-          "stocks"
-        ],
-        "text": "US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: US stocks slide as oil prices fluctuate over renewed Iran war fears | Al Jazeera"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ]
 }
