@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-09T03:03:40.708Z",
+  "generatedAt": "2026-10-10T02:40:08.423Z",
   "date": "2026-10-02",
   "asOfClose": "2026-10-02",
   "framing": "readings as of market close, 2026-10-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-09T03:03:37.390Z",
-    "generatedDate": "2026-10-09",
+    "generatedAt": "2026-10-10T02:40:04.759Z",
+    "generatedDate": "2026-10-10",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-09T03:03:37.390Z",
-    "generatedDate": "2026-10-09",
-    "runDate": "2026-10-09",
+    "generatedAt": "2026-10-10T02:40:04.759Z",
+    "generatedDate": "2026-10-10",
+    "runDate": "2026-10-10",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-09, readings as of market close, 2026-10-02 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-10, readings as of market close, 2026-10-02 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-02",
-      "generatedDate": "2026-10-09",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-09, readings as of market close, 2026-10-02 (7 calendar days old)."
+      "generatedDate": "2026-10-10",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-10, readings as of market close, 2026-10-02 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,39 +55,37 @@
   },
   "stateCounts": {
     "priced": 2,
-    "calm": 1,
-    "radar-claim": 2
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 25,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.news[33]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 25,
+        "rawScore": 19,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "escalation",
-          "conflict",
+          "russia",
           "ukraine",
-          "spread"
+          "diesel"
         ],
-        "text": "🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, conflict, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava"
+        "text": "Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24"
       },
       "market_z": 1.725,
       "abs_market_z": 1.725,
@@ -98,7 +96,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -123,7 +121,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -135,25 +133,25 @@
       "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
-      "signal_primary_count": 2,
+      "signal_count": 3,
+      "signal_primary_count": 1,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[33]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
         "rawScore": 19,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "missile",
-          "drone",
-          "iran",
-          "energy"
+          "war",
+          "russia",
+          "ukraine",
+          "diesel"
         ],
-        "text": "🇺🇸🇮🇷⚡️ — The Pentagon has developed plans for a possible three-day campaign of intensive strikes against Iran, targeting its rebuilt missile and drone arsenal, energy infrastructure, and IRGC comm",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, drone, iran. Signal: 🇺🇸🇮🇷⚡️ — The Pentagon has developed plans for a possible three-day campaign of intensive strikes against Iran, targeting its rebuilt missile and drone arsenal, energy infras..."
+        "text": "Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24"
       },
       "market_z": 1.754,
       "abs_market_z": 1.754,
@@ -164,39 +162,22 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 25,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.tg.urgent[9]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 25,
-        "confidence": "High",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "war",
-          "escalation",
-          "conflict",
-          "ukraine",
-          "spread"
-        ],
-        "text": "🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, conflict, ukraine. Signal: 🇺🇸🇺🇦🇷🇺⚡ The war in Ukraine could end with further escalation and the spread of the conflict beyond the country's borders — US Secretary of State Rubio. @IntelSlava"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.29,
       "abs_market_z": 1.29,
       "market_moving": false,
@@ -206,35 +187,35 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.news[14]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "gaza"
+          "taiwan",
+          "container"
         ],
-        "text": "A father’s agony after an Israeli air strike hits Gaza apartment | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: A father’s agony after an Israeli air strike hits Gaza apartment | Al Jazeera"
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": -0.252,
       "abs_market_z": 0.252,
@@ -245,23 +226,39 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     }
   ],
   "signalOnly": [
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[12]",
+        "category": "Macro / Inflation Shock",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "diesel",
+          "fuel",
+          "treasury",
+          "market"
+        ],
+        "text": "🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until April 7, 2027. 📎 WarTran",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until Apr..."
+      }
     },
     {
       "signal_category": "Weather / Climate Shock",
@@ -282,14 +279,30 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[12]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "diesel",
+          "fuel",
+          "treasury",
+          "market"
+        ],
+        "text": "🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until April 7, 2027. 📎 WarTran",
+        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until Apr..."
+      }
     }
   ]
 }
