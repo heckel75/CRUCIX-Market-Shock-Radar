@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-10T02:40:08.423Z",
+  "generatedAt": "2026-10-11T02:08:08.618Z",
   "date": "2026-10-02",
   "asOfClose": "2026-10-02",
   "framing": "readings as of market close, 2026-10-02",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-10T02:40:04.759Z",
-    "generatedDate": "2026-10-10",
+    "generatedAt": "2026-10-11T02:08:04.866Z",
+    "generatedDate": "2026-10-11",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-10T02:40:04.759Z",
-    "generatedDate": "2026-10-10",
-    "runDate": "2026-10-10",
+    "generatedAt": "2026-10-11T02:08:04.866Z",
+    "generatedDate": "2026-10-11",
+    "runDate": "2026-10-11",
     "asOfClose": "2026-10-02",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-10, readings as of market close, 2026-10-02 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-11, readings as of market close, 2026-10-02 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-02",
-      "generatedDate": "2026-10-10",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-10-10, readings as of market close, 2026-10-02 (8 calendar days old)."
+      "generatedDate": "2026-10-11",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-10-11, readings as of market close, 2026-10-02 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,37 +55,39 @@
   },
   "stateCounts": {
     "priced": 2,
-    "calm": 3
+    "calm": 2,
+    "radar-claim": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
+      "signal_count": 15,
       "signal_primary_count": 14,
-      "signal_secondary_count": 0,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[33]",
+        "path": "root.tg.urgent[12]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 23,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
+          "military",
           "russia",
           "ukraine",
-          "diesel"
+          "oil",
+          "crude"
         ],
-        "text": "Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24"
+        "text": "Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage still being assessed.",
+        "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage..."
       },
       "market_z": 1.725,
       "abs_market_z": 1.725,
@@ -96,7 +98,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -121,37 +123,38 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 2,
+      "signal_count": 4,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.news[33]",
+        "path": "root.tg.urgent[12]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 23,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
+          "military",
           "russia",
           "ukraine",
-          "diesel"
+          "oil",
+          "crude"
         ],
-        "text": "Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24"
+        "text": "Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage still being assessed.",
+        "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage..."
       },
       "market_z": 1.754,
       "abs_market_z": 1.754,
@@ -162,7 +165,7 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -187,35 +190,37 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 3,
-      "signal_primary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 1,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "russia",
+          "ukraine",
+          "energy",
+          "shipping"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🇬🇧🇷🇺🇺🇦⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate energy ceasefire and halt strikes on infrastructure and Black Sea shipping. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇬🇧🇷🇺🇺🇦⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate energy ceasefire and halt strikes on infrastructure and Black Sea s..."
       },
       "market_z": -0.252,
       "abs_market_z": 0.252,
@@ -226,39 +231,23 @@
       "driver_as_of": "2026-10-02",
       "market_as_of": "2026-10-02",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "calm"
+      "market_calendar_lag_days": 9,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[12]",
-        "category": "Macro / Inflation Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "diesel",
-          "fuel",
-          "treasury",
-          "market"
-        ],
-        "text": "🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until April 7, 2027. 📎 WarTran",
-        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until Apr..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     },
     {
       "signal_category": "Weather / Climate Shock",
@@ -279,30 +268,14 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[12]",
-        "category": "Market Volatility Signal",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "diesel",
-          "fuel",
-          "treasury",
-          "market"
-        ],
-        "text": "🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until April 7, 2027. 📎 WarTran",
-        "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until Apr..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ]
 }

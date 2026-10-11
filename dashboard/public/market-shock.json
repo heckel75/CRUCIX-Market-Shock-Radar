@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-10T02:40:04.622Z",
+  "generatedAt": "2026-10-11T02:08:04.713Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -14,16 +14,16 @@
   },
   "shockCounts": {
     "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Supply Chain Disruption": 1
   },
-  "candidateCount": 139,
+  "candidateCount": 141,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[33]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 23,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -37,95 +37,111 @@
         "FX"
       ],
       "matchedKeywords": [
-        "war",
+        "military",
         "russia",
         "ukraine",
-        "diesel"
+        "oil",
+        "crude"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump strikes diesel deal with Putin, reversing years of pressure on Russia over Ukraine war | France 24"
+      "text": "Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage still being assessed.",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: Ukraine's forces struck Russia's \"Samara\" oil dispatch station again overnight, a key hub blending crude into export-grade Urals oil and supplying Russia's military, with damage..."
     },
     {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "border",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Israeli drone attack wounds six in Lebanon near Syria border | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, border, drone. Signal: Israeli drone attack wounds six in Lebanon near Syria border | Al Jazeera"
-    },
-    {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Kremlin says Trump welcomed Russia’s effort in Iran deal | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran, russia. Signal: Iran war Update: Kremlin says Trump welcomed Russia’s effort in Iran deal | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 14,
-      "confidence": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX",
-        "Rates",
-        "Treasuries",
-        "Equities",
-        "Gold",
-        "VIX",
-        "Credit"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "diesel",
-        "fuel",
-        "treasury",
-        "market"
+        "russia",
+        "ukraine",
+        "energy",
+        "shipping"
       ],
       "otherCategories": [
-        "Macro / Inflation Shock",
-        "Market Volatility Signal"
+        "Energy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until April 7, 2027. 📎 WarTran",
-      "explanation": "Energy Shock match based on keywords: diesel, fuel. Signal: 🛢 🇺🇸 🇷🇺 The US Treasury is immediately issuing a temporary license allowing Russian diesel to reach the global market, suspending sanctions on Russian diesel fuel until Apr..."
+      "text": "🇬🇧🇷🇺🇺🇦⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate energy ceasefire and halt strikes on infrastructure and Black Sea shipping. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇬🇧🇷🇺🇺🇦⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate energy ceasefire and halt strikes on infrastructure and Black Sea s..."
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.news[30]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine",
+        "fuel"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Trump says Ukraine needs new president after Zelenskyy condemns Russia fuel deal | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Trump says Ukraine needs new president after Zelenskyy condemns Russia fuel deal | Euronews"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "blockade",
+        "strike"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇺🇸 ❌️ 🚢 CENTCOM says a U.S. fighter jet struck the Panama flagged M/V Ocean Molica in the Gulf of Oman on Oct. 10 after it ignored repeated blockade warnings. The strike disabled the ship's propul",
+      "explanation": "Supply Chain Disruption match based on keywords: blockade, strike. Signal: 🇺🇸 ❌️ 🚢 CENTCOM says a U.S. fighter jet struck the Panama flagged M/V Ocean Molica in the Gulf of Oman on Oct. 10 after it ignored repeated blockade warnings. The strike disa..."
+    },
+    {
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -138,33 +154,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇷🇺🇺🇸⚡ Any weakening of sanctions against Russia without real agreements on halting strikes is weakness and a gift to Putin, which will lead to the continuation of the war — Zelensky. @IntelS",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇺🇦🇷🇺🇺🇸⚡ Any weakening of sanctions against Russia without real agreements on halting strikes is weakness and a gift to Putin, which will lead to the continuation of the wa..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "escalation",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Zelensky says any easing of sanctions on Russia without a clear, lasting de-escalation deal is weakness that lets Russia kill more and fight longer. He says Russia is compensating for its weakest fron",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, russia. Signal: Zelensky says any easing of sanctions on Russia without a clear, lasting de-escalation deal is weakness that lets Russia kill more and fight longer. He says Russia is compensati..."
+      "text": "🇺🇸🇷🇺🇺🇦⚡️ — The U.S. proposed to Russia unfreezing assets, allowing the sale of Lukoil's stake, and restoring exports of Belarusian potash in exchange for a partial ceasefire — NYT. ukraine, in",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇸🇷🇺🇺🇦⚡️ — The U.S. proposed to Russia unfreezing assets, allowing the sale of Lukoil's stake, and restoring exports of Belarusian potash in exchange for a partial ceasefi..."
     },
     {
       "path": "root.tg.urgent[11]",
@@ -180,15 +175,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack"
+        "war",
+        "missile"
       ],
       "otherCategories": [],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — King Khalid International Airport in Riyadh, Saudi Arabia, was targeted in a Houthi missile attack. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇾🇪❌🇸🇦 — King Khalid International Airport in Riyadh, Saudi Arabia, was targeted in a Houthi missile attack. @IntelSlava"
+      "text": "🇾🇪⚔️🇵🇰 Al Jazeera reports that Ansarallah is threatening Pakistan with missile attacks if it involves itself in the Yemeni Civil War on behalf of the Kingdom of Saudi Arabia Ansarallah may also s",
+      "explanation": "Geopolitical Escalation match based on keywords: war, missile. Signal: 🇾🇪⚔️🇵🇰 Al Jazeera reports that Ansarallah is threatening Pakistan with missile attacks if it involves itself in the Yemeni Civil War on behalf of the Kingdom of Saudi Arabia..."
     },
     {
-      "path": "root.news[4]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -201,12 +196,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "ukraine"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Putin tells Trump peace talks are unlikely, cites Ukraine drone attacks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Putin tells Trump peace talks are unlikely, cites Ukraine drone attacks | Al Jazeera"
+      "text": "Iran war Update: 12 killed in Riyadh, US weighs joining fight against Houthis | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: 12 killed in Riyadh, US weighs joining fight against Houthis | Al Jazeera"
+    },
+    {
+      "path": "root.news[27]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israeli attack destroys building in Gaza one year into ‘ceasefire’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, gaza. Signal: Israeli attack destroys building in Gaza one year into ‘ceasefire’ | Al Jazeera"
     },
     {
       "path": "root.news[31]",
@@ -222,15 +238,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "israel"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Flydubai co-pilot plotted ‘suicide’ attack on Israel, UAE says | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, israel. Signal: Flydubai co-pilot plotted ‘suicide’ attack on Israel, UAE says | Al Jazeera"
+      "text": "Trump says Ukraine needs a new president who will agree to end the war | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Trump says Ukraine needs a new president who will agree to end the war | Al Jazeera"
     },
     {
-      "path": "root.news[42]",
+      "path": "root.news[38]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -244,14 +260,14 @@
       ],
       "matchedKeywords": [
         "war",
-        "china"
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "China and Europe Step Back From Trade War With Limits on Chinese Car Exports | NYT Asia",
-      "explanation": "Geopolitical Escalation match based on keywords: war, china. Signal: China and Europe Step Back From Trade War With Limits on Chinese Car Exports | NYT Asia"
+      "text": "🔴 Update: Trump lashes out at Zelensky, says Ukraine needs new president who will agree to end war | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 🔴 Update: Trump lashes out at Zelensky, says Ukraine needs new president who will agree to end war | France 24"
     },
     {
-      "path": "root.newsFeed[19]",
+      "path": "root.news[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -264,12 +280,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "escalation",
-        "russia"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Zelensky says any easing of sanctions on Russia without a clear, lasting de-escalation deal is weakn | WARTRANSLATED",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, russia. Signal: Zelensky says any easing of sanctions on Russia without a clear, lasting de-escalation deal is weakn | WARTRANSLATED"
+      "text": "War in Ukraine: Russian strikes kill 15, including a young girl | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: War in Ukraine: Russian strikes kill 15, including a young girl | France 24"
+    },
+    {
+      "path": "root.newsFeed[34]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate e | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡️— UK to impose further sanctions on Russia. UK and Ukraine urge Russia to agree to an immediate e | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -311,60 +348,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — As a result of a Russian strike, most of Odesa is experiencing a blackout.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺🇺🇦⚡️ — As a result of a Russian strike, most of Odesa is experiencing a blackout."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺❌🇺🇦 — Russian jet-powered Geran drones strike targets in Lutsk, Volyn Oblast. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Russian jet-powered Geran drones strike targets in Lutsk, Volyn Oblast. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
@@ -377,8 +360,35 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇮🇷⚡️ — Reports of several cruise missile launches by the IRGC Navy from Sirik toward the Strait of Hormuz. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — Reports of several cruise missile launches by the IRGC Navy from Sirik toward the Strait of Hormuz. @IntelSlava"
+      "text": "🇮🇷⚡️ — Reports of explosions in the Strait of Hormuz following anti-ship cruise missile launches by the IRGC Navy. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — Reports of explosions in the Strait of Hormuz following anti-ship cruise missile launches by the IRGC Navy. @IntelSlava"
+    },
+    {
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺❌🇺🇦 — Today at 18:07, a strike was carried out using a Geran-4 jet-powered loitering munition against the technological complex of the TENET internet service provider in Odesa. The facility’s o",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇷🇺❌🇺🇦 — Today at 18:07, a strike was carried out using a Geran-4 jet-powered loitering munition against the technological complex of the TENET internet service provider in O..."
     }
   ]
 }
