@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-12T02:37:23.846Z",
+  "generatedAt": "2026-10-13T03:47:50.959Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -14,74 +14,27 @@
   },
   "shockCounts": {
     "Geopolitical Escalation": 14,
-    "Credit Stress": 1
+    "Energy Shock": 1
   },
-  "candidateCount": 138,
+  "candidateCount": 133,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇸🇮🇷⚡️ — Senator Darline Graham on Iran: You say I want to continue the war. Let's not forget how the war started: under the Democrats with Iran almost having a nuclear weapon.",
-      "explanation": "Geopolitical Escalation match based on keywords: war, nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — Senator Darline Graham on Iran: You say I want to continue the war. Let's not forget how the war started: under the Democrats with Iran almost having a nuclear weapon."
-    },
-    {
-      "path": "root.news[38]",
+      "path": "root.news[5]",
       "sourcePriority": "Medium",
-      "category": "Credit Stress",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities",
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "debt",
-        "bank",
-        "war"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "War and high debt to dominate IMF-World Bank meetings in Bangkok | Al Jazeera",
-      "explanation": "Credit Stress match based on keywords: debt, bank. Signal: War and high debt to dominate IMF-World Bank meetings in Bangkok | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
+      "score": 28,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -90,17 +43,21 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile"
+        "drone",
+        "russia",
+        "ukraine",
+        "energy"
       ],
       "otherCategories": [
+        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — Footage from Terminal 3 at King Khalid International Airport in Riyadh following a Houthi missile strike. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇾🇪🇾🇪❌🇸🇦 — Footage from Terminal 3 at King Khalid International Airport in Riyadh following a Houthi missile strike. @IntelSlava"
+      "text": "Trump insists Russia-Ukraine energy ceasefire is in place, drone strike kills woman in Kyiv | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, russia, ukraine. Signal: Trump insists Russia-Ukraine energy ceasefire is in place, drone strike kills woman in Kyiv | Euronews"
     },
     {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -116,18 +73,18 @@
         "FX"
       ],
       "matchedKeywords": [
-        "military",
+        "russia",
         "ukraine",
         "energy"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "In his evening address, Zelensky noted that Ukraine welcomed Trump's energy ceasefire announcement, gave the military all relevant orders to halt energy strikes, and expects reciprocal moves from Puti",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: In his evening address, Zelensky noted that Ukraine welcomed Trump's energy ceasefire announcement, gave the military all relevant orders to halt energy strikes, and expects rec..."
+      "text": "Russia and Ukraine trade strikes amid doubt over ‘energy ceasefire’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia and Ukraine trade strikes amid doubt over ‘energy ceasefire’ | Al Jazeera"
     },
     {
-      "path": "root.news[27]",
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -146,37 +103,44 @@
       ],
       "matchedKeywords": [
         "strike",
-        "border"
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Deadly air strike kills dozens at Sudan gold mine near Egypt border | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, border. Signal: Deadly air strike kills dozens at Sudan gold mine near Egypt border | Al Jazeera"
+      "text": "Israeli strike on tent in Gaza’s Khan Younis kills three | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on tent in Gaza’s Khan Younis kills three | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "category": "Energy Shock",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Gold",
         "VIX",
-        "Oil",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "border",
-        "airstrike"
+        "oil",
+        "hormuz",
+        "iran"
       ],
-      "otherCategories": [],
-      "text": "🇸🇩🇪🇬⚡️ The Sudanese human rights organization \"Emergency Lawyers\" stated that on Saturday the Egyptian Air Force carried out an airstrike on a gold mine on the border between Sudan and Egypt, kill",
-      "explanation": "Geopolitical Escalation match based on keywords: border, airstrike. Signal: 🇸🇩🇪🇬⚡️ The Sudanese human rights organization \"Emergency Lawyers\" stated that on Saturday the Egyptian Air Force carried out an airstrike on a gold mine on the border betwee..."
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "📝 🇮🇷 🇺🇸 Mario Nawfal on X: Is Iran really losing control of the Strait of Hormuz, or are we being misled about how much oil is getting through? I've been trying to understand something that doe",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: 📝 🇮🇷 🇺🇸 Mario Nawfal on X: Is Iran really losing control of the Strait of Hormuz, or are we being misled about how much oil is getting through? I've been trying to understa..."
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -193,32 +157,11 @@
         "attack"
       ],
       "otherCategories": [],
-      "text": "🇾🇪🇾🇪❌🇸🇦 — The city of Abha in southern Saudi Arabia was targeted by a Houthi ballistic missile attack. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇾🇪❌🇸🇦 — The city of Abha in southern Saudi Arabia was targeted by a Houthi ballistic missile attack. @IntelSlava"
+      "text": "🇾🇪🇾🇪❌🇸🇦 — Riyadh, the capital of Saudi Arabia, is under Houthi ballistic missile attack. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇾🇪❌🇸🇦 — Riyadh, the capital of Saudi Arabia, is under Houthi ballistic missile attack. @IntelSlava"
     },
     {
-      "path": "root.news[7]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "NATO top commander to warn Russia over alliance’s ability to counter-attack | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: NATO top commander to warn Russia over alliance’s ability to counter-attack | France 24"
-    },
-    {
-      "path": "root.news[14]",
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -235,11 +178,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Riyadh airport hit again; Tehran says US reply ‘inadequate’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Riyadh airport hit again; Tehran says US reply ‘inadequate’ | Al Jazeera"
+      "text": "Iran war Update: Trump says Houthis ‘misbehaving’ as Riyadh flights halted | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says Houthis ‘misbehaving’ as Riyadh flights halted | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[15]",
+      "path": "root.news[13]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -252,12 +195,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "iran"
+        "missile",
+        "attack"
       ],
       "otherCategories": [],
-      "text": "⚡️ — Senator Darline Graham on Iran: You say I want to continue the war. Let's not forget how the | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: ⚡️ — Senator Darline Graham on Iran: You say I want to continue the war. Let's not forget how the | CIG_TELEGRAM"
+      "text": "Houthi missile attack targets Saudi capital Riyadh for third day in a row | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: Houthi missile attack targets Saudi capital Riyadh for third day in a row | Al Jazeera"
+    },
+    {
+      "path": "root.news[31]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "NATO Details Plan to Shield Ukraine’s European Allies From Russia",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: NATO Details Plan to Shield Ukraine’s European Allies From Russia"
     },
     {
       "path": "root.chokepoints[5]",
@@ -288,8 +252,90 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "blockade"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺🇬🇧🇪🇺⚡ London and Brussels are working on plans to blockade the Baltic Sea, according to Nikolai Patrushev, an assistant to the President of Russia and chairman of the Marine Board. According",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇬🇧🇪🇺⚡ London and Brussels are working on plans to blockade the Baltic Sea, according to Nikolai Patrushev, an assistant to the President of Russia and chairman of the Ma..."
+    },
+    {
+      "path": "root.news[4]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Trump insists energy ceasefire holds as Ukraine reports new Russian strikes | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Trump insists energy ceasefire holds as Ukraine reports new Russian strikes | Al Jazeera"
+    },
+    {
+      "path": "root.news[19]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "diesel"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "After Russian Diesel Deal, Trump Faces New Crisis Over Ukraine",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: After Russian Diesel Deal, Trump Faces New Crisis Over Ukraine"
+    },
+    {
+      "path": "root.news[24]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -311,12 +357,12 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — Russia struck Kharkov’s Combined Heat and Power Plant No. 5 (CHP-5) twice, just hours after U.S. President Donald Trump announced an “energy ceasefire.” @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇦⚡️ — Russia struck Kharkov’s Combined Heat and Power Plant No. 5 (CHP-5) twice, just hours after U.S. President Donald Trump announced an “energy ceasefire.” @IntelSlava"
+      "text": "Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says"
     },
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
+      "path": "root.news[25]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -332,17 +378,17 @@
         "FX"
       ],
       "matchedKeywords": [
-        "ukraine",
+        "iran",
         "oil"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇺🇸🇷🇺🇺🇦⚡️ — The United States is threatening to block arms supplies to Ukraine due to strikes on Russian oil refineries, according to the Financial Times, citing sources. Washington is putting p",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇸🇷🇺🇺🇦⚡️ — The United States is threatening to block arms supplies to Ukraine due to strikes on Russian oil refineries, according to the Financial Times, citing sources. W..."
+      "text": "Why do Iran’s oil ‘intermediaries’ owe the government billions? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Why do Iran’s oil ‘intermediaries’ owe the government billions? | Al Jazeera"
     },
     {
-      "path": "root.news[15]",
+      "path": "root.news[43]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -353,47 +399,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "strike"
+        "russia",
+        "energy"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Pakistani national killed in second Houthi strike on Riyadh airport | Al Jazeera | Pakistan",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Pakistani national killed in second Houthi strike on Riyadh airport | Al Jazeera | Pakistan"
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Footage shows moment Russian strike hits Ukrainian grocery store | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Footage shows moment Russian strike hits Ukrainian grocery store | Al Jazeera"
+      "text": "'Increasingly evident' Russia won't accept 'energy ceasefire': Zelensky | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 'Increasingly evident' Russia won't accept 'energy ceasefire': Zelensky | France 24"
     }
   ]
 }
