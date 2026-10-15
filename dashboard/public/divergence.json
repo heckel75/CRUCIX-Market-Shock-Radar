@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-14T02:07:48.766Z",
+  "generatedAt": "2026-10-15T01:45:32.235Z",
   "date": "2026-10-06",
   "asOfClose": "2026-10-06",
   "framing": "readings as of market close, 2026-10-06",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-14T02:07:45.856Z",
-    "generatedDate": "2026-10-14",
+    "generatedAt": "2026-10-15T01:45:28.575Z",
+    "generatedDate": "2026-10-15",
     "asOfClose": "2026-10-06",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-14T02:07:45.856Z",
-    "generatedDate": "2026-10-14",
-    "runDate": "2026-10-14",
+    "generatedAt": "2026-10-15T01:45:28.575Z",
+    "generatedDate": "2026-10-15",
+    "runDate": "2026-10-15",
     "asOfClose": "2026-10-06",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-14, readings as of market close, 2026-10-06 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-15, readings as of market close, 2026-10-06 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-06",
-      "generatedDate": "2026-10-14",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-10-14, readings as of market close, 2026-10-06 (8 calendar days old)."
+      "generatedDate": "2026-10-15",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-10-15, readings as of market close, 2026-10-06 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -67,11 +67,11 @@
       "signal_raw_score": 24,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 14,
+      "signal_count": 14,
+      "signal_primary_count": 13,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[11]",
+        "path": "root.tg.urgent[8]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
@@ -97,7 +97,7 @@
       "driver_as_of": "2026-10-06",
       "market_as_of": "2026-10-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -122,7 +122,7 @@
       "driver_as_of": "2026-10-06",
       "market_as_of": "2026-10-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -134,11 +134,11 @@
       "signal_raw_score": 24,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 6,
+      "signal_count": 5,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[11]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -164,36 +164,22 @@
       "driver_as_of": "2026-10-06",
       "market_as_of": "2026-10-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[11]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "gaza",
-          "bank"
-        ],
-        "text": "Israeli attacks kill one in Gaza, wound journalists in occupied West Bank | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: gaza. Signal: Israeli attacks kill one in Gaza, wound journalists in occupied West Bank | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -0.461,
       "abs_market_z": 0.461,
       "market_moving": false,
@@ -203,35 +189,39 @@
       "driver_as_of": "2026-10-06",
       "market_as_of": "2026-10-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[7]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Geopolitical Escalation",
+        "primaryCategory": "Energy Shock",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 23,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile"
+          "oil",
+          "gas",
+          "hormuz",
+          "energy",
+          "disruption",
+          "market"
         ],
-        "text": "Unconfirmed footage shows smoke rising from an Aramco facility in Jubail, Eastern Province, Saudi Arabia, following an Ansar Allah (Houthi) missile strike.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Unconfirmed footage shows smoke rising from an Aramco facility in Jubail, Eastern Province, Saudi Arabia, following an Ansar Allah (Houthi) missile strike."
+        "text": "📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. That is more than doub",
+        "explanation": "Energy Shock match based on keywords: oil, gas, hormuz, energy. Signal: 📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. T..."
       },
       "market_z": 0.568,
       "abs_market_z": 0.568,
@@ -242,7 +232,7 @@
       "driver_as_of": "2026-10-06",
       "market_as_of": "2026-10-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     }
   ],
@@ -279,14 +269,32 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[7]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 23,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "oil",
+          "gas",
+          "hormuz",
+          "energy",
+          "disruption",
+          "market"
+        ],
+        "text": "📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. That is more than doub",
+        "explanation": "Energy Shock match based on keywords: oil, gas, hormuz, energy. Signal: 📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. T..."
+      }
     }
   ]
 }
