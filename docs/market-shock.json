@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-15T01:45:28.460Z",
+  "generatedAt": "2026-10-16T01:37:09.059Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,17 +13,17 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 137,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 24,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,86 +31,55 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "military",
-        "russia",
-        "ukraine",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Zelenskyy stated that Russia struck CHP-4 in Kyiv without any warning from partners and is preparing new ballistic missile launches, despite Ukraine's support for the energy ceasefire. The military an",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, military, russia, ukraine. Signal: Zelenskyy stated that Russia struck CHP-4 in Kyiv without any warning from partners and is preparing new ballistic missile launches, despite Ukraine's support for the energy cea..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 23,
-      "confidence": "High",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
         "Commodities",
-        "Margins",
-        "VIX",
-        "Equities",
-        "Credit",
-        "Rates"
+        "Margins"
       ],
       "matchedKeywords": [
-        "oil",
-        "gas",
-        "hormuz",
-        "energy",
-        "disruption",
-        "market"
+        "strike",
+        "troops",
+        "drone"
       ],
       "otherCategories": [
-        "Supply Chain Disruption",
-        "Market Volatility Signal"
+        "Supply Chain Disruption"
       ],
-      "text": "📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. That is more than doub",
-      "explanation": "Energy Shock match based on keywords: oil, gas, hormuz, energy. Signal: 📖 🇮🇷🛢 Hormuz is the largest energy supply shock on record, says McKinsey At its peak, the Strait of Hormuz disruption took 14% of global oil and gas supply off the market. T..."
+      "text": "🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were quick to strike the Ukrai",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone. Signal: 🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were qui..."
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 19,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
+        "strike",
         "missile",
-        "drone",
-        "russia"
+        "military"
       ],
-      "otherCategories": [],
-      "text": "🇷🇺⚡️ — A missile alert has been declared in seven regions of Russia: Rostov, Volgograd, Orenburg, Ulyanovsk, and Samara oblasts, as well as in Chuvashia and Tatarstan. In Moscow oblast, a drone att",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, drone, russia. Signal: 🇷🇺⚡️ — A missile alert has been declared in seven regions of Russia: Rostov, Volgograd, Orenburg, Ulyanovsk, and Samara oblasts, as well as in Chuvashia and Tatarstan. In Mosc..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "The Ukrainian Navy reported that last night they launched a strike with the Neptune missile system on the Borysoglebsk military airfield in the Voronezh region of the RF, hitting six Russian Su-34M fi",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, military. Signal: The Ukrainian Navy reported that last night they launched a strike with the Neptune missile system on the Borysoglebsk military airfield in the Voronezh region of the RF, hittin..."
     },
     {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -122,185 +91,68 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "war",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇷🇺⚡️ —Russia is ahead of Ukraine in the arms technology race — The Daily Telegraph. According to the publication's assessment, the Russian military has improved its means of overcoming Ukrainian a",
-      "explanation": "Geopolitical Escalation match based on keywords: military, russia, ukraine. Signal: 🇷🇺⚡️ —Russia is ahead of Ukraine in the arms technology race — The Daily Telegraph. According to the publication's assessment, the Russian military has improved its means of o..."
+      "text": "Trump’s Deal With Russia Inflames Ukraine War He Vowed to End",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Trump’s Deal With Russia Inflames Ukraine War He Vowed to End"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "missile"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇾🇪❌🇸🇦🇾🇪 — Ansarallah announces targeting King Khalid Intl. Airport, Riyadh with a ballistic missile, claiming the strike impacted. Ansarallah also announced launching 3 ballistic missiles towar",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇾🇪❌🇸🇦🇾🇪 — Ansarallah announces targeting King Khalid Intl. Airport, Riyadh with a ballistic missile, claiming the strike impacted. Ansarallah also announced launching 3 ba..."
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡️ — Power went out following a Geran drone strike on a substation in Chornomorsk, Odessa Oblast. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — Power went out following a Geran drone strike on a substation in Chornomorsk, Odessa Oblast. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "military",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🛢 🇺🇸 🇬🇱 Trump says massive oil drilling is coming to Greenland as the US turns the island into a missile shield Fresh off a deal giving America a permanent military foothold on the Arctic island",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, military. Signal: 🛢 🇺🇸 🇬🇱 Trump says massive oil drilling is coming to Greenland as the US turns the island into a missile shield Fresh off a deal giving America a permanent military foothol..."
-    },
-    {
-      "path": "root.news[7]",
+      "path": "root.news[41]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
         "war",
-        "iran",
-        "hormuz"
+        "russia",
+        "ukraine"
       ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: Tehran vows to fight until US yields as ships sink in Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran vows to fight until US yields as ships sink in Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[16]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "⚡️ — Power went out following a Geran drone strike on a substation in Chornomorsk, Odessa Oblast. @ | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — Power went out following a Geran drone strike on a substation in Chornomorsk, Odessa Oblast. @ | INTELSLAVA"
+      "otherCategories": [],
+      "text": "Donald Trump 'openly financing Russia's war with Ukraine', Nobel peace laureate says | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Donald Trump 'openly financing Russia's war with Ukraine', Nobel peace laureate says | France 24"
     },
     {
       "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
+      "category": "Geopolitical Escalation",
       "score": 13,
       "confidence": "Medium",
       "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Gold",
         "VIX",
+        "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy",
+        "Commodities"
       ],
       "matchedKeywords": [
-        "gas",
-        "pipeline",
-        "russia"
+        "military",
+        "ukraine",
+        "storm"
       ],
       "otherCategories": [
-        "Geopolitical Escalation"
+        "Weather / Climate Shock"
       ],
-      "text": "Today, the \"Central Asia - Center\" underground gas pipeline exploded in Russia's Penza Region. Following the explosion, a pillar of fire rose 70 meters into the air. The blast allegedly occurred due t",
-      "explanation": "Energy Shock match based on keywords: gas, pipeline. Signal: Today, the \"Central Asia - Center\" underground gas pipeline exploded in Russia's Penza Region. Following the explosion, a pillar of fire rose 70 meters into the air. The blast a..."
+      "text": "🇬🇧🇺🇦⚡️ — The United Kingdom is supplying Ukraine with additional long-range Storm Shadow cruise missiles to help disrupt Russian military operations targeting Ukrainian civilian infrastructure ahe",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇬🇧🇺🇦⚡️ — The United Kingdom is supplying Ukraine with additional long-range Storm Shadow cruise missiles to help disrupt Russian military operations targeting Ukrainian civi..."
     },
     {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -312,37 +164,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "war",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates"
+      "text": "🇾🇪⚔️🇸🇦📝 The defeat of the geopolitical West in Yemen will reconfigure West Asia no less than the US-Israeli defeat in the Iran war. ‘So the Saudi-Houthi war, while it is certainly endogenous to",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇾🇪⚔️🇸🇦📝 The defeat of the geopolitical West in Yemen will reconfigure West Asia no less than the US-Israeli defeat in the Iran war. ‘So the Saudi-Houthi war, while it is ce..."
     },
     {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Musk says US government may be behind slowdown of Ukraine drone speeds",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Musk says US government may be behind slowdown of Ukraine drone speeds"
-    },
-    {
-      "path": "root.news[31]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -355,14 +186,35 @@
       ],
       "matchedKeywords": [
         "attack",
-        "russia"
+        "drone"
       ],
       "otherCategories": [],
-      "text": "Russia attack hits Kyiv after reported intelligence lapse | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia attack hits Kyiv after reported intelligence lapse | Al Jazeera"
+      "text": "🇺🇦🇷🇺⚡️ — A Ukrainian drone attack on Moscow is underway — Mayor Sergei Sobyanin reports. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇺🇦🇷🇺⚡️ — A Ukrainian drone attack on Moscow is underway — Mayor Sergei Sobyanin reports. @IntelSlava"
     },
     {
-      "path": "root.newsFeed[34]",
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Saudi blasts Houthi ‘war crimes’; US warns on Saudi airports | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Saudi blasts Houthi ‘war crimes’; US warns on Saudi airports | Al Jazeera"
+    },
+    {
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -376,11 +228,32 @@
       ],
       "matchedKeywords": [
         "missile",
-        "russia"
+        "attack"
       ],
       "otherCategories": [],
-      "text": "⚡️ — A missile alert has been declared in seven regions of Russia: Rostov, Volgograd, Orenburg, Ulya | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: ⚡️ — A missile alert has been declared in seven regions of Russia: Rostov, Volgograd, Orenburg, Ulya | INTELSLAVA"
+      "text": "Houthi missile attack on Yemeni presidential palace kills five, minister says",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: Houthi missile attack on Yemeni presidential palace kills five, minister says"
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [],
+      "text": "Israel halts commercial goods from entering Gaza; Hamas denies tax claims | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel halts commercial goods from entering Gaza; Hamas denies tax claims | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -409,6 +282,109 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Houthi Missiles Strike Government Headquarters in Yemen",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Houthi Missiles Strike Government Headquarters in Yemen"
+    },
+    {
+      "path": "root.news[28]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "refinery"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Agriculture",
+        "Insurance",
+        "Utilities",
+        "Energy",
+        "Commodities"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "storm"
+      ],
+      "otherCategories": [
+        "Weather / Climate Shock"
+      ],
+      "text": "🇬🇧🇺🇦🇷🇺⚡️ — The UK is preparing a new batch of Storm Shadow cruise missiles for Ukraine, Bloomberg reports, citing sources. The deliveries were discussed during a recent meeting between Ukrainia",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇬🇧🇺🇦🇷🇺⚡️ — The UK is preparing a new batch of Storm Shadow cruise missiles for Ukraine, Bloomberg reports, citing sources. The deliveries were discussed during a recent me..."
     }
   ]
 }
