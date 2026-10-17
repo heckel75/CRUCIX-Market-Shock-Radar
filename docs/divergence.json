@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-16T01:37:13.620Z",
+  "generatedAt": "2026-10-17T01:29:35.709Z",
   "date": "2026-10-09",
   "asOfClose": "2026-10-09",
   "framing": "readings as of market close, 2026-10-09",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-16T01:37:09.207Z",
-    "generatedDate": "2026-10-16",
+    "generatedAt": "2026-10-17T01:29:32.774Z",
+    "generatedDate": "2026-10-17",
     "asOfClose": "2026-10-09",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-16T01:37:09.207Z",
-    "generatedDate": "2026-10-16",
-    "runDate": "2026-10-16",
+    "generatedAt": "2026-10-17T01:29:32.774Z",
+    "generatedDate": "2026-10-17",
+    "runDate": "2026-10-17",
     "asOfClose": "2026-10-09",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-16, readings as of market close, 2026-10-09 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-17, readings as of market close, 2026-10-09 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-09",
-      "generatedDate": "2026-10-16",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-16, readings as of market close, 2026-10-09 (7 calendar days old)."
+      "generatedDate": "2026-10-17",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-17, readings as of market close, 2026-10-09 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 3
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[8]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
+        "rawScore": 23,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "troops",
-          "drone"
+          "nuclear",
+          "iran",
+          "energy"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were quick to strike the Ukrai",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone. Signal: 🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were qui..."
+        "text": "🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and energy infrastructure.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and..."
       },
       "market_z": -0.631,
       "abs_market_z": 0.631,
@@ -95,7 +96,7 @@
       "driver_as_of": "2026-10-09",
       "market_as_of": "2026-10-09",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -120,35 +121,37 @@
       "driver_as_of": "2026-10-09",
       "market_as_of": "2026-10-09",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.news[28]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 23,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "ukraine",
-          "refinery"
+          "strike",
+          "nuclear",
+          "iran",
+          "energy"
         ],
-        "text": "Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump",
-        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump"
+        "text": "🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and energy infrastructure.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and..."
       },
       "market_z": -0.783,
       "abs_market_z": 0.783,
@@ -159,22 +162,36 @@
       "driver_as_of": "2026-10-09",
       "market_as_of": "2026-10-09",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[27]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "attack",
+          "bank"
+        ],
+        "text": "Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank",
+        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank"
+      },
       "market_z": -0.822,
       "abs_market_z": 0.822,
       "market_moving": false,
@@ -184,36 +201,37 @@
       "driver_as_of": "2026-10-09",
       "market_as_of": "2026-10-09",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.tg.urgent[8]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
+        "rawScore": 23,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "troops",
-          "drone"
+          "nuclear",
+          "iran",
+          "energy"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were quick to strike the Ukrai",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, troops, drone. Signal: 🇷🇺🇺🇦⚡️ — A Baba Yaga heavy bomber drone lands on the Orikhiv axis under the watchful eyes of reconnaissance troops from the 70th Guards Regiment. Russian FPV drones were qui..."
+        "text": "🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and energy infrastructure.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and..."
       },
       "market_z": -1.115,
       "abs_market_z": 1.115,
@@ -224,7 +242,7 @@
       "driver_as_of": "2026-10-09",
       "market_as_of": "2026-10-09",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
@@ -245,30 +263,15 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.tg.urgent[9]",
-        "category": "Weather / Climate Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "military",
-          "ukraine",
-          "storm"
-        ],
-        "text": "🇬🇧🇺🇦⚡️ — The United Kingdom is supplying Ukraine with additional long-range Storm Shadow cruise missiles to help disrupt Russian military operations targeting Ukrainian civilian infrastructure ahe",
-        "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇬🇧🇺🇦⚡️ — The United Kingdom is supplying Ukraine with additional long-range Storm Shadow cruise missiles to help disrupt Russian military operations targeting Ukrainian civi..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ],
   "retiredSignals": [
