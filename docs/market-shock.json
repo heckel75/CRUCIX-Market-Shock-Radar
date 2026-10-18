@@ -1,325 +1,25 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-17T01:29:32.627Z",
+  "generatedAt": "2026-10-18T01:28:43.540Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 12,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
-    "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories.",
+    "concentrationPenalty": 0,
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 1,
+    "Energy Shock": 2,
+    "Supply Chain Disruption": 2
   },
-  "candidateCount": 133,
-  "itemCount": 15,
+  "candidateCount": 19,
+  "itemCount": 5,
   "items": [
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 23,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "nuclear",
-        "iran",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and energy infrastructure.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — CNN, citing multiple U.S. officials, reports the United States has developed strike plans against Iran that includes dropping a GBU-43/B MOAB on Iranian nuclear and..."
-    },
-    {
-      "path": "root.news[6]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "Iran war Update: Trump claims US Navy blockade stops Iranian ships in Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump claims US Navy blockade stops Iranian ships in Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Some of the Russian Geran-5 jet-drones used to target western Ukraine today were recorded flying at speeds of 700-800 km/h, indicating Russia may have upgraded them or is using a new type of drone-mis",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, russia, ukraine. Signal: Some of the Russian Geran-5 jet-drones used to target western Ukraine today were recorded flying at speeds of 700-800 km/h, indicating Russia may have upgraded them or is using ..."
-    },
-    {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Ukraine's General Staff says deep-strike drones hit a 55Zh6U Nebo-U radar station near Magri, Krasnodar region, overnight, sparking a fire. The radar, worth about 100 million dollars, is used to detec",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's General Staff says deep-strike drones hit a 55Zh6U Nebo-U radar station near Magri, Krasnodar region, overnight, sparking a fire. The radar, worth about 100 million do..."
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Ukraine's 115th Brigade has now hit two Mi-28 helicopters with drones in Belgorod region within days, the latest just after an October 14 strike on the same helicopter type there. Both helicopters' fa",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine's 115th Brigade has now hit two Mi-28 helicopters with drones in Belgorod region within days, the latest just after an October 14 strike on the same helicopter type ther..."
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇸🇾⚡️ — Locals reported anti-aircraft fire targeting an unidentified drone in the Damascus countryside. According to the Azaz News Network, the Syrian Army is conducting military exercises. @IntelSl",
-      "explanation": "Geopolitical Escalation match based on keywords: military, drone. Signal: 🇸🇾⚡️ — Locals reported anti-aircraft fire targeting an unidentified drone in the Damascus countryside. According to the Azaz News Network, the Syrian Army is conducting milita..."
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "The Prybultsi (“Aliens”) air defense and anti-drone unit of Ukraine’s 115th Mechanized Brigade targets a Russian Aerospace Forces Mi-28N helicopter with an FPV drone as it launches a Kh-39 Light Multi",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: The Prybultsi (“Aliens”) air defense and anti-drone unit of Ukraine’s 115th Mechanized Brigade targets a Russian Aerospace Forces Mi-28N helicopter with an FPV drone as it launc..."
-    },
-    {
-      "path": "root.tg.urgent[11]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "Several Russian regions are currently under attack. Neptune missiles aimed at Maikop airfield were shot down over the Black Sea. Rostov region is under missile attack, and air raid alerts are now spre",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: Several Russian regions are currently under attack. Neptune missiles aimed at Maikop airfield were shot down over the Black Sea. Rostov region is under missile attack, and air r..."
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Food affordability fears plague Gaza as Israel halts commercial goods | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Food affordability fears plague Gaza as Israel halts commercial goods | Al Jazeera"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank"
-    },
-    {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "How Iran messaging highlights cost of war ahead of US midterm elections | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: How Iran messaging highlights cost of war ahead of US midterm elections | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[24]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "The Prybultsi (“Aliens”) air defense and anti-drone unit of Ukraine’s 115th Mechanized Brigade targe | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: The Prybultsi (“Aliens”) air defense and anti-drone unit of Ukraine’s 115th Mechanized Brigade targe | INTELSLAVA"
-    },
     {
       "path": "root.chokepoints[5]",
       "sourcePriority": "High",
@@ -349,17 +49,33 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[14]",
+      "path": "root.chokepoints[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
+      "category": "Energy Shock",
+      "score": 8,
       "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.chokepoints[1]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 4,
+      "confidence": "Low",
+      "channels": [
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -367,41 +83,51 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "invasion",
-        "logistics"
+        "canal"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Putin ordered Russian forces to continue the invasion and carry out massive strikes on what he called \"enemy logistics hubs.\"",
-      "explanation": "Geopolitical Escalation match based on keywords: invasion. Signal: Putin ordered Russian forces to continue the invasion and carry out massive strikes on what he called \"enemy logistics hubs.\""
+      "otherCategories": [],
+      "text": "Suez Canal | 12% of world trade",
+      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Suez Canal | 12% of world trade"
     },
     {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
+      "path": "root.chokepoints[4]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 4,
+      "confidence": "Low",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX"
       ],
       "matchedKeywords": [
-        "ukraine",
-        "diesel"
+        "red sea"
       ],
-      "otherCategories": [
-        "Energy Shock"
+      "otherCategories": [],
+      "text": "Bab el-Mandeb | Red Sea gateway",
+      "explanation": "Energy Shock match based on keywords: red sea. Signal: Bab el-Mandeb | Red Sea gateway"
+    },
+    {
+      "path": "root.chokepoints[7]",
+      "sourcePriority": "High",
+      "category": "Supply Chain Disruption",
+      "score": 4,
+      "confidence": "Low",
+      "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
-      "text": "Ukraine advances in occupied Donetsk as Trump hands Putin diesel deal | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Ukraine advances in occupied Donetsk as Trump hands Putin diesel deal | Al Jazeera"
+      "matchedKeywords": [
+        "canal"
+      ],
+      "otherCategories": [],
+      "text": "Panama Canal | 5% of world trade",
+      "explanation": "Supply Chain Disruption match based on keywords: canal. Signal: Panama Canal | 5% of world trade"
     }
   ]
 }
