@@ -1,0 +1,305 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-10-20T02:02:32.178Z",
+  "date": "2026-10-14",
+  "asOfClose": "2026-10-14",
+  "framing": "readings as of market close, 2026-10-14",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-10-20T02:02:17.928Z",
+    "generatedDate": "2026-10-20",
+    "asOfClose": "2026-10-14",
+    "calendarLagDays": 6,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-10-20T02:02:17.928Z",
+    "generatedDate": "2026-10-20",
+    "runDate": "2026-10-20",
+    "asOfClose": "2026-10-14",
+    "calendarLagDays": 6,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-10-20, readings as of market close, 2026-10-14 (6 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-10-14",
+      "generatedDate": "2026-10-20",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-10-20, readings as of market close, 2026-10-14 (6 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "radar-claim": 2,
+    "priced": 3
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 13,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "attack",
+          "drone"
+        ],
+        "text": "Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the attack. At least 14 other",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the at..."
+      },
+      "market_z": 0.682,
+      "abs_market_z": 0.682,
+      "market_moving": false,
+      "driver_instrument": "VIXCLS",
+      "driver_instrument_id": "vix",
+      "driver_instrument_label": "CBOE Volatility Index",
+      "driver_as_of": "2026-10-14",
+      "market_as_of": "2026-10-14",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[10]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "military",
+          "bank",
+          "freeze"
+        ],
+        "text": "🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been ordered to the West Bank",
+        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been o..."
+      },
+      "market_z": -1.954,
+      "abs_market_z": 1.954,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-10-14",
+      "market_as_of": "2026-10-14",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[3]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "attack",
+          "drone",
+          "oil"
+        ],
+        "text": "Images showing the aftermath of a massive drone attack on Saint Petersburg: ▪️Three tanks were damaged at an oil terminal, one of which burned out completely. ▪️Another tank was destroyed at the Ruc",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Images showing the aftermath of a massive drone attack on Saint Petersburg: ▪️Three tanks were damaged at an oil terminal, one of which burned out completely. ▪️Another tank was..."
+      },
+      "market_z": 0.605,
+      "abs_market_z": 0.605,
+      "market_moving": false,
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-10-14",
+      "market_as_of": "2026-10-14",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[10]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "military",
+          "bank",
+          "freeze"
+        ],
+        "text": "🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been ordered to the West Bank",
+        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been o..."
+      },
+      "market_z": 1.682,
+      "abs_market_z": 1.682,
+      "market_moving": true,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "driver_instrument_id": "high-yield-spreads",
+      "driver_instrument_label": "High-yield option-adjusted spread",
+      "driver_as_of": "2026-10-14",
+      "market_as_of": "2026-10-14",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "attack",
+          "drone"
+        ],
+        "text": "Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the attack. At least 14 other",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the at..."
+      },
+      "market_z": -2.206,
+      "abs_market_z": 2.206,
+      "market_moving": true,
+      "driver_instrument": "SOXX",
+      "driver_instrument_id": "semiconductors",
+      "driver_instrument_label": "Semiconductor equities ETF",
+      "driver_as_of": "2026-10-14",
+      "market_as_of": "2026-10-14",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
