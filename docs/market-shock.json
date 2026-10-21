@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-20T02:02:17.829Z",
+  "generatedAt": "2026-10-21T01:57:26.131Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,72 +13,64 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 13,
-    "Energy Shock": 2
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 132,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
+      "score": 15,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the attack. At least 14 other",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the at..."
-    },
-    {
-      "path": "root.news[21]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone",
+        "conflict",
+        "russia",
         "ukraine"
       ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇸🇺🇦⚡️ — Russia says its position on resolving the Ukraine conflict will not change in response to US President Donald Trump’s decision to postpone new sanctions. Russia and the US are holdin",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict, russia, ukraine. Signal: 🇷🇺🇺🇸🇺🇦⚡️ — Russia says its position on resolving the Ukraine conflict will not change in response to US President Donald Trump’s decision to postpone new sanctions. Russia..."
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "iran"
+      ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Children among six killed in Russian drone strike on Ukraine park | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone, ukraine. Signal: Children among six killed in Russian drone strike on Ukraine park | Al Jazeera"
+      "text": "🇺🇸❌🇮🇷 – Israeli outlet i24 News claims Trump came \"very close\" to approving a strike in Iran on at least one occasion in recent weeks. There have been unconfirmed reports of U.S. strikes in Iran",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸❌🇮🇷 – Israeli outlet i24 News claims Trump came \"very close\" to approving a strike in Iran on at least one occasion in recent weeks. There have been unconfirmed reports of..."
     },
     {
-      "path": "root.tg.urgent[3]",
+      "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -106,10 +98,10 @@
       "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Images showing the aftermath of a massive drone attack on Saint Petersburg: ▪️Three tanks were damaged at an oil terminal, one of which burned out completely. ▪️Another tank was..."
     },
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 13,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -117,58 +109,24 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
         "Equities",
+        "Credit",
         "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit"
+        "Rates"
       ],
       "matchedKeywords": [
         "military",
-        "bank",
-        "freeze"
+        "ukraine",
+        "panic"
       ],
       "otherCategories": [
-        "Credit Stress",
-        "Sanctions / Policy Shock"
+        "Market Volatility Signal"
       ],
-      "text": "🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been ordered to the West Bank",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been o..."
+      "text": "🇺🇸 🇺🇦 🇷🇺 \"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a decision that sparked panic in Kyiv and confusion inside the Trump administration, U.S. o",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇺🇸 🇺🇦 🇷🇺 \"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a decision that sparked panic in Kyiv and confusion inside the Trump..."
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "refinery",
-        "diesel",
-        "russia"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "Trump says he won't sign new Russia sanctions, claiming it would hurt his \"progress\" in peace talks. He also blames Zelensky's refinery strikes for global diesel price pain and insists Zelensky \"never",
-      "explanation": "Energy Shock match based on keywords: refinery, diesel. Signal: Trump says he won't sign new Russia sanctions, claiming it would hurt his \"progress\" in peace talks. He also blames Zelensky's refinery strikes for global diesel price pain and ..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -181,15 +139,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack"
+        "attack",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "The consequences of the latest Russian attack on Kyiv. In one district, a crater formed in a courtyard between a medical facility and a residential high-rise building, with missile debris lying nearby",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: The consequences of the latest Russian attack on Kyiv. In one district, a crater formed in a courtyard between a medical facility and a residential high-rise building, with miss..."
+      "text": "🇷🇺🇺🇦⚡ Russia has amassed thousands of attack drones and missiles ahead of winter, producing more than 200 missiles of various types every month, including 110 ballistic ones — GUR (Ukrainian mili",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: 🇷🇺🇺🇦⚡ Russia has amassed thousands of attack drones and missiles ahead of winter, producing more than 200 missiles of various types every month, including 110 ballistic ones..."
     },
     {
-      "path": "root.tg.urgent[12]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -206,32 +164,53 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Ombudsman Lubinets reported that Ukraine and Russia are finalizing the last details for the evacuation of civilians from the occupied Oleshky community to Ukraine-controlled territory.",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Ombudsman Lubinets reported that Ukraine and Russia are finalizing the last details for the evacuation of civilians from the occupied Oleshky community to Ukraine-controlled ter..."
+      "text": "🇺🇸🇺🇦⚡️ — Trump presses Zelensky to reach a peace deal with Russia, warning of very bad consequences if Kiev refuses. Ukraine could have secured far better terms two years ago. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇸🇺🇦⚡️ — Trump presses Zelensky to reach a peace deal with Russia, warning of very bad consequences if Kiev refuses. Ukraine could have secured far better terms two years ag..."
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Poland's Government Centre for Security stated that on the evening of October 19, jets were scrambled for the third time in a single day due to a Russian attack on Ukraine. Polish aviation was also ac",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, ukraine. Signal: Poland's Government Centre for Security stated that on the evening of October 19, jets were scrambled for the third time in a single day due to a Russian attack on Ukraine. Poli..."
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "Monitoring groups have reported that the Nikolskaya linear production and control station was on fire near the Russian town of Michurinsk. It is reported that the drone attack had been ongoing for sev",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Monitoring groups have reported that the Nikolskaya linear production and control station was on fire near the Russian town of Michurinsk. It is reported that the drone attack h..."
     },
     {
       "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Trump’s Push for Deals With Russia Powers His Frustration With Ukraine",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Trump’s Push for Deals With Russia Powers His Frustration With Ukraine"
-    },
-    {
-      "path": "root.news[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -248,32 +227,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump says US hits Iran hard ‘economically and militarily’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says US hits Iran hard ‘economically and militarily’ | Al Jazeera"
+      "text": "Iran war Update: US warns peace deal with Tehran is extremely difficult | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US warns peace deal with Tehran is extremely difficult | Al Jazeera"
     },
     {
-      "path": "root.news[34]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "israel"
-      ],
-      "otherCategories": [],
-      "text": "Could your halal pension be funding Israel’s military? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Could your halal pension be funding Israel’s military? | Al Jazeera"
-    },
-    {
-      "path": "root.news[39]",
+      "path": "root.news[40]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -287,11 +245,32 @@
       ],
       "matchedKeywords": [
         "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Why the war on Iran could backfire on US regime-change goals | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Why the war on Iran could backfire on US regime-change goals | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Tennis star Svitolina says emotional toll of Ukraine war led to Monfils separation",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Tennis star Svitolina says emotional toll of Ukraine war led to Monfils separation"
+      "text": "\"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a deci | CIG_TELEGRAM",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: \"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a deci | CIG_TELEGRAM"
     },
     {
       "path": "root.chokepoints[5]",
@@ -322,6 +301,61 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "ukraine",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "A series of recent statements by JD Vance regarding Ukraine: 🔸\"I do not believe that Ukraine should join NATO\"; 🔸\"Ukraine must stop attacking Russian energy facilities\"; 🔸\"In a sense, Ukraine is",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: A series of recent statements by JD Vance regarding Ukraine: 🔸\"I do not believe that Ukraine should join NATO\"; 🔸\"Ukraine must stop attacking Russian energy facilities\"; 🔸\"In..."
+    },
+    {
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "china",
+        "ban"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "China Criticizes U.S. Ban on DeepSeek A.I. in Government Systems",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China Criticizes U.S. Ban on DeepSeek A.I. in Government Systems"
+    },
+    {
       "path": "root.chokepoints[0]",
       "sourcePriority": "High",
       "category": "Energy Shock",
@@ -341,46 +375,6 @@
       "otherCategories": [],
       "text": "Strait of Hormuz | 20% of world oil",
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "Around 10 Israeli Air Force (IAF) fighter jets took off from Nevatim Airbase earlier tonight, flying through Syrian airspace before entering Iraqi airspace, where they conducted simulated attack runs.",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Around 10 Israeli Air Force (IAF) fighter jets took off from Nevatim Airbase earlier tonight, flying through Syrian airspace before entering Iraqi airspace, where they conducted..."
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-20T02:02:32.178Z",
+  "generatedAt": "2026-10-21T01:57:29.425Z",
   "date": "2026-10-14",
   "asOfClose": "2026-10-14",
   "framing": "readings as of market close, 2026-10-14",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-20T02:02:17.928Z",
-    "generatedDate": "2026-10-20",
+    "generatedAt": "2026-10-21T01:57:26.225Z",
+    "generatedDate": "2026-10-21",
     "asOfClose": "2026-10-14",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-20T02:02:17.928Z",
-    "generatedDate": "2026-10-20",
-    "runDate": "2026-10-20",
+    "generatedAt": "2026-10-21T01:57:26.225Z",
+    "generatedDate": "2026-10-21",
+    "runDate": "2026-10-21",
     "asOfClose": "2026-10-14",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-20, readings as of market close, 2026-10-14 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-21, readings as of market close, 2026-10-14 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-14",
-      "generatedDate": "2026-10-20",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-10-20, readings as of market close, 2026-10-14 (6 calendar days old)."
+      "generatedDate": "2026-10-21",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-10-21, readings as of market close, 2026-10-14 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,36 +55,37 @@
   },
   "stateCounts": {
     "radar-claim": 2,
-    "priced": 3
+    "radar-miss": 2,
+    "priced": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
-      "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[5]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "attack",
-          "drone"
+          "conflict",
+          "russia",
+          "ukraine"
         ],
-        "text": "Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the attack. At least 14 other",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the at..."
+        "text": "🇷🇺🇺🇸🇺🇦⚡️ — Russia says its position on resolving the Ukraine conflict will not change in response to US President Donald Trump’s decision to postpone new sanctions. Russia and the US are holdin",
+        "explanation": "Geopolitical Escalation match based on keywords: conflict, russia, ukraine. Signal: 🇷🇺🇺🇸🇺🇦⚡️ — Russia says its position on resolving the Ukraine conflict will not change in response to US President Donald Trump’s decision to postpone new sanctions. Russia..."
       },
       "market_z": 0.682,
       "abs_market_z": 0.682,
@@ -95,36 +96,35 @@
       "driver_as_of": "2026-10-14",
       "market_as_of": "2026-10-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
+      "signal_elevated": false,
       "signal_count": 1,
       "signal_primary_count": 0,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.news[7]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "military",
-          "bank",
-          "freeze"
+          "china",
+          "ban"
         ],
-        "text": "🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been ordered to the West Bank",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been o..."
+        "text": "China Criticizes U.S. Ban on DeepSeek A.I. in Government Systems",
+        "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China Criticizes U.S. Ban on DeepSeek A.I. in Government Systems"
       },
       "market_z": -1.954,
       "abs_market_z": 1.954,
@@ -135,8 +135,8 @@
       "driver_as_of": "2026-10-14",
       "market_as_of": "2026-10-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "priced"
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
@@ -148,10 +148,10 @@
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 3,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -175,37 +175,22 @@
       "driver_as_of": "2026-10-14",
       "market_as_of": "2026-10-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[10]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "military",
-          "bank",
-          "freeze"
-        ],
-        "text": "🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been ordered to the West Bank",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇮🇱 The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements have been o..."
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.682,
       "abs_market_z": 1.682,
       "market_moving": true,
@@ -215,36 +200,35 @@
       "driver_as_of": "2026-10-14",
       "market_as_of": "2026-10-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "priced"
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[7]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "drone"
+          "iran"
         ],
-        "text": "Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the attack. At least 14 other",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Russian forces launched a drone strike on a park in Nova Vodolaha, Kharkiv region, killing an infant and two women. Families with children were in the park at the time of the at..."
+        "text": "🇺🇸❌🇮🇷 – Israeli outlet i24 News claims Trump came \"very close\" to approving a strike in Iran on at least one occasion in recent weeks. There have been unconfirmed reports of U.S. strikes in Iran",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: 🇺🇸❌🇮🇷 – Israeli outlet i24 News claims Trump came \"very close\" to approving a strike in Iran on at least one occasion in recent weeks. There have been unconfirmed reports of..."
       },
       "market_z": -2.206,
       "abs_market_z": 2.206,
@@ -255,7 +239,7 @@
       "driver_as_of": "2026-10-14",
       "market_as_of": "2026-10-14",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     }
   ],
@@ -292,14 +276,29 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[1]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "military",
+          "ukraine",
+          "panic"
+        ],
+        "text": "🇺🇸 🇺🇦 🇷🇺 \"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a decision that sparked panic in Kyiv and confusion inside the Trump administration, U.S. o",
+        "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🇺🇸 🇺🇦 🇷🇺 \"Elon Musk ordered the slowdown of a military-grade version of Starlink relied on by Ukraine, a decision that sparked panic in Kyiv and confusion inside the Trump..."
+      }
     }
   ]
 }
