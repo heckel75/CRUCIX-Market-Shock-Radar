@@ -1,0 +1,304 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-10-23T01:51:30.348Z",
+  "date": "2026-10-16",
+  "asOfClose": "2026-10-16",
+  "framing": "readings as of market close, 2026-10-16",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-10-23T01:51:25.614Z",
+    "generatedDate": "2026-10-23",
+    "asOfClose": "2026-10-16",
+    "calendarLagDays": 7,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-10-23T01:51:25.614Z",
+    "generatedDate": "2026-10-23",
+    "runDate": "2026-10-23",
+    "asOfClose": "2026-10-16",
+    "calendarLagDays": 7,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-10-23, readings as of market close, 2026-10-16 (7 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-10-16",
+      "generatedDate": "2026-10-23",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-10-23, readings as of market close, 2026-10-16 (7 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "priced": 2,
+    "radar-miss": 2,
+    "radar-claim": 1
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[11]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "missile"
+        ],
+        "text": "Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings."
+      },
+      "market_z": 1.657,
+      "abs_market_z": 1.657,
+      "market_moving": true,
+      "driver_instrument": "VIXCLS",
+      "driver_instrument_id": "vix",
+      "driver_instrument_label": "CBOE Volatility Index",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "priced"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": -1.676,
+      "abs_market_z": 1.676,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[6]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "ukraine",
+          "energy",
+          "weather"
+        ],
+        "text": "🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head of the Union of Public",
+        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head..."
+      },
+      "market_z": 1.137,
+      "abs_market_z": 1.137,
+      "market_moving": false,
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": -1.756,
+      "abs_market_z": 1.756,
+      "market_moving": true,
+      "driver_instrument": "DGS10",
+      "driver_instrument_id": "ten-year-treasury",
+      "driver_instrument_label": "10-year Treasury yield",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.tg.urgent[11]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "missile"
+        ],
+        "text": "Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings."
+      },
+      "market_z": -2.231,
+      "abs_market_z": 2.231,
+      "market_moving": true,
+      "driver_instrument": "SOXX",
+      "driver_instrument_id": "semiconductors",
+      "driver_instrument_label": "Semiconductor equities ETF",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "priced"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0.6,
+      "signal_score_pct": 60,
+      "signal_raw_score": 12,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 4,
+      "top_signal": {
+        "path": "root.tg.urgent[6]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 12,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "ukraine",
+          "energy",
+          "weather"
+        ],
+        "text": "🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head of the Union of Public",
+        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head..."
+      }
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0.55,
+      "signal_score_pct": 55,
+      "signal_raw_score": 11,
+      "signal_score_max": 20,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[31]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 11,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "china",
+          "earthquake",
+          "panic"
+        ],
+        "text": "China: Panic as 7.0-magnitude earthquake rocks Tibet | Euronews",
+        "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China: Panic as 7.0-magnitude earthquake rocks Tibet | Euronews"
+      }
+    }
+  ]
+}
