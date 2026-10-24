@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-23T01:51:30.348Z",
+  "generatedAt": "2026-10-24T01:55:17.960Z",
   "date": "2026-10-16",
   "asOfClose": "2026-10-16",
   "framing": "readings as of market close, 2026-10-16",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-23T01:51:25.614Z",
-    "generatedDate": "2026-10-23",
+    "generatedAt": "2026-10-24T01:55:14.298Z",
+    "generatedDate": "2026-10-24",
     "asOfClose": "2026-10-16",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-23T01:51:25.614Z",
-    "generatedDate": "2026-10-23",
-    "runDate": "2026-10-23",
+    "generatedAt": "2026-10-24T01:55:14.298Z",
+    "generatedDate": "2026-10-24",
+    "runDate": "2026-10-24",
     "asOfClose": "2026-10-16",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-23, readings as of market close, 2026-10-16 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-24, readings as of market close, 2026-10-16 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-16",
-      "generatedDate": "2026-10-23",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-23, readings as of market close, 2026-10-16 (7 calendar days old)."
+      "generatedDate": "2026-10-24",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-24, readings as of market close, 2026-10-16 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -56,35 +56,37 @@
   "stateCounts": {
     "priced": 2,
     "radar-miss": 2,
-    "radar-claim": 1
+    "calm": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[11]",
+        "path": "root.news[7]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "rawScore": 20,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "missile"
+          "war",
+          "attack",
+          "iran",
+          "israel"
         ],
-        "text": "Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings."
+        "text": "Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran, israel. Signal: Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera"
       },
       "market_z": 1.657,
       "abs_market_z": 1.657,
@@ -95,7 +97,7 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -120,53 +122,13 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.6,
-      "signal_score_pct": 60,
-      "signal_raw_score": 12,
-      "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[6]",
-        "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 12,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "ukraine",
-          "energy",
-          "weather"
-        ],
-        "text": "🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head of the Union of Public",
-        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head..."
-      },
-      "market_z": 1.137,
-      "abs_market_z": 1.137,
-      "market_moving": false,
-      "driver_instrument": "DCOILWTICO",
-      "driver_instrument_id": "wti",
-      "driver_instrument_label": "WTI crude oil",
-      "driver_as_of": "2026-10-16",
-      "market_as_of": "2026-10-16",
-      "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
-    },
-    {
-      "channel": "credit-stress",
-      "channel_label": "Credit stress",
-      "signal_category": "Credit Stress",
       "signal_score": 0,
       "signal_score_pct": 0,
       "signal_raw_score": 0,
@@ -176,6 +138,45 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 0,
       "top_signal": null,
+      "market_z": 1.137,
+      "abs_market_z": 1.137,
+      "market_moving": false,
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-10-16",
+      "market_as_of": "2026-10-16",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 8,
+      "state": "calm"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[40]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Israel locks down occupied West Bank after Hebron shooting | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel locks down occupied West Bank after Hebron shooting | Al Jazeera"
+      },
       "market_z": -1.756,
       "abs_market_z": 1.756,
       "market_moving": true,
@@ -185,7 +186,7 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
@@ -201,7 +202,7 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[11]",
+        "path": "root.tg.urgent[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -210,10 +211,10 @@
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile"
+          "israel"
         ],
-        "text": "Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: Following an RM-48U ballistic missile strike in Kyiv, a massive crater formed just a few meters away from residential buildings."
+        "text": "Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike."
       },
       "market_z": -2.231,
       "abs_market_z": 2.231,
@@ -224,7 +225,7 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],
@@ -245,29 +246,29 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.6,
-      "signal_score_pct": 60,
-      "signal_raw_score": 12,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[6]",
+        "path": "root.news[39]",
         "category": "Weather / Climate Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 12,
+        "rawScore": 13,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
+          "israel",
           "ukraine",
-          "energy",
-          "weather"
+          "storm"
         ],
-        "text": "🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head of the Union of Public",
-        "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇺🇦⚡ Ukraine’s energy sector can be saved only by three things — an energy truce, warm weather, and more missiles for air defense. the situation is very difficult said the head..."
+        "text": "After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel, ukraine. Signal: After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24"
       }
     }
   ],
@@ -276,29 +277,14 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0.55,
-      "signal_score_pct": 55,
-      "signal_raw_score": 11,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[31]",
-        "category": "Market Volatility Signal",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 11,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "china",
-          "earthquake",
-          "panic"
-        ],
-        "text": "China: Panic as 7.0-magnitude earthquake rocks Tibet | Euronews",
-        "explanation": "Geopolitical Escalation match based on keywords: china. Signal: China: Panic as 7.0-magnitude earthquake rocks Tibet | Euronews"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ]
 }
