@@ -1,25 +1,50 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-24T01:55:14.190Z",
+  "generatedAt": "2026-10-25T01:32:01.196Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 18,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 3
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 12,
+    "Supply Chain Disruption": 2,
+    "Energy Shock": 1
   },
-  "candidateCount": 130,
+  "candidateCount": 129,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[7]",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 20,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "drone",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇦🇷🇺⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the regional emergency headquarters reported. According to its statement, emergency services have",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the regional emergency headquarters reported. According to its statement, em..."
+    },
+    {
+      "path": "root.newsFeed[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 20,
@@ -32,17 +57,68 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
         "attack",
-        "iran",
-        "israel"
+        "drone",
+        "russia",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran, israel. Signal: Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera"
+      "text": "⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the reg | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia, ukraine. Signal: ⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the reg | INTELSLAVA"
     },
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "attack",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Reports of a drone strike in Omsk, with local channels pointing to the Kauchuk plant as a possible target. Local authorities earlier confirmed an attack on the city.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Reports of a drone strike in Omsk, with local channels pointing to the Kauchuk plant as a possible target. Local authorities earlier confirmed an attack on the city."
+    },
+    {
+      "path": "root.news[10]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "attack",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Trump hints at possible Sunday Iran attack or deal reached | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Trump hints at possible Sunday Iran attack or deal reached | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -61,19 +137,19 @@
       ],
       "matchedKeywords": [
         "strike",
-        "israel"
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike."
+      "text": "A Ukrainian strike drone flies straight into a truck packed with Russian occupiers.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: A Ukrainian strike drone flies straight into a truck packed with Russian occupiers."
     },
     {
-      "path": "root.news[39]",
+      "path": "root.news[29]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -81,30 +157,35 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Agriculture",
-        "Insurance",
-        "Utilities",
-        "Energy",
-        "Commodities"
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
       ],
       "matchedKeywords": [
+        "military",
         "israel",
-        "ukraine",
-        "storm"
+        "election"
       ],
       "otherCategories": [
-        "Weather / Climate Shock"
+        "Sanctions / Policy Shock"
       ],
-      "text": "After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, ukraine. Signal: After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24"
+      "text": "Could Israel’s military crackdown influence Tuesday’s election? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Could Israel’s military crackdown influence Tuesday’s election? | Al Jazeera"
     },
     {
       "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "category": "Supply Chain Disruption",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
         "Gold",
         "VIX",
         "Oil",
@@ -112,20 +193,27 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "logistics",
+        "strike"
       ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇸🇺🇦⚡ Russia and Ukraine have agreed to a ceasefire in the area of Oleshky starting from October 29 with the mediation of Melania Trump - the White House. The agreement applies only to a lim",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇷🇺🇺🇸🇺🇦⚡ Russia and Ukraine have agreed to a ceasefire in the area of Oleshky starting from October 29 with the mediation of Melania Trump - the White House. The agreement ..."
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The \"Epicenter\" logistics warehouse in Kharkov was completely destroyed by a strike using Geran-4 drones. @IntelSlava",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: 🇷🇺🇺🇦⚡️ — The \"Epicenter\" logistics warehouse in Kharkov was completely destroyed by a strike using Geran-4 drones. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "path": "root.newsFeed[25]",
+      "sourcePriority": "Medium",
+      "category": "Supply Chain Disruption",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins",
         "Gold",
         "VIX",
         "Oil",
@@ -133,54 +221,14 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "conflict"
+        "logistics",
+        "strike"
       ],
-      "otherCategories": [],
-      "text": "— Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate, fast, and uncompromis",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict. Signal: — Dear subscribers, join our affiliates folder: WAR FILES WAR FILES is a curated collective of independent news channels and conflict monitors — united by one mission: accurate,..."
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+      "otherCategories": [
+        "Geopolitical Escalation"
       ],
-      "matchedKeywords": [
-        "military",
-        "nuclear"
-      ],
-      "otherCategories": [],
-      "text": "🇷🇺🇮🇷⚡️ — A Russian vip aircraft, carrying Russian military personnel and nuclear scientists, departed Tehran Airport for Moscow. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: military, nuclear. Signal: 🇷🇺🇮🇷⚡️ — A Russian vip aircraft, carrying Russian military personnel and nuclear scientists, departed Tehran Airport for Moscow. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[6]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Russia and Ukraine agreed to a temporary ceasefire in Oleshky to deliver humanitarian aid and prepare civilian evacuations, the White House announced, crediting Melania Trump for brokering the deal.",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia and Ukraine agreed to a temporary ceasefire in Oleshky to deliver humanitarian aid and prepare civilian evacuations, the White House announced, crediting Melania Trump fo..."
+      "text": "⚡️ — The \"Epicenter\" logistics warehouse in Kharkov was completely destroyed by a strike using Geran | INTELSLAVA",
+      "explanation": "Supply Chain Disruption match based on keywords: logistics, strike. Signal: ⚡️ — The \"Epicenter\" logistics warehouse in Kharkov was completely destroyed by a strike using Geran | INTELSLAVA"
     },
     {
       "path": "root.tg.urgent[7]",
@@ -197,35 +245,14 @@
       ],
       "matchedKeywords": [
         "missile",
-        "attack"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇾🇪🇸🇦⚡️- Ansarullah missile attack against Riyadh, Najran, and Wadi ad-Duwasir, Saudi Arabia. Explosions were heard in Riyadh, including two interceptions.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪🇸🇦⚡️- Ansarullah missile attack against Riyadh, Najran, and Wadi ad-Duwasir, Saudi Arabia. Explosions were heard in Riyadh, including two interceptions."
+      "text": "Russia's defense ministry claims it shot down a SCALP cruise missile, four Neptune missiles, and 1,297 Ukrainian drones.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: Russia's defense ministry claims it shot down a SCALP cruise missile, four Neptune missiles, and 1,297 Ukrainian drones."
     },
     {
-      "path": "root.news[15]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Trump says US may launch ‘another little Epic Fury’ attack on Iran | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: Trump says US may launch ‘another little Epic Fury’ attack on Iran | France 24"
-    },
-    {
-      "path": "root.news[25]",
+      "path": "root.news[12]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -242,11 +269,11 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia, Ukraine agree to Melania Trump-brokered localised ceasefire | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia, Ukraine agree to Melania Trump-brokered localised ceasefire | Al Jazeera"
+      "text": "Trump lauds Melania over Russia-Ukraine localised ceasefire deal | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Trump lauds Melania over Russia-Ukraine localised ceasefire deal | Al Jazeera"
     },
     {
-      "path": "root.news[40]",
+      "path": "root.news[46]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -270,50 +297,8 @@
       "otherCategories": [
         "Credit Stress"
       ],
-      "text": "Israel locks down occupied West Bank after Hebron shooting | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel locks down occupied West Bank after Hebron shooting | Al Jazeera"
-    },
-    {
-      "path": "root.news[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "troops",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Italy preparing with elite troops and drone surveillance for 24 October protests | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, drone. Signal: Italy preparing with elite troops and drone surveillance for 24 October protests | Euronews"
-    },
-    {
-      "path": "root.newsFeed[4]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "attack"
-      ],
-      "otherCategories": [],
-      "text": "⚡️- Ansarullah missile attack against Riyadh, Najran, and Wadi ad-Duwasir, Saudi Arabia. Explosions | CIG_TELEGRAM",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: ⚡️- Ansarullah missile attack against Riyadh, Najran, and Wadi ad-Duwasir, Saudi Arabia. Explosions | CIG_TELEGRAM"
+      "text": "Israel begins demolitions in West Bank | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel begins demolitions in West Bank | France 24"
     },
     {
       "path": "root.chokepoints[5]",
@@ -344,7 +329,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -355,21 +340,61 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "ukraine",
-        "logistics"
+        "russia",
+        "energy"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — The Russian Armed Forces struck a transport and logistics center belonging to the Aviation New Technologies company in Ukraine’s Chernigov and a dry cargo ship at sea that was delivering",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: 🇷🇺🇺🇦⚡️ — The Russian Armed Forces struck a transport and logistics center belonging to the Aviation New Technologies company in Ukraine’s Chernigov and a dry cargo ship at s..."
+      "text": "Russia's energy ministry reports a massive blackout across occupied Ukrainian territories, including parts of Donetsk, Luhansk, Zaporizhzhia and Kherson regions, plus Crimea. They blame \"external inte",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Russia's energy ministry reports a massive blackout across occupied Ukrainian territories, including parts of Donetsk, Luhansk, Zaporizhzhia and Kherson regions, plus Crimea. Th..."
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺🇺🇦⚡️ — Footage shows Russian forces destroying Ukrainian unmanned surface vessels (USVs) in the Black Sea. An FPV drone carrier of the Sorgan-3000 type was destroyed by a Geran-2/4 loitering mu",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇷🇺🇺🇦⚡️ — Footage shows Russian forces destroying Ukrainian unmanned surface vessels (USVs) in the Black Sea. An FPV drone carrier of the Sorgan-3000 type was destroyed by a ..."
     }
   ]
 }

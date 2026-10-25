@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-24T01:55:17.960Z",
+  "generatedAt": "2026-10-25T01:32:03.803Z",
   "date": "2026-10-16",
   "asOfClose": "2026-10-16",
   "framing": "readings as of market close, 2026-10-16",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-24T01:55:14.298Z",
-    "generatedDate": "2026-10-24",
+    "generatedAt": "2026-10-25T01:32:01.316Z",
+    "generatedDate": "2026-10-25",
     "asOfClose": "2026-10-16",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-24T01:55:14.298Z",
-    "generatedDate": "2026-10-24",
-    "runDate": "2026-10-24",
+    "generatedAt": "2026-10-25T01:32:01.316Z",
+    "generatedDate": "2026-10-25",
+    "runDate": "2026-10-25",
     "asOfClose": "2026-10-16",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-24, readings as of market close, 2026-10-16 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-25, readings as of market close, 2026-10-16 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-16",
-      "generatedDate": "2026-10-24",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-10-24, readings as of market close, 2026-10-16 (8 calendar days old)."
+      "generatedDate": "2026-10-25",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-10-25, readings as of market close, 2026-10-16 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,9 +54,9 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
-    "radar-miss": 2,
-    "calm": 1
+    "priced": 3,
+    "calm": 1,
+    "radar-miss": 1
   },
   "rows": [
     {
@@ -68,25 +68,25 @@
       "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 14,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[7]",
+        "path": "root.tg.urgent[4]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 20,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
           "attack",
-          "iran",
-          "israel"
+          "drone",
+          "russia",
+          "ukraine"
         ],
-        "text": "Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran, israel. Signal: Iran war Update: Israel launches ‘targeted’ Hebron operation after attack | Al Jazeera"
+        "text": "🇺🇦🇷🇺⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the regional emergency headquarters reported. According to its statement, emergency services have",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine subjected Russia's Belgorod to a massive drone attack, resulting in casualties, the regional emergency headquarters reported. According to its statement, em..."
       },
       "market_z": 1.657,
       "abs_market_z": 1.657,
@@ -97,22 +97,37 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[29]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "military",
+          "israel",
+          "election"
+        ],
+        "text": "Could Israel’s military crackdown influence Tuesday’s election? | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Could Israel’s military crackdown influence Tuesday’s election? | Al Jazeera"
+      },
       "market_z": -1.676,
       "abs_market_z": 1.676,
       "market_moving": true,
@@ -122,22 +137,36 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 9,
+      "state": "priced"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_count": 2,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[9]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "russia",
+          "energy"
+        ],
+        "text": "Russia's energy ministry reports a massive blackout across occupied Ukrainian territories, including parts of Donetsk, Luhansk, Zaporizhzhia and Kherson regions, plus Crimea. They blame \"external inte",
+        "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Russia's energy ministry reports a massive blackout across occupied Ukrainian territories, including parts of Donetsk, Luhansk, Zaporizhzhia and Kherson regions, plus Crimea. Th..."
+      },
       "market_z": 1.137,
       "abs_market_z": 1.137,
       "market_moving": false,
@@ -147,7 +176,7 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -163,7 +192,7 @@
       "signal_primary_count": 0,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[40]",
+        "path": "root.news[46]",
         "category": "Credit Stress",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -174,8 +203,8 @@
           "israel",
           "bank"
         ],
-        "text": "Israel locks down occupied West Bank after Hebron shooting | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel locks down occupied West Bank after Hebron shooting | Al Jazeera"
+        "text": "Israel begins demolitions in West Bank | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel begins demolitions in West Bank | France 24"
       },
       "market_z": -1.756,
       "abs_market_z": 1.756,
@@ -186,35 +215,36 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 0,
+      "signal_count": 5,
+      "signal_primary_count": 2,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[5]",
+        "path": "root.tg.urgent[1]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "israel"
+          "attack",
+          "drone"
         ],
-        "text": "Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Tehran has drawn up plans to target undersea internet cables in the Gulf if the U.S. or Israel launches another strike."
+        "text": "Reports of a drone strike in Omsk, with local channels pointing to the Kauchuk plant as a possible target. Local authorities earlier confirmed an attack on the city.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Reports of a drone strike in Omsk, with local channels pointing to the Kauchuk plant as a possible target. Local authorities earlier confirmed an attack on the city."
       },
       "market_z": -2.231,
       "abs_market_z": 2.231,
@@ -225,7 +255,7 @@
       "driver_as_of": "2026-10-16",
       "market_as_of": "2026-10-16",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
@@ -246,30 +276,15 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[39]",
-        "category": "Weather / Climate Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "israel",
-          "ukraine",
-          "storm"
-        ],
-        "text": "After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: israel, ukraine. Signal: After French Riots, Curfews & Calm .. is a new Storm Brewing ? Plus Ukraine & Israel | France 24"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ],
   "retiredSignals": [
