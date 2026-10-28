@@ -1,28 +1,28 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-27T02:22:39.173Z",
+  "generatedAt": "2026-10-28T02:33:16.606Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 15,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
     "categoryBreadth": 1
   },
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 135,
+  "candidateCount": 130,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -36,23 +36,23 @@
         "FX"
       ],
       "matchedKeywords": [
-        "nuclear",
+        "escalation",
         "russia",
-        "gas",
-        "fuel"
+        "ukraine",
+        "energy"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇸🇰🇷🇺⚡️ — Slovakia will continue purchasing natural gas and nuclear fuel from Russia, according to Deputy Economy Minister Vladimír Šimoňák. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: 🇸🇰🇷🇺⚡️ — Slovakia will continue purchasing natural gas and nuclear fuel from Russia, according to Deputy Economy Minister Vladimír Šimoňák. @IntelSlava"
+      "text": "Zelenskyy discussed de-escalation, the cessation of Russian strikes on the energy sector, and preparations for a trilateral meeting between Ukraine, the US, and Russia in November with the leaders of",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, russia, ukraine. Signal: Zelenskyy discussed de-escalation, the cessation of Russian strikes on the energy sector, and preparations for a trilateral meeting between Ukraine, the US, and Russia in Novemb..."
     },
     {
-      "path": "root.news[6]",
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
+      "score": 18,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
@@ -63,66 +63,29 @@
         "Commodities",
         "Emerging Markets",
         "Credit",
-        "Equities"
+        "Equities",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Margins"
       ],
       "matchedKeywords": [
-        "attack",
-        "iran",
+        "strike",
+        "israel",
         "election"
       ],
       "otherCategories": [
-        "Sanctions / Policy Shock"
+        "Sanctions / Policy Shock",
+        "Supply Chain Disruption"
       ],
-      "text": "Netanyahu Pushed for Attack on Iran Ahead of Israeli Election, Officials Say",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, iran. Signal: Netanyahu Pushed for Attack on Iran Ahead of Israeli Election, Officials Say"
-    },
-    {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇷🇺🇦🇪🇺⚡️ — Iran is closely monitoring developments along its borders following reports Ukraine has been deploying unmanned aerial vehicles in neighboring areas and stands ready to counter any as",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, ukraine. Signal: 🇮🇷🇺🇦🇪🇺⚡️ — Iran is closely monitoring developments along its borders following reports Ukraine has been deploying unmanned aerial vehicles in neighboring areas and stands ..."
+      "text": "Israel Election Updates: Rivals Strike Tone of Triumph, but Outcome Is Far From Clear",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel. Signal: Israel Election Updates: Rivals Strike Tone of Triumph, but Outcome Is Far From Clear"
     },
     {
       "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "A large missile alert is on right now in Russia across Moscow, Smolensk, Kaluga, Tula, Ryazan, Bryansk, Oryol, Kursk, Voronezh, Lipetsk and Tambov regions. Drones are being tracked over Smolensk, Brya",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, russia. Signal: A large missile alert is on right now in Russia across Moscow, Smolensk, Kaluga, Tula, Ryazan, Bryansk, Oryol, Kursk, Voronezh, Lipetsk and Tambov regions. Drones are being trac..."
-    },
-    {
-      "path": "root.tg.urgent[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -133,11 +96,12 @@
       ],
       "matchedKeywords": [
         "war",
-        "russia"
+        "escalation",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇫🇷🇷🇺 French presidential candidate Jean-Luc Mélenchon warns against confrontation with Russia, declaring, “No war with the Russians.” Jean-Luc Mélenchon could face Marine Le Pen in France’s presi",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇫🇷🇷🇺 French presidential candidate Jean-Luc Mélenchon warns against confrontation with Russia, declaring, “No war with the Russians.” Jean-Luc Mélenchon could face Marine Le..."
+      "text": "Iran holds four-way \"security meeting\" with Mecca Pact states The meeting coincides with a brutal Saudi war against Yemen and reports of an imminent US Israeli escalation against Iran. Tehran has fra",
+      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, iran. Signal: Iran holds four-way \"security meeting\" with Mecca Pact states The meeting coincides with a brutal Saudi war against Yemen and reports of an imminent US Israeli escalation agains..."
     },
     {
       "path": "root.tg.urgent[6]",
@@ -153,15 +117,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "military",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇹🇷🇵🇰🇸🇦⚡️— Iran rules out discussing its nuclear program in talks with Saudi Arabia, Turkey and Pakistan until Washington meets Tehran’s demands. @Intelslava",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇮🇷🇹🇷🇵🇰🇸🇦⚡️— Iran rules out discussing its nuclear program in talks with Saudi Arabia, Turkey and Pakistan until Washington meets Tehran’s demands. @Intelslava"
+      "text": "🇷🇺🇬🇧⚡️ — Russia bans seven UK defence industry executives from entering the country, accusing them of supplying weapons and military technology used in strikes deep inside Russian territory. @Int",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: 🇷🇺🇬🇧⚡️ — Russia bans seven UK defence industry executives from entering the country, accusing them of supplying weapons and military technology used in strikes deep inside R..."
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -174,117 +138,54 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
+        "missile",
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "Photos have emerged of a downed \"Geran-5 K5-K\" cruise missile, a new type of Russian \"Geran/Shahed\" jet-powered drone.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, drone. Signal: Photos have emerged of a downed \"Geran-5 K5-K\" cruise missile, a new type of Russian \"Geran/Shahed\" jet-powered drone."
+    },
+    {
+      "path": "root.news[24]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Pezeshkian says Middle East can solve own issues without US | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Pezeshkian says Middle East can solve own issues without US | Al Jazeera"
+    },
+    {
+      "path": "root.news[41]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Children's entertainment in Ukraine: finding a downed Shahed drone on the beach and dragging it home.",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: Children's entertainment in Ukraine: finding a downed Shahed drone on the beach and dragging it home."
-    },
-    {
-      "path": "root.news[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Iran says US ‘not serious’ about talks; ship ablaze off Iraq | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran says US ‘not serious’ about talks; ship ablaze off Iraq | Al Jazeera"
-    },
-    {
-      "path": "root.news[20]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Mecca pact nations hold talks with Iran to prevent renewed Middle East war | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Mecca pact nations hold talks with Iran to prevent renewed Middle East war | France 24"
-    },
-    {
-      "path": "root.news[27]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Africa food security under threat due to Iran war, trade officials warn | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Africa food security under threat due to Iran war, trade officials warn | Al Jazeera"
-    },
-    {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israel Has Committed Genocidal Acts in Gaza Since Cease-Fire, U.N. Human Rights Panel Says",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel Has Committed Genocidal Acts in Gaza Since Cease-Fire, U.N. Human Rights Panel Says"
-    },
-    {
-      "path": "root.newsFeed[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "nuclear",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "⚡️— Iran rules out discussing its nuclear program in talks with Saudi Arabia, Turkey and Pakistan un | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: ⚡️— Iran rules out discussing its nuclear program in talks with Saudi Arabia, Turkey and Pakistan un | INTELSLAVA"
+      "text": "What we know about Ukraine-Russia truce in Oleshky, brokered by Melania Trump",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: What we know about Ukraine-Russia truce in Oleshky, brokered by Melania Trump"
     },
     {
       "path": "root.chokepoints[5]",
@@ -333,17 +234,18 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike"
+        "russia",
+        "factory"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "It is reported that this evening the Russians struck Kyiv with ballistic missiles. The strikes hit a university campus, a park, and residential buildings. The strike hit a crowded area with no nearby",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: It is reported that this evening the Russians struck Kyiv with ballistic missiles. The strikes hit a university campus, a park, and residential buildings. The strike hit a crowd..."
+      "text": "🇷🇺🇷🇴⚡️ — Russia rejects Romania’s accusations over the September 14 factory fire in Brașov, denying any role in sabotage and accusing Bucharest of making allegations without evidence. Russian Amb",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇷🇴⚡️ — Russia rejects Romania’s accusations over the September 14 factory fire in Brașov, denying any role in sabotage and accusing Bucharest of making allegations without..."
     },
     {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -360,14 +262,153 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "russia",
-        "factory"
+        "strike"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Romania says Russia-run sabotage network set fire near weapons factory | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Romania says Russia-run sabotage network set fire near weapons factory | Al Jazeera"
+      "text": "It is reported that this evening the Russians struck Kyiv with ballistic missiles. The strikes hit a university campus, a park, and residential buildings. The strike hit a crowded area with no nearby",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: It is reported that this evening the Russians struck Kyiv with ballistic missiles. The strikes hit a university campus, a park, and residential buildings. The strike hit a crowd..."
+    },
+    {
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Arab parties projected to win 18 seats in Israel parliamentary election | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Arab parties projected to win 18 seats in Israel parliamentary election | Al Jazeera"
+    },
+    {
+      "path": "root.news[8]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Netanyahu, Eisenkot camps clash over Israel election projections | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Netanyahu, Eisenkot camps clash over Israel election projections | Al Jazeera"
+    },
+    {
+      "path": "root.news[17]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Israel election results: No clear winner projected, what’s next? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel election results: No clear winner projected, what’s next? | Al Jazeera"
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Israel election: Record turnout as Netanyahu and Eisenkot remain deadlocked | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel election: Record turnout as Netanyahu and Eisenkot remain deadlocked | France 24"
+    },
+    {
+      "path": "root.news[23]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "‘Go home, Ben-Gvir’; Arab Bloc celebrates record turnout in Israel election | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: ‘Go home, Ben-Gvir’; Arab Bloc celebrates record turnout in Israel election | Al Jazeera"
     }
   ]
 }
