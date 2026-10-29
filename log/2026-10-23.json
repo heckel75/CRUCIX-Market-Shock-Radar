@@ -1,0 +1,308 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-10-29T02:46:12.785Z",
+  "date": "2026-10-23",
+  "asOfClose": "2026-10-23",
+  "framing": "readings as of market close, 2026-10-23",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-10-29T02:46:09.524Z",
+    "generatedDate": "2026-10-29",
+    "asOfClose": "2026-10-23",
+    "calendarLagDays": 6,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-10-29T02:46:09.524Z",
+    "generatedDate": "2026-10-29",
+    "runDate": "2026-10-29",
+    "asOfClose": "2026-10-23",
+    "calendarLagDays": 6,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-10-29, readings as of market close, 2026-10-23 (6 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-10-23",
+      "generatedDate": "2026-10-29",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-10-29, readings as of market close, 2026-10-23 (6 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "radar-claim": 3,
+    "calm": 2
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 24,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[4]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 24,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "missile",
+          "troops",
+          "russia"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, troops, russia. Signal: 🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava"
+      },
+      "market_z": -1.052,
+      "abs_market_z": 1.052,
+      "market_moving": false,
+      "driver_instrument": "GLD",
+      "driver_instrument_id": "gold",
+      "driver_instrument_label": "Gold ETF",
+      "driver_as_of": "2026-10-23",
+      "market_as_of": "2026-10-23",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 5,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 5,
+      "top_signal": {
+        "path": "root.news[14]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "election"
+        ],
+        "text": "No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera"
+      },
+      "market_z": -0.541,
+      "abs_market_z": 0.541,
+      "market_moving": false,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-10-23",
+      "market_as_of": "2026-10-23",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "calm"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.tg.urgent[9]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "war",
+          "escalation",
+          "russia",
+          "energy"
+        ],
+        "text": "🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, and the format of a po",
+        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, russia. Signal: 🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, ..."
+      },
+      "market_z": 0.661,
+      "abs_market_z": 0.661,
+      "market_moving": false,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-10-23",
+      "market_as_of": "2026-10-23",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 1.27,
+      "abs_market_z": 1.27,
+      "market_moving": false,
+      "driver_instrument": "KBE",
+      "driver_instrument_id": "banks",
+      "driver_instrument_label": "Bank equities ETF",
+      "driver_as_of": "2026-10-23",
+      "market_as_of": "2026-10-23",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "calm"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 24,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.tg.urgent[4]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 24,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "missile",
+          "troops",
+          "russia"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, troops, russia. Signal: 🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava"
+      },
+      "market_z": -0.991,
+      "abs_market_z": 0.991,
+      "market_moving": false,
+      "driver_instrument": "XLI",
+      "driver_instrument_id": "industrials",
+      "driver_instrument_label": "Industrials equities ETF",
+      "driver_as_of": "2026-10-23",
+      "market_as_of": "2026-10-23",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-claim"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 22,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[8]",
+        "category": "Weather / Climate Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 22,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "attack",
+          "russia",
+          "storm"
+        ],
+        "text": "Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow missiles. Post-strike s",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, russia. Signal: Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow ..."
+      }
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
