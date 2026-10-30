@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-29T02:46:12.785Z",
+  "generatedAt": "2026-10-30T02:52:52.608Z",
   "date": "2026-10-23",
   "asOfClose": "2026-10-23",
   "framing": "readings as of market close, 2026-10-23",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-29T02:46:09.524Z",
-    "generatedDate": "2026-10-29",
+    "generatedAt": "2026-10-30T02:52:49.776Z",
+    "generatedDate": "2026-10-30",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-29T02:46:09.524Z",
-    "generatedDate": "2026-10-29",
-    "runDate": "2026-10-29",
+    "generatedAt": "2026-10-30T02:52:49.776Z",
+    "generatedDate": "2026-10-30",
+    "runDate": "2026-10-30",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-29, readings as of market close, 2026-10-23 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-30, readings as of market close, 2026-10-23 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-23",
-      "generatedDate": "2026-10-29",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-10-29, readings as of market close, 2026-10-23 (6 calendar days old)."
+      "generatedDate": "2026-10-30",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-10-30, readings as of market close, 2026-10-23 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,30 +62,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.news[30]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "missile",
-          "troops",
-          "russia"
+          "war",
+          "russia",
+          "ukraine"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, troops, russia. Signal: 🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava"
+        "text": "Tunisians drawn into Russia's war in Ukraine | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Tunisians drawn into Russia's war in Ukraine | France 24"
       },
       "market_z": -1.052,
       "abs_market_z": 1.052,
@@ -96,7 +95,7 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
@@ -108,11 +107,11 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 5,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[14]",
+        "path": "root.news[6]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -123,8 +122,8 @@
           "israel",
           "election"
         ],
-        "text": "No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera"
+        "text": "Netanyahu bloc in lead without majority in Israel election, say official results | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Netanyahu bloc in lead without majority in Israel election, say official results | France 24"
       },
       "market_z": -0.541,
       "abs_market_z": 0.541,
@@ -135,37 +134,36 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 1,
+      "signal_count": 2,
+      "signal_primary_count": 0,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[9]",
+        "path": "root.news[16]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "escalation",
-          "russia",
-          "energy"
+          "iran",
+          "hormuz"
         ],
-        "text": "🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, and the format of a po",
-        "explanation": "Geopolitical Escalation match based on keywords: war, escalation, russia. Signal: 🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, ..."
+        "text": "Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera"
       },
       "market_z": 0.661,
       "abs_market_z": 0.661,
@@ -176,22 +174,36 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[35]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera"
+      },
       "market_z": 1.27,
       "abs_market_z": 1.27,
       "market_moving": false,
@@ -201,37 +213,35 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.tg.urgent[3]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 24,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile",
-          "troops",
-          "russia"
+          "missile"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, troops, russia. Signal: 🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava"
+        "text": "The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured."
       },
       "market_z": -0.991,
       "abs_market_z": 0.991,
@@ -242,7 +252,7 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-claim"
     }
   ],
@@ -263,31 +273,15 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 22,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[8]",
-        "category": "Weather / Climate Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 22,
-        "confidence": "High",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "strike",
-          "attack",
-          "russia",
-          "storm"
-        ],
-        "text": "Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow missiles. Post-strike s",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, russia. Signal: Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow ..."
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ],
   "retiredSignals": [

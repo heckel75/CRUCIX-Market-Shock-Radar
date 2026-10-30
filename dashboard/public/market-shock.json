@@ -1,30 +1,51 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-10-29T02:46:09.377Z",
+  "generatedAt": "2026-10-30T02:52:49.667Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 14,
     "maxScore": 20,
-    "regime": "Shock mode",
-    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Risk-off building",
+    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 133,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.news[30]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Tunisians drawn into Russia's war in Ukraine | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Tunisians drawn into Russia's war in Ukraine | France 24"
+    },
+    {
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 24,
-      "confidence": "High",
+      "score": 14,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -39,22 +60,20 @@
       ],
       "matchedKeywords": [
         "strike",
-        "missile",
-        "troops",
-        "russia"
+        "missile"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, missile, troops, russia. Signal: 🇷🇺🇺🇦⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in the area of Raihorodok with a missile strike. @IntelSlava"
+      "text": "The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured."
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 22,
-      "confidence": "High",
+      "score": 14,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -65,56 +84,20 @@
         "Semiconductors",
         "Shipping",
         "Commodities",
-        "Margins",
-        "Agriculture",
-        "Insurance",
-        "Utilities",
-        "Energy"
+        "Margins"
       ],
       "matchedKeywords": [
         "strike",
-        "attack",
-        "russia",
-        "storm"
+        "drone"
       ],
       "otherCategories": [
-        "Supply Chain Disruption",
-        "Weather / Climate Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow missiles. Post-strike s",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, russia. Signal: Cyber Boroshno published the aftermath of the attack on PJSC \"Energia\" in Yelets, Russia. On October 25, the Energia plant in Yelets, Lipetsk Region, was struck by Storm Shadow ..."
+      "text": "In Dnipro, a Russian drone struck directly at the railway station platform, right where people were standing. Following the strike on the station, charred bodies are lying on the platform. Currently,",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: In Dnipro, a Russian drone struck directly at the railway station platform, right where people were standing. Following the strike on the station, charred bodies are lying on th..."
     },
     {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 19,
-      "confidence": "High",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "escalation",
-        "russia",
-        "energy"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, and the format of a po",
-      "explanation": "Geopolitical Escalation match based on keywords: war, escalation, russia. Signal: 🇺🇦⚡️ — Russia is seriously committed to a meeting of technical groups. They will discuss de-escalation in the energy sector and at sea, prisoner exchanges, an end to the war, ..."
-    },
-    {
-      "path": "root.news[15]",
+      "path": "root.news[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -138,53 +121,60 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran war Update: Tehran presses 7-day Hormuz plan; Trump denies peace talks | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tehran presses 7-day Hormuz plan; Trump denies peace talks | Al Jazeera"
+      "text": "Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇦⚡️ — Zelensky said that holding elections during the war is impossible. In his assessment, at least six months are needed to prepare a safe electoral process. He also noted that Russia links the",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: 🇺🇦⚡️ — Zelensky said that holding elections during the war is impossible. In his assessment, at least six months are needed to prepare a safe electoral process. He also noted ..."
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
+        "strike",
         "ukraine"
       ],
-      "otherCategories": [],
-      "text": "📝 🇺🇦 🇷🇺 Ukraine’s front line has moved underground — and it’s changing what defense actually means in this war. Near Kramatorsk, soldiers of the 93rd “Kholodnyi Yar” Brigade now travel between c",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 📝 🇺🇦 🇷🇺 Ukraine’s front line has moved underground — and it’s changing what defense actually means in this war. Near Kramatorsk, soldiers of the 93rd “Kholodnyi Yar” Brigad..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Ukraine: Russian strike kills two teenage girls in Chernihiv | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukraine: Russian strike kills two teenage girls in Chernihiv | Euronews"
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸🇮🇷⚡- BREAKING: US has been carrying out \"self defense strikes\" on missile launch sites across southern Iran over the past two weeks, Barak Ravid of Axios and Israeli Channel 12 reports.",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇺🇸🇮🇷⚡- BREAKING: US has been carrying out \"self defense strikes\" on missile launch sites across southern Iran over the past two weeks, Barak Ravid of Axios and Israeli Chann..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -198,15 +188,15 @@
       ],
       "matchedKeywords": [
         "military",
-        "iran"
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇺🇸⚡️ — Pete Hegseth has dismissed General Brett Sylvia from his role as the Pentagon’s chief military planner. A replacement will be appointed to develop plans for new strikes against Iran. @IntelS",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: 🇺🇸⚡️ — Pete Hegseth has dismissed General Brett Sylvia from his role as the Pentagon’s chief military planner. A replacement will be appointed to develop plans for new strikes..."
+      "text": "🇷🇺⚡️ — Russia and Africa seek deeper security cooperation and stronger African UN representation. Putin states Russia has military and technical agreements with 45 African countries and 48 embassie",
+      "explanation": "Geopolitical Escalation match based on keywords: military, russia. Signal: 🇷🇺⚡️ — Russia and Africa seek deeper security cooperation and stronger African UN representation. Putin states Russia has military and technical agreements with 45 African cou..."
     },
     {
-      "path": "root.newsFeed[23]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -218,12 +208,40 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "troops",
-        "russia"
+        "naval",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, russia. Signal: ⚡️ — Troops of Russia’s West Group of Forces destroyed a Ukrainian Armed Forces UAV command post in | INTELSLAVA"
+      "text": "🇺🇸❌🇮🇷 — U.S. strikes occured against Bandar-e-Jask, coastal southern Iran 27 minutes ago. 4 missiles struck the Islamic Republic of Iran Navy's Jask Naval Base.",
+      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇺🇸❌🇮🇷 — U.S. strikes occured against Bandar-e-Jask, coastal southern Iran 27 minutes ago. 4 missiles struck the Islamic Republic of Iran Navy's Jask Naval Base."
+    },
+    {
+      "path": "root.news[35]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "bank"
+      ],
+      "otherCategories": [
+        "Credit Stress"
+      ],
+      "text": "Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -254,165 +272,142 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[14]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: No clear winner in Israel election with nearly 90 percent of votes counted | Al Jazeera"
-    },
-    {
-      "path": "root.news[36]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "Israel's election deadlock is a sign of the country's deep divisions",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel's election deadlock is a sign of the country's deep divisions"
-    },
-    {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "Palestinian citizens of Israel hope election results bring change | Africa News",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Palestinian citizens of Israel hope election results bring change | Africa News"
-    },
-    {
-      "path": "root.news[38]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "What to Make of Israel’s Ambiguous Election",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: What to Make of Israel’s Ambiguous Election"
-    },
-    {
-      "path": "root.news[43]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Netanyahu's bloc leading Israel election but short of majority, partial results show"
-    },
-    {
-      "path": "root.chokepoints[0]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
+      "category": "Geopolitical Escalation",
+      "score": 9,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "hormuz"
+        "military",
+        "oil"
       ],
-      "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇾🇪❌🇸🇦 — Ansarallah announces conducting five military operations against KSA airports and oil facilities with ballistic missiles in response to Saudi strikes against Ansarallah-controlled Yemen wh",
+      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇾🇪❌🇸🇦 — Ansarallah announces conducting five military operations against KSA airports and oil facilities with ballistic missiles in response to Saudi strikes against Ansaral..."
+    },
+    {
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸❌🇮🇷 — U.S. Senator Chris Murphy (D-CT) spoke at the Middle East Institute on October 28, and among the topics discussed was a briefing about the upcoming American strike plans he claimed to rece",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇺🇸❌🇮🇷 — U.S. Senator Chris Murphy (D-CT) spoke at the Middle East Institute on October 28, and among the topics discussed was a briefing about the upcoming American strike p..."
+    },
+    {
+      "path": "root.tg.urgent[7]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "container"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — The moment of yesterday's attack by unidentified Black Sea drones (BЭК) on the container ship CONTSHIP JET off the coast of Bulgaria. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: 🇷🇺🇺🇦⚡️ — The moment of yesterday's attack by unidentified Black Sea drones (BЭК) on the container ship CONTSHIP JET off the coast of Bulgaria. @Intelslava"
+    },
+    {
+      "path": "root.news[6]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Netanyahu bloc in lead without majority in Israel election, say official results | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Netanyahu bloc in lead without majority in Israel election, say official results | France 24"
+    },
+    {
+      "path": "root.news[21]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "No Clear Winner in Israel Election, Final Results Show",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: No Clear Winner in Israel Election, Final Results Show"
     }
   ]
 }
