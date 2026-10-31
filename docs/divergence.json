@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-30T02:52:52.608Z",
+  "generatedAt": "2026-10-31T02:41:16.680Z",
   "date": "2026-10-23",
   "asOfClose": "2026-10-23",
   "framing": "readings as of market close, 2026-10-23",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-30T02:52:49.776Z",
-    "generatedDate": "2026-10-30",
+    "generatedAt": "2026-10-31T02:41:12.927Z",
+    "generatedDate": "2026-10-31",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-30T02:52:49.776Z",
-    "generatedDate": "2026-10-30",
-    "runDate": "2026-10-30",
+    "generatedAt": "2026-10-31T02:41:12.927Z",
+    "generatedDate": "2026-10-31",
+    "runDate": "2026-10-31",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-30, readings as of market close, 2026-10-23 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-10-31, readings as of market close, 2026-10-23 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-23",
-      "generatedDate": "2026-10-30",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-10-30, readings as of market close, 2026-10-23 (7 calendar days old)."
+      "generatedDate": "2026-10-31",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-10-31, readings as of market close, 2026-10-23 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,38 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 2
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
-      "signal_primary_count": 15,
-      "signal_secondary_count": 0,
+      "signal_count": 10,
+      "signal_primary_count": 9,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[30]",
+        "path": "root.news[18]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "russia",
-          "ukraine"
+          "conflict",
+          "iran",
+          "hormuz"
         ],
-        "text": "Tunisians drawn into Russia's war in Ukraine | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Tunisians drawn into Russia's war in Ukraine | France 24"
+        "text": "Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera"
       },
       "market_z": -1.052,
       "abs_market_z": 1.052,
@@ -95,36 +96,22 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 2,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
-      "top_signal": {
-        "path": "root.news[6]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "israel",
-          "election"
-        ],
-        "text": "Netanyahu bloc in lead without majority in Israel election, say official results | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Netanyahu bloc in lead without majority in Israel election, say official results | France 24"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -0.541,
       "abs_market_z": 0.541,
       "market_moving": false,
@@ -134,36 +121,37 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_count": 5,
+      "signal_primary_count": 4,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[16]",
+        "path": "root.news[18]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
+          "conflict",
           "iran",
           "hormuz"
         ],
-        "text": "Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: IRGC says four tankers struck mines in Strait of Hormuz | Al Jazeera"
+        "text": "Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera"
       },
       "market_z": 0.661,
       "abs_market_z": 0.661,
@@ -174,36 +162,22 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[35]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "israel",
-          "bank"
-        ],
-        "text": "Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel bans travel for Brad Lander after detention in occupied West Bank | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 1.27,
       "abs_market_z": 1.27,
       "market_moving": false,
@@ -213,35 +187,35 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 6,
-      "signal_primary_count": 0,
-      "signal_secondary_count": 6,
+      "signal_elevated": false,
+      "signal_count": 3,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
+        "rawScore": 9,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile"
+          "taiwan",
+          "container"
         ],
-        "text": "The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: The Russians also struck Chernihiv with a \"Banderol\" missile. As a result of the strike, two 15-year-old girls were killed, and 15 people were injured."
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": -0.991,
       "abs_market_z": 0.991,
@@ -252,8 +226,8 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     }
   ],
   "signalOnly": [
