@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-10-31T02:41:16.680Z",
+  "generatedAt": "2026-11-01T02:31:22.837Z",
   "date": "2026-10-23",
   "asOfClose": "2026-10-23",
   "framing": "readings as of market close, 2026-10-23",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-10-31T02:41:12.927Z",
-    "generatedDate": "2026-10-31",
+    "generatedAt": "2026-11-01T02:31:18.651Z",
+    "generatedDate": "2026-11-01",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-10-31T02:41:12.927Z",
-    "generatedDate": "2026-10-31",
-    "runDate": "2026-10-31",
+    "generatedAt": "2026-11-01T02:31:18.651Z",
+    "generatedDate": "2026-11-01",
+    "runDate": "2026-11-01",
     "asOfClose": "2026-10-23",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-10-31, readings as of market close, 2026-10-23 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-01, readings as of market close, 2026-10-23 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-23",
-      "generatedDate": "2026-10-31",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-10-31, readings as of market close, 2026-10-23 (8 calendar days old)."
+      "generatedDate": "2026-11-01",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-11-01, readings as of market close, 2026-10-23 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,30 +62,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 10,
-      "signal_primary_count": 9,
-      "signal_secondary_count": 1,
+      "signal_count": 12,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[18]",
+        "path": "root.news[7]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "conflict",
           "iran",
           "hormuz"
         ],
-        "text": "Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera"
+        "text": "Iran war Update: Araghchi says talks under way on 2-day plan to reopen Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Araghchi says talks under way on 2-day plan to reopen Hormuz | Al Jazeera"
       },
       "market_z": -1.052,
       "abs_market_z": 1.052,
@@ -96,22 +95,36 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[19]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "election"
+        ],
+        "text": "Israel’s allegations of Qatari election interference rejected | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s allegations of Qatari election interference rejected | Al Jazeera"
+      },
       "market_z": -0.541,
       "abs_market_z": 0.541,
       "market_moving": false,
@@ -121,37 +134,36 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
-      "signal_primary_count": 4,
+      "signal_count": 3,
+      "signal_primary_count": 2,
       "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[18]",
+        "path": "root.news[7]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "conflict",
           "iran",
           "hormuz"
         ],
-        "text": "Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, conflict, iran. Signal: Iran war Update: 4 tankers hit in Hormuz; Trump says conflict will end soon | Al Jazeera"
+        "text": "Iran war Update: Araghchi says talks under way on 2-day plan to reopen Hormuz | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Araghchi says talks under way on 2-day plan to reopen Hormuz | Al Jazeera"
       },
       "market_z": 0.661,
       "abs_market_z": 0.661,
@@ -162,7 +174,7 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -187,7 +199,7 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -199,8 +211,8 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 3,
-      "signal_primary_count": 2,
+      "signal_count": 2,
+      "signal_primary_count": 1,
       "signal_secondary_count": 1,
       "top_signal": {
         "path": "root.chokepoints[5]",
@@ -226,7 +238,7 @@
       "driver_as_of": "2026-10-23",
       "market_as_of": "2026-10-23",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     }
   ],
@@ -263,14 +275,28 @@
       "signal_category": "Market Volatility Signal",
       "display_mode": "retired-signal-channel",
       "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[4]",
+        "category": "Market Volatility Signal",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 8,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "rally"
+        ],
+        "text": "Thousands rally in Israel urging Eisenkot-Arab deal to remove Netanyahu | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Thousands rally in Israel urging Eisenkot-Arab deal to remove Netanyahu | Al Jazeera"
+      }
     }
   ]
 }
