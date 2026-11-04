@@ -1,29 +1,52 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-03T04:00:08.669Z",
+  "generatedAt": "2026-11-04T03:10:33.834Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 15,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 133,
+  "candidateCount": 132,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.news[22]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "attack",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "Iran war Update: Tehran prepares ‘maximum deterrence’ plan for any new attack | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Tehran prepares ‘maximum deterrence’ plan for any new attack | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 18,
-      "confidence": "High",
+      "score": 14,
+      "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
@@ -38,18 +61,46 @@
       ],
       "matchedKeywords": [
         "strike",
-        "drone",
-        "logistics"
+        "attack"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Clément Molin says recorded middle strike drone hits on Russian armed forces logistics in the rear of occupied regions fell 30% in October to 537. The drop is linked to a roughly 9 day restriction on",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Clément Molin says recorded middle strike drone hits on Russian armed forces logistics in the rear of occupied regions fell 30% in October to 537. The drop is linked to a roughl..."
+      "text": "🇷🇺🇺🇦⚡️ — Video footage taken immediately after a rocket strike hit police station No. 4 of the Dniprovsky district administration in Dnipropetrovsk during a rocket attack that occurred this mornin",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: 🇷🇺🇺🇦⚡️ — Video footage taken immediately after a rocket strike hit police station No. 4 of the Dniprovsky district administration in Dnipropetrovsk during a rocket attack th..."
     },
     {
       "path": "root.tg.urgent[8]",
       "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "china",
+        "policy"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "🇮🇷⚡ The deputy chairman of Iran's National Security and Foreign Policy Commission, Amir Hayat Moghaddam, stated that vessels belonging to India, China, Iraq, and Qatar are exempt from restrictions i",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, china. Signal: 🇮🇷⚡ The deputy chairman of Iran's National Security and Foreign Policy Commission, Amir Hayat Moghaddam, stated that vessels belonging to India, China, Iraq, and Qatar are exe..."
+    },
+    {
+      "path": "root.news[28]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
       "confidence": "Medium",
@@ -72,95 +123,11 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "In the Zaporizhzhia direction, pilots of the Ronins Strike Drone Company continue to destroy Russian assets: armored and light vehicles, personnel, as well as enemy antennas and EW systems.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: In the Zaporizhzhia direction, pilots of the Ronins Strike Drone Company continue to destroy Russian assets: armored and light vehicles, personnel, as well as enemy antennas and..."
+      "text": "U.S. Assisted Venezuela in Deadly Drone Strike, Officials Say | Venezuela",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: U.S. Assisted Venezuela in Deadly Drone Strike, Officials Say | Venezuela"
     },
     {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran war Update: US carries out ‘defensive’ strikes in Strait of Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: US carries out ‘defensive’ strikes in Strait of Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Russian Strike on Ukraine Humanitarian Hub Kills Dozens",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Russian Strike on Ukraine Humanitarian Hub Kills Dozens"
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "spread"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "🇺🇦🇷🇺⚡️ — Ukrainian hackers broke into the Russian state messenger MAX and spread messages like this: \"⚠️⚠️ !!! THREAT OF ACTION !!! 📢 ⚡ Don’t worry! In ALL regions of russia (the swamps), NUCLE",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇺🇦🇷🇺⚡️ — Ukrainian hackers broke into the Russian state messenger MAX and spread messages like this: \"⚠️⚠️ !!! THREAT OF ACTION !!! 📢 ⚡ Don’t worry! In ALL regions of russi..."
-    },
-    {
-      "path": "root.tg.urgent[2]",
+      "path": "root.tg.urgent[0]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -173,12 +140,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "nuclear"
+        "escalation",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Reportedly, Russians hacked several air raid alert apps and sent users fake nuclear and chemical attack warnings.",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, nuclear. Signal: Reportedly, Russians hacked several air raid alert apps and sent users fake nuclear and chemical attack warnings."
+      "text": "🇵🇱🇷🇺⚡️— Polish Prime Minister Donald Tusk has called for a \"full mobilization\" and stated that an escalation with Russia could begin within the next two weeks. The reason for this was that, accor",
+      "explanation": "Geopolitical Escalation match based on keywords: escalation, russia. Signal: 🇵🇱🇷🇺⚡️— Polish Prime Minister Donald Tusk has called for a \"full mobilization\" and stated that an escalation with Russia could begin within the next two weeks. The reason fo..."
     },
     {
       "path": "root.tg.urgent[3]",
@@ -194,15 +161,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "drone",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "The General Staff of Ukraine has stated that Russia has exploited the ceasefire in the Kherson region to consolidate its positions. A rotation of Russian units, the fortification of positions, the e",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: The General Staff of Ukraine has stated that Russia has exploited the ceasefire in the Kherson region to consolidate its positions. A rotation of Russian units, the fortificatio..."
+      "text": "🇮🇷❌🇺🇸 - The IRGC is claiming to have shot down a U.S. AeroVironment Switchblade 600 OWA Drone over Minab, Hormozgan Province, Iran. No information on the validity so far; However, Hormozgan loca",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, iran. Signal: 🇮🇷❌🇺🇸 - The IRGC is claiming to have shot down a U.S. AeroVironment Switchblade 600 OWA Drone over Minab, Hormozgan Province, Iran. No information on the validity so far; Ho..."
     },
     {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -215,15 +182,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "iran"
+        "iran",
+        "israel"
       ],
       "otherCategories": [],
-      "text": "🇮🇷❌🇺🇸 — Iran's IRGC has published footage showing the interception of a U.S. Air Force MQ-9A Reaper UCAV with a surface-to-air missile conducted earlier today.",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷❌🇺🇸 — Iran's IRGC has published footage showing the interception of a U.S. Air Force MQ-9A Reaper UCAV with a surface-to-air missile conducted earlier today."
+      "text": "🇮🇱🇺🇸🇮🇷⚡️ Israel has shared intelligence with the United States indicating that Iran is considering the possibility of using chemical weapons against its adversaries. This information has caused",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: 🇮🇱🇺🇸🇮🇷⚡️ Israel has shared intelligence with the United States indicating that Iran is considering the possibility of using chemical weapons against its adversaries. This ..."
     },
     {
-      "path": "root.news[21]",
+      "path": "root.news[13]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -236,15 +203,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "troops",
-        "ukraine"
+        "military",
+        "israel"
       ],
       "otherCategories": [],
-      "text": "Thousands of European troops to rehearse Ukraine deployment in event of peace",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, ukraine. Signal: Thousands of European troops to rehearse Ukraine deployment in event of peace"
+      "text": "Scepticism as Trump says he’s ending Israel’s $3.8 bn military aid deal | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, israel. Signal: Scepticism as Trump says he’s ending Israel’s $3.8 bn military aid deal | Al Jazeera"
     },
     {
-      "path": "root.news[24]",
+      "path": "root.news[27]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -258,11 +225,32 @@
       ],
       "matchedKeywords": [
         "war",
-        "china"
+        "nuclear"
       ],
       "otherCategories": [],
-      "text": "War, tariffs and China: What the US midterms mean for the Asia-Pacific | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, china. Signal: War, tariffs and China: What the US midterms mean for the Asia-Pacific | Al Jazeera"
+      "text": "More Iranians Call for Nuclear Weapons After War With U.S.",
+      "explanation": "Geopolitical Escalation match based on keywords: war, nuclear. Signal: More Iranians Call for Nuclear Weapons After War With U.S."
+    },
+    {
+      "path": "root.news[36]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "President Zelenskyy says US elections will impact war in Ukraine | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: President Zelenskyy says US elections will impact war in Ukraine | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -293,7 +281,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[12]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -310,95 +298,84 @@
         "FX"
       ],
       "matchedKeywords": [
-        "drone",
+        "missile",
         "hormuz"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "The IRGC shot down an MQ-9A Reaper drone over the Strait of Hormuz.",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: The IRGC shot down an MQ-9A Reaper drone over the Strait of Hormuz."
+      "text": "🇮🇷⚡️ — The IRGC launched an anti-ship cruise missile from Bandar Kangan toward the Strait of Hormuz. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile. Signal: 🇮🇷⚡️ — The IRGC launched an anti-ship cruise missile from Bandar Kangan toward the Strait of Hormuz. @IntelSlava"
+    },
+    {
+      "path": "root.newsFeed[41]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "policy"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "⚡ The deputy chairman of Iran's National Security and Foreign Policy Commission, Amir Hayat Moghadda | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: ⚡ The deputy chairman of Iran's National Security and Foreign Policy Commission, Amir Hayat Moghadda | INTELSLAVA"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
       "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
+      "category": "Energy Shock",
+      "score": 8,
       "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
         "FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "pipeline"
+        "oil",
+        "energy"
       ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇺🇸🇷🇺🇪🇺 After sabotaging the Nordstream Pipeline, the U.S. wants to join forces with Russia and rebuild it with the U.S. taking a cut from the profits. If the original Nordstream project was bui",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇺🇸🇷🇺🇪🇺 After sabotaging the Nordstream Pipeline, the U.S. wants to join forces with Russia and rebuild it with the U.S. taking a cut from the profits. If the original Nord..."
-    },
-    {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Explosions hit Iran’s Qeshm Island as US media report US strikes in Hormuz | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Explosions hit Iran’s Qeshm Island as US media report US strikes in Hormuz | Al Jazeera"
-    },
-    {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Iran Says It Would Reopen Strait of Hormuz in 2 Days as Part of U.S. Deal",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iran Says It Would Reopen Strait of Hormuz in 2 Days as Part of U.S. Deal"
+      "otherCategories": [],
+      "text": "Zelenskyy on the strikes against Russian oil refineries: \"We asked Trump to ring Putin and urge him to support a ceasefire in the energy sector. The Russians dragged their feet, but continued to attac",
+      "explanation": "Energy Shock match based on keywords: oil, energy. Signal: Zelenskyy on the strikes against Russian oil refineries: \"We asked Trump to ring Putin and urge him to support a ceasefire in the energy sector. The Russians dragged their feet,..."
     }
   ]
 }
