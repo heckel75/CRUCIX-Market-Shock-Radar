@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-06T03:37:12.598Z",
+  "generatedAt": "2026-11-07T03:08:16.770Z",
   "date": "2026-10-30",
   "asOfClose": "2026-10-30",
   "framing": "readings as of market close, 2026-10-30",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-06T03:37:09.940Z",
-    "generatedDate": "2026-11-06",
+    "generatedAt": "2026-11-07T03:08:13.189Z",
+    "generatedDate": "2026-11-07",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-06T03:37:09.940Z",
-    "generatedDate": "2026-11-06",
-    "runDate": "2026-11-06",
+    "generatedAt": "2026-11-07T03:08:13.189Z",
+    "generatedDate": "2026-11-07",
+    "runDate": "2026-11-07",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-06, readings as of market close, 2026-10-30 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-07, readings as of market close, 2026-10-30 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-30",
-      "generatedDate": "2026-11-06",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-06, readings as of market close, 2026-10-30 (7 calendar days old)."
+      "generatedDate": "2026-11-07",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-07, readings as of market close, 2026-10-30 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,39 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 3
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[8]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
-        "confidence": "Medium",
+        "rawScore": 23,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "russia",
-          "ukraine"
+          "attack",
+          "military",
+          "drone",
+          "oil",
+          "refinery"
         ],
-        "text": "🇺🇸🇷🇺🇺🇦 Trump claims he is close to finalizing a deal to end the Russia-Ukraine war, potentially covering the wider European region. He describes it as a major breakthrough beneficial to all si",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸🇷🇺🇺🇦 Trump claims he is close to finalizing a deal to end the Russia-Ukraine war, potentially covering the wider European region. He describes it as a major breakthrough..."
+        "text": "🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further Ukrainian drone strikes",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone. Signal: 🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further U..."
       },
       "market_z": 1.123,
       "abs_market_z": 1.123,
@@ -95,7 +97,7 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
@@ -107,11 +109,11 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[18]",
+        "path": "root.news[12]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -122,8 +124,8 @@
           "israel",
           "election"
         ],
-        "text": "Israel’s Election Ended With No Clear Winner. These Parties Are Trying to Form a Coalition.",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Election Ended With No Clear Winner. These Parties Are Trying to Form a Coalition."
+        "text": "After Israel’s Election, Who Will Get the First Chance to Form a Government?",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: After Israel’s Election, Who Will Get the First Chance to Form a Government?"
       },
       "market_z": -0.834,
       "abs_market_z": 0.834,
@@ -134,35 +136,38 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 0,
+      "signal_elevated": true,
+      "signal_count": 3,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.chokepoints[0]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 23,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
+          "attack",
+          "military",
+          "drone",
           "oil",
-          "hormuz"
+          "refinery"
         ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+        "text": "🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further Ukrainian drone strikes",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone. Signal: 🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further U..."
       },
       "market_z": -0.908,
       "abs_market_z": 0.908,
@@ -173,37 +178,22 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[21]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "military",
-          "bank",
-          "harvest"
-        ],
-        "text": "West Bank: Palestinians harvest olives under Israeli military restrictions | Euronews",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: West Bank: Palestinians harvest olives under Israeli military restrictions | Euronews"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -0.922,
       "abs_market_z": 0.922,
       "market_moving": false,
@@ -213,35 +203,36 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
-      "signal_elevated": false,
+      "signal_elevated": true,
       "signal_count": 3,
       "signal_primary_count": 0,
       "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[1]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "strike",
+          "missile",
+          "russia"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🇺🇦🇷🇺⚡️ — A fire broke out at Russia's PJSC Proton-Electrotex electronics plant in Oryol Oblast following an FP-5 Flamingo cruise missile strike. The same facility, which produces semiconductors a",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: 🇺🇦🇷🇺⚡️ — A fire broke out at Russia's PJSC Proton-Electrotex electronics plant in Oryol Oblast following an FP-5 Flamingo cruise missile strike. The same facility, which pro..."
       },
       "market_z": 0.696,
       "abs_market_z": 0.696,
@@ -252,8 +243,8 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "calm"
+      "market_calendar_lag_days": 8,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
@@ -273,30 +264,15 @@
     {
       "signal_category": "Weather / Climate Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[21]",
-        "category": "Weather / Climate Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 13,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "military",
-          "bank",
-          "harvest"
-        ],
-        "text": "West Bank: Palestinians harvest olives under Israeli military restrictions | Euronews",
-        "explanation": "Geopolitical Escalation match based on keywords: military. Signal: West Bank: Palestinians harvest olives under Israeli military restrictions | Euronews"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     }
   ],
   "retiredSignals": [
