@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-07T03:08:16.770Z",
+  "generatedAt": "2026-11-08T02:40:21.066Z",
   "date": "2026-10-30",
   "asOfClose": "2026-10-30",
   "framing": "readings as of market close, 2026-10-30",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-07T03:08:13.189Z",
-    "generatedDate": "2026-11-07",
+    "generatedAt": "2026-11-08T02:40:18.083Z",
+    "generatedDate": "2026-11-08",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-07T03:08:13.189Z",
-    "generatedDate": "2026-11-07",
-    "runDate": "2026-11-07",
+    "generatedAt": "2026-11-08T02:40:18.083Z",
+    "generatedDate": "2026-11-08",
+    "runDate": "2026-11-08",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-07, readings as of market close, 2026-10-30 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-08, readings as of market close, 2026-10-30 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-30",
-      "generatedDate": "2026-11-07",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-11-07, readings as of market close, 2026-10-30 (8 calendar days old)."
+      "generatedDate": "2026-11-08",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-11-08, readings as of market close, 2026-10-30 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,39 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 3,
-    "calm": 2
+    "radar-claim": 2,
+    "calm": 3
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 23,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.tg.urgent[0]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 23,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "military",
-          "drone",
-          "oil",
-          "refinery"
+          "airstrike",
+          "iran",
+          "hormuz"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further Ukrainian drone strikes",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone. Signal: 🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further U..."
+        "text": "—❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @Middle_East_Spectator",
+        "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @M..."
       },
       "market_z": 1.123,
       "abs_market_z": 1.123,
@@ -97,7 +95,7 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -109,11 +107,11 @@
       "signal_raw_score": 9,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 2,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[12]",
+        "path": "root.news[16]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -121,11 +119,11 @@
         "confidence": "Medium",
         "sourcePriority": "Medium",
         "matchedKeywords": [
-          "israel",
-          "election"
+          "war",
+          "tariff"
         ],
-        "text": "After Israel’s Election, Who Will Get the First Chance to Form a Government?",
-        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: After Israel’s Election, Who Will Get the First Chance to Form a Government?"
+        "text": "Abdul El-Sayed slams Trump’s tariff war with Canada | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war. Signal: Abdul El-Sayed slams Trump’s tariff war with Canada | Al Jazeera"
       },
       "market_z": -0.834,
       "abs_market_z": 0.834,
@@ -136,38 +134,36 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 23,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 3,
       "signal_primary_count": 1,
       "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.tg.urgent[0]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 23,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "military",
-          "drone",
-          "oil",
-          "refinery"
+          "airstrike",
+          "iran",
+          "hormuz"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further Ukrainian drone strikes",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone. Signal: 🇷🇺🇺🇦⚡️ — The Saratov Oil Refinery came under attack by Ukrainian drones. Several Russian military aircraft were evacuated from Engels-2 Air Base amid the threat of further U..."
+        "text": "—❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @Middle_East_Spectator",
+        "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @M..."
       },
       "market_z": -0.908,
       "abs_market_z": 0.908,
@@ -178,7 +174,7 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-claim"
     },
     {
@@ -203,36 +199,35 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 3,
+      "signal_elevated": false,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.chokepoints[5]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
+        "rawScore": 9,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "missile",
-          "russia"
+          "taiwan",
+          "container"
         ],
-        "text": "🇺🇦🇷🇺⚡️ — A fire broke out at Russia's PJSC Proton-Electrotex electronics plant in Oryol Oblast following an FP-5 Flamingo cruise missile strike. The same facility, which produces semiconductors a",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile, russia. Signal: 🇺🇦🇷🇺⚡️ — A fire broke out at Russia's PJSC Proton-Electrotex electronics plant in Oryol Oblast following an FP-5 Flamingo cruise missile strike. The same facility, which pro..."
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
       },
       "market_z": 0.696,
       "abs_market_z": 0.696,
@@ -243,8 +238,8 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 9,
+      "state": "calm"
     }
   ],
   "signalOnly": [
