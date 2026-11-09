@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-08T02:40:21.066Z",
+  "generatedAt": "2026-11-09T02:56:19.795Z",
   "date": "2026-10-30",
   "asOfClose": "2026-10-30",
   "framing": "readings as of market close, 2026-10-30",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-08T02:40:18.083Z",
-    "generatedDate": "2026-11-08",
+    "generatedAt": "2026-11-09T02:56:16.731Z",
+    "generatedDate": "2026-11-09",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-08T02:40:18.083Z",
-    "generatedDate": "2026-11-08",
-    "runDate": "2026-11-08",
+    "generatedAt": "2026-11-09T02:56:16.731Z",
+    "generatedDate": "2026-11-09",
+    "runDate": "2026-11-09",
     "asOfClose": "2026-10-30",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-08, readings as of market close, 2026-10-30 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-09, readings as of market close, 2026-10-30 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-10-30",
-      "generatedDate": "2026-11-08",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-11-08, readings as of market close, 2026-10-30 (9 calendar days old)."
+      "generatedDate": "2026-11-09",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-11-09, readings as of market close, 2026-10-30 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,37 +54,37 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "radar-claim": 2,
-    "calm": 3
+    "radar-claim": 3,
+    "calm": 2
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
-      "signal_secondary_count": 0,
+      "signal_count": 15,
+      "signal_primary_count": 12,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[8]",
         "category": "Geopolitical Escalation",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": true,
-        "rawScore": 14,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": false,
+        "rawScore": 17,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "airstrike",
-          "iran",
-          "hormuz"
+          "oil",
+          "gas",
+          "strike"
         ],
-        "text": "—❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @Middle_East_Spectator",
-        "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @M..."
+        "text": "🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor Mor oil and gas field.",
+        "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor..."
       },
       "market_z": 1.123,
       "abs_market_z": 1.123,
@@ -95,36 +95,22 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[16]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "war",
-          "tariff"
-        ],
-        "text": "Abdul El-Sayed slams Trump’s tariff war with Canada | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war. Signal: Abdul El-Sayed slams Trump’s tariff war with Canada | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -0.834,
       "abs_market_z": 0.834,
       "market_moving": false,
@@ -134,36 +120,36 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 2,
+      "signal_count": 6,
+      "signal_primary_count": 3,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 17,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "airstrike",
-          "iran",
-          "hormuz"
+          "oil",
+          "gas",
+          "strike"
         ],
-        "text": "—❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @Middle_East_Spectator",
-        "explanation": "Geopolitical Escalation match based on keywords: airstrike, iran. Signal: —❗️🇺🇸/🇮🇷 NEW: Initial reports that the U.S. carried out an airstrike in Jask, southern Iran, after several anti-ship cruise missiles were launched at the Strait of Hormuz @M..."
+        "text": "🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor Mor oil and gas field.",
+        "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor..."
       },
       "market_z": -0.908,
       "abs_market_z": 0.908,
@@ -174,7 +160,7 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-claim"
     },
     {
@@ -199,35 +185,36 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.85,
+      "signal_score_pct": 85,
+      "signal_raw_score": 17,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 4,
+      "signal_elevated": true,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[8]",
         "category": "Supply Chain Disruption",
-        "primaryCategory": "Geopolitical Escalation",
+        "primaryCategory": "Energy Shock",
         "isPrimary": false,
-        "rawScore": 9,
+        "rawScore": 17,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "oil",
+          "gas",
+          "strike"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor Mor oil and gas field.",
+        "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor..."
       },
       "market_z": 0.696,
       "abs_market_z": 0.696,
@@ -238,8 +225,8 @@
       "driver_as_of": "2026-10-30",
       "market_as_of": "2026-10-30",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "calm"
+      "market_calendar_lag_days": 10,
+      "state": "radar-claim"
     }
   ],
   "signalOnly": [
