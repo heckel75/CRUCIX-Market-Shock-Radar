@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-09T02:56:16.579Z",
+  "generatedAt": "2026-11-10T04:46:01.765Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,48 +13,65 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Energy Shock": 3,
-    "Geopolitical Escalation": 12
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 137,
+  "candidateCount": 130,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[13]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 17,
-      "confidence": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
         "Natural Gas",
         "Inflation Expectations",
         "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "FX"
       ],
       "matchedKeywords": [
+        "attack",
+        "russia",
         "oil",
-        "gas",
-        "strike"
+        "refinery"
       ],
       "otherCategories": [
-        "Geopolitical Escalation",
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor Mor oil and gas field.",
-      "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇮🇶🌞⚡️ — The Kurdistan Regional Government's Ministry of Electricity announced that electricity production has been reduced by 2,800 megawatts following the strike on the Khor..."
+      "text": "Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack. \"KINEF\" is one of Rus",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack..."
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "military",
+        "iran"
+      ],
+      "otherCategories": [],
+      "text": "🇺🇸🇶🇦🇸🇦⚡️— Donald Trump says Qatar and Saudi Arabia want a peaceful resolution to the war with Iran, but warns Washington is ready to resume military strikes at any time if necessary. @IntelSlav",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military, iran. Signal: 🇺🇸🇶🇦🇸🇦⚡️— Donald Trump says Qatar and Saudi Arabia want a peaceful resolution to the war with Iran, but warns Washington is ready to resume military strikes at any time if..."
+    },
+    {
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -73,212 +90,37 @@
       "matchedKeywords": [
         "nuclear",
         "iran",
-        "hormuz"
+        "uranium"
       ],
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "🇺🇸🇮🇷⚡️ — President Trump has signaled that further U.S. strikes on Iran can be avoided, provided Tehran cuts a \"very strong\" nuclear deal and reopens the Strait of Hormuz. Speaking to CNN, Trump",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇺🇸🇮🇷⚡️ — President Trump has signaled that further U.S. strikes on Iran can be avoided, provided Tehran cuts a \"very strong\" nuclear deal and reopens the Strait of Hormuz. S..."
+      "text": "🇮🇷🇺🇸⚡️ — Iran has reportedly agreed to cap uranium enrichment at 3.67%, the limit set under the 2015 nuclear deal. Washington and Tehran are moving towards a preliminary agreement — Al Arabiya, ci",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran has reportedly agreed to cap uranium enrichment at 3.67%, the limit set under the 2015 nuclear deal. Washington and Tehran are moving towards a preliminary agr..."
     },
     {
       "path": "root.tg.urgent[4]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
+        "war",
         "military"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇨🇫🇷🇺⚡️ — In October, the Central African Republic’s army and Russian military specialists thwarted a major operation by radical groups and delivered a preemptive strike - President of the Central",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, military. Signal: 🇨🇫🇷🇺⚡️ — In October, the Central African Republic’s army and Russian military specialists thwarted a major operation by radical groups and delivered a preemptive strike - Pr..."
-    },
-    {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "naval",
-        "iran",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇸❌🇮🇷 — President Trump via Truth Social: Task Force Iron Gate is in full force and effect in the Islamic Republic of Iran. Coupled with history’s greatest Naval Blockade, very little gets into,",
-      "explanation": "Geopolitical Escalation match based on keywords: naval, iran. Signal: 🇺🇸❌🇮🇷 — President Trump via Truth Social: Task Force Iron Gate is in full force and effect in the Islamic Republic of Iran. Coupled with history’s greatest Naval Blockade, v..."
-    },
-    {
-      "path": "root.news[5]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone",
-        "gas"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "Drone attack on Iraqi Kurdistan gas field triggers mass blackout | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Drone attack on Iraqi Kurdistan gas field triggers mass blackout | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "iran",
-        "hormuz",
-        "blockade"
-      ],
-      "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
-      ],
-      "text": "🇮🇷⚡️ — In the Strait of Hormuz, three foreign tankers are on fire at once after Iran's attacks. The most interesting part is that business keeps taking the risk and breaking through the blockade. F",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷⚡️ — In the Strait of Hormuz, three foreign tankers are on fire at once after Iran's attacks. The most interesting part is that business keeps taking the risk and breaking t..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "gas",
-        "drone"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "🇮🇷❌🇮🇶🌞 — An Iranian drone struck the Khor Mor oil and gas field in Iraq's Kurdistan Region. @IntelSlava",
-      "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇮🇷❌🇮🇶🌞 — An Iranian drone struck the Khor Mor oil and gas field in Iraq's Kurdistan Region. @IntelSlava"
-    },
-    {
-      "path": "root.newsFeed[35]",
-      "sourcePriority": "Medium",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "oil",
-        "gas",
-        "drone"
-      ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "❌🌞 — An Iranian drone struck the Khor Mor oil and gas field in Iraq's Kurdistan Region. @IntelSlav | INTELSLAVA",
-      "explanation": "Energy Shock match based on keywords: oil, gas. Signal: ❌🌞 — An Iranian drone struck the Khor Mor oil and gas field in Iraq's Kurdistan Region. @IntelSlav | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[9]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "gaza"
-      ],
       "otherCategories": [],
-      "text": "🇵🇸🇮🇱⚡️ — Since the ceasefire was announced in 2025, the Israeli army has continuously expanded the \"yellow line,\" achieving what it failed to do during the war and capturing 65% of Gaza's territor",
-      "explanation": "Geopolitical Escalation match based on keywords: war, gaza. Signal: 🇵🇸🇮🇱⚡️ — Since the ceasefire was announced in 2025, the Israeli army has continuously expanded the \"yellow line,\" achieving what it failed to do during the war and capturing..."
+      "text": "🚨 BREAKING: 🇺🇸 Congressman Thomas Massie introduces articles of impeachment against Secretary of War Pete Hegseth, seeking his removal. Massie accuses Hegseth of ordering military action against I",
+      "explanation": "Geopolitical Escalation match based on keywords: war, military. Signal: 🚨 BREAKING: 🇺🇸 Congressman Thomas Massie introduces articles of impeachment against Secretary of War Pete Hegseth, seeking his removal. Massie accuses Hegseth of ordering mil..."
     },
     {
-      "path": "root.news[6]",
+      "path": "root.news[15]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -291,36 +133,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "iran",
+        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Europe to press US on Ukraine peace and Iran at Paris G7 talks | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, ukraine. Signal: Europe to press US on Ukraine peace and Iran at Paris G7 talks | France 24"
+      "text": "Russia, Ukraine and US to meet as Zelenskyy claims battlefield successes | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia, Ukraine and US to meet as Zelenskyy claims battlefield successes | Al Jazeera"
     },
     {
-      "path": "root.news[8]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "Drone attack suspends production at Iraq’s Khor Mor gasfield | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Drone attack suspends production at Iraq’s Khor Mor gasfield | Al Jazeera"
-    },
-    {
-      "path": "root.news[13]",
+      "path": "root.news[28]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -337,11 +158,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump to talk to Xi, Putin about Tehran, ‘denuclearization’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump to talk to Xi, Putin about Tehran, ‘denuclearization’ | Al Jazeera"
+      "text": "Iran war Update: Iran demands US ‘surrender’ to its conditions | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran demands US ‘surrender’ to its conditions | Al Jazeera"
     },
     {
-      "path": "root.news[33]",
+      "path": "root.news[36]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -358,11 +179,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran threatens to ‘rain down hell’ if US escalates war | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran threatens to ‘rain down hell’ if US escalates war | Al Jazeera"
+      "text": "After meeting Qatar PM, Trump calls Iran war ‘effectively over’ militarily | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: After meeting Qatar PM, Trump calls Iran war ‘effectively over’ militarily | Al Jazeera"
     },
     {
-      "path": "root.news[46]",
+      "path": "root.news[47]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -375,12 +196,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
+        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Rosstat hack: data obtained suggests over 390,000 Russian deaths in Ukraine war | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Rosstat hack: data obtained suggests over 390,000 Russian deaths in Ukraine war | Euronews"
+      "text": "What to expect as Russia, Ukraine and the US hold trilateral talks in Abu Dhabi | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: What to expect as Russia, Ukraine and the US hold trilateral talks in Abu Dhabi | France 24"
     },
     {
       "path": "root.chokepoints[5]",
@@ -409,6 +230,164 @@
       ],
       "text": "Taiwan Strait | 88% of largest container ships",
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+    },
+    {
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "The Operational Command South confirmed that the Ukrainian Defense Forces launched a comprehensive strike using drones against the Russian \"Rubicon\" unit in the vicinity of the temporarily occupied Be",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: The Operational Command South confirmed that the Ukrainian Defense Forces launched a comprehensive strike using drones against the Russian \"Rubicon\" unit in the vicinity of the ..."
+    },
+    {
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "naval",
+        "blockade"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸🇶🇦❌🇮🇷 - President Trump via Truth Social claimed that Qatar, Saudi Arabia, the UAE, Bahrain and Kuwait favour maintaining the current U.S. naval blockade and Operation Iron Gate. He reiterate",
+      "explanation": "Geopolitical Escalation match based on keywords: naval. Signal: 🇺🇸🇶🇦❌🇮🇷 - President Trump via Truth Social claimed that Qatar, Saudi Arabia, the UAE, Bahrain and Kuwait favour maintaining the current U.S. naval blockade and Operation I..."
+    },
+    {
+      "path": "root.news[12]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "pipeline"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Saudi Arabia downs missiles fired at Riyadh after Houthi attack on pipeline | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Saudi Arabia downs missiles fired at Riyadh after Houthi attack on pipeline | Al Jazeera"
+    },
+    {
+      "path": "root.news[17]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "israel",
+        "election"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Israel’s Shin Bet finds no evidence of foreign election interference | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Shin Bet finds no evidence of foreign election interference | Al Jazeera"
+    },
+    {
+      "path": "root.news[41]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "pipeline"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Saudi Arabia reports new attack on key East-West pipeline | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Saudi Arabia reports new attack on key East-West pipeline | Al Jazeera"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     }
   ]
 }

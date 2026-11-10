@@ -1,0 +1,290 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-11-10T04:46:06.777Z",
+  "date": "2026-11-03",
+  "asOfClose": "2026-11-03",
+  "framing": "readings as of market close, 2026-11-03",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-11-10T04:46:01.914Z",
+    "generatedDate": "2026-11-10",
+    "asOfClose": "2026-11-03",
+    "calendarLagDays": 7,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-11-10T04:46:01.914Z",
+    "generatedDate": "2026-11-10",
+    "runDate": "2026-11-10",
+    "asOfClose": "2026-11-03",
+    "calendarLagDays": 7,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-11-10, readings as of market close, 2026-11-03 (7 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-11-03",
+      "generatedDate": "2026-11-10",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-11-10, readings as of market close, 2026-11-03 (7 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "priced": 2,
+    "radar-miss": 3
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[13]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "attack",
+          "russia",
+          "oil",
+          "refinery"
+        ],
+        "text": "Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack. \"KINEF\" is one of Rus",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack..."
+      },
+      "market_z": -1.623,
+      "abs_market_z": 1.623,
+      "market_moving": true,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-11-03",
+      "market_as_of": "2026-11-03",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "priced"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[17]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "election"
+        ],
+        "text": "Israel’s Shin Bet finds no evidence of foreign election interference | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Shin Bet finds no evidence of foreign election interference | Al Jazeera"
+      },
+      "market_z": -1.511,
+      "abs_market_z": 1.511,
+      "market_moving": true,
+      "driver_instrument": "DBC",
+      "driver_instrument_id": "broad-commodities",
+      "driver_instrument_label": "Broad commodities ETF",
+      "driver_as_of": "2026-11-03",
+      "market_as_of": "2026-11-03",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 5,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 4,
+      "top_signal": {
+        "path": "root.tg.urgent[13]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "attack",
+          "russia",
+          "oil",
+          "refinery"
+        ],
+        "text": "Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack. \"KINEF\" is one of Rus",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Last night, Ukrainian drones attacked the \"Kirishinefteorgsintez\" oil refinery, located in the city of Kirishi, Leningrad region, Russia. The local governor confirmed the attack..."
+      },
+      "market_z": -1.623,
+      "abs_market_z": 1.623,
+      "market_moving": true,
+      "driver_instrument": "DCOILBRENTEU",
+      "driver_instrument_id": "brent",
+      "driver_instrument_label": "Brent crude oil",
+      "driver_as_of": "2026-11-03",
+      "market_as_of": "2026-11-03",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "priced"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 1.719,
+      "abs_market_z": 1.719,
+      "market_moving": true,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "driver_instrument_id": "high-yield-spreads",
+      "driver_instrument_label": "High-yield option-adjusted spread",
+      "driver_as_of": "2026-11-03",
+      "market_as_of": "2026-11-03",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 3,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.chokepoints[5]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "taiwan",
+          "container"
+        ],
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+      },
+      "market_z": -1.611,
+      "abs_market_z": 1.611,
+      "market_moving": true,
+      "driver_instrument": "SOXX",
+      "driver_instrument_id": "semiconductors",
+      "driver_instrument_label": "Semiconductor equities ETF",
+      "driver_as_of": "2026-11-03",
+      "market_as_of": "2026-11-03",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
