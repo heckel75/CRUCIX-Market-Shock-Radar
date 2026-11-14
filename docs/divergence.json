@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-13T03:33:24.660Z",
+  "generatedAt": "2026-11-14T03:30:45.319Z",
   "date": "2026-11-06",
   "asOfClose": "2026-11-06",
   "framing": "readings as of market close, 2026-11-06",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-13T03:33:21.859Z",
-    "generatedDate": "2026-11-13",
+    "generatedAt": "2026-11-14T03:30:41.745Z",
+    "generatedDate": "2026-11-14",
     "asOfClose": "2026-11-06",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-13T03:33:21.859Z",
-    "generatedDate": "2026-11-13",
-    "runDate": "2026-11-13",
+    "generatedAt": "2026-11-14T03:30:41.745Z",
+    "generatedDate": "2026-11-14",
+    "runDate": "2026-11-14",
     "asOfClose": "2026-11-06",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-13, readings as of market close, 2026-11-06 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-14, readings as of market close, 2026-11-06 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-06",
-      "generatedDate": "2026-11-13",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-13, readings as of market close, 2026-11-06 (7 calendar days old)."
+      "generatedDate": "2026-11-14",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-14, readings as of market close, 2026-11-06 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 3,
-    "radar-miss": 1,
+    "priced": 2,
+    "radar-miss": 2,
     "calm": 1
   },
   "rows": [
@@ -68,24 +68,24 @@
       "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 15,
+      "signal_count": 14,
       "signal_primary_count": 14,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[0]",
+        "path": "root.news[46]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 15,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "war",
-          "missile",
-          "israel"
+          "military",
+          "china",
+          "taiwan"
         ],
-        "text": "🇮🇷🇺🇸🇮🇱⚡️ — IRIB has released footage showing an IRGC Aerospace Force missile unit operating during the latest war against Israel and the United States. The footage shows a missile launcher expl",
-        "explanation": "Geopolitical Escalation match based on keywords: war, missile, israel. Signal: 🇮🇷🇺🇸🇮🇱⚡️ — IRIB has released footage showing an IRGC Aerospace Force missile unit operating during the latest war against Israel and the United States. The footage shows a..."
+        "text": "What we know about China's military exercises around Taiwan | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: military, china, taiwan. Signal: What we know about China's military exercises around Taiwan | France 24"
       },
       "market_z": 2.255,
       "abs_market_z": 2.255,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -121,36 +121,35 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_elevated": true,
+      "signal_elevated": false,
       "signal_count": 1,
       "signal_primary_count": 1,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.chokepoints[0]",
         "category": "Energy Shock",
         "primaryCategory": "Energy Shock",
         "isPrimary": true,
-        "rawScore": 13,
+        "rawScore": 8,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
           "oil",
-          "gas",
-          "russia"
+          "hormuz"
         ],
-        "text": "🇷🇺🇺🇦⚡️— Russia struck a Naftogaz oil and gas facility in the Chernihiv Region with two missiles, causing significant damage to production equipment. @IntelSlava",
-        "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇷🇺🇺🇦⚡️— Russia struck a Naftogaz oil and gas facility in the Chernihiv Region with two missiles, causing significant damage to production equipment. @IntelSlava"
+        "text": "Strait of Hormuz | 20% of world oil",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
       "market_z": -2.8,
       "abs_market_z": 2.8,
@@ -161,8 +160,8 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "priced"
+      "market_calendar_lag_days": 8,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
@@ -186,7 +185,7 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -198,11 +197,11 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 7,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.tg.urgent[0]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -210,11 +209,12 @@
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "strike",
-          "drone"
+          "missile",
+          "iran",
+          "port"
         ],
-        "text": "🇺🇦❌🇷🇺 — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇺🇦❌🇷🇺 — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSlava"
+        "text": "🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare"
       },
       "market_z": -2.12,
       "abs_market_z": 2.12,
@@ -225,7 +225,7 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],

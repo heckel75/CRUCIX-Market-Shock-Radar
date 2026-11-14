@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-13T03:33:21.757Z",
+  "generatedAt": "2026-11-14T03:30:41.599Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -16,12 +16,34 @@
     "Geopolitical Escalation": 14,
     "Energy Shock": 1
   },
-  "candidateCount": 131,
+  "candidateCount": 134,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[0]",
-      "sourcePriority": "High",
+      "path": "root.news[46]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "military",
+        "china",
+        "taiwan"
+      ],
+      "otherCategories": [],
+      "text": "What we know about China's military exercises around Taiwan | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: military, china, taiwan. Signal: What we know about China's military exercises around Taiwan | France 24"
+    },
+    {
+      "path": "root.news[47]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -35,17 +57,75 @@
       "matchedKeywords": [
         "war",
         "missile",
-        "israel"
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇺🇸🇮🇱⚡️ — IRIB has released footage showing an IRGC Aerospace Force missile unit operating during the latest war against Israel and the United States. The footage shows a missile launcher expl",
-      "explanation": "Geopolitical Escalation match based on keywords: war, missile, israel. Signal: 🇮🇷🇺🇸🇮🇱⚡️ — IRIB has released footage showing an IRGC Aerospace Force missile unit operating during the latest war against Israel and the United States. The footage shows a..."
+      "text": "Iran honours fallen soldiers in Iran-Iraq war with missile display | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, missile, iran. Signal: Iran honours fallen soldiers in Iran-Iraq war with missile display | Al Jazeera"
     },
     {
-      "path": "root.news[41]",
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare"
+    },
+    {
+      "path": "root.newsFeed[16]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "iran",
+        "port"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "❌ — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qesh | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qesh | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -55,156 +135,36 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "russia",
-        "ukraine"
+        "missile",
+        "attack"
       ],
       "otherCategories": [],
-      "text": "Across Africa: Tunisians drawn into Russia's war with Ukraine | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Across Africa: Tunisians drawn into Russia's war with Ukraine | France 24"
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇺🇦❌🇷🇺 — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇺🇦❌🇷🇺 — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSlava"
-    },
-    {
-      "path": "root.tg.urgent[3]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Today, a Russian Geran drone hit a multi-story apartment building in one of Kyiv's districts. It is reported that a woman was killed in the strike, and five others were injured.",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Today, a Russian Geran drone hit a multi-story apartment building in one of Kyiv's districts. It is reported that a woman was killed in the strike, and five others were injured."
+      "text": "🇾🇪❌🇸🇦 — An alert has been issued in Saudi Arabia's southwestern Najran Province following a Houthi ballistic missile attack. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪❌🇸🇦 — An alert has been issued in Saudi Arabia's southwestern Najran Province following a Houthi ballistic missile attack. @IntelSlava"
     },
     {
       "path": "root.news[7]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "gaza"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Gaza surgeon films aftermath of Israeli strike | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Gaza surgeon films aftermath of Israeli strike | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[44]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "drone"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "❌ — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSla | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ❌ — A Ukrainian drone strike targeted an urban area in the Russian city of Rostov-on-Don. @IntelSla | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
-        "Gold",
-        "VIX",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "gas",
-        "russia"
+        "nuclear",
+        "china"
       ],
-      "otherCategories": [
-        "Geopolitical Escalation"
-      ],
-      "text": "🇷🇺🇺🇦⚡️— Russia struck a Naftogaz oil and gas facility in the Chernihiv Region with two missiles, causing significant damage to production equipment. @IntelSlava",
-      "explanation": "Energy Shock match based on keywords: oil, gas. Signal: 🇷🇺🇺🇦⚡️— Russia struck a Naftogaz oil and gas facility in the Chernihiv Region with two missiles, causing significant damage to production equipment. @IntelSlava"
+      "otherCategories": [],
+      "text": "Trump to Meet With Putin and Xi in China, With Nuclear Proliferation on the Agenda | NYT Asia",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, china. Signal: Trump to Meet With Putin and Xi in China, With Nuclear Proliferation on the Agenda | NYT Asia"
     },
     {
-      "path": "root.news[14]",
+      "path": "root.news[9]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -217,57 +177,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "russia",
-        "ukraine"
+        "border",
+        "china"
       ],
       "otherCategories": [],
-      "text": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks"
+      "text": "Afghanistan’s new road to China ends at a closed border | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: border, china. Signal: Afghanistan’s new road to China ends at a closed border | Al Jazeera"
     },
     {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "Update: Zelensky and Kushner confirm that Europe will join next round of Russia-Ukraine talks | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Update: Zelensky and Kushner confirm that Europe will join next round of Russia-Ukraine talks | France 24"
-    },
-    {
-      "path": "root.news[20]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "conflict"
-      ],
-      "otherCategories": [],
-      "text": "Neither war nor peace in Tigray - is Ethiopia's latest conflict really over? | Ethiopia",
-      "explanation": "Geopolitical Escalation match based on keywords: war, conflict. Signal: Neither war nor peace in Tigray - is Ethiopia's latest conflict really over? | Ethiopia"
-    },
-    {
-      "path": "root.news[24]",
+      "path": "root.news[11]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -284,11 +202,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran war Update: Trump says Gulf allies urged pause in Iran strikes | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Trump says Gulf allies urged pause in Iran strikes | Al Jazeera"
+      "text": "Iran war Update: Fighting grips Yemen as Qatar, Turkiye sign defence deal | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Fighting grips Yemen as Qatar, Turkiye sign defence deal | Al Jazeera"
     },
     {
-      "path": "root.news[37]",
+      "path": "root.news[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -301,12 +219,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "israel",
+        "gaza"
       ],
       "otherCategories": [],
-      "text": "Army Officer Accused of Trying to Spy for Russia Is Afghan War Veteran",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Army Officer Accused of Trying to Spy for Russia Is Afghan War Veteran"
+      "text": "Israel bars supplies needed to treat six-year-old Gaza burn victim | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel bars supplies needed to treat six-year-old Gaza burn victim | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -337,59 +255,105 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[6]",
+      "path": "root.chokepoints[0]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
+      "category": "Energy Shock",
+      "score": 8,
       "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "military",
-        "port"
+        "oil",
+        "hormuz"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "🇷🇺🇺🇦⚡ Russian forces struck two ships with military supplies for the Ukrainian army near Odessa in the Black Sea and at the Chernomorsk port, the Defense Ministry reported. “The Russian Armed Fo",
-      "explanation": "Geopolitical Escalation match based on keywords: military. Signal: 🇷🇺🇺🇦⚡ Russian forces struck two ships with military supplies for the Ukrainian army near Odessa in the Black Sea and at the Chernomorsk port, the Defense Ministry reported. ..."
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.news[12]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 9,
-      "confidence": "Medium",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike"
+        "drone"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
+      "otherCategories": [],
+      "text": "🇬🇧🇺🇸⚡️ — U.S. Air Force security personnel responded to suspected unauthorized drone activity over RAF Lakenheath, Sky News reports, citing an unnamed U.S. Air Force spokesperson. No personnel, ai",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇬🇧🇺🇸⚡️ — U.S. Air Force security personnel responded to suspected unauthorized drone activity over RAF Lakenheath, Sky News reports, citing an unnamed U.S. Air Force spokesp..."
+    },
+    {
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
       ],
-      "text": "Finland detects strike on Russian warship as Zelenskyy meets US envoys | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Finland detects strike on Russian warship as Zelenskyy meets US envoys | Al Jazeera"
+      "matchedKeywords": [
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Peskov claims the Abu Dhabi talks didn't touch on current NATO members leaving the alliance. He claims the idea that Russia could use a humanitarian mission in Kostiantynivka to move armored vehicles",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Peskov claims the Abu Dhabi talks didn't touch on current NATO members leaving the alliance. He claims the idea that Russia could use a humanitarian mission in Kostiantynivka to..."
+    },
+    {
+      "path": "root.tg.urgent[11]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone"
+      ],
+      "otherCategories": [],
+      "text": "A Ukrainian interceptor drone destroys a Russian kamikaze drone by firing a net at it.",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: A Ukrainian interceptor drone destroys a Russian kamikaze drone by firing a net at it."
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
     }
   ]
 }
