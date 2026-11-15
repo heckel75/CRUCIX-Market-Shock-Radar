@@ -1,11 +1,11 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-14T03:30:41.599Z",
+  "generatedAt": "2026-11-15T03:00:24.822Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
@@ -13,58 +13,67 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 134,
+  "candidateCount": 140,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[46]",
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
+      "score": 24,
+      "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "china",
-        "taiwan"
-      ],
-      "otherCategories": [],
-      "text": "What we know about China's military exercises around Taiwan | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: military, china, taiwan. Signal: What we know about China's military exercises around Taiwan | France 24"
-    },
-    {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
       ],
       "matchedKeywords": [
         "war",
-        "missile",
-        "iran"
+        "iran",
+        "israel",
+        "gaza",
+        "policy"
       ],
-      "otherCategories": [],
-      "text": "Iran honours fallen soldiers in Iran-Iraq war with missile display | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, missile, iran. Signal: Iran honours fallen soldiers in Iran-Iraq war with missile display | Al Jazeera"
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel, gaza. Signal: Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[8]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "missile",
+        "attack",
+        "military"
+      ],
+      "otherCategories": [],
+      "text": "🇷🇺⚡️ — Another official video showing the launch of a Dan-T small cruise missile being launched from a Mi-28NM \"Night Hunter\" attack helicopter in the Special Military Operation (SMO) zone. @IntelS",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, military. Signal: 🇷🇺⚡️ — Another official video showing the launch of a Dan-T small cruise missile being launched from a Mi-28NM \"Night Hunter\" attack helicopter in the Special Military Operati..."
+    },
+    {
+      "path": "root.tg.urgent[3]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -82,18 +91,45 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "iran",
-        "port"
+        "strike",
+        "drone"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇺🇸❌🇮🇷 — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qeshm Island. @OSINTWarfare"
+      "text": "🇷🇺🇺🇦⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the settlement of Zlatopil, Kharkov Oblast. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the settlement of Zlatopil, Kharkov Oblast. @IntelSlava"
     },
     {
-      "path": "root.newsFeed[16]",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Russian driver complains about risks while delivering cargo to occupied Ukrainian territories after another Russian contractor was killed near Volnovakha by a drone strike.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: Russian driver complains about risks while delivering cargo to occupied Ukrainian territories after another Russian contractor was killed near Volnovakha by a drone strike."
+    },
+    {
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -111,18 +147,45 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "iran",
-        "port"
+        "strike",
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "❌ — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qesh | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: ❌ — U.S. airstrikes targeted a missile launcher at Jask port and a radar installation on Iran's Qesh | INTELSLAVA"
+      "text": "Israeli air strike kills senior Hamas commander in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli air strike kills senior Hamas commander in Gaza | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[1]",
+      "path": "root.newsFeed[25]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 14,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "drone"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the set | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: ⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the set | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -135,15 +198,57 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack"
+        "drone",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇾🇪❌🇸🇦 — An alert has been issued in Saudi Arabia's southwestern Najran Province following a Houthi ballistic missile attack. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack. Signal: 🇾🇪❌🇸🇦 — An alert has been issued in Saudi Arabia's southwestern Najran Province following a Houthi ballistic missile attack. @IntelSlava"
+      "text": "A drone attacked the Palau-flagged commercial ship Larissa 1, heading to Ukraine, in Romania's territorial waters overnight into November 14, Digi24 writes. No crew were hurt and there was no fire, bu",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: A drone attacked the Palau-flagged commercial ship Larissa 1, heading to Ukraine, in Romania's territorial waters overnight into November 14, Digi24 writes. No crew were hurt an..."
     },
     {
-      "path": "root.news[7]",
+      "path": "root.news[17]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "US envoy Kushner says he aims to broker Europe-Russia talks on Ukraine | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: US envoy Kushner says he aims to broker Europe-Russia talks on Ukraine | Al Jazeera"
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Macron says limiting Ukraine aid would pave way to 'another war' | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Macron says limiting Ukraine aid would pave way to 'another war' | France 24"
+    },
+    {
+      "path": "root.news[28]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -164,7 +269,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: nuclear, china. Signal: Trump to Meet With Putin and Xi in China, With Nuclear Proliferation on the Agenda | NYT Asia"
     },
     {
-      "path": "root.news[9]",
+      "path": "root.newsFeed[45]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -177,54 +282,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "border",
-        "china"
+        "drone",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Afghanistan’s new road to China ends at a closed border | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: border, china. Signal: Afghanistan’s new road to China ends at a closed border | Al Jazeera"
-    },
-    {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Fighting grips Yemen as Qatar, Turkiye sign defence deal | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Fighting grips Yemen as Qatar, Turkiye sign defence deal | Al Jazeera"
-    },
-    {
-      "path": "root.news[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Israel bars supplies needed to treat six-year-old Gaza burn victim | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Israel bars supplies needed to treat six-year-old Gaza burn victim | Al Jazeera"
+      "text": "A drone attacked the Palau-flagged commercial ship Larissa 1, heading to Ukraine, in Romania's terri | WARTRANSLATED",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, ukraine. Signal: A drone attacked the Palau-flagged commercial ship Larissa 1, heading to Ukraine, in Romania's terri | WARTRANSLATED"
     },
     {
       "path": "root.chokepoints[5]",
@@ -255,6 +318,33 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
+      "path": "root.news[4]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "iran",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iraq PM sacks nine officials over oil smuggling in pro-Iran stronghold | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iraq PM sacks nine officials over oil smuggling in pro-Iran stronghold | Al Jazeera"
+    },
+    {
       "path": "root.chokepoints[0]",
       "sourcePriority": "High",
       "category": "Energy Shock",
@@ -276,84 +366,25 @@
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
     },
     {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "drone"
-      ],
-      "otherCategories": [],
-      "text": "🇬🇧🇺🇸⚡️ — U.S. Air Force security personnel responded to suspected unauthorized drone activity over RAF Lakenheath, Sky News reports, citing an unnamed U.S. Air Force spokesperson. No personnel, ai",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: 🇬🇧🇺🇸⚡️ — U.S. Air Force security personnel responded to suspected unauthorized drone activity over RAF Lakenheath, Sky News reports, citing an unnamed U.S. Air Force spokesp..."
-    },
-    {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Peskov claims the Abu Dhabi talks didn't touch on current NATO members leaving the alliance. He claims the idea that Russia could use a humanitarian mission in Kostiantynivka to move armored vehicles",
-      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: Peskov claims the Abu Dhabi talks didn't touch on current NATO members leaving the alliance. He claims the idea that Russia could use a humanitarian mission in Kostiantynivka to..."
-    },
-    {
       "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
       "channels": [
-        "Gold",
-        "VIX",
         "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "drone"
+        "oil",
+        "hormuz"
       ],
       "otherCategories": [],
-      "text": "A Ukrainian interceptor drone destroys a Russian kamikaze drone by firing a net at it.",
-      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: A Ukrainian interceptor drone destroys a Russian kamikaze drone by firing a net at it."
-    },
-    {
-      "path": "root.tg.urgent[13]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 5,
-      "confidence": "Low",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
-      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
+      "text": "🇮🇷⚡️ — According to the IRGC Navy, two oil tankers attempting to cross the Strait of Hormuz through an unauthorized route with their navigation systems and Automatic Identification Systems (AIS) dis",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: 🇮🇷⚡️ — According to the IRGC Navy, two oil tankers attempting to cross the Strait of Hormuz through an unauthorized route with their navigation systems and Automatic Identific..."
     }
   ]
 }
