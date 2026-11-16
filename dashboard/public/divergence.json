@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-15T03:00:35.172Z",
+  "generatedAt": "2026-11-16T03:00:00.191Z",
   "date": "2026-11-06",
   "asOfClose": "2026-11-06",
   "framing": "readings as of market close, 2026-11-06",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-15T03:00:24.916Z",
-    "generatedDate": "2026-11-15",
+    "generatedAt": "2026-11-16T02:59:57.188Z",
+    "generatedDate": "2026-11-16",
     "asOfClose": "2026-11-06",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-15T03:00:24.916Z",
-    "generatedDate": "2026-11-15",
-    "runDate": "2026-11-15",
+    "generatedAt": "2026-11-16T02:59:57.188Z",
+    "generatedDate": "2026-11-16",
+    "runDate": "2026-11-16",
     "asOfClose": "2026-11-06",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-15, readings as of market close, 2026-11-06 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-16, readings as of market close, 2026-11-06 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-06",
-      "generatedDate": "2026-11-15",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-11-15, readings as of market close, 2026-11-06 (9 calendar days old)."
+      "generatedDate": "2026-11-16",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-11-16, readings as of market close, 2026-11-06 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,31 +63,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 13,
-      "signal_primary_count": 13,
+      "signal_count": 14,
+      "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[8]",
+        "path": "root.news[14]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "Medium",
         "matchedKeywords": [
           "war",
-          "iran",
-          "israel",
-          "gaza",
-          "policy"
+          "strike",
+          "iran"
         ],
-        "text": "Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel, gaza. Signal: Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera"
+        "text": "Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera"
       },
       "market_z": 2.255,
       "abs_market_z": 2.255,
@@ -98,39 +96,22 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     },
     {
       "channel": "sanctions-policy",
       "channel_label": "Sanctions / policy",
       "signal_category": "Sanctions / Policy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[8]",
-        "category": "Sanctions / Policy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 24,
-        "confidence": "High",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "war",
-          "iran",
-          "israel",
-          "gaza",
-          "policy"
-        ],
-        "text": "Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran, israel, gaza. Signal: Iran war Update: Israel vows Gaza ‘offensive policy’ despite caretaker status | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": -2.324,
       "abs_market_z": 2.324,
       "market_moving": true,
@@ -140,35 +121,36 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "priced"
+      "market_calendar_lag_days": 10,
+      "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 3,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 1,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.news[4]",
+        "path": "root.tg.urgent[8]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
+        "rawScore": 14,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "iran",
+          "russia",
+          "ukraine",
           "oil"
         ],
-        "text": "Iraq PM sacks nine officials over oil smuggling in pro-Iran stronghold | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: Iraq PM sacks nine officials over oil smuggling in pro-Iran stronghold | Al Jazeera"
+        "text": "🇺🇦🇷🇺⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil refining capacity. This is our justified response to Russia’s refusal to de-escalate and its s",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil refining capacity. This is our justified response to Russia’s refusal to ..."
       },
       "market_z": -2.8,
       "abs_market_z": 2.8,
@@ -179,8 +161,8 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 10,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
@@ -204,35 +186,36 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 5,
       "signal_primary_count": 0,
       "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.news[14]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
+          "war",
           "strike",
-          "drone"
+          "iran"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the settlement of Zlatopil, Kharkov Oblast. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, drone. Signal: 🇷🇺🇺🇦⚡️ — The aftermath of this morning's Geran drone strike on the EKIPAZH private enterprise in the settlement of Zlatopil, Kharkov Oblast. @IntelSlava"
+        "text": "Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera"
       },
       "market_z": -2.12,
       "abs_market_z": 2.12,
@@ -243,7 +226,7 @@
       "driver_as_of": "2026-11-06",
       "market_as_of": "2026-11-06",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     }
   ],
