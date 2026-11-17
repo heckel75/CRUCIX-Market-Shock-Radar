@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-16T02:59:57.086Z",
+  "generatedAt": "2026-11-17T05:13:14.190Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,17 +13,17 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 135,
+  "candidateCount": 140,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[14]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 19,
+      "score": 24,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -31,25 +31,26 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
         "war",
-        "strike",
-        "iran"
+        "missile",
+        "drone",
+        "ukraine",
+        "fuel"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, strike, iran. Signal: Iran war Update: Third US carrier arrives, Iran warns it could strike first | Al Jazeera"
+      "text": "🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its forces damaged three p",
+      "explanation": "Geopolitical Escalation match based on keywords: war, missile, drone, ukraine. Signal: 🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its ..."
     },
     {
-      "path": "root.news[32]",
+      "path": "root.news[8]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -62,16 +63,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "border",
-        "russia"
+        "nuclear",
+        "russia",
+        "china"
       ],
       "otherCategories": [],
-      "text": "Estonia to close border crossings with Russia after alleged arson attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, border, russia. Signal: Estonia to close border crossings with Russia after alleged arson attack | Al Jazeera"
+      "text": "Trump heads to Asia for historic nuclear talks with China and Russia | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia, china. Signal: Trump heads to Asia for historic nuclear talks with China and Russia | France 24"
     },
     {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -82,95 +83,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "🇺🇦🇷🇺⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil refining capacity. This is our justified response to Russia’s refusal to de-escalate and its s",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil refining capacity. This is our justified response to Russia’s refusal to ..."
-    },
-    {
-      "path": "root.news[47]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "border",
-        "drone",
-        "factory"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: border, drone. Signal: Estonia to close Russian border crossings after 'sabotage' attempt at drone factory | France 24"
-    },
-    {
-      "path": "root.newsFeed[26]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine",
-        "oil"
-      ],
-      "otherCategories": [
-        "Energy Shock"
-      ],
-      "text": "⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil ref | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: ⚡️ — Ukraine's President Zelensky: “As of today, we have disabled more than 55% of Russia’s oil ref | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[12]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 13,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -179,60 +91,73 @@
       ],
       "matchedKeywords": [
         "strike",
-        "refinery"
+        "missile"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "USF says operators hit the TAIF-NK refinery and the Nizhnekamskneftekhim plant in Nizhnekamsk overnight. The 414th Magyar's Birds brigade, SSO, HUR and SBU also took part in the refinery strike. The p",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: USF says operators hit the TAIF-NK refinery and the Nizhnekamskneftekhim plant in Nizhnekamsk overnight. The 414th Magyar's Birds brigade, SSO, HUR and SBU also took part in the..."
+      "text": "🇷🇺🇺🇦⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes on the Southern Bridge. @Intelslava",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes on the Southern Bridge. @Intelslava"
     },
     {
-      "path": "root.tg.urgent[4]",
-      "sourcePriority": "High",
+      "path": "root.newsFeed[6]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "war",
-        "russia"
+        "strike",
+        "missile"
       ],
-      "otherCategories": [],
-      "text": "Sybiha says Putin dreams of Yalta 1945, but reshaping Europe's security order takes winning a world war first. Russia needed 4 years 8 months to \"almost capture\" Mala Tokmachka and lost over 1.6 milli",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Sybiha says Putin dreams of Yalta 1945, but reshaping Europe's security order takes winning a world war first. Russia needed 4 years 8 months to \"almost capture\" Mala Tokmachka ..."
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: ⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes | INTELSLAVA"
     },
     {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
+      "path": "root.news[7]",
+      "sourcePriority": "Medium",
+      "category": "Energy Shock",
+      "score": 13,
       "confidence": "Medium",
       "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
         "Gold",
         "VIX",
-        "Oil",
         "Defense Equities",
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "gas",
+        "hormuz",
         "drone"
       ],
-      "otherCategories": [],
-      "text": "🇷🇺🇺🇦⚡️ — A facility at an industrial site in Vinnytsia Oblast was struck in a drone attack, according to the local administration. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: 🇷🇺🇺🇦⚡️ — A facility at an industrial site in Vinnytsia Oblast was struck in a drone attack, according to the local administration. @IntelSlava"
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Tankers hit in Strait of Hormuz as drone raises alarm at Iraq gas field | Al Jazeera",
+      "explanation": "Energy Shock match based on keywords: gas, hormuz. Signal: Tankers hit in Strait of Hormuz as drone raises alarm at Iraq gas field | Al Jazeera"
     },
     {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -244,37 +169,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Australia, Canada, Italy and the UK urge Israel to allow aid into Gaza | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Australia, Canada, Italy and the UK urge Israel to allow aid into Gaza | Al Jazeera"
-    },
-    {
-      "path": "root.news[23]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
+        "troops",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Prince Harry praises war veterans on surprise visit to Ukraine",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: Prince Harry praises war veterans on surprise visit to Ukraine"
+      "text": "🇫🇷🇺🇦 French Troops Operate in Ukraine on Secret Support Mission, RFI Says French troops have been operating in Ukraine since at least summer 2026 on a confidential support mission, Radio France I",
+      "explanation": "Geopolitical Escalation match based on keywords: troops, ukraine. Signal: 🇫🇷🇺🇦 French Troops Operate in Ukraine on Secret Support Mission, RFI Says French troops have been operating in Ukraine since at least summer 2026 on a confidential support m..."
     },
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[14]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -286,15 +190,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "israel",
-        "gaza"
+        "iran",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Who can force Israel to implement Gaza ceasefire deal? | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Who can force Israel to implement Gaza ceasefire deal? | Al Jazeera"
+      "text": "🇺🇸🇷🇺🇮🇷⚡️ — NEW: President Trump has signed the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 into law. The bill expands statutory sanctions, tariffs, and prohibitions on Russia and",
+      "explanation": "Geopolitical Escalation match based on keywords: iran, russia. Signal: 🇺🇸🇷🇺🇮🇷⚡️ — NEW: President Trump has signed the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 into law. The bill expands statutory sanctions, tariffs, and prohi..."
     },
     {
-      "path": "root.news[34]",
+      "path": "root.news[17]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -307,12 +211,33 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "military",
+        "conflict",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Ukraine holds peace talks with US, Europe as conflict escalates | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict, ukraine. Signal: Ukraine holds peace talks with US, Europe as conflict escalates | Al Jazeera"
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
         "iran"
       ],
       "otherCategories": [],
-      "text": "Iran's first women-only military training centre opens in Tehran | Africa News",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Iran's first women-only military training centre opens in Tehran | Africa News"
+      "text": "Iran war Update: Houthis advance in Yemen as Vance rejects ‘forever war’ | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Houthis advance in Yemen as Vance rejects ‘forever war’ | Al Jazeera"
     },
     {
       "path": "root.chokepoints[5]",
@@ -343,8 +268,36 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[10]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "china",
+        "chips"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇸🇨🇳⚡ The United States is introducing new restrictions on China's access to advanced American AI chips, closing a loophole that allowed Chinese companies to use them through overseas cloud servic",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: 🇺🇸🇨🇳⚡ The United States is introducing new restrictions on China's access to advanced American AI chips, closing a loophole that allowed Chinese companies to use them throug..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
       "confidence": "Medium",
@@ -366,8 +319,64 @@
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Clothing factories shut in Bangladesh as workers strike over pay | Bangladesh",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Clothing factories shut in Bangladesh as workers strike over pay | Bangladesh"
+      "text": "🇮🇶⚡️ — Iraq's Kata'ib Hezbollah has published media of its forces equipped with FPV strike quadcopter UAVs.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: 🇮🇶⚡️ — Iraq's Kata'ib Hezbollah has published media of its forces equipped with FPV strike quadcopter UAVs."
+    },
+    {
+      "path": "root.news[9]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "china",
+        "chips"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "US moves to block China’s remote access to AI chips amid Nvidia scandal | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: US moves to block China’s remote access to AI chips amid Nvidia scandal | Al Jazeera"
+    },
+    {
+      "path": "root.newsFeed[43]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "china",
+        "chips"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡ The United States is introducing new restrictions on China's access to advanced American AI chips, | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: ⚡ The United States is introducing new restrictions on China's access to advanced American AI chips, | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[0]",
