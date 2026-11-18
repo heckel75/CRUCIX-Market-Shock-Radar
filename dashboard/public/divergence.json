@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-17T05:13:17.623Z",
+  "generatedAt": "2026-11-18T04:40:55.306Z",
   "date": "2026-11-10",
   "asOfClose": "2026-11-10",
   "framing": "readings as of market close, 2026-11-10",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-17T05:13:14.334Z",
-    "generatedDate": "2026-11-17",
+    "generatedAt": "2026-11-18T04:40:52.639Z",
+    "generatedDate": "2026-11-18",
     "asOfClose": "2026-11-10",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-17T05:13:14.334Z",
-    "generatedDate": "2026-11-17",
-    "runDate": "2026-11-17",
+    "generatedAt": "2026-11-18T04:40:52.639Z",
+    "generatedDate": "2026-11-18",
+    "runDate": "2026-11-18",
     "asOfClose": "2026-11-10",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-17, readings as of market close, 2026-11-10 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-18, readings as of market close, 2026-11-10 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-10",
-      "generatedDate": "2026-11-17",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-17, readings as of market close, 2026-11-10 (7 calendar days old)."
+      "generatedDate": "2026-11-18",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-18, readings as of market close, 2026-11-10 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -64,9 +64,9 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
@@ -77,18 +77,16 @@
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 24,
+        "rawScore": 19,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "missile",
-          "drone",
-          "ukraine",
-          "fuel"
+          "strike",
+          "attack",
+          "ukraine"
         ],
-        "text": "🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its forces damaged three p",
-        "explanation": "Geopolitical Escalation match based on keywords: war, missile, drone, ukraine. Signal: 🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its ..."
+        "text": "🇳🇱 🇺🇦 🇷🇺 The Dutch aerospace and defense manufacturer Destinus Group BV has announced that Ukraine used nine of its baseline precision strike cruise missiles, the Ruta Block 1, to attack the Ker",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇳🇱 🇺🇦 🇷🇺 The Dutch aerospace and defense manufacturer Destinus Group BV has announced that Ukraine used nine of its baseline precision strike cruise missiles, the Ruta Blo..."
       },
       "market_z": -1.8,
       "abs_market_z": 1.8,
@@ -99,7 +97,7 @@
       "driver_as_of": "2026-11-10",
       "market_as_of": "2026-11-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -124,38 +122,36 @@
       "driver_as_of": "2026-11-10",
       "market_as_of": "2026-11-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 24,
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 2,
       "signal_primary_count": 2,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[3]",
+        "path": "root.tg.urgent[10]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 24,
-        "confidence": "High",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 13,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "missile",
-          "drone",
-          "ukraine",
-          "fuel"
+          "oil",
+          "hormuz",
+          "missile"
         ],
-        "text": "🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its forces damaged three p",
-        "explanation": "Geopolitical Escalation match based on keywords: war, missile, drone, ukraine. Signal: 🇷🇺⚔️🇺🇦 Missile War Monitor: Ukraine hits Iskander missile-fuel plant near St Petersburg, Russian drone kills three at Odessa food warehouse Ukraine's General Staff said its ..."
+        "text": "🇮🇷⚡️ — Footage shows an oil tanker engulfed in flames after being struck by an IRGC Navy anti-ship cruise missile while transiting the Strait of Hormuz along an unauthorized route. @OSINTWarfare",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: 🇮🇷⚡️ — Footage shows an oil tanker engulfed in flames after being struck by an IRGC Navy anti-ship cruise missile while transiting the Strait of Hormuz along an unauthorized r..."
       },
       "market_z": -2.481,
       "abs_market_z": 2.481,
@@ -166,7 +162,7 @@
       "driver_as_of": "2026-11-10",
       "market_as_of": "2026-11-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -191,35 +187,36 @@
       "driver_as_of": "2026-11-10",
       "market_as_of": "2026-11-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 7,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 7,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[7]",
+        "path": "root.tg.urgent[3]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 19,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "missile"
+          "attack",
+          "ukraine"
         ],
-        "text": "🇷🇺🇺🇦⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes on the Southern Bridge. @Intelslava",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, missile. Signal: 🇷🇺🇺🇦⚡️ — A ballistic missile strike hit the Northern Bridge in Kiev. There are also reports of strikes on the Southern Bridge. @Intelslava"
+        "text": "🇳🇱 🇺🇦 🇷🇺 The Dutch aerospace and defense manufacturer Destinus Group BV has announced that Ukraine used nine of its baseline precision strike cruise missiles, the Ruta Block 1, to attack the Ker",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, ukraine. Signal: 🇳🇱 🇺🇦 🇷🇺 The Dutch aerospace and defense manufacturer Destinus Group BV has announced that Ukraine used nine of its baseline precision strike cruise missiles, the Ruta Blo..."
       },
       "market_z": -0.951,
       "abs_market_z": 0.951,
@@ -230,7 +227,7 @@
       "driver_as_of": "2026-11-10",
       "market_as_of": "2026-11-10",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
