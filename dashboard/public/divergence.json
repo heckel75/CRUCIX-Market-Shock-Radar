@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-20T04:13:53.353Z",
+  "generatedAt": "2026-11-21T04:14:05.428Z",
   "date": "2026-11-13",
   "asOfClose": "2026-11-13",
   "framing": "readings as of market close, 2026-11-13",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-20T04:13:50.593Z",
-    "generatedDate": "2026-11-20",
+    "generatedAt": "2026-11-21T04:14:03.449Z",
+    "generatedDate": "2026-11-21",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-20T04:13:50.593Z",
-    "generatedDate": "2026-11-20",
-    "runDate": "2026-11-20",
+    "generatedAt": "2026-11-21T04:14:03.449Z",
+    "generatedDate": "2026-11-21",
+    "runDate": "2026-11-21",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-20, readings as of market close, 2026-11-13 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-21, readings as of market close, 2026-11-13 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-13",
-      "generatedDate": "2026-11-20",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-20, readings as of market close, 2026-11-13 (7 calendar days old)."
+      "generatedDate": "2026-11-21",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-21, readings as of market close, 2026-11-13 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,40 +54,39 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 1,
+    "priced": 2,
     "calm": 2,
-    "radar-miss": 2
+    "radar-miss": 1
   },
   "rows": [
     {
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 1,
-      "signal_score_pct": 100,
-      "signal_raw_score": 25,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.tg.urgent[12]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 25,
+        "rawScore": 18,
         "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
           "attack",
-          "drone",
           "russia",
-          "ukraine"
+          "logistics",
+          "rail"
         ],
-        "text": "🇷🇺❌🇺🇦 — Russia's large-scale combined missile and drone attack on Ukraine has begun. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, drone, russia, ukraine. Signal: 🇷🇺❌🇺🇦 — Russia's large-scale combined missile and drone attack on Ukraine has begun. @IntelSlava"
+        "text": "Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and rail. 79 of 84 cruise mis",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and ra..."
       },
       "market_z": -3.232,
       "abs_market_z": 3.232,
@@ -98,7 +97,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -123,7 +122,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -162,7 +161,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "calm"
     },
     {
@@ -187,35 +186,37 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
+      "signal_elevated": true,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[12]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "attack",
+          "russia",
+          "logistics",
+          "rail"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and rail. 79 of 84 cruise mis",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and ra..."
       },
       "market_z": 1.828,
       "abs_market_z": 1.828,
@@ -226,8 +227,8 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     }
   ],
   "signalOnly": [
