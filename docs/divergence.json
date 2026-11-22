@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-21T04:14:05.428Z",
+  "generatedAt": "2026-11-22T03:25:41.602Z",
   "date": "2026-11-13",
   "asOfClose": "2026-11-13",
   "framing": "readings as of market close, 2026-11-13",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-21T04:14:03.449Z",
-    "generatedDate": "2026-11-21",
+    "generatedAt": "2026-11-22T03:25:38.865Z",
+    "generatedDate": "2026-11-22",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-21T04:14:03.449Z",
-    "generatedDate": "2026-11-21",
-    "runDate": "2026-11-21",
+    "generatedAt": "2026-11-22T03:25:38.865Z",
+    "generatedDate": "2026-11-22",
+    "runDate": "2026-11-22",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 8,
+    "calendarLagDays": 9,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-21, readings as of market close, 2026-11-13 (8 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-22, readings as of market close, 2026-11-13 (9 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-13",
-      "generatedDate": "2026-11-21",
-      "calendarLagDays": 8,
-      "message": "Market readings are lagging: generated 2026-11-21, readings as of market close, 2026-11-13 (8 calendar days old)."
+      "generatedDate": "2026-11-22",
+      "calendarLagDays": 9,
+      "message": "Market readings are lagging: generated 2026-11-22, readings as of market close, 2026-11-13 (9 calendar days old)."
     }
   ],
   "thresholds": {
@@ -63,30 +63,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.news[30]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 18,
+        "rawScore": 20,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
+          "missile",
           "attack",
           "russia",
-          "logistics",
-          "rail"
+          "ukraine"
         ],
-        "text": "Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and rail. 79 of 84 cruise mis",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and ra..."
+        "text": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia, ukraine. Signal: Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24"
       },
       "market_z": -3.232,
       "abs_market_z": 3.232,
@@ -97,7 +97,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     },
     {
@@ -122,36 +122,22 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.4,
-      "signal_score_pct": 40,
-      "signal_raw_score": 8,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
-      "signal_primary_count": 1,
+      "signal_count": 0,
+      "signal_primary_count": 0,
       "signal_secondary_count": 0,
-      "top_signal": {
-        "path": "root.chokepoints[0]",
-        "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 8,
-        "confidence": "Medium",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "oil",
-          "hormuz"
-        ],
-        "text": "Strait of Hormuz | 20% of world oil",
-        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
-      },
+      "top_signal": null,
       "market_z": -0.426,
       "abs_market_z": 0.426,
       "market_moving": false,
@@ -161,7 +147,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "calm"
     },
     {
@@ -186,37 +172,35 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 5,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 5,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.tg.urgent[12]",
+        "path": "root.tg.urgent[10]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "russia",
-          "logistics",
-          "rail"
+          "strike",
+          "ukraine"
         ],
-        "text": "Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and rail. 79 of 84 cruise mis",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Russia launched a massive attack this morning, mainly on Kyiv, Chernivtsi and the Kyiv, Lviv, Ivano-Frankivsk and Volyn regions, targeting substations, bridges, logistics and ra..."
+        "text": "Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of middle strike and deep st",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of mi..."
       },
       "market_z": 1.828,
       "abs_market_z": 1.828,
@@ -227,7 +211,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 8,
+      "market_calendar_lag_days": 9,
       "state": "priced"
     }
   ],
