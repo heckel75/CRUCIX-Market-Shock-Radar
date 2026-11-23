@@ -1,49 +1,90 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-22T03:25:38.762Z",
+  "generatedAt": "2026-11-23T03:57:08.061Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 14,
+    "score": 15,
     "maxScore": 20,
-    "regime": "Risk-off building",
-    "interpretation": "Several relevant signals are present across market-sensitive categories. Score is moderated because many signals are concentrated in one category.",
+    "regime": "Shock mode",
+    "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
     "categoryBreadth": 1
   },
   "shockCounts": {
     "Geopolitical Escalation": 15
   },
-  "candidateCount": 134,
+  "candidateCount": 132,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[2]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 20,
+      "score": 23,
       "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "missile",
-        "attack",
+        "strike",
         "russia",
-        "ukraine"
+        "ukraine",
+        "energy"
       ],
-      "otherCategories": [],
-      "text": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia, ukraine. Signal: Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24"
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complained that Russia has ch",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complai..."
     },
     {
-      "path": "root.news[35]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "iran",
+        "gas",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇩🇪 Millions of German households face higher energy bills as suppliers announce year-end price hikes, with the Iran war driving up wholesale gas prices and electricity grid charges, according to Ver",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇩🇪 Millions of German households face higher energy bills as suppliers announce year-end price hikes, with the Iran war driving up wholesale gas prices and electricity grid ch..."
+    },
+    {
+      "path": "root.tg.urgent[13]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -60,39 +101,33 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Deadly attack in Kyiv as Russia launches barrage against Ukraine | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: Deadly attack in Kyiv as Russia launches barrage against Ukraine | Al Jazeera"
+      "text": "🇺🇦🇷🇺⚡️ — Only 38 Ukrainian drones were shot down over Russia during the day. This always means Ukraine will carry out a massive attack at night to overload Russia's air defense. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Only 38 Ukrainian drones were shot down over Russia during the day. This always means Ukraine will carry out a massive attack at night to overload Russia's air defe..."
     },
     {
-      "path": "root.tg.urgent[10]",
-      "sourcePriority": "High",
+      "path": "root.news[34]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 14,
+      "score": 15,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "strike",
-        "ukraine"
+        "attack",
+        "drone",
+        "russia"
       ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of middle strike and deep st",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of mi..."
+      "otherCategories": [],
+      "text": "Finland confirms Russia is towing drone-hit cargo ship after Baltic Sea attack | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia. Signal: Finland confirms Russia is towing drone-hit cargo ship after Baltic Sea attack | Euronews"
     },
     {
-      "path": "root.news[40]",
+      "path": "root.news[4]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -110,123 +145,108 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "strike",
-        "gaza"
+        "attack",
+        "drone",
+        "port"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Israeli strike hits food aid vehicle in Gaza, killing three | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike hits food aid vehicle in Gaza, killing three | Al Jazeera"
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "missile",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇷🇺🇸⚡️ — Iran has released footage showing the Iranian Army's Air Defense Force engaging a U.S. Air Force (USAF) F-16 multirole fighter over the Persian Gulf. The missile detonated near the Ameri",
-      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷🇺🇸⚡️ — Iran has released footage showing the Iranian Army's Air Defense Force engaging a U.S. Air Force (USAF) F-16 multirole fighter over the Persian Gulf. The missile de..."
-    },
-    {
-      "path": "root.tg.urgent[7]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "🇮🇷🇸🇦🇧🇭🇶🇦🇰🇼🇺🇸⚡️ — Allianz Research estimates that the war with Iran could cost Gulf Cooperation Council (GCC) states $790 billion in lost economic output by 2030, in addition to an estimate",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇮🇷🇸🇦🇧🇭🇶🇦🇰🇼🇺🇸⚡️ — Allianz Research estimates that the war with Iran could cost Gulf Cooperation Council (GCC) states $790 billion in lost economic output by 2030, in ..."
+      "text": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Explosion on Russian ship at Libya port caused by suspected drone attack, officials say"
     },
     {
       "path": "root.news[5]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "military",
-        "iran"
+        "strike",
+        "ukraine"
       ],
-      "otherCategories": [],
-      "text": "Bessent confirms he’s living on US military base over Iran fears | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: Bessent confirms he’s living on US military base over Iran fears | Al Jazeera"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say"
     },
     {
-      "path": "root.news[10]",
+      "path": "root.news[22]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
         "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Iran targets US bases in Bahrain; Houthi strikes continue | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran targets US bases in Bahrain; Houthi strikes continue | Al Jazeera"
-    },
-    {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
         "iran",
-        "israel"
+        "hormuz"
       ],
-      "otherCategories": [],
-      "text": "Lebanese president demands Israel withdrawal, decries Iran’s interference | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: iran, israel. Signal: Lebanese president demands Israel withdrawal, decries Iran’s interference | Al Jazeera"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Iran war Update: Tankers set ablaze in Hormuz as IRGC warns of unrest threat | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tankers set ablaze in Hormuz as IRGC warns of unrest threat | Al Jazeera"
     },
     {
-      "path": "root.news[12]",
+      "path": "root.newsFeed[37]",
       "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock",
+        "Supply Chain Disruption"
+      ],
+      "text": "⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in res | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in res | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[0]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -239,36 +259,15 @@
       ],
       "matchedKeywords": [
         "war",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran faces a ‘silent economic war’, says Iranian president | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran faces a ‘silent economic war’, says Iranian president | Al Jazeera"
-    },
-    {
-      "path": "root.news[29]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO | France 24"
+      "text": "📝 🇺🇦 🇷🇺 After the Baltic sea and the Black sea, the war in Ukraine is expanding into the Mediterranean sea | Clément Molin Yesterday evening, Ukrainian sea drones sank a Russian corvette in Beng",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 📝 🇺🇦 🇷🇺 After the Baltic sea and the Black sea, the war in Ukraine is expanding into the Mediterranean sea | Clément Molin Yesterday evening, Ukrainian sea drones sank a Ru..."
     },
     {
-      "path": "root.news[37]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -280,15 +279,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "nuclear",
-        "iran"
+        "attack",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Trump says he wants ‘permanent’ deal to stop Iran getting nuclear weapons | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: nuclear, iran. Signal: Trump says he wants ‘permanent’ deal to stop Iran getting nuclear weapons | Al Jazeera"
+      "text": "🇺🇦🇷🇺⚡ Massive attack by Ukrainian drones on Russia. Also another attempt to attack the Crimean Bridge, unsuccessful. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: 🇺🇦🇷🇺⚡ Massive attack by Ukrainian drones on Russia. Also another attempt to attack the Crimean Bridge, unsuccessful. @IntelSlava"
     },
     {
-      "path": "root.news[38]",
+      "path": "root.news[25]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -305,11 +304,11 @@
         "drone"
       ],
       "otherCategories": [],
-      "text": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Drone attack sets Russian cargo ship ablaze in Gulf of Finland | France 24"
+      "text": "Russian ship attacked near Benghazi in suspected drone attack | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Russian ship attacked near Benghazi in suspected drone attack | France 24"
     },
     {
-      "path": "root.news[46]",
+      "path": "root.news[29]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -322,18 +321,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "border",
-        "russia"
+        "drone",
+        "naval"
       ],
       "otherCategories": [],
-      "text": "Estonia-Russia border closure sends residents rushing to cross before deadline | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: Estonia-Russia border closure sends residents rushing to cross before deadline | Euronews"
+      "text": "Second ship targeted in series of naval drone attacks off Libyan coast | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, naval. Signal: Second ship targeted in series of naval drone attacks off Libyan coast | Al Jazeera"
     },
     {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
+      "path": "root.news[31]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 10,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -341,21 +340,63 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "High Yield Credit",
+        "Banks",
+        "Treasuries",
+        "Dollar Funding",
+        "Equities"
       ],
       "matchedKeywords": [
-        "taiwan",
-        "container"
+        "israel",
+        "bank"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Credit Stress"
       ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+      "text": "Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24"
+    },
+    {
+      "path": "root.news[38]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "drone",
+        "naval"
+      ],
+      "otherCategories": [],
+      "text": "Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: drone, naval. Signal: Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say | France 24"
+    },
+    {
+      "path": "root.news[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "How Melania Trump Found a Diplomatic Opening in the War in Ukraine",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: How Melania Trump Found a Diplomatic Opening in the War in Ukraine"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-22T03:25:41.602Z",
+  "generatedAt": "2026-11-23T03:57:12.037Z",
   "date": "2026-11-13",
   "asOfClose": "2026-11-13",
   "framing": "readings as of market close, 2026-11-13",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-22T03:25:38.865Z",
-    "generatedDate": "2026-11-22",
+    "generatedAt": "2026-11-23T03:57:08.212Z",
+    "generatedDate": "2026-11-23",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-22T03:25:38.865Z",
-    "generatedDate": "2026-11-22",
-    "runDate": "2026-11-22",
+    "generatedAt": "2026-11-23T03:57:08.212Z",
+    "generatedDate": "2026-11-23",
+    "runDate": "2026-11-23",
     "asOfClose": "2026-11-13",
-    "calendarLagDays": 9,
+    "calendarLagDays": 10,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-22, readings as of market close, 2026-11-13 (9 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-23, readings as of market close, 2026-11-13 (10 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-13",
-      "generatedDate": "2026-11-22",
-      "calendarLagDays": 9,
-      "message": "Market readings are lagging: generated 2026-11-22, readings as of market close, 2026-11-13 (9 calendar days old)."
+      "generatedDate": "2026-11-23",
+      "calendarLagDays": 10,
+      "message": "Market readings are lagging: generated 2026-11-23, readings as of market close, 2026-11-13 (10 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,7 +55,8 @@
   },
   "stateCounts": {
     "priced": 2,
-    "calm": 2,
+    "calm": 1,
+    "radar-claim": 1,
     "radar-miss": 1
   },
   "rows": [
@@ -65,28 +66,28 @@
       "signal_category": "Geopolitical Escalation",
       "signal_score": 1,
       "signal_score_pct": 100,
-      "signal_raw_score": 20,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 15,
       "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[30]",
+        "path": "root.tg.urgent[2]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 20,
+        "rawScore": 23,
         "confidence": "High",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "missile",
-          "attack",
+          "strike",
           "russia",
-          "ukraine"
+          "ukraine",
+          "energy"
         ],
-        "text": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, attack, russia, ukraine. Signal: Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine | France 24"
+        "text": "🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complained that Russia has ch",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complai..."
       },
       "market_z": -3.232,
       "abs_market_z": 3.232,
@@ -97,7 +98,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     },
     {
@@ -122,22 +123,38 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "calm"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 0,
+      "signal_elevated": true,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 4,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 23,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "russia",
+          "ukraine",
+          "energy"
+        ],
+        "text": "🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complained that Russia has ch",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complai..."
+      },
       "market_z": -0.426,
       "abs_market_z": 0.426,
       "market_moving": false,
@@ -147,22 +164,36 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
-      "state": "calm"
+      "market_calendar_lag_days": 10,
+      "state": "radar-claim"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[31]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "israel",
+          "bank"
+        ],
+        "text": "Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24",
+        "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24"
+      },
       "market_z": 3.248,
       "abs_market_z": 3.248,
       "market_moving": true,
@@ -172,35 +203,37 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 23,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 4,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 4,
       "top_signal": {
-        "path": "root.tg.urgent[10]",
+        "path": "root.tg.urgent[2]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
+        "rawScore": 23,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
           "strike",
-          "ukraine"
+          "russia",
+          "ukraine",
+          "energy"
         ],
-        "text": "Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of middle strike and deep st",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Ukrainian long-range drones will be built in Britain, Ukraine’s Defense Ministry says. Defense ministers Yevhenii Khmara and Wes Streeting signed deals on joint production of mi..."
+        "text": "🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complained that Russia has ch",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complai..."
       },
       "market_z": 1.828,
       "abs_market_z": 1.828,
@@ -211,7 +244,7 @@
       "driver_as_of": "2026-11-13",
       "market_as_of": "2026-11-13",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 9,
+      "market_calendar_lag_days": 10,
       "state": "priced"
     }
   ],
