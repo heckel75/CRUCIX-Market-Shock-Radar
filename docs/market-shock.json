@@ -1,28 +1,29 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-23T03:57:08.061Z",
+  "generatedAt": "2026-11-24T07:03:53.029Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 15,
+    "score": 16,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 1
+    "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 15
+    "Geopolitical Escalation": 14,
+    "Energy Shock": 1
   },
-  "candidateCount": 132,
+  "candidateCount": 131,
   "itemCount": 15,
   "items": [
     {
       "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 23,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
@@ -30,10 +31,6 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX",
         "Industrials",
         "Semiconductors",
         "Shipping",
@@ -42,19 +39,17 @@
       ],
       "matchedKeywords": [
         "strike",
-        "russia",
-        "ukraine",
-        "energy"
+        "attack",
+        "drone"
       ],
       "otherCategories": [
-        "Energy Shock",
         "Supply Chain Disruption"
       ],
-      "text": "🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complained that Russia has ch",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, russia, ukraine. Signal: 🇺🇦🇷🇺⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in response to blackouts in Ukraine. Then he slipped away and again complai..."
+      "text": "Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl."
     },
     {
-      "path": "root.tg.urgent[10]",
+      "path": "root.tg.urgent[7]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 18,
@@ -65,25 +60,25 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Rates",
+        "Treasuries",
+        "FX",
+        "Equities"
       ],
       "matchedKeywords": [
-        "war",
-        "iran",
-        "gas",
-        "energy"
+        "missile",
+        "russia",
+        "ukraine",
+        "rates"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Macro / Inflation Shock"
       ],
-      "text": "🇩🇪 Millions of German households face higher energy bills as suppliers announce year-end price hikes, with the Iran war driving up wholesale gas prices and electricity grid charges, according to Ver",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: 🇩🇪 Millions of German households face higher energy bills as suppliers announce year-end price hikes, with the Iran war driving up wholesale gas prices and electricity grid ch..."
+      "text": "🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava"
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -96,95 +91,16 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
+        "conflict",
         "russia",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇷🇺⚡️ — Only 38 Ukrainian drones were shot down over Russia during the day. This always means Ukraine will carry out a massive attack at night to overload Russia's air defense. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia, ukraine. Signal: 🇺🇦🇷🇺⚡️ — Only 38 Ukrainian drones were shot down over Russia during the day. This always means Ukraine will carry out a massive attack at night to overload Russia's air defe..."
+      "text": "🇩🇪🇪🇺🇷🇺⚡️ — Europe is ready to hold talks with Russia on resolving the Ukraine conflict and expressed hope that a new round would take place soon, German Chancellor Friedrich Merz said. “Peace t",
+      "explanation": "Geopolitical Escalation match based on keywords: conflict, russia, ukraine. Signal: 🇩🇪🇪🇺🇷🇺⚡️ — Europe is ready to hold talks with Russia on resolving the Ukraine conflict and expressed hope that a new round would take place soon, German Chancellor Friedri..."
     },
     {
-      "path": "root.news[34]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "Finland confirms Russia is towing drone-hit cargo ship after Baltic Sea attack | Euronews",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, russia. Signal: Finland confirms Russia is towing drone-hit cargo ship after Baltic Sea attack | Euronews"
-    },
-    {
-      "path": "root.news[4]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone",
-        "port"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Explosion on Russian ship at Libya port caused by suspected drone attack, officials say"
-    },
-    {
-      "path": "root.news[5]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "ukraine"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, ukraine. Signal: Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say"
-    },
-    {
-      "path": "root.news[22]",
+      "path": "root.news[30]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -208,14 +124,14 @@
       "otherCategories": [
         "Energy Shock"
       ],
-      "text": "Iran war Update: Tankers set ablaze in Hormuz as IRGC warns of unrest threat | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Tankers set ablaze in Hormuz as IRGC warns of unrest threat | Al Jazeera"
+      "text": "Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera"
     },
     {
-      "path": "root.newsFeed[37]",
+      "path": "root.news[46]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 13,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -223,29 +139,25 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
         "FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
         "Commodities",
-        "Margins"
+        "Emerging Markets",
+        "Credit",
+        "Equities"
       ],
       "matchedKeywords": [
-        "strike",
-        "energy"
+        "china",
+        "taiwan",
+        "election"
       ],
       "otherCategories": [
-        "Energy Shock",
-        "Supply Chain Disruption"
+        "Sanctions / Policy Shock"
       ],
-      "text": "⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in res | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: ⚡ Zelensky promised that the Ukrainian Armed Forces will strike Russian energy infrastructure in res | INTELSLAVA"
+      "text": "Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia",
+      "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia"
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -262,11 +174,11 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "📝 🇺🇦 🇷🇺 After the Baltic sea and the Black sea, the war in Ukraine is expanding into the Mediterranean sea | Clément Molin Yesterday evening, Ukrainian sea drones sank a Russian corvette in Beng",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 📝 🇺🇦 🇷🇺 After the Baltic sea and the Black sea, the war in Ukraine is expanding into the Mediterranean sea | Clément Molin Yesterday evening, Ukrainian sea drones sank a Ru..."
+      "text": "NATO Secretary General Mark Rutte: \"Right now, Ukraine is killing or severely wounding up to 50,000 Russians - mostly men - every month. For comparison, over the 14 years of the Vietnam War, the US lo",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: NATO Secretary General Mark Rutte: \"Right now, Ukraine is killing or severely wounding up to 50,000 Russians - mostly men - every month. For comparison, over the 14 years of the..."
     },
     {
-      "path": "root.tg.urgent[9]",
+      "path": "root.tg.urgent[5]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -279,15 +191,15 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "russia"
+        "missile",
+        "iran"
       ],
       "otherCategories": [],
-      "text": "🇺🇦🇷🇺⚡ Massive attack by Ukrainian drones on Russia. Also another attempt to attack the Crimean Bridge, unsuccessful. @IntelSlava",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: 🇺🇦🇷🇺⚡ Massive attack by Ukrainian drones on Russia. Also another attempt to attack the Crimean Bridge, unsuccessful. @IntelSlava"
+      "text": "🇮🇷⚡️ — Earlier footage shows a ballistic missile launched by the IRGC Aerospace Force from Urmia, in Iran's West Azerbaijan province. @OSINTWarfare",
+      "explanation": "Geopolitical Escalation match based on keywords: missile, iran. Signal: 🇮🇷⚡️ — Earlier footage shows a ballistic missile launched by the IRGC Aerospace Force from Urmia, in Iran's West Azerbaijan province. @OSINTWarfare"
     },
     {
-      "path": "root.news[25]",
+      "path": "root.news[32]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -304,11 +216,11 @@
         "drone"
       ],
       "otherCategories": [],
-      "text": "Russian ship attacked near Benghazi in suspected drone attack | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Russian ship attacked near Benghazi in suspected drone attack | France 24"
+      "text": "Drone attack on police base in Colombia injures three, including infant | Al Jazeera | Colombia",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, drone. Signal: Drone attack on police base in Colombia injures three, including infant | Al Jazeera | Colombia"
     },
     {
-      "path": "root.news[29]",
+      "path": "root.news[39]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -321,18 +233,18 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "drone",
-        "naval"
+        "nuclear",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "Second ship targeted in series of naval drone attacks off Libyan coast | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, naval. Signal: Second ship targeted in series of naval drone attacks off Libyan coast | Al Jazeera"
+      "text": "NATO vows space defence after Russia nuclear satellite report | France 24",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: NATO vows space defence after Russia nuclear satellite report | France 24"
     },
     {
-      "path": "root.news[31]",
-      "sourcePriority": "Medium",
+      "path": "root.chokepoints[5]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -340,49 +252,133 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "israel",
-        "bank"
+        "taiwan",
+        "container"
       ],
       "otherCategories": [
-        "Credit Stress"
+        "Supply Chain Disruption"
       ],
-      "text": "Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel. Signal: Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank | France 24"
+      "text": "Taiwan Strait | 88% of largest container ships",
+      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.news[38]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
         "drone",
-        "naval"
+        "logistics"
       ],
-      "otherCategories": [],
-      "text": "Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: drone, naval. Signal: Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say | France 24"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "The land route to occupied Crimea has come under the constant threat of Ukrainian drone attacks. Following damage to the road section of the Crimean Bridge, Russian logistics have faced additional dif",
+      "explanation": "Geopolitical Escalation match based on keywords: drone. Signal: The land route to occupied Crimea has come under the constant threat of Ukrainian drone attacks. Following damage to the road section of the Crimean Bridge, Russian logistics ha..."
     },
     {
-      "path": "root.news[45]",
+      "path": "root.news[2]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
+      "score": 9,
       "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "china",
+        "chips"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "A third-country link allowing Nvidia chips to get to China is under scrutiny | SBS Australia",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: A third-country link allowing Nvidia chips to get to China is under scrutiny | SBS Australia"
+    },
+    {
+      "path": "root.news[33]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "FX",
+        "Commodities",
+        "Emerging Markets",
+        "Credit",
+        "Equities"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ban"
+      ],
+      "otherCategories": [
+        "Sanctions / Policy Shock"
+      ],
+      "text": "EU plans sports ban in sweeping new Russia sanctions proposal | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: EU plans sports ban in sweeping new Russia sanctions proposal | Al Jazeera"
+    },
+    {
+      "path": "root.chokepoints[0]",
+      "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 8,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "hormuz"
+      ],
+      "otherCategories": [],
+      "text": "Strait of Hormuz | 20% of world oil",
+      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
       "channels": [
         "Gold",
         "VIX",
@@ -391,12 +387,11 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "war",
-        "ukraine"
+        "china"
       ],
       "otherCategories": [],
-      "text": "How Melania Trump Found a Diplomatic Opening in the War in Ukraine",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: How Melania Trump Found a Diplomatic Opening in the War in Ukraine"
+      "text": "🇨🇳⚡️ — The Chinese People's Liberation Army Navy will send three major combat ships to the 16th China International Aviation and Aerospace Exhibition. This is the first time Navy ships are taking p",
+      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: 🇨🇳⚡️ — The Chinese People's Liberation Army Navy will send three major combat ships to the 16th China International Aviation and Aerospace Exhibition. This is the first time N..."
     }
   ]
 }

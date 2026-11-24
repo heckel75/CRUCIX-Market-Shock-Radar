@@ -1,0 +1,307 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-11-24T07:03:56.045Z",
+  "date": "2026-11-17",
+  "asOfClose": "2026-11-17",
+  "framing": "readings as of market close, 2026-11-17",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-11-24T07:03:53.180Z",
+    "generatedDate": "2026-11-24",
+    "asOfClose": "2026-11-17",
+    "calendarLagDays": 7,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-11-24T07:03:53.180Z",
+    "generatedDate": "2026-11-24",
+    "runDate": "2026-11-24",
+    "asOfClose": "2026-11-17",
+    "calendarLagDays": 7,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-11-24, readings as of market close, 2026-11-17 (7 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-11-17",
+      "generatedDate": "2026-11-24",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-11-24, readings as of market close, 2026-11-17 (7 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "priced": 1,
+    "radar-claim": 3,
+    "radar-miss": 1
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "attack",
+          "drone"
+        ],
+        "text": "Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl."
+      },
+      "market_z": 1.96,
+      "abs_market_z": 1.96,
+      "market_moving": true,
+      "driver_instrument": "VIXCLS",
+      "driver_instrument_id": "vix",
+      "driver_instrument_label": "CBOE Volatility Index",
+      "driver_as_of": "2026-11-17",
+      "market_as_of": "2026-11-17",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "priced"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.news[46]",
+        "category": "Sanctions / Policy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "china",
+          "taiwan",
+          "election"
+        ],
+        "text": "Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia",
+        "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia"
+      },
+      "market_z": -1.456,
+      "abs_market_z": 1.456,
+      "market_moving": false,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-11-17",
+      "market_as_of": "2026-11-17",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 2,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[30]",
+        "category": "Energy Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "war",
+          "iran",
+          "hormuz"
+        ],
+        "text": "Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera"
+      },
+      "market_z": -0.255,
+      "abs_market_z": 0.255,
+      "market_moving": false,
+      "driver_instrument": "DCOILWTICO",
+      "driver_instrument_id": "wti",
+      "driver_instrument_label": "WTI crude oil",
+      "driver_as_of": "2026-11-17",
+      "market_as_of": "2026-11-17",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-claim"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 2.189,
+      "abs_market_z": 2.189,
+      "market_moving": true,
+      "driver_instrument": "DGS10",
+      "driver_instrument_id": "ten-year-treasury",
+      "driver_instrument_label": "10-year Treasury yield",
+      "driver_as_of": "2026-11-17",
+      "market_as_of": "2026-11-17",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 4,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 4,
+      "top_signal": {
+        "path": "root.tg.urgent[2]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "strike",
+          "attack",
+          "drone"
+        ],
+        "text": "Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl.",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl."
+      },
+      "market_z": -1.246,
+      "abs_market_z": 1.246,
+      "market_moving": false,
+      "driver_instrument": "XLI",
+      "driver_instrument_id": "industrials",
+      "driver_instrument_label": "Industrials equities ETF",
+      "driver_as_of": "2026-11-17",
+      "market_as_of": "2026-11-17",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 7,
+      "state": "radar-claim"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[7]",
+        "category": "Macro / Inflation Shock",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "missile",
+          "russia",
+          "ukraine",
+          "rates"
+        ],
+        "text": "🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava",
+        "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava"
+      }
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
