@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-24T07:03:56.045Z",
+  "generatedAt": "2026-11-25T05:38:47.978Z",
   "date": "2026-11-17",
   "asOfClose": "2026-11-17",
   "framing": "readings as of market close, 2026-11-17",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-24T07:03:53.180Z",
-    "generatedDate": "2026-11-24",
+    "generatedAt": "2026-11-25T05:38:45.518Z",
+    "generatedDate": "2026-11-25",
     "asOfClose": "2026-11-17",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-24T07:03:53.180Z",
-    "generatedDate": "2026-11-24",
-    "runDate": "2026-11-24",
+    "generatedAt": "2026-11-25T05:38:45.518Z",
+    "generatedDate": "2026-11-25",
+    "runDate": "2026-11-25",
     "asOfClose": "2026-11-17",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-24, readings as of market close, 2026-11-17 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-25, readings as of market close, 2026-11-17 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-17",
-      "generatedDate": "2026-11-24",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-24, readings as of market close, 2026-11-17 (7 calendar days old)."
+      "generatedDate": "2026-11-25",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-25, readings as of market close, 2026-11-17 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -55,7 +55,8 @@
   },
   "stateCounts": {
     "priced": 1,
-    "radar-claim": 3,
+    "radar-claim": 2,
+    "calm": 1,
     "radar-miss": 1
   },
   "rows": [
@@ -63,29 +64,29 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
       "signal_primary_count": 14,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.news[30]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "strike",
-          "attack",
-          "drone"
+          "war",
+          "russia",
+          "ukraine"
         ],
-        "text": "Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl."
+        "text": "Russia's own figures show almost 500,000 deaths in war in Ukraine",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russia's own figures show almost 500,000 deaths in war in Ukraine"
       },
       "market_z": 1.96,
       "abs_market_z": 1.96,
@@ -96,7 +97,7 @@
       "driver_as_of": "2026-11-17",
       "market_as_of": "2026-11-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -108,11 +109,11 @@
       "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 2,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.news[46]",
+        "path": "root.news[40]",
         "category": "Sanctions / Policy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
@@ -124,8 +125,8 @@
           "taiwan",
           "election"
         ],
-        "text": "Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia",
-        "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say | NYT Asia"
+        "text": "China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds",
+        "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds"
       },
       "market_z": -1.456,
       "abs_market_z": 1.456,
@@ -136,36 +137,35 @@
       "driver_as_of": "2026-11-17",
       "market_as_of": "2026-11-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.4,
+      "signal_score_pct": 40,
+      "signal_raw_score": 8,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 2,
+      "signal_elevated": false,
+      "signal_count": 1,
       "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.news[30]",
+        "path": "root.chokepoints[0]",
         "category": "Energy Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 14,
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 8,
         "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "iran",
+          "oil",
           "hormuz"
         ],
-        "text": "Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Iran says three ships catch fire after hitting Hormuz mines | Al Jazeera"
+        "text": "Strait of Hormuz | 20% of world oil",
+        "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
       },
       "market_z": -0.255,
       "abs_market_z": 0.255,
@@ -176,8 +176,8 @@
       "driver_as_of": "2026-11-17",
       "market_as_of": "2026-11-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-claim"
+      "market_calendar_lag_days": 8,
+      "state": "calm"
     },
     {
       "channel": "credit-stress",
@@ -201,36 +201,35 @@
       "driver_as_of": "2026-11-17",
       "market_as_of": "2026-11-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.95,
-      "signal_score_pct": 95,
-      "signal_raw_score": 19,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 4,
+      "signal_count": 5,
       "signal_primary_count": 0,
-      "signal_secondary_count": 4,
+      "signal_secondary_count": 5,
       "top_signal": {
-        "path": "root.tg.urgent[2]",
+        "path": "root.news[11]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 19,
-        "confidence": "High",
-        "sourcePriority": "High",
+        "rawScore": 14,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
           "strike",
-          "attack",
-          "drone"
+          "gaza"
         ],
-        "text": "Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl.",
-        "explanation": "Geopolitical Escalation match based on keywords: strike, attack, drone. Signal: Emergency rescue operations in Dymer concluded today following a Russian strike. As a result of the Russian drone attack, 11 people were killed, including an 11-year-old girl."
+        "text": "Israeli strike kills four people in Gaza | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike kills four people in Gaza | Al Jazeera"
       },
       "market_z": -1.246,
       "abs_market_z": 1.246,
@@ -241,7 +240,7 @@
       "driver_as_of": "2026-11-17",
       "market_as_of": "2026-11-17",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-claim"
     }
   ],
@@ -249,31 +248,15 @@
     {
       "signal_category": "Macro / Inflation Shock",
       "display_mode": "signal-only-v2",
-      "signal_score": 0.9,
-      "signal_score_pct": 90,
-      "signal_raw_score": 18,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 1,
+      "signal_elevated": false,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.tg.urgent[7]",
-        "category": "Macro / Inflation Shock",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 18,
-        "confidence": "High",
-        "sourcePriority": "High",
-        "matchedKeywords": [
-          "missile",
-          "russia",
-          "ukraine",
-          "rates"
-        ],
-        "text": "🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava",
-        "explanation": "Geopolitical Escalation match based on keywords: missile, russia, ukraine. Signal: 🇷🇺🇺🇦⚡️ — Russia produces one ballistic missile every five hours and continues to increase production rates — Ukraine's Defense Minister. @IntelSlava"
-      }
+      "signal_secondary_count": 0,
+      "top_signal": null
     },
     {
       "signal_category": "Weather / Climate Shock",
