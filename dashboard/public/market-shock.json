@@ -1,7 +1,7 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-25T05:38:45.035Z",
+  "generatedAt": "2026-11-26T05:23:12.366Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
@@ -13,15 +13,15 @@
     "categoryBreadth": 2
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 13,
+    "Energy Shock": 2
   },
-  "candidateCount": 136,
+  "candidateCount": 135,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.news[30]",
-      "sourcePriority": "Medium",
+      "path": "root.tg.urgent[4]",
+      "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
       "confidence": "Medium",
@@ -38,98 +38,61 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "Russia's own figures show almost 500,000 deaths in war in Ukraine",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Russia's own figures show almost 500,000 deaths in war in Ukraine"
+      "text": "🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together in WWII. Kushner says",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together..."
     },
     {
-      "path": "root.news[11]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "strike",
-        "gaza"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Israeli strike kills four people in Gaza | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike kills four people in Gaza | Al Jazeera"
-    },
-    {
-      "path": "root.news[36]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
-      ],
-      "matchedKeywords": [
-        "war",
-        "iran",
-        "port"
-      ],
-      "otherCategories": [
-        "Supply Chain Disruption"
-      ],
-      "text": "Iran war Update: Saudi-led coalition strikes Yemen’s Hodeidah port | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Saudi-led coalition strikes Yemen’s Hodeidah port | Al Jazeera"
-    },
-    {
-      "path": "root.news[40]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 14,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "FX",
-        "Commodities",
-        "Emerging Markets",
-        "Credit",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "china",
-        "taiwan",
-        "election"
-      ],
-      "otherCategories": [
-        "Sanctions / Policy Shock"
-      ],
-      "text": "China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds",
-      "explanation": "Geopolitical Escalation match based on keywords: china, taiwan. Signal: China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds"
-    },
-    {
-      "path": "root.tg.urgent[5]",
+      "path": "root.tg.urgent[14]",
       "sourcePriority": "High",
+      "category": "Energy Shock",
+      "score": 13,
+      "confidence": "Medium",
+      "channels": [
+        "Oil",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX",
+        "Gold",
+        "VIX",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "oil",
+        "refinery",
+        "attack"
+      ],
+      "otherCategories": [
+        "Geopolitical Escalation"
+      ],
+      "text": "Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine oil into gasoline and di",
+      "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine o..."
+    },
+    {
+      "path": "root.tg.urgent[1]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "attack",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Reports indicate that up to 70 missiles of various types are reportedly prepared for launch from five locations in Russia, raising the possibility of another attack at any moment. The reported deploym",
+      "explanation": "Geopolitical Escalation match based on keywords: attack, russia. Signal: Reports indicate that up to 70 missiles of various types are reportedly prepared for launch from five locations in Russia, raising the possibility of another attack at any momen..."
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
       "confidence": "Medium",
@@ -145,53 +108,11 @@
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "🚨🇪🇺🇷🇺🇺🇦 The EU’s €90 billion Ukraine Support Loan was created to finance Ukraine’s military and government needs across 2026–2027 after EU countries failed to agree on directly using frozen Rus",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🚨🇪🇺🇷🇺🇺🇦 The EU’s €90 billion Ukraine Support Loan was created to finance Ukraine’s military and government needs across 2026–2027 after EU countries failed to agree on di..."
+      "text": "Ukraine attacks Russian military base, says five planes struck | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: Ukraine attacks Russian military base, says five planes struck | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[8]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🇺🇦🇺🇸⚡️— Zelensky says US Secretary of War Pete Hegseth has not yet approved a new arms package for Ukraine, including 48 anti-ballistic missiles. Ukraine also expects missiles for F-16s and NASAMS",
-      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 🇺🇦🇺🇸⚡️— Zelensky says US Secretary of War Pete Hegseth has not yet approved a new arms package for Ukraine, including 48 anti-ballistic missiles. Ukraine also expects missil..."
-    },
-    {
-      "path": "root.news[13]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Amnesty calls for ICC genocide probe over Israel's impact on births in Gaza | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Amnesty calls for ICC genocide probe over Israel's impact on births in Gaza | France 24"
-    },
-    {
-      "path": "root.news[27]",
+      "path": "root.news[34]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -208,11 +129,11 @@
         "iran"
       ],
       "otherCategories": [],
-      "text": "Poll finds US voters want government to end Iran war regardless of terms | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Poll finds US voters want government to end Iran war regardless of terms | Al Jazeera"
+      "text": "Iran war Update: Explosion rocks Sanaa; missiles intercepted over Riyadh | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, iran. Signal: Iran war Update: Explosion rocks Sanaa; missiles intercepted over Riyadh | Al Jazeera"
     },
     {
-      "path": "root.news[31]",
+      "path": "root.newsFeed[44]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 10,
@@ -225,54 +146,12 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "troops",
+        "war",
         "ukraine"
       ],
       "otherCategories": [],
-      "text": "My family died in Ukraine. My mum blamed Zelensky's troops - the truth is complicated",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, ukraine. Signal: My family died in Ukraine. My mum blamed Zelensky's troops - the truth is complicated"
-    },
-    {
-      "path": "root.news[39]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "russia",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: South Africa convicts Zimbabwean who tried to fight Ukraine for Russia | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[48]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "military",
-        "ukraine"
-      ],
-      "otherCategories": [],
-      "text": "🚨 The EU’s €90 billion Ukraine Support Loan was created to finance Ukraine’s military and governmen | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: military, ukraine. Signal: 🚨 The EU’s €90 billion Ukraine Support Loan was created to finance Ukraine’s military and governmen | INTELSLAVA"
+      "text": "⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: ⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[5]",
@@ -303,7 +182,7 @@
       "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
     },
     {
-      "path": "root.tg.urgent[4]",
+      "path": "root.tg.urgent[2]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -321,17 +200,70 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "iran",
-        "blockade"
+        "strike"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇮🇷🇺🇸⚡️ — Iran's Supreme National Security Council Secretary Mohsen Rezaei dismissed Trump's plans to blockade Iran, describing them as \"delusional and futile.\" Rezaei said the Iranian nation, arm",
-      "explanation": "Geopolitical Escalation match based on keywords: iran. Signal: 🇮🇷🇺🇸⚡️ — Iran's Supreme National Security Council Secretary Mohsen Rezaei dismissed Trump's plans to blockade Iran, describing them as \"delusional and futile.\" Rezaei said t..."
+      "text": "Russian obituaries have reported the first confirmed casualty following the strike on the corvette \"Mercury\" in Benghazi: 42-year-old Russian Black Sea Fleet officer Oleksandr Tsulin.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike. Signal: Russian obituaries have reported the first confirmed casualty following the strike on the corvette \"Mercury\" in Benghazi: 42-year-old Russian Black Sea Fleet officer Oleksandr T..."
     },
     {
-      "path": "root.news[48]",
+      "path": "root.tg.urgent[5]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "🇷🇺🇺🇦⚡️ — Russia launched at least eight RM-48U ballistic missiles at Kyiv, with energy infrastructure reportedly among the targets. @OSINTWarfare",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: 🇷🇺🇺🇦⚡️ — Russia launched at least eight RM-48U ballistic missiles at Kyiv, with energy infrastructure reportedly among the targets. @OSINTWarfare"
+    },
+    {
+      "path": "root.tg.urgent[9]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 9,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "oil"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "⚖️ 🇮🇶 🇹🇷 In a sweeping ruling today, Iraq's Federal Supreme Court upheld essentially all of Iraqi Prime Minister Ali al-Zaidi's decisions from yesterday on KRG oil and border crossings. On the que",
+      "explanation": "Geopolitical Escalation match based on keywords: border. Signal: ⚖️ 🇮🇶 🇹🇷 In a sweeping ruling today, Iraq's Federal Supreme Court upheld essentially all of Iraqi Prime Minister Ali al-Zaidi's decisions from yesterday on KRG oil and borde..."
+    },
+    {
+      "path": "root.newsFeed[35]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 9,
@@ -342,21 +274,20 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Industrials",
-        "Semiconductors",
-        "Shipping",
-        "Commodities",
-        "Margins"
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "china",
-        "chips"
+        "russia",
+        "energy"
       ],
       "otherCategories": [
-        "Supply Chain Disruption"
+        "Energy Shock"
       ],
-      "text": "Did Nvidia knowingly send chips to China 'cutout'? Was there ‘pay-to-play’ involving Trump, Lutnick? | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: china. Signal: Did Nvidia knowingly send chips to China 'cutout'? Was there ‘pay-to-play’ involving Trump, Lutnick? | France 24"
+      "text": "⚡️ — Russia launched at least eight RM-48U ballistic missiles at Kyiv, with energy infrastructure re | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: russia. Signal: ⚡️ — Russia launched at least eight RM-48U ballistic missiles at Kyiv, with energy infrastructure re | INTELSLAVA"
     },
     {
       "path": "root.chokepoints[0]",
@@ -378,6 +309,66 @@
       "otherCategories": [],
       "text": "Strait of Hormuz | 20% of world oil",
       "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+    },
+    {
+      "path": "root.tg.urgent[3]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "Bloomberg reports that Poland is asking NATO to close the skies over Ukraine and shoot down Russian missiles.",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: Bloomberg reports that Poland is asking NATO to close the skies over Ukraine and shoot down Russian missiles."
+    },
+    {
+      "path": "root.tg.urgent[6]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "In a comment to Bloomberg, Zelenskyy confirmed that the U.S. is delaying the delivery of 48 Patriot missiles to Ukraine due to the lack of authorization from Pentagon chief Pete Hegseth. Zelenskyy al",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: In a comment to Bloomberg, Zelenskyy confirmed that the U.S. is delaying the delivery of 48 Patriot missiles to Ukraine due to the lack of authorization from Pentagon chief Pete..."
+    },
+    {
+      "path": "root.tg.urgent[10]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 5,
+      "confidence": "Low",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "ukraine"
+      ],
+      "otherCategories": [],
+      "text": "‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline",
+      "explanation": "Geopolitical Escalation match based on keywords: ukraine. Signal: ‼️🔥⚠️ Heavy artilery bombardment over Kharkov, Ukraine early morning 02.28.22. t.me/ukraine_frontline"
     }
   ]
 }

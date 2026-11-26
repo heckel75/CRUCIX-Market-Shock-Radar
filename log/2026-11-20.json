@@ -1,0 +1,274 @@
+{
+  "title": "CRUCIX Market Shock Divergence",
+  "generatedAt": "2026-11-26T05:23:15.023Z",
+  "date": "2026-11-20",
+  "asOfClose": "2026-11-20",
+  "framing": "readings as of market close, 2026-11-20",
+  "sourceFiles": {
+    "signal": "dashboard/public/market-shock.json",
+    "market": "dashboard/public/market-readings.json"
+  },
+  "marketReadings": {
+    "generatedAt": "2026-11-26T05:23:12.496Z",
+    "generatedDate": "2026-11-26",
+    "asOfClose": "2026-11-20",
+    "calendarLagDays": 6,
+    "freshnessStatus": "lagging"
+  },
+  "marketFreshness": {
+    "status": "lagging",
+    "generatedAt": "2026-11-26T05:23:12.496Z",
+    "generatedDate": "2026-11-26",
+    "runDate": "2026-11-26",
+    "asOfClose": "2026-11-20",
+    "calendarLagDays": 6,
+    "currentMaxCalendarLagDays": 3,
+    "staleAfterCalendarDays": 14,
+    "warning": "Market readings are lagging: generated 2026-11-26, readings as of market close, 2026-11-20 (6 calendar days old)."
+  },
+  "warnings": [
+    {
+      "code": "market-readings-lagging",
+      "severity": "warning",
+      "status": "lagging",
+      "asOfClose": "2026-11-20",
+      "generatedDate": "2026-11-26",
+      "calendarLagDays": 6,
+      "message": "Market readings are lagging: generated 2026-11-26, readings as of market close, 2026-11-20 (6 calendar days old)."
+    }
+  ],
+  "thresholds": {
+    "frozenAsOf": "2026-06-11",
+    "signalScoreMax": 20,
+    "signalElevatedThreshold": 0.6,
+    "marketMovingAbsZThreshold": 1.5
+  },
+  "methodology": {
+    "signalSide": "For each divergence channel, use the highest Phase-1 signal item score mapped to that channel, including primary and secondary matched categories, then normalize by the Phase-1 item score ceiling.",
+    "marketSide": "Use the market-reading channel z-score from dashboard/public/market-readings.json: max absolute z-score among the channel instruments, with the driver instrument named.",
+    "classification": "radar-claim = elevated signal and quiet market; priced = elevated signal and moving market; radar-miss = quiet signal and moving market; calm = quiet signal and quiet market."
+  },
+  "decisions": {
+    "macroInflationShock": "signal-only for v2",
+    "weatherClimateShock": "signal-only for v2",
+    "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
+  },
+  "stateCounts": {
+    "priced": 2,
+    "radar-miss": 3
+  },
+  "rows": [
+    {
+      "channel": "conflict-escalation",
+      "channel_label": "Conflict escalation",
+      "signal_category": "Geopolitical Escalation",
+      "signal_score": 0.75,
+      "signal_score_pct": 75,
+      "signal_raw_score": 15,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 14,
+      "signal_primary_count": 13,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.tg.urgent[4]",
+        "category": "Geopolitical Escalation",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": true,
+        "rawScore": 15,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "war",
+          "russia",
+          "ukraine"
+        ],
+        "text": "🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together in WWII. Kushner says",
+        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together..."
+      },
+      "market_z": 5.381,
+      "abs_market_z": 5.381,
+      "market_moving": true,
+      "driver_instrument": "VIXCLS",
+      "driver_instrument_id": "vix",
+      "driver_instrument_label": "CBOE Volatility Index",
+      "driver_as_of": "2026-11-20",
+      "market_as_of": "2026-11-20",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    },
+    {
+      "channel": "sanctions-policy",
+      "channel_label": "Sanctions / policy",
+      "signal_category": "Sanctions / Policy Shock",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": -3.462,
+      "abs_market_z": 3.462,
+      "market_moving": true,
+      "driver_instrument": "EEM",
+      "driver_instrument_id": "em-equities",
+      "driver_instrument_label": "Emerging-market equities ETF",
+      "driver_as_of": "2026-11-20",
+      "market_as_of": "2026-11-20",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "energy-disruption",
+      "channel_label": "Energy disruption",
+      "signal_category": "Energy Shock",
+      "signal_score": 0.65,
+      "signal_score_pct": 65,
+      "signal_raw_score": 13,
+      "signal_score_max": 20,
+      "signal_elevated": true,
+      "signal_count": 5,
+      "signal_primary_count": 2,
+      "signal_secondary_count": 3,
+      "top_signal": {
+        "path": "root.tg.urgent[14]",
+        "category": "Energy Shock",
+        "primaryCategory": "Energy Shock",
+        "isPrimary": true,
+        "rawScore": 13,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "oil",
+          "refinery",
+          "attack"
+        ],
+        "text": "Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine oil into gasoline and di",
+        "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine o..."
+      },
+      "market_z": -2.171,
+      "abs_market_z": 2.171,
+      "market_moving": true,
+      "driver_instrument": "T10YIE",
+      "driver_instrument_id": "inflation-expectations",
+      "driver_instrument_label": "10-year breakeven inflation rate",
+      "driver_as_of": "2026-11-20",
+      "market_as_of": "2026-11-20",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "priced"
+    },
+    {
+      "channel": "credit-stress",
+      "channel_label": "Credit stress",
+      "signal_category": "Credit Stress",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null,
+      "market_z": 4.168,
+      "abs_market_z": 4.168,
+      "market_moving": true,
+      "driver_instrument": "BAMLH0A0HYM2",
+      "driver_instrument_id": "high-yield-spreads",
+      "driver_instrument_label": "High-yield option-adjusted spread",
+      "driver_as_of": "2026-11-20",
+      "market_as_of": "2026-11-20",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-miss"
+    },
+    {
+      "channel": "supply-chain",
+      "channel_label": "Supply chain",
+      "signal_category": "Supply Chain Disruption",
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 2,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
+      "top_signal": {
+        "path": "root.chokepoints[5]",
+        "category": "Supply Chain Disruption",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
+        "confidence": "Medium",
+        "sourcePriority": "High",
+        "matchedKeywords": [
+          "taiwan",
+          "container"
+        ],
+        "text": "Taiwan Strait | 88% of largest container ships",
+        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+      },
+      "market_z": -3.396,
+      "abs_market_z": 3.396,
+      "market_moving": true,
+      "driver_instrument": "XLI",
+      "driver_instrument_id": "industrials",
+      "driver_instrument_label": "Industrials equities ETF",
+      "driver_as_of": "2026-11-20",
+      "market_as_of": "2026-11-20",
+      "market_freshness_status": "lagging",
+      "market_calendar_lag_days": 6,
+      "state": "radar-miss"
+    }
+  ],
+  "signalOnly": [
+    {
+      "signal_category": "Macro / Inflation Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    },
+    {
+      "signal_category": "Weather / Climate Shock",
+      "display_mode": "signal-only-v2",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_elevated": false,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ],
+  "retiredSignals": [
+    {
+      "signal_category": "Market Volatility Signal",
+      "display_mode": "retired-signal-channel",
+      "reason": "Retired as a signal channel because VIX belongs on the market side of the board.",
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
+      "signal_score_max": 20,
+      "signal_count": 0,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 0,
+      "top_signal": null
+    }
+  ]
+}
