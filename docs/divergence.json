@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-26T05:23:15.023Z",
+  "generatedAt": "2026-11-27T05:18:07.465Z",
   "date": "2026-11-20",
   "asOfClose": "2026-11-20",
   "framing": "readings as of market close, 2026-11-20",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-26T05:23:12.496Z",
-    "generatedDate": "2026-11-26",
+    "generatedAt": "2026-11-27T05:18:04.076Z",
+    "generatedDate": "2026-11-27",
     "asOfClose": "2026-11-20",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-26T05:23:12.496Z",
-    "generatedDate": "2026-11-26",
-    "runDate": "2026-11-26",
+    "generatedAt": "2026-11-27T05:18:04.076Z",
+    "generatedDate": "2026-11-27",
+    "runDate": "2026-11-27",
     "asOfClose": "2026-11-20",
-    "calendarLagDays": 6,
+    "calendarLagDays": 7,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-26, readings as of market close, 2026-11-20 (6 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-27, readings as of market close, 2026-11-20 (7 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-20",
-      "generatedDate": "2026-11-26",
-      "calendarLagDays": 6,
-      "message": "Market readings are lagging: generated 2026-11-26, readings as of market close, 2026-11-20 (6 calendar days old)."
+      "generatedDate": "2026-11-27",
+      "calendarLagDays": 7,
+      "message": "Market readings are lagging: generated 2026-11-27, readings as of market close, 2026-11-20 (7 calendar days old)."
     }
   ],
   "thresholds": {
@@ -62,29 +62,30 @@
       "channel": "conflict-escalation",
       "channel_label": "Conflict escalation",
       "signal_category": "Geopolitical Escalation",
-      "signal_score": 0.75,
-      "signal_score_pct": 75,
-      "signal_raw_score": 15,
+      "signal_score": 1,
+      "signal_score_pct": 100,
+      "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
       "signal_count": 14,
-      "signal_primary_count": 13,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 14,
+      "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[4]",
+        "path": "root.tg.urgent[1]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
-        "rawScore": 15,
-        "confidence": "Medium",
+        "rawScore": 20,
+        "confidence": "High",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "war",
-          "russia",
-          "ukraine"
+          "attack",
+          "military",
+          "drone",
+          "iran"
         ],
-        "text": "🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together in WWII. Kushner says",
-        "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: 🇺🇸🇷🇺⚡️ Jared Kushner stated that Biden’s invitation for Ukraine to join NATO preceded the war and caused the current situation, noting that the US and Russia fought together..."
+        "text": "🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false flag operations aimed at d",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, iran. Signal: 🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false fla..."
       },
       "market_z": 5.381,
       "abs_market_z": 5.381,
@@ -95,7 +96,7 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "priced"
     },
     {
@@ -120,36 +121,35 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.65,
-      "signal_score_pct": 65,
-      "signal_raw_score": 13,
+      "signal_score": 0.45,
+      "signal_score_pct": 45,
+      "signal_raw_score": 9,
       "signal_score_max": 20,
-      "signal_elevated": true,
-      "signal_count": 5,
-      "signal_primary_count": 2,
-      "signal_secondary_count": 3,
+      "signal_elevated": false,
+      "signal_count": 2,
+      "signal_primary_count": 1,
+      "signal_secondary_count": 1,
       "top_signal": {
-        "path": "root.tg.urgent[14]",
+        "path": "root.news[46]",
         "category": "Energy Shock",
-        "primaryCategory": "Energy Shock",
-        "isPrimary": true,
-        "rawScore": 13,
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 9,
         "confidence": "Medium",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "oil",
-          "refinery",
-          "attack"
+          "attack",
+          "refinery"
         ],
-        "text": "Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine oil into gasoline and di",
-        "explanation": "Energy Shock match based on keywords: oil, refinery. Signal: Satellite imagery of the Novoshakhtinsk Oil Refinery has emerged following the November 23 attack. According to Bloomberg, due to refinery strikes, the occupiers cannot refine o..."
+        "text": "Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera"
       },
       "market_z": -2.171,
       "abs_market_z": 2.171,
@@ -160,22 +160,36 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "priced"
+      "market_calendar_lag_days": 7,
+      "state": "radar-miss"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0,
-      "signal_score_pct": 0,
-      "signal_raw_score": 0,
+      "signal_score": 0.5,
+      "signal_score_pct": 50,
+      "signal_raw_score": 10,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 0,
+      "signal_count": 1,
       "signal_primary_count": 0,
-      "signal_secondary_count": 0,
-      "top_signal": null,
+      "signal_secondary_count": 1,
+      "top_signal": {
+        "path": "root.news[23]",
+        "category": "Credit Stress",
+        "primaryCategory": "Geopolitical Escalation",
+        "isPrimary": false,
+        "rawScore": 10,
+        "confidence": "Medium",
+        "sourcePriority": "Medium",
+        "matchedKeywords": [
+          "attack",
+          "bank"
+        ],
+        "text": "Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera"
+      },
       "market_z": 4.168,
       "abs_market_z": 4.168,
       "market_moving": true,
@@ -185,35 +199,36 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
+      "market_calendar_lag_days": 7,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.7,
+      "signal_score_pct": 70,
+      "signal_raw_score": 14,
       "signal_score_max": 20,
-      "signal_elevated": false,
-      "signal_count": 2,
+      "signal_elevated": true,
+      "signal_count": 3,
       "signal_primary_count": 0,
-      "signal_secondary_count": 2,
+      "signal_secondary_count": 3,
       "top_signal": {
-        "path": "root.chokepoints[5]",
+        "path": "root.tg.urgent[8]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
+        "rawScore": 14,
         "confidence": "Medium",
         "sourcePriority": "High",
         "matchedKeywords": [
-          "taiwan",
-          "container"
+          "attack",
+          "military",
+          "port"
         ],
-        "text": "Taiwan Strait | 88% of largest container ships",
-        "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+        "text": "🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two military personnel. The LNA",
+        "explanation": "Geopolitical Escalation match based on keywords: attack, military. Signal: 🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two milit..."
       },
       "market_z": -3.396,
       "abs_market_z": 3.396,
@@ -224,8 +239,8 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 6,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 7,
+      "state": "priced"
     }
   ],
   "signalOnly": [
