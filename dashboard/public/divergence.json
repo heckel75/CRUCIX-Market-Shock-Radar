@@ -1,6 +1,6 @@
 {
   "title": "CRUCIX Market Shock Divergence",
-  "generatedAt": "2026-11-27T05:18:07.465Z",
+  "generatedAt": "2026-11-28T04:55:27.035Z",
   "date": "2026-11-20",
   "asOfClose": "2026-11-20",
   "framing": "readings as of market close, 2026-11-20",
@@ -9,22 +9,22 @@
     "market": "dashboard/public/market-readings.json"
   },
   "marketReadings": {
-    "generatedAt": "2026-11-27T05:18:04.076Z",
-    "generatedDate": "2026-11-27",
+    "generatedAt": "2026-11-28T04:55:24.374Z",
+    "generatedDate": "2026-11-28",
     "asOfClose": "2026-11-20",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "freshnessStatus": "lagging"
   },
   "marketFreshness": {
     "status": "lagging",
-    "generatedAt": "2026-11-27T05:18:04.076Z",
-    "generatedDate": "2026-11-27",
-    "runDate": "2026-11-27",
+    "generatedAt": "2026-11-28T04:55:24.374Z",
+    "generatedDate": "2026-11-28",
+    "runDate": "2026-11-28",
     "asOfClose": "2026-11-20",
-    "calendarLagDays": 7,
+    "calendarLagDays": 8,
     "currentMaxCalendarLagDays": 3,
     "staleAfterCalendarDays": 14,
-    "warning": "Market readings are lagging: generated 2026-11-27, readings as of market close, 2026-11-20 (7 calendar days old)."
+    "warning": "Market readings are lagging: generated 2026-11-28, readings as of market close, 2026-11-20 (8 calendar days old)."
   },
   "warnings": [
     {
@@ -32,9 +32,9 @@
       "severity": "warning",
       "status": "lagging",
       "asOfClose": "2026-11-20",
-      "generatedDate": "2026-11-27",
-      "calendarLagDays": 7,
-      "message": "Market readings are lagging: generated 2026-11-27, readings as of market close, 2026-11-20 (7 calendar days old)."
+      "generatedDate": "2026-11-28",
+      "calendarLagDays": 8,
+      "message": "Market readings are lagging: generated 2026-11-28, readings as of market close, 2026-11-20 (8 calendar days old)."
     }
   ],
   "thresholds": {
@@ -54,8 +54,8 @@
     "marketVolatilitySignal": "retired as a signal channel; volatility remains on the market side through VIX where applicable"
   },
   "stateCounts": {
-    "priced": 2,
-    "radar-miss": 3
+    "priced": 3,
+    "radar-miss": 2
   },
   "rows": [
     {
@@ -67,25 +67,25 @@
       "signal_raw_score": 20,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 14,
-      "signal_primary_count": 14,
+      "signal_count": 15,
+      "signal_primary_count": 15,
       "signal_secondary_count": 0,
       "top_signal": {
-        "path": "root.tg.urgent[1]",
+        "path": "root.news[16]",
         "category": "Geopolitical Escalation",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": true,
         "rawScore": 20,
         "confidence": "High",
-        "sourcePriority": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
+          "war",
           "attack",
-          "military",
           "drone",
           "iran"
         ],
-        "text": "🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false flag operations aimed at d",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, iran. Signal: 🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false fla..."
+        "text": "Iran war Update: Italy says drone in deadly Kuwait attack was made in Iran | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: war, attack, drone, iran. Signal: Iran war Update: Italy says drone in deadly Kuwait attack was made in Iran | Al Jazeera"
       },
       "market_z": 5.381,
       "abs_market_z": 5.381,
@@ -96,7 +96,7 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     },
     {
@@ -121,35 +121,37 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "energy-disruption",
       "channel_label": "Energy disruption",
       "signal_category": "Energy Shock",
-      "signal_score": 0.45,
-      "signal_score_pct": 45,
-      "signal_raw_score": 9,
+      "signal_score": 0.9,
+      "signal_score_pct": 90,
+      "signal_raw_score": 18,
       "signal_score_max": 20,
-      "signal_elevated": false,
+      "signal_elevated": true,
       "signal_count": 2,
-      "signal_primary_count": 1,
-      "signal_secondary_count": 1,
+      "signal_primary_count": 0,
+      "signal_secondary_count": 2,
       "top_signal": {
-        "path": "root.news[46]",
+        "path": "root.tg.urgent[12]",
         "category": "Energy Shock",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 9,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
+        "rawScore": 18,
+        "confidence": "High",
+        "sourcePriority": "High",
         "matchedKeywords": [
-          "attack",
-          "refinery"
+          "russia",
+          "ukraine",
+          "oil",
+          "energy"
         ],
-        "text": "Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera"
+        "text": "Russia wants oil exports added to the Black Sea ceasefire talks, Ukraine Context reports. Kyiv will discuss it only within a full energy ceasefire that ends Russian strikes on its energy infrastructur",
+        "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia wants oil exports added to the Black Sea ceasefire talks, Ukraine Context reports. Kyiv will discuss it only within a full energy ceasefire that ends Russian strikes on i..."
       },
       "market_z": -2.171,
       "abs_market_z": 2.171,
@@ -160,36 +162,22 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
-      "state": "radar-miss"
+      "market_calendar_lag_days": 8,
+      "state": "priced"
     },
     {
       "channel": "credit-stress",
       "channel_label": "Credit stress",
       "signal_category": "Credit Stress",
-      "signal_score": 0.5,
-      "signal_score_pct": 50,
-      "signal_raw_score": 10,
+      "signal_score": 0,
+      "signal_score_pct": 0,
+      "signal_raw_score": 0,
       "signal_score_max": 20,
       "signal_elevated": false,
-      "signal_count": 1,
+      "signal_count": 0,
       "signal_primary_count": 0,
-      "signal_secondary_count": 1,
-      "top_signal": {
-        "path": "root.news[23]",
-        "category": "Credit Stress",
-        "primaryCategory": "Geopolitical Escalation",
-        "isPrimary": false,
-        "rawScore": 10,
-        "confidence": "Medium",
-        "sourcePriority": "Medium",
-        "matchedKeywords": [
-          "attack",
-          "bank"
-        ],
-        "text": "Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera",
-        "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera"
-      },
+      "signal_secondary_count": 0,
+      "top_signal": null,
       "market_z": 4.168,
       "abs_market_z": 4.168,
       "market_moving": true,
@@ -199,36 +187,36 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "radar-miss"
     },
     {
       "channel": "supply-chain",
       "channel_label": "Supply chain",
       "signal_category": "Supply Chain Disruption",
-      "signal_score": 0.7,
-      "signal_score_pct": 70,
-      "signal_raw_score": 14,
+      "signal_score": 0.95,
+      "signal_score_pct": 95,
+      "signal_raw_score": 19,
       "signal_score_max": 20,
       "signal_elevated": true,
-      "signal_count": 3,
+      "signal_count": 6,
       "signal_primary_count": 0,
-      "signal_secondary_count": 3,
+      "signal_secondary_count": 6,
       "top_signal": {
-        "path": "root.tg.urgent[8]",
+        "path": "root.news[11]",
         "category": "Supply Chain Disruption",
         "primaryCategory": "Geopolitical Escalation",
         "isPrimary": false,
-        "rawScore": 14,
-        "confidence": "Medium",
-        "sourcePriority": "High",
+        "rawScore": 19,
+        "confidence": "High",
+        "sourcePriority": "Medium",
         "matchedKeywords": [
-          "attack",
-          "military",
-          "port"
+          "strike",
+          "israel",
+          "gaza"
         ],
-        "text": "🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two military personnel. The LNA",
-        "explanation": "Geopolitical Escalation match based on keywords: attack, military. Signal: 🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two milit..."
+        "text": "Israel kills two MSF staff in targeted strike on Gaza clinic | Al Jazeera",
+        "explanation": "Geopolitical Escalation match based on keywords: strike, israel, gaza. Signal: Israel kills two MSF staff in targeted strike on Gaza clinic | Al Jazeera"
       },
       "market_z": -3.396,
       "abs_market_z": 3.396,
@@ -239,7 +227,7 @@
       "driver_as_of": "2026-11-20",
       "market_as_of": "2026-11-20",
       "market_freshness_status": "lagging",
-      "market_calendar_lag_days": 7,
+      "market_calendar_lag_days": 8,
       "state": "priced"
     }
   ],

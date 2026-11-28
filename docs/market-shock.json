@@ -1,27 +1,26 @@
 {
   "title": "CRUCIX Market Shock Radar",
   "subtitle": "World events → market transmission channels",
-  "generatedAt": "2026-11-27T05:18:03.976Z",
+  "generatedAt": "2026-11-28T04:55:24.256Z",
   "source": "http://localhost:3117/api/data",
   "disclaimer": "Experimental market-intelligence prototype. Not investment advice. No buy/sell recommendations.",
   "shockScore": {
-    "score": 16,
+    "score": 15,
     "maxScore": 20,
     "regime": "Shock mode",
     "interpretation": "Multiple high-scoring signals suggest broad market-risk transmission channels. Score is moderated because many signals are concentrated in one category.",
     "concentrationPenalty": 5,
-    "categoryBreadth": 2
+    "categoryBreadth": 1
   },
   "shockCounts": {
-    "Geopolitical Escalation": 14,
-    "Energy Shock": 1
+    "Geopolitical Escalation": 15
   },
-  "candidateCount": 137,
+  "candidateCount": 136,
   "itemCount": 15,
   "items": [
     {
-      "path": "root.tg.urgent[1]",
-      "sourcePriority": "High",
+      "path": "root.news[16]",
+      "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 20,
       "confidence": "High",
@@ -33,40 +32,104 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
+        "war",
         "attack",
-        "military",
         "drone",
         "iran"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false flag operations aimed at d",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, military, drone, iran. Signal: 🇮🇷🇮🇹🇰🇼⚡️ Iran’s Embassy in Rome denies Tehran’s involvement in a drone attack on a Kuwaiti military facility that killed two Italian citizens, warning of alleged false fla..."
+      "text": "Iran war Update: Italy says drone in deadly Kuwait attack was made in Iran | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: war, attack, drone, iran. Signal: Iran war Update: Italy says drone in deadly Kuwait attack was made in Iran | Al Jazeera"
     },
     {
       "path": "root.news[11]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 20,
+      "score": 19,
       "confidence": "High",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "troops",
-        "iran",
-        "russia",
-        "china"
+        "strike",
+        "israel",
+        "gaza"
       ],
-      "otherCategories": [],
-      "text": "Trump downplays Russia, China support for Iran during talks with US troops | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: troops, iran, russia, china. Signal: Trump downplays Russia, China support for Iran during talks with US troops | Al Jazeera"
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Israel kills two MSF staff in targeted strike on Gaza clinic | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel, gaza. Signal: Israel kills two MSF staff in targeted strike on Gaza clinic | Al Jazeera"
     },
     {
-      "path": "root.tg.urgent[0]",
+      "path": "root.news[40]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 19,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
+      ],
+      "matchedKeywords": [
+        "strike",
+        "israel",
+        "gaza"
+      ],
+      "otherCategories": [
+        "Supply Chain Disruption"
+      ],
+      "text": "Israel kills four in Gaza as Hamas chief al-Hayya’s son survives strike | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, israel, gaza. Signal: Israel kills four in Gaza as Hamas chief al-Hayya’s son survives strike | Al Jazeera"
+    },
+    {
+      "path": "root.tg.urgent[12]",
+      "sourcePriority": "High",
+      "category": "Geopolitical Escalation",
+      "score": 18,
+      "confidence": "High",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
+      ],
+      "matchedKeywords": [
+        "russia",
+        "ukraine",
+        "oil",
+        "energy"
+      ],
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Russia wants oil exports added to the Black Sea ceasefire talks, Ukraine Context reports. Kyiv will discuss it only within a full energy ceasefire that ends Russian strikes on its energy infrastructur",
+      "explanation": "Geopolitical Escalation match based on keywords: russia, ukraine. Signal: Russia wants oil exports added to the Black Sea ceasefire talks, Ukraine Context reports. Kyiv will discuss it only within a full energy ceasefire that ends Russian strikes on i..."
+    },
+    {
+      "path": "root.tg.urgent[1]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 15,
@@ -79,104 +142,66 @@
         "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "drone",
-        "iran"
+        "naval",
+        "nuclear",
+        "russia"
       ],
       "otherCategories": [],
-      "text": "🇮🇷🇰🇼⚡️ — Iran is ready to conduct a joint investigation with Kuwait into the drone attack on the emirate’s territory to establish its origin and identify those responsible, Iranian Foreign Ministe",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, iran. Signal: 🇮🇷🇰🇼⚡️ — Iran is ready to conduct a joint investigation with Kuwait into the drone attack on the emirate’s territory to establish its origin and identify those responsible, ..."
+      "text": "🇷🇺⚡️ Russia raises the naval flag on the nuclear-powered submarine Perm, formally transferring the vessel to the Russian Navy at a ceremony attended by President Vladimir Putin. Perm is the fifth Y",
+      "explanation": "Geopolitical Escalation match based on keywords: naval, nuclear, russia. Signal: 🇷🇺⚡️ Russia raises the naval flag on the nuclear-powered submarine Perm, formally transferring the vessel to the Russian Navy at a ceremony attended by President Vladimir Puti..."
     },
     {
-      "path": "root.tg.urgent[13]",
+      "path": "root.newsFeed[45]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 15,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "naval",
+        "nuclear",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "⚡️ Russia raises the naval flag on the nuclear-powered submarine Perm, formally transferring the ves | INTELSLAVA",
+      "explanation": "Geopolitical Escalation match based on keywords: naval, nuclear, russia. Signal: ⚡️ Russia raises the naval flag on the nuclear-powered submarine Perm, formally transferring the ves | INTELSLAVA"
+    },
+    {
+      "path": "root.tg.urgent[6]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
-      "score": 15,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
         "VIX",
         "Oil",
         "Defense Equities",
-        "Safe-haven FX"
+        "Safe-haven FX",
+        "Natural Gas",
+        "Inflation Expectations",
+        "Energy Equities",
+        "FX"
       ],
       "matchedKeywords": [
-        "attack",
-        "drone",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "— 🇮🇷/🇰🇼 NEW: Iran denies responsibility for the drone attack on Kuwait that killed two Italians In my estimation, it was probably Iraqi resistance factions that carried it out. @Middle_East_Spec",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, iran. Signal: — 🇮🇷/🇰🇼 NEW: Iran denies responsibility for the drone attack on Kuwait that killed two Italians In my estimation, it was probably Iraqi resistance factions that carried it o..."
-    },
-    {
-      "path": "root.news[18]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
+        "nuclear",
         "russia",
-        "ukraine"
+        "diesel"
       ],
-      "otherCategories": [],
-      "text": "Inside Ukraine’s power crisis amid its war with Russia | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, russia, ukraine. Signal: Inside Ukraine’s power crisis amid its war with Russia | Al Jazeera"
+      "otherCategories": [
+        "Energy Shock"
+      ],
+      "text": "Putin was told the flag is up on the nuclear sub Perm and now claims Russia will keep building up its sub fleet. He says two Borei-A, five Yasen-M and four diesel-electric subs are being built and the",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, russia. Signal: Putin was told the flag is up on the nuclear sub Perm and now claims Russia will keep building up its sub fleet. He says two Borei-A, five Yasen-M and four diesel-electric subs ..."
     },
     {
-      "path": "root.news[22]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "war",
-        "attack",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "Iran war Update: Iran’s Araghchi calls deadly Kuwait attack ‘suspicious’ | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: war, attack, iran. Signal: Iran war Update: Iran’s Araghchi calls deadly Kuwait attack ‘suspicious’ | Al Jazeera"
-    },
-    {
-      "path": "root.newsFeed[42]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 15,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "drone",
-        "iran"
-      ],
-      "otherCategories": [],
-      "text": "⚡️ — Iran is ready to conduct a joint investigation with Kuwait into the drone attack on the emirate | INTELSLAVA",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, drone, iran. Signal: ⚡️ — Iran is ready to conduct a joint investigation with Kuwait into the drone attack on the emirate | INTELSLAVA"
-    },
-    {
-      "path": "root.tg.urgent[8]",
+      "path": "root.tg.urgent[9]",
       "sourcePriority": "High",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -194,18 +219,17 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "attack",
-        "military",
-        "port"
+        "strike",
+        "attack"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two military personnel. The LNA",
-      "explanation": "Geopolitical Escalation match based on keywords: attack, military. Signal: 🇱🇾🇷🇺🇺🇦⚡️ — The Libyan National Army (LNA) has vowed to retaliate for an attack by Ukrainian unmanned surface vessels (USVs) on the port of Benghazi, which killed two milit..."
+      "text": "🇮🇹🇱🇾🇺🇦⚡ Meloni is furious that Zelensky did not warn Italy about the strike on ships in Libya. The Ukrainian attack has cooled what were once warm relations between the countries — Bloomberg.",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, attack. Signal: 🇮🇹🇱🇾🇺🇦⚡ Meloni is furious that Zelensky did not warn Italy about the strike on ships in Libya. The Ukrainian attack has cooled what were once warm relations between the co..."
     },
     {
-      "path": "root.news[39]",
+      "path": "root.news[6]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
       "score": 14,
@@ -224,89 +248,19 @@
       ],
       "matchedKeywords": [
         "strike",
-        "iran"
+        "gaza"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
-      "explanation": "Geopolitical Escalation match based on keywords: strike, iran. Signal: Two Italians killed in strike in Kuwait, as Iran denies responsibility"
-    },
-    {
-      "path": "root.tg.urgent[2]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "escalation",
-        "russia"
-      ],
-      "otherCategories": [],
-      "text": "⚡🇷🇺🇺🇦 Reports that the AFU are preparing a ground operation in Crimea in spring 2027. Russia allegedly learned about this, and Putin asked Trump to help prevent it, because this escalation would",
-      "explanation": "Geopolitical Escalation match based on keywords: escalation, russia. Signal: ⚡🇷🇺🇺🇦 Reports that the AFU are preparing a ground operation in Crimea in spring 2027. Russia allegedly learned about this, and Putin asked Trump to help prevent it, because ..."
+      "text": "Israeli strike on Doctors Without Borders clinic in Gaza kills two staff | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Israeli strike on Doctors Without Borders clinic in Gaza kills two staff | Al Jazeera"
     },
     {
       "path": "root.news[23]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX",
-        "High Yield Credit",
-        "Banks",
-        "Treasuries",
-        "Dollar Funding",
-        "Equities"
-      ],
-      "matchedKeywords": [
-        "attack",
-        "bank"
-      ],
-      "otherCategories": [
-        "Credit Stress"
-      ],
-      "text": "Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Israeli settlers damage Palestinian family’s homes in West Bank attack | Al Jazeera"
-    },
-    {
-      "path": "root.news[45]",
-      "sourcePriority": "Medium",
-      "category": "Geopolitical Escalation",
-      "score": 10,
-      "confidence": "Medium",
-      "channels": [
-        "Gold",
-        "VIX",
-        "Oil",
-        "Defense Equities",
-        "Safe-haven FX"
-      ],
-      "matchedKeywords": [
-        "israel",
-        "gaza"
-      ],
-      "otherCategories": [],
-      "text": "Hamas weighs response after Israel kills 10 people in Gaza | France 24",
-      "explanation": "Geopolitical Escalation match based on keywords: israel, gaza. Signal: Hamas weighs response after Israel kills 10 people in Gaza | France 24"
-    },
-    {
-      "path": "root.chokepoints[5]",
-      "sourcePriority": "High",
-      "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -321,20 +275,21 @@
         "Margins"
       ],
       "matchedKeywords": [
-        "taiwan",
-        "container"
+        "military",
+        "iran",
+        "blockade"
       ],
       "otherCategories": [
         "Supply Chain Disruption"
       ],
-      "text": "Taiwan Strait | 88% of largest container ships",
-      "explanation": "Geopolitical Escalation match based on keywords: taiwan. Signal: Taiwan Strait | 88% of largest container ships"
+      "text": "US military says it disabled merchant ship trying to breach Iran blockade | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: military, iran. Signal: US military says it disabled merchant ship trying to breach Iran blockade | Al Jazeera"
     },
     {
-      "path": "root.news[46]",
+      "path": "root.news[36]",
       "sourcePriority": "Medium",
       "category": "Geopolitical Escalation",
-      "score": 9,
+      "score": 14,
       "confidence": "Medium",
       "channels": [
         "Gold",
@@ -342,41 +297,105 @@
         "Oil",
         "Defense Equities",
         "Safe-haven FX",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Industrials",
+        "Semiconductors",
+        "Shipping",
+        "Commodities",
+        "Margins"
       ],
       "matchedKeywords": [
-        "attack",
-        "refinery"
+        "strike",
+        "gaza"
       ],
       "otherCategories": [
-        "Energy Shock"
+        "Supply Chain Disruption"
       ],
-      "text": "Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera",
-      "explanation": "Geopolitical Escalation match based on keywords: attack. Signal: Attack on Saudi’s Jazan refinery kills one person, disrupts operations | Al Jazeera"
+      "text": "Hamas chief’s last surviving son escapes Israeli strike in Gaza | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: strike, gaza. Signal: Hamas chief’s last surviving son escapes Israeli strike in Gaza | Al Jazeera"
     },
     {
-      "path": "root.chokepoints[0]",
+      "path": "root.tg.urgent[11]",
       "sourcePriority": "High",
-      "category": "Energy Shock",
-      "score": 8,
+      "category": "Geopolitical Escalation",
+      "score": 10,
       "confidence": "Medium",
       "channels": [
+        "Gold",
+        "VIX",
         "Oil",
-        "Natural Gas",
-        "Inflation Expectations",
-        "Energy Equities",
-        "FX"
+        "Defense Equities",
+        "Safe-haven FX"
       ],
       "matchedKeywords": [
-        "oil",
-        "hormuz"
+        "war",
+        "ukraine"
       ],
       "otherCategories": [],
-      "text": "Strait of Hormuz | 20% of world oil",
-      "explanation": "Energy Shock match based on keywords: oil, hormuz. Signal: Strait of Hormuz | 20% of world oil"
+      "text": "🇦🇹🇺🇦 Austria has proposed sending Syrian and Afghan refugees to Ukraine after the war. \"The EU has poured hundreds of billions into Ukraine. Including 3.6 billion of Austrian money. Why not dema",
+      "explanation": "Geopolitical Escalation match based on keywords: war, ukraine. Signal: 🇦🇹🇺🇦 Austria has proposed sending Syrian and Afghan refugees to Ukraine after the war. \"The EU has poured hundreds of billions into Ukraine. Including 3.6 billion of Austria..."
+    },
+    {
+      "path": "root.news[20]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "nuclear",
+        "taiwan"
+      ],
+      "otherCategories": [],
+      "text": "Will Taiwan vote to revive nuclear power – and why does that matter for AI? | Al Jazeera",
+      "explanation": "Geopolitical Escalation match based on keywords: nuclear, taiwan. Signal: Will Taiwan vote to revive nuclear power – and why does that matter for AI? | Al Jazeera"
+    },
+    {
+      "path": "root.news[28]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "war",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Russia’s Big Ambitions for A.I. Are Undercut by Constraints of War",
+      "explanation": "Geopolitical Escalation match based on keywords: war, russia. Signal: Russia’s Big Ambitions for A.I. Are Undercut by Constraints of War"
+    },
+    {
+      "path": "root.news[44]",
+      "sourcePriority": "Medium",
+      "category": "Geopolitical Escalation",
+      "score": 10,
+      "confidence": "Medium",
+      "channels": [
+        "Gold",
+        "VIX",
+        "Oil",
+        "Defense Equities",
+        "Safe-haven FX"
+      ],
+      "matchedKeywords": [
+        "border",
+        "russia"
+      ],
+      "otherCategories": [],
+      "text": "Estonia will close border with Russia 'to secure Europe,' foreign minister says during Baku visit | Euronews",
+      "explanation": "Geopolitical Escalation match based on keywords: border, russia. Signal: Estonia will close border with Russia 'to secure Europe,' foreign minister says during Baku visit | Euronews"
     }
   ]
 }
